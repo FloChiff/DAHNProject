@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Index des personnes</title>
+                <funder>Ministère de lʼEnseignement supérieur, de la Recherche et de lʼInnovation (MESRI)</funder>
+                <principal>
+                    <persName ref="#anne.baillot">
+                        <forename>Anne</forename>
+                        <surname>Baillot</surname>
+                    </persName>
+                    <affiliation>
+                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+                        <address>
+                            <street>Unter den Linden 6</street>
+                            <postCode>10099</postCode>
+                            <settlement>Berlin</settlement>
+                            <country key="DE">Deutschland</country>
+                        </address>
+                    </affiliation>
+                </principal>
+                <!-- <respStmt>...</respStmt> -->
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Projet DAHN</publisher>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/3.0/deed.en">Attribution 3.0 Unported (CC BY 3.0) </licence>
+                </availability>
+                <date when-iso="...">...</date>
+            </publicationStmt>
+            <seriesStmt>
+                <title type="main">Correspondance de Paul d'Estournelles de Constant</title>
+            </seriesStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when-iso="2020-04-02" who="#floriane.chiffoleau">More encoding of the index</change>
+            <change when-iso="2020-03-25" who="#floriane.chiffoleau">More encoding of the index</change>
+            <change when-iso="2020-03-24" who="#floriane.chiffoleau">Creation of the index</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPerson>
+                <person xml:id="p0001">
+                    <persName>
+                        <roleName type="nobility">Baron</roleName>
+                        <forename>Paul</forename>
+                        <nameLink>d'</nameLink>
+                        <surname>Estournelles de Constant</surname>
+                    </persName>
+                    <nationality>French</nationality>
+                    <birth>
+                        <date when-iso="1852-11-22"/>
+                        <placeName>La Flèche (Sarthe)</placeName>
+                    </birth>
+                    <death>
+                        <date when-iso="1924-05-15"/>
+                        <placeName>Bordeaux (Gironde)</placeName>
+                    </death>
+                    <sex value="1"/>
+                    <occupation>diplomate</occupation>
+                    <!-- <education>...</education> -->
+                    <affiliation notBefore-iso="1895" notAfter-iso="1904">Député de <placeName>la Sarthe</placeName></affiliation>
+                    <affiliation notBefore-iso="1904" notAfter-iso="1924">Sénateur de <placeName>la Sarthe</placeName></affiliation>
+                    <event when-iso="1909">
+                        <p>Prix Nobel de la paix</p>
+                    </event>
+                    <idno type="VIAF">15798950</idno>
+                </person>
+                <person xml:id="p0002">
+                    <persName>
+                        <forename>Nicholas</forename>
+                        <surname>Murray Butler</surname>
+                    </persName>
+                    <nationality>American</nationality>
+                    <birth>
+                        <date when-iso="1862"/>
+                    </birth>
+                    <death>
+                        <date when-iso="1947"/>
+                    </death>
+                    <sex value="1"/>
+                    <occupation>philosophe</occupation>
+                    <occupation>diplomate</occupation>
+                    <occupation>éducateur</occupation>
+                    <affiliation from-iso="1902" to-iso="1945">Président de la <orgName>Columbia University</orgName></affiliation>
+                    <affiliation from-iso="1925" to-iso="1945">Président de la <orgName ref="#dotation_carnegie">Fondation Carnegie pour la paix
+                            internationale</orgName></affiliation>
+                    <event when-iso="1931">
+                        <p>Prix Nobel de la paix</p>
+                    </event>
+                    <idno type="VIAF">17333392</idno>
+                </person>
+                <listRelation>
+                    <relation name="collegue" mutual="#p0001 #p0002"/>
+                    <relation type="social" name="friend" mutual="#p0001 #p0002"/>
+                </listRelation>
+            </listPerson>
+        </body>
+    </text>
+</TEI>
