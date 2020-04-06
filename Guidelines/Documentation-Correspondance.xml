@@ -210,10 +210,11 @@
                                     <div>
                                         <head><gi>physDesc</gi></head>
                                         <p><gi>physDesc</gi> comprises the physical description of the manuscript. In our case, <gi>physDesc</gi> may
-                                            contain four or five elements: <specList>
+                                            contain three to six elements: <specList>
                                                 <specDesc key="objectDesc"/>
                                                 <specDesc key="handDesc"/>
                                                 <specDesc key="accMat"/>
+                                                <specDesc key="additions"/>
                                                 <specDesc key="sealDesc"/>
                                                 <specDesc key="decoDesc"/>
                                             </specList></p>
@@ -305,6 +306,13 @@
                                             </list></p>
                                         <p> Furthermore, <gi>physDesc</gi> may contain <gi>sealDesc</gi> where seals used to close the letter (wax
                                             etc.) are specified.</p>
+                                        <p>It can also contain a <gi>additions</gi> element, used to describe any additions made inside the manuscript
+                                            and on its pages. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                                <additions>
+                                                    <p>A stamp has been put on almost every page of the correspondence by the institution in charge of
+                                                        the collection. On the stamp is written: <stamp resp="#stamp">Archives de la Sarthe <lb/>Propriété
+                                                    publique</stamp></p></additions>
+                                            </egXML></p>
                                         <p>Any material accompanying the letter—for example an envelope, a picture, a drawing etc.—is described inside
                                                 <gi>physDesc</gi> using the <gi>accMat</gi> element. Envelopes are usually regarded as part of the
                                             manuscript pages and are transcribed like normal pages but are being pointed to from <gi>accMat</gi>.
@@ -1499,8 +1507,8 @@
                                         <item><att>when-iso</att>="<val>1824-05-uu?/1825-06-06</val>" beginning possible in May 1024, ending
                                             definitely on 6 June 1825.</item>
                                     </list>
-                                    <note>Section 5.2.3 of the EDTF draft allows having more fields to the right of the slash than to the left!
-                                        We, however, do not allow this, as stated above! All gaps are filled with “uu”.</note></p></item>
+                                    <note>Section 5.2.3 of the EDTF draft allows having more fields to the right of the slash than to the left! We,
+                                        however, do not allow this, as stated above! All gaps are filled with “uu”.</note></p></item>
                             <item><p>Sometimes it might be impossible to give an exact date, but one can guess, e. g. from the content of a
                                     manuscript, that for example, it cannot be written before a certain date because it refers to something that
                                     happened on that date. For such open-end or open-start cases, we use the <att>notBefore-iso</att> and
@@ -1723,7 +1731,7 @@
                     <moduleRef key="transcr"
                         except="am damage damageSpan ex line listTranspose metamark mod path redo restore retrace secl sourceDoc substJoin surface surfaceGrp surplus undo zone"/>
                     <moduleRef key="msdescription"
-                        except="additions adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"
+                        except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"
                     />
                 </schemaSpec>
             </div>
