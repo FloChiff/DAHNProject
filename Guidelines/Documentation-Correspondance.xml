@@ -310,8 +310,8 @@
                                             and on its pages. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                                 <additions>
                                                     <p>A stamp has been put on almost every page of the correspondence by the institution in charge of
-                                                        the collection. On the stamp is written: <stamp resp="#stamp">Archives de la Sarthe <lb/>Propriété
-                                                    publique</stamp></p></additions>
+                                                        the collection. On the stamp is written: <stamp resp="#stamp">Archives de la Sarthe
+                                                            <lb/>Propriété publique</stamp></p></additions>
                                             </egXML></p>
                                         <p>Any material accompanying the letter—for example an envelope, a picture, a drawing etc.—is described inside
                                                 <gi>physDesc</gi> using the <gi>accMat</gi> element. Envelopes are usually regarded as part of the
@@ -461,6 +461,17 @@
                                             letters before proceeding with the transcription; the text sounds familiar.</change>
                                     </revisionDesc>
                                 </egXML></p>
+                            <p>The <gi>revisionDesc</gi> will also be used, in our documents, to indicate the level of finalization of the
+                                transcription published on the platform of our project. We have three level of transcription : <list>
+                                    <item>raw transcription</item>
+                                    <item>annotation in progress</item>
+                                    <item>finalized document</item>
+                                </list> Those different steps will be indicated with an attribute <att>status</att> with a value for each of those
+                                steps : <list>
+                                    <item><val>proposed</val>: the document is simply transcribed</item>
+                                    <item><val>unfinished</val>: the transcription is done and the annotation are in progress</item>
+                                    <item><val>approved</val>: the document is fully finalized</item>
+                                </list></p>
                         </div>
                     </div>
                 </div>
