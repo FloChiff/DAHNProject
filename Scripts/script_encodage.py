@@ -1,7 +1,7 @@
 #Import des modules à utiliser
 import re, sys
 
-def non_indented_paragraph(text):
+def non_indented_paragraph(text):  # <- AC: dans quels cas le paragraphe ne serait pas indenté ?
     """ Rajouter les balises de paragraphe dans le texte quand il n'est pas indenté
     
     :param text: Texte à modifier
@@ -9,11 +9,11 @@ def non_indented_paragraph(text):
     :returns: Texte avec les balises <p>
     :rtype: str
     """
-    punctuation = "!\"»?."
+    punctuation = "!\"»?."  # <- AC: pourquoi pas les ";" et "," et "'", etc ?
     #Ont été inclus tous les signes de fin de ponctuation que pourraient contenir les lettres
     for sign in punctuation:
-        text = text.replace(sign + "\n", sign + '</p>\n<p rend="indent">')
-        text = text.replace(sign + " \n", sign + '</p>\n<p rend="indent">')
+        text = text.replace(sign + "\n", sign + '</p>\n<p rend="indent">')  # <- AC: plus tard, si tu parses ce xml, il se pourrait que ces < et > ne soient pas interprétés comme des balises
+        text = text.replace(sign + " \n", sign + '</p>\n<p rend="indent">')  # <- AC: n'as-tu pas, une fois que cette ligne est terminée, des </p> qui se baladent dans le texte et qu'il faudrait retirer ?
     #Rajout des balises paragraphes ouvrantes et fermantes
     return text
 
@@ -29,6 +29,8 @@ def indented_paragraph(text):
     if '\t' in text and "<" not in text:
        text = text.replace('\t', '<p rend="indent">')
        #Rajout des balises paragraphes ouvrantes quand le texte est indenté et qu'aucune autre balise ne se trouve dans la ligne
+          # <- AC: es-tu sûre qu'il n'y a pas de "<" dans le texte original ?
+          # <- AC: est-ce que le but n'est pas de vérifier s'il y a un \t ou un < au début de la ligne ? Tu pourrais vérifier ça en slicant text (ex: if "<" not in text[10:] (10 premiers caractères)
     else:
        text = text.replace('\t', '')
        #Suppression de la tabulation pour les textes indentés déjà balisés
@@ -39,6 +41,9 @@ def indented_paragraph(text):
         text = text.replace(sign + " \n", sign + "</p>\n")
     #Rajout des balises paragraphes fermantes
     return text
+
+
+## ------ DEBUT DU SCRIPT ------ ##
 
 #Création d'un dictionnaire qui contient tous les termes récurrents que l'on a dans les lettres
 #On y rajoute les balises qui conviennent
@@ -67,7 +72,7 @@ regex = {
 }
 
 #Ouverture des fichiers d'entrée et de sortie
-file_in = open (sys.argv[1], mode='r', encoding='utf-8')
+file_in = open (sys.argv[1], mode='r', encoding='utf-8')   # <- AC: il vaut mieux utiliser "with open("fichier", "r|w|etc") as file: ..."
 print("reading from "+sys.argv[1])
 file_out = open (sys.argv[2], mode='w', encoding='utf-8')
 print("writing to "+sys.argv[2])
@@ -79,9 +84,9 @@ for text in file_in.readlines():
     #On définit des variables qui correspond aux clés et valeurs des dictionnaires définis
     #On remplace ensuite dans le texte la clé du dictionnaire par sa valeur
     for key, value in recurrent_terms.items():
-        text = text.replace(key, value)
+        text = text.replace(key, value)  # <- AC: quand tu travailleras sur le résultat des transcriptions, il faudra sûrement utiliser des regex, notamment pour gérer les variations de casse (ex: PARiS)
     #Balisage des numéros de page en prenant en compte ses caractères particuliers
-    if "- " and " -\n" in text:
+    if "- " and " -\n" in text:  # <-- AC: d'instinct, je ne suis pas sûre que chercher "-" et "-\n" soit infaillible car je pense que "peut-être est-il encore dans la mai-\n" n'est pas le genre de phrase que tu sembles chercher ici.
         text = text.replace("- ", '<pb n="" facs=".JPG"/><note type="foliation" place="top">- ')
         text = text.replace(" -\n", ' -</note> ')
     #On ferme la balise <head> en utilisant la récurrence des titres pour les lettres
