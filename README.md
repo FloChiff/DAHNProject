@@ -14,11 +14,12 @@ The DAHN project is a project between the University of the Mans, the EHESS and 
 
 ## Content of the repository
 
-This repository contains three folders, each whith one or multiple XML or HTML files in it:
+This repository contains four folders, each whith one or multiple XML, HTML or Python files in it:
 
 
 - The "Guidelines" folder contains the TEI documentation that will be used to encode our corpus documents. This documentation is available in XML and HTML. The folder itself has two subfolders :
   - The "out" folder contains the Relax NG transformation of the documentation, linked to the XML file(s) of the "Transcription" folder.
   - The "illustrations" folder contains pictures used to illustrate the use of some tags on the documentation. 
 - The "Indexes" folder contains five indexes (persons, places, organizations, contributors and works) that will be link to our XML transcription files.
-- The "Transcription" folder contains the XML encoding files of our corpus letters.
+- The "Scripts" folder contains scripts useful for different steps of the transcription (ocerisation of the text, encoding a majority of the text in xml, etc.)
+- The "Transcription" folder contains the XML encoding files of our corpus letters and an XML encoding model with the recurring metadata and blank spaces for the metadata that will need to be completed for each transcription.
