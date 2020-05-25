@@ -169,15 +169,22 @@
                                             collection and its identifier (<gi>idno</gi>) is placed. A <att>type</att> attribute for <gi>idno</gi> can
                                             be used to be more specific about who gave this identifier. It’s necessary to differentiate between the
                                                 <gi>repository</gi> and the <gi>institution</gi> element. Institution represents the conservation
-                                            place, while repository represents the department in it where the document is preserved. The
-                                                <att>key</att> attribute for <gi>country</gi> is mandatory. For example: <egXML
-                                                xmlns="http://www.tei-c.org/ns/Examples">
+                                            place, while repository represents the department in it where the document is preserved. The content has
+                                            also been changed in order to be more accurate with the physical adress of the manuscript's institution.
+                                            For example: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                                 <msIdentifier>
-                                                    <country key="FR">France</country>
-                                                    <settlement>Sarthe</settlement>
-                                                    <institution ref="#ADSarthe ">Departmental archives of Sarthe</institution>
-                                                    <repository>Private archives</repository>
-                                                    <collection>Collection d'Estournelles de Constant</collection>
+                                                    <location>
+                                                        <address>
+                                                            <street>9 rue Christian Pineau</street>
+                                                            <postCode>72100</postCode>
+                                                            <settlement>Le Mans</settlement>
+                                                            <region>Pays de la Loire</region>
+                                                            <country key="FR">France</country>
+                                                        </address>
+                                                    </location>
+                                                    <institution ref="#ADSarthe">Archives départementales de la Sarthe</institution>
+                                                    <repository>Fonds des archives privées</repository>
+                                                    <collection>Fonds d'Estournelles de Constant</collection>
                                                     <idno>12 J</idno>
                                                 </msIdentifier>
                                             </egXML></p>
@@ -1742,26 +1749,19 @@
                     <moduleRef key="transcr"
                         except="am damage damageSpan ex line listTranspose metamark mod path redo restore retrace secl sourceDoc substJoin surface surfaceGrp surplus undo zone"/>
                     <moduleRef key="msdescription"
-                        except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"
-                    />
+                        except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"/>
                     <moduleRef key="linking" include="ab seg"/>
                     <elementSpec ident="msIdentifier" mode="change">
                         <content>
                             <sequence>
                                 <sequence>
-                                    <classRef key="model.placeStateLike"
-                                        expand="sequenceOptional"/>
-                                    <elementRef key="institution"
-                                        minOccurs="0"/>
-                                    <elementRef key="repository"
-                                        minOccurs="0"/>
-                                    <elementRef key="collection"
-                                        minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="idno" minOccurs="0"
-                                        maxOccurs="unbounded"/>
+                                    <classRef key="model.placeStateLike" expand="sequenceOptional"/>
+                                    <elementRef key="institution" minOccurs="0"/>
+                                    <elementRef key="repository" minOccurs="0"/>
+                                    <elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                                 </sequence>
-                                <alternate minOccurs="0"
-                                    maxOccurs="unbounded">
+                                <alternate minOccurs="0" maxOccurs="unbounded">
                                     <elementRef key="msName"/>
                                     <elementRef key="objectName"/>
                                     <elementRef key="altIdentifier"/>
