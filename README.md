@@ -21,5 +21,6 @@ This repository contains four folders, each whith one or multiple XML, HTML or P
   - The "out" folder contains the Relax NG transformation of the documentation, linked to the XML file(s) of the "Transcription" folder.
   - The "illustrations" folder contains pictures used to illustrate the use of some tags on the documentation. 
 - The "Indexes" folder contains five indexes (persons, places, organizations, contributors and works) that will be link to our XML transcription files.
+- The "Models" folder contains the two models that will be used for the corpus, one for the segmentation and one for the transcription. This folder also contains the models' train logs.
 - The "Scripts" folder contains scripts useful for different steps of the transcription (ocerisation of the text, encoding a majority of the text in xml, etc.)
 - The "Transcription" folder contains the XML encoding files of our corpus letters and an XML encoding model with the recurring metadata and blank spaces for the metadata that will need to be completed for each transcription.
