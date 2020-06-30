@@ -243,7 +243,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                             <language ident="fr"/>
                         </langUsage>
                     </profileDesc>
-                    <revisionDesc>
+                    <revisionDesc status="proposed">
                         <change when-iso="2020-..-.." who="#floriane.chiffoleau">Creation of the file</change>
                     </revisionDesc>
                 </teiHeader>
