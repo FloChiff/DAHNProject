@@ -2,17 +2,18 @@
 
 """
 - author: Floriane Chiffoleau
-- date: May 2020
+- date: June 2020
 - description: Encoding a corpus with some basic XML tags
 - input: plain text
 - output: tagged text
 """
 
-import sys
+import os
 import re
+import sys
 
-def non_indented_paragraph(text):
-    """ Add paragraph tag in a text when it is not indented
+def tagging_paragraph(text):
+    """ Add paragraph tags in a text
     
     :param text str: text that has to be modify
     :returns: text encoded with paragraph tags
@@ -29,31 +30,6 @@ def non_indented_paragraph(text):
     return text
 
 
-def indented_paragraph(text):
-    """ Add paragraph tag in a text when it is indented
-    
-    :param text str: text that has to be modify
-    :returns: text encoded with paragraph tags
-    :rtype: str
-    """
-
-    if "<" not in text[:10]:
-       text = text.replace('\t', '<p rend="indent">')
-    else:
-       text = text.replace('\t', '')
-    # Some lines with tabulation in the text have already been tagged
-    # So it's important to not double-tagged them while also suppressing this tabulation 
-
-    punctuation = "!\"»?."
-    # This variable contains all the punctuation signs that indicates a phrase ending
-    # and a need for an ending paragraph tag
-
-    for sign in punctuation:
-        text = text.replace(sign + "\n", sign + "</p>")
-        text = text.replace(sign + " \n", sign + "</p>")
-    return text
-
-
 def page_numbering(text):
     """ Add tags to the page numbering
 
@@ -67,22 +43,22 @@ def page_numbering(text):
         text = text.replace(" -\n", ' -</note> ')
     return text
 
-recurring_terms = {
-    "LETTRE": "<head>LETTRE",
-    "SÉNAT": '<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">SÉNAT</hi></fw>',
-    "PARIS,": '<dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="">',
-    "LE MANS,": '<dateline rend="align(right)"><placeName>LE MANS</placeName>, <date when-iso="">',
-    "Mon cher Butler,": '<salute rend="indent">Mon cher Butler,</salute></opener>',
-    "à Monsieur le Président Nicholas Murray BUTLER.": '<note rend="align(left)"><address><addrLine>à Monsieur le Président Nicholas Murray BUTLER.</addrLine></address></note>',
-    "à Monsieur le Président N. Murray BUTLER.": '<note rend="align(left)"><address><addrLine>à Monsieur le Président N. Murray BUTLER.</addrLine></address></note>',
-    "à Monsieur le Président N.Murray BUTLER.": '<note rend="align(left)"><address><addrLine>à Monsieur le Président N.Murray BUTLER.</addrLine></address></note>',
-    "à Monsieur le Président Nicholas Murray BUTLER,": '<address rend="align(left)"><addrLine>à Monsieur le Président Nicholas Murray BUTLER,</addrLine>',
-    "à Monsieur le Président N. Murray BUTLER,": '<address rend="align(left)"><addrLine>à Monsieur le Président N. Murray BUTLER,</addrLine>',
-    "à Monsieur le Président N.Murray BUTLER,": '<address rend="align(left)"><addrLine>à Monsieur le Président N.Murray BUTLER,</addrLine>',
-    "NEW-YORK.": "<addrLine>NEW-YORK.</addrLine></address></closer>",
-    "Votre affectueusement dévoué,": '<closer><signed rend="align(right)">Votre affectueusement dévoué,</signed>',
-    "D'Estournelles de Constant": '<signed rend="align(right)" hand="#annotation">D’Estournelles de Constant</signed>'
-}
+
+def closing_tag(text):
+    """ Add closing tags for some of the recurring terms from the dictionary
+
+    :param text str: text that has to be modify
+    :returns: closing tags for some lines
+    :rtype: str
+    """
+
+    if "<head>" in text:
+        text = text.replace("\n", '</head>\n<opener>')
+    if '<note rend="align(left)"><address><addrLine>' in text:
+        text = text.replace("\n", "</addrLine></address></note>\n")
+    if '<signed rend="align(right)"' in text:
+        text = text.replace("\n", "</signed>\n")
+    return text
 
 
 linebreak = {
@@ -91,34 +67,38 @@ linebreak = {
     "'\n": "'<lb/>"
 }
 
+recurring_terms = {
+    "SÉNAT": '<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">SÉNAT</hi></fw>',
+    "LETTRE": "<head>LETTRE",
+    "Mon cher Butler,": '<salute rend="indent">Mon cher Butler,</salute></opener><p rend="indent">',
+    "à Monsieur le": '<note rend="align(left)"><address><addrLine>à Monsieur le',
+    "Votre affectueusement dévoué": '<closer><signed rend="align(right)">Votre affectueusement dévoué',
+    "D'Estournelles": '<signed rend="align(right)" hand="#annotation">D’Estournelles'
+}
+
+
 ## ------ START OF THE SCRIPT ------ ##
 
-
-with open(sys.argv[1], 'r') as file_in:
-    print("reading from "+sys.argv[1])
-    f = file_in.read()
-    f = f.replace("\n\n", "\n")
-    f = f.replace("\n", "\n£")
-    # This sign is added to help split the text afterwards while preserving the newlines.
-    with open(sys.argv[2], "w") as file_out:
-        for text in f.split('£'):
-            text = text.replace("’", "'")
-            text = page_numbering(text)
-            for key, value in recurring_terms.items():
-                text = text.replace(key, value)      
-            if "<head>" in text:
-                text = text.replace(".\n", '.</head>\n<opener>')
-            if '<dateline' in text:
-                text = text.replace(".", '.</date></dateline>')
-            #text = non_indented_paragraph(text)
-            text = indented_paragraph(text)
-            # Apply one function or the other according to the structure of the submitted text
-            for key, value in linebreak.items():
-                text = text.replace(key, value)
-            if ">" not in text:
-                text = text.replace("\n","<lb/> ")
-                # This replacement is not put in the dictionnary because it needs to be made after all the others.
-                # This way, it ensures that only the forgotten end of line with no tags are encoded.
-            file_out.write(text)
-        print("writing to "+sys.argv[2])
-
+for root, dirs, files in os.walk(sys.argv[1]):
+    for filename in files:
+        with open(sys.argv[1] + filename, 'r') as file_in:
+            print("reading from "+sys.argv[1] + filename)
+            f = file_in.read()
+            f = f.replace("\n", "\n$")
+            # This sign is added to help split the text afterwards while preserving the newlines.
+            with open(sys.argv[2] + filename.replace(".txt", ".xml"), "w") as file_out:
+                print("writing to "+sys.argv[2] + filename.replace(".txt", ".xml"))
+                for text in f.split('$'):
+                    text = text.replace("’", "'")
+                    text = page_numbering(text)
+                    for key, value in recurring_terms.items():
+                        text = text.replace(key, value) 
+                    text = closing_tag(text)
+                    text = tagging_paragraph(text)
+                    for key, value in linebreak.items():
+                        text = text.replace(key, value)
+                    if ">" not in text:
+                        text = text.replace("\n","<lb/> ")
+                        # This replacement is not put in the dictionnary because it needs to be made after all the others.
+                        # This way, it ensures that only the forgotten end of line with no tags are encoded.
+                    file_out.write(text)
