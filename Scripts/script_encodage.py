@@ -54,8 +54,8 @@ def closing_tag(text):
 
     if "<head>" in text:
         text = text.replace("\n", '</head>\n<opener>')
-    if '<note rend="align(left)"><address><addrLine>' in text:
-        text = text.replace("\n", "</addrLine></address></note>\n")
+    if '<address rend="align(left)"><addrLine>' in text:
+        text = text.replace("\n", "</addrLine></address>\n")
     if '<signed rend="align(right)"' in text:
         text = text.replace("\n", "</signed>\n")
     return text
@@ -71,7 +71,7 @@ recurring_terms = {
     "SÉNAT": '<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">SÉNAT</hi></fw>',
     "LETTRE": "<head>LETTRE",
     "Mon cher Butler,": '<salute rend="indent">Mon cher Butler,</salute></opener><p rend="indent">',
-    "à Monsieur le": '<note rend="align(left)"><address><addrLine>à Monsieur le',
+    "à Monsieur le": '<address rend="align(left)"><addrLine>à Monsieur le',
     "Votre affectueusement dévoué": '<closer><signed rend="align(right)">Votre affectueusement dévoué',
     "D'Estournelles": '<signed rend="align(right)" hand="#annotation">D’Estournelles'
 }
