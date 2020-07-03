@@ -2,7 +2,7 @@
 
 """
 - author: Floriane Chiffoleau
-- date: June 2020
+- date: July 2020
 - description: Encoding a corpus with some basic XML tags
 - input: plain text
 - output: tagged text
@@ -30,34 +30,45 @@ def tagging_paragraph(text):
     return text
 
 
-def page_numbering(text):
-    """ Add tags to the page numbering
+def tagging_regex(text):
+    """Apply tags to the regex
 
     :param text str: text that has to be modify
-    :returns: page numbering encoded with corresponding tags
+    :returns: text encoded with the right tags for the regex
     :rtype: str
     """
 
-    if "-" in text[:1]:
-        text = text.replace("- ", '<pb n="" facs=".JPG"/><note type="foliation" place="top">- ')
-        text = text.replace(" -\n", ' -</note> ')
-    return text
+    #This list contains regex of recurrent terms from the corpus letters
+    letter = re.compile(r'(Annexe à ma )?LETTRE N° ?[0-9]+ ?.?')
+    senate = re.compile(r'S(ÉNAT|énat)')
+    status = re.compile(r'P(ersonnelle|ERSONNELLE)')
+    dateline = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
+    salute = re.compile(r'Mon cher Butler ?,')
+    page_numbering = re.compile(r'- [0-9]* -')
+    adress = re.compile(r'à Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
+    addrline = re.compile(r'^(NEW)(-| )?(YORK).?$')
+    signature = re.compile(r'Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
+    name = re.compile(r"D'Estournelles( de Constant)? ?.?")
+    annexe = re.compile(r'[0-9]* annexe(s)?.?')
+    steps = re.compile(r'^[0-9]*°')
+    handnote = re.compile(r'£.+£')
+    strikethrough = re.compile(r'(x|X){3,}')
 
 
-def closing_tag(text):
-    """ Add closing tags for some of the recurring terms from the dictionary
-
-    :param text str: text that has to be modify
-    :returns: closing tags for some lines
-    :rtype: str
-    """
-
-    if "<head>" in text:
-        text = text.replace("\n", '</head>\n<opener>')
-    if '<address rend="align(left)"><addrLine>' in text:
-        text = text.replace("\n", "</addrLine></address>\n")
-    if '<signed rend="align(right)"' in text:
-        text = text.replace("\n", "</signed>\n")
+    text = re.sub(letter, r'<head>\g<0></head><opener>', text)
+    text = re.sub(senate, r'<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">\g<0></hi></fw>', text)
+    text = re.sub(status, r'<fw place="align(left)"><hi rend="underline">\g<0></hi></fw>', text)
+    text = re.sub(dateline, r'<dateline rend="align(left)">\g<0></dateline>', text)
+    text = re.sub(salute, r'<salute rend="indent">\g<0></salute></opener><p rend="indent">', text)
+    text = re.sub(page_numbering, r'<pb n="" facs=".JPG"/><note type="foliation" place="top">\g<0></note>',text)
+    text = re.sub(adress, r'<address rend="align(left)"><addrLine>\g<0></addrLine></address>', text)
+    text = re.sub(addrline, r'<addrLine>\g<0></addrLine>', text)
+    text = re.sub(signature, r'<closer><signed rend="align(right)">\g<0></signed>', text)
+    text = re.sub(name, r'<signed rend="align(right)" hand="#annotation">\g<0></signed>', text)
+    text = re.sub(annexe, r'<postscript><p rend="bottom(left)">\g<0></p></postscript>', text)
+    text = re.sub(steps, r'<p rend="indent">\g<0>', text)
+    text = re.sub(handnote, r'<add hand="#annotation">\g<0></add>', text)
+    text = re.sub(strikethrough, r'<del rend="strikethrough">\g<0><del>', text)
     return text
 
 
@@ -66,18 +77,6 @@ linebreak = {
     ' \n': '<lb/> ',
     "'\n": "'<lb/>"
 }
-
-recurring_terms = {
-    "SÉNAT": '<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">SÉNAT</hi></fw>',
-    "LETTRE": "<head>LETTRE",
-    "Mon cher Butler,": '<salute rend="indent">Mon cher Butler,</salute></opener><p rend="indent">',
-    "à Monsieur le": '<address rend="align(left)"><addrLine>à Monsieur le',
-    "Votre affectueusement dévoué": '<closer><signed rend="align(right)">Votre affectueusement dévoué',
-    "D'Estournelles": '<signed rend="align(right)" hand="#annotation">D’Estournelles'
-}
-
-
-## ------ START OF THE SCRIPT ------ ##
 
 for root, dirs, files in os.walk(sys.argv[1]):
     for filename in files:
@@ -90,15 +89,10 @@ for root, dirs, files in os.walk(sys.argv[1]):
                 print("writing to "+sys.argv[2] + filename.replace(".txt", ".xml"))
                 for text in f.split('$'):
                     text = text.replace("’", "'")
-                    text = page_numbering(text)
-                    for key, value in recurring_terms.items():
-                        text = text.replace(key, value) 
-                    text = closing_tag(text)
+                    text = tagging_regex(text)
                     text = tagging_paragraph(text)
                     for key, value in linebreak.items():
                         text = text.replace(key, value)
                     if ">" not in text:
                         text = text.replace("\n","<lb/> ")
-                        # This replacement is not put in the dictionnary because it needs to be made after all the others.
-                        # This way, it ensures that only the forgotten end of line with no tags are encoded.
                     file_out.write(text)
