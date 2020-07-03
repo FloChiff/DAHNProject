@@ -29,7 +29,6 @@ def tagging_paragraph(text):
     # This function can add unnecessary paragraph tag that will have to be suppress afterwards
     return text
 
-
 def tagging_regex(text):
     """Apply tags to the regex
 
@@ -50,9 +49,10 @@ def tagging_regex(text):
     signature = re.compile(r'Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
     name = re.compile(r"D'Estournelles( de Constant)? ?.?")
     annexe = re.compile(r'[0-9]* annexe(s)?.?')
-    steps = re.compile(r'^[0-9]*°')
-    handnote = re.compile(r'£.+£')
-    strikethrough = re.compile(r'(x|X){3,}')
+    steps = re.compile(r'([0-9]*|[A-Z]*)°')
+    handnote = re.compile(r'££.+££')
+    strikethrough = re.compile(r'(x|X){2,}')
+    deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
 
 
     text = re.sub(letter, r'<head>\g<0></head><opener>', text)
@@ -69,6 +69,7 @@ def tagging_regex(text):
     text = re.sub(steps, r'<p rend="indent">\g<0>', text)
     text = re.sub(handnote, r'<add hand="#annotation">\g<0></add>', text)
     text = re.sub(strikethrough, r'<del rend="strikethrough">\g<0><del>', text)
+    text = re.sub(deletion, r'<del rend="strikethrough">\g<0><del>', text)
     return text
 
 
@@ -95,4 +96,7 @@ for root, dirs, files in os.walk(sys.argv[1]):
                         text = text.replace(key, value)
                     if ">" not in text:
                         text = text.replace("\n","<lb/> ")
+                    text = text.replace("£", "")
+                    text = text.replace("€", "")
+                    #Suppress the two signs that are used in the transcription to signify deletion and handwritten text
                     file_out.write(text)
