@@ -69,7 +69,7 @@ def tagging_regex(text):
     text = re.sub(steps, r'<p rend="indent">\g<0>', text)
     text = re.sub(handnote, r'<add hand="#annotation">\g<0></add>', text)
     text = re.sub(strikethrough, r'<del rend="strikethrough">\g<0><del>', text)
-    text = re.sub(deletion, r'<del rend="strikethrough">\g<0><del>', text)
+    text = re.sub(deletion, r'<del rend="strikethrough">\g<0></del>', text)
     return text
 
 
