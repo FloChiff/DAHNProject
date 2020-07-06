@@ -49,7 +49,7 @@ def tagging_regex(text):
     signature = re.compile(r'Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
     name = re.compile(r"D'Estournelles( de Constant)? ?.?")
     annexe = re.compile(r'[0-9]* annexe(s)?.?')
-    steps = re.compile(r'([0-9]*|[A-Z]*)°')
+    steps = re.compile(r'^([0-9]*|[A-Z]*)°')
     handnote = re.compile(r'££.+££')
     strikethrough = re.compile(r'(x|X){2,}')
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
