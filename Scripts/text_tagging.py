@@ -38,7 +38,7 @@ def tagging_regex(text):
     """
 
     #This list contains regex of recurrent terms from the corpus letters
-    letter = re.compile(r'(Annexe à ma )?LETTRE N° ?[0-9]+ ?.?')
+    letter = re.compile(r'(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
     senate = re.compile(r'S(ÉNAT|énat)')
     status = re.compile(r'P(ersonnelle|ERSONNELLE)')
     dateline = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
@@ -55,7 +55,7 @@ def tagging_regex(text):
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
 
 
-    text = re.sub(letter, r'<head>\g<0></head><opener>', text)
+    text = re.sub(letter, r'<head><hi rend="underline">\g<0></hi></head><opener>', text)
     text = re.sub(senate, r'<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(status, r'<fw place="align(left)"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(dateline, r'<dateline rend="align(left)">\g<0></dateline>', text)
