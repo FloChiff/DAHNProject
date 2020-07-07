@@ -55,10 +55,10 @@ def tagging_regex(text):
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
 
 
-    text = re.sub(letter, r'<head><hi rend="underline">\g<0></hi></head><opener>', text)
+    text = re.sub(letter, r'<head rend="center"><hi rend="underline">\g<0></hi></head><opener>', text)
     text = re.sub(senate, r'<fw type="letterhead" place="align(left)" corresp="#entete-senat"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(status, r'<fw place="align(left)"><hi rend="underline">\g<0></hi></fw>', text)
-    text = re.sub(dateline, r'<dateline rend="align(left)">\g<0></dateline>', text)
+    text = re.sub(dateline, r'<dateline rend="align(right)">\g<0></dateline>', text)
     text = re.sub(salute, r'<salute rend="indent">\g<0></salute></opener><p rend="indent">', text)
     text = re.sub(page_numbering, r'<pb n="" facs=".JPG"/><note type="foliation" place="top">\g<0></note>',text)
     text = re.sub(adress, r'<address rend="align(left)"><addrLine>\g<0></addrLine></address>', text)
