@@ -27,7 +27,10 @@ def suppress_punctuation(text):
         text = text.replace(sign, " ")
     return text
 
-spell = SpellChecker(language=sys.argv[3].strip())
+spell = SpellChecker(language=None, local_dictionary=sys.argv[3], case_sensitive=True)
+#With 'case_sensitive=True', we precise that all the words are processed as they are written in the text
+#This means that all the uppercase words will be considered wrong but that helps correct them
+#To use that technique, we have to call a local dictionnary
 
 for root, dirs, files in os.walk(sys.argv[1]):
     for filename in files:
