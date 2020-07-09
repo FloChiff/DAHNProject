@@ -17,7 +17,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
     print("reading from " + sys.argv[1])
     index = csv.DictReader(csvfile, delimiter=';')
     for root, dirs, files in os.walk(sys.argv[2]):
-        for filename in files:
+        for filename in root:
             for row in index:
                 header = list(row.keys())
                 number = row[header[0]]
