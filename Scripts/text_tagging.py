@@ -44,7 +44,7 @@ def tagging_regex(text):
     dateline = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
     salute = re.compile(r'Mon cher Butler ?,')
     page_numbering = re.compile(r'- [0-9]* -')
-    adress = re.compile(r'à Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
+    adress = re.compile(r'^(à )?Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
     addrline = re.compile(r'^(NEW)(-| )?(YORK).?$')
     signature = re.compile(r'Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
     name = re.compile(r"D'Estournelles( de Constant)? ?.?")
