@@ -1,3 +1,13 @@
+# -*- UTF-8 -*-
+
+"""
+- author: Floriane Chiffoleau
+- date: July 2020
+- description: Correcting recurrent errors in the XML tree following the "text_tagging" script
+- input: XML file
+- output: XML file
+"""
+
 import sys
 from bs4 import BeautifulSoup
 
