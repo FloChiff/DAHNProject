@@ -86,17 +86,17 @@ for root, dirs, files in os.walk(sys.argv[1]):
             f = file_in.read()
             f = f.replace("\n", "\n$")
             # This sign is added to help split the text afterwards while preserving the newlines.
-            with open(sys.argv[2] + filename.replace(".txt", ".xml"), "w") as file_out:
-                print("writing to "+sys.argv[2] + filename.replace(".txt", ".xml"))
-                for text in f.split('$'):
-                    text = text.replace("’", "'")
-                    text = tagging_regex(text)
-                    text = tagging_paragraph(text)
-                    for key, value in linebreak.items():
-                        text = text.replace(key, value)
-                    if ">" not in text:
-                        text = text.replace("\n","<lb/> ")
-                    text = text.replace("£", "")
-                    text = text.replace("€", "")
-                    #Suppress the two signs that are used in the transcription to signify deletion and handwritten text
-                    file_out.write(text)
+        with open(sys.argv[2] + filename.replace(".txt", ".xml"), "w") as file_out:
+            print("writing to "+sys.argv[2] + filename.replace(".txt", ".xml"))
+            for text in f.split('$'):
+                text = text.replace("’", "'")
+                text = tagging_regex(text)
+                text = tagging_paragraph(text)
+                for key, value in linebreak.items():
+                    text = text.replace(key, value)
+                if ">" not in text:
+                    text = text.replace("\n","<lb/> ")
+                text = text.replace("£", "")
+                text = text.replace("€", "")
+                #Suppress the two signs that are used in the transcription to signify deletion and handwritten text
+                file_out.write(text)
