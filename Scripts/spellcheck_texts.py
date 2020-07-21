@@ -10,8 +10,8 @@
 
 
 import os
-import sys
 import re
+import sys
 from bs4 import BeautifulSoup
 from spellchecker import SpellChecker
 
@@ -38,28 +38,15 @@ for root, dirs, files in os.walk(sys.argv[1]):
         with open(sys.argv[1] + filename, 'r') as xml_file:
             print("reading from "+sys.argv[1] + filename)
             soup = BeautifulSoup(xml_file, 'xml')
-            with open(sys.argv[2].strip() + "/Dict" + filename.replace(".xml", ".py"),"w") as file_out:
-                print("writing to "+ sys.argv[2] + "/Dict" + filename.replace(".xml", ".py"))
-                for string in soup.find_all('String'):
-                    content = string['CONTENT']
-                    content = suppress_punctuation(content)
-                    words = content.split()
-                    misspelled = spell.unknown(words)
-                    #Misspelled puts all the words in lowercase so the correction is not entirely effective right now
-                    for word in misspelled:
-                        dictionary[word] = spell.correction(word)
-                file_out.write(filename.replace(".xml", "") +" = ")
-                file_out.write(str(dictionary).replace("',", "',\n"))
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for string in soup.find_all('String'):
+            content = string['CONTENT']
+            content = suppress_punctuation(content)
+            words = content.split()
+            misspelled = spell.unknown(words)
+            #Misspelled puts all the words in lowercase so the correction is not entirely effective right now
+            for word in misspelled:
+                dictionary[word] = spell.correction(word)
+        with open(sys.argv[2].strip() + "/Dict" + filename.replace(".xml", ".py"),"w") as file_out:
+            print("writing to "+ sys.argv[2] + "/Dict" + filename.replace(".xml", ".py"))
+            file_out.write(filename.replace(".xml", "") +" = ")
+            file_out.write(str(dictionary).replace("',", "',\n"))
