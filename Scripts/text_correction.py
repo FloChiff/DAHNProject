@@ -20,10 +20,10 @@ for root, dirs, files in os.walk(sys.argv[1]):
         with open(sys.argv[1] + filename, 'r') as file_in:
             print("reading from "+sys.argv[1] + filename)
             correction_dictionary = eval("dictionary." + filename.replace(".xml", ""))
-            for text in file_in:
-                for cle, valeur in correction_dictionary.items():
-                    if cle in text:
-                        text = text.replace(cle, valeur)
-        with open(sys.argv[2] + filename,"w") as file_out:
-            print("writing to "+sys.argv[2] + filename)
-            file_out.write(text)
+            with open(sys.argv[2] + filename,"w") as file_out:
+                print("writing to "+sys.argv[2] + filename)
+                for text in file_in:
+                    for cle, valeur in correction_dictionary.items():
+                        if cle in text:
+                            text = text.replace(cle, valeur)
+                    file_out.write(text)
