@@ -141,14 +141,14 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                                 <p xml:lang="en">The letter is well preserved</p>
                                             </condition>
                                         </supportDesc>
-                                        <!-- <layoutDesc>
+                                        <layoutDesc>
                                             <layout xml:id="lh-senat">
                                                 <p xml:lang="fr">Un en-tête, où est écrit "Sénat" en majuscule et souligné, est imprimé en haut à gauche de la
                                                     première feuille de la lettre.</p>
                                                 <p xml:lang="en">A letterhead, where an underlined uppercased "Sénat" is written, is printed on the top left of
                                                     the first folio of the letter.</p>
                                             </layout>
-                                        </layoutDesc> -->
+                                        </layoutDesc>
                                     </objectDesc>
                                     <handDesc>
                                         <handNote xml:id="major_hand" medium="black_ink" scope="minor" scribe="author" scribeRef="#p0001">
@@ -250,7 +250,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                 <text>
                     <body>
                         <div type="transcription">
-                            <pb n="1" facs=".JPG"/>
+                            <pb n="" facs=".JPG"/>
                         </div>
                     </body>
                 </text>
