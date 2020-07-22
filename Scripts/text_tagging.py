@@ -53,6 +53,7 @@ def tagging_regex(text):
     handnote = re.compile(r'££.+££')
     strikethrough = re.compile(r'(x|X){2,}')
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
+    postscript = re.compile(r'^P. ?S(.|,)')
 
 
     text = re.sub(letter, r'<head rend="center"><hi rend="underline">\g<0></hi></head><opener>', text)
@@ -70,6 +71,7 @@ def tagging_regex(text):
     text = re.sub(handnote, r'<add hand="#annotation">\g<0></add>', text)
     text = re.sub(strikethrough, r'<del rend="strikethrough">\g<0></del>', text)
     text = re.sub(deletion, r'<del rend="strikethrough">\g<0></del>', text)
+    text = re.sub(postscript, r'<postscript><label>\g<0></label><p rend="indent">', text)
     return text
 
 
