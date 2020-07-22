@@ -44,6 +44,6 @@ for root, dirs, files in os.walk(sys.argv[1]):
         soup.placeName.string = place.title()
         #Insert the writing place of the letter in the metadata
 
-        with open(sys.argv[1] + filename.replace(".xml", "_changed.xml"),"w") as file_out:
-            print("writing to "+sys.argv[1] + filename.replace(".xml", "_changed.xml"))
+        with open(sys.argv[2] + filename,"w") as file_out:
+            print("writing to "+sys.argv[2] + filename)
             file_out.write(str(soup))
