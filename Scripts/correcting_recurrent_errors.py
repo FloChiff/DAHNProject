@@ -9,6 +9,7 @@
 """
 
 import os
+import re
 import sys
 from bs4 import BeautifulSoup
 
@@ -34,6 +35,14 @@ for root, dirs, files in os.walk(sys.argv[1]):
                 if pb.find_previous_sibling() == lb:
                     lb.decompose()
                  #Deletion of the <lb/> inserted before a <pb/>
+
+        dateline = soup.find("dateline").string
+        place = re.sub(r',.+', '', dateline)
+
+        for origPlace in soup.find_all("origPlace"):
+            origPlace.string = place.title()
+        soup.placeName.string = place.title()
+        #Insert the writing place of the letter in the metadata
 
         with open(sys.argv[1] + filename.replace(".xml", "_changed.xml"),"w") as file_out:
             print("writing to "+sys.argv[1] + filename.replace(".xml", "_changed.xml"))
