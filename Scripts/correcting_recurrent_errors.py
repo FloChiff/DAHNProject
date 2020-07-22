@@ -44,6 +44,12 @@ for root, dirs, files in os.walk(sys.argv[1]):
         soup.placeName.string = place.title()
         #Insert the writing place of the letter in the metadata
 
+        new_change = soup.new_tag("change", who="#floriane.chiffoleau")
+        new_change['when-iso'] = sys.argv[3]
+        new_change.string = "Encoding of the letter"
+        soup.change.insert_before(new_change)
+        #Update the revisionDesc
+
         with open(sys.argv[2] + filename,"w") as file_out:
             print("writing to "+sys.argv[2] + filename)
             file_out.write(str(soup))
