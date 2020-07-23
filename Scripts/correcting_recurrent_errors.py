@@ -37,12 +37,12 @@ for root, dirs, files in os.walk(sys.argv[1]):
                  #Deletion of the <lb/> inserted before a <pb/>
 
         dateline = soup.find("dateline").string
-        place = re.sub(r',.+', '', dateline)
-
-        for origPlace in soup.find_all("origPlace"):
-            origPlace.string = place.title()
-        soup.placeName.string = place.title()
-        #Insert the writing place of the letter in the metadata
+        if dateline == r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?':
+            place = re.sub(r',.+', '', dateline)
+            for origPlace in soup.find_all("origPlace"):
+                origPlace.string = place.title()
+            soup.placeName.string = place.title()
+            #Insert the writing place of the letter in the metadata
 
         new_change = soup.new_tag("change", who="#floriane.chiffoleau")
         new_change['when-iso'] = sys.argv[3]
