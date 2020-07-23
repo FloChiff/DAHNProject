@@ -37,7 +37,7 @@ for root, dirs, files in os.walk(sys.argv[1]):
                  #Deletion of the <lb/> inserted before a <pb/>
 
         dateline = soup.find("dateline").string
-        if dateline == r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?':
+        if dateline != None:
             place = re.sub(r',.+', '', dateline)
             for origPlace in soup.find_all("origPlace"):
                 origPlace.string = place.title()
