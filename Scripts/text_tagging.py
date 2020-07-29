@@ -38,16 +38,16 @@ def tagging_regex(text):
     """
 
     #This list contains regex of recurrent terms from the corpus letters
-    letter = re.compile(r'(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
-    senate = re.compile(r'S(ÉNAT|énat)')
-    status = re.compile(r'P(ersonnelle|ERSONNELLE)')
-    dateline = re.compile(r'[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
-    salute = re.compile(r'Mon cher Butler ?,')
+    letter = re.compile(r'^(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
+    senate = re.compile(r'^S(ÉNAT|énat)')
+    status = re.compile(r'^P(ersonnelle|ERSONNELLE)')
+    dateline = re.compile(r'^[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
+    salute = re.compile(r'^Mon cher Butler ?,')
     page_numbering = re.compile(r'- [0-9]* -')
     adress = re.compile(r'^(à )?Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
     addrline = re.compile(r'^(NEW) ?(-| )? ?(YORK).?$')
-    signature = re.compile(r'Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
-    name = re.compile(r"(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
+    signature = re.compile(r'^Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
+    name = re.compile(r"^(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
     annexe = re.compile(r'^[0-9]+ annexe(s)?.?')
     steps = re.compile(r'^([0-9]*|[A-Z]*)°')
     handnote = re.compile(r'££.+££')
