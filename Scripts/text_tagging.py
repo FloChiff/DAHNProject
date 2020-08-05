@@ -39,7 +39,7 @@ def tagging_regex(text):
 
     #This list contains regex of recurrent terms from the corpus letters
     letter = re.compile(r'^(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
-    senate = re.compile(r'^S(ÉNAT|énat)')
+    senate = re.compile(r'^S((E|É)NAT|énat)')
     status = re.compile(r'^P(ersonnelle|ERSONNELLE)')
     dateline = re.compile(r'^[A-Za-zÀ-ÖØ-öø-ÿ-]+(( |-)[A-Za-zÀ-ÖØ-öø-ÿ-]+)?, (le )?[0-9]* [A-Za-zÀ-ÖØ-öø-ÿ-]+ 19[1-2][0-9] ?.?')
     salute = re.compile(r'^Mon cher Butler ?,')
@@ -47,8 +47,8 @@ def tagging_regex(text):
     adress = re.compile(r'^(à )?Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
     addrline = re.compile(r'^(NEW) ?(-| )? ?(YORK).?$')
     signature = re.compile(r'^Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
-    name = re.compile(r"^(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
-    annexe = re.compile(r'^[0-9]+ annexe(s)?.?')
+    name = re.compile(r"(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
+    annexe = re.compile(r'^[0-9]* ?(A|a)nnexe(s)?.?')
     steps = re.compile(r'^([0-9]*|[A-Z]*)°')
     handnote = re.compile(r'££.+££')
     strikethrough = re.compile(r'(x|X){2,}')
@@ -66,7 +66,7 @@ def tagging_regex(text):
     text = re.sub(addrline, r'<addrLine><hi rend="underline">\g<0></hi></addrLine></address>', text)
     text = re.sub(signature, r'<closer><signed rend="align(right)">\g<0></signed>', text)
     text = re.sub(name, r'<signed rend="align(right)" hand="#annotation">\g<0></signed>', text)
-    text = re.sub(annexe, r'<postscript><p rend="bottom(left)">\g<0></p></postscript>', text)
+    text = re.sub(annexe, r'<postscript><p rend="bottom">\g<0></p></postscript>', text)
     text = re.sub(steps, r'<p rend="indent">\g<0>', text)
     text = re.sub(handnote, r'<add hand="#annotation">\g<0></add>', text)
     text = re.sub(strikethrough, r'<del rend="strikethrough">\g<0></del>', text)
