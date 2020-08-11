@@ -43,7 +43,7 @@ for root, dirs, files in os.walk(sys.argv[1]):
 
         new_change = soup.new_tag("change", who="#floriane.chiffoleau")
         new_change['when-iso'] = sys.argv[3]
-        new_change.string = "Encoding of the letter"
+        new_change.string = "First encoding of the transcription and some specific metadata (extent, msItem, accMat)"
         soup.change.insert_before(new_change)
         #Update the revisionDesc
 
