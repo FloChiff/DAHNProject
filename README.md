@@ -13,3 +13,9 @@ The DAHN project is a project between the University of the Mans, the EHESS and 
                         printed corpus, from every modern or contemporary period and in all imaginable European situations on those periods.
 
 ## Content of the repository
+
+This repository contains all the files related to the DAHN Project and the correspondance of Paul d’Estournelles de Constant.
+
+It is divided into two folders:
+- **Correspondence**: it contains all the files related to the corpus (guidelines, indexes and corpus)
+- **Project development**: it contains all the files involved in the evolution and the realization of the project (scripts, models, etc.). The training files are put into specific folders, depending on whether they are for segmentation or transcription. The scripts are indexed according to the part of the process they belong to : correction, encoding or transcription.
