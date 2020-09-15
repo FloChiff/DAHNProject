@@ -1751,6 +1751,7 @@
                     <moduleRef key="msdescription"
                         except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"/>
                     <moduleRef key="linking" include="ab seg"/>
+                    <moduleRef key="figures" except="formula notatedMusic"/>
                     <elementSpec ident="msIdentifier" mode="change">
                         <content>
                             <sequence>
@@ -1768,6 +1769,62 @@
                                 </alternate>
                             </sequence>
                         </content>
+                    </elementSpec>
+                    <elementSpec ident="add" mode="change">
+                        <attList>
+                            <attDef ident="place" mode="change">
+                                <valList type="semi" mode="replace">
+                                    <valItem ident="across">
+                                        <desc>across the line (used with del rend="overwritten")</desc>
+                                    </valItem>
+                                    <valItem ident="below">
+                                        <desc>below the line</desc>
+                                    </valItem>
+                                    <valItem ident="bottom">
+                                        <desc>at the foot of the page</desc>
+                                    </valItem>
+                                    <valItem ident="margin">
+                                        <desc>in the margin (left, right, or both)</desc>
+                                    </valItem>
+                                    <valItem ident="top">
+                                        <desc>at the top of the page</desc>
+                                    </valItem>
+                                    <valItem ident="opposite">
+                                        <desc>on the opposite, i.e. facing, page</desc>
+                                    </valItem>
+                                    <valItem ident="overleaf">
+                                        <desc>on the other side of the leaf</desc>
+                                    </valItem>
+                                    <valItem ident="above">
+                                        <desc>above the line</desc>
+                                    </valItem>
+                                    <valItem ident="end">
+                                        <desc>at the end of e.g. chapter or volume.</desc>
+                                    </valItem>
+                                    <valItem ident="inline">
+                                        <desc>within the body of the text.</desc>
+                                    </valItem>
+                                    <valItem ident="inspace">
+                                        <desc>in a predefined space, for example left by an earlier scribe.</desc>
+                                    </valItem>
+                                    <valItem ident="dots">
+                                        <desc>if the text was first deleted and then marked to be included again by writing dots below it</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="del" mode="change">
+                        <attList>
+                            <attDef ident="rend" mode="change">
+                                <valList type="semi" mode="replace">
+                                    <valItem ident="overwritten"/>
+                                    <valItem ident="strikethrough"/>
+                                    <valItem ident="erasure"/>
+                                    <valItem ident="none"/>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
                 </schemaSpec>
             </div>
