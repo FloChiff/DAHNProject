@@ -43,7 +43,6 @@ for root, dirs, files in os.walk(sys.argv[1]):
             content = suppress_punctuation(content)
             words = content.split()
             misspelled = spell.unknown(words)
-            #Misspelled puts all the words in lowercase so the correction is not entirely effective right now
             for word in misspelled:
                 dictionary[word] = spell.correction(word)
         with open(sys.argv[2].strip() + "/Dict" + filename.replace(".xml", ".py"),"w") as file_out:
