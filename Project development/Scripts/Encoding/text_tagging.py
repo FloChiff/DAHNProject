@@ -6,6 +6,13 @@
 - description: Encoding a corpus with some basic XML tags
 - input: plain text
 - output: tagged text
+- usage :
+    ======
+    python name_of_this_script.py arg1 arg2
+
+    arg1: folder of the transcription in a text format
+    arg2: folder for the transcription in an XML format
+
 """
 
 import os

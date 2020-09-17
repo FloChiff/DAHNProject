@@ -6,6 +6,14 @@
 - description: Correcting recurrent errors in the XML tree following the "text_tagging" script
 - input: XML file
 - output: XML file
+- usage :
+    ======
+    python name_of_this_script.py arg1 arg2 arg3
+
+    arg1: folder of the XML files to adjust
+    arg2: folder of the XML files adjusted
+    arg3: date of the execution of the script in the YYYY-MM-DD format
+
 """
 
 import os

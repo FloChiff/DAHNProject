@@ -6,6 +6,13 @@
 - description: Creating XML files from a CSV and encoding some metadata
 - input: CSV file
 - output: XML files
+- usage :
+    ======
+    python name_of_this_script.py arg1 arg2
+
+    arg1: csv of the metadata
+    arg2: folder for the XML files created
+
 """
 
 import csv

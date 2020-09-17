@@ -6,6 +6,14 @@
 - description: Recovering orthographic errors in XML ALTO files
 - input: XML ALTO files
 - output: Python dictionnaries
+- usage :
+    ======
+    python name_of_this_script.py arg1 arg2 arg3
+
+    arg1: folder of the XML ALTO files
+    arg2: folder for the Python dictionnaries
+    arg3: local dictionary adapted to the content's language of the XML ALTO
+    
 """
 
 
