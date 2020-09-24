@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-07-31T13:04:36Z. .
+Schema generated from ODD source 2020-09-24T11:04:35Z. .
 TEI Edition: Version 3.6.0. Last updated on
 	16th July 2019, revision daa3cc0b9
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -2831,17 +2831,20 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="tei_model.quoteLike"/>
          <ref name="tei_q"/>
+         <ref name="tei_floatingText"/>
       </choice>
    </define>
    <define name="tei_model.qLike_alternation">
       <choice>
          <ref name="tei_model.quoteLike_alternation"/>
          <ref name="tei_q"/>
+         <ref name="tei_floatingText"/>
       </choice>
    </define>
    <define name="tei_model.qLike_sequence">
       <ref name="tei_model.quoteLike_sequence"/>
       <ref name="tei_q"/>
+      <ref name="tei_floatingText"/>
    </define>
    <define name="tei_model.qLike_sequenceOptional">
       <optional>
@@ -2849,6 +2852,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="tei_q"/>
+      </optional>
+      <optional>
+         <ref name="tei_floatingText"/>
       </optional>
    </define>
    <define name="tei_model.qLike_sequenceOptionalRepeatable">
@@ -2858,6 +2864,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="tei_q"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_floatingText"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.qLike_sequenceRepeatable">
       <oneOrMore>
@@ -2865,6 +2874,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_q"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_floatingText"/>
       </oneOrMore>
    </define>
    <define name="tei_model.respLike">
@@ -2881,6 +2893,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="tei_byline"/>
          <ref name="tei_dateline"/>
+         <ref name="tei_argument"/>
          <ref name="tei_epigraph"/>
          <ref name="tei_salute"/>
          <ref name="tei_docDate"/>
@@ -2918,6 +2931,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_graphic"/>
          <ref name="tei_binaryObject"/>
          <ref name="tei_byline"/>
+         <ref name="tei_argument"/>
          <ref name="tei_epigraph"/>
          <ref name="tei_docDate"/>
       </choice>
@@ -5915,6 +5929,26 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <empty/>
       </element>
    </define>
+   <define name="tei_floatingText">
+      <element name="floatingText">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes. [4.3.2. Floating Texts]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <choice>
+               <ref name="tei_body"/>
+            </choice>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.declaring.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_div">
       <element name="div">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text division) contains a subdivision of the front, body, or back of a text. [4.1. Divisions of the Body]</a:documentation>
@@ -6047,6 +6081,29 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <empty/>
       </element>
    </define>
+   <define name="tei_argument">
+      <element name="argument">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a formal list or prose description of the topics addressed by a subdivision of a text. [4.2. Elements Common to All Divisions 4.6. Title Pages]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_model.headLike"/>
+               </choice>
+            </zeroOrMore>
+            <oneOrMore>
+               <group>
+                  <ref name="tei_model.common"/>
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+               </group>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_epigraph">
       <element name="epigraph">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a quotation, anonymous or attributed, appearing at the start or end of a section or on a title page. [4.2.3. Arguments, Epigraphs, and Postscripts 4.2. Elements Common to All Divisions 4.6. Title Pages]</a:documentation>
@@ -6068,6 +6125,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <text/>
                <ref name="tei_model.gLike"/>
                <ref name="tei_model.phrase"/>
+               <ref name="tei_argument"/>
                <ref name="tei_byline"/>
                <ref name="tei_dateline"/>
                <ref name="tei_epigraph"/>
