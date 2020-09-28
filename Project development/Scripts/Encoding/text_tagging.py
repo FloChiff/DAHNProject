@@ -54,7 +54,7 @@ def tagging_regex(text):
     adress = re.compile(r'^(à )?Monsieur le Président N(.)?(icholas)? ?Murray BUTLER.?')
     addrline = re.compile(r'^(NEW) ?(-| )? ?(YORK).?$')
     signature = re.compile(r'^Votre [A-Za-zÀ-ÖØ-öø-ÿ-]+ dévoué.?')
-    name = re.compile(r"(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
+    name = re.compile(r"^(D|d)'E(stournelles|STOURNELLES)( de C(onstant|ONSTANT))? ?.?")
     annexe = re.compile(r'^[0-9]* ?(A|a)nnexe(s)?.?')
     steps = re.compile(r'^([0-9]*|[A-Z]*)°')
     handnote = re.compile(r'££.+££')
