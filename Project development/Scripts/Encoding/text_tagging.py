@@ -45,6 +45,7 @@ def tagging_regex(text):
     """
 
     #This list contains regex of recurrent terms from the corpus letters
+    writingplace = re.compile(r'££Molitor££')
     letter = re.compile(r'^(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
     senate = re.compile(r'^S((E|É)NAT|énat)')
     status = re.compile(r'^P(ersonnelle|ERSONNELLE)')
@@ -63,6 +64,7 @@ def tagging_regex(text):
     postscript = re.compile(r'^P. ?S(.|,)')
 
 
+    text = re.sub(writingplace, r'<note place="top(left)" hand="#annotation"><placeName ref="#l0005">\g<0></placeName></note>', text)
     text = re.sub(letter, r'<head rend="center underline">\g<0></head><opener>', text)
     text = re.sub(senate, r'<fw type="letterhead" place="margin" corresp="#entete-senat"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(status, r'<fw place="align(left)"><hi rend="underline">\g<0></hi></fw>', text)
