@@ -1739,7 +1739,7 @@
             <div>
                 <head>List of the modules used on my TEI files</head>
                 <schemaSpec ident="myTEI" docLang="en" prefix="tei_" xml:lang="en">
-                    <moduleRef key="core" except="email gloss headItem headLabel l lg meeting postBox said sp speaker stage"/>
+                    <moduleRef key="core" except="email gloss headItem headLabel l lg meeting postBox said stage"/>
                     <moduleRef key="tei" except=""/>
                     <moduleRef key="header"
                         except="appInfo application cRefPattern catDesc catRef category classCode classDecl conversion interpretation listChange listPrefixDef normalization samplingDecl scriptNote styleDefDecl tagUsage tagsDecl taxonomy unitDecl unitDef xenoData"/>
@@ -1752,6 +1752,7 @@
                         except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"/>
                     <moduleRef key="linking" include="ab seg"/>
                     <moduleRef key="figures" except="formula notatedMusic"/>
+                    <moduleRef key="spoken" include="kinesic vocal"/>
                     <elementSpec ident="msIdentifier" mode="change">
                         <content>
                             <sequence>
