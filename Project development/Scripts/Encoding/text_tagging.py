@@ -67,7 +67,7 @@ def tagging_regex(text):
 
     text = re.sub(writingplace, r'<note place="top(left)" hand="#annotation"><placeName ref="#l0005">\g<0></placeName></note>', text)
     text = re.sub(letter, r'<head rend="center underline">\g<0></head><opener>', text)
-    text = re.sub(senate, r'<fw type="letterhead" place="margin" corresp="#entete-senat"><hi rend="underline">\g<0></hi></fw>', text)
+    text = re.sub(senate, r'<fw type="letterhead" place="margin" corresp="#lh-senat"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(status, r'<fw place="align(left)"><hi rend="underline">\g<0></hi></fw>', text)
     text = re.sub(dateline, r'<dateline rend="align(right)">\g<0></dateline>', text)
     text = re.sub(salute, r'<salute rend="indent">\g<0></salute></opener><p rend="indent">', text)
