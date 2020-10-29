@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-10-09T10:52:42Z. .
+Schema generated from ODD source 2020-10-29T12:35:25Z. .
 TEI Edition: Version 3.6.0. Last updated on
 	16th July 2019, revision daa3cc0b9
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -71,6 +71,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
             <ref name="tei_model.gLike"/>
          </choice>
       </zeroOrMore>
+   </define>
+   <define name="anyElement-xenoData">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.tei-c.org/ns/1.0"/>
+               <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="anyElement-xenoData"/>
+            </choice>
+         </zeroOrMore>
+      </element>
    </define>
    <define name="tei_att.ascribed.attributes">
       <ref name="tei_att.ascribed.attribute.who"/>
@@ -2101,6 +2122,18 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_model.pPart.transcriptional"/>
       </choice>
    </define>
+   <define name="tei_model.linePart">
+      <choice>
+         <ref name="tei_model.hiLike"/>
+         <ref name="tei_choice"/>
+         <ref name="tei_add"/>
+         <ref name="tei_del"/>
+         <ref name="tei_unclear"/>
+         <ref name="tei_zone"/>
+         <ref name="tei_handShift"/>
+         <ref name="tei_seg"/>
+      </choice>
+   </define>
    <define name="tei_model.ptrLike">
       <choice>
          <ref name="tei_ptr"/>
@@ -3232,6 +3265,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="tei_encodingDesc"/>
          <ref name="tei_profileDesc"/>
+         <ref name="tei_xenoData"/>
       </choice>
    </define>
    <define name="tei_model.sourceDescPart">
@@ -5811,6 +5845,19 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <empty/>
       </element>
    </define>
+   <define name="tei_xenoData">
+      <element name="xenoData">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(non-TEI metadata) provides a container element into which metadata in non-TEI formats may be placed. [2.5. Non-TEI Metadata]</a:documentation>
+         <choice>
+            <text/>
+            <ref name="anyElement-xenoData"/>
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_revisionDesc">
       <element name="revisionDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(revision description) summarizes the revision history for a file. [2.6. The Revision Description 2.1.1. The TEI Header and Its Components]</a:documentation>
@@ -8073,6 +8120,101 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          </attribute>
       </optional>
    </define>
+   <define name="tei_att.coordinated.attributes">
+      <ref name="tei_att.coordinated.attribute.start"/>
+      <ref name="tei_att.coordinated.attribute.ulx"/>
+      <ref name="tei_att.coordinated.attribute.uly"/>
+      <ref name="tei_att.coordinated.attribute.lrx"/>
+      <ref name="tei_att.coordinated.attribute.lry"/>
+      <ref name="tei_att.coordinated.attribute.points"/>
+   </define>
+   <define name="tei_att.coordinated.attribute.start">
+      <optional>
+         <attribute name="start">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the element within a transcription of the text containing at least the start of the writing represented by this zone or surface.</a:documentation>
+            <data type="anyURI"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.coordinated.attribute.ulx">
+      <optional>
+         <attribute name="ulx">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the x coordinate value for the upper left corner of a rectangular space.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.coordinated.attribute.uly">
+      <optional>
+         <attribute name="uly">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the y coordinate value for the upper left corner of a rectangular space.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.coordinated.attribute.lrx">
+      <optional>
+         <attribute name="lrx">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the x coordinate value for the lower right corner of a rectangular space.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.coordinated.attribute.lry">
+      <optional>
+         <attribute name="lry">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the y coordinate value for the lower right corner of a rectangular space.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.coordinated.attribute.points">
+      <optional>
+         <attribute name="points">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a two dimensional area within the bounding box specified by the other attributes by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.</a:documentation>
+            <list>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+                  </data>
+               </zeroOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <define name="tei_facsimile">
       <element name="facsimile">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text. [11.1. Digital Facsimiles]</a:documentation>
@@ -8080,11 +8222,84 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
             <oneOrMore>
                <choice>
                   <ref name="tei_model.graphicLike"/>
+                  <ref name="tei_surface"/>
                </choice>
             </oneOrMore>
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_surface">
+      <element name="surface">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_model.labelLike"/>
+                  <ref name="tei_model.graphicLike"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <group>
+                  <choice>
+                     <ref name="tei_zone"/>
+                     <ref name="tei_surface"/>
+                  </choice>
+                  <zeroOrMore>
+                     <ref name="tei_model.global"/>
+                  </zeroOrMore>
+               </group>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.coordinated.attributes"/>
+         <ref name="tei_att.declaring.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <optional>
+            <attribute name="attachment">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the method by which this surface is or was connected to the main surface
+Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="flipping">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether the surface is attached and folded in such a way as to provide two writing surfaces</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_zone">
+      <element name="zone">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines any two-dimensional area within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;surface&gt;</code> element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.graphicLike"/>
+               <ref name="tei_model.global"/>
+               <ref name="tei_surface"/>
+               <ref name="tei_model.linePart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.coordinated.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.written.attributes"/>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="rotate"
+                       a:defaultValue="0">
+               <a:documentation>indicates the amount by which this zone has been rotated clockwise, with respect to the normal orientation of the parent <code xmlns="http://www.w3.org/1999/xhtml">&lt;surface&gt;</code> element as implied by the dimensions given in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;msDesc&gt;</code> element or by the coordinates of the <code xmlns="http://www.w3.org/1999/xhtml">&lt;surface&gt;</code> itself. The orientation is expressed in arc degrees.</a:documentation>
+               <data type="nonNegativeInteger"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -8650,6 +8865,9 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             </oneOrMore>
             <group>
                <optional>
+                  <ref name="tei_summary"/>
+               </optional>
+               <optional>
                   <ref name="tei_textLang"/>
                </optional>
                <zeroOrMore>
@@ -8743,6 +8961,14 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.msExcerpt.attributes"/>
          <ref name="tei_att.msClass.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_summary">
+      <element name="summary">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an overview of the available information concerning some aspect of an item or object (for example, its intellectual content, history, layout, typography etc.) as a complement or alternative to the more detailed information carried by more specific elements. [10.6. Intellectual Content]</a:documentation>
+         <ref name="tei_macro.specialPara"/>
+         <ref name="tei_att.global.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8893,6 +9119,9 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <ref name="tei_model.pLike"/>
             </oneOrMore>
             <group>
+               <optional>
+                  <ref name="tei_summary"/>
+               </optional>
                <oneOrMore>
                   <ref name="tei_layout"/>
                </oneOrMore>
@@ -8962,6 +9191,9 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <ref name="tei_model.pLike"/>
             </oneOrMore>
             <group>
+               <optional>
+                  <ref name="tei_summary"/>
+               </optional>
                <oneOrMore>
                   <ref name="tei_handNote"/>
                </oneOrMore>
@@ -8985,6 +9217,9 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <ref name="tei_model.pLike"/>
             </oneOrMore>
             <group>
+               <optional>
+                  <ref name="tei_summary"/>
+               </optional>
                <oneOrMore>
                   <ref name="tei_decoNote"/>
                </oneOrMore>
@@ -9067,6 +9302,9 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <ref name="tei_model.pLike"/>
             </oneOrMore>
             <group>
+               <optional>
+                  <ref name="tei_summary"/>
+               </optional>
                <oneOrMore>
                   <choice>
                      <ref name="tei_decoNote"/>
@@ -9126,6 +9364,9 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
                <ref name="tei_model.pLike"/>
             </oneOrMore>
             <group>
+               <optional>
+                  <ref name="tei_summary"/>
+               </optional>
                <optional>
                   <ref name="tei_origin"/>
                </optional>
