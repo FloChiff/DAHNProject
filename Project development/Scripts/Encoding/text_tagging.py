@@ -62,7 +62,7 @@ def tagging_regex(text):
     handnote = re.compile(r'££.+££')
     strikethrough = re.compile(r'(x|X){2,}')
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
-    postscript = re.compile(r'^P. ?S(.|,)')
+    postscript = re.compile(r'^P. ?S(.|,)-?')
 
 
     text = re.sub(writingplace, r'<note place="top(left)" hand="#annotation"><placeName ref="#l0005">\g<0></placeName></note>', text)
