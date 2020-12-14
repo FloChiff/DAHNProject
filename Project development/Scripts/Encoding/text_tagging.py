@@ -87,7 +87,7 @@ def tagging_regex(text):
 
 
 linebreak = {
-    '-\n': '<lb break="no"/>',
+    '-\n': '-<lb break="no"/>',
     ' \n': '<lb/> ',
     "'\n": "'<lb/>"
 }
