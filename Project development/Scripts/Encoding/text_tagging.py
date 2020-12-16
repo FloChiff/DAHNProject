@@ -73,7 +73,7 @@ def tagging_regex(text):
     text = re.sub(salute, r'<salute rend="indent">\g<0></salute></opener><p rend="indent">', text)
     text = re.sub(page_numbering, r'<pb n="" facs=".JPG"/><note type="foliation" place="top">\g<0></note>',text)
     text = re.sub(adress, r'<address><addrLine rend="margin">\g<0></addrLine>', text)
-    text = re.sub(addrline, r'<addrLine><hi rend="underline">\g<0></hi></addrLine></address>', text)
+    text = re.sub(addrline, r'<addrLine rend="indent"><hi rend="underline">\g<0></hi></addrLine></address>', text)
     text = re.sub(signature, r'<closer><signed rend="align(right)">\g<0></signed>', text)
     text = re.sub(signature2, r'<closer><signed rend="align(right)">\g<0></signed>', text)
     text = re.sub(name, r'<signed rend="align(right)" hand="#annotation">\g<0></signed>', text)
