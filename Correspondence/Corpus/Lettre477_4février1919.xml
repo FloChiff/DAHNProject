@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -22,38 +22,23 @@
                         </address>
                     </affiliation>
                 </principal>
-                <!-- A compléter avec les personnes qui participeront au projet -->
                 <respStmt>
-                    <resp>Edited by</resp>
+                    <resp>Transcription by</resp>
                     <persName ref="#floriane.chiffoleau">
                         <forename>Floriane</forename>
                         <surname>Chiffoleau</surname>
                     </persName>
                 </respStmt>
                 <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>In collaboration with</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>With help from</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
+                    <resp>Encoding by</resp>
+                    <persName ref="#floriane.chiffoleau">
+                        <forename>Floriane</forename>
+                        <surname>Chiffoleau</surname>
                     </persName>
                 </respStmt>
                 <respStmt>
                     <resp>Digitization by</resp>
-                    <orgName ref="# "> </orgName>
+                    <orgName ref="#ADSarthe">Archives départementales de la Sarthe</orgName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -90,7 +75,7 @@
                         <msItem>
                             <docDate when="1919-02-04"/>
                             <note resp="#floriane.chiffoleau">This letter is joined with an annex.</note>
-                            <note type="keyword" resp="#floriane.chiffoleau">President Wilson</note>
+                            <note resp="#floriane.chiffoleau" type="keyword">President Wilson</note>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -126,18 +111,18 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote xml:id="major_hand" medium="black_ink" scope="minor" scribe="author" scribeRef="#p0001">
+                            <handNote medium="black_ink" scope="minor" scribe="author" scribeRef="#p0001" xml:id="major_hand">
                                 <p xml:lang="fr">Main de l'auteur, Paul d'Estournelles de Constant, qui écrit à l'encre noir à la machine à
                                     écrire.</p>
                                 <p xml:lang="en">Hand of the author, Paul d'Estournelles de Constant, who write in black ink with a typewriter.</p>
                             </handNote>
-                            <handNote xml:id="annotation" medium="pencil" scope="minor" scribe="author" scribeRef="#p0001">
+                            <handNote medium="pencil" scope="minor" scribe="author" scribeRef="#p0001" xml:id="annotation">
                                 <p xml:lang="fr">Main de l'auteur Paul d'Estournelles de Constant, qui annote son texte et signe son nom de sa main à
                                     la fin.</p>
                                 <p xml:lang="en">Hand of the author, Paul d'Estournelles de Constant, who annotate his text and hand sign it at the
                                     end.</p>
                             </handNote>
-                            <handNote xml:id="stamp" medium="black_ink" scope="minor" scribe="archivist" scribeRef="#ADSarthe">
+                            <handNote medium="black_ink" scope="minor" scribe="archivist" scribeRef="#ADSarthe" xml:id="stamp">
                                 <p xml:lang="fr">Main de l'archiviste qui a collecté les lettres et qui a apposé un tampon sur chacune des feuilles du
                                     dossier.</p>
                                 <p xml:lang="en">Hand of the archivist who collected the letters and applied a stamp on each folio.</p>
@@ -197,8 +182,8 @@
                 </correction>
                 <hyphenation eol="hard" rend="sh">
                     <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been removed.</p>
+                        conservées.</p>
+                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been kept.</p>
                 </hyphenation>
             </editorialDecl>
         </encodingDesc>
@@ -214,8 +199,8 @@
                     <placeName ref="#l0003">New-York</placeName>
                 </correspAction>
                 <correspContext>
-                    <ref type="prev" target="Lettre476_4février1919.xml"/>
-                    <ref type="next" target="Lettre478_5février1919.xml"/>
+                    <ref target="Lettre476_4février1919.xml" type="prev"/>
+                    <ref target="Lettre478_5février1919.xml" type="next"/>
                 </correspContext>
             </correspDesc>
             <langUsage>
@@ -240,10 +225,12 @@
         <body>
             <div type="transcription">
                 <div type="letter">
-                    <pb n="1" facs=".JPG"/>
+                    <pb facs=".JPG" n="1"/>
                     <head rend="center underline">LETTRE N°477</head>
                     <opener>
-                        <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline">SÉNAT</hi></fw>
+                        <fw corresp="#lh-senat" place="margin" type="letterhead">
+                            <hi rend="underline">SÉNAT</hi>
+                        </fw>
                         <dateline rend="align(right)"><placeName>Paris</placeName>, <date when-iso="1919-02-04">4 Février 1919</date></dateline>
                         <title rend="align(center) underline">LE PRÉSIDENT WILSON<lb/> REÇU A LA CHAMBRE DES DÉPUTÉS</title>
                         <salute rend="indent">Mon cher Butler,</salute>
@@ -255,25 +242,25 @@
                             condam-<lb break="no"/>nation de la négligence et de l’erreur gouvernementale que<lb/> nous avons vainement essayé de
                         combattre avant la guerre:</p>
                     <p rend="indent">Le président Wilson a dit plusieurs fois, en<lb/> substance, à la Sorbonne et ailleurs : <hi rend="underline">«
-                            cette guerre aurait<lb rend="after:&quot;"/> pu être évitée, si <subst>
+                            cette guerre aurait<lb rend='after:"'/> pu être évitée, si <subst>
                                 <del rend="strikethrough">UNE ORGANISATION</del>
                                 <add place="above">un organisme</add>
-                            </subst> de conciliation avait<lb rend="after:&quot;"/> été prévu et s’il avait fonctionné avant la guerre ».</hi>
+                            </subst> de conciliation avait<lb rend='after:"'/> été prévu et s’il avait fonctionné avant la guerre ».</hi>
                     </p>
                     <p rend="indent">Hier il a dit, en d’autres termes : <address>
                             <addrLine rend="margin">à Monsieur le Président Nicholas Murray BUTLER.</addrLine>
                         </address>
-                        <pb n="2" facs=".JPG"/>
-                        <note type="foliation" place="top">- 2 -</note> « J’ai vu la noble cité de Reims en ruines et<lb rend="after:&quot;"/> j’ai
-                        pensé : « C’est ici que le coup a frappé, parce que les<lb rend="after:&quot;"/> dirigeants du monde n’ont pas prévu le moyen
-                        de l’éviter".<lb rend="after:&quot;"/> Les dirigeants du monde ont pensé aux relations entre les<lb rend="after:&quot;"/>
-                        gouvernements ; <hi rend="underline">ils ont oublié les relations entre les<lb rend="after:&quot;"/> peuples !</hi> Ils ont
-                        manœuvré des combinaisons d<subst>
+                        <pb facs=".JPG" n="2"/>
+                        <note place="top" type="foliation">- 2 -</note> « J’ai vu la noble cité de Reims en ruines et<lb rend='after:"'/> j’ai pensé :
+                        « C’est ici que le coup a frappé, parce que les<lb rend='after:"'/> dirigeants du monde n’ont pas prévu le moyen de
+                            l’éviter".<lb rend='after:"'/> Les dirigeants du monde ont pensé aux relations entre les<lb rend='after:"'/> gouvernements
+                        ; <hi rend="underline">ils ont oublié les relations entre les<lb rend='after:"'/> peuples !</hi> Ils ont manœuvré des
+                        combinaisons d<subst>
                             <del rend="overwritten">e</del>
                             <add place="across">i</add>
-                        </subst>plomatiques<lb rend="after:&quot;"/> quand ils auraient dû ne penser qu’à la destination des hommes,<lb
-                            rend="after:&quot;"/> des<add><space/></add>femmes, des enfants, dont ils devaient sauvegarder la<lb rend="after:&quot;"/>
-                        sécurité et le bien-être… »</p>
+                        </subst>plomatiques<lb rend='after:"'/> quand ils auraient dû ne penser qu’à la destination des hommes,<lb rend='after:"'/>
+                            des<add><space/></add>femmes, des enfants, dont ils devaient sauvegarder la<lb rend='after:"'/> sécurité et le bien-être…
+                        »</p>
                     <p/>
                     <p rend="indent">Mon cher Butler, c’est pour avoir essayé,<lb/> depuis vingt ans et davantage, de rappeler les dirigeants<lb/> à
                         leur devoir que j’ai été mis en suspicion et paralysé. Si<lb/> ces dirigeants ne changent pas et de corps et d’âme, les<lb/>
@@ -283,28 +270,28 @@
                         dans la <hi rend="underline">Société<lb/> des Nations</hi>, acclamée avec enthousiasme par la gauche,<lb/> mais du bout des
                         lèvres et pour la forme par le reste<lb/> de l’assemblée.</p>
                     <p rend="indent">« Quel dommage, me disait dans l’intimité un<lb/> de mes anciens amis, membre de la Conférence officielle,
-                        où<lb/> il représente une puissance belligérante dite de second ordre, <pb n="3" facs=".JPG" rend="after:&quot;"/>
-                        <note type="foliation" place="top">- 3 -</note> quel dommage que la France ne saisisse pas cette occasion<lb
-                            rend="after:&quot;"/> des négociations de paix pour <subst hand="#annotation">
+                        où<lb/> il représente une puissance belligérante dite de second ordre, <pb facs=".JPG" n="3" rend='after:"'/>
+                        <note place="top" type="foliation">- 3 -</note> quel dommage que la France ne saisisse pas cette occasion<lb rend='after:"'/>
+                        des négociations de paix pour <subst hand="#annotation">
                             <del rend="strikethrough">ressener</del>
                             <add place="above">resserrer</add>
-                        </subst> à jamais ses liens<lb rend="after:&quot;"/> avec tous les peuples, petits ou grands, qui ont été ses<lb
-                            rend="after:&quot;"/> compagnons d’armes contre le militarisme. Telle était, à<lb/> La Haye, la politique de M. Bourgeois
-                        et la vôtre, la<lb rend="after:&quot;"/> vraie politique d’avenir pour votre pays <del rend="strikethrough">"</del>. </p>
-                    <p rend="indent">Mais non ! C’est à qui, parmi vos Ministres,<lb rend="after:&quot;"/> traitera de haut et comme importun, vos
-                        Alliés les plus<lb rend="after:&quot;"/> dévoués d’hier, à commencer par les Belges ! Le Portugal<lb rend="after:&quot;"/> qui
-                        est, après tout, une puissance chrétienne dont l’action<lb rend="after:&quot;"/> n’a pas été sans contribuer, dans l’histoire,
-                        au développe-<lb break="no"/>ment de la civilisation, est assimilé à des États orientaux,<lb rend="after:&quot;"/> le Siam et
-                        la Chine, et de quel ton !</p>
-                    <p rend="indent">Je ne sais pas si M. Clemenceau se fait aimer<lb rend="after:&quot;"/> des grandes Puissances, mais il se fait
-                            détester<lb rend="after:&quot;"/> par toutes les autres.</p>
-                    <p rend="indent">Il n’y a qu’une voix, en somme, pour dire que<lb rend="after:&quot;"/> si le Tigre a été bon pour finir la
-                        guerre, il n’est pas<lb rend="after:&quot;"/> l’homme à faire la paix ».</p>
+                        </subst> à jamais ses liens<lb rend='after:"'/> avec tous les peuples, petits ou grands, qui ont été ses<lb rend='after:"'/>
+                        compagnons d’armes contre le militarisme. Telle était, à<lb/> La Haye, la politique de M. Bourgeois et la vôtre, la<lb
+                            rend='after:"'/> vraie politique d’avenir pour votre pays <del rend="strikethrough">"</del>. </p>
+                    <p rend="indent">Mais non ! C’est à qui, parmi vos Ministres,<lb rend='after:"'/> traitera de haut et comme importun, vos Alliés
+                        les plus<lb rend='after:"'/> dévoués d’hier, à commencer par les Belges ! Le Portugal<lb rend='after:"'/> qui est, après tout,
+                        une puissance chrétienne dont l’action<lb rend='after:"'/> n’a pas été sans contribuer, dans l’histoire, au développe-<lb
+                            break="no"/>ment de la civilisation, est assimilé à des États orientaux,<lb rend='after:"'/> le Siam et la Chine, et de
+                        quel ton !</p>
+                    <p rend="indent">Je ne sais pas si M. Clemenceau se fait aimer<lb rend='after:"'/> des grandes Puissances, mais il se fait
+                            détester<lb rend='after:"'/> par toutes les autres.</p>
+                    <p rend="indent">Il n’y a qu’une voix, en somme, pour dire que<lb rend='after:"'/> si le Tigre a été bon pour finir la guerre, il
+                        n’est pas<lb rend='after:"'/> l’homme à faire la paix ».</p>
                     <p rend="indent">Et alors ? Nous allons voir les Américains,<lb/> les Anglais, partir froissés par la maladresse de nos<lb/>
                         gouvernements d’avant-guerre et tous les autres humiliés par<lb/> une sécheresse orgueilleuse qui est à mille lieues des<lb/>
                         traditions séculaires et des aspirations fraternelles de<lb/> la France.</p>
-                    <pb n="4" facs=".JPG"/>
-                    <note type="foliation" place="top">- 4 -</note>
+                    <pb facs=".JPG" n="4"/>
+                    <note place="top" type="foliation">- 4 -</note>
                     <p rend="indent">Que nous soyons impitoyables pour exiger des<lb/> Allemands qu’ils paient leur dette, soit; que nous
                         fassions<lb/> juger les Gouvernants Allemands, non pas par nous-même,<lb/> certes, mais de telle sorte que leur culpabilité ne
                         puisse<lb/> être niée par personne, même et surtout en Allema<subst>
@@ -312,17 +299,17 @@
                             <add place="across">gn</add>
                         </subst>e; que<lb/> nous conservions des gages sans faire de conquêtes; tout<lb/> cela se conçoit, cela est nécessaire, dans
                         la mesure où<lb/> nous ne rendrons pourtant pas impossible la reprise d’une<lb/> vie normale aux Allemands. Mais
-                        efforçons-nous de conser-<lb break="no"/>ver d’autant plus la confiance et l’amitié de tous nos<lb/> Alliés. Ne les traitons ni
-                        par la défiance, ni par l’in-<lb break="no"/>gratitude, ni, par le mépris.</p>
+                        efforçons-nous de conser-<lb break="no"/>ver d’autant plus la confiance et l’amitié de tous nos<lb/> Alliés. Ne les traitons
+                        ni par la défiance, ni par l’in-<lb break="no"/>gratitude, ni, par le mépris.</p>
                     <!-- Couillard -->
-                    <p rend="indent">Je vous écris cela, à titre personne<add place="inline" hand="#annotation">l</add>, sachant<lb/> bien que vous
+                    <p rend="indent">Je vous écris cela, à titre personne<add hand="#annotation" place="inline">l</add>, sachant<lb/> bien que vous
                         n’oubliez pas le souci que j’ai toujours pris<lb/> de ne rien publier mais qui puisse affaiblir mon Gouverne-<lb break="no"
                         />ment, non seulement devant l’ennemi mais devant ses Alliés.</p>
                     <p rend="indent">Cependant je ne dois pas, je ne puis pas<lb/> toujours me taire. Je n’attaque pas Clemenceau. Vous<lb/> m’avez vu
                         maintes fois reconnaître sa supériorité, comparée<lb/> à la médiocrité de tant d’autres. Je n’oublie pas qu’il<lb/> a été
-                        l’ami des petits peuples en bien des cas, l’ami des<lb/> Grecs, par exemple, envers et contre tous, et jusqu’à <pb n="5"
-                            facs=".JPG"/>
-                        <note type="foliation" place="top">- 5 -</note> L’injustice. Mais en ce moment ses boutades de polémiste<lb/> peuvent
+                        l’ami des petits peuples en bien des cas, l’ami des<lb/> Grecs, par exemple, envers et contre tous, et jusqu’à <pb facs=".JPG"
+                            n="5"/>
+                        <note place="top" type="foliation">- 5 -</note> L’injustice. Mais en ce moment ses boutades de polémiste<lb/> peuvent
                         indisposer nos amis, jeter le trouble dans leurs<lb/> esprits, les détourner du but de conciliation et de sacri-<lb break="no"
                         />fice qui doit être le leur et le nôtre. N’oublions pas que<lb/> les Gouvernements des grands Etats ne sont que trop
                         enclins<lb/> à dominer ou à ignorer les petits. Cela est si vrai,- je<lb/> vous le dis pour rétablir l’équilibre,- que Ll<subst>
@@ -339,7 +326,9 @@
                         <signed rend="align(right)">Votre affectueusement dévoué</signed>
                         <address>
                             <addrLine rend="margin">à Monsieur le Président Nicholas Murray BUTLER,</addrLine>
-                            <addrLine rend="indent"><hi rend="underline">NEW-YORK.</hi></addrLine>
+                            <addrLine rend="indent">
+                                <hi rend="underline">NEW-YORK.</hi>
+                            </addrLine>
                         </address>
                     </closer>
                     <postscript>
@@ -348,9 +337,10 @@
                 </div>
                 <div type="annex">
                     <pb facs=".JPG" n="6"/>
-                    <head rend="right" hand="#annotation">Annexe à ma lettre <hi rend="underline">N°477</hi>.</head>
+                    <head hand="#annotation" rend="right">Annexe à ma lettre <hi rend="underline">N°477</hi>.</head>
                     <p>
-                        <title>"Le Temps"</title><lb/>
+                        <title>"Le Temps"</title>
+                        <lb/>
                         <date when-iso="1919-02"><gap reason="illegible"/>Février 1919</date>
                     </p>
                 </div>

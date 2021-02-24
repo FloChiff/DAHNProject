@@ -23,36 +23,22 @@
                     </affiliation>
                 </principal>
                 <respStmt>
-                    <resp>Edited by</resp>
+                    <resp>Transcription by</resp>
                     <persName ref="#floriane.chiffoleau">
                         <forename>Floriane</forename>
                         <surname>Chiffoleau</surname>
                     </persName>
                 </respStmt>
                 <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>In collaboration with</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>With help from</resp>
-                    <persName ref="#prénom.nom">
-                        <forename/>
-                        <surname/>
+                    <resp>Encoding by</resp>
+                    <persName ref="#floriane.chiffoleau">
+                        <forename>Floriane</forename>
+                        <surname>Chiffoleau</surname>
                     </persName>
                 </respStmt>
                 <respStmt>
                     <resp>Digitization by</resp>
-                    <orgName ref="# "> </orgName>
+                    <orgName ref="#ADSarthe">Archives départementales de la Sarthe</orgName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -126,7 +112,8 @@
                         </objectDesc>
                         <handDesc>
                             <handNote medium="black_ink" scope="minor" scribe="author" scribeRef="#p0001" xml:id="major_hand">
-                                <p xml:lang="fr">Main de l'auteur, Paul d'Estournelles de Constant, qui écrit à l'encre noir à la machine à écrire.</p>
+                                <p xml:lang="fr">Main de l'auteur, Paul d'Estournelles de Constant, qui écrit à l'encre noir à la machine à
+                                    écrire.</p>
                                 <p xml:lang="en">Hand of the author, Paul d'Estournelles de Constant, who write in black ink with a typewriter.</p>
                             </handNote>
                             <handNote medium="pencil" scope="minor" scribe="author" scribeRef="#p0001" xml:id="annotation">
@@ -189,8 +176,8 @@
                 </correction>
                 <hyphenation eol="hard" rend="sh">
                     <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been removed.</p>
+                        conservées.</p>
+                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been kept.</p>
                 </hyphenation>
             </editorialDecl>
         </encodingDesc>
@@ -224,16 +211,21 @@
         <body>
             <div type="transcription">
                 <pb facs=".JPG" n="1"/>
-                <note place="top(left)" hand="#annotation"><placeName ref="#l0005">Molitor</placeName></note>
+                <note hand="#annotation" place="top(left)">
+                    <placeName ref="#l0005">Molitor</placeName>
+                </note>
                 <head rend="center underline">LETTRE N° 56<subst>
-                            <del rend="overwritten">3</del>
-                            <add place="across" hand="#annotation">4</add>
-                        </subst>.</head>
+                        <del rend="overwritten">3</del>
+                        <add hand="#annotation" place="across">4</add>
+                    </subst>.</head>
                 <opener>
-                    <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline">SÉNAT</hi></fw>
+                    <fw corresp="#lh-senat" place="margin" type="letterhead">
+                        <hi rend="underline">SÉNAT</hi>
+                    </fw>
                     <dateline rend="align(right)"><placeName>CRÉANS</placeName>, <date when-iso="1919-09-12">12 Septembre 1919</date>.</dateline>
                     <title rend="align(center) underline">LA BIBLIOTHEQUE DE REIMS .</title>
-                    <salute rend="indent">Mon cher Butler,</salute></opener>
+                    <salute rend="indent">Mon cher Butler,</salute>
+                </opener>
                 <p rend="indent"> En réponse à vos lettres récentes et notamment à<lb/> celle de Haskell du 11 du mois dernier, concernant
                     l'attribution<lb/> par la Dotation Carnegie d'une somme de 500.000 francs au profit<lb/> d'une œuvre de reconstruction en France,
                     je ne puis que me<lb/> référer à la lettre du maire de Reims que je vous ai transmise<lb/> sous le N° 532, le 27 Mai 1919, en
@@ -248,12 +240,16 @@
                     </address>
                     <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> bénéficiaire du don projeté, je me hâterai de provoquer
                     l'étude<lb/> nécessaire pour en établir la justification.</p>
-                <closer><signed rend="indent">Encore merci et à vous bien affectueusement,</signed>
+                <closer>
+                    <signed rend="indent">Encore merci et à vous bien affectueusement,</signed>
                     <signed hand="#annotation" rend="align(right)">d'Estournelles</signed>
                     <address>
                         <addrLine rend="margin">à Monsieur le Président Nicholas Murray BUTLER,</addrLine>
-                        <addrLine rend="indent"><hi rend="underline">NEW-YORK.</hi></addrLine>
-                    </address></closer>
+                        <addrLine rend="indent">
+                            <hi rend="underline">NEW-YORK.</hi>
+                        </addrLine>
+                    </address>
+                </closer>
             </div>
         </body>
     </text>
