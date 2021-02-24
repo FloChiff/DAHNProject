@@ -62,36 +62,22 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                     </affiliation>
                                 </principal>
                                 <respStmt>
-                                    <resp>Edited by</resp>
+                                    <resp>Transcription by</resp>
                                     <persName ref="#floriane.chiffoleau">
                                         <forename>Floriane</forename>
                                         <surname>Chiffoleau</surname>
                                     </persName>
                                 </respStmt>
                                 <respStmt>
-                                    <resp>Prepared by</resp>
-                                    <persName ref="#prénom.nom">
-                                        <forename/>
-                                        <surname/>
-                                    </persName>
-                                </respStmt>
-                                <respStmt>
-                                    <resp>In collaboration with</resp>
-                                    <persName ref="#prénom.nom">
-                                        <forename/>
-                                        <surname/>
-                                    </persName>
-                                </respStmt>
-                                <respStmt>
-                                    <resp>With help from</resp>
-                                    <persName ref="#prénom.nom">
-                                        <forename/>
-                                        <surname/>
+                                    <resp>Encoding by</resp>
+                                    <persName ref="#floriane.chiffoleau">
+                                        <forename>Floriane</forename>
+                                        <surname>Chiffoleau</surname>
                                     </persName>
                                 </respStmt>
                                 <respStmt>
                                     <resp>Digitization by</resp>
-                                    <orgName ref="# "> </orgName>
+                                    <orgName ref="#ADSarthe">Archives départementales de la Sarthe</orgName>
                                 </respStmt>
                             </titleStmt>
                             <publicationStmt>
@@ -255,7 +241,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                             </langUsage>
                         </profileDesc>
                         <revisionDesc status="proposed">
-                            <change when-iso="2020-07-22" who="#floriane.chiffoleau">Creation of the file</change>
+                            <change when-iso="2021-02-24" who="#floriane.chiffoleau">Creation of the file</change>
                         </revisionDesc>
                     </teiHeader>
                     <text>
