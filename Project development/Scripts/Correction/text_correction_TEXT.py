@@ -28,7 +28,6 @@ for root, dirs, files in os.walk(sys.argv[1]):
             print("reading from "+sys.argv[1] + filename)
             text = file_in.read()
         correction_dictionary = eval("dictionary." + filename.replace(".txt", ""))
-        #Change the '.xml' according to the filename extension of the files read
         for cle, valeur in correction_dictionary.items():
             if cle in text:
                 text = text.replace(cle, valeur)
