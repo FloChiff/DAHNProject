@@ -19,6 +19,13 @@ import os
 import re
 import sys
 
+
+LINEBREAK = {
+    '-\n': '-<lb break="no"/>',
+    ' \n': '<lb/> ',
+    "'\n": "'<lb/>"
+}
+
 def tagging_paragraph(text):
     """ Add paragraph tags in a text
     
@@ -44,7 +51,7 @@ def tagging_regex(text):
     :rtype: str
     """
 
-    #This list contains regex of recurrent terms from the corpus letters
+    #This series of statements contains regex of recurrent terms from the corpus
     writingplace = re.compile(r'££Molitor££')
     letter = re.compile(r'^(Annexe à ma )?L(ETTRE N|ettre n)° ?[0-9]+ ?.?')
     senate = re.compile(r'^S((E|É)NAT|énat)')
@@ -64,7 +71,7 @@ def tagging_regex(text):
     deletion = re.compile(r'€[A-Za-zÀ-ÖØ-öø-ÿ-]*€')
     postscript = re.compile(r'^P. ?S(.|,)-?')
 
-
+    #This series of statements contains the encoding for the declared recurrent terms from the corpus
     text = re.sub(writingplace, r'<note place="top(left)" hand="#annotation"><placeName ref="#l0005">\g<0></placeName></note>', text)
     text = re.sub(letter, r'<head rend="center underline">\g<0></head><opener>', text)
     text = re.sub(senate, r'<fw type="letterhead" place="margin" corresp="#lh-senat"><hi rend="underline">\g<0></hi></fw>', text)
@@ -86,30 +93,30 @@ def tagging_regex(text):
     return text
 
 
-linebreak = {
-    '-\n': '-<lb break="no"/>',
-    ' \n': '<lb/> ',
-    "'\n": "'<lb/>"
-}
-
 for root, dirs, files in os.walk(sys.argv[1]):
     for filename in files:
         with open(sys.argv[1] + filename, 'r') as file_in:
             print("reading from "+sys.argv[1] + filename)
-            f = file_in.read()
-            f = f.replace("\n", "\n$")
-            # This sign is added to help split the text afterwards while preserving the newlines.
-        with open(sys.argv[2] + filename.replace(".txt", ".xml"), "w") as file_out:
-            print("writing to "+sys.argv[2] + filename.replace(".txt", ".xml"))
-            for text in f.split('$'):
-                text = text.replace("’", "'")
-                text = tagging_regex(text)
-                text = tagging_paragraph(text)
-                for key, value in linebreak.items():
-                    text = text.replace(key, value)
-                if ">" not in text:
-                    text = text.replace("\n","<lb/> ")
-                text = text.replace("£", "")
-                text = text.replace("€", "")
-                #Suppress the two signs that are used in the transcription to signify deletion and handwritten text
-                file_out.write(text)
+            file = file_in.read()
+        file = file.replace("\n", "\n$")
+        #This sign is added to help split the text afterwards while preserving the newlines.
+        processed_text_as_list = []
+        text_as_list = file.split('$')
+        for text in text_as_list:
+            text = text.replace("’", "'")
+            text = tagging_regex(text)
+            text = tagging_paragraph(text)
+            for key, value in LINEBREAK.items():
+                text = text.replace(key, value)
+            if ">" not in text:
+                text = text.replace("\n","<lb/> ")  
+            text = text.replace("£", "")
+            text = text.replace("€", "")
+            #Suppress the two signs that are used in the transcription to signify deletion and handwritten text
+            processed_text_as_list.append(text)
+        new_text = "".join(processed_text_as_list)
+
+        output_file = sys.argv[2] + filename.replace(".txt", ".xml")
+        with open(output_file, "w") as file_out:
+            print("writing to " + output_file)
+            file_out.write(new_text)
