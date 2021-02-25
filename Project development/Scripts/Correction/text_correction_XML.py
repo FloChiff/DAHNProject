@@ -26,12 +26,12 @@ for root, dirs, files in os.walk(sys.argv[1]):
     for filename in files:
         with open(sys.argv[1] + filename, 'r') as file_in:
             print("reading from "+sys.argv[1] + filename)
-            correction_dictionary = eval("dictionary." + filename.replace(".xml", ""))
-            #Change the '.xml' according to the filename extension of the files read
-            with open(sys.argv[2] + filename,"w") as file_out:
-                print("writing to "+sys.argv[2] + filename)
-                for text in file_in:
-                    for cle, valeur in correction_dictionary.items():
-                        if cle in text:
-                            text = text.replace(cle, valeur)
-                    file_out.write(text)
+            text = file_in.read()
+        correction_dictionary = eval("dictionary." + filename.replace(".xml", ""))
+        #Change the '.xml' according to the filename extension of the files read
+        for cle, valeur in correction_dictionary.items():
+            if cle in text:
+                text = text.replace(cle, valeur)
+        with open(sys.argv[2] + filename,"w") as file_out:
+            print("writing to "+sys.argv[2] + filename)
+            file_out.write(text)
