@@ -1,0 +1,24 @@
+Training date : February 11th, 2021
+Training from another model (model_tapuscrit.mlmodel) itself trained with typescript documents
+
+(kraken_cuda) fchiffol@traces6: ~/kraken_training$ ketos train -o train_model -f alto --device cuda:0 -t allxmls.xmllist -t extradata.xmllist -t newdata.xmllist -t data.xmllist -e validation.xmllist -u NFC --threads 64 --load model_tapuscrit.mlmodel --resize add
+Building training set  [####################################]  11620/11620
+[6.0310] alphabet mismatch: chars in training set only: {'…', 'ò', '$', 'ö', '_', '=', '%', 'Ô', 'Ê', 'Ï'} (not included in accuracy test during training) 
+Network codec not compatible with training set
+Addind missing label to network ✓
+[6.6702] Neural network has been trained on mode L images, training set contains mode 1 data. Consider setting `force_binarization`
+stage 1/∞  [####################################]  11620/11620          Accuracy report (1) 0.9049 20357 1935
+stage 2/∞  [####################################]  11620/11620          Accuracy report (2) 0.9194 20357 1641
+stage 3/∞  [####################################]  11620/11620          Accuracy report (3) 0.9234 20357 1560
+stage 4/∞  [####################################]  11620/11620          Accuracy report (4) 0.9241 20357 1546
+stage 5/∞  [####################################]  11620/11620          Accuracy report (5) 0.9270 20357 1486
+stage 6/∞  [####################################]  11620/11620          Accuracy report (6) 0.9316 20357 1392
+stage 7/∞  [####################################]  11620/11620          Accuracy report (7) 0.9260 20357 1507
+stage 8/∞  [####################################]  11620/11620          Accuracy report (8) 0.9321 20357 1383
+stage 9/∞  [####################################]  11620/11620          Accuracy report (9) 0.9360 20357 1303
+stage 10/∞  [####################################]  11620/11620          Accuracy report (10) 0.9358 20357 1306
+stage 11/∞  [####################################]  11620/11620          Accuracy report (11) 0.9351 20357 1392
+stage 12/∞  [####################################]  11620/11620          Accuracy report (12) 0.9369 20357 1322
+stage 13/∞  [####################################]  11620/11620          Accuracy report (13) 0.9369 20357 1285
+stage 14/∞  [####################################]  11620/11620          Accuracy report (14) 0.9359 20357 1304
+Moving best model train_model_9.mlmodel (0.9359925332809353) to train_model_best.mlmodel
