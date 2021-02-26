@@ -11,7 +11,7 @@ In the context of the DAHN project, we used eScriptorium, the interface created 
 7. Once again, apply the transcription model so that it consider the changes made in the segmentation
 8. Export the transcription in your prefered XML format : ALTO (“Export; name-of-the-model; Alto”) or PAGE (“Export; name-of-the-model; Pagexml”)
 9. Search wrongly transcribed and incorrect words in the exported XML files by using one of these scripts : for [ALTO](https://github.com/FloChiff/DAHNProject/blob/master/Project%20development/Scripts/Correction/spellcheck_texts_XMLALTO.py) or for [PAGE](https://github.com/FloChiff/DAHNProject/blob/master/Project%20development/Scripts/Correction/spellcheck_texts_PAGEXML.py)
-(**Attention : the only dictionary available in the repository is for french texts. To work with other languages, you can download new dictionnaries [here](https://github.com/hermitdave/FrequencyWords) but you will have to transform the TEXT files in JSON.**)
+(**Attention : the only dictionary available in the repository is for french texts. To work with other languages, you can download new dictionnaries [here](https://github.com/hermitdave/FrequencyWords) but you will have to transform the TEXT file in JSON.**)
 10. Correct the produced dictionaries (one for each XML file) manually and by using the corresponding images
 11. Integrate every dictionary in a single file entitled “dictionary” (as it is named in the next script)
 12. Apply the corrections from the dictionary by using the corresponding [script](https://github.com/FloChiff/DAHNProject/blob/master/Project%20development/Scripts/Correction/text_correction_XML.py) for XML files
