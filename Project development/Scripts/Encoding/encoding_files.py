@@ -131,8 +131,10 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                                         <width/>
                                                     </dimensions>
                                                 </extent>
-                                                <foliation xml:lang="fr">La numérotation des pages a été faite à la machine à écrire, comme le reste de la lettre</foliation>
-                                                <foliation xml:lang="en">The numerotation has been made with a typewriter, just like the rest of the letter</foliation>
+                                                <foliation>
+                                                    <p xml:lang="fr">La numérotation des pages a été faite à la machine à écrire, comme le reste de la lettre</p>
+                                                    <p xml:lang="en">The numerotation has been made with a typewriter, just like the rest of the letter</p>
+                                                </foliation>
                                                 <condition>
                                                     <p xml:lang="fr">La lettre est bien conservée</p>
                                                     <p xml:lang="en">The letter is well preserved</p>
@@ -214,9 +216,9 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                     <p xml:lang="fr">Aucune correction</p>
                                     <p xml:lang="en">No correction</p>
                                 </correction>
-                                <hyphenation eol="hard" rend="sh">
-                                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été enlevées.</p>
-                                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been removed</p>
+                                <hyphenation eol="all" rend="sh">
+                                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été conservées.</p>
+                                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been kept</p>
                                 </hyphenation>
                             </editorialDecl>
                         </encodingDesc>
