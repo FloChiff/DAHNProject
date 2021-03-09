@@ -22,8 +22,8 @@ This folder contains three elements, essential for the development of the projec
 
 #### Training
 Before intiating the transcription of the corpus, it was important to develop models, first for the segmentation of the images, then for the transcription.
-By using the OCR software Kraken, through its interface eScriptorium, we develop ground truth that were later used to train models. 
-This folder contains the models developed for the segmentation and the transcription of our corpus (Paul d'Estournelles), as well as the report logs attached to them.
+By using the OCR software Kraken, through its interface eScriptorium, we developed ground truth that were later used to train models. 
+This folder contains those ground truth, the models subsequently developed for the segmentation and the transcription of our corpus (Paul d'Estournelles), as well as their report logs.
 
 #### Scripts
 With the DAHN project, we aim to create a program for the digital scientific edition of corpus. To do so, we have to follow several steps and some of them requires Python script to effectively work.
