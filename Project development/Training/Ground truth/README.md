@@ -3,7 +3,7 @@
 Ground Truth dataset for French 20th typewritten OCR
 
 ## Content
-**ALTO XML files from the same corpus, divided into 5 sub-corpus**
+**ALTO/PAGE XML files from the same corpus, divided into 5 sub-corpus**
 
 | # | name | nb of images | GT for segmenter? | GT for recognizer? | description |
 | --- | :---- | :---: | :---: | :---: | :---: |
@@ -13,7 +13,7 @@ Ground Truth dataset for French 20th typewritten OCR
 | 4 | extra_data | (97) | n | y | Segmentation and transcription of chunks of texts or unique words to help recognition form specificities: capital letters, numbers, titles, recurring elements, handwritten elements, narrow tight parts of texts |
 | 5 | data | (258) | y | y | Long letters, many lines per page, mostly straight lines but also narrow tight lines. Several pages contain lists, tables and many capital letters words. |
 
-*As there are only made for segmentation, some images/transcriptions from the seg\_data corpus are common with some elements founds in other corpus, but the `CONTENT` of each tag should be empty for the ALTO XML of the seg\_data corpus.*
+*As there are only made for segmentation, some images/transcriptions from the seg\_data corpus are common with some elements founds in other corpus, but the `CONTENT` of each tag should be empty for the ALTO/PAGE XML of the seg\_data corpus.*
 
 *As it is made to train the transcription model on peculiar characters rendition, some images/transcriptions from the extra\_data corpus are common with the other corpus, but the content of the XML files will differ because one will only transcribe special parts while the other will have the whole text transcribed.*
 
@@ -50,7 +50,7 @@ time: '1914-1924'
 hands: '2'
 license:
     - {name: 'CC-BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/'}
-format: ALTO XML
+format: ALTO or PAGE XML
 volume:
     - {count: "527", metric: pages}
 ```
