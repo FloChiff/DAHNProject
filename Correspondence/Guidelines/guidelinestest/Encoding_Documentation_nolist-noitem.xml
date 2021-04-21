@@ -1,0 +1,2393 @@
+<?teipublisher depth="3" template="guidelines.html"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="en">Encoding guide for digital edition of egodocuments</title>
+                <title xml:lang="fr">Guide d'encodage pour l'édition numérique d'égodocuments</title>
+                <author>
+                    <persName>
+                        <forename>Floriane</forename>
+                        <surname>Chiffoleau</surname>
+                    </persName>
+                    <affiliation>
+                        <orgName>INRIA</orgName>
+                        <address>
+                            <street>2 rue Simone Iff</street>
+                            <postCode>75012</postCode>
+                            <settlement>Paris</settlement>
+                            <country key="FR">France</country>
+                        </address>
+                    </affiliation>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Le Mans Université</authority>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/3.0/deed.en">Attribution 3.0 Unported (CC BY 3.0) </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Ce document est dérivé des <ref target="https://www.berliner-intellektuelle.eu/encoding-guidelines.pdf">guidelines d'encodage</ref>
+                    créées pour le projet <ref target="https://www.berliner-intellektuelle.eu">Lettres et textes</ref>
+                </p>
+                <p>Les balises item et list sont remplacées par des équivalents pour la sortie xslfo.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Introduction</head>
+                <div>
+                    <head>The project</head>
+                    <p>The DAHN project is a project between the University of the Mans, the EHESS and INRIA, and with the partnership of the Ministry
+                        of Higher Education, Research and Innovation. Its goal is to create a program for digital scientific edition of corpus of
+                        letter exchanges, with, as a basis, the correspondence of Paul d’Estournelles de Constant, senator of Sarthe and 1909 Nobel
+                        Peace Prize. The work is to be made in two steps : first, refreshing an already existing numeric environment to let in that
+                        new edition. Then, adding the correspondence of d’Estournelles, while documenting the methodology and the actions made. The
+                        first editorial platform (from <ref target="https://www.berliner-intellektuelle.eu">Lettres et Textes</ref>) was first
+                        developed between 2010 and 2016 and enabled the creation of a data model that combines genetic edition and named entities
+                        network. Though on a precise subject, it was thought to be a generic tool that allows transverse research on egodocuments and
+                        printed corpus, from every modern or contemporary period and in all imaginable European situations on those periods.</p>
+                </div>
+                <div>
+                    <head>About this document</head>
+                    <p>This document describes the encoding guidelines and decisions that were made specifically for our project and our editions. It
+                        is not a replacement for the original TEI documentation. Rather, it focuses on the way we use TEI elements in order to fit
+                        every phenomenon we need to encode. For this reason, only elements that we actually use are described together with exact
+                        details on how we use them.</p>
+                </div>
+            </div>
+            <div>
+                <head>Document Encoding</head>
+                <p>This TEI encoding must be adapted to the document format we are going to use on the platform created for the project: ego document.
+                    Ego documents are written personal documents such as diaries, memoirs or wills. They usually are dated and signed, which will
+                    required some recurrent elements on the encoding.</p>
+                <p>For each manuscript, a single XML document is created. This part describes elements appearing in those documents including header
+                    and body.</p>
+                <div>
+                    <head>The header</head>
+                    <div>
+                        <head>
+                            <gi>teiHeader</gi>
+                        </head>
+                        <p>As usual, the header comprises the <gi>teiHeader</gi> element. Following the TEI guidelines, the <gi>fileDesc</gi> (the
+                            main characteristics of the document), <gi>encodingDesc</gi> (editorial rules), <gi>profileDesc</gi> (information about
+                            the content) and <gi>revisionDesc</gi> (the history of the encoding) elements are used in <gi>teiHeader</gi>. Inside the
+                            header, descriptions are given in French or English, and German where appropriate.</p>
+                        <div>
+                            <head>Creating the <gi>fileDesc</gi>
+                            </head>
+                            <p>Within <gi>fileDesc</gi>, there are the following elements:
+                            <fo:list-block provisional-distance-between-starts="20mm">
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>titleStmt</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                                
+                                <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>publicationStmt</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>seriesStmt</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>sourceDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            </fo:list-block>
+                            <!--<specList>
+                                    <specDesc key="titleStmt"/>
+                                    <specDesc key="publicationStmt"/>
+                                    <specDesc key="seriesStmt"/>
+                                    <specDesc key="sourceDesc"/>
+                                </specList>-->
+                            </p>
+                            <div>
+                                <head>
+                                    <gi>titleStmt</gi>
+                                </head>
+                                <p>In the mandatory element <gi>titleStmt</gi>, we always encode the title of the document (<gi>title</gi>), authors
+                                    and editors (not for letters), and information on its digital version: the funder (<gi>funder</gi>), the head of
+                                    the project (<gi>principal</gi>), and, inside as many <gi>respStmt</gi> elements as needed, all other staff
+                                    members and contributors who have worked on the digital version of the particular document. In case of letters,
+                                    the <gi>title</gi> is structured as follows: “Letter from + name of the sender + to + name of the addressee +
+                                    (place, date)”. For example:</p>
+                                <egXML xml:space="preserve">
+                                    &lt;title xml:lang="en"&gt;Letter from Ludwig Tieck to Friedrich von Raumer (Ziebingen, 30 March 1815)&lt;/title&gt;
+                                </egXML>
+                                <p>In some case, the letter can be numbered by the sender. It is possible to add that number onto the title, which
+                                    then would be structured as follows : ”Letter number + number of the letter + from + [...]”.</p>
+                                <p>In case of other manuscripts, the <gi>title</gi> element contains the title as written on the manuscript or given
+                                    in another form.</p>
+                                <p>For letters, we do not use the <gi>author</gi> element. Instead, the sender and the addressee are encoded in
+                                        <gi>correspDesc</gi> inside <gi>profileDesc</gi>.</p>
+                                <p>For other types of texts, <gi>author</gi> and <gi>editor</gi> may be used. We have decided to use <gi>editor</gi>
+                                    only for roles belonging to the original text, i. e. roles that have led to the original text as it is. The role
+                                    is specified in the <att>role</att> attribute of <gi>editor</gi>. For roles of digital edition project members, we
+                                    use <gi>respStmt</gi> (see below).</p>
+                                <p>If there is more than one author or more than one person with the same role, then their names are grouped inside
+                                    one <gi>author</gi> or <gi>editor</gi> element, respectively. These are examples of our intended use of the
+                                        <gi>author</gi> and <gi>editor</gi> elements:
+                                    <egXML xml:space="preserve">
+                                        &lt;author&gt;
+                                            &lt;persName ref="#p0001"&gt;Ludwig Tieck&lt;/persName&gt;
+                                        &lt;/author&gt;
+                                        &lt;editor role="annotator"&gt;
+                                            &lt;persName ref="#p0002"&gt;Wilhelm Heinrich Wackenroder&lt;/persName&gt;
+                                            &lt;persName ref="#p0003"&gt;Another annotator&lt;/persName&gt;
+                                        &lt;/editor&gt;
+                                        &lt;editor role="literary_executor"&gt;
+                                            &lt;persName ref="#p0004"&gt;Rudolf Köpke&lt;/persName&gt;
+                                        &lt;/editor&gt;
+                                    </egXML>
+                                </p>
+                                <p>The <gi>funder</gi> element must contains the name of the person or organism that finance the project.</p>
+                                <p>The <gi>principal</gi> element must contains the name of the person responsible for the creation of the encoding.
+                                    It contains detailed elements (forename, surname, and the complete address of the affiliation). </p>
+                                <p>The next item <gi>respStmt</gi> comprises the declaration of all persons who took part in the research and edition
+                                    of the encoded document. We have selected five different responsibilities: “edited by”, “prepared by”, “in
+                                    collaboration with”, “with help from” and “digitization by”. </p>
+                            </div>
+                            <div>
+                                <head>
+                                    <gi>publicationStmt</gi>
+                                </head>
+                                <p>The <gi>publicationStmt</gi> element typically contains all information about the publisher, the publication place
+                                    and date and the restrictions of its use. In this project, we only use <gi>availability</gi> and
+                                    <gi>date</gi>.</p>
+                                <!-- It can be useful to put a publisher or to declare it. Otherwise, the XML-TEI file will be invalid.-->
+                            </div>
+                            <div>
+                                <head>
+                                    <gi>seriesStmt</gi>
+                                </head>
+                                <p>The <gi>seriesStmt</gi> element groups information about the series which the document belongs to. It would
+                                    coincide with the name of one of our two projects the documents are link to, either “Letters and texts from
+                                    intellectual Berlin around 1800” or "Correspondence of Paul d'Estournelles de Constant". We also specify genre and
+                                    topic of each document. To do so, we use <att>type</att> attributes with the values <val>main</val> for the name
+                                    of the edition, <val>genre</val> for genre and <val>topic</val> for topic. Genre and topic may appear more than
+                                    once. For example:
+                                    <egXML xml:space="preserve">
+                                        &lt;seriesStmt&gt;
+                                            &lt;title type="main"&gt;Letters and texts from intellectual Berlin around 1800&lt;/title&gt;
+                                            &lt;title type="genre"&gt;Letters&lt;/title&gt;
+                                            &lt;title type="genre"&gt;Logs/reports&lt;/title&gt;
+                                            &lt;title type="topic"&gt;Berlin University&lt;/title&gt;
+                                        &lt;/seriesStmt&gt;
+                                    </egXML>
+                                </p>
+                            </div>
+                            <div>
+                                <head>
+                                    <gi>sourceDesc</gi>
+                                </head>
+                                <p> The following element, <gi>sourceDesc</gi>, is used for all metadata describing the sources of the digital
+                                    edition. This element is repeatable, so one could describe different sources if one TEI document for the digital
+                                    edition is based on several manuscripts. The documents we are encoding are personal documents, letters or others,
+                                    handwritten or typescript depending on the period. For this reason, the <gi>sourceDesc</gi> element always
+                                    contains the sub-element <gi>msDesc</gi>, which is intended for the description of manuscripts. If the manuscript
+                                    is a letter, it also contains <gi>correspDesc</gi> to identify the sender and addressee. </p>
+                                <div>
+                                    <head>
+                                        <gi>msDesc</gi>
+                                    </head>
+                                    <p>The <gi>msDesc</gi> element contains the following elements. The first four are mandatory, <gi>additional</gi>
+                                        is optional. 
+                                        <fo:list-block provisional-distance-between-starts="20mm">
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>msIdentifier</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                                
+                                <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>msContents</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>physDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>history</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>additional</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            </fo:list-block>
+                            
+                                        <!--<specList>
+                                            <specDesc key="msIdentifier"/>
+                                            <specDesc key="msContents"/>
+                                            <specDesc key="physDesc"/>
+                                            <specDesc key="history"/>
+                                            <specDesc key="additional"/>
+                                        </specList>-->
+                                    </p>
+                                    <div>
+                                        <head>
+                                            <gi>msIdentifier</gi>
+                                        </head>
+                                        <p>In the <gi>msIdentifier</gi> element, all information concerning the institution, the manuscript’s
+                                            collection and its identifier (<gi>idno</gi>) is placed. A <att>type</att> attribute for <gi>idno</gi> can
+                                            be used to be more specific about who gave this identifier. It’s necessary to differentiate between the
+                                                <gi>repository</gi> and the <gi>institution</gi> element. Institution represents the conservation
+                                            place, while repository represents the department in it where the document is preserved. The content has
+                                            also been changed in order to be more accurate with the physical adress of the manuscript's institution.
+                                            For example:
+                                            <egXML xml:space="preserve">
+                                                &lt;msIdentifier&gt;
+                                                    &lt;location&gt;
+                                                        &lt;address&gt;
+                                                            &lt;street&gt;9 rue Christian Pineau&lt;/street&gt;
+                                                            &lt;postCode&gt;72100&lt;/postCode&gt;
+                                                            &lt;settlement&gt;Le Mans&lt;/settlement&gt;
+                                                            &lt;region&gt;Pays de la Loire&lt;/region&gt;
+                                                            &lt;country key="FR"&gt;France&lt;/country&gt;
+                                                        &lt;/address&gt;
+                                                    &lt;/location&gt;
+                                                    &lt;institution ref="#ADSarthe"&gt;Archives départementales de la Sarthe&lt;/institution&gt;
+                                                    &lt;repository&gt;Fonds des archives privées&lt;/repository&gt;
+                                                    &lt;collection&gt;Fonds d'Estournelles de Constant&lt;/collection&gt;
+                                                    &lt;idno&gt;12 J&lt;/idno&gt;
+                                                &lt;/msIdentifier&gt;
+                                            </egXML>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <head>
+                                            <gi>msContents</gi>
+                                        </head>
+                                        <p>The only sub-element of <gi>msContents</gi> is <gi>msItem</gi>. We use it for three different purposes.</p>
+                                        <p>First, the document date may be given inside <gi>docDate</gi>. This is the date originally written on the
+                                            letter or manuscript by the author<note>If a date was written by a different person, for example by an
+                                                archivist, it is not included in <gi>docDate</gi>
+                                            </note>. It may be identified as incorrect and thus
+                                            differ from the <gi>origDate</gi> (origin date) in the <gi>history</gi> section, where the actual date
+                                            (which can be a supposition) is declared. If no date is given on the manuscript, then <gi>docDate</gi> is
+                                            left out and only <gi>origDate</gi> appears in the header. If <gi>docDate</gi> and <gi>origDate</gi> are
+                                            the same, then both still appear.</p>
+                                        <p>Second, <gi>msItem</gi> may be used to give a summary of the manuscript or other details written by a
+                                            project member in one or more <gi>note</gi> elements with the <att>resp</att> attribute.</p>
+                                        <p>Third, <gi>msItem</gi> may be used to give keywords for the manuscript. They are also included inside
+                                                <gi>note</gi> elements—one for each keyword—with <att>resp</att> and
+                                                <att>type</att>=<val>keyword</val>.</p>
+                                        <p>Here is an example including all three cases :
+                                            <egXML xml:space="preserve">
+                                                &lt;msContents&gt;
+                                                    &lt;msItem&gt;
+                                                        &lt;docDate when="1919-02-04"/&gt;
+                                                        &lt;note resp="#floriane.chiffoleau"&gt;This letter is joined with an annexe&lt;/note&gt;
+                                                        &lt;note type="keyword" resp="#floriane.chiffoleau"&gt;President Wilson&lt;/note&gt;
+                                                    &lt;/msItem&gt;
+                                                &lt;/msContents&gt;
+                                            </egXML>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <head>
+                                            <gi>physDesc</gi>
+                                        </head>
+                                        <p>
+                                            <gi>physDesc</gi> comprises the physical description of the manuscript. In our case, <gi>physDesc</gi> may
+                                            contain three to six elements:
+                                            <fo:list-block provisional-distance-between-starts="20mm">
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>objectDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                                
+                                <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>handDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>accMat</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>additions</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>sealDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            <fo:list-item>
+                                <fo:list-item-label end-indent="label-end()">
+                                    <fo:block>decoDesc</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body start-indent="body-start()">
+                                    <fo:block/>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                            </fo:list-block>
+                                            <!--<specList>
+                                                <specDesc key="objectDesc"/>
+                                                <specDesc key="handDesc"/>
+                                                <specDesc key="accMat"/>
+                                                <specDesc key="additions"/>
+                                                <specDesc key="sealDesc"/>
+                                                <specDesc key="decoDesc"/>
+                                            </specList>-->
+                                        </p>
+                                        <p>In the <gi>objectDesc</gi> element, the material, the dimensions, the state of conservation etc. of the
+                                            manuscript are specified and are grouped inside <gi>supportDesc</gi>.</p>
+                                        <egXML xml:space="preserve">
+                                            &lt;objectDesc&gt;
+                                                &lt;supportDesc&gt;
+                                                    &lt;support&gt;
+                                                        &lt;material&gt;Type of paper, quality, etc&lt;/material&gt;
+                                                    &lt;/support&gt;
+                                                    &lt;extent&gt;
+                                                        &lt;measure type="folio"&gt;2 folios&lt;/measure&gt;
+                                                        &lt;dimensions unit="cm"&gt;
+                                                            &lt;height&gt;...&lt;/height&gt;
+                                                            &lt;width&gt;...&lt;/width&gt;
+                                                        &lt;/dimensions&gt;
+                                                    &lt;/extent&gt;
+                                                    &lt;foliation corresp="#pencil"&gt;Foliation in pencil by the archive.&lt;/foliation&gt;
+                                                    &lt;foliation corresp="#red"&gt;Description of another foliation&lt;/foliation&gt;
+                                                    &lt;foliation corresp="#sabine.seifert"&gt;Our foiling&lt;/foliation&gt;
+                                                    &lt;condition&gt;The letter is well-preserved.&lt;/condition&gt;
+                                                &lt;/supportDesc&gt; ... &lt;/objectDesc&gt;
+                                        </egXML>
+                                        <p>
+                                            <gi>foliation</gi> contains descriptions of foliations. The <att>corresp</att> attribute links each
+                                            foliation with the hand who made it (as described by a <gi>handNote</gi>) or— only if it is made by
+                                            us—with the corresponding person in the index of project members.</p>
+                                        <p>In a letter or some personal document, you may find letterhead or pre-printed element on the support. The
+                                            choice was made to describe those element on the <gi>layoutDesc</gi> and it will then be presented and
+                                            link in the <gi>body</gi>, inside a <gi>fw</gi> element, as it was proposed on one of the article from
+                                                <ref target="https://encoding-correspondence.bbaw.de/v1//">Encoding Correspondence</ref>.</p>
+                                        <egXML xml:space="preserve">
+                                            &lt;objectDesc&gt; 
+                                            ... 
+                                                &lt;layoutDesc&gt;
+                                                    &lt;layout xml:id="lh-senat"&gt;A letterhead is printed in the top left of the first page of the letter.
+                                                        The letterhead is constitued by "Sénat" written in uppercase and underlined.&lt;/layout&gt;
+                                                &lt;/layoutDesc&gt;
+                                            &lt;/objectDesc&gt;
+                                        </egXML>
+                                        <p>The <gi>handDesc</gi> element is also part of <gi>physDesc</gi>. Here, the different hands found in the
+                                            manuscript can be identified and described with as many <gi>handNote</gi> elements as needed. More than
+                                            one <gi>handNote</gi> element can belong to the same person: if an author completed a text after a long
+                                            time, two different hands could be identified for him.</p>
+                                        <p>
+                                            <gi>handNote</gi> is also used to describe which scripture the hand uses predominantly. The following
+                                            attributes are used : 
+                                             
+                                                 
+                                                    <att>xml:id</att>: An identifier of the hand. 
+                                                 
+                                                    <att>scope</att>: The hand’s preponderance in this manuscript. 
+                                                 
+                                                    <att>medium</att>: Which instrument has the hand been using? 
+                                                 
+                                                    <att>scribeRef</att>: Points to the person responsible for the hand, i.e. to the respective
+                                                        <gi>person</gi> element in the index of persons. This attribute is always given, even if the
+                                                    person is the author/sender. If the hand is of an archivist that cannot be identified as a person,
+                                                    then this attribute points to the corresponding archive in the index of organizations. 
+                                                 
+                                                    <att>scribe</att>: The function that the person has in this particular text. 
+                                                 
+                                                    <att>corresp</att>: Only used with <att>scribe</att>="<val>publisher</val>" (see list
+                                                    below). 
+                                             
+                                        </p>
+                                        <p>In the TEI
+                                            header:<egXML xml:space="preserve">
+                                                &lt;handDesc&gt;
+                                                    &lt;handNote xml:id="major_hand" scope="major" medium="black_ink" scribe="author" scribeRef="#p0133"
+                                                        &gt;Hand of sender Ludwig Tieck, letter text in black ink, mainly German script.&lt;/handNote&gt;
+                                                    &lt;handNote xml:id="red_hand" scope="minor" medium="red_ink" scribe="publisher" scribeRef="#p0042"
+                                                        corresp="#w0221"&gt;Very likely Hand of Friedrich von Raumer at the time when he prepared his
+                                                        edition of this letter; few remarks in red ink; mostly German script.&lt;/handNote&gt;
+                                                    &lt;handNote xml:id="pencil" scope="minor" medium="pencil" scribe="archivist"&gt;Hand of the archivist
+                                                        in charge of foliation.&lt;/handNote&gt;
+                                                &lt;/handDesc&gt;
+                                            </egXML>
+                                        </p>
+                                        <p>Corresponding <att>hand</att> in the body:
+                                            <egXML xml:space="preserve">
+                                            &lt;note place="margin-right" hand="#red"&gt;Tieck an Raumer&lt;/note&gt;
+                                        </egXML>
+                                        </p>
+                                        <p>There may only be one hand with <att>scope</att>=”<val>major</val>”. This is defined to be the default hand
+                                            of the document, i. e. the hand that is active in parts of the body where no <att>hand</att> attribute is
+                                            given. All other hands have <att>scope</att>=”<val>minor</val>”. When there is only one hand in the whole
+                                            manuscript, <att>scope</att>=”<val>sole</val>” is used instead of <att>scope</att>=”<val>major</val>”.
+                                            Then this hand is the default hand, of course. The following values can be used for <att>scribe</att>: 
+                                             
+                                                 
+                                                    <val>author</val>: The hand is of the author/sender. 
+                                                 
+                                                    <val>publisher</val>: The hand is of somebody who played a role in publishing the text. In this
+                                                    case, the attribute <att>corresp</att> can be used to point to the entry of the corresponding
+                                                    publication in the index of works (see example above).  
+                                                 
+                                                    <val>commentator</val>: The hand is of a commentator. 
+                                                 
+                                                    <val>archivist</val>: The hand is of an archivist (no matter if the archivist person is known by
+                                                    name or not—see the description of <att>scribeRef</att> above).  
+                                                 
+                                                    <val>copyist</val>: The hand is of a copyist, i.e. a person who copied a manuscript authored by
+                                                    somebody else. 
+                                                 
+                                                    <val>addressee</val>: In case of letters, the hand is of the addressee (i. e. the person given
+                                                    in <tag>correspAction type=”received”</tag>inside <gi>correspDesc</gi>. 
+                                                 
+                                                    <val>unknown</val>: The person and role of the hand are unknown. 
+                                                 
+                                                    <val>other</val>: The hand is of a person whose role does not fit in the other categories but
+                                                    who is not unknown. 
+                                             
+                                        </p>
+                                        <p> Furthermore, <gi>physDesc</gi> may contain <gi>sealDesc</gi> where seals used to close the letter (wax
+                                            etc.) are specified.</p>
+                                        <p>It can also contain a <gi>additions</gi> element, used to describe any additions made inside the manuscript
+                                            and on its pages.
+                                            <egXML xml:space="preserve">
+                                                &lt;additions&gt;
+                                                    &lt;p&gt;A stamp has been put on almost every page of the correspondence by the institution in charge of
+                                                        the collection. On the stamp is written: &lt;stamp resp="#stamp"&gt;Archives de la Sarthe
+                                                            &lt;lb/&gt;Propriété publique&lt;/stamp&gt;&lt;/p&gt;&lt;/additions&gt;
+                                            </egXML>
+                                        </p>
+                                        <p>Any material accompanying the letter—for example an envelope, a picture, a drawing etc.—is described inside
+                                                <gi>physDesc</gi> using the <gi>accMat</gi> element. Envelopes are usually regarded as part of the
+                                            manuscript pages and are transcribed like normal pages but are being pointed to from <gi>accMat</gi>.
+                                            <egXML xml:space="preserve">
+                                                &lt;accMat&gt;The letter is joined with a three pages annex made of multiple cut out newspapers' articles
+                                                    glued to paper.&lt;/accMat&gt;
+                                            </egXML>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <head>
+                                            <gi>history</gi>
+                                        </head>
+                                        <p>After the <gi>physDesc</gi> element, we can now take a look at the <gi>history</gi> element inside
+                                                <gi>msDesc</gi>. The full history of a manuscript is described here:</p>
+                                        <p>from its creation until today (going through the place and date of creation, the provenance, the
+                                            acquisition...). Two child elements can be used: <gi>origin</gi> and <gi>acquisition</gi>.</p>
+                                        <p>
+                                            <gi>origin</gi> describes at least the place of creation of the manuscript (inside <gi>origPlace</gi> ) and
+                                            its date of creation (inside <gi>origDate</gi>). Further information may be added.</p>
+                                        <p> The actual date of creation may differ from any date written on the manuscript, <gi>origDate</gi> contains
+                                            a date that is either identified as correct or is a supposition, <gi>docDate</gi> appearing inside
+                                                <gi>msItem</gi> contains a date written on the manuscript even if that is incorrect. If
+                                                <gi>origDate</gi> and <gi>docDate</gi> are the same, both still appear. For example:
+                                            <egXML xml:space="preserve">
+                                                &lt;history&gt;
+                                                    &lt;origin&gt;The letter was composed in &lt;origPlace ref="#l0066"&gt;Ziebingen&lt;/origPlace&gt; on &lt;origDate
+                                                            when-iso="1815-03-30"&gt;March, 30 1815&lt;/origDate&gt;. &lt;/origin&gt; 
+                                                    ... 
+                                                &lt;/history&gt;
+                                            </egXML>
+                                        </p>
+                                        <p>
+                                            <gi>acquisition</gi> records how the manuscript entered the institution that is currently holding it:
+                                            <egXML xml:space="preserve">
+                                                &lt;acquisition&gt; The &lt;persName ref="#p0248"&gt;de La Foye&lt;/persName&gt; papers (NL 239) were acquired by the
+                                                    State Library in &lt;date when-iso="1990-05"&gt;May 1990&lt;/date&gt; (auction 55 of the Galerie Gerda
+                                                    Bassenge, Berlin, part 1, &lt;date when-iso="1990-05-02/04"&gt;2.-4.5.1990&lt;/date&gt; , Nr. 3009). They were
+                                                    funded by the German Ministry of Inner Affairs and loaned to the State Library. 
+                                                &lt;/acquisition&gt;
+                                            </egXML>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <head>
+                                            <gi>additional</gi>
+                                        </head>
+                                        <p>The optional element <gi>additional</gi> is the last sub-element of <gi>msDesc</gi> and is currently only
+                                            used to hold a <gi>listBibl</gi> describing publications that are in some way related to the manuscript.
+                                            These are usually earlier prints of the manuscript but could also be other works where text portions
+                                            appearing in the manuscript were published. Each publication is given in a <gi>bibl</gi> element
+                                            containing a short bibliographic description, usually using <gi>title</gi> and <gi>persName</gi> elements.
+                                            Full descriptions are given in the index of works and are being pointed to using <att>ref</att> of
+                                                <gi>title</gi>.
+                                            <egXML xml:space="preserve">
+                                                &lt;additional&gt;
+                                                    &lt;listBibl&gt;
+                                                        &lt;bibl&gt;The &lt;title ref="#w00222"&gt;Lebenserinnerungen und Briefwechsel&lt;/title&gt; of &lt;persName
+                                                                ref="#p0187"&gt;Friedrich von Raumer&lt;/persName&gt;: contain part of the letter (vol. 1, p.
+                                                            279-280).&lt;/bibl&gt;
+                                                        &lt;bibl&gt; ... &lt;/bibl&gt;
+                                                    &lt;/listBibl&gt;
+                                                &lt;/additional&gt;
+                                            </egXML>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <head>Creating the <gi>encodingDesc</gi>
+                            </head>
+                            <p>After <gi>fileDesc</gi>, the second top-level portion of the header is <gi>encodingDesc</gi> . It comprises
+                                    <gi>projectDesc</gi> (which simply names the respective project) and <gi>editorialDecl</gi>.</p>
+                            <p>The <gi>editorialDecl</gi> element is used for documenting decisions concerning corrections (<gi>correction</gi>) and
+                                hyphenation (<gi>hyphenation</gi>) in the manuscript.
+                                <egXML xml:space="preserve">
+                                    &lt;encodingDesc&gt;
+                                        &lt;projectDesc&gt;
+                                            &lt;p&gt;The encoding of this document is part of the DAHN Project "Digital Editions of historical manuscripts
+                                                (correspondences)&lt;/p&gt;
+                                        &lt;/projectDesc&gt;
+                                        &lt;editorialDecl&gt;
+                                            &lt;correction&gt;
+                                                &lt;p&gt;No corrections&lt;/p&gt;
+                                            &lt;/correction&gt;
+                                            &lt;hyphenation eol="hard" rend="sh"&gt;
+                                                &lt;p&gt;All the end-of-line hyphenation (made with a single hyphen) have been removed&lt;/p&gt;
+                                            &lt;/hyphenation&gt;
+                                        &lt;/editorialDecl&gt;
+                                    &lt;/encodingDesc&gt;
+                                </egXML>
+                            </p>
+                            <p> We do not do any normalization but we can do some corrections that is explained in <gi>correction</gi> and are
+                                demonstrate later, in the <gi>body</gi> part.</p>
+                            <p>
+                                <gi>hyphenation</gi> always has the attribute <att>eol</att>=”<val>hard</val>” which—as specified in the TEI
+                                guidelines—describes the way we deal with end-of-line hyphenation (see also the description of <gi>lb</gi>).
+                                Furthermore, it needs the attribute <att>rend</att> where we state which is the default hyphenation character in the
+                                manuscript, i. e. the one which appears most often (here, the ”sh” means a single hyphen (”-”)). It uses the same
+                                values as the <att>type</att> attribute of <gi>lb</gi>. Whenever end-of-line hyphenation occurs with the character
+                                specified in <att>rend</att>, then it need not be repeated in <att>type</att> of <gi>lb</gi>. The <att>type</att>
+                                attribute of <gi>lb</gi> is only mandatory if the hyphenation character in the specific case differs.</p>
+                            <p>Please note that this only applies to end-of-line hyphenation. Hyphenation characters inside a line apart from the
+                                single hyphen are treated differently. </p>
+                        </div>
+                        <div>
+                            <head>Creating the <gi>profileDesc</gi>
+                            </head>
+                            <div>
+                                <head>
+                                    <gi>correspDesc</gi>
+                                </head>
+                                <p>
+                                    <gi>profileDesc</gi> is used for two purposes. For letters, it contains <gi>correspDesc</gi>. Here, the sender and
+                                    addressee are identified using the sub-element <gi>correspAction</gi>. If applicable, previous and following
+                                    letters are referenced by their file names in our edition using <gi>correspContext</gi>. For example:
+                                    <egXML xml:space="preserve">
+                                        &lt;correspDesc&gt;
+                                            &lt;correspAction type="sent"&gt;
+                                                &lt;persName ref="#p0133"&gt;Ludwig Tieck&lt;/persName&gt;
+                                                &lt;placeName ref="#l0066"&gt;Ziebingen&lt;/placeName&gt;
+                                                &lt;date when-iso="1818-02-02"/&gt;
+                                            &lt;/correspAction&gt;
+                                            &lt;correspAction type="received"&gt;
+                                                &lt;persName ref="#p0187"&gt;Friedrich von Raumer&lt;/persName&gt;
+                                            &lt;/correspAction&gt;
+                                            &lt;correspContext&gt;
+                                                &lt;ref type="prev" target="Brief01TieckanRaumer.xml"/&gt;
+                                                &lt;ref type="next" target="Brief03TieckanRaumer.xml"/&gt;
+                                            &lt;/correspContext&gt;
+                                        &lt;/correspDesc&gt;
+                                    </egXML>
+                                </p>
+                                <p> For the sending side, the originating place is also given, as is the date. For the receiving side, this is usually
+                                    not the case. However, if the information is given, it should be included. Currently, the place and date are
+                                    doubled in <gi>msItem</gi>, <gi>history</gi> and <gi>dateline</gi>, respectively.
+                                    <!-- It is unclear whether this policy will be kept in
+                                    the future.-->
+                                </p>
+                            </div>
+                            <div>
+                                <head>
+                                    <gi>langUsage</gi>
+                                </head>
+                                <p>Inside <gi>profileDesc</gi>, we also specify the languages of the manuscript in <gi>langUsage</gi> :
+                                    <egXML xml:space="preserve">
+                                        &lt;langUsage&gt;
+                                            &lt;language ident="de" usage="80"/&gt;
+                                            &lt;language ident="fr" usage="20"/&gt;
+                                        &lt;/langUsage&gt;
+                                    </egXML>
+                                </p>
+                                <p>Each langage is identified in a <gi>language</gi> element.The approximate percentage of language usage is given in
+                                    the attribute <att>usage</att>. When there is only one language, usage becomes 100, of course. In those cases,
+                                        <att>usage</att> may be left out.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <head>Creating the <gi>revisionDesc</gi>
+                            </head>
+                            <p>
+                                <gi>revisionDesc</gi> is the last direct child element of <gi>teiHeader</gi>. It summarizes the revision history of the
+                                file which is given in English only. Each revision is recorded in a <gi>change</gi> element with a <att>who</att>
+                                attribute which refers to the <att>xml:id</att> attribute of the corresponding <gi>person</gi> entry within the index
+                                of contributors.
+                                <egXML xml:space="preserve">
+                                    &lt;revisionDesc&gt;
+                                        &lt;change when-iso="2012-06-04" who="#anne.baillot"&gt;Updated the transcription and added all the elements in
+                                            English and French (in the header and in the notes in the body).&lt;/change&gt;
+                                        &lt;change when-iso="2012-04-02" who="#anne.baillot"&gt;Updated a few details.&lt;/change&gt;
+                                        &lt;change when-iso="2012-03-26" who="#anne.baillot"&gt;Finished encoding, revised header, added comparison with
+                                            print version.&lt;/change&gt;
+                                        &lt;change when-iso="2012-03-16" who="#anne.baillot"&gt;First encoding (up to line 208). Have to check published
+                                            letters before proceeding with the transcription; the text sounds familiar.&lt;/change&gt;
+                                    &lt;/revisionDesc&gt;
+                                </egXML>
+                            </p>
+                            <p>The <gi>revisionDesc</gi> will also be used, in our documents, to indicate the level of finalization of the
+                                transcription published on the platform of our project. We have three level of transcription : 
+                                 
+                                     raw transcription 
+                                     annotation in progress 
+                                     finalized document 
+                                  Those different steps will be indicated with an attribute <att>status</att> with a value for each of those
+                                steps :  
+                                     
+                                        <val>proposed</val>: the document is simply transcribed 
+                                     
+                                        <val>unfinished</val>: the transcription is done and the annotation are in progress 
+                                     
+                                        <val>approved</val>: the document is fully finalized 
+                                 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <head>The body</head>
+                    <p> After <gi>teiHeader</gi>, the element <gi>text</gi> follows. It always contains the <gi>body</gi> of the text. It can
+                        sometimes also contains <gi>front</gi> and <gi>back</gi> but it’s not relevant for the egodocuments. Of <gi>body</gi>, the
+                        only direct sub-element is a <gi>div</gi>: <tag>div type=”transcription”</tag>. Inside of it, the actual body, i. e. the text
+                        of the manuscript appears. </p>
+                    <div>
+                        <head>Structuring the transcription</head>
+                        <div>
+                            <head>Paragraphs: <gi>p</gi>
+                            </head>
+                            <p> Paragraphs are included inside <gi>p</gi>. A paragraph is defining as beginning and ending with line breaks.
+                                Sometimes, however, the end of a paragraph is not marked by a line break but by leaving an amount of space after the
+                                last sentence and having the new paragraph begin on the same line. In these cases, <att>rend</att>=”<val>nolb</val>”
+                                is used for the <gi>p</gi> before that space. This indicates that there is no line break after it:
+                                <egXML xml:space="preserve">
+                                    &lt;p rend="nolb"&gt;This paragraph ends without a line break but only with a space.&lt;/p&gt;
+                                    &lt;p rend="nolb"&gt;This one, too.&lt;/p&gt;
+                                    &lt;p&gt;This paragraph, however, ends with a line break.&lt;/p&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Line breaks: <gi>lb</gi>
+                            </head>
+                            <p> All line breaks are tagged with the <gi>lb</gi> element. The way we encode end-of-line <gi>lb</gi> hyphenation is
+                                described in the <gi>hyphenation</gi> element in the header. When a word is being split at a line break, we leave out
+                                the hyphenation character. The text <eg>au développe- ment de la civilisation, est assimilé</eg> thus becomes:
+                                <egXML xml:space="preserve">
+                                    au développe&lt;lb break="no"/&gt;ment de la civilisation, est assimilé
+                                </egXML>
+                            </p>
+                            <p>As you can see, we use the attribute <att>break</att>=”<val>no</val>” to denote that there is no new word starting
+                                there. In the XML file, there must be no spaces and no line breaks between the <gi>lb</gi> tag and the surrounding
+                                letters!</p>
+                            <p>However, we retain the information about which hyphenation character is used. For each document, we specify a default
+                                end-of-line hyphenation character in the <gi>hyphenation</gi> element, that is the character which is used most often.
+                                If the hyphenation character in a specific case differs from the default one, we use the attribute <att>type</att> of
+                                    <gi>lb</gi> to denote this. The following values are used for <att>type</att>: 
+                                     
+                                     
+                                        <val>sh</val>: single hyphen (“-”). 
+                                     
+                                        <val>dh</val>: double hyphen (“=”). 
+                                     
+                                        <val>us</val>: underscore (“_”) 
+                                     
+                                        <val>none</val>: no hyphenation character at all in the original text. 
+                                 
+                            </p>
+                            <p>Thus, if the default end-of-line hyphenation character is the single hyphen, but one location of the manuscript reads
+                                    <eg>Werd ich denn hier nun end= lich etwas finden?</eg> then it becomes:
+                                <egXML xml:space="preserve">
+                                        Werd ich denn hier nun end&lt;lb break="no" type="dh"/&gt;lich etwas finden?</egXML>
+                            </p>
+                            <p>In any case, a hyphenation character is retained at the end of a line if it belongs in the word. Thus, the text
+                                &lt;eg&gt;Köln- Ehrenfeld &lt;/eg&gt;becomes <egXML xml:space="preserve">Köln-&lt;lb break="no"/&gt;Ehrenfeld</egXML>
+                                    (<att>break</att>=”<val>no</val>” is still used, of course, because there is no beginning of a new word.) In the
+                                rare case that the line after the break needs to be indented for whatever reason, values for <att>rend</att> have been
+                                defined. Use <tag>lb rend=”indent”</tag> for indentation as such without specifying how deep it is, or
+                                    <att>rend</att>=”<val>indent-1</val>”, <att>rend</att>=”<val>indent-2</val>” and so on if you need more than one
+                                level of indentation: indent-1 then means lowest, the highest number means highest level of indentation.</p>
+                            <p>Another rare case is that a character appears after a line break that is not part of the text. See this example:
+                                    <eg>"Les dirigeants du monde ont pensé aux relations entre les "gouvernements ;</eg> Here, a quotation mark
+                                appears at the beginning of each line (i. e. after each break), but it is not part of the text and thus must, for
+                                example, not appear in a display version . This is indicated by using a special value for <att>rend</att> with
+                                    <gi>lb</gi>:
+                                <egXML xml:space="preserve">
+                                    &lt;lb rend="after:""/&gt; Les dirigeants du monde ont pensé aux relations entre les&lt;lb rend="after:""/&gt; 
+                                    gouvernements ;</egXML>
+                                The value “after:"” means that the character “"” appears after the line break. It is also possible to use
+                                    <tag>lb rend=”before:X”</tag> for special characters that appear before the line break. Normally, line breaks are
+                                only shown in a display version of the transcription (the diplomatic version). In the unusual case where a line break
+                                that is marked with <gi>lb</gi> should also be shown in a reading version, <tag>lb rend=”both”</tag> may be used.</p>
+                        </div>
+                        <div>
+                            <head>Page breaks and facsimilies: <gi>pb</gi>
+                            </head>
+                            <p> Until the image link is more precise, the only element which refers to the picture is the page break element
+                                    <gi>pb</gi>. Each <gi>pb</gi> has a <att>n</att> attribute which indicates the page number. For technical reasons
+                                it is required to always start with page number 1. The differing page number of an archivist etc. must be marked up as
+                                a note. The <att>facs</att> attribute is used to link to the picture on the server. The first child element of
+                                    <tag>div type=”transcription”</tag> must be <gi>pb</gi>!</p>
+                            <p>For example:
+                                <egXML xml:space="preserve">
+                                    &lt;body&gt;
+                                        &lt;div type="transcription"&gt;
+                                            &lt;pb n="1" facs="00000356.jpg"/&gt;
+                                            &lt;opener/&gt; ... &lt;/div&gt;
+                                    &lt;/body&gt;
+                                </egXML>
+                            </p>
+                            <p> If a word is split at a page break, then the attributes <att>break</att>=”<val>no</val>” and, if necessary,
+                                    <att>type</att> are used in exactly the same way as in the <att>lb</att> element for line breaks (see above).
+                                Hyphenation characters are also dealt with in the same way as they are in line breaks. See this example:
+                                <egXML xml:space="preserve"> 
+                                    Werd ich denn hier nun end &lt;pb n="2" facs="00000357.jpg" break="no" type="dh"/&gt;lich etwas finden?</egXML>
+                            </p>
+                            <p>Catchwords are included inside <gi>fw</gi> with the attribute <att>type</att>=”<val>catch</val>” :
+                                <egXML xml:space="preserve">
+                                    Werd ich denn hier nun &lt;fw type="catch"&gt;end-&lt;/fw&gt;
+                                    &lt;pb n="2" facs="00000357.jpg"/&gt; endlich etwas finden?</egXML>
+                                Hyphenation characters inside catchwords are retained, though.</p>
+                        </div>
+                        <div>
+                            <head>Logical text divisions: <gi>div</gi>, <gi>head</gi>, <gi>trailer</gi>
+                            </head>
+                            <p>For logical text divisions (sections, subsections and so on), we used nested <gi>div</gi> elements. We do not use the
+                                numbered division elements <gi>div1</gi>, <gi>div2</gi> and so on. The first <gi>div</gi> of our document will always
+                                have an <att>type</att>=”<val>transcription</val>”, but when appropriate, the subsequent <gi>div</gi> may have the
+                                attributes <att>type</att> specifying the type of division and <att>n</att> specifying the number of the division.
+                                Heading and trailing elements of the section as appearing in the manuscript are given inside <gi>head</gi> and
+                                    <gi>trailer</gi>, respectively. These elements always belong only to the <gi>div</gi> of which they are direct
+                                sub-elements. For example, if a correspondence is giving a heading with "”Lettre n°” + number of the letter", this can
+                                be encoded in a <gi>head</gi> element, as such :
+                                <egXML xml:space="preserve">
+                                    &lt;div type="transcription"&gt;
+                                        &lt;pb n="1" facs=" .jpg"/&gt;
+                                        &lt;head rend="center"&gt;LETTRE N°477&lt;/head&gt; 
+                                        ... 
+                                    &lt;/div&gt;
+                                </egXML>
+                            </p>
+                            <p>Sometimes, an obvious logical unit of a manuscript can be identified but it has no heading given in the text. In these
+                                cases, we can (but do not need to) make up our own heading text. It can be included in <gi>head</gi>, but needs to be
+                                inside a <gi>note</gi> with <att>resp</att> :
+                                <egXML xml:space="preserve">
+                                    &lt;head&gt;
+                                        &lt;note type="structure" resp="#johanna.preusse"&gt;2. Akt&lt;/note&gt;
+                                    &lt;/head&gt;</egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Other text divisions: <gi>milestone</gi>
+                            </head>
+                            <p> Sometimes, an author has obviously marked a division in the text that, however, does not belong to a logical unit such
+                                as section, subsection and so on, and thus cannot be marked using <gi>div</gi> elements. In these cases, we use the
+                                generic empty element <gi>milestone</gi> with <att>unit</att>=”<val>none</val>” to mark this division. We do not
+                                encode any further assumptions on why the division is there. Often, such divisions are marked in the manuscript using
+                                a horizontal rule. In these cases, <att>rend</att>=”<val>horizontal-rule</val>” may be used with <gi>milestone</gi>.
+                                Other values of <att>rend</att> may be used as appropriate, for example "<val>curved-horizontal-rule</val>" or
+                                    "<val>vertical-rule</val>". </p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Structuring the letter/egodocument</head>
+                        <p>In every letter or egodocument with similar layout, we use specific elements to encode its opening and closing parts and
+                            some other recurring elements.</p>
+                        <div>
+                            <head>Opener: <gi>opener</gi>
+                            </head>
+                            <figure>
+                                <graphic url="illustrations/contenu-opener.png" width="900px"/>
+                            </figure>
+                            <p>According to the TEI guidelines, “<gi>opener</gi> groups together dateline, byline, salutation, and similar phrases
+                                appearing as a preliminary group at the start of a division, especially of a letter”. We use the <gi>dateline</gi>
+                                element to encode the place and the date of the letter, <gi>salute</gi> for the salutation. In some case, it is also
+                                possible to have a title for the letter, which can then be included inside the opener, as it is part of the opening of
+                                the letter. For example:
+                                <egXML xml:space="preserve">
+                                    &lt;opener&gt;
+                                        &lt;fw type="letterhead" place="align(left)" corresp="#entete-senat"&gt;&lt;hi rend="underline"&gt;SÉNAT&lt;/hi&gt;
+                                        &lt;/fw&gt;
+                                        &lt;dateline rend="align(right)"&gt;
+                                            &lt;placeName&gt;Paris&lt;/placeName&gt;, &lt;date when-iso="1919-02-04"&gt;4 Février 1919&lt;/date&gt;
+                                        &lt;/dateline&gt;
+                                        &lt;title rend="align(center)"&gt;&lt;hi rend="underline"&gt;LE PRÉSIDENT WILSON&lt;lb/&gt; REÇU A LA CHAMBRE DES
+                                            DÉPUTÉS&lt;/hi&gt;&lt;/title&gt;
+                                        &lt;salute rend="indent"&gt;Mon cher Butler,&lt;/salute&gt;
+                                    &lt;/opener&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Letterheads : <gi>fw</gi>
+                            </head>
+                            <p>In some letters or other documents, it is possible to find support with letterheads on the first page of the document.
+                                This element, already mentioned in the header inside the <gi>layoutDesc</gi> element, will be included in the
+                                    <gi>opener</gi>. <figure>
+                                    <graphic url="illustrations/exemple-letterhead.png" width="900px"/>
+                                </figure> We use the <gi>fw</gi> element, associated with multiple attributes : <att>type</att> indicates that we have
+                                a letterhead, <att>place</att> indicate the position of the letterhead on the paper and <att>corresp</att> links it to
+                                the <att>xml:id</att> defined in the header (see example above).</p>
+                        </div>
+                        <div>
+                            <head>Closer: <gi>closer</gi>
+                            </head>
+                            <figure>
+                                <graphic url="illustrations/contenu-closer.png" width="900px"/>
+                            </figure>
+                            <p>Similarly, the TEI guidelines say: “<gi>closer</gi> groups together salutations, datelines, and similar phrases
+                                appearing as a final group at the end of a division, especially of a letter”. <gi>salute</gi> may also be used for the
+                                final salutations, <gi>signed</gi> for the signature. It is also possible to have a <gi>dateline</gi> at the end of a
+                                letter. Postscripts are encoded within the <gi>postscript</gi> element. We only integrate the specified elements in
+                                the <gi>closer</gi>, primarily the last salutations. Different (preceding) content in the last paragraph is not part
+                                of the <gi>closer</gi>, but of the running text. For example:
+                                <egXML xml:space="preserve">
+                                    &lt;closer&gt;
+                                        &lt;signed rend="align(right)"&gt;Votre affectueusement dévoué&lt;/signed&gt;
+                                        &lt;address rend="align(left)"&gt;
+                                            &lt;addrLine&gt;à Monsieur le Président Nicholas Murray BUTLER,&lt;/addrLine&gt;
+                                            &lt;addrLine&gt;NEW-YORK.&lt;/addrLine&gt;
+                                        &lt;/address&gt;
+                                    &lt;/closer&gt;
+                                    &lt;postscript&gt;
+                                        &lt;p rend="bottom(left)"&gt;1 annexe.&lt;/p&gt;
+                                    &lt;/postscript&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Addresses: <gi>address</gi>
+                            </head>
+                            <p> Addresses are not necessarily specific to letters but appear most often in letters. We use the <gi>address</gi>
+                                element for denoting addresses appearing on manuscript pages. Its lines are included in <gi>addrLine</gi> elements,
+                                without <gi>lb</gi> between them (see the exemple above).</p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Displaying changes in the text</head>
+                        <div>
+                            <head>Changes in the manuscript: <gi>subst</gi>, <gi>del</gi>/<gi>add</gi>
+                            </head>
+                            <p>Our documents are mostly handwritten manuscripts, so they all contain deletions and additions. For these—apart from
+                                transpositions (see below)—, we use the element couple of <gi>del</gi> and <gi>add</gi>. If the deletion or addition
+                                is made by a different hand than the surrounding text, then these elements are used with the attribute <att>hand</att>
+                                pointing to the corresponding <gi>handNote</gi> element in the header:
+                                <egXML xml:space="preserve">
+                                    &lt;del rend="strikethrough" hand="#red"&gt;Werd ich denn hier nun endlich etwas finden?&lt;/del&gt; Ich war &lt;add
+                                        place="above" hand="#minor_hand"&gt;da&lt;/add&gt; zu fremd, um von alle dem Vieles zu verstehen,</egXML>
+                            </p>
+                            <p>For the <att>rend</att> attribute of <gi>del</gi>, the following values are recommended (other values may be used if
+                                appropriate):
+                                 
+                                     
+                                        <val>strikethrough</val>
+                                     
+                                     
+                                        <val>overwritten</val>
+                                     
+                                     
+                                        <val>erasure</val>
+                                     
+                                     
+                                        <val>none</val> (e. g. if the deletion is only marked by writing the correct word alongside) 
+                                 
+                            </p>
+                            <p>For the <att>place</att> attribute of <gi>add</gi>, the following values are recommended (other values may be used if
+                                appropriate):  
+                                     
+                                        <val>across</val> (used in combination with <tag>del rend=”overwritten”</tag>)  
+                                     
+                                        <val>above</val>
+                                     
+                                     
+                                        <val>below</val>
+                                     
+                                     
+                                        <val>bottom</val>
+                                     
+                                     
+                                        <val>top</val>
+                                     
+                                     
+                                        <val>margin</val> (may—but does not need to—be more specific: margin-left, margin-right, margin-top,
+                                        margin-bottom denote which margin it is, and combining these values with ...-horizontal and ...-vertical
+                                        denotes whether the text is written horizontally or vertically (margin-left-horizontal, margin-left-vertical,
+                                        margin-right-horizontal and so on). 
+                                     
+                                        <val>opposite</val>
+                                     
+                                     
+                                        <val>overleaf</val>
+                                     
+                                     
+                                        <val>end</val>
+                                     
+                                     
+                                        <val>inline</val> (if the text is simply written in the line, usually when some text immediately before has
+                                        been struck through) 
+                                     
+                                        <val>dots</val> (if the text was first deleted and then marked to be included again by writing dots below
+                                        it; see below for examples of nesting of additions and deletions) 
+                                 
+                            </p>
+                            <p>In case of footnotes or other margin notes that have a numbered or otherwise labeled anchor in the main text, the
+                                attribute <att>n</att> may be used with <gi>add</gi> to give the label. In case of strikethrough text, it is sometimes
+                                hard to decide how precise to be when encoding a manuscript. Taking a close look at a manuscript page, one can see in
+                                many cases that words are actually not completely strikethrough although they are meant to be because the author of
+                                course did not use a ruler for striking out. For high precision, the parts (sometimes only one or two letters) that
+                                are actually not strikethrough may be marked using
+                                <att>rend</att>=”<val>none</val>”:<egXML xml:space="preserve">
+                                    &lt;del rend="none"&gt;str&lt;/del&gt;&lt;del rend="strikethrough"&gt;ikethrough text&lt;/del&gt;
+                                </egXML>
+                            </p>
+                            <p>However, it is left to the encoder to decide whether he really wants to be that precise or simply use
+                                    <att>rend</att>=”<val>strikethrough</val>” all the way through. If a passage is stroke out so strongly that it
+                                cannot be identified anymore, this is indicated by using <gi>del</gi> in combination with <gi>gap</gi>,
+                                    <gi>supplied</gi> or <gi>unclear</gi>. See this example:
+                                <egXML xml:space="preserve">
+                                    &lt;del rend="strikethrough"&gt;&lt;gap reason="strikethrough"/&gt;&lt;/del&gt;</egXML>
+                            </p>
+                            <p>The <gi>subst</gi> element groups a combination of deletion and addition in case they definitely belong together.
+                                    <att>hand</att> may also be used with <gi>subst</gi> and then does not need to be repeated inside <gi>del</gi> and
+                                    <gi>add</gi>:
+                                <egXML xml:space="preserve">
+                                    &lt;subst hand="#annotation"&gt;
+                                        &lt;del rend="strikethrough"&gt;ressener&lt;/del&gt;
+                                        &lt;add place="above"&gt;resserrer&lt;/add&gt;
+                                    &lt;/subst&gt;
+                                </egXML>
+                            </p>
+                            <p>Sometimes, additions and deletions are nested in themselves: Some text had been added that was (partly) deleted
+                                afterwards, or some text had been deleted that was marked for inclusion again afterwards (for example by writing dots
+                                below it). For these cases, we use two basic rules<note>For simplicity reasons, <att>rend</att> and <att>place</att>
+                                    are missing in the following examples but should always be used, of course.</note>: 
+                                    
+                                     What is meant to be final, goes outside:  
+                                             
+                                                <egXML xml:space="preserve">&lt;del&gt;A &lt;add&gt;B&lt;/add&gt; C&lt;/del&gt;</egXML> means that
+                                                “A C” was written first, then “B” was added in its middle, then everything was deleted. 
+                                             
+                                                <egXML xml:space="preserve">&lt;del&gt;&lt;add&gt;A&lt;/add&gt;&lt;/del&gt;</egXML> means that “A”
+                                                was once written as an addition but then, the whole addition was deleted. 
+                                             
+                                                <egXML xml:space="preserve">&lt;add&gt;&lt;del&gt;A&lt;/del&gt;&lt;/add&gt;</egXML> means that “A”
+                                                was first deleted but then marked as to be included again. 
+                                         
+                                     
+                                     If rule 1 cannot be obeyed, then the attribute <att>seq</att> is used to denote the sequence of the
+                                        additions and deletions:
+                                        <egXML xml:space="preserve">
+                                            &lt;add seq="1"&gt;A &lt;del seq="2"&gt;B&lt;/del&gt;C&lt;/add&gt;</egXML>
+                                        means that “A B C” was once written as one large addition but then, the “B” part was deleted (and not the
+                                        other way round as it would be if there was no <att>seq</att> attribute). 
+                                 
+                            </p>
+                            <p>
+                                <att>seq</att> may use higher numbers in case more than two additions and deletions are nested.</p>
+                            <p> Sometimes, additions and deletions may also be nested with (parts of) other elements. If, however, an addition or
+                                deletion goes over such (parts of) other elements in a way that <gi>add</gi> and <gi>del</gi> cannot be used with
+                                proper XML nesting, <gi>addSpan</gi> and <gi>delSpan</gi> are used with the same attributes and with <gi>anchor</gi>.
+                                In the unusual case that something was overwritten but it cannot be told which was first and which is the text that
+                                was written over it, <att>seq</att>=”<val>0</val>” is used. See this example where a comma and a dash stand in the
+                                same place:
+                                <egXML xml:space="preserve">
+                                    &lt;subst&gt;
+                                        &lt;add seq="0"&gt;,&lt;/add&gt;
+                                        &lt;del seq="0"&gt;–&lt;/del&gt;
+                                    &lt;/subst&gt;
+                                </egXML>
+                            </p>
+                            <p>This is a bit of tag abuse because it actually cannot be told which is deleted and which is added, but there are no
+                                other elements available. Thus, we use <att>seq</att>=”<val>0</val>” to indicate that actually no sequence can be
+                                given.</p>
+                            <p>Regarding additions on the margin and footnotes, we have encountered some more unusual cases and errors in the
+                                manuscripts and describe them like this: 
+                                 
+                                     If there are two margin note marks in the text but only one note on the page (i. e. if the note could either
+                                        belong into this or that place), we use a pointer: In one of the places, we give the <gi>add</gi> element an
+                                            <att>xml:id</att> and <att>type</att>=”<val>multiple-anchors</val>” :
+                                        <egXML xml:space="preserve">text 
+                                                &lt;add xml:id="myID" type="multiple-anchors"&gt;addition&lt;/add&gt; text
+                                        </egXML>
+                                        In the other place, we use <gi>add</gi> with <att>type</att>=”<val>multiple-anchors</val>”, too, and inside,
+                                        there is a <gi>ptr</gi> pointing to the other
+                                        <gi>add</gi>:<egXML xml:space="preserve">
+                                            text &lt;add type="multiple-anchors"&gt;&lt;ptr target="#myID"/&gt;&lt;/add&gt; text 
+                                        </egXML>
+                                     
+                                     If there is a margin note mark in the text but no actual note, we use <gi>add</gi> with
+                                            <att>type</att>=”<val>no-anchor</val>” and a non-pointing <gi>ptr</gi>:
+                                        <egXML xml:space="preserve">
+                                            text &lt;add type="no-anchor"&gt;&lt;ptr type="none"/&gt;&lt;/add&gt; text</egXML>
+                                     
+                                 
+                            </p>
+                        </div>
+                        <div>
+                            <head>Textual transpositions: <gi>transpose</gi>
+                            </head>
+                            <p>In some cases, an author has written two or more parts of text which he later decides to give a different order.
+                                Sometimes, he does not denote that by deleting the parts and writing them completely again, but by using some mark to
+                                denote change of order. For such transpositions, we do not use <gi>subst</gi>, <gi>del</gi> and <gi>add</gi>, but
+                                    <gi>transpose</gi>. See this example:
+                                <egXML xml:space="preserve">
+                                    &lt;seg xml:id="ib01"&gt;dann&lt;/seg&gt;
+                                    &lt;seg xml:id="ib02"&gt;erst&lt;/seg&gt;
+                                    &lt;listTranspose&gt;
+                                        &lt;transpose&gt;
+                                            &lt;ptr target="#ib02"/&gt;
+                                            &lt;ptr target="#ib01"/&gt;
+                                        &lt;/transpose&gt;
+                                    &lt;/listTranspose&gt;
+                                </egXML>
+                            </p>
+                            <p>The author has first written “dann erst”, but then decided that it should be “erst dann”. The two parts “dann” and
+                                “erst” are included in <gi>seg</gi> elements each with an <att>xml:id</att>. Immediately afterwards, follows with a
+                                single <gi>transpose</gi> element containing a pointer (<gi>ptr</gi>) to each part in the order that the author has
+                                settled on.</p>
+                        </div>
+                        <div>
+                            <head>Shift of hand: <gi>handShift</gi>
+                            </head>
+                            <p>Sometimes, the hand changes in a way that cannot be dealt with using the <att>hand</att> attribute with some element.
+                                For example, if the author had stopped writing at some point and completed the text on another day using different
+                                ink, then this change of hand may obviously not be marked as an addition or a note using <gi>add</gi> or
+                                <gi>note</gi>. In those cases, we use the empty element <gi>handShift</gi> to denote a shift of hand:
+                                <egXML xml:space="preserve"> 
+                                    This part is written in black ink (default hand).
+                                    &lt;handShift new="#red"/&gt; 
+                                    This part is written in red ink. </egXML>
+                            </p>
+                            <p>The attribute <att>new</att> points to the corresponding <gi>handNote</gi> element in the header, as does
+                                    <att>hand</att> within <gi>add</gi>, <gi>note</gi> or other elements. Please note that <gi>handShift</gi> is meant
+                                as a switch that is turned at the point where it appears and never goes back to its original position unless another
+                                    <gi>handShift</gi> element appears. This means that <gi>handShift</gi> does not obey XML hierarchies. In following
+                                example, the hand “<val>#red</val>” runs until the second <gi>handShift</gi> element appears and does not stop at the
+                                closing <gi>hi</gi>:
+                                <egXML xml:space="preserve"> 
+                                    This part is written in black ink (default
+                                    hand). 
+                                    &lt;hi rend="underline"&gt;This part is written in black ink and is underlined
+                                    &lt;handShift new="#red"/&gt; and this part is written in red ink and is still underlined.&lt;/hi&gt; 
+                                    This part is written in red ink. &lt;handShift new="#major_hand"/&gt; This part is written in black ink again. 
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Corrections made by us: <gi>choice</gi>, <gi>sic</gi>/<gi>corr</gi>
+                            </head>
+                            <p>We do not normalize spelling. We do correct syntactical mistakes on the basis of the final text, i. e. with all
+                                additions and deletions carried out(<note>Syntactical mistakes usually happen when the author makes additions or
+                                    deletions changing the structure of a sentence and does not notice that some word forms needed to be changed,
+                                    too.)</note>. For this, <gi>choice</gi> is used with <gi>sic</gi> and <gi>corr</gi>:
+                                <egXML xml:space="preserve">
+                                        &lt;choice&gt;
+                                        &lt;sic&gt;geworden&lt;/sic&gt;
+                                        &lt;corr&gt;wurden&lt;/corr&gt;
+                                    &lt;/choice&gt;
+                                    </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Abbreviations:<gi>choice</gi>, <gi>abbr</gi>/<gi>expan</gi>
+                            </head>
+                            <p>We expand abbreviations using <gi>choice</gi>, <gi>abbr</gi> and <gi>expan</gi>:
+                                <egXML xml:space="preserve">
+                                    &lt;choice&gt;
+                                        &lt;abbr&gt;phil.&lt;/abbr&gt;
+                                        &lt;expan&gt;philosophische&lt;/expan&gt;
+                                    &lt;/choice&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Displaying specific parts of the text</head>
+                        <div>
+                            <head>Dashes and hyphens</head>
+                            <p>We differentiate dashes and hyphens the following way: 
+                             
+                                     - is the single hyphen (“-”). 
+                                     ⹀ is the double hyphen (“=”, not the equal sign) 
+                                     – <!--or &ndash;--> is the en-dash (“–”, German “Gedankenstrich”). 
+                                     — <!-- or &mdash;--> is the em-dash (“—”). 
+                                     − <!--or &minus;--> is the mathematical minus sign. 
+                                  End-of-line hyphenation is treated differently. See below for an explanation of the difference between the
+                                numerical and the letter-based (entity) references for the dashes and the minus sign. </p>
+                        </div>
+                        <div>
+                            <head>Special characters</head>
+                            <p>Every character available in Unicode can be typed in as-is because all our XML documents are UTF8-encoded. If, however,
+                                an encoder cannot type in a character because it is not available on their keyboard, two means of referencing it are
+                                possible:  
+                                     XML numeric character reference <!--&#nnnn;--> where nnnn are up to four decimal digits describing the
+                                        Unicode code point of the character. 
+                                     XML character entity reference <!--&abcde;--> where abcde are letters. We use the character entity
+                                        references defined in HTML, although they are not part of XML nor TEI. Currently, we have not defined these
+                                        entities in our schema so our documents are not technically valid during editing, but the entity references
+                                        are transformed into numeric references before publication. 
+                                  The full list of special characters is given in <ref target="https://en.wikipedia.org/wiki/                                     List_of_XML_and_HTML_character_entity_references">https://en.wikipedia.org/wiki/ List_of_XML_and_HTML_character_entity_references</ref>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Space</head>
+                            <p>A non-breaking space is a space that must never be used for a line break. It is denoted by   <!-- or &nbsp;-->:
+                                <egXML xml:space="preserve">S. 159</egXML>
+                            </p>
+                            <p>Space appearing inside a line for a reason can be denoted using the <gi>space</gi> element: <egXML xml:space="preserve">
+                                &lt;space extent="two words"/&gt;
+                                    &lt;space extent="two words" rend="_"/&gt;
+                                    &lt;space extent="two words" rend="–"/&gt;
+                            </egXML>
+                                <att>extent</att> and <att>rend</att> may be used. The first example denotes an empty space. The second example
+                                denotes a space which uses underscores on the manuscript page as placeholders. The third example denotes a space which
+                                uses en-dashes. Do not confuse <gi>space</gi> with <gi>gap</gi>: <gi>space</gi> is for space found in a line
+                                deliberately placed there by the writer, <gi>gap</gi> is for parts that contain text that cannot be transcribed. </p>
+                        </div>
+                        <div>
+                            <head>Unidentifiable glyphs: <gi>g</gi>
+                            </head>
+                            <p>We have decided not to describe unidentifiable glyphs (i.e. symbols that apparently do not belong to any language) any
+                                further because they can be viewed in the facsimile. Instead, we only use <gi>g</gi> with
+                                    <att>type</att>=”<val>unknown</val>” to denote that the glyph is there:
+                                <egXML xml:space="preserve">
+                                    text text &lt;g type="unknown"/&gt; text text
+                                    </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Hard-to-read passages: <gi>unclear</gi>, <gi>supplied</gi>, <gi>gap</gi>
+                            </head>
+                            <p>The <gi>unclear</gi> element with the attributes <att>cert</att> and <att>reason</att> is used for passages that are
+                                difficult to read:
+                                <egXML xml:space="preserve">
+                                    &lt;unclear cert="medium" reason="stain"&gt;nur&lt;/unclear&gt;</egXML>
+                                Sometimes, it happens that a hard-to-read passage could be either this or that. In those cases, <gi>unclear</gi> can
+                                be used with <gi>choice</gi>:
+                                <egXML xml:space="preserve">
+                                    der &lt;choice&gt;
+                                        &lt;unclear reason="illegible" cert="high"&gt;den&lt;/unclear&gt;
+                                        &lt;unclear reason="illegible" cert="low"&gt;dem&lt;/unclear&gt;
+                                    &lt;/choice&gt; Derwisch</egXML>
+                            </p>
+                            <p>Here, it is recommended to use <att>cert</att> to give one possible version a high and the other one a low certainty.
+                                    <att>cert</att>=”<val>high</val>” here means, however, that there is a high likelihood for the passage to be the
+                                version described—and not that the certainty of unclarity was high. The same goes for
+                                <att>cert</att>=”<val>low</val>”, respectively. When the editor could not decide to give one version a higher
+                                possibility than the other one, <att>cert</att>=”<val>medium</val>” may be used twice, but this is not recommended.
+                                For illegible passages or when a piece of text is missing, we use the <gi>gap</gi> element. It uses the attributes
+                                    <att>extent</att> to denote the length of the missing part and <att>reason</att> as does <gi>unclear</gi>, but is
+                                an empty element(<note>As opposed to <gi>unclear</gi>, it is mandatory for <gi>gap</gi> to have <att>extent</att>
+                                    specified. For <gi>unclear</gi>, the extent can usually be seen from the text that it includes. In rare cases,
+                                    however, <att>extent</att> may also be given for <gi>unclear</gi>, for example when it is unsure whether the
+                                    unclear part is actually 3 or 4 characters long.</note>):
+                                <egXML xml:space="preserve">&lt;gap extent="two words" reason="illegible"/&gt;</egXML>
+                            </p>
+                            <p>If the editor decides that he knows or can guess the text that is missing, then he may use <gi>supplied</gi> instead of
+                                    <gi>gap</gi> to supply the missing text. <gi>supplied</gi> has the same attributes as <gi>unclear</gi>:
+                                <egXML xml:space="preserve">leur &lt;supplied reason="stain"&gt;raison&lt;/supplied&gt; fait
+                                    </egXML>
+                            </p>
+                            <p>The difference between <gi>unclear</gi> and <gi>supplied</gi> is that the first is used when the text is hard to read
+                                but still legible and the latter is used as a replacement for <gi>gap</gi> when the text is completely illegible or
+                                missing. The following values for <att>reason</att> in <gi>unclear</gi>, <gi>gap</gi> and <gi>supplied</gi> are
+                                currently recognized in the web interface and translated automatically into German and French for display:  
+                                     
+                                        <val>border</val>/<val>bound</val>/<val>binding</val>
+                                     
+                                     
+                                        <val>crease</val>/<val>folding</val>/<val>folded</val>
+                                     
+                                     
+                                        <val>damage</val>
+                                     
+                                     
+                                        <val>erasure</val>/<val>strikethrough</val>
+                                     
+                                     
+                                        <val>faded</val>
+                                     
+                                     
+                                        <val>illegible</val>/<val>not... legible</val>
+                                     
+                                     
+                                        <val>hole</val> (without the word seal) 
+                                     
+                                        <val>incomplete</val>
+                                     
+                                     
+                                        <val>lost</val>
+                                     
+                                     
+                                        <val>overlapping folio</val>
+                                     
+                                     
+                                        <val>overwritten</val>
+                                     
+                                     
+                                        <val>paper missing</val>
+                                     
+                                     
+                                        <val>seal</val>
+                                     
+                                     
+                                        <val>smudged</val>
+                                     
+                                     
+                                        <val>stain</val>
+                                     
+                                     
+                                        <val>tape</val>
+                                     
+                                     
+                                        <val>wax</val>
+                                     
+                                  Other values may be used if appropriate.</p>
+                            <p>Do not confuse <gi>gap</gi> with <gi>space</gi>! <gi>gap</gi> is for parts containing text that cannot be transcribed,
+                                    <gi>space</gi> is for space found in a line deliberately placed there by the writer.</p>
+                        </div>
+                        <div>
+                            <head>Highlighted text: <gi>hi</gi>
+                            </head>
+                            <p>We only use the <gi>hi</gi> element, which, according to the TEI guidelines, “marks a word or phrase as graphically
+                                distinct from the surrounding text”. A change of scripture is indicated with <gi>hi</gi>, too (for example if one word
+                                is written in “Latin” and the rest of the text in “Kurrent” scripture). We add the <att>rend</att> attribute which can
+                                adopt several values. For example:
+                                <egXML xml:space="preserve">&lt;hi rend="underline"&gt;ils ont oublié les relations entre les peuples !&lt;/hi&gt;</egXML>
+                            </p>
+                            <p>The following values are recommended for <att>rend</att>:  
+                                     
+                                        <val>underline</val> (with <att>n</att> indicating how often the word is underlined; if n=1, then it may be
+                                        left out) 
+                                     
+                                        <val>superscript</val>
+                                     
+                                     
+                                        <val>subscript</val>
+                                     
+                                     
+                                        <val>small</val>
+                                     
+                                     
+                                        <val>large</val>
+                                     
+                                     
+                                        <val>quoted</val>
+                                     
+                                     
+                                        <val>majuscule</val>
+                                     
+                                     
+                                        <val>latin</val> (if the respective text is written in “Latin” scripture as opposed to “Kurrent” scripture
+                                        surrounding it) 
+                                     
+                                        <val>kurrent</val> (if the respective text is written in “Kurrent” scripture as opposed to “Latin” scripture
+                                        surrounding it) 
+                                     
+                                        <val>mark</val> (if there is a vertical line to mark a part of the text) 
+                                     
+                                        <val>upsidedown</val>
+                                     
+                                 
+                                <gi>hi</gi> may be used with <att>hand</att> to denote the hand which has done the highlighting if is it not the hand
+                                that has written the highlighted text. <att>hand</att> corresponds with <gi>handNote</gi> in header as it does in the
+                                    <gi>add</gi> and <gi>note</gi> elements.</p>
+                        </div>
+                        <div>
+                            <head>Horizontal alignment</head>
+                            <p>Almost every element may use the <att>rend</att> attribute to denote its horizontal alignment. See these examples:
+                                <egXML xml:space="preserve">
+                                    &lt;dateline rend="align(right)"&gt;Dresden den 6t October. 23&lt;/dateline&gt;
+                                    &lt;stamp rend="align(center)"&gt;Litteraturarchiv Berlin.&lt;/stamp&gt;
+                                    </egXML>
+                            </p>
+                            <p>The following values are used:  
+                                     
+                                        <val>align(center)</val> (centered text) 
+                                     
+                                        <val>align(right)</val> (right-aligned text) 
+                                 
+                            </p>
+                            <p>Left-aligned text is not denoted because it is the default. Apart from that, some elements, for example <gi>hi</gi>,
+                                use <att>rend</att> for other purposes. Please note that if because of this, an element has two values for
+                                    <att>rend</att>, the following is not allowed because an attribute may not appear more than once for an element in
+                                XML:
+                                <egXML xml:space="preserve"><!-- WRONG! <hi rend="kurrent" rend="align(center)">...</hi>--></egXML>
+                                This, however, is correct:
+                                <egXML xml:space="preserve">&lt;hi rend="kurrent align(center)"&gt;...&lt;/hi&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Lists: <gi>list</gi>
+                            </head>
+                            <p>Lists should be encoded with the <gi>list</gi> element:
+                                <egXML xml:space="preserve">
+                                    &lt;list&gt;
+                                        &lt;label&gt;1)&lt;/label&gt;
+                                        &lt;item&gt;die Rechtslehre,&lt;/item&gt;
+                                        &lt;lb/&gt;
+                                        &lt;label&gt;2)&lt;/label&gt;
+                                        &lt;item&gt;die philosophischen Briefe,&lt;/item&gt;
+                                        &lt;lb/&gt;
+                                        &lt;label&gt;3)&lt;/label&gt;
+                                        &lt;item&gt;über die Mythologie,&lt;/item&gt;
+                                    &lt;/list&gt;
+                            </egXML>
+                                The labels given inside the <gi>label</gi> element must really exist in the document. The <gi>label</gi> element must
+                                not be used if they don’t appear in the source. </p>
+                        </div>
+                        <div>
+                            <head>Citations: <gi>cit</gi>, <gi>quote</gi>
+                            </head>
+                            <p>Parts that the author of a manuscript has cited from another source are included in <gi>cit</gi> and <gi>quote</gi>. If
+                                no bibliographic reference is given in the manuscript, we write the reference ourselves and include it in a
+                                    <gi>note</gi> with <att>resp</att>. See this example:
+                                <egXML xml:space="preserve">
+                                    &lt;cit&gt;
+                                        &lt;quote&gt;
+                                            &lt;lg type="poem"&gt;
+                                                &lt;l&gt;da nun die Liebe haucht in die Gedanken&lt;/l&gt;
+                                                &lt;l&gt;Ich werde kunstvoll gut gesetzt an Jahren&lt;/l&gt;
+                                            &lt;/lg&gt;
+                                        &lt;/quote&gt;
+                                        &lt;note resp="#sabine.seifert"&gt;&lt;persName ref="#p0237"&gt;Chamisso&lt;/persName&gt; zitiert aus dem Gedicht &lt;title
+                                                ref="#w00260"&gt;Erfüllung&lt;/title&gt; von &lt;persName ref="#p0249"&gt;Karl August Varnhagen von Ense&lt;/persName&gt;,
+                                            das gedruckt in den &lt;title ref="#w00254"&gt;Vermischten Gedichten&lt;/title&gt; Varnhagens vorliegt (S. 102). Hier
+                                            lautet die letzte Strophe: "Doch nun die Liebe haucht in die Gedanken, / Naht schnell begehrter Ufer ferne
+                                            Weite, / Ich werde kunstvoll, gut, gesetzt von Jahren."&lt;/note&gt;
+                                    &lt;/cit&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Dates: <gi>date</gi>
+                            </head>
+                            <p>We place dates in a <gi>date</gi> element and add a standardized form. Two examples:
+                                <egXML xml:space="preserve">
+                                &lt;date when-iso="1823-10-06"&gt;den 6t October. 23&lt;/date&gt;
+                                &lt;date when-iso="1824/1825"&gt;1824-1825&lt;/date&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Named entitites: Persons, organizations, places, works</head>
+                            <p>Every time, a name of a person, an organization, a place or a work appears in a text, it gets marked using
+                                    <gi>persName</gi>, <gi>orgName</gi>, <gi>placeName</gi> or <gi>title</gi>, respectively. For every such entity, an
+                                entry in the corresponding index is created including an <att>xml:id</att> that has a specific format. From inside the
+                                text, the name is linked with the index entry using the <att>ref</att> attribute which points to the corresponding
+                                    <att>xml:id</att>. For example:
+                                <egXML xml:space="preserve">
+                                    &lt;placeName ref="#l0003"&gt;Dresden&lt;/placeName&gt;
+                                    &lt;orgName ref="#o0001"&gt;Humboldt-Universität zu Berlin&lt;/orgName&gt;
+                                    &lt;persName ref="#p0003"&gt;Sofokles&lt;/persName&gt;
+                                    &lt;title ref="#w0010"&gt;Nachgelassene Schriften und Briefwechsel&lt;/title&gt;
+                                    </egXML>
+                            </p>
+                            <p>However, it sometimes happens that the author writes about a person, an organization, a place or a work without quoting
+                                their name. We can’t use the elements <gi>persName</gi>, <gi>orgName</gi>, <gi>placeName</gi> or <gi>title</gi> in
+                                those cases, because there is neither a name nor a title. Instead, the <gi>rs</gi> (“referencing string”) element can
+                                be applied:
+                                <egXML xml:space="preserve">
+                                    &lt;rs ref="#p0002"&gt;Bruder&lt;/rs&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Parts in different language: <gi>foreign</gi>
+                            </head>
+                            <p>The majority of the documents is written in German or French. We specify the document’s languages in the
+                                    <gi>profileDesc</gi> as part of the TEI header.</p>
+                            <p> To denote the actual parts of the text written in another language than its main language, we add an
+                                    <att>xml:lang</att> attribute to the correspondent element (<gi>div</gi>, <gi>p</gi>, <gi>hi</gi>, ...). If there
+                                is no element directly corresponding with the change of language, we use the <gi>foreign</gi> element with
+                                    <att>xml:lang</att> as its attribute.</p>
+                            <p>As defined in the XML standard, value of the attribute is the code of the language according to IETF’s BCP 47. In our
+                                case, it usually has only one part—the code of the language according to ISO 639. For example:
+                                <egXML xml:space="preserve">
+                                    &lt;foreign xml:lang="la"&gt;malus&lt;/foreign&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Stamps: <gi>stamp</gi>
+                            </head>
+                            <p>The wording of stamps on the document can be marked up with the <gi>stamp</gi> element in the body. For example:
+                                <egXML xml:space="preserve">
+                                &lt;stamp&gt;Litteraturarchiv Berlin.&lt;/stamp&gt;
+                            </egXML>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Using the <gi>note</gi> element</head>
+                        <div>
+                            <head>Notes: <gi>note</gi>
+                            </head>
+                            <p>We distinguish two types of notes—but use the <gi>note</gi> element for both of them.</p>
+                            <p> On the one hand, there are notes that appear on the manuscript page. They can be written by the author/sender himself,
+                                by a publisher, by an archivist, and so on. We use the attribute <att>hand</att> to link them to a hand that is
+                                described in a <gi>handNote</gi> element. The <att>place</att> attribute can adopt the same values as it can in the
+                                    <gi>add</gi> element. Signatures of archives are marked using the <att>type</att> attribute.</p>
+                            <p> On the other hand, there are notes that we write ourselves. They do not appear on the manuscript page, of course. For
+                                these notes, we do not use <att>hand</att>, but <att>resp</att> to link the note with the person that has written it,
+                                i.e. with their entry in the index of contributors. If a note written by us should appear only in one of the two
+                                display versions in the web interface, this may be indicated using <att>subtype</att>:
+                                <egXML xml:space="preserve">
+                                    &lt;note resp="#sabine.seifert" subtype="1"&gt;only in version 1 (Diplomatic version)&lt;/note&gt;
+                                    &lt;note resp="#sabine.seifert" subtype="2"&gt;only in version 2 (Reading version)&lt;/note&gt;
+                                </egXML>
+                            </p>
+                            <p> Both the <gi>note</gi> and the <gi>add</gi> element may describe additions. As it is difficult to know how to
+                                distinguish between cases where <gi>note</gi> should be used and cases where <gi>add</gi> should be used, we have
+                                decided that this cannot be told for the whole edition and thus settled on making this decision dependent on the
+                                habits of each author—except for two project-wide rules:  
+                                     If an addition directly and definitely belongs together with a deletion, then <gi>add</gi>, <gi>del</gi> and
+                                            <gi>subst</gi> are always used. 
+                                     For margin notes (those with <att>place</att>=”<val>margin</val>” and so on), <gi>add</gi> is used if the
+                                        addition has a determinable anchor in the text, i. e. if it gramatically and/or semantically belongs into a
+                                        certain position in the text that can be clearly identified. Otherwise, then <gi>note</gi> is used. 
+                                 
+                            </p>
+                        </div>
+                        <div>
+                            <head>Foliation numbers: <gi>note</gi>
+                            </head>
+                            <p>We also use the <gi>note</gi> element to denote foliation numbers found on the manuscript page or made by us (e. g. if
+                                the foliation on the manuscript is wrong). They are marked using <att>type</att>=”<val>foliation</val>”. As with other
+                                notes, they are linked with <att>hand</att> or <att>resp</att>, depending on who made them. For example:
+                                <egXML xml:space="preserve">
+                                    &lt;note type="foliation" hand="#red"&gt;Foliation number on the manuscript page&lt;/note&gt;
+                                    &lt;note type="foliation" hand="#pencil"&gt;Other foliation number on the manuscript page&lt;/note&gt;
+                                    &lt;note type="foliation" resp="#johanna.preusse"&gt;A foliation made by us&lt;/note&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Logical text structure: <gi>note</gi>
+                            </head>
+                            <p> Furthermore, the <gi>note</gi> element may be used with <att>type</att>=”<val>structure</val>” to denote numbers or
+                                other means of text structuring in a logical way :
+                                <egXML xml:space="preserve">
+                                    &lt;head&gt;&lt;note type="structure" resp="#johanna.preusse"&gt;2. Akt&lt;/note&gt;&lt;/head&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Linking entities</head>
+                        <div>
+                            <head>Pointers inside one manuscript : <gi>ref</gi>
+                            </head>
+                            <p>A different location inside the same manuscript can be referenced by giving the element that is being pointed to an
+                                    <att>xml:id</att> and using <gi>ref</gi> with <att>target</att> from another location to point to it. See the
+                                example: This is the element that is being pointed to:
+                                <egXML xml:space="preserve">
+                                    &lt;pb n="4" facs="00000170.jpg" xml:id="Brief001ChamissoandeLaFoye-Blatt4v"/&gt; This is the pointer: 
+                                    &lt;accMat&gt; 
+                                        &lt;ref target="#Brief001ChamissoandeLaFoye-Blatt4v"&gt;Blatt 4v&lt;/ref&gt; dient als Briefumschlag. 
+                                    &lt;/accMat&gt;
+                                </egXML>
+                                As <att>target</att> points to a location within the same XML tree, # appears as its first character.</p>
+                        </div>
+                        <div>
+                            <head>Pointers to other manuscripts of the edition: <gi>ref</gi>
+                            </head>
+                            <p>Other manuscripts of our edition are referenced using <gi>ref</gi> with <att>target</att> containing the file name of
+                                the manuscript:
+                                <egXML xml:space="preserve">
+                                    &lt;origin&gt;
+                                        &lt;seg xml:lang="de"&gt;&lt;persName ref="#p0237"&gt;Chamissos&lt;/persName&gt; eigenhändige Abschrift dieses Briefes hat
+                                            möglicherweise dem Brief an &lt;persName ref="#p0248"&gt;de La Foye&lt;/persName&gt; (ohne Ort und Datum, &lt;ref
+                                                target="Brief027ChamissoandeLaFoye.xml"&gt;Bl. 47-48&lt;/ref&gt;) beigelegen. Wann Chamisso die Abschrift
+                                            anfertigte, ist nicht eindeutig zu bestimmen. &lt;/seg&gt; 
+                                         ... 
+                                    &lt;/origin&gt;
+                                </egXML>
+                            </p>
+                            <p>This may be combined with a pointer to a position inside the other manuscript:
+                                <egXML xml:space="preserve">
+                                &lt;ref target="Boeckh_Buchkatalog.xml#book-4"&gt;Nr. 4 im Katalog meiner Bücher&lt;/ref&gt;
+                            </egXML>
+                            </p>
+                        </div>
+                        <div>
+                            <head>Pointers to HTTP URLs: <gi>ref</gi>
+                            </head>
+                            <p>
+                                <gi>ref</gi> with <att>target</att> is also used for pointing to HTTP URLs. This occurs most often in notes that are
+                                written by us and in the header.
+                                <egXML xml:space="preserve">
+                                    &lt;note resp="#lena.ebert"&gt;
+                                        Im &lt;ref target="http://woerterbuchnetz.de/DWB/"&gt;Deutschen Wörterbuch von Jacob und Wilhelm Grimm&lt;/ref&gt; 
+                                        [Zugriff 17.07.2012] findet man für "Maultasche" auch die Bedeutung &lt;quote&gt;"klatschender schlag aufs maul"&lt;/quote&gt;, 
+                                        in welcher &lt;persName ref="#p0237"&gt;Chamisso&lt;/persName&gt; dasWort sicherlich verwendet.
+                                    &lt;/note&gt;
+                                </egXML>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <head>Index encoding</head>
+                <p> The digital edition includes five indexes:  
+                         index of persons 
+                         index of organizations 
+                         index of places 
+                         index of works 
+                         index of contributors (to the digital edition) 
+                      One XML document is created for each of the indexes. This is the skeleton of each of the index documents:
+                    <egXML xml:space="preserve">
+                        &lt;teiHeader&gt;
+                            &lt;fileDesc&gt;
+                                &lt;titleStmt&gt;
+                                    &lt;title&gt;Index ...&lt;/title&gt;
+                                    &lt;funder&gt;Ministère de lʼEnseignement supérieur, de la Recherche et de lʼInnovation (MESRI)&lt;/funder&gt;
+                                    &lt;principal&gt;
+                                        &lt;persName ref="#anne.baillot"&gt;
+                                            &lt;forename&gt;Anne&lt;/forename&gt;
+                                            &lt;surname&gt;Baillot&lt;/surname&gt;
+                                        &lt;/persName&gt;
+                                        &lt;affiliation&gt;
+                                            &lt;orgName ref="#hu.berlin"&gt;Humboldt-Universität zu Berlin&lt;/orgName&gt;
+                                            &lt;address&gt;
+                                                &lt;street&gt;Unter den Linden 6&lt;/street&gt;
+                                                &lt;postCode&gt;10099&lt;/postCode&gt;
+                                                &lt;settlement&gt;Berlin&lt;/settlement&gt;
+                                                &lt;country key="DE"&gt;Deutschland&lt;/country&gt;
+                                            &lt;/address&gt;
+                                        &lt;/affiliation&gt;
+                                    &lt;/principal&gt;
+                                    &lt;!-- &lt;respStmt&gt;...&lt;/respStmt&gt; --&gt;
+                                &lt;/titleStmt&gt;
+                                &lt;publicationStmt&gt;
+                                    &lt;publisher&gt;Projet DAHN&lt;/publisher&gt;
+                                    &lt;availability&gt;
+                                        &lt;licence target="https://creativecommons.org/licenses/by/3.0/deed.en"&gt;Attribution 3.0 Unported (CC BY 3.0)
+                                        &lt;/licence&gt;
+                                    &lt;/availability&gt;
+                                    &lt;date when-iso="..."&gt;...&lt;/date&gt;
+                                &lt;/publicationStmt&gt;
+                                &lt;seriesStmt&gt;
+                                    &lt;title type="main"&gt;Correspondances de Paul d'Estournelles&lt;/title&gt;
+                                &lt;/seriesStmt&gt;
+                                &lt;sourceDesc&gt;
+                                    &lt;p&gt;Born digital&lt;/p&gt;
+                                &lt;/sourceDesc&gt;
+                            &lt;/fileDesc&gt;
+                            &lt;revisionDesc&gt;
+                                &lt;change when-iso=" " who="#name.surname"&gt;...&lt;/change&gt;
+                            &lt;/revisionDesc&gt;
+                        &lt;/teiHeader&gt;
+                    </egXML>The
+                    TEI header is almost identical for all indexes. Please note that the <gi>sourceDesc</gi> element contains only one line: “born
+                    digital”, because it originates in a digital form. The indexes are included inside the <gi>body</gi> element, i. e. the elements
+                        <gi>listPerson</gi>, <gi>listOrg</gi> and so on are direct sub-elements of <gi>body</gi>.</p>
+                <div>
+                    <head>Index of persons</head>
+                    <p>The index of persons comprises any person appearing in our texts, whether as an author, as an addressee of a letter, otherwise
+                        involved or simply mentioned in a manuscript. This index is to be distinguished from the index of contributors listing persons
+                        who have worked on this edition, which is explain in another section.</p>
+                    <div>
+                        <head>
+                            <gi>listPerson</gi>
+                        </head>
+                        <p>The index consists of a <gi>listPerson</gi> element which contains one <gi>person</gi> element for each person described
+                            and one <gi>listRelation</gi> element for describing all relationships between persons. This is the basic structure whose
+                            elements are described in more detail below:
+                            <egXML xml:space="preserve">
+                                &lt;listPerson&gt;
+                                    &lt;person xml:id="..."&gt;
+                                        &lt;persName&gt;
+                                            &lt;forename&gt;...&lt;/forename&gt;
+                                            &lt;surname&gt;...&lt;/surname&gt; ... &lt;/persName&gt;
+                                        &lt;birth&gt;
+                                            &lt;date when-iso="..."/&gt;
+                                            &lt;placeName&gt;...&lt;/placeName&gt;
+                                        &lt;/birth&gt;
+                                        &lt;death&gt;
+                                            &lt;date when-iso="..."/&gt;
+                                            &lt;placeName&gt;...&lt;/placeName&gt;
+                                        &lt;/death&gt;
+                                        &lt;sex value="1"/&gt;
+                                        &lt;occupation&gt;...&lt;/occupation&gt;
+                                        &lt;education&gt;...&lt;/education&gt;
+                                        &lt;affiliation&gt;...&lt;/affiliation&gt;
+                                        &lt;event&gt;...&lt;/event&gt;
+                                        &lt;idno type="..."&gt;...&lt;/idno&gt;
+                                    &lt;/person&gt;
+                                    &lt;person xml:id="..."&gt; ... &lt;/person&gt;
+                                    &lt;listRelation&gt;
+                                        &lt;relation name="..." active="... ..." passive="... ..."/&gt;
+                                        &lt;relation name="..." mutual="... ... ..."/&gt; ... &lt;/listRelation&gt;
+                                &lt;/listPerson&gt;
+                            </egXML>
+                        </p>
+                    </div>
+                    <div>
+                        <head>
+                            <gi>person</gi>
+                        </head>
+                        <p>Every <gi>person</gi> element has an <att>xml:id</att> attribute used for referencing the person from the manuscript texts
+                            and other places whose value is composed of “p” plus four different digits:
+                            <egXML xml:space="preserve">
+                                &lt;person xml:id="p0001"&gt;
+                                    &lt;persName&gt;
+                                        &lt;roleName type="nobility"&gt;Baron&lt;/roleName&gt;
+                                        &lt;forename&gt;Paul&lt;/forename&gt;
+                                        &lt;nameLink&gt;d'&lt;/nameLink&gt;
+                                        &lt;surname&gt;Estournelles de Constant&lt;/surname&gt;
+                                    &lt;/persName&gt;
+                                &lt;/person&gt;
+                            </egXML>
+                        </p>
+                        <p>The following information can be given inside of <gi>persName</gi>:  
+                                 
+                                    <gi>forename</gi> is used for the first name. It can be completed by a <att>type</att> attribute in order to
+                                    precise whether this is the name usually used, the second name etc. 
+                                 
+                                    <gi>surname</gi> is used for the family name. It can be completed by a <att>type</att> attribute in order to
+                                    precise whether this is a maiden or married name (<att>type</att>=”<val>maiden</val>” or
+                                        <att>type</att>=”<val>married</val>”). 
+                                 
+                                    <gi>nameLink</gi> is used for the link in aristocratic names. 
+                                 
+                                    <gi>addName</gi> is used for a nickname or alias. 
+                                 
+                                    <gi>roleName</gi> with <att>type</att>=”<val>honorific</val>” is used to indicate academic titles that are
+                                        “<val>Dr.</val>” or on a higher level than that. 
+                                 
+                                    <gi>roleName</gi> with other values of <att>type</att> is used indicate functions such as king, pope,
+                                        princess(<note>This role has to be indicated if it’s used as a way to distinctly designate the person and not
+                                        be just a role in general</note>) 
+                                 
+                                    <gi>genName</gi> is used in order to distinguish between identical names belonging to different persons (in case
+                                    of a difference of generation etc.), for example if there is a number after the first name of kings or the words
+                                    “junior” and “senior”. 
+                              For example:
+                            <egXML xml:space="preserve">
+                                &lt;persName&gt;
+                                    &lt;forename&gt;Stanislaus&lt;/forename&gt;
+                                    &lt;genName&gt;II.&lt;/genName&gt;
+                                    &lt;addName&gt;Augustus&lt;/addName&gt;
+                                    &lt;surname&gt;Poniatowsky&lt;/surname&gt;
+                                    &lt;roleName type="nobility"&gt;King of Poland &lt;date when-iso="1764/1798"&gt;1764-1798&lt;/date&gt;&lt;/roleName&gt;
+                                    &lt;roleName type="nobility"&gt;Grand Duke of Lithuania&lt;/roleName&gt;
+                                &lt;/persName&gt;
+                            </egXML>
+                        </p>
+                        <p>Apart from the name, we encode the following information on persons inside a <gi>person</gi> element: 
+                                 information on birth using <gi>birth</gi> with <gi>date</gi> and <gi>placeName</gi> inside. 
+                                 information on death using <gi>death</gi> with <gi>date</gi> and <gi>placeName</gi> inside. 
+                                 sex using <gi>sex</gi> with <tag>sex value=”1”</tag> for a male person and <tag>sex value=”2”</tag> for a female
+                                    person. 
+                                 occupations using the <gi>occupation</gi> element. Any kind of occupation or profession can be encoded here.
+                                    Thus, <gi>occupation</gi> may appear more than once. 
+                                 affiliations using the <gi>affiliation</gi> element. 
+                                 
+                                    <gi>orgName</gi> can be used inside this element in order to denote the name of an organization and to provide a
+                                    pointer to the corresponding entry in the index of organizations. <gi>placeName</gi> may also be used if
+                                    appropriate. <gi>affiliation</gi> can appear more than once. 
+                                 educational experiences using the <gi>education</gi> element. Inside, <gi>placeName</gi> and <gi>orgName</gi>
+                                    can be used, too, when appropriate. <gi>education</gi> can appear more than once. 
+                                 other events related to that person using the <gi>event</gi> element. 
+                                 
+                                    <p>authority file number using the <gi>idno</gi> element to reference the person mentionned. Among the authority
+                                        file available, you can for example choose the <ref target="https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html">PND Number</ref> which is
+                                        maintained by the German National Library or the <ref target="http://viaf.org">VIAF</ref>, which is an
+                                        international authority file operated by the Online Computer Library Center.</p>
+                                 
+                             
+                        </p>
+                        <p>For every element, we can use the attribute <att>cert</att> to indicate the degree of certainty associated with its
+                            content. We use the values <val>high</val>, <val>medium</val> and <val>low</val>. When no <att>cert</att> attribute is
+                            given, this means that the content is definitely certain.</p>
+                        <p>Dates are encoded inside <gi>date</gi> with the appropriate attributes according to the guidelines. Dates inside
+                                <gi>birth</gi> and <gi>death</gi> don’t need to be repeated as textual content of the <gi>date</gi> element because
+                            for the indices, the textual content is not shown in the web interface anyway.</p>
+                        <p>Thus, this is correct:
+                            <egXML xml:space="preserve">
+                            &lt;birth&gt;&lt;date when-iso="1730-08-19"/&gt;&lt;/birth&gt;
+                        </egXML>
+                            . . . but this is superfluous:
+                            <egXML xml:space="preserve">
+                                &lt;birth&gt;&lt;date when-iso="1730-08-19"&gt;19. August 1730&lt;/date&gt;&lt;/birth&gt;
+                            </egXML>
+                        </p>
+                    </div>
+                    <div>
+                        <head>
+                            <gi>listRelation</gi>, <gi>relation</gi>
+                        </head>
+                        <p>Relationships between persons are encoded using <gi>relation</gi> elements that appear inside one <gi>listRelation</gi>
+                            which is included in <gi>listPerson</gi> after all <gi>person</gi> elements. Here are some examples:
+                            <egXML xml:space="preserve">
+                                &lt;relation name="parent" active="#p0001 #p0002" passive="#p0003 #p0004"/&gt;
+                                &lt;relation name="spouse" mutual="#p0001 #p0002"/&gt;
+                                &lt;relation name="lover" mutual="#p0001 #p0006"/&gt;
+                                &lt;relation name="teacher" active="#p0006" passive="#p0004"/&gt;
+                            </egXML>
+                            These examples indicate the following: Persons 1 and 2 are parents of persons 3 and 4. Persons 1 and 2 are also married.
+                            Person 1, however, has a lover which is person 6. Person 6 is also a teacher of person 4. </p>
+                        <p>Names of relations (in the <att>name</att> attribute) can be chosen as appropriate. For reasons of uniformity, we do not
+                            use the inverse relationships “child” (use parent instead) and “student” (use teacher instead).</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Index of organizations</head>
+                    <div>
+                        <head>
+                            <gi>listOrg</gi>
+                        </head>
+                        <p>The index of organizations is contained in a <gi>listOrg</gi> element. Inside, there is one <gi>org</gi> element for each
+                            organization.</p>
+                        <p>It would be better to have two <gi>listOrg</gi> element, containing each a set of organizations. One would contains the
+                            organizations mentioned in the corpus that would then be referenced in the corpus. The other would contains the
+                            organizations linked to the project and its contributors. It would then be all the organizations mentioned in the index of
+                            contributors and the organizations mentioned in the metadata, like the institution where a document from the corpus is
+                            stored (in the <gi>msDesc</gi>).</p>
+                    </div>
+                    <div>
+                        <head>
+                            <gi>org</gi>
+                        </head>
+                        <p>Every <gi>org</gi> element have <att>xml:id</att>s that are composed of a simplified version of the organisation name, but
+                            still identifiable.</p>
+                        <p> Inside <gi>org</gi>, there is a <gi>orgName</gi> to specify the name of the organization and it is followed by a
+                                <gi>desc</gi> element to present briefly the organization. There is also a <gi>placeName</gi> to localise the
+                            organization (the place, the country and the location). Finally, just like for the <gi>person</gi>, there is the
+                                <gi>idno</gi> element that links the organization to an authority file. For example
+                            :<egXML xml:space="preserve">
+                                &lt;org xml:id="dotation_carnegie"&gt;
+                                    &lt;orgName&gt;Carnegie Endowment for International Peace&lt;/orgName&gt;
+                                    &lt;desc&gt;...&lt;/desc&gt;
+                                    &lt;placeName from-iso="1910" notAfter-iso="1948"&gt;
+                                        &lt;placeName&gt;Peter Parker House&lt;/placeName&gt;
+                                        &lt;country&gt;United States of America&lt;/country&gt;
+                                        &lt;location&gt;
+                                            &lt;geo&gt;38°53 56 N 77°2 19 W&lt;/geo&gt;
+                                        &lt;/location&gt;
+                                    &lt;/placeName&gt;
+                                    &lt;idno type="VIAF"&gt;144086141&lt;/idno&gt;
+                                &lt;/org&gt;
+                            </egXML>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <head>Index of places</head>
+                    <div>
+                        <head>
+                            <gi>listPlace</gi>
+                        </head>
+                        <p>The whole index of places is contained in one <gi>listPlace</gi> element. Inside, there is one <gi>place</gi> element for
+                            each place. </p>
+                    </div>
+                    <div>
+                        <head>
+                            <gi>place</gi>
+                        </head>
+                        <p>Places have <att>xml:id</att>s that are composed of “l” (location) plus four digits. It has a <att>type</att> attribute
+                            specifiying the type of location (city, country, region...). Inside <gi>place</gi>, at least one name is given inside
+                                <gi>placeName</gi>. Other names, for example in different languages, may be added. After that, GPS coordinates for the
+                            place are included inside <gi>location</gi> and <gi>geo</gi>.</p>
+                        <p>See this example of a full entry in the index of places:
+                            <egXML xml:space="preserve">
+                            &lt;place
+                                    xml:id="l0001" type="city"&gt;
+                                    &lt;placeName&gt;Paris&lt;/placeName&gt;
+                                    &lt;country&gt;France&lt;/country&gt;
+                                    &lt;location&gt;
+                                        &lt;geo&gt;48°51 24 N, 2°21 07 E&lt;/geo&gt;
+                                    &lt;/location&gt;
+                                &lt;/place&gt;
+                        </egXML>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <head>Index of works</head>
+                    <p>This index gathers works, monographs, articles, journals ..., shortly all objects that can be described bibliographically.
+                        Every title has an <att>xml:id</att> attribute whose value is composed of “w” (work) plus five digits.</p>
+                    <div>
+                        <head>
+                            <gi>listBibl</gi>
+                        </head>
+                        <p>The whole index is contained in one <gi>listBibl</gi> element. Inside, there is one element <gi>biblStruct</gi> for each
+                            title. The structure of <gi>biblStruct</gi> depends on the type of work. For non-indepedent publications, i. e. articles
+                            within a monograph or journal, the basic structure is as follows: <egXML xml:space="preserve">
+                                &lt;biblStruct xml:id="w..."&gt;
+                                    &lt;analytic&gt;
+                                        &lt;author ref="#p..."&gt;...&lt;/author&gt;
+                                        &lt;title&gt;...&lt;/title&gt;
+                                    &lt;/analytic&gt;
+                                    &lt;monogr&gt;
+                                        &lt;editor ref="#p..."&gt;...&lt;/editor&gt;
+                                        &lt;title ref="#w..." level="..."&gt;...&lt;/title&gt;
+                                        &lt;imprint&gt;
+                                            &lt;biblScope unit="volume"&gt;...&lt;/biblScope&gt;
+                                            &lt;biblScope unit="page"&gt;...-...&lt;/biblScope&gt;
+                                            &lt;pubPlace ref="#l..."&gt;...&lt;/pubPlace&gt;
+                                            &lt;publisher&gt;...&lt;/publisher&gt;
+                                            &lt;date when-iso="..."/&gt;
+                                        &lt;/imprint&gt;
+                                    &lt;/monogr&gt;
+                                &lt;/biblStruct&gt;
+                            </egXML>
+                            <gi>analytic</gi> contains the <gi>author</gi> and <gi>title</gi> of the article. <gi>monogr</gi> in this case contains
+                            information on the independent item inside which the article was published. <gi>editor</gi> is usually used here, it may
+                            have a <att>role</att> attribute to specify the role of the person. The <gi>title</gi> inside monogr always has the
+                            attribute <att>level</att> where the type of publication is specified. <att>level</att>=”<val>j</val>” is used for
+                            journals, <att>level</att>=”<val>m</val>” is used for <gi>books</gi> (monographic title), <att>level</att>=”<val>p</val>”
+                            is used for “Seminararbeiten” (non-journal papers made in university courses). <att>ref</att> is used if the monographic
+                            item itself appears in the index of works and then points to its entry. See the below example of a monographic item for an
+                            explanation of further elements that may appear inside <gi>monogr</gi>. Afterwards, <gi>imprint</gi> follows using
+                                <gi>biblScope</gi>, <gi>pubPlace</gi>, <gi>publisher</gi> and <gi>date</gi>, as specified in the TEI guidelines. For
+                            monographic items, <gi>biblStruct</gi> looks as follows:
+                            <egXML xml:space="preserve">
+                                &lt;biblStruct xml:id="w..."&gt;
+                                    &lt;monogr&gt;
+                                        &lt;author ref="#p..."&gt;...&lt;/author&gt;
+                                        &lt;editor ref="#p..." role="..."&gt;...&lt;/editor&gt;
+                                        &lt;title level="m"&gt;...&lt;/title&gt;
+                                        &lt;title level="m" type="sub"&gt;...&lt;/title&gt;
+                                        &lt;edition n="..."&gt;...&lt;/edition&gt;
+                                        &lt;editor ref="#p..." role="..."&gt;...&lt;/editor&gt;
+                                        &lt;imprint&gt;
+                                            &lt;pubPlace ref="#l..."&gt;...&lt;/pubPlace&gt;
+                                            &lt;publisher&gt;...&lt;/publisher&gt;
+                                            &lt;date when-iso="..."/&gt;
+                                        &lt;/imprint&gt;
+                                        &lt;extent unit="volume"&gt;2&lt;/extent&gt;
+                                    &lt;/monogr&gt;
+                                &lt;/biblStruct&gt;
+                            </egXML>
+                            Only <gi>monogr</gi> appears here. Its structure is the same as above. <gi>author</gi> and <gi>editor</gi> are used if
+                            appropriate, the position of the latter depending on whether the work as is or only the specific edition was published by
+                            the editor. <gi>editor</gi> may use <att>role</att> as specified above. <gi>title</gi> must have the attribute
+                                <att>level</att>=”<val>m</val>” denoting that it is monographic item. Sub-titles are added using a further
+                                <gi>title</gi> element with the attribute <att>type</att>=”<val>sub</val>”. <gi>edition</gi> is used if appropriate.
+                            Towards the end, <gi>imprint</gi> follows with <gi>pubPlace</gi>, <gi>publisher</gi> and <gi>date</gi>. <gi>extent</gi>
+                            may be given to denote the size of the item, for example if it has more than one volume. </p>
+                    </div>
+                </div>
+                <div>
+                    <head>Index of contributors</head>
+                    <p>Contributors have <att>xml:id</att>s that are composed of their forename, a dot and their surname.</p>
+                    <p>It is structured like the index of persons, with a <gi>listPerson</gi> element and multiple <gi>person</gi> element. Inside
+                        each <gi>person</gi>, there is three elements :  
+                             
+                                <gi>persName</gi>: it contains the <gi>forename</gi> and <gi>surname</gi>
+                             
+                             
+                                <gi>affiliation</gi>: it contains informations about the institute associated to the contributor, with the
+                                    <gi>orgName</gi> element, with an organisation that will have to be declared in the index of organizations and the
+                                address for the location of the institute in a <gi>address</gi> element. 
+                             
+                                <gi>occupation</gi>: it contains the occupation of the contributor within the project  
+                         
+                        <egXML xml:space="preserve">
+                            &lt;person xml:id="floriane.chiffoleau"&gt;
+                                &lt;persName&gt;
+                                    &lt;forename&gt;Floriane&lt;/forename&gt;
+                                    &lt;surname&gt;Chiffoleau&lt;/surname&gt;
+                                &lt;/persName&gt;
+                                &lt;affiliation&gt;
+                                    &lt;orgName ref="inria"&gt;Institut national de recherche en informatique et automatique (INRIA)&lt;/orgName&gt;
+                                    &lt;address&gt;
+                                        &lt;street&gt;2 rue Simone Iff&lt;/street&gt;
+                                        &lt;postCode&gt;75012&lt;/postCode&gt;
+                                        &lt;settlement&gt;Paris&lt;/settlement&gt;
+                                        &lt;country key="FR"&gt;France&lt;/country&gt;
+                                    &lt;/address&gt;
+                                &lt;/affiliation&gt;
+                                &lt;occupation&gt;Encodage du projet&lt;/occupation&gt;
+                            &lt;/person&gt;
+                        </egXML>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <head>Encoding decisions for the whole edition</head>
+                <p>This section describes encoding decisions for certain elements that appear throughout the whole edition, i. e. in manuscripts as
+                    well as in indices and <gi>teiHeader</gi>s.</p>
+                <div>
+                    <head>Dates</head>
+                    <p> Dates can appear inside the elements <gi>date</gi>, <gi>docDate</gi> and <gi>origDate</gi>. We always give an ISO-8601-like
+                        standardized form like this:
+                        <egXML xml:space="preserve">
+                            &lt;date when-iso="1823-10-06"&gt;den 6t October. 23&lt;/date&gt;
+                            &lt;date when-iso="1824/1825"&gt;1824-1825&lt;/date&gt;
+                        </egXML>
+                    </p>
+                    <p>Inside the indices, there need not be any textual content in most <gi>date</gi> elements because such content is not shown in
+                        the web interface anyway.</p>
+                    <p>Thus, this is correct:
+                        <egXML xml:space="preserve">
+                        &lt;birth&gt;&lt;date when-iso="1730-08-19"/&gt;&lt;/birth&gt;
+                    </egXML>
+                        . . . but this is superfluous:
+                        <egXML xml:space="preserve">
+                            &lt;birth&gt;&lt;date when-iso="1730-08-19"&gt;19. August 1730&lt;/date&gt;&lt;/birth&gt;
+                        </egXML>
+                    </p>
+                    <p>Because the TEI guidelines allow a number of attributes and ways of encoding a standardized form of the given date, we have
+                        decided not to use all of them, but always encode dates in this format:  
+                             We always use the attribute <att>when-iso</att> for singular values and give the dates according to ISO 8601, that
+                                is to say in the following format: yyyy-mm-dd. 
+                             For intervals, we use a slash “/”: <att>when-iso</att>=”<val>1824/1825</val>” means “from 1824 until 1825”. We never
+                                use the attributes <att>from-iso</att> nor <att>to-iso</att>. 
+                             Intervals within the same year or month are given like this: <att>when-iso</att>=”<val>1824-07/08</val>” means “from
+                                July 1824 until August 1824”, <att>when-iso</att>=”<val>1824-07-01/04</val>” means “from 1 August 1824 until 4 August
+                                1824”, <att>when-iso</att>=”<val>1824-07-01/08-04</val>" means “from 1 July 1824 until 4 August 1824”. As a rule of
+                                thumb, writing intervals like this is only allowed when there are more fields to the left of the slash than to the
+                                right of the slash. 
+                             
+                                <p>Sometimes, there are intervals like “from (some day in) 1824 until 6 June 1825”. It is, however, not allowed to
+                                    have more fields to the right of the slash than to the left. In those cases, we adhere to the extensions of ISO
+                                    8601 given in the EDTF (Extended Date/Time Format) draft<note target="https://www.loc.gov/standards/datetime/">https://www.loc.gov/standards/datetime/</note>. This especially means looking at the following sections.</p>
+                                <p>
+                                    <hi rend="bold">Uncertain/Approximate</hi>: The characters “?” and “~” are used to mean “uncertain” and
+                                    “approximate” respectively, and in combination, i. e. “?~”, to mean “uncertain” as well as “approximate”. These
+                                    characters may occur only at the end of the date string and apply to the entire date. [...]. Exemples :  
+                                         
+                                            <val>1984?</val>: uncertain; possibly the year 1984, but not definitely 
+                                         
+                                            <val>2004-06?</val>
+                                         
+                                         
+                                            <val>2004-06-11?</val>
+                                         
+                                         
+                                            <val>1984~</val>: “approximately” the year 1984 
+                                         
+                                            <val>1984?~</val>: the year is approximately 1984 and even that is uncertain 
+                                     
+                                </p>
+                                <p>
+                                    <hi rend="bold">Unspecified</hi>: The character “u” may be used in place of a digit to indicate that the value of
+                                    that digit is unspecified. It may be substituted for each of multiple digits, however for level 1, only the
+                                    right-most one or two digits may be replaced, for the following cases: 
+                                         A year with one or two (rightmost) unspecified digits.  
+                                          Year specified but month unspecified. 
+                                         Year and month specified, day unspecified. 
+                                         Year specified, day and month unspecified. 
+                                      Examples:
+                                     
+                                         
+                                            <val>199u</val>: some unspecified year in the 1990s. 
+                                         
+                                            <val>19uu</val>: some unspecified year in the 1900s. 
+                                         
+                                            <val>1999-uu</val>: some month in 1999 
+                                         
+                                            <val>1999-01-uu</val>: some day in January 1999 
+                                         
+                                            <val>1999-uu-uu</val>: some day in 1999 
+                                         [...] 
+                                     
+                                </p>
+                                <p>Thus, here are some examples of tricky intervals:  
+                                         
+                                            <att>when-iso</att>="<val>1824-uu-uu/1825-06-06</val>" beginning some day in 1824 and ending on 6 June
+                                            1825. 
+                                         
+                                            <att>when-iso</att>="<val>1824-05-05?/1825-06-06</val>" beginning possibly on 5 May 1824, ending
+                                            definitely on 6 June 1825. 
+                                         
+                                            <att>when-iso</att>="<val>1824-05-uu?/1825-06-06</val>" beginning possible in May 1024, ending
+                                            definitely on 6 June 1825. 
+                                     
+                                    <note>Section 5.2.3 of the EDTF draft allows having more fields to the right of the slash than to the left! We,
+                                        however, do not allow this, as stated above! All gaps are filled with “uu”.</note>
+                                </p>
+                             
+                             
+                                <p>Sometimes it might be impossible to give an exact date, but one can guess, e. g. from the content of a
+                                    manuscript, that for example, it cannot be written before a certain date because it refers to something that
+                                    happened on that date. For such open-end or open-start cases, we use the <att>notBefore-iso</att> and
+                                        <att>notAfter-iso</att> attributes. For cases where a date is one of a set of possible dates, we use
+                                        <att>when-iso </att>and adhere to the “One of a Set” proposal in EDTF:</p>
+                                <p>
+                                    <hi rend="bold">One of a Set</hi>: Square brackets wrap a single-choice list. A list is represented using commas
+                                    and double-dots where a double-dot indicates all the values between the two values it separates, inclusive. [...].
+                                    Examples:  
+                                         
+                                            <val>[1667,1668,1670..1672]</val>: One of the years 1667, 1668, 1670, 1671, 1672 
+                                         [...] 
+                                         
+                                            <val>[1667,1760-12]</val>: Either the year 1667 or the month December of 1760. 
+                                     
+                                </p>
+                                <p>Here are two examples that use a combination of the the “u” and square-bracket notation:  
+                                         
+                                            <att>when-iso</att>="<val>[-07uu,-06uu]</val>" 6th or 5th century BC 
+                                         
+                                            <att>when-iso</att>="<val>[03uu,04uu]</val>" 3rd or 4th century AD 
+                                     
+                                </p>
+                             
+                             
+                                <p>Dates may also refer to a different calendar, mainly to the French Revolutionary calendar. The value of
+                                        <att>when-iso</att> always has to be in the form of the Gregorian calendar. The <att>calendar</att> attribute
+                                    is used to denote that the date refers to another calendar. We use the value <val>“french-rev-cal”</val> for the
+                                    French Revolutionary calendar:
+                                    <egXML xml:space="preserve">
+                                        &lt;date calendar="french-rev-cal" when-iso="1804-12-12"&gt;21 frimaire&lt;/date&gt;
+                                    </egXML>
+                                </p>
+                             
+                         
+                    </p>
+                </div>
+            </div>
+            <div>
+                <head>XML template for egodocuments</head>
+                <egXML xml:space="preserve">
+                    &lt;TEI&gt;
+                        &lt;teiHeader&gt;
+                            &lt;fileDesc&gt;
+                                &lt;titleStmt&gt;
+                                    &lt;title xml:lang="en"/&gt;
+                                    &lt;title xml:lang="fr"/&gt;
+                                    &lt;funder&gt;Ministère de l Enseignement supérieur, de la Recherche et de l Innovation (MESRI)&lt;/funder&gt;
+                                    &lt;principal&gt;
+                                        &lt;persName ref="#anne.baillot"&gt;
+                                            &lt;forename&gt;Anne&lt;/forename&gt;
+                                            &lt;surname&gt;Baillot&lt;/surname&gt;
+                                        &lt;/persName&gt;
+                                        &lt;affiliation&gt;
+                                            &lt;orgName ref="#hu.berlin"&gt;Humboldt-Universität zu Berlin&lt;/orgName&gt;
+                                            &lt;address&gt;
+                                                &lt;street&gt;Unter den Linden 6&lt;/street&gt;
+                                                &lt;postCode&gt;10099&lt;/postCode&gt;
+                                                &lt;settlement&gt;Berlin&lt;/settlement&gt;
+                                                &lt;country key="DE"&gt;Deutschland&lt;/country&gt;
+                                            &lt;/address&gt;
+                                        &lt;/affiliation&gt;
+                                    &lt;/principal&gt;
+                                    &lt;respStmt&gt;
+                                        &lt;resp&gt;Edited by&lt;/resp&gt;
+                                        &lt;persName ref="#name.surname"&gt;
+                                            &lt;forename/&gt;
+                                            &lt;surname/&gt;
+                                        &lt;/persName&gt;
+                                    &lt;/respStmt&gt;
+                                    &lt;respStmt&gt;
+                                        &lt;resp&gt;Prepared by&lt;/resp&gt;
+                                        &lt;persName ref="#name.surname"&gt;
+                                            &lt;forename/&gt;
+                                            &lt;surname/&gt;
+                                        &lt;/persName&gt;
+                                    &lt;/respStmt&gt;
+                                    &lt;respStmt&gt;
+                                        &lt;resp&gt;In collaboration with&lt;/resp&gt;
+                                        &lt;persName ref="#name.surname"&gt;
+                                            &lt;forename/&gt;
+                                            &lt;surname/&gt;
+                                        &lt;/persName&gt;
+                                    &lt;/respStmt&gt;
+                                    &lt;respStmt&gt;
+                                        &lt;resp&gt;With help from&lt;/resp&gt;
+                                        &lt;persName ref="#name.surname"&gt;
+                                            &lt;forename/&gt;
+                                            &lt;surname/&gt;
+                                        &lt;/persName&gt;
+                                    &lt;/respStmt&gt;
+                                    &lt;respStmt&gt;
+                                        &lt;resp&gt;Digitization by&lt;/resp&gt;
+                                        &lt;orgName ref="# "&gt; &lt;/orgName&gt;
+                                    &lt;/respStmt&gt;
+                                &lt;/titleStmt&gt;
+                                &lt;publicationStmt&gt;
+                                    &lt;publisher&gt;Projet DAHN&lt;/publisher&gt;
+                                    &lt;availability&gt;
+                                        &lt;licence target="https://creativecommons.org/licenses/by/3.0/deed.en"&gt;Attribution 3.0 Unported (CC BY 3.0)
+                                        &lt;/licence&gt;
+                                    &lt;/availability&gt;
+                                    &lt;date when-iso="2020"/&gt;
+                                &lt;/publicationStmt&gt;
+                                &lt;seriesStmt&gt;
+                                    &lt;title type="main"/&gt;
+                                    &lt;title type="genre"/&gt;
+                                    &lt;title type="topic"/&gt;
+                                    &lt;title type="topic"/&gt;
+                                &lt;/seriesStmt&gt;
+                                &lt;sourceDesc&gt;
+                                    &lt;msDesc&gt;
+                                        &lt;msIdentifier&gt;
+                                            &lt;country key=" "/&gt;
+                                            &lt;settlement/&gt;
+                                            &lt;institution ref="#"/&gt;
+                                            &lt;repository/&gt;
+                                            &lt;collection/&gt;
+                                            &lt;idno/&gt;
+                                        &lt;/msIdentifier&gt;
+                                        &lt;msContents&gt;
+                                            &lt;msItem&gt;
+                                                &lt;docDate when=" "/&gt;
+                                                &lt;note resp="#name.surname"/&gt;
+                                                &lt;note type="keyword" resp="#name.surname"/&gt;
+                                            &lt;/msItem&gt;
+                                        &lt;/msContents&gt;
+                                        &lt;physDesc&gt;
+                                            &lt;objectDesc&gt;
+                                                &lt;supportDesc&gt;
+                                                    &lt;support&gt;
+                                                        &lt;material/&gt;
+                                                    &lt;/support&gt;
+                                                    &lt;extent&gt;
+                                                        &lt;measure type="folio"/&gt;
+                                                        &lt;dimensions unit="cm"&gt;
+                                                            &lt;height/&gt;
+                                                            &lt;width/&gt;
+                                                        &lt;/dimensions&gt;
+                                                    &lt;/extent&gt;
+                                                    &lt;foliation/&gt;
+                                                    &lt;condition/&gt;
+                                                &lt;/supportDesc&gt;
+                                                &lt;layoutDesc&gt;
+                                                    &lt;layout xml:id="ref-letterhead"/&gt;
+                                                &lt;/layoutDesc&gt;
+                                            &lt;/objectDesc&gt;
+                                            &lt;handDesc&gt;
+                                                &lt;handNote xml:id="major_hand" scope=" " medium=" " scribe=" " scribeRef="# "/&gt;
+                                                &lt;handNote xml:id=" " scope=" " medium=" " scribe=" " scribeRef="# " corresp="#"/&gt;
+                                            &lt;/handDesc&gt;
+                                            &lt;sealDesc&gt;
+                                                &lt;seal&gt;
+                                                    &lt;p/&gt;
+                                                &lt;/seal&gt;
+                                            &lt;/sealDesc&gt;
+                                            &lt;accMat/&gt;
+                                        &lt;/physDesc&gt;
+                                        &lt;history&gt;
+                                            &lt;origin/&gt;
+                                            &lt;acquisition/&gt;
+                                        &lt;/history&gt;
+                                        &lt;additional&gt;
+                                            &lt;listBibl&gt;
+                                                &lt;bibl/&gt;
+                                            &lt;/listBibl&gt;
+                                        &lt;/additional&gt;
+                                    &lt;/msDesc&gt;
+                                &lt;/sourceDesc&gt;
+                            &lt;/fileDesc&gt;
+                            &lt;encodingDesc&gt;
+                                &lt;projectDesc&gt;
+                                    &lt;p xml:lang="en"&gt;The encoding of this document is part of the DAHN Project "Digital Editions of historical
+                                        manuscripts (correspondences)&lt;/p&gt;
+                                &lt;/projectDesc&gt;
+                                &lt;editorialDecl&gt;
+                                    &lt;correction&gt;
+                                        &lt;p&gt;No correction&lt;/p&gt;
+                                    &lt;/correction&gt;
+                                    &lt;hyphenation eol="hard" rend="sh"&gt;
+                                        &lt;p&gt;All the end-of-line hyphenation (made with a single hyphen) have been removed&lt;/p&gt;
+                                    &lt;/hyphenation&gt;
+                                &lt;/editorialDecl&gt;
+                            &lt;/encodingDesc&gt;
+                            &lt;profileDesc&gt;
+                                &lt;correspDesc&gt;
+                                    &lt;correspAction type="sent"&gt;
+                                        &lt;persName ref="# "/&gt;
+                                        &lt;placeName ref="# "/&gt;
+                                        &lt;date when-iso=" "/&gt;
+                                    &lt;/correspAction&gt;
+                                    &lt;correspAction type="received"&gt;
+                                        &lt;persName ref="# "/&gt;
+                                        &lt;!-- &lt;placeName ref="# "&gt;&lt;/placeName&gt; --&gt;
+                                    &lt;/correspAction&gt;
+                                    &lt;correspContext&gt;
+                                        &lt;ref type="prev" target=" .xml"/&gt;
+                                        &lt;ref type="next" target=" .xml"/&gt;
+                                    &lt;/correspContext&gt;
+                                &lt;/correspDesc&gt;
+                                &lt;langUsage&gt;
+                                    &lt;language ident="fr" usage="100"/&gt;
+                                &lt;/langUsage&gt;
+                            &lt;/profileDesc&gt;
+                            &lt;revisionDesc&gt;
+                                &lt;change when-iso=" " who="# "/&gt;
+                            &lt;/revisionDesc&gt;
+                        &lt;/teiHeader&gt;
+                        &lt;text&gt;
+                            &lt;body&gt;
+                                &lt;div type="transcription"&gt;
+                                    &lt;pb n="1" facs=" .jpg"/&gt;
+                                    &lt;head&gt; &lt;/head&gt;
+                                    &lt;opener&gt; &lt;/opener&gt;
+                                    &lt;p&gt; &lt;/p&gt;
+                                    &lt;closer&gt; &lt;/closer&gt;
+                                &lt;/div&gt;
+                            &lt;/body&gt;
+                        &lt;/text&gt;
+                    &lt;/TEI&gt;
+                </egXML>
+            </div>
+            <div>
+                <head>List of the modules used on my TEI files</head>
+                <schemaSpec ident="myTEI" docLang="en" prefix="tei_" xml:lang="en">
+                    <moduleRef key="core" except="email gloss headItem headLabel l lg meeting postBox said stage"/>
+                    <moduleRef key="tei" except=""/>
+                    <moduleRef key="header" except="appInfo application cRefPattern catDesc catRef category classCode classDecl conversion interpretation listChange listPrefixDef normalization samplingDecl scriptNote styleDefDecl tagUsage tagsDecl taxonomy unitDecl unitDef xenoData"/>
+                    <moduleRef key="textstructure" except="back div1 div2 div3 div4 div5 div6 div7 docAuthor docEdition docImprint docTitle front group imprimatur titlePage titlePart"/>
+                    <moduleRef key="namesdates" except=""/>
+                    <moduleRef key="transcr" except="am damage damageSpan ex line listTranspose metamark mod path redo restore retrace secl sourceDoc substJoin surface surfaceGrp surplus undo zone"/>
+                    <moduleRef key="msdescription" except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures summary surrogates typeDesc typeNote"/>
+                    <moduleRef key="linking" include="ab seg"/>
+                    <moduleRef key="figures" except="formula notatedMusic"/>
+                    <moduleRef key="spoken" include="kinesic vocal"/>
+                    <elementSpec ident="msIdentifier" mode="change">
+                        <content>
+                            <sequence>
+                                <sequence>
+                                    <classRef key="model.placeStateLike" expand="sequenceOptional"/>
+                                    <elementRef key="institution" minOccurs="0"/>
+                                    <elementRef key="repository" minOccurs="0"/>
+                                    <elementRef key="collection" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="msName"/>
+                                    <elementRef key="objectName"/>
+                                    <elementRef key="altIdentifier"/>
+                                </alternate>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="add" mode="change">
+                        <attList>
+                            <attDef ident="place" mode="change">
+                                <valList type="semi" mode="replace">
+                                    <valItem ident="across">
+                                        <desc>across the line (used with del rend="overwritten")</desc>
+                                    </valItem>
+                                    <valItem ident="below">
+                                        <desc>below the line</desc>
+                                    </valItem>
+                                    <valItem ident="bottom">
+                                        <desc>at the foot of the page</desc>
+                                    </valItem>
+                                    <valItem ident="margin">
+                                        <desc>in the margin (left, right, or both)</desc>
+                                    </valItem>
+                                    <valItem ident="top">
+                                        <desc>at the top of the page</desc>
+                                    </valItem>
+                                    <valItem ident="opposite">
+                                        <desc>on the opposite, i.e. facing, page</desc>
+                                    </valItem>
+                                    <valItem ident="overleaf">
+                                        <desc>on the other side of the leaf</desc>
+                                    </valItem>
+                                    <valItem ident="above">
+                                        <desc>above the line</desc>
+                                    </valItem>
+                                    <valItem ident="end">
+                                        <desc>at the end of e.g. chapter or volume.</desc>
+                                    </valItem>
+                                    <valItem ident="inline">
+                                        <desc>within the body of the text.</desc>
+                                    </valItem>
+                                    <valItem ident="inspace">
+                                        <desc>in a predefined space, for example left by an earlier scribe.</desc>
+                                    </valItem>
+                                    <valItem ident="dots">
+                                        <desc>if the text was first deleted and then marked to be included again by writing dots below it</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="del" mode="change">
+                        <attList>
+                            <attDef ident="rend" mode="change">
+                                <valList type="semi" mode="replace">
+                                    <valItem ident="overwritten"/>
+                                    <valItem ident="strikethrough"/>
+                                    <valItem ident="erasure"/>
+                                    <valItem ident="none"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>

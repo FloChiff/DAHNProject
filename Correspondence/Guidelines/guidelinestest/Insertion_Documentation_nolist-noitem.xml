@@ -1,0 +1,768 @@
+<?teipublisher depth="3" template="guidelines.html"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="en">Documentation for the insertion of egodocuments corpora in the TEI Publisher application</title>
+                <title xml:lang="fr">Documentation pour l'insertion de corpus d'égodocuments dans l'application TEI Publisher</title>
+                <author>
+                    <persName>
+                        <forename>Floriane</forename>
+                        <surname>Chiffoleau</surname>
+                    </persName>
+                    <affiliation>
+                        <orgName>INRIA</orgName>
+                        <address>
+                            <street>2 rue Simone Iff</street>
+                            <postCode>75012</postCode>
+                            <settlement>Paris</settlement>
+                            <country key="FR">France</country>
+                        </address>
+                    </affiliation>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Le Mans Université</authority>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/3.0/deed.en">Attribution 3.0 Unported (CC BY 3.0) </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Ce document est dérivé des <ref target="https://github.com/FloChiff/DAHNProject/blob/master/Correspondence/Guidelines/Documentation-Correspondance.xml">guidelines d'encodage</ref> créées pour le projet <ref target="https://paris-timemachine.huma-num.fr">DAHN</ref>
+                </p>
+                <p>Toutes les balises item et list ont été retirées</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Introduction</head>
+                <div>
+                    <head>The project</head>
+                    <p>The DAHN project is a project between the University of the Mans, the EHESS and INRIA, and with the partnership of the Ministry
+                        of Higher Education, Research and Innovation. Its goal is to create a program for digital scientific edition of corpus of
+                        letter exchanges, with, as a basis, the correspondence of Paul d’Estournelles de Constant, senator of Sarthe and 1909 Nobel
+                        Peace Prize. The work is to be made in two steps : first, refreshing an already existing numeric environment to let in that
+                        new edition. Then, adding the correspondence of d’Estournelles, while documenting the methodology and the actions made. The
+                        first editorial platform (from <ref target="https://www.berliner-intellektuelle.eu">Lettres et Textes</ref>) was first
+                        developed between 2010 and 2016 and enabled the creation of a data model that combines genetic edition and named entities
+                        network. Though on a precise subject, it was thought to be a generic tool that allows transverse research on egodocuments and
+                        printed corpus, from every modern or contemporary period and in all imaginable European situations on those periods.</p>
+                </div>
+                <div>
+                    <head>The TEI Publisher application</head>
+                    <p>In order to publish the digital edition of the correspondance corpus of our project, we created, with the help of TEI
+                        Publisher, a tool used to publish researchers material with an universal framework. The HTML pages, the ODD and some other
+                        parts of the application have been developed with d'Estournelles de Constant' letters as models for the transformation and the
+                        data displaying. However, the plus of TEI Publisher is that it is possible to put multiple collection in the same application,
+                        as well as subcollection inside one collection. Thus, the ODD has been created for egodocuments and notably correspondance,
+                        with its specific tags and all the differents displaying that could be attached to it. D'Estournelles de Constant corpus is
+                        already present in the application and it is possible to add new corpora in it.</p>
+                    <p>The encoding of the files imported in the application have to follow the TEI Guidelines, to match with what is recommended
+                        inside TEI Publisher but alos the content of the ODD provided for this application. YO be sure of your encoding, you can also
+                        check the encoding guidelines written for the d'Estournelles de Constant corpus but is wanted as a generic document for all
+                        egoducments and present in the "Documentation" signet.</p>
+                </div>
+                <div>
+                    <head>About this document</head>
+                    <p>This document describes the steps to follow to add a new corpus of egodocuments in this TEI Publisher application. The rules
+                        are pretty generic, although there are made for the particular case of adding new data to this specific application. If an
+                        information is missing, it is always possible to search for the answer in the extended and detailed TEI Publisher <ref target="https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd">documentation</ref>.</p>
+                </div>
+            </div>
+            <div>
+                <head>The application and its components</head>
+                <p>There are two main parts in the application: the tree and the interface. The tree contains all the files essential for a good
+                    functioning of the application and the interface will be the representation of those transformed files. One after the other, I
+                    will present and detail them to fully explain how the application works.</p>
+                <div>
+                    <head>The composition of the application's tree</head>
+                    <p>The application contains several folders, associated to different functions for each: <figure>
+                            <graphic url="illustrations/application_tree.png" width="200px"/>
+                            <head>The application's tree</head>
+                        </figure>
+                         
+                                <label>data</label>: it comprises the collections of the application. It will itself be divided into folders: one
+                                for each collection, as well as a "collection.html" file. 
+                             
+                                <label>modules</label>: it regroups all the files used to operate and run the application. In the sub-folder "/lib"
+                                are all the files that will be essential to udpate the application according to the new version of TEI Publisher
+                                without breaking it. They are untouchable files, while those in the direct hierarchy have sometimes been modified to
+                                fit what we need for this application. 
+                             
+                                <label>resources</label>: it is divided into five folders:  
+                                     "css": for the appearance of the application 
+                                     "fonts" 
+                                     "i18n": for the language 
+                                     "images": logos and others similar images 
+                                     "odd": generic odds provided by TEI Publisher and the ODD developed for the application that will be
+                                        modifiable 
+                                 
+                             
+                             
+                                <label>templates</label>: it gathers HTML pages used to display contents in the application (homepage, search,
+                                toolbar, etc.). It also contains a folder "pages" consisting of the main pages of the application : "letters.html"
+                                (display the letters), "places.html" (display the index of places), "persons.html" (display the index of persons),
+                                "organizations.html" (display the index of organizations) and "guidelines.html" (display the documentation (like this
+                                one). Finally, it contains two folders "history" and "about", that gathers respectively the templates that informs
+                                about the project and its history, and the context of writing of the corpus. <figure>
+                                    <graphic url="illustrations/application_templates.png" width="200px"/>
+                                    <head>The application's templates</head>
+                                </figure>
+                             
+                             
+                                <label>transform</label>: similar to "modules", it contains files used to operate the application. 
+                             Others: there are some files not placed in any folder that are also used to operate the application. 
+                         
+                    </p>
+                    <p>Most of the documents have been created by TEI Publisher when the application was generated and they have not been changed,
+                        either because they can't be to avoid breaking the application, either because it was not necessary for the performance of the
+                        application. Some documents have been created by us (even though they are mostly inspired by documents from TEI Publisher) to
+                        really display our imported files as we wanted it (it is mostly the cases for the main templates). Finally, some documents
+                        have been udpated to coincide with the way the application is operated.</p>
+                </div>
+                <div>
+                    <head>What can be found in the interface?</head>
+                    <p>As we saw it in the previous section, there are a lot of folders and files used to create and run the application. This gives
+                        us a functionning interface when we can navigate between several types of documents like corpus, indexes or documentation,
+                        thanks to multiple toolbars and specific templates.</p>
+                    <div>
+                        <head>Navigation within the site</head>
+                        <p>
+                            <figure>
+                                <graphic url="illustrations/application_menu.png" width="800px"/>
+                                <head>Menu of the application</head>
+                            </figure>
+                             
+                                 
+                                    <label>Home</label>: it directs to the homepage of the application (with the different collections and the
+                                    documentation) 
+                                 
+                                    <label>Corpus</label>: it gives access to a dropdown content with a link for each collection 
+                                 
+                                    <label>Documentation</label>: it gives access to a dropdown content with a link for both documentation (encoding
+                                    guidelines and operation of the application) 
+                                 
+                                    <label>Admin</label>: it is accessible only when the user is connected (you don't need to be the owner of the
+                                    application; you just need an exist-db account). With Admin, you have access to the ODD, to a download link for
+                                    the application (in a .xar package) and to the API Documentation 
+                                 
+                                    <label>Download</label>: it is accessible when you are on a document page. It gives the possibility to download
+                                    in many formats the document currently checked. 
+                                 
+                                    <label>Search bar</label>: it lets you search for a specific content in all the documents present in the
+                                    website. 
+                                 
+                                    <label>Language</label>: it allows you to navigate on the website with a preferred language. If your language
+                                    has not been defined in the application, the default will be english. 
+                             
+                        </p>
+                    </div>
+                    <div>
+                        <head>The collection</head>
+                        <p>The collection can contained all the files that you would want to share from your project. The main folder, essential for
+                            the application and obligatory if you add your project is a corpus. Subsequently, if you have some, you can add your
+                            indexes. Finally, it will also be possible to give additional elements from the project (in this application, history of
+                            the project and history of the corpus are an option).</p>
+                        <p>Example with d'Estournelles de Constant: <figure>
+                                <graphic url="illustrations/homepage_collection.png" width="700px"/>
+                                <head>Content of "d'Estournelles de Constant" collection</head>
+                            </figure>
+                        </p>
+                        <p>"<emph>Corpus</emph>" contains the files that composed the corpus (usually letters or other types of egodocuments)</p>
+                        <p>"<emph>Index</emph>" contains the indexes attached to the corpus (persons, places, organizations, etc.)</p>
+                        <p>"<emph>History</emph>" contains, in the form of an HTML file, informations on the context of the document writing</p>
+                        <p>"<emph>About</emph>" contains, in the form of an HTML file, informations about the project behind the encoding of the
+                            corpus</p>
+                    </div>
+                    <div>
+                        <head>The templates</head>
+                        <p>There are three types of documents in this application and each one uses a specific template (and even inside those types,
+                            there are sometimes multiple templates). Thoses templates are all connected to a unique ODD that establish how all the
+                            elements will be transformed and showed in the interface. On the toolbar of every template, the licence associated to the
+                            document can be found.</p>
+                        <div>
+                            <head>Letters</head>
+                            <p>The first type of document present in the application is the heart of every project present in the site, the corpus,
+                                mainly letters for our collection. These letters are made of three important parts: a text, one or several images and
+                                metadata. They are all called in the template in order to have a full view of the document.</p>
+                            <p>Each document can be cited specifically, thanks to a button present in the toolbar.</p>
+                            <div>
+                                <head>The text</head>
+                                <p>The text display depends on two things: its encoding and its transformation with the ODD. Every tag present in the
+                                    encoding of the example corpus has been added in the ODD and specified when it was needed. The different
+                                    alignments (left, right, center, justify, indendation) have all been specified in the tags it needed in the ODD.
+                                    Underlined, italic or bold texts have also been taken into consideration in the ODD to be transformed as it
+                                    should, as well as other kind of specificities.</p>
+                                <p>Moreover, this encoding follows the rules established in the <ref target="Documentation-Correspondance.xml">Encoding Guidelines</ref> for the egodocuments, just as every document uploaded in the application have to
+                                    do. Considering this, any new text added should be correctly transformed if it complied with the encoding
+                                    rules.</p>
+                                <p>However, there is one perculiar element, important to highlight. Every corpus can have some correction present in
+                                    their text, whether it is the author/recipient/archivist who decided to modify some parts of the text (addition
+                                    and/or deletion). To view easily these parts, they have been colored in the text for the transformation, with a
+                                    color code added in the template, inside the toolbar. Deletion are marked with a strikethrough when they have been
+                                    deleted that way, gaps are presented in purple brackets, unclear text are colored in blue, extended abbreviations
+                                    are colored in orange, addition from the major hand are colored in green and then handwritten additions appeared
+                                    in grey, with the possibility to see informations about the hand responsible for it by pointing the cursor on it.
+                                    For the overwritten part of the text, the ancient version of a letter, a word or part of a sentence can also be
+                                    seen by pointing the cursor on it.</p>
+                                <p>Otherwise, the text is presented page by page (with the use of the <gi>pb</gi> tag). This helps the reading of the
+                                    document and it makes a better association with the corresponding images.</p>
+                            </div>
+                            <div>
+                                <head>The images</head>
+                                <p>The text represents half of the display in the template and the other half is reserved to the corresponding image.
+                                    Every text must come from an image that has been digitalized, ocerised then transcribed. This image has to be
+                                    present next to its text for a better reading and study of the corpus.</p>
+                                <p>For this website, the images are not directly imported inside the application, because it would become too big as
+                                    things progress and more corpus are added. We chose to display the images with the help of IIIF, which will insure
+                                    a great quality of images and a better sustainability.</p>
+                                <p>The link is put inside the <gi>pb</gi> tag with the attribute <att>facs</att> and with a value that always needs to
+                                    start with <val>iiif:</val>, in order to correctly called the image. Consequently, with this configuration,
+                                    everytime the reader moves on to the next page from a document, the page will appear with its corresponding
+                                    image.</p>
+                            </div>
+                            <div>
+                                <head>The metadata</head>
+                                <p>Finally, the last part of the main document are its metadata. As they are present in the header of the document,
+                                    there are not directly viewed when on a document. However, they contain essential information of the document and
+                                    can represent a good summary of it, so I decided to make them appear in the document.</p>
+                                <p>Thanks to the toolbar that allows to see the color code, the licence, the citation for the document, how to turn
+                                    the page forward and backward and to go back to the parent collection, it is also possible to have access to the
+                                    metadata in a clear and ordoned way, as well as in two languages: french and english.</p>
+                                <p>There are separate in five parts: title, correspondents, time and place of writing, information about the letter,
+                                    collection history and encoding. The first three elements are already present in the title of the document at the
+                                    top of the page, as well as in the index for the collection but they are essential to the document so it is always
+                                    relevant to point it out. Encoding is not much about the document in itself but rather about the people behind the
+                                    project and the choice made for it. Collection history concentrates on the collection overall and its
+                                    conservation. Finally, information about the letter are the truly unique part of every document because it focuses
+                                    on the document itself and the data unique to it.</p>
+                                <p>The display of the metadata has been put in the template of the letter and is called with a specific mode defined
+                                    in the ODD, declined in two versions and two options in each. Since the metadata are encoded in french and in
+                                    english as it is defined in the encoding guidelines, I decided to let the two versions appeared in the document to
+                                    let the reader choose which one he prefers. Inside each version, there is however two options for the metadata
+                                    display: document with an annex and document without. The mode "with" will depends on the presence of the tag
+                                        <gi>accMat</gi> in the header. If it is there, the "Information about the letter" part contains the number of
+                                    annex in "Number of pages" and an "Annex" is added (as it is visible in the example below). If not, this part only
+                                    contains number of pages, numbering and state of preservation. In both case, the rest stays the same.
+                                    <egXML xml:space="preserve">
+                                    &lt;div&gt;
+                                        &lt;h4&gt;Title&lt;/h4&gt; &lt;p&gt;[[title]]&lt;/p&gt;
+                                        &lt;h4&gt;Correspondents&lt;/h4&gt; 
+                                        &lt;ul&gt;&lt;li&gt;Sender: [[author]]&lt;/li&gt;
+                                            &lt;li&gt;Recipient: [[recipient]]&lt;/li&gt;&lt;/ul&gt;
+                                        &lt;h4&gt;Time and place of writing&lt;/h4&gt; &lt;p&gt;[[origin]]&lt;/p&gt;
+                                        &lt;h4&gt;Informations about the letter&lt;/h4&gt;
+                                        &lt;ul&gt;&lt;li&gt;Number of pages: [[pages]]&lt;/li&gt;
+                                            &lt;li&gt;Numbering: [[number]]&lt;/li&gt;
+                                            &lt;li&gt;State of preservation: [[conservation]]&lt;/li&gt;
+                                            &lt;li&gt;Annex: [[annex]]&lt;/li&gt;&lt;/ul&gt;
+                                        &lt;h4&gt;Collection history&lt;/h4&gt;
+                                        &lt;ul&gt;&lt;li&gt;Identifier : [[idno]]&lt;/li&gt;
+                                            &lt;li&gt;Collection : [[collection]]&lt;/li&gt;
+                                            &lt;li&gt;Institution: [[repository]], [[institution]]&lt;/li&gt;
+                                            &lt;li&gt;Acquisition: [[acquisition]]&lt;/li&gt;
+                                            &lt;li&gt;Additions: [[additions]]&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                        &lt;h4&gt;Encoding&lt;/h4&gt;
+                                        &lt;ul&gt;&lt;li&gt;Project: [[projet]]&lt;/li&gt;
+                                            &lt;li&gt;Project manager: [[responsable]]&lt;/li&gt;
+                                            &lt;li&gt;Project editor: [[editor]]&lt;/li&gt;
+                                            &lt;li&gt;Correction: [[correction]]&lt;/li&gt;
+                                            &lt;li&gt;Hyphénation: [[hyphenation]]&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                </egXML>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <head>Indexes</head>
+                            <p>Another important part of the application are the indexes attached to a project. They allow us to have further
+                                information on the entities mentioned in the corpus and give us more context on it. As there are not many types of
+                                entities in a text, the application only manage three types of index:  
+                                     Places 
+                                     Persons 
+                                     Organizations 
+                                 
+                                <figure>
+                                    <graphic url="illustrations/application_indexes.png" width="700px"/>
+                                    <head>The indexes</head>
+                                </figure>
+                            </p>
+                            <p>Those indexes have each been given a specific template, to be precise with the navigation (the type of index (persons,
+                                places, org, etc.) is specified on the tab). Index of places and of organisations both have a map, which is not the
+                                case for the index of persons, since it would be useless. Those templates have however a common element: a left-side
+                                table of contents, ordered alphabetically, that allows the viewer to see all the elements contained in the index and
+                                to reach quickly the entry they search.</p>
+                            <div>
+                                <head>Index of places</head>
+                                <p>The index of places doesn't contain a lot of tags because it does not require many informations, whether it is a
+                                    country, a region, a city or a street. The two obligatory elements are a name for the place and the type of place.
+                                    Geographic coordinates are highly recommended for more precision but it is not required when referecing large
+                                    place, like a country or a continent. Then, depending on the type of places, it is possible to have more
+                                    informations. If it is a city, the country must be given. If it is a street, the <gi>address</gi> tag will be
+                                    added and inside <gi>street</gi>, <gi>postCode</gi>, <gi>settlement</gi> and <gi>country</gi>.</p>
+                                <p>In the ODD, all those informations have been noticed and registered in a sequence model, that calls all the
+                                    informations contained in the entry. For the coordinates, when they are referenced, a pointer has been added and
+                                    it is necessary to click on the coordinates of the place to have access to it on the map.</p>
+                                <p>Here is an example of the sequence model for places where the coordinates have been given :
+                                    <egXML xml:space="preserve">
+                                  &lt;modelSequence predicate="$parameters?mode='index' and location/geo"&gt;
+                                     &lt;model behaviour="webcomponent"&gt;
+                                         &lt;param name="name" value="'pb-highlight'"/&gt;
+                                         &lt;param name="content" value="placeName[1]"/&gt;
+                                         &lt;param name="key" value="@xml:id"/&gt;
+                                         &lt;param name="subscribe" value="'letter'"/&gt;
+                                         &lt;param name="emit" value="'index'"/&gt;
+                                         &lt;outputRendition xml:space="preserve"&gt;
+                                         font-size: 1.5em;
+                                         font-weight: bold;
+                                         &lt;/outputRendition&gt;
+                                     &lt;/model&gt;
+                                     &lt;model behaviour="block"&gt;
+                                         &lt;param name="content" value="string-join(* except (location|idno), ', ')"/&gt;
+                                     &lt;/model&gt;
+                                     &lt;model behaviour="block"&gt;
+                                         &lt;param name="content" value="string-join(location/address, ', ')"/&gt;
+                                     &lt;/model&gt;
+                                     &lt;model predicate="location/geo" behaviour="block"&gt;
+                                         &lt;param name="content" value="location/geo"/&gt;
+                                         &lt;outputRendition xml:space="preserve"&gt;
+                                         margin-bottom: 12px;
+                                         &lt;/outputRendition&gt;
+                                     &lt;/model&gt;
+                                 &lt;/modelSequence&gt;
+                                </egXML>
+                                </p>
+                            </div>
+                            <div>
+                                <head>Index of persons</head>
+                                <p>The index of persons contains basic information about the person. First, there are essential data such as the name
+                                    (forename, surname and other details), the sex, date and place of birth and death (except if the person is not
+                                    dead) and the occupation (feasible to give more than one). Then, it is also possible to have some background
+                                    information on the person with affiliation, education or event. Finally, the <gi>idno</gi> tag gives an identifier
+                                    to the person, linked to a database of authority files; currently, it links either to the <emph>Virtual
+                                        International Authority File (VIAF)</emph> or to the <emph>Gemeinsame Normdatei (GND)</emph>, but it is not an
+                                    unchangeable list.</p>
+                                <p>All those data are collected and integrated in a model sequence :
+                                    <egXML xml:space="preserve">
+                                    &lt;modelSequence predicate="$parameters?mode='index'"&gt;
+                                        &lt;model behaviour="webcomponent"&gt;
+                                            &lt;param name="name" value="'pb-highlight'"/&gt;
+                                            &lt;param name="content" value="persName[1]"/&gt;
+                                            &lt;param name="key" value="@xml:id"/&gt;
+                                            &lt;param name="subscribe" value="'letter'"/&gt;
+                                            &lt;param name="emit" value="'index'"/&gt;
+                                            &lt;param name="viaf" value="idno"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;&lt;a href="[[viaf]]" target="_blank"&gt;[[content]]&lt;/a&gt;&lt;/pb:template&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            font-size: 1.5em;
+                                            font-weight: bold;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="date" value="birth/date[@when-iso]"/&gt;
+                                            &lt;param name="place" value="birth/placeName"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Born on [[date]] in [[place]]&lt;/pb:template&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            margin-bottom: 0.2;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="date" value="death/date[@when-iso]"/&gt;
+                                            &lt;param name="place" value="death/placeName"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Died on [[date]] in [[place]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="nationality"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Nationality : [[content]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="sex"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Gender : [[content]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="string-join(occupation, '/')"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Occupation : [[content]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="education"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Education : [[content]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="event"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;Main event(s) : [[content]]&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="inline"&gt;
+                                            &lt;param name="content" value="'Affiliation :'"/&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="affiliation"/&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            margin-bottom: 2em;
+                                            margin-left: 10px;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                    &lt;/modelSequence&gt;
+                                </egXML>
+                                </p>
+                            </div>
+                            <div>
+                                <head>Index of organizations</head>
+                                <p>The index of organizations is kind of a mix of the two other indexes described, while it also has unique new tags.
+                                    Every entry contains a name for the organization (linked to a <gi>idno</gi> identifier, same as in the index of
+                                    persons), a start date (and an end date if it exists), a description of the organization and then data about the
+                                    location of the place.</p>
+                                <p>The location works similarly to the entry of the index of place. A name of place, its country and its coordinates
+                                    are given and the coordinates have a pointer (a click is needed to see the place). The real difference is the
+                                    apparition of a date for the localisation because some organization have changed places as time goes by but the
+                                    index entry needs to have the location of the place in the context of the corpus writing. If it changed ever
+                                    since, the start and end date are added.</p>
+                                <p>Below is the presentation of the ODD model sequence for the organization :
+                                    <egXML xml:space="preserve">
+                                    &lt;modelSequence predicate="$parameters?mode='index'"&gt;
+                                        &lt;model behaviour="webcomponent"&gt;
+                                            &lt;param name="name" value="'pb-highlight'"/&gt;
+                                            &lt;param name="content" value="orgName[1]"/&gt;
+                                            &lt;param name="key" value="@xml:id"/&gt;
+                                            &lt;param name="subscribe" value="'letter'"/&gt;
+                                            &lt;param name="emit" value="'index'"/&gt;
+                                            &lt;param name="viaf" value="idno"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;&lt;a href="[[viaf]]" target="_blank"&gt;[[content]]&lt;/a&gt;&lt;/pb:template&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            font-size: 1.5em;
+                                            font-weight: bold;
+                                            margin-bottom: 0.2em;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="desc"/&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            margin-bottom: 0.2em;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                        &lt;model behaviour="block"&gt;
+                                            &lt;param name="content" value="string-join(placeName/* except placeName/location, ', ')"/&gt;
+                                            &lt;param name="date" value="placeName"/&gt;
+                                            &lt;pb:template xmlns="" xml:space="preserve"&gt;[[content]] ([[date]])&lt;/pb:template&gt;
+                                        &lt;/model&gt;
+                                        &lt;model predicate="placeName/location/geo" behaviour="block"&gt;
+                                            &lt;param name="content" value="placeName/location/geo"/&gt;
+                                            &lt;outputRendition xml:space="preserve"&gt;
+                                            margin-bottom: 15px;
+                                            &lt;/outputRendition&gt;
+                                        &lt;/model&gt;
+                                    &lt;/modelSequence&gt;
+                                </egXML>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Documentation</head>
+                        <p>This section contains two files, useful for working with and within the application, because it gives all the general rules
+                            needed to perfectly fit your corpus inside the application. <figure>
+                                <graphic url="illustrations/application_documentation.png" width="700px"/>
+                                <head>Documentation</head>
+                            </figure>
+                        </p>
+                        <div>
+                            <head>Encoding guide for digital edition of egodocuments</head>
+                            <p>Although the TEI Guidelines are a long and exhaustive tool to learn how to encode correctly the texts of a corpus in an
+                                XML-TEI format, each corpus have some specificities, some choices of encoding for when the TEI Guidelines offer
+                                several encoding possibilities for the same element.</p>
+                            <p>In the context of encoding egodocument, and more precisely correspondence (as it can be observed with the two original
+                                collections presents in this website), we made some choices, at different steps in the encoding and we decided to
+                                document all of this, as well as every tag present in the encoding. Divided in many parts (document and index, header
+                                and body, generic encoding, etc.), this document gives you all the information needed to encode your corpus
+                                accordingly to what is already on the application. It will be all the more useful afterwards, because by following
+                                this document, the new corpus will also be adapted to what the ODD requires to transform the new documents, just like
+                                the old collection had been.</p>
+                        </div>
+                        <div>
+                            <head>Documentation for the insertion of egodocuments corpora in the TEI Publisher application</head>
+                            <p>TEI Publisher provides an extensive documentation for everything that has to do with working with it and creating an
+                                application to then publish your own corpus in it. However, all these work has already been done for this application.
+                                Working in this application and adding a new corpus will depends this time in the way it has been formed, so it was
+                                necessary to have a specific documentation to follow, in order to do so.</p>
+                            <p>This documentation presents every aspect of the application: its goal, its composition and the rules to follow, so that
+                                you can safely and correctly add a new corpus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <head>How to import a new corpus</head>
+                <p>The added corpus must be adapted to the document format we are displaying on the application created for the project: ego document.
+                    Ego documents are written personal documents such as diaries, memoirs or wills. They usually are dated and signed, which require
+                    some recurrent elements on the encoding that have a specified transformation in the ODD.</p>
+                <div>
+                    <head>Adding the corpus</head>
+                    <p>The development of TEI Publisher always gives the possibility to enhance an application with new corpora, easely added, by
+                        following a series of steps, in order to appear correctly on the website and accordingly to what is already in it.</p>
+                    <div>
+                        <head>Creating a new "collection.html" file</head>
+                        <p>When a new corpus is added, it goes into the "data" folder and since it is itself a folder (you can't have a corpus with
+                            just one document), it is considered a new collection inside the application. When the collection will be called, the
+                            applicaton will search for documents in the folder to display on the website. It is possible to add as many collections
+                            and even subcollections as we want (d'Estournelles de Constant correspondence is a collection and it has itself two
+                            subcollections with the corpus and the indexes).</p>
+                        <p>However, when a new collection is added and it contains subcollections, it is essential to create a "collection.html" file
+                            inside the folder of the new collection, which will be used to display the necessary information. If there are no
+                            subcollection, the only "collection.html" file that will need to be modified is the one directly in the "data" folder that
+                            display the collections contained in the application. It will have to be updated to introduce the new collection.</p>
+                        <p>To have the presentation of the home page of the application, the "collection.html" file is constructed as such:
+                            <egXML xml:space="preserve">
+                                &lt;div class="collection" data-template="browse:clear-facets"&gt;
+                                    &lt;ul class="documents"&gt;
+                                         &lt;li class="document"&gt;
+                                         &lt;div class="thumbnail"&gt;
+                                                 &lt;img src="Destournelles.png" width="128"/&gt;
+                                             &lt;/div&gt;
+                                             &lt;div class="document-info"&gt;
+                                                 &lt;h3&gt;
+                                                     &lt;a href="#" data-collection="PECcorresp"&gt;
+                                                         &lt;pb-i18n key="collection.pec.title"&gt;Correspondence of Paul d'Estournelles de Constant&lt;/pb-i18n&gt;
+                                                     &lt;/a&gt;
+                                                 &lt;/h3&gt;
+                                                 &lt;p&gt;
+                                                     &lt;pb-i18n key="collection.pec.desc"&gt;Folder containing files linked to d'Estournelles correspondence.&lt;/pb-i18n&gt;
+                                                 &lt;/p&gt;
+                                             &lt;/div&gt;
+                                         &lt;/li&gt;
+                                         &lt;li class="document"&gt;
+                                         &lt;div class="thumbnail"&gt;
+                                                 &lt;img src="boeckh.png" width="128"/&gt;
+                                             &lt;/div&gt;
+                                             &lt;div class="document-info"&gt;
+                                                 &lt;h3&gt;
+                                                     &lt;a href="#" data-collection="IntellectuelsBerlinois"&gt;
+                                                         &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Correspondence of Berlin intellectuals&lt;/pb-i18n&gt;
+                                                     &lt;/a&gt;
+                                                 &lt;/h3&gt;
+                                                 &lt;p&gt;
+                                                     &lt;pb-i18n key="collection.intellectuelsberlinois.desc"&gt;Folder containing files linked to Berlin intellectuals' correspondence.&lt;/pb-i18n&gt;
+                                                 &lt;/p&gt;
+                                             &lt;/div&gt;
+                                         &lt;/li&gt;
+                                         &lt;li class="document"&gt;
+                                         &lt;div class="thumbnail"&gt;
+                                                 &lt;img src="documentation.png"/&gt;
+                                             &lt;/div&gt;
+                                             &lt;div class="document-info"&gt;
+                                                 &lt;h3&gt;
+                                                     &lt;a href="#" data-collection="Guidelines"&gt;
+                                                         &lt;pb-i18n key="collection.guidelines.title"&gt;Documentation&lt;/pb-i18n&gt;
+                                                     &lt;/a&gt;
+                                                 &lt;/h3&gt;
+                                                 &lt;p&gt;
+                                                     &lt;pb-i18n key="collection.guidelines.desc"&gt;Documentation about the encoding rules for ego document corpus and the operation of the application&lt;/pb-i18n&gt;
+                                                 &lt;/p&gt;
+                                             &lt;/div&gt;
+                                         &lt;/li&gt;
+                                     &lt;/ul&gt;
+                                 &lt;/div&gt;
+                            </egXML>
+                        </p>
+                        <p>To add a new collection in this file, a new <gi>li</gi> and nested <gi>div</gi> tags have to be inserted. The thumbnail is
+                            not necessary for the presentation but can be interesting to illustrate the new corpus. It is then important to call the
+                            collection within <att>data-collection</att> and if the file is for a subcollection, it will be essential to mention the
+                            collection to have a functionning link:
+                            <egXML xml:space="preserve">
+                                &lt;a href="#" data-collection="PECcorresp/Corpus"&gt;
+                                    &lt;pb-i18n key="collection.corpus.title"&gt;Corpus&lt;/pb-i18n&gt;
+                                &lt;/a&gt;
+                            </egXML>
+                        </p>
+                    </div>
+                    <div>
+                        <head>Checking the conformity with the templates</head>
+                        <p>After your corpus has been added, it is important to verify that everything works well with the ODD and with the templates
+                            that displays the XML-TEI files. The best way to do that is to check four or five differents documents from your corpus
+                            and see if everything appears correctly and accordingly to what has been told in the previous chapter. If not, see the
+                            next chapter to know what to do.</p>
+                        <div>
+                            <head>The letters</head>
+                            <p>As we saw it before, the letters have three main parts displayed and it is imported to verify that they all work
+                                correctly:  
+                                     The text: all the tags used for division, paragraph and similar elements should be sure in term of alignment
+                                        but it is possible that some specific aligned tags have not been taken into consideration. The apparition of
+                                        the hand for handwritten addition will depend on the encoding of the <gi>handNote</gi> tag, so it is important
+                                        to verify the encoding of your metadata and how it is declared in the ODD if it does not appear. 
+                                     The images: the display of the images depends entirely on the IIIF link that is given in the XML-TEI files,
+                                        so it is important to verify that the link is good and that it matches what is asked for a good transformation
+                                        in the ODD or else the image won't appear. 
+                                     The metadata: if a data is missing from the metadata, it will appear blank next to the corresponding
+                                        section, which will be easier to determine what to change. 
+                                 
+                            </p>
+                        </div>
+                        <div>
+                            <head>The indexes</head>
+                            <p>First of all, it is very important to call the right template at the beginning of your index. In TEI Publisher, a
+                                generic template is declared in one of the configuration file (in our case, the template for the letter), so every new
+                                document that is not from the corpus has to have its specific template called (it is the case for the indexes but also
+                                for the documentation). Each type of index have a specific template (person = "persons.html"; place = "places.html";
+                                organization = "organizations.html") that you need to define, like in the example below, if you want to have a good
+                                display:
+                                <egXML xml:space="preserve">
+                                    &lt;?teipublisher template="places.html"?&gt;
+                                </egXML>
+                            </p>
+                            <p>Then, to be sure that your indexes will appear as they should, you just need to verify that the data encoded in your
+                                indexes matches the one required for the indexes, as defined in the ODD. Every index requires specific information
+                                that your indexes should have. However, if you realize that the indexes on the website are missing a vital information
+                                that your indexes have, you can always change the model sequence in the ODD to add it and notify the person
+                                responsible for the other project so they can adapt their own indexes, if needed.</p>
+                            <p>Finally, it is important to verify in your geographical location that the coordinates have been given in decimal and
+                                not in sexagesimal (with degree, minute and second) or else, they won't appear in the map. Likewise, it is important
+                                that you verify the <gi>idno</gi> identifier given to the persons and/or the organizations in your index to see if it
+                                matches the ones defined in the ODD. If not, you will need to add your own, so that your link works.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <head>Updating the application to incorporate the new corpus</head>
+                    <p>Once a new corpus is added, it is necessary to do some modifications, either in the ODD so that the content of the new corpus
+                        appears correctly and completly, in the HTML template of the menu bar so that the corpus is accessible rapidly in the
+                        navigation, in the language settings of the application and/or by adding new templates for the history of the project and/or
+                        the context of writing.</p>
+                    <div>
+                        <head>Adding new elements and/or specifications to the ODD</head>
+                        <p>For the ODD, there is two possible choices: you can search in the existing elements to add what is missing for your text or
+                            you can add new tags that are not already here and that need to be, for your presentation.</p>
+                        <div>
+                            <head>Adding new specifications</head>
+                            <p>Many tags present in the body of the text can be used in different ways and it is possible that the way it was defined
+                                in the ODD for the two example corpus is not the one you need. By using a predicate (the condition under which this
+                                model applies, given as an XPath predicate expression), you can precise your own parameters and how you want it
+                                rendered. For example, you can define another way to use the <gi>note</gi> tag or even defines your specific foliation
+                                if it differs from what is already defined; you can also add new uses of the <gi>hi</gi> tag, other than underlining
+                                or italic.</p>
+                            <p>For the index, it is possible that the authory file database from <gi>idno</gi> differs from those determined in the
+                                ODD. If you have another database, you can add it by rewriting the model of VIAF or PND and changing the link to match
+                                the one from your authority files.</p>
+                        </div>
+                        <div>
+                            <head>Adding new elements</head>
+                            <p>Sometimes, it is possible that you don't find the tag you are looking for in the ODD. However, it is important to see
+                                first in the application if it appears correctly in the text. A basic transformation of tags is sometimes already put
+                                in the ODD without having to do anything and so your tag will appear as it should even if it is not in the ODD.</p>
+                            <p>However, if the tag is not in the ODD and it does not appear as you want it in the text, then you can add it to the ODD
+                                and specify your parameters and peculiars renditions if you have some.</p>
+                            <p>It is also possible that you consider that some essential elements is missing in the index and you want to add it in
+                                the model sequence. In that case, you need to add the element as a new model inside the chosen model sequence, enter
+                                its content and then add the tag with a special rendition if needed.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Updating the navigation</head>
+                        <p>After a new collection is added, the navigation needs to be updated so that this new element can be easely found when we
+                            travel inside the website. Fortunatly, this requires the changes of only two <emph>html</emph> files in the tree and its
+                            pretty much the same information that just need to be copy then paste in each file.</p>
+                        <p>The segment that need alteration is the following (the corpus):
+                            <egXML xml:space="preserve">
+                                &lt;paper-menu-button&gt;
+                                    &lt;a href="#" slot="dropdown-trigger"&gt;
+                                &lt;pb-i18n key="collection.corpus.title"&gt;Corpus&lt;/pb-i18n&gt;
+                            &lt;/a&gt;
+                                    &lt;paper-listbox slot="dropdown-content"&gt;
+                                                        &lt;paper-item&gt;
+                                                            &lt;a href="${app}/index.html?collection=PECcorresp" data-template="pages:parse-params"&gt;
+                                        &lt;pb-i18n key="collection.pec.title"&gt;Correspondence of Paul d'Estournelles de Constant&lt;/pb-i18n&gt;
+                                    &lt;/a&gt;
+                                                        &lt;/paper-item&gt;
+                                                        &lt;paper-item&gt;
+                                                            &lt;a href="${app}/index.html?collection=IntellectuelsBerlinois" data-template="pages:parse-params"&gt;
+                                        &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Correspondence of Berlin intellectuals&lt;/pb-i18n&gt;
+                                    &lt;/a&gt;
+                                                        &lt;/paper-item&gt;
+                                                        &lt;paper-item&gt;
+                                            &lt;a href="${app}/index.html?collection=NAMEOFTHENEWCOLLECTION" data-template="pages:parse-params"
+                                                &lt;pb-i18n key="collection.NAMEOFTHENEWCOLLECTION.title"&gt;Correspondence of ...&lt;/pb-i18n&gt;
+                                                &lt;/a&gt;
+                                        &lt;/paper-item&gt;
+                                                    &lt;/paper-listbox&gt;
+                                &lt;/paper-menu-button&gt;
+                            </egXML>
+                        </p>
+                        <p>Once the collection is created, TEI Publisher gave it an identifier (usually the name of the collection, all attached) and
+                            that will be the minimal information required in every link that will call documents from this collection (in this
+                            example, replace "NAMEOFTHENEWCOLLECTION" by your new identifier).</p>
+                    </div>
+                    <div>
+                        <head>Updating the language</head>
+                        <p>After the addition of a collection, new HTML files are added and some are modified, as I explained in the preceding
+                            sections. Simply adding your information as I presented it is enough for the navigation and the running of the
+                            application, but we offer the possibility to display many informations in different languages, according to what was
+                            selected in the navigation bar. To add the corpus in different languages, it is necessary to modify the JSON files present
+                            in 'resources/i18n/app' and named according to the language associated to it.</p>
+                        <p>For exemple, part of the 'en.json' is written as such:
+                            <egXML xml:space="preserve">
+                                "collection": {
+                                    "corpus" : {
+                                        "title": "Corpus",
+                                        "desc" : "Folder with the corpus' letters."
+                                        },
+                                    "index" : {
+                                        "title": "Indexes",
+                                        "desc" : "Folder with the indexes attached to the corpus."
+                                        },
+                                    "history" : {
+                                        "title": "History",
+                                        "desc" : "History of the correspondents and contextualisation of the exchange."
+                                        },
+                                    "about" : {
+                                        "title": "The project",
+                                        "desc" : "Information about the history and the collaborators of the project."
+                                        },
+                                    "pec" : {
+                                        "title": "Correspondence of d'Estournelles de Constant",
+                                        "desc": "This folder contains the corpus and the indexes of Paul d'Estournelles de Constant correspondence, as well as an history of the corpus and information about the project."
+                                        },
+                                    "intellectuelsberlinois" : {
+                                        "title": "Correspondence of Berlin intellectuals",
+                                        "desc": "This folder contains the corpus and the indexes of Berlin intellectuals correspondence between 1800 and 1830."
+                                        },
+                                    "guidelines" : {
+                                        "title": "Documentation",
+                                        "desc": "Documentation about the encoding rules for ego document corpus and how to operate and manage the application"
+                                        }
+                                    },
+                            </egXML>
+                            To add your corpus, you need to follow the example of 'pec' and 'intellectuelsberlinois' by giving an identifier for your
+                            collection and then writing the title and the description of the folder. You then do the same in other languages, if you
+                            can, by filling out the corresponding JSON files ("fr.json" for french; "de.json" for deutsch).</p>
+                        <p>Finally, to have those other versions, it is necessary to reference it in the affected documents ("collection.html",
+                            "menu_nodownload.html", "menu.html"). The default language inside the tag must be english:
+                            <egXML xml:space="preserve">
+                            &lt;pb-i18n key="collection.pec.title"&gt;Correspondence of Paul d'Estournelles de Constant&lt;/pb-i18n&gt;
+                        </egXML>
+                        </p>
+                    </div>
+                    <div>
+                        <head>Optional: adding complementary informations by creating new templates</head>
+                        <p>The main part of a project is its corpus and its content and that is the first element that will interest visitors of the
+                            application. However, it is also interesting to have further informations about it, e.g. for documentation. We have only
+                            created two extra pages to put into the collection, as we didn't think of other kinds of extra information to put in.</p>
+                        <p>Firstly, one of the main extra information that can be search about a corpus is the project behind it. It is always
+                            interesting to know the history that led to work with a specific corpus and the persons behind it. In this page, we will
+                            present the history of the project, the institutions working on it, the main collaborators responsible for the work
+                            presented in the new collection and finally, links to other places where we can find the project, like a website, a github
+                            or a social media.</p>
+                        <p>Secondly, another interesting part of a corpus is its writing context. Our main type of documents being egodocuments, and
+                            primarily correspondences, it is obvious, even more with a large corpus, that the documents have been written for a
+                            specific reason link to some events, so with this page, we can explore the history behind it. It is also an opportunity to
+                            describe the authors or main protagonists of the corpus, to give an hindsight on the persons studied through the
+                            corpora.</p>
+                        <p>Those pages have been put in specific folders, in order to give the possibility to put the same page for your corpus in the
+                            folder with a specific name to easily find it. For example, there is a "history" folder and inside it, the name of the
+                            file will be: "history_yourcorpus.html"</p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
