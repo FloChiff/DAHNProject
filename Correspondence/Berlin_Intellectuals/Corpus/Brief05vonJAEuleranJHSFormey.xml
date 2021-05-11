@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -56,8 +57,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -148,7 +155,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -165,8 +172,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-22" who="#emmanuelle.chaze">Edited persName Bernoulli.</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and body.</change>
@@ -182,27 +190,31 @@
         <body>
             <div type="transcription">
                 <pb facs="00000011.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">8</note>
-                <opener rend="align (right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date>2/13 Janvier 1767</date>. <salute
-                        rend="align (left)"><lb/>Monsieur mon très chèr et très honoré Oncle !</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">8</note>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1767-01-02">2/13 Janvier
+                            1767</date>. </dateline><salute rend="align(left)"><lb/>Monsieur mon très chèr et très honoré Oncle !</salute></opener>
                 <p><rs ref="#p0037">Mon père</rs> m’ayant chargé des commissions que Vous lui avez donnée <lb/>dans une de Vos précedentes lettres,
                     j’ai eu le bonheur de m’en <lb/>acquitter le plus heureusement possible : j’en suis dans la joye de <lb/>mon cœur. <rs
                         ref="#p0081">S.M.I.</rs> vient de me remettre ce matin par le <lb/><persName ref="#p2340">Comte d’Orloff</persName> deux cents
                     ducats russes à 2 Roubles et un quart de <lb/>valeur pour la pauvre <persName ref="#p2364">Mercier</persName>, et je me hate de
-                    Vous les faire <lb/><del rend="overwritten">d</del><add place="across">t</add>enir par <persName ref="#p2365">Mr
-                        Poggenpohl</persName>, (dans le Comtoir du quel j’écris ces lignes). <lb/>Vous les recevrez Monsieur et très honoré Oncle ! de
-                    Mssrs les <lb/>frères <persName ref="#p2366">Jordans</persName>. <rs ref="#p0081"><hi rend="underline">S.M.I</hi></rs> m’a encore
-                    chargé de m’informer <lb/><hi rend="quoted">"s’il se trouvent encore quelques personnes <add place="above">du sexe</add> de la
-                        famille des <lb/>"<persName ref="#p2370">Cardels</persName> qui ayent les mèmes bonnes qualités, qu’ont eu ses
-                        <lb/>"Gouvernantes de jadis, et je crois que je ne <add place="above">me</add> pourrois mieux adresser <lb/>"pour cette
-                        commission, qu’à Vous</hi> Monsieur et très cher <lb/>Oncle. <rs ref="#p0081">S.M.I.</rs> a d’abord communiqué l’écrit sur les
-                    dissidens <lb/>en question à son Ministre <persName ref="#p2350">S.E. Msgr de Panin</persName>, et on m’a dit <lb/>qu’on en est
-                    très content et satisfait. <rs ref="#p0081">S.M.I.</rs> Vous fait <lb/>remercier de cette interessante communication, comme aussi
-                    <lb/>de celle d<del rend="underwritten">e</del><add place="across">u</add> Discours du <persName ref="#p2371">Prof.
-                        Weguelin</persName> et de Votre réponse, <lb/>que j’ai pris la liberté de présenter à <rs ref="#p0081">S.M.I.</rs> étant
-                    assuré <lb/>que ceci ne pourra que Vous faire plaisir : j’ai perdû par là Cette <pb facs="00000012.jpg" n="2"/><note
-                        hand="#pencil" place="margin-left" type="foliation">7+8</note>cette belle pièce qui toujours est entre les mains de <rs
-                        ref="#p0081">S.M.</rs> mais <lb/>j’ai préferé Votre plaisir à mon interêt.</p>
+                    Vous les faire <lb/><subst>
+                        <del rend="overwritten">d</del>
+                        <add place="across">t</add>
+                    </subst>enir par <persName ref="#p2365">Mr Poggenpohl</persName>, (dans le Comtoir du quel j’écris ces lignes). <lb/>Vous les
+                    recevrez Monsieur et très honoré Oncle ! de Mssrs les <lb/>frères <persName ref="#p2366">Jordans</persName>. <rs ref="#p0081"><hi
+                            rend="underline">S.M.I</hi></rs> m’a encore chargé de m’informer <lb/><hi rend="quoted">"s’il se trouvent encore quelques
+                        personnes <add place="above">du sexe</add> de la famille des <lb/>"<persName ref="#p2370">Cardels</persName> qui ayent les
+                        mèmes bonnes qualités, qu’ont eu ses <lb/>"Gouvernantes de jadis, et je crois que je ne <add place="above">me</add> pourrois
+                        mieux adresser <lb/>"pour cette commission, qu’à Vous</hi> Monsieur et très cher <lb/>Oncle. <rs ref="#p0081">S.M.I.</rs> a
+                    d’abord communiqué l’écrit sur les dissidens <lb/>en question à son Ministre <persName ref="#p2350">S.E. Msgr de Panin</persName>,
+                    et on m’a dit <lb/>qu’on en est très content et satisfait. <rs ref="#p0081">S.M.I.</rs> Vous fait <lb/>remercier de cette
+                    interessante communication, comme aussi <lb/>de celle d<subst>
+                        <del rend="underwritten">e</del>
+                        <add place="across">u</add>
+                    </subst> Discours du <persName ref="#p2371">Prof. Weguelin</persName> et de Votre réponse, <lb/>que j’ai pris la liberté de
+                    présenter à <rs ref="#p0081">S.M.I.</rs> étant assuré <lb/>que ceci ne pourra que Vous faire plaisir : j’ai perdû par là Cette <pb
+                        facs="00000012.jpg" n="2"/><note hand="#pencil" place="margin(left)" type="foliation">7+8</note>cette belle pièce qui toujours
+                    est entre les mains de <rs ref="#p0081">S.M.</rs> mais <lb/>j’ai préferé Votre plaisir à mon interêt.</p>
                 <p>Voici encore une assignation de <rs ref="#p0037">mon père</rs> sur <persName ref="#p2359">Mr Schickler</persName>
                     <lb/>de la valeur de 45 Roubles et deux tiers ; y compris les ports <lb/>de lettres et autres petites depenses que Vous avez eu
                     pour <lb/><orgName ref="#g0123">l’Academie imperiale</orgName>, excepté pourtant les 2 Ecus 12 gros <lb/>pour <rs>l’histoire
@@ -214,11 +226,14 @@
                     presque entièrement <lb/>perdû sa vûe. Avant-hier j’ai eu le bonheur <lb/>de baiser la main de <rs ref="#p0081">S.M.</rs> et je
                     l’ai encore vû hier à la cour deux fois.</p>
                 <closer><salute>Je suis avec un très profond respect</salute>
-                    <lb/><salute>Monsieur mon très-chèr et très honoré <lb/>Oncle ! Votre <lb/>très humble et très obeïssant Serviteur</salute>
-                    <lb/><signature>J. Albert Euler</signature>.</closer>
-                <p rend="align (left)">Vous me pardonnerez que je ne continue pas aujourd’hui le journal.</p>
-                <p rend="margin-left">Comme il n’y a pas des conferences academiques pendant les fêtes, <persName ref="#p2373">Mr Bernoulli</persName>
-                    jugera aisement que je ne suis pas encore en etât de lui repondre </p>
+                    <salute rend="indent">Monsieur mon très-chèr et très honoré <lb/>Oncle ! Votre</salute>
+                    <salute rend="align(right)">très humble et très obeïssant Serviteur</salute>
+                    <signed rend="align(right)">J. Albert Euler.</signed></closer>
+                <postscript>
+                    <p rend="align(left)">Vous me pardonnerez que je ne continue pas aujourd’hui le journal.</p>
+                    <p rend="margin(left)">Comme il n’y a pas des conferences academiques pendant les fêtes,<lb/>
+                        <persName ref="#p2373">Mr Bernoulli</persName> jugera aisement que je ne suis pas encore en etât<lb/> de lui repondre </p>
+                </postscript>
             </div>
         </body>
     </text>

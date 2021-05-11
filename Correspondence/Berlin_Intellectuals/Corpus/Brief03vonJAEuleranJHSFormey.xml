@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -70,7 +77,10 @@
                                 <!--  <support><material>Art des Papiers, Qualität
                                     usw.</material></support> -->
                                 <extent>
-                                    <measure type="leaf">1 Blatt</measure>
+                                    <measure type="leaf">
+                                        <measure xml:lang="de">1 Blatt</measure>
+                                        <measure xml:lang="en">1 folio</measure>
+                                        <measure xml:lang="fr">1 feuillet</measure></measure>
                                     <!--  <dimensions unit="cm">
                                     <height>die Höhe</height>
                                         <width>die Breite</width>
@@ -143,7 +153,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -160,8 +170,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-22" who="#emmanuelle.chaze">Edited strikethrough.</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-11" who="#emmanuelle.chaze">Edited align and lb.</change>
@@ -178,9 +189,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000007.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">6</note>
-                <opener rend="align(right)"><placeName ref="#l0020">Petersburg</placeName> ce <date>21 Novembre St. v. 1766</date>.<lb/><salute
-                        rend="align(left)">Monsieur mon très chèr et très honoré Oncle!</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">6</note>
+                <opener><dateline rend="align(right)"><placeName ref="#l0020">Petersburg</placeName> ce <date when-iso="1766-11-21">21 Novembre St. v.
+                            1766</date>.</dateline>
+                    <salute rend="align(left)">Monsieur mon très chèr et très honoré Oncle!</salute></opener>
                 <p>Je commencerai par repondre à la lettre que Vous venez d’ecrire à <rs ref="p0037">mon père</rs>. Si <lb/> j’étois moins foible dans
                     la langue françoise, si les sentimens de mon cœur ne <lb/> surpassoient pas en energie toutes les expressions que je pourrois
                     former, je Vous <lb/> peindrai avant toute chose Monsieur et très honoré Oncle ! tous le respect et <lb/>toute la reconnoissance
@@ -190,9 +202,14 @@
                     qu’elles paroissent dans les journeaux, <lb/>elle Vous prie de lui en faire part ; Vous assurant de plus que Vos lettres lui
                     seront <lb/>toujours agréables quoiqu’elles contiennent et à quel tems Vous les lui enverrez. <lb/><orgName ref="#g0123"
                         >L’Academie</orgName>
-                    <add place="above">ne</add>ne vous prescris pas cette raison <del rend="strikethrough">aucuns</del>
-                    <add place="above">point des</add> termes reglés pour ces envois.</p>
-                <p>2. Votre pension commence d<del>e</del><add>u</add>
+                    <add place="above">ne</add>ne vous prescris pas cette raison <subst>
+                        <del rend="strikethrough">aucuns</del>
+                        <add place="above">point des</add>
+                    </subst> termes reglés pour ces envois.</p>
+                <p>2. Votre pension commence d<subst>
+                        <del rend="overwritten">e</del>
+                        <add place="across">u</add>
+                    </subst>
                     <del rend="strikethrough">la date</del> jour de Votre engagement, c’est-à-dire de <lb/>la date de la lettre de <persName
                         ref="#p2333">Mr de Stehlin</persName>. Vous recevrez au nouvel an la partie <lb/>qui est dû à l’intervalle echû, et dans la
                     suite on Vous enverra à chaque <lb/>renouvellement d’année une lettre de change de la valeur de 200 Roubles, que <lb/>Vous
@@ -201,13 +218,15 @@
                     lettres et les fraix de tout ce que Vous avez deboursé pour les <lb/>commissions qu’on Vous a donné pendant le cours de l’année.
                     Vous commencerez <lb/>par ce que la lettre de <persName ref="#p2333">Stehlin</persName> vous a couté.</p>
                 <p>4. Vous aurez enfin la bonté d’instruire <orgName ref="#g0123">l’Académie imperiale</orgName> de tout ce qui se passe d’impor<lb
-                        break="no"/>tant dans <orgName ref="#g0120">l’Academie de Berlin</orgName>. Voilà tout ce <del rend="strikethrough">que</del>
-                    <add place="above">dont</add> la Conference d<del rend="strikethrough">e</del>’hier m’a chargé <lb/>de Vous ecrire. Le <persName
-                        ref="#2340">Comte d’Orloff</persName> m’a ordonné de Vous assurer qu’une lettre de Votre <lb/>part ne sauroit que faire
-                    plaisir à <rs ref="#p0081">S.M.I.</rs> il vient de lui communiquer celle que <lb/>Vous lui avez adressé, dont on a été très
-                    satisfaite, et <rs ref="#p0081">S.M.</rs> disoit, <persName ref="p2285">Mr Formey</persName> me <lb/>fera grand plaisir en
-                    m’ecrivant. Le <rs ref="#2340">Comte</rs> Vous prie de l’excuser, qu’il ne Vous a <lb/>pas encore répondû, il a trop peu de momens
-                    de reste : <orgName ref="#g0123">l’Academie Imperiale</orgName> après <lb/>avoir été instruit du caractère de <rs ref="#p2360">Mr.
+                        break="no"/>tant dans <orgName ref="#g0120">l’Academie de Berlin</orgName>. Voilà tout ce <subst>
+                        <del rend="strikethrough">que</del>
+                        <add place="above">dont</add>
+                    </subst> la Conference d<del rend="strikethrough">e</del>’hier m’a chargé <lb/>de Vous ecrire. Le <persName ref="#2340">Comte
+                        d’Orloff</persName> m’a ordonné de Vous assurer qu’une lettre de Votre <lb/>part ne sauroit que faire plaisir à <rs
+                        ref="#p0081">S.M.I.</rs> il vient de lui communiquer celle que <lb/>Vous lui avez adressé, dont on a été très satisfaite, et
+                        <rs ref="#p0081">S.M.</rs> disoit, <persName ref="p2285">Mr Formey</persName> me <lb/>fera grand plaisir en m’ecrivant. Le <rs
+                        ref="#2340">Comte</rs> Vous prie de l’excuser, qu’il ne Vous a <lb/>pas encore répondû, il a trop peu de momens de reste :
+                        <orgName ref="#g0123">l’Academie Imperiale</orgName> après <lb/>avoir été instruit du caractère de <rs ref="#p2360">Mr.
                         Lxxx</rs> sera maintenant bien charmée, s’il refuse : <lb/>qu’il ne rumine pas trop long tems, s’il a envie de venir.
                         <persName ref="#p2334">S.E.L. de Munnich</persName> a recû <lb/>le livre que Vous avez expedié, mais un peu tard ; c’est sans
                     doute par la négligeance <lb/>des Maitres de Postes. Nous serons bien charmé de recevoir le Volume de <orgName ref="#g0120"
@@ -223,12 +242,17 @@
                 <p>trouver dans le voisinage quelques personnes qui à cet égard pensent comme nous. Jusqu’ici <lb/>je n’ai frequenté que la Cour et
                     les grands Seigneurs, c’est la manière de vivre ici, et même les <lb/>academiciens ne se voient guères que dans ces endroits
                     tiers. Je n’ai pas encore eu occasion <lb/>de voir le <persName ref="#p2369">comte de Bruce</persName>. Vos lettres données au
-                    Chantre <persName ref="#p2367">Poulet</persName> et au Bijoutier <persName ref="#p2368">Marre</persName> nous <lb/><del
-                        rend="strikethrough">sommes</del>
-                    <add place="above">sont</add> bien parvenûes : je suis surpris moi-même de ce que je ne Vous l’ai pas encore mandé. <lb/>Le
-                    premier sera actuellement de rétour à Berlin, mais je n’ai point voulû lui donner des <lb/>lettres, de peur <del
-                        rend="strikethrough">qu’elles ne</del>
-                    <add place="above">de</add> lui cause<del rend="overwritten">nt</del><add place="across">r</add>
+                    Chantre <persName ref="#p2367">Poulet</persName> et au Bijoutier <persName ref="#p2368">Marre</persName> nous <lb/><subst>
+                        <del rend="strikethrough">sommes</del>
+                        <add place="above">sont</add>
+                    </subst> bien parvenûes : je suis surpris moi-même de ce que je ne Vous l’ai pas encore mandé. <lb/>Le premier sera actuellement
+                    de rétour à Berlin, mais je n’ai point voulû lui donner des <lb/>lettres, de peur <subst>
+                        <del rend="strikethrough">qu’elles ne</del>
+                        <add place="above">de</add>
+                    </subst> lui cause<subst>
+                        <del rend="overwritten">nt</del>
+                        <add place="across">r</add>
+                    </subst>
                     <del rend="strikethrough">pas</del> de chagrin : il paroit être un très honnet homme, <lb/>dont le plus grand defaut consiste à ne
                     pouvoir pas chanter. Je viens à mon journal.</p>
                 <p>Vous aurez appris de <rs ref="#p2456">mon beau père</rs>, monsieur et très honoré oncle ! que j’ai été présenté à <rs ref="#p0081"
@@ -247,32 +271,37 @@
                     commenta ses fonctions : le 4. Je dinai chez <rs ref="#p2340">nôtre chef</rs>. le 5 <lb/>j’eus la visite de ce <persName
                         ref="#p2353">Mr de Millen</persName>, dont Vous Vous resouviendrez peut être : il avoit logé <lb/>dans Vôtre maison et
                     fréquenté Vos leçons de Philosophie : c’est ce vaut-rien qui après avoir <lb/>dépensé une somme considerable fût subitement
-                    rapellé de son père qui alors étoit Chirurgien <lb/>ici :<del rend="strikethrough">il est et</del>
-                    <add place="above">(le fils)</add>
-                    <del rend="overwritten">ce</del><add place="across">il</add> est actuellement Prof. en Anatomie à l’Hopital <del
-                        rend="strikethrough">et <rs>sa femme</rs> a gagné les bonnes graces <lb/>du Chef de son mari</del>. Le même jour je fûs à un
-                    enterrement, j’entendis à cette occasion prononcer <lb/>un très beau discours et je remportai outre cela des gans blancs et un
-                    citron. Le 7 je <lb/>fûs reçû membre de la Societé oeconomique, dont mon <rs ref="#2456">beau père</rs> Vous fera une ample
-                    <lb/>description. Le 9. J’etois bien surpris de lire dans la Gazette de <persName ref="#p0071">Francheville</persName> que nous
-                    avons <lb/>ici eu la Peste ; qui est ce qui lui aura pû donner cette fausse nouvelle ; jamais l’<lb/>automne a été plus belle, et
-                    jamais l’année plus saine que cette fois-cy. Le 11. la Commission <lb/>dina encore chez le <rs ref="#p2340">Chef</rs> : le 12 je
-                    fus à l'eglise entendre prononcer un <del rend="strikethrough">discours</del> sermon françois par <persName ref="#p2348">Mr.
-                        Dilthei</persName>. Le 16 fût mon jour de naissance, que <rs ref="#p2328">ma femme</rs> celebra avec <lb/>beaucoup d’eclat, et
-                    dont elle ne m’avoit point prevenû ; c’etoit une agréable surprise. Le 19 <lb/>je dinai chez le <persName ref="#p2334">Feldmarchal
-                        Münnich</persName>, et je fûs à la cour ; j’ai omis toutes les visites, <lb/>comme très peu importantes. Je finis Monsieur mon
-                    très cher et très honoré Oncle ! <lb/>en Vous demandant mille pardon de plusieures bagatelles dont cette lettre est remplie.
-                    <lb/>je suis obligé de sortir tous les matins depuis 9 heures jusqu’à un heure après midi, de sorte <lb/>qu’il me reste peu de
-                    tems pour étudier. <rs ref="#p0037">Mon père</rs>, <rs>ma mère</rs> et toute notre famille <lb/>Vous font présenter leurs
-                    civilités, <del rend="strikethrough">et à</del> de même à <rs>Madame Votre Epouse</rs> et toute <lb/>vôtre aimable famille ; <rs
-                        ref="#p2328">ma femme</rs>, cette chère femme, Vous prie d’agréer ses <lb/>respects, et de Vous charger de présenter les
-                    nôtres à Madame <rs>Votre épouse</rs> ; nos civilités <lb/>et amitiés à Mesdem. Vos filles, nous embrassons le petit
-                        <persName>Fritze</persName> et <persName>Lude</persName> ; <persName ref="#p2376">Albertine</persName> salue <lb/>en
-                    particulier le dernier et lui fait dire qu’elle a déjà deux dent, elle fera quelque <lb/>jour une bonne russienne. Tous se portent
-                    bien ; et nos amis, amies, connoissances <lb/>trouvent ici les assurences qui leur sont duês de nôtre part. je suis avec un
-                    profond respect </p>
-                <closer><p><salute rend="align (left)">Monsieur et très honoré Oncle</salute></p>
-                    <p><salute rend="align (right)">Votre très humble et très obeissant Servi. <lb rend="align (centre)"/>Et
-                            neveu</salute><lb/><signature>J. Albert Euler</signature></p></closer>
+                    rapellé de son père qui alors étoit Chirurgien <lb/>ici :<subst>
+                        <del rend="strikethrough">il est et</del>
+                        <add place="above">(le fils)</add>
+                    </subst>
+                    <subst>
+                        <del rend="overwritten">ce</del>
+                        <add place="across">il</add>
+                    </subst> est actuellement Prof. en Anatomie à l’Hopital <del rend="strikethrough">et <rs>sa femme</rs> a gagné les bonnes graces
+                        <lb/>du Chef de son mari</del>. Le même jour je fûs à un enterrement, j’entendis à cette occasion prononcer <lb/>un très beau
+                    discours et je remportai outre cela des gans blancs et un citron. Le 7 je <lb/>fûs reçû membre de la Societé oeconomique, dont mon
+                        <rs ref="#2456">beau père</rs> Vous fera une ample <lb/>description. Le 9. J’etois bien surpris de lire dans la Gazette de
+                        <persName ref="#p0071">Francheville</persName> que nous avons <lb/>ici eu la Peste ; qui est ce qui lui aura pû donner cette
+                    fausse nouvelle ; jamais l’<lb/>automne a été plus belle, et jamais l’année plus saine que cette fois-cy. Le 11. la Commission
+                    <lb/>dina encore chez le <rs ref="#p2340">Chef</rs> : le 12 je fus à l'eglise entendre prononcer un <del rend="strikethrough"
+                        >discours</del> sermon<lb/> françois par <persName ref="#p2348">Mr. Dilthei</persName>. Le 16 fût mon jour de naissance, que
+                        <rs ref="#p2328">ma femme</rs> celebra avec <lb/>beaucoup d’eclat, et dont elle ne m’avoit point prevenû ; c’etoit une
+                    agréable surprise. Le 19 <lb/>je dinai chez le <persName ref="#p2334">Feldmarchal Münnich</persName>, et je fûs à la cour ; j’ai
+                    omis toutes les visites, <lb/>comme très peu importantes. Je finis Monsieur mon très cher et très honoré Oncle ! <lb/>en Vous
+                    demandant mille pardon de plusieures bagatelles dont cette lettre est remplie. <lb/>je suis obligé de sortir tous les matins
+                    depuis 9 heures jusqu’à un heure après midi, de sorte <lb/>qu’il me reste peu de tems pour étudier. <rs ref="#p0037">Mon
+                    père</rs>, <rs>ma mère</rs> et toute notre famille <lb/>Vous font présenter leurs civilités, <del rend="strikethrough">et à</del>
+                    de même à <rs>Madame Votre Epouse</rs> et toute <lb/>vôtre aimable famille ; <rs ref="#p2328">ma femme</rs>, cette chère femme,
+                    Vous prie d’agréer ses <lb/>respects, et de Vous charger de présenter les nôtres à Madame <rs>Votre épouse</rs> ; nos civilités
+                    <lb/>et amitiés à Mesdem. Vos filles, nous embrassons le petit <persName>Fritze</persName> et <persName>Lude</persName> ;
+                        <persName ref="#p2376">Albertine</persName> salue <lb/>en particulier le dernier et lui fait dire qu’elle a déjà deux dent,
+                    elle fera quelque <lb/>jour une bonne russienne. Tous se portent bien ; et nos amis, amies, connoissances <lb/>trouvent ici les
+                    assurences qui leur sont duês de nôtre part. je suis avec un profond respect </p>
+                <closer><salute rend="align(left)">Monsieur et très honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et très obeissant Servi.</salute>
+                    <salute rend="align(center)">Et neveu</salute>
+                    <signed rend="align(right)">J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

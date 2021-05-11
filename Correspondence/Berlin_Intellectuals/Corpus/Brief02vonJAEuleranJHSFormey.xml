@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -70,7 +77,10 @@
                                 <!--  <support><material>Art des Papiers, Qualität
                                     usw.</material></support> -->
                                 <extent>
-                                    <measure type="leaf">2 Blätter</measure>
+                                    <measure type="leaf">
+                                        <measure xml:lang="de">2 Blätter</measure>
+                                        <measure xml:lang="en">2 folios</measure>
+                                        <measure xml:lang="fr">2 feuillets</measure></measure>
                                     <!--  <dimensions unit="cm">
                                     <height>die Höhe</height>
                                         <width>die Breite</width>
@@ -152,7 +162,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -169,8 +179,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-22" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-11" who="#emmanuelle.chaze">Edited body and lb.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited body and lb.</change>
@@ -187,10 +198,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000003.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">4</note>
-                <opener rend="align(right)"><placeName ref="#l0020">Petersburg</placeName> ce <date>15 Aout 1766</date>.</opener>
-                <lb/>
-                <opener><salute rend="align(left)">Monsieur mon très chèr et très honoré Oncle!</salute><lb/></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">4</note>
+                <opener><dateline rend="align(right)"><placeName ref="#l0020">Petersburg</placeName> ce <date when-iso="1766-08-15">15 Aout 1766</date>.</dateline>
+                    <salute rend="align(left)">Monsieur mon très chèr et très honoré Oncle!</salute></opener>
                 <p>Entre toutes les lettres que nous reçevons de <placeName ref="l1103">Berlin</placeName>,<lb/> les Vôtres sont du nombre de celles
                     qui nous font <lb/>le plus de plaisir ; ce sont autant de marques <lb/>de Votre amitié pour nous ; d’une amitié qui nous <lb/>est
                     trop chère pour négliger la moindre occasion <lb/>de Vous en témoigner la plus vive réconnoissance.</p>
@@ -210,39 +220,52 @@
                     <lb/><unclear cert="high" reason="illegible">à</unclear>vos filles et toute Votre famille : item aux Mrs <lb/><persName
                         ref="p2451">Degas</persName> ; <persName ref="p2452">Handreich</persName> etc enfin à tous ceux qui se <lb/>souviennent de
                     moi.</p>
-                <closer><salute>Je suis très parfaitement V.T.H.S.</salute></closer>
-                <lb/>
-                <closer><signed>J. Albert Euler</signed></closer>
-                <del rend="strikethrough">
-                    <add place="margin">
-                        <rs ref="p2328">Ma femme</rs> vouloit vous écrire, Monsieur et très chèr Oncle ! mais quelques occupations étant
-                        survenûes</add></del>
-                <pb facs="00000004.jpg" n="2"/>
-                <!--[écriture de Mme Euler]-->
-                <handShift new="#p2328"/>
-                <salute rend="align(centre)">Monsieur mon très cher et cher et très honoré <lb/>Oncle</salute>
-                <p>Continués je vous en suplie de nous donner <lb/>de tems en tems de vos nouvelles, ce serons <lb/>toujours autant de marque de votre
-                    amitié. <lb/>Je suis persuadé mon très cher Oncle que vous <lb/>en me refuserai point cette satisfaction <lb/>si vous pouviés être
-                    present et voir la <lb/>joie qu’elles me causent, je ne pense jamais <lb/>à vous et à tout ce que jai laissé à <placeName
-                        ref="l1103">Berlin</placeName><lb/>sans me sentir extremément attendris, et <lb/>quoique notre situation me paroisse
-                    <lb/>asses avantageuse je la troquerai volon<lb break="no" type="none"/>tier pour celle <del rend="overwritten">dans</del>
-                    <add>que</add> j’avois à <placeName ref="l1103">Berlin</placeName>.</p>
-                <p>Toutes les nouvelles que vous aves eu la <lb/>bonté de nous marqué mon très cher Oncle <lb/>m’ont extremement touchée je prens
-                    surement <lb/>part à l’afflication de chacun en parti<lb break="no" type="none"/>culier, je n’ai pû m’empecher de plurer <lb/>la
-                    mort du jeune <persName ref="#p2383">Beguelin</persName>, sachant <pb facs="00000005.jpg" n="3"/> par experiance la douleur que
-                    cause la <lb/>mort d’un enfant cheri. Que fait <rs>Madame <lb/>votre Epouse</rs> et votre chere famille <lb/>elle se portent bien
-                    du moin je le souhaite <lb/>elle voudrons bien recevoir les assurances de <lb/>mes civilites. Je ne puis comprendre pour <lb/>quoi
-                    je n’ai point des nouvelles de mon <lb/>Père la Bancroute de <persName ref="#p2455">Gotskovsky</persName> en <lb/>seroit-elle la
-                    cause, je crois qu’il y avoit <lb/>de l’argent, vous voudrés bien mon très cher <lb/>Oncle faire mille compliment à toutes
-                    <lb/>mes connoissance. Je fais pour toujours <lb/>avec un attachemant très respectueux</p>
-                <closer><salute rend="align(right)">Monsieur mon très cher et très honnoré Oncle <lb/>Votre tres heumble et tres obeissante Niesse et
-                        Servante</salute>
-                    <signed ref="#p2328" rend="align (right)"> Euler</signed></closer>
-                <p>Nous sommes à la veille de célébrer les <lb/>Noces de ma Belle sœur leurs anonce conteront <lb/>pour la derniere fois</p>
+                <closer><salute>Je suis très parfaitement V.T.H.S.</salute>
+                    <signed>J. Albert Euler</signed></closer>
+                <postscript>
+                    <p rend="margin"><del rend="strikethrough">
+                            <rs ref="p2328">Ma femme</rs> vouloit vous écrire, Monsieur et très chèr Oncle ! mais quelques occupations étant
+                            survenûes</del>
+                        <pb facs="00000004.jpg" n="2"/>
+                        <!--[écriture de Mme Euler]-->
+                        <handShift new="#p2328"/>
+                        <floatingText>
+                            <body>
+                                <div>
+                                    <opener><salute rend="align(center)">Monsieur mon très cher et cher et très honoré <lb/>Oncle</salute></opener>
+                                    <p>Continués je vous en suplie de nous donner <lb/>de tems en tems de vos nouvelles, ce serons <lb/>toujours
+                                        autant de marque de votre amitié. <lb/>Je suis persuadé mon très cher Oncle que vous <lb/>en me refuserai
+                                        point cette satisfaction <lb/>si vous pouviés être present et voir la <lb/>joie qu’elles me causent, je ne
+                                        pense jamais <lb/>à vous et à tout ce que jai laissé à <placeName ref="l1103">Berlin</placeName><lb/>sans me
+                                        sentir extremément attendris, et <lb/>quoique notre situation me paroisse <lb/>asses avantageuse je la
+                                        troquerai volon<lb break="no" type="none"/>tier pour celle <del rend="overwritten">dans</del>
+                                        <add>que</add> j’avois à <placeName ref="l1103">Berlin</placeName>.</p>
+                                    <p>Toutes les nouvelles que vous aves eu la <lb/>bonté de nous marqué mon très cher Oncle <lb/>m’ont extremement
+                                        touchée je prens surement <lb/>part à l’afflication de chacun en parti<lb break="no" type="none"/>culier, je
+                                        n’ai pû m’empecher de plurer <lb/>la mort du jeune <persName ref="#p2383">Beguelin</persName>, sachant <pb
+                                            facs="00000005.jpg" n="3"/> par experiance la douleur que cause la <lb/>mort d’un enfant cheri. Que fait
+                                            <rs>Madame <lb/>votre Epouse</rs> et votre chere famille <lb/>elle se portent bien du moin je le souhaite
+                                        <lb/>elle voudrons bien recevoir les assurances de <lb/>mes civilites. Je ne puis comprendre pour <lb/>quoi je
+                                        n’ai point des nouvelles de mon <lb/>Père la Bancroute de <persName ref="#p2455">Gotskovsky</persName> en
+                                        <lb/>seroit-elle la cause, je crois qu’il y avoit <lb/>de l’argent, vous voudrés bien mon très cher <lb/>Oncle
+                                        faire mille compliment à toutes <lb/>mes connoissance. Je fais pour toujours <lb/>avec un attachemant très
+                                        respectueux</p>
+                                    <closer><salute rend="align(right)">Monsieur mon très cher et très honnoré Oncle <lb/>Votre tres heumble et tres
+                                            obeissante Niesse et Servante</salute>
+                                        <signed rend="align(right)">
+                                            <persName ref="#p2328">Euler</persName></signed></closer>
+                                    <postscript>
+                                        <p>Nous sommes à la veille de célébrer les <lb/>Noces de ma Belle sœur leurs anonce conteront <lb/>pour la
+                                            derniere fois</p>
+                                    </postscript>
+                                </div>
+                            </body>
+                        </floatingText></p>
+                </postscript>
                 <pb facs="00000006.jpg" n="4"/>
                 <!--  [écriture de JA Euler]-->
-                <handShift new="#major_hand"/>
-                <p><address>
+                <closer><handShift new="#major_hand"/>
+                    <address>
                         <addrLine>A Monsieur</addrLine>
                         <addrLine><persName ref="p2285">Monsieur Formey</persName> Min. du St. Ev.</addrLine>
                         <addrLine>Professeur en Philosophie, Secretaire</addrLine>
@@ -250,11 +273,15 @@
                         <addrLine>et Membre de plusieurs autres</addrLine>
                         <addrLine>Academies à </addrLine>
                         <addrLine><placeName ref="l1103">Berlin</placeName></addrLine>
-                    </address> P.S. <persName ref="#p2453">Mr de Delen</persName> aura l’honneur de Vous ecrire Vendredy <lb/>prochain pour Vous
-                    communiquer, Mon très chèr <lb/>Oncle ! Son mariage avec <rs>ma sœur cadette</rs>. <lb/>Il compte de rester ici encore un an et de
-                    retourner <lb/>ensuite en <placeName ref="#l0023">Hollande</placeName> pour soigner lui-même ses <lb/>terres : <rs ref="#p0037"
-                        >Mon père</rs>, <rs ref="#2406">ma mère</rs> et toute la famille <lb/>Vous font faire mille complimens. Nous n’avons <lb/>pas
-                    encore rencontré le <persName ref="#p2369">compte de Bruce</persName>. <lb/>On imprime actuellement le Calout integrale.</p>
+                    </address></closer>
+                <postscript>
+                    <label rend="indent">P.S. </label>
+                    <p><persName ref="#p2453">Mr de Delen</persName> aura l’honneur de Vous ecrire Vendredy <lb/>prochain pour Vous communiquer, Mon
+                        très chèr <lb/>Oncle ! Son mariage avec <rs>ma sœur cadette</rs>. <lb/>Il compte de rester ici encore un an et de retourner
+                        <lb/>ensuite en <placeName ref="#l0023">Hollande</placeName> pour soigner lui-même ses <lb/>terres : <rs ref="#p0037">Mon
+                            père</rs>, <rs ref="#2406">ma mère</rs> et toute la famille <lb/>Vous font faire mille complimens. Nous n’avons <lb/>pas
+                        encore rencontré le <persName ref="#p2369">compte de Bruce</persName>. <lb/>On imprime actuellement le Calout integrale.</p>
+                </postscript>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers (NL 235)</collection>
@@ -163,8 +170,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-21" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
@@ -177,15 +185,15 @@
         <body>
             <div type="transcription">
                 <pb facs="00000001.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">1</note>
-                <opener rend="align(left)">
-                    <salute>Monsieur <lb/>Mon très chèr et très honoré Oncle!</salute></opener>
-                <p> Oserai-je bien Vous demander la grace de me mander <lb/>le nom de batème de feu <rs>ma belle mère</rs> avec la date <lb/>de sa
+                <note hand="#pencil" place="margin(right)" type="foliation">1</note>
+                <opener>
+                    <salute rend="align(left)">Monsieur <lb/>Mon très chèr et très honoré Oncle!</salute></opener>
+                <p>Oserai-je bien Vous demander la grace de me mander <lb/>le nom de batème de feu <rs>ma belle mère</rs> avec la date <lb/>de sa
                     naissance, de son mariage et de sa mort.</p>
-                <p><persName ref="#p???">Mr Lelong</persName> de <placeName ref="#l0080">Francfourth</placeName> mon oncle du coté de <rs rs="#p2406"
+                <p><persName ref="#p???">Mr Lelong</persName> de <placeName ref="#l0080">Francfourth</placeName> mon oncle du coté de <rs ref="#p2406"
                         >ma mère</rs>
                     <lb/>me tourmente et me presse pour que je lui en donne toute <lb/>les eclaircissemens possibles : il se tient un gros Journal de
-                    tous ce qui se passe dans la famille.</p>
+                    tous<lb/> ce qui se passe dans la famille.</p>
                 <p>Je Vous demande mille pardon, mon chèr Oncle, de cette <lb/>incommodité [le m est doublé] ; <rs ref="#p2456">mon beau-père</rs>
                     n’est pas encore de retour et <lb/>d’ailleurs <rs ref="#p2328">ma femme</rs> m’assure que Vous savez le mieux donner <lb/>des
                     ecclaircissemens [sic] de tout ce qui regarde la famille.</p>
@@ -196,12 +204,12 @@
                 <closer><salute rend="align (left)">Monsieur <lb/>Mon très chèr et très honoré Oncle !</salute>
                     <salute rend="align (right)">Votre très humble et <lb/>très Obeissant Serviteur <lb/>Et Neveu</salute>
                     <signed>JA Euler</signed>
-                    <p rend="align(left)">Ce <dateline>5 de Decembre 1761</dateline></p></closer>
-                <pb facs="00000002.jpg" n="2"/>
-                <p><address>
+                    <dateline rend="align(left)">Ce <date when-iso="1761-12-05">5 de Decembre<lb/> 1761</date></dateline>
+                    <pb facs="00000002.jpg" n="2"/>
+                    <address>
                         <addrLine>A Monsieur <persName ref="#p2285"><lb/>Monsieur le Professeur <lb/>Formey ec <rs ref="#l1103"><lb/>chez
                                     <lb/>Lui</rs></persName></addrLine>
-                    </address></p>
+                    </address></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -146,7 +153,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -163,8 +170,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-22" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited lb and body.</change>
@@ -181,8 +189,9 @@
             <div type="transcription">
                 <pb facs="00000013.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">9</note>
-                <opener rend="align (right)">A <placeName>St. Petersbourg</placeName> ce <date>7 Fevrier 1767</date><lb/>
-                    <salute rend="align (left)">Monsieur mon très-chèr et très honoré Oncle!</salute></opener>
+                <opener><dateline rend="align(right)">A <placeName>St. Petersbourg</placeName> ce <date when-iso="1767-02-07">7 Fevrier
+                        1767</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très honoré Oncle!</salute></opener>
                 <p>Ce n’est que pour la seconde fois de cette année que j’ai l’honneur de Vous ecrire <lb/>Monsieur et très-honoré Oncle : je m’etois
                     proposé d’attendre auparevant Votre <lb/>reponse sur la lettre que je Vous ai ecrit du Comptoir de <persName ref="#p2365"
                         >Poggenpohl</persName> en <lb/>Vous envoyant Votre pension avec les 200 Ducats russes pour la Demoiselle <lb/><persName
@@ -207,12 +216,17 @@
                         <placeName ref="#l1103">Berlin</placeName>. <lb/>L’une s’assemble les dimanches tantôt chéz moi, tantôt chéz <rs ref="#p2330"
                         >mon frère</rs>
                     <lb/>le Docteur ; on y vient vers 4 heures après diner, on y joue après avoir <lb/>pris le Caffé et on finit par souper :
-                    jusqu’ici il-n’y-a que <del rend="overwritten">d</del><add place="across">l</add>es <lb/>personnes de notre maison qui en sont.
-                    L’autre Societé se tient <lb/>tous les jeudi, elle ressemble à la première, excepté que nous y avons <lb/>admis <del
-                        rend="overwritten">un</del><add place="across">le</add>
+                    jusqu’ici il-n’y-a que <subst>
+                        <del rend="overwritten">d</del>
+                        <add place="across">l</add>
+                    </subst>es <lb/>personnes de notre maison qui en sont. L’autre Societé se tient <lb/>tous les jeudi, elle ressemble à la première,
+                    excepté que nous y avons <lb/>admis <subst>
+                        <del rend="overwritten">un</del>
+                        <add place="across">le</add>
+                    </subst>
                     <persName ref="#p2361">Professeur Fischer</persName> avec sa famille, notre voisin : au reste si <lb/>d’autres Gartes <add
                         rend="above">y</add> viennent, ils sont toujours très bien reçûs.</p>
-                <p rend="align(centre)"><date><hi rend="underlined">ce 9 Fevrier</hi></date>.</p>
+                <p rend="align(center)"><hi rend="underlined">ce <date when-iso="1767-02-09">9 Fevrier</date></hi>.</p>
                 <p>Je viens de recevoir Votre quittance sur les 200 Ducats par <persName ref="#p2365">Mr Poggenpohl</persName>, et <lb/>je vai la
                     remêttre au <persName ref="#p2340">Comte Wolodimer Orloff</persName> qui demain sera de retour <lb/>de <placeName>Sarrko
                         selo</placeName>, où il a été jusqu’au Depart de <rs ref="#p0081">S.M.I</rs> pour <placeName ref="#l0439">Moskovie</placeName>
@@ -227,8 +241,10 @@
                     le <persName ref="#p2337">Conseiller <lb/>Lehmann</persName> étoit à l’agonie et me fit prier de le venir voir : le froid étoit à
                     <lb/>30 dégrés au dessous du point de congelation : je m’enveloppai dans des pelisses <lb/>et y allais en carosse fermée.
                         <persName ref="#p2337">Mr Lehmann</persName> me recommanda ses enfans et me <lb/>chargeas de regler ses affaires auprès de
-                    l’Academie : il mourût vers 6 <lb rend="align (right)"/>heures <pb facs="00000015.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">10</note> heures du matin : <orgName ref="#g0123">l’Academie</orgName>
+                    l’Academie : il mourût vers 6 <lb/>
+                    <hi rend="align(right)">heures</hi>
+                    <pb facs="00000015.jpg" n="3"/>
+                    <note hand="#pencil" place="margin(right)" type="foliation">10</note> heures du matin : <orgName ref="#g0123">l’Academie</orgName>
                     a d’abord fait payer 1000 Rubles à <rs>la veuve</rs> et <lb/>100 Roubles pour l’enterrement : la veuve aura de la caisse de <rs
                         ref="#p0081">S.M.</rs> une <lb/>rente viagère, <orgName ref="#g0123">l’Academie</orgName> aura soin du fils et <rs>mon
                         frère</rs> s’est chargé de <lb/>la fille ainée, en la prennant chez lui. Le 16 je fûs à l’enterrement du <lb/>defûnt. Le 18
@@ -241,25 +257,31 @@
                         <placeName ref="#l0563">Carlsbad</placeName> ; il compte aussi d’aller <lb/>à <placeName ref="#l1103">Berlin</placeName> et à
                         <placeName ref="l0091">Potsdamm</placeName> où surtout il prétend être très bien connû. Dans la <lb/>même seance <persName
                         ref="#p2347">Mr Rumowksy</persName> fût créé Professeur ordinaire pour l’Astronomie, <lb/>et deux autres savans russes, dont
-                    je ne puis encore retenir les noms, <del rend="strikethrough">pour</del>
-                    <add place="above">fûrent elû</add>
+                    je ne puis encore retenir les noms, <subst>
+                        <del rend="strikethrough">pour</del>
+                        <add place="above">fûrent elû</add>
+                    </subst>
                     <lb/>Membres Censeurs des livres russes. Le 29 fût le jour de l’arrivée de <lb/><rs>mon frère</rs> avec <persName ref="#p2390">Mr.
                         Winterstädt</persName>.</p>
-                <p rend="align(centre)"><date><hi rend="underlined">Ce 12 Fevrier</hi>
-                    </date></p>
+                <p rend="align(centre)"><hi rend="underlined">Ce <date when-iso="1767-02-12">12 Fevrier</date></hi>
+                </p>
                 <p>Je reviens pour la troisième fois : j’ai reçû Monsieur et très honoré Oncle ! <lb/>(par mon frère) Votre lettre et les papiers que
                     Vous avez bien voulû <lb/>m’envoyer pour <orgName ref="#g0123">l’Academie</orgName> : mais comme l’Academie les possède dejà, je
                     <lb/>les ai gardées pour moi en attendant Vos ordres ulterieures la dessus. Quant <lb/>aux <title>Gazettes litteraires</title> de
-                        <placeName ref="#l1103">Berlin</placeName>, l’Academie les reçoit <del rend="strikethrough">par</del>
-                    <add place="above">en</add> feuilles par la <lb/>poste, et j’ai l’occasion de les parcourir dès qu’elles sont arrivées. <lb/>Je
-                    vous prierai donc Monsieur et très honoré Oncle ! de vouloir bien à l’avenir <lb/><del rend="strikethrough">acheter</del>
-                    <add place="above">tenir</add> cette <rs>Gazette</rs> pour moi et me les envoyer <add place="above">toutes ensemble</add> par eau
-                    en Vous adressant <lb/>au <persName ref="#p0389">libraire Nicolai</persName>. <rs ref="#2456">Mon beau père</rs> ou <persName
-                        ref="#p2378">Mr Labaume</persName> Vous remboursera <lb/>l’argent : Si Vous jugez à propos que je garde les Gazettes reçûes,
-                    Vous ne <lb/>m’enverrez que depuis le commencement N°1 jusqu’au N°CIV et ensuite depuis N°CLI <lb/>jusqu’à celle qui est la plus
-                    nouvelle, lorsque Vous ferez l’envoi. <persName ref="#p0071">Mr de <lb/>Francheville</persName> avoit promis à <rs ref="#p2330"
-                        >mon frère</rs> le medecin de lui envoyer aussi un Exemplaire <lb/>de ses Gazettes : s’il s’en resouvient, il pourra se servir
-                    du même canal du <pb facs="00000016.jpg" n="4"/><persName ref="#p0389">Libraire Nicolaï</persName>. <persName ref="#p0071">Mr de
+                        <placeName ref="#l1103">Berlin</placeName>, l’Academie les reçoit <subst>
+                        <del rend="strikethrough">par</del>
+                        <add place="above">en</add>
+                    </subst> feuilles par la <lb/>poste, et j’ai l’occasion de les parcourir dès qu’elles sont arrivées. <lb/>Je vous prierai donc
+                    Monsieur et très honoré Oncle ! de vouloir bien à l’avenir <lb/><subst>
+                        <del rend="strikethrough">acheter</del>
+                        <add place="above">tenir</add>
+                    </subst> cette <rs>Gazette</rs> pour moi et me les envoyer <add place="above">toutes ensemble</add> par eau en Vous adressant
+                    <lb/>au <persName ref="#p0389">libraire Nicolai</persName>. <rs ref="#2456">Mon beau père</rs> ou <persName ref="#p2378">Mr
+                        Labaume</persName> Vous remboursera <lb/>l’argent : Si Vous jugez à propos que je garde les Gazettes reçûes, Vous ne
+                    <lb/>m’enverrez que depuis le commencement N°1 jusqu’au N°CIV et ensuite depuis N°CLI <lb/>jusqu’à celle qui est la plus nouvelle,
+                    lorsque Vous ferez l’envoi. <persName ref="#p0071">Mr de <lb/>Francheville</persName> avoit promis à <rs ref="#p2330">mon
+                        frère</rs> le medecin de lui envoyer aussi un Exemplaire <lb/>de ses Gazettes : s’il s’en resouvient, il pourra se servir du
+                    même canal du <pb facs="00000016.jpg" n="4"/><persName ref="#p0389">Libraire Nicolaï</persName>. <persName ref="#p0071">Mr de
                         Francheville</persName> a-t’il obtenû sa demission pour aller <lb/>à <placeName ref="l0221">Varsovie</placeName> ? j’etois
                     très charmé d’apprendre qu’on lui a effectivement envoyé <lb/>une vocation ; car je m’etois très vivement interessé pour lui
                     pendant notre <lb/>sejour à <placeName ref="#l0221">Varsovie</placeName>, pour la lui procurer : je reprens mon journal et je vais
@@ -272,8 +294,10 @@
                         >furent</del> de tout le Palais <lb/>furent chaudes. Une preuve bien convainqu’ante que les murailles doivent <lb/>être très
                     seches est la grande facilité avec laquelle on y peut produire <lb/>une electricité surprenante : on n’a qu’à attacher à<del
                         rend="strikethrough">u</del> la tapizerie un <lb/>fil d’argent et le frotter seulement deux à trois fois avec un manchon
-                    <lb/>pour le faire rendre des étincelles. Le <persName ref="p2340">Comte <del rend="overwritten">w</del><add place="across"
-                            >O</add>rlof</persName> lui-même est <lb/>susceptible d’une très forte electricité ; je vai Vous raconter Monsieur et
+                    <lb/>pour le faire rendre des étincelles. Le <persName ref="p2340">Comte <subst>
+                            <del rend="overwritten">w</del>
+                            <add place="across">O</add>
+                        </subst>rlof</persName> lui-même est <lb/>susceptible d’une très forte electricité ; je vai Vous raconter Monsieur et
                     <lb/>très honoré Oncle, <del rend="strikethrough">quel</del> une anecdote tres surprenante de ce Seigneur. <lb/>Il-y-avoit <del
                         rend="strikethrough">au tems</del> quelques mois, que toutes les fois que ce Seigneur <lb/>s’assoieoit sur une chaise isolée,
                         <del rend="strikethrough">que</del> tout son corps devint electrique, ses <lb/>cheveux se dresserent d’eux-mêmes, et il
@@ -283,29 +307,32 @@
                     Cette electri<lb break="no"/>cité se manifestà surtout le matin. Quoique tout ce-cy est très vrai, <lb/>je ne voudrois pas
                     cependant que <persName ref="#p0071">Mr de Francheville</persName>
                     <del rend="strikethrough">ou quelque autre</del>
-                    <lb/>en parla dans <del rend="overwritten">s</del><add place="across">l</add>a Gazette – a propos, <persName ref="#p0071">Mr de
-                        Francheville</persName> dit dans une de <lb/>ses feuïlles que le <persName ref="#p2362">Prof. Braun</persName> est mort ;
-                    c’est une nouvelle très fausse <lb/>car je puis attester qu’il vit encore à cette heure ; desorte que probablement <lb/>il <del
-                        rend="strikethrough">ait aussi</del> vivoit aussi avant un mois. <rs ref="#p0037"/><rs ref="#p0037">Mon père</rs> fit
-                    dernierement à croire <lb/>à ce Professeur que <rs ref="#p0081">S.M.</rs> avoit ordonné que tous les accademiciens parussent à la
-                        <pb facs="00000017.jpg" n="5"/><note hand="#pencil" place="margin-right" type="foliation">11</note>à la masquerade, mais
-                    qu’Elle en avoit nommement exclû les <persName ref="#p2361">Professeurs <lb/>Fischer</persName>, <persName ref="#p2362"
-                        >Braun</persName>, et lui puisqu’on Lui avoit rapporté que ces trois étoient <lb/>des Invalides : <persName ref="#p2362">Mr
-                        Braun</persName> se fachâ beaucoup, toute <orgName ref="#g0123">l’Academie</orgName> en rit <lb/>et <persName ref="#p2362">Mr
-                        Braun</persName>, pour montrer à toute la cour qu’il n’étoit rien moins qu’un <lb/>invalide, prit un billet de masquerade ;
-                    heureusement le froid augmenta, <lb/>ensorte qu’il étoit malgré lui obligé de rester auprès des Thermometres. <lb/>Le Secretaire
-                        <persName ref="#p2333">Sthelin</persName> lui montra ensuite l’article mentionnée de la <lb/><rs>Gazette</rs> de <persName
-                        ref="#p0071">Francheville</persName> et <persName ref="#p2362">Mr Braun</persName> se facha de nouveau : comment
-                    <lb/>disoit-il. <rs ref="#p0081">S.M.</rs> me compte parmi les Invalides et <persName ref="#p0071">Mr Francheville</persName> me
-                        <lb/><del rend="strikethrough">fait</del> dit même mort ? Mais je Vous ennuye trop Monsieur et très honoré <lb/>Oncle ! je
-                    reviens à mon journal. Le 2 Fevrier partit le <rs>Grand Duc</rs>. <lb/>le 4 j’allois à la cour pour la dernière fois avant le
-                    depart de <rs ref="#p0081">S.M.</rs>
+                    <lb/>en parla dans <subst>
+                        <del rend="overwritten">s</del>
+                        <add place="across">l</add>
+                    </subst>a Gazette – a propos, <persName ref="#p0071">Mr de Francheville</persName> dit dans une de <lb/>ses feuïlles que le
+                        <persName ref="#p2362">Prof. Braun</persName> est mort ; c’est une nouvelle très fausse <lb/>car je puis attester qu’il vit
+                    encore à cette heure ; desorte que probablement <lb/>il <del rend="strikethrough">ait aussi</del> vivoit aussi avant un mois. <rs
+                        ref="#p0037"/><rs ref="#p0037">Mon père</rs> fit dernierement à croire <lb/>à ce Professeur que <rs ref="#p0081">S.M.</rs>
+                    avoit ordonné que tous les accademiciens parussent à la <pb facs="00000017.jpg" n="5"/><note hand="#pencil" place="margin(right)"
+                        type="foliation">11</note>à la masquerade, mais qu’Elle en avoit nommement exclû les <persName ref="#p2361">Professeurs
+                        <lb/>Fischer</persName>, <persName ref="#p2362">Braun</persName>, et lui puisqu’on Lui avoit rapporté que ces trois étoient
+                    <lb/>des Invalides : <persName ref="#p2362">Mr Braun</persName> se fachâ beaucoup, toute <orgName ref="#g0123"
+                        >l’Academie</orgName> en rit <lb/>et <persName ref="#p2362">Mr Braun</persName>, pour montrer à toute la cour qu’il n’étoit
+                    rien moins qu’un <lb/>invalide, prit un billet de masquerade ; heureusement le froid augmenta, <lb/>ensorte qu’il étoit malgré lui
+                    obligé de rester auprès des Thermometres. <lb/>Le Secretaire <persName ref="#p2333">Sthelin</persName> lui montra ensuite
+                    l’article mentionnée de la <lb/><rs>Gazette</rs> de <persName ref="#p0071">Francheville</persName> et <persName ref="#p2362">Mr
+                        Braun</persName> se facha de nouveau : comment <lb/>disoit-il. <rs ref="#p0081">S.M.</rs> me compte parmi les Invalides et
+                        <persName ref="#p0071">Mr Francheville</persName> me <lb/><del rend="strikethrough">fait</del> dit même mort ? Mais je Vous
+                    ennuye trop Monsieur et très honoré <lb/>Oncle ! je reviens à mon journal. Le 2 Fevrier partit le <rs>Grand Duc</rs>. <lb/>le 4
+                    j’allois à la cour pour la dernière fois avant le depart de <rs ref="#p0081">S.M.</rs>
                     <lb/>le 6 matin. un loup d’une taille enorme s’egara dans la ville et trouvant <lb/>lesa Porte de la maison des colleges ouvertes,
                     il monta l’escalier et se <lb/>présenta devant le college de Justice dans le moment où on y pensa le moins. <lb/>Le Portier, un
-                    Soldat de la Justice, le tuâ heureusement ; d’autres Soldats de <lb/>la Police, qui passoient, vouloient s’emparer du loup, <del
-                        rend="strikethrough">mais</del>
-                    <add place="above">et come</add> celui qui l’avoit <lb/>tué aimoit mieux le garder ; <del rend="strikethrough">sa resistance
-                        fût</del> les autres tombèrent sur lui <lb/>et le rossèrent desorte qu’il ne pouvoit plus se lever.</p>
+                    Soldat de la Justice, le tuâ heureusement ; d’autres Soldats de <lb/>la Police, qui passoient, vouloient s’emparer du loup, <subst>
+                        <del rend="strikethrough">mais</del>
+                        <add place="above">et come</add>
+                    </subst> celui qui l’avoit <lb/>tué aimoit mieux le garder ; <del rend="strikethrough">sa resistance fût</del> les autres
+                    tombèrent sur lui <lb/>et le rossèrent desorte qu’il ne pouvoit plus se lever.</p>
                 <p>Je recommence à reprendre la plume ajourd’hui ce 15 Fevrier. <rs ref="#2340">Notre Chef</rs>
                     <lb/>avoit accompagné <rs ref="#p0081">S.M.</rs> jusqu’à <placeName>Novogorod</placeName> et n’est revenû que le 12 de ce mois.
                     <lb/>le 11 nous fûmes invité à une nôce dans le voisinage. le 13 je dinai chez <rs ref="#2340">mon <lb/>Chef</rs>#, il souhaite de
@@ -317,15 +344,17 @@
                         rend="strikethrough">etre</del> trouver <lb/>une place dans la Communauté des Dames nobles, mais <add place="above"
                         >alors</add> il ne lui seroit <lb/>pas permis de voir <del rend="strikethrough">son mari</del>
                     <persName ref="#p2380">Mr Franzoni</persName>. La langue italienne n’est point <lb/>en vogue ici ; et quant à la langue françoise,
-                    on régarde beaucoup sur la <lb/>prononciation <add place="margin-left">#je lui ai donné Votre quittance</add>
+                    on régarde beaucoup sur la <lb/>prononciation <add place="margin(left)">#je lui ai donné Votre quittance</add>
                     <pb facs="00000018.jpg" n="6"/> Prononciation et l’orthographie. je vais maintenant, Monsieur et très honoré <lb/>Oncle,
                     parcourrir Vos quatres dernières lettres, pour voir s’il n’y se trouvent <lb/>pas quelques articles qui demandent une réponse. On
                     craint ici que <lb/><persName ref="#p2381">Machi</persName> ne soit un homme tel que <persName ref="#p2382">Adamson</persName>, et
-                    qu’il ne demande comme celui-cy <lb/>4000 Roubles p<del rend="overwritten">ou</del><add place="across">a</add>r an <hi
-                        rend="underline">pour se dedomager du pavèt de <placeName ref="l0044">Paris</placeName></hi>. Mille compli<lb break="no"/>mens
-                        <persName ref="#p2383">Mr Beguelin</persName>, nous sommes très charmés qu’il se porte mieux. J’aurois <lb/>bien donné
-                    quelques lettres au <persName ref="#p2384">Sr Garzin</persName>, mais je croiois qu’il resteroit trop <lb/>long tems en
-                        <placeName>Livonie</placeName> et on diroit même qu’il s’y établiroit. Le Chantre <lb/><persName ref="#p2367"
+                    qu’il ne demande comme celui-cy <lb/>4000 Roubles p<subst>
+                        <del rend="overwritten">ou</del>
+                        <add place="across">a</add>
+                    </subst>r an <hi rend="underline">pour se dedomager du pavèt de <placeName ref="l0044">Paris</placeName></hi>. Mille compli<lb
+                        break="no"/>mens <persName ref="#p2383">Mr Beguelin</persName>, nous sommes très charmés qu’il se porte mieux. J’aurois
+                    <lb/>bien donné quelques lettres au <persName ref="#p2384">Sr Garzin</persName>, mais je croiois qu’il resteroit trop <lb/>long
+                    tems en <placeName>Livonie</placeName> et on diroit même qu’il s’y établiroit. Le Chantre <lb/><persName ref="#p2367"
                         >Poulet</persName> est probablement à <placeName>Abo</placeName>, où la plus-pârt des voyageurs se <lb/>sont rétiré à cause
                     d’un vent continuellement contraire : je le plains <lb/>de tout mon cœur, il n’auroit pas dû quitter <placeName ref="#l1103"
                         >Berlin</placeName>, et comme il se <lb/>trouve ici deja un bon chantre françois et allemend, établi, <del
@@ -338,12 +367,20 @@
                     contient à peu près la même chose, Nos respecteux dévoirs <lb/>à <rs>Madame Votre epouse</rs>, et mille complimens à toute Votre
                     aimable famille. <lb/>Enfin Monsieur mon très-chèr et très-honoré Oncle ! distribuez, s’il <lb/>Vous plait à toutes nos
                     connoissances de <placeName ref="#l1103">Berlin</placeName> tous les sentimens que je <lb/>leur ai voués et soyez persuadé que je
-                    ne saurai jamais cesser, d’être avec <lb/><del rend="overwritten">un</del><add place="above">le</add> plus profond respect</p>
-                <closer><p><salute rend="align (centre)"> Monsieur mon très chèr et très honoré Oncle !</salute></p><p rend="align (right)"><salute>
-                            Votre très humble et très obeïssant Serviteur</salute></p><signature>J. Albert Euler</signature>
-                    <p rend="align (left)">à <placeName ref="#l0020">St. Petersburg</placeName> ce <date>15/26 Fevrier 1767</date>.</p><p>P.S.
-                        J’attend avec impatience Votre reponse sur la lettre que je Vous ai ecrit le 2 de Janvier du Comptoir de <persName
-                            ref="#p2365">Poggenpohl</persName>.</p></closer>
+                    ne saurai jamais cesser, d’être avec <lb/><subst>
+                        <del rend="overwritten">un</del>
+                        <add place="above">le</add>
+                    </subst> plus profond respect</p>
+                <closer><salute rend="align(center)"> Monsieur mon très chèr et très honoré Oncle !</salute>
+                    <salute rend="align(right)"> Votre très humble et très obeïssant Serviteur</salute>
+                    <signed>J. Albert Euler</signed>
+                    <dateline rend="align(left)">à <placeName ref="#l0020">St. Petersburg</placeName> ce <date when-iso="1767-02-15">15/26 Fevrier
+                            1767</date>.</dateline></closer>
+                <postscript>
+                    <label>P.S.</label>
+                    <p>J’attend avec impatience Votre reponse sur la lettre que je Vous ai ecrit le 2 de Janvier du Comptoir de <persName ref="#p2365"
+                            >Poggenpohl</persName>.</p>
+                </postscript>
             </div>
         </body>
     </text>

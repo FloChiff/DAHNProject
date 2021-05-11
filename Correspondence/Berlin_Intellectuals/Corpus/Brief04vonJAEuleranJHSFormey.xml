@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -58,8 +59,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -155,7 +162,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -172,8 +179,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-11" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-22" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-11" who="#emmanuelle.chaze">Edited align and lb.</change>
@@ -190,9 +198,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000009.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">7</note>
-                <opener rend="align (right)">A <placeName ref="#l0020">St Petersburg</placeName> ce <date when-iso="1766-12-25">25 Decembre/5 Janvier
-                        1766 St. v.</date><lb/><salute rend="align (left)">Monsieur mon très chèr et très honoré Oncle!</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">7</note>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St Petersburg</placeName> ce <date when-iso="1766-12-25">25 Decembre/5
+                            Janvier 1766 St. v.</date></dateline>
+                    <salute rend="align (left)">Monsieur mon très chèr et très honoré Oncle!</salute></opener>
                 <p>Je suis tout confus, mon très honoré Oncle ! qu’à ce renouvellement d’année <lb/>Vous me soyez prevenû, et très sensible à toutes
                     les marques de bienveuillance <lb/>et d’amitié, dont Vous ne cessez de me combler dans toutes les occasions, <lb/>je voudrois y
                     pouvoir repondre. Mais helas ! mon cœur <del rend="strikethrough">est</del> trop rempli de <lb/>Vos bontés ne sauroit s’expliquer,
@@ -211,36 +220,41 @@
                     <lb/>de <placeName ref="#l0019">Russie</placeName> mais des raisons politiques et les grandes difficultés qui s’opposent <lb/>à un
                     tel changement l’ont toujours empêché ; La <placeName ref="#l0019">Russie</placeName> d’ailleurs s’embarasse <lb/>très peu de ce
                     qui pourra arriver dans 20 000 années, si l’on garde <lb/>le vieux stile. N’ayant pas encore eu froid <del rend="strikethrough"
-                        >ici</del>, je continue à me <lb/>bien accommoder du Climât de ce païs. Il est vrai le froid vâ pour</p>
-                <p rend="align (right)">l’ordinaire</p>
-                <pb facs="00000010.jpg" n="2"/>
-                <p>l’ordinaire de 15 à 20 degrés au dessous du terme de la congelation, <lb/>mais il-y-a des moyens de s’en garantir, desorte qu’on a
-                    ici moins froid <lb/>qu’à <placeName ref="#l1103">Berlin</placeName> : j’ai recû toutes Vos lettres, Monsieur et très honoré Oncle
-                    ! <lb/>et encore aujourd’hui je viens de recevoir par <persName ref="#p2333">Mr de Stählin</persName> celle <lb/>du 22 Décembre,
-                    que j’ai lû comme toutes les précedentes avec un <lb/>plaisir infini : je n’ai pas besoin de Vous assurer que nous prennons
-                    <lb/>une veritable part à tout ce qui Vous arrive, même jusqu’aux moindres <lb/>choses. Vous aurez déjà appris de <rs ref="#p2456"
-                        >mon beau père</rs> tout ce qui nous est <lb/>arrivé ici depuis le 21 Novembre, auquel jour je Vous avois ecrit la
-                    <lb/>dernière fois : le 22 Novembre je fûs coupé de <rs ref="#p2328">ma femme</rs> et obligé <lb/>de passer une nuit de l’autre
-                    coté de la rivière : c’etoit le jour de <lb/>mon introduction dans la societé oeconomique. Le 26 nous soupâmes <lb/>tous chez le
-                    Conseiller de Cour <persName ref="#p2337">Lehmann</persName>, qui Vous fait faire mille <lb/>complimens ; le 28 j’arrangais la
-                    Bibliotheque de <rs ref="#p0037">mon père</rs> ; le 30 il y avoit <lb/>grande compagnie chez nous. Le 6 Decembre nous dinâmes tous
-                    chez <lb/>le <persName ref="#p2361">Professeur Fischer</persName> à l’occasion des Fiançailles de sa fille. Le 10 <lb/>je dinai
-                    chez le <persName ref="#p2334">Feld marechal Munnic</persName>. Le 11 je lisais un mémoire de <lb/><add place="margin-left"><rs
-                            ref="p0037">mon Père</rs></add> à <orgName ref="#g0123">l’Academie</orgName>. Le 12 je fûs chargé d’examiner l’Université,
-                    Le 13 <lb/>je tins mon discours d’entrée à la <orgName ref="#g0124">société oeconomique</orgName>, qui vouloit sur <lb/>les
-                    avantages d’un païs où les païsans ont une entière liberté, et qui, à ce <lb/>que le <persName ref="#p2340">Comte
-                        d’Orloff</persName> m’assure, e<supplied reason="faded">st g</supplied>outé de <rs ref="#0081">S.M.I.</rs> Le 14 et 15 on
-                    examina <lb/>le Gymnase. Le 16 je di<supplied>nai chez</supplied> le <persName ref="#p2340">Comte d’Orloff</persName> avec toute
-                    la <lb/>Commission. Le 17 nous di<supplied>name</supplied>s tous chez le <persName ref="#p2362">Prof. Braun</persName>. Le 20
-                    etoit l’assemblée <lb/>de la <orgName ref="#g0124">Societe oeconomique</orgName>. Le 23 nous dinames chez <rs ref="#p2340">notre
-                        chef</rs>. Hier nous <lb/>distribuâmes les petits présens à nos enfans et enfin aujourd’hui <lb/>je fûs à la Cour. Mes
-                    respects à <rs>Madame Votre Epouse</rs> et <lb/>mille Complimens à toute Votre aimable et digne famille ; <rs ref="#p0037">mon
-                        père</rs> et <lb/>toute ma famille <add place="above">en</add> f<del rend="overwritten">on</del><add place="across">ai</add>t
-                    autant.</p>
-                <closer><salute rend="align (right)">je suis avec un profond respect</salute><lb/><salute rend="align (centre">Monsieur mon très chèr
-                        et très honoré Oncle</salute><lb/><salute rend="align (left)">Votre très humble et très obeïssant
-                            <lb/>Serviteur<lb/><signature rend="align (right">&gt;J. Albert Euler.</signature></salute></closer>
-                <p>On est a présent très charmé de ce que <persName ref="#p2363">Mr Lambert</persName> ne vient pas ici.</p>
+                        >ici</del>, je continue à me <lb/>bien accommoder du Climât de ce païs. Il est vrai le froid vâ pour<lb/>
+                    <hi rend="align(right)">l’ordinaire</hi>
+                    <pb facs="00000010.jpg" n="2"/> l’ordinaire de 15 à 20 degrés au dessous du terme de la congelation, <lb/>mais il-y-a des moyens
+                    de s’en garantir, desorte qu’on a ici moins froid <lb/>qu’à <placeName ref="#l1103">Berlin</placeName> : j’ai recû toutes Vos
+                    lettres, Monsieur et très honoré Oncle ! <lb/>et encore aujourd’hui je viens de recevoir par <persName ref="#p2333">Mr de
+                        Stählin</persName> celle <lb/>du 22 Décembre, que j’ai lû comme toutes les précedentes avec un <lb/>plaisir infini : je n’ai
+                    pas besoin de Vous assurer que nous prennons <lb/>une veritable part à tout ce qui Vous arrive, même jusqu’aux moindres
+                    <lb/>choses. Vous aurez déjà appris de <rs ref="#p2456">mon beau père</rs> tout ce qui nous est <lb/>arrivé ici depuis le 21
+                    Novembre, auquel jour je Vous avois ecrit la <lb/>dernière fois : le 22 Novembre je fûs coupé de <rs ref="#p2328">ma femme</rs> et
+                    obligé <lb/>de passer une nuit de l’autre coté de la rivière : c’etoit le jour de <lb/>mon introduction dans la societé
+                    oeconomique. Le 26 nous soupâmes <lb/>tous chez le Conseiller de Cour <persName ref="#p2337">Lehmann</persName>, qui Vous fait
+                    faire mille <lb/>complimens ; le 28 j’arrangais la Bibliotheque de <rs ref="#p0037">mon père</rs> ; le 30 il y avoit <lb/>grande
+                    compagnie chez nous. Le 6 Decembre nous dinâmes tous chez <lb/>le <persName ref="#p2361">Professeur Fischer</persName> à
+                    l’occasion des Fiançailles de sa fille. Le 10 <lb/>je dinai chez le <persName ref="#p2334">Feld marechal Munnic</persName>. Le 11
+                    je lisais un mémoire de <lb/><add place="margin(left)"><rs ref="p0037">mon Père</rs></add> à <orgName ref="#g0123"
+                        >l’Academie</orgName>. Le 12 je fûs chargé d’examiner l’Université, Le 13 <lb/>je tins mon discours d’entrée à la <orgName
+                        ref="#g0124">société oeconomique</orgName>, qui vouloit sur <lb/>les avantages d’un païs où les païsans ont une entière
+                    liberté, et qui, à ce <lb/>que le <persName ref="#p2340">Comte d’Orloff</persName> m’assure, e<supplied reason="faded">st
+                        g</supplied>outé de <rs ref="#0081">S.M.I.</rs> Le 14 et 15 on examina <lb/>le Gymnase. Le 16 je di<supplied>nai
+                        chez</supplied> le <persName ref="#p2340">Comte d’Orloff</persName> avec toute la <lb/>Commission. Le 17 nous
+                        di<supplied>name</supplied>s tous chez le <persName ref="#p2362">Prof. Braun</persName>. Le 20 etoit l’assemblée <lb/>de la
+                        <orgName ref="#g0124">Societe oeconomique</orgName>. Le 23 nous dinames chez <rs ref="#p2340">notre chef</rs>. Hier nous
+                    <lb/>distribuâmes les petits présens à nos enfans et enfin aujourd’hui <lb/>je fûs à la Cour. Mes respects à <rs>Madame Votre
+                        Epouse</rs> et <lb/>mille Complimens à toute Votre aimable et digne famille ; <rs ref="#p0037">mon père</rs> et <lb/>toute ma
+                    famille <add place="above">en</add> f<subst>
+                        <del rend="overwritten">on</del>
+                        <add place="across">ai</add>
+                    </subst>t autant.</p>
+                <closer><salute rend="align(right)">je suis avec un profond respect</salute>
+                    <salute rend="align(center)">Monsieur mon très chèr et très honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur<lb/></salute>
+                    <signed rend="align(right)">J. Albert Euler.</signed></closer>
+                <postscript>
+                    <p>On est a présent très charmé de ce que <persName ref="#p2363">Mr Lambert</persName> ne vient pas ici.</p>
+                </postscript>
             </div>
         </body>
     </text>
