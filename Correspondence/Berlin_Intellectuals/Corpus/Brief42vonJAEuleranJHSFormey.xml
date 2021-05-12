@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-07" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
             <change when-iso="2014-10-19" who="#emmanuelle.chaze">Edited metadata, pb and lb.</change>
@@ -183,9 +191,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000143.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">83</note> A <placeName ref="#l0020">St : Petersbourg</placeName> ce
-                    <date>7/18 Avril 1769</date>
-                <opener>Monsieur mont rès chèr et très honoré Oncle,</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">83</note>
+                <opener>
+                    <dateline rend="align(right)">A <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1768-04-07">7/18 Avril
+                            1769</date></dateline>
+                    <salute>Monsieur mont rès chèr et très honoré Oncle,</salute></opener>
                 <p>j’ai reçû Votre derniere lettre du 27 de Mars, et j’y vai répondre à la hâte, <lb/><rs>mon frère</rs> m’aiant beaucoup prié de
                     faire partir cette incluse avec la <lb/>poste d’aujourd’hui ; je me réserve de Vous écrire plus en détail, <lb/>Monsieur et très
                     honoré Oncle, aussi tôt qu’il me le sera possible. <lb/>je Vous suis infiniment obligé de Vos felicitations et de l’intérêt
@@ -213,10 +223,13 @@
                         ref="#p0037">mon père</rs>, qui entre aprésent dans sa grande année climatarique <lb/>nous soupames tous chez lui. Le 5 jour
                     de naissance de <rs ref="#p2329">ma <lb/>Mère</rs> ; j’allois à l’église lutherienne, ne pouvant pas passer la <lb/>riviere pour
                     aller entendre Mr. le Pasteur de <persName>Lavigne</persName>. Plusieures <lb/>personnes /toute/ enfoncèrent /sur/ dans la
-                    rivière, et q mais la <lb/>pluspârt en fût sauvée : hier je reçû Votre derniere lettre <lb/>avec toutes les incluses.</p><p>Adieu
-                    Monsieur et très chèr Oncle, je me récommande <lb/>à Votre bienveuïllance et amitié avec tout ce qui m’appar<lb break="no"/>tient
-                    : Nos devoirs et amitiés à <rs>Mad. Votre épouse</rs> et <lb/>toute Votre famille.</p> je suis avec un profond respect Votre très
-                humble et très obeïssant <lb/>Serviteur et Neveu <signature>J. Albert Euler</signature></div>
+                    rivière, et q mais la <lb/>pluspârt en fût sauvée : hier je reçû Votre derniere lettre <lb/>avec toutes les incluses.</p>
+                <closer><salute>Adieu Monsieur et très chèr Oncle, je me récommande <lb/>à Votre bienveuïllance et amitié avec tout ce qui m’appar<lb
+                            break="no"/>tient : Nos devoirs et amitiés à <rs>Mad. Votre épouse</rs> et <lb/>toute Votre famille. je suis avec un
+                        profond respect</salute>
+                    <salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur et Neveu </salute>
+                    <signed>J. Albert Euler</signed></closer>
+            </div>
         </body>
     </text>
 </TEI>

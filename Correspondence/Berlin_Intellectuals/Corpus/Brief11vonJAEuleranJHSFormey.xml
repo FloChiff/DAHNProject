@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -177,8 +184,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov and Razumosvki.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited body.</change>
@@ -194,9 +202,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000027.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">16.</note>
-                <opener rend="align (right)">Le <date>20 Avril 1767</date><lb/><salute rend="align (left)">Monsieur mon très-chèr et très-honoré
-                        Oncle!</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">16.</note>
+                <opener>
+                    <dateline rend="align(right)">Le <date when-iso="1767-04-20">20 Avril 1767</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle!</salute></opener>
                 <lb/>
                 <p>Il est tems que je reprenne mon journal, pour Vous en transcrire un extrait : j’etois resté <lb/>au 2 de Mars, auquel jour je fis
                     encore quelques visites : d’ailleurs, rien de remarquable <lb/>le 3 de même. Le 4 je fûs à l’eglise françoise, nous dinames en
@@ -211,22 +220,24 @@
                     <lb/>c.à.d. <persName ref="#p0081">Catherine II.</persName> Imperatrice et Autocratrice de toutes les <placeName ref="#l0019"
                         >Russies</placeName>.</p>
                 <p>On voit sur le Revers une figure femelle tenant d’une main un laurier et de l’autre la <lb/>caducée, elle est assise sur des
-                    gerbes, et de loin se présente <del rend="overwritten">un</del><add place="across">des</add> champs, un laboureur etc. <lb/>La
-                    legende en est <note>insérer texte russe</note> c.a.d. <foreign xml:lang="la">Pro labore</foreign> à peu près. <lb/>le 8. <rs
-                        ref="#p0037">Mon père</rs> se fis appliquer une fontenelle. Il-y-avoit chez moi grande compagnie <lb/>et entre autre une de
-                    mes cousines, née à <placeName>Astraca</placeName>n et mariée depuis peu avec un <lb/>Marchand anglois et né à
-                        <placeName>Orchangel</placeName> : le 9 rien de remarquable : le 10 de même excepté <lb/>les visites que je recûs.<rs
-                        ref="#p0037">Mon père</rs> commença à se mieux porter : le 11 nous primes <lb/>subitement la resolution d’aller à <placeName
-                        ref="#l0506">Cronstadt</placeName>, je fis atteler deux grands Traineaux, <lb/><rs ref="#p2328">ma femme</rs>, mes enfans et
-                    moi se placerent dans l’un, et <rs ref="#p2330">mon frère</rs> le Medecin avec <lb/><rs>sa femme</rs> et <persName ref="#p2402"
-                        >Mll. Lehmann</persName> dans l’autre, nous partimes vers midi et arrivames heureuse<lb break="no"/>ment vers 2 heures après
-                    midi. <del rend="strikethrough">Apr</del> en traversant tout droit la mèr : nous descendimes chez <lb/>ma Cousine <persName
-                        ref="#p2403">Wilson</persName>, la même dont je viens de parler : nous y fûmes très magnificement régalé, et <lb/>mes autres
-                    parens, qui demeurent à <placeName ref="#l0506">Cronstadt</placeName>, nous vinrent voir ; nous leur rendimes <lb/>la visite le
-                    lendemain matin et après nous avoir promené en cette ville, nous nous remimes <lb/>en chemin vers 1 heures après midi et à 3
-                    heures nous fûmes de route chez nous. Je <lb/>recû encore ce même jour (le 12) la visite de <persName ref="#p2333">Mr. de
-                        Stehlin</persName>, qui me communiquâ la <lb/>lettre très notable de <rs ref="#p0081">S.M.I.</rs> dont il Vous aura sans doute
-                    envoé Copie. Le 13. <lb/>beaucoup des visites rendues et recûes reciproquement sans qu’aucune ne se soit perdûe. <lb/><rs
+                    gerbes, et de loin se présente <subst>
+                        <del rend="overwritten">un</del>
+                        <add place="across">des</add>
+                    </subst> champs, un laboureur etc. <lb/>La legende en est <note>insérer texte russe</note> c.a.d. <foreign xml:lang="la">Pro
+                        labore</foreign> à peu près. <lb/>le 8. <rs ref="#p0037">Mon père</rs> se fis appliquer une fontenelle. Il-y-avoit chez moi
+                    grande compagnie <lb/>et entre autre une de mes cousines, née à <placeName>Astraca</placeName>n et mariée depuis peu avec un
+                    <lb/>Marchand anglois et né à <placeName>Orchangel</placeName> : le 9 rien de remarquable : le 10 de même excepté <lb/>les visites
+                    que je recûs.<rs ref="#p0037">Mon père</rs> commença à se mieux porter : le 11 nous primes <lb/>subitement la resolution d’aller à
+                        <placeName ref="#l0506">Cronstadt</placeName>, je fis atteler deux grands Traineaux, <lb/><rs ref="#p2328">ma femme</rs>, mes
+                    enfans et moi se placerent dans l’un, et <rs ref="#p2330">mon frère</rs> le Medecin avec <lb/><rs>sa femme</rs> et <persName
+                        ref="#p2402">Mll. Lehmann</persName> dans l’autre, nous partimes vers midi et arrivames heureuse<lb break="no"/>ment vers 2
+                    heures après midi. <del rend="strikethrough">Apr</del> en traversant tout droit la mèr : nous descendimes chez <lb/>ma Cousine
+                        <persName ref="#p2403">Wilson</persName>, la même dont je viens de parler : nous y fûmes très magnificement régalé, et
+                    <lb/>mes autres parens, qui demeurent à <placeName ref="#l0506">Cronstadt</placeName>, nous vinrent voir ; nous leur rendimes
+                    <lb/>la visite le lendemain matin et après nous avoir promené en cette ville, nous nous remimes <lb/>en chemin vers 1 heures après
+                    midi et à 3 heures nous fûmes de route chez nous. Je <lb/>recû encore ce même jour (le 12) la visite de <persName ref="#p2333">Mr.
+                        de Stehlin</persName>, qui me communiquâ la <lb/>lettre très notable de <rs ref="#p0081">S.M.I.</rs> dont il Vous aura sans
+                    doute envoé Copie. Le 13. <lb/>beaucoup des visites rendues et recûes reciproquement sans qu’aucune ne se soit perdûe. <lb/><rs
                         ref="#p0037">Mon père</rs> continua de se mieux porter. Le 14. je rendis visite à feu notre Pasteur <persName ref="#p2348"
                         >Dilhei</persName>
                     <lb/>qui alors étoit bien mal, il étoit tout à fait paralitique, je fis encore quelques autres <lb/>visites ; je me promenai
@@ -239,29 +250,46 @@
                 <p>Le 19. je reçûs de lettres de Vous très-honoré Oncle. Nous eumes une Visite d’une Cousine de <lb/><placeName ref="#l0506"
                         >Cronstadt</placeName> née en <placeName>Perse</placeName>, et comme la Glace de la rivière commenca à devenir impracticable
                     pour <lb/>traverser, elle resolû de demeurer chez moi jusqu’à ce que la Communication par eau sera ouverte. <lb/>Le 20. <rs
-                        ref="#p0037">mon père</rs> rétomba malade, <del rend="overwritten">s</del><add place="across">c</add>e n’etoient plus des
-                    douleurs de rhumatisme <add place="above">au bras</add> mais des douleurs <lb/>au bas ventre accompagnée <del rend="strikethrough"
-                        >avec</del> de<add place="inline">s</add> terribles angoisses : j’eu<del rend="overwritten">x</del><add place="across">s</add>
-                    quelques personnes à souper. <lb/>On commenda des sentinelles pour empecher qu’aucune voiture *ne* passât la rivière, et on
-                    <lb/>construisit un petit pont pour pouvoir traverser à pied. Le 21, j’en fis l’experience, je passai <lb/>avec <persName
-                        rf="#p2333">Mr. de stehlin</persName>
-                    <del rend="overwritten">c</del><add place="across">l</add>e petit pont, je me mêttai ensuite dans sa voiture et je dinai chez lui
-                    ; <lb/>nous allâmes de là à la <orgName ref="#g0124">Societé Oeconomique</orgName> : <persName ref="#p2404">Mr. Model</persName>
-                    me reman<del rend="overwritten">er</del><add place="across">as</add> jusqu’au petit pont <lb/>et mon carosse m’attendoit dejà de
-                    notre coté. Le 22. je me promenai à pied et j’allai <lb/>faire ma réverence au <persName ref="#p2336">Comte Hetmann
-                        Rasoumowski</persName>, ce Seigneur me recût très gracieusement <lb/>il s’entertint avec moi une bonne demi heure, mais il ne
-                    me parla p<del rend="overwritten">as</del><add place="across">oint</add> des affaires <lb/>academiques. Le 20, je recûs quelques
-                    visites ; Le 24 rien de remarquable ; Le 25. <lb/>j'eus une nombreuse compagnie chez moi, qui resta à souper: Le 26 je fis
-                    quelques visites. <lb/>Le 27. j’eus une grande épouvante : etant à la Commission, on vint me dire, que je devois à l’instant
-                    <lb/>me rendre à la maison, <rs ref="#p0037">mon père</rs> tendant à sa fin : je me précipitai dans la voiture, et effecti<lb
-                        break="no"/>vement je trouvai <rs ref="#p0037">mon père</rs> très mal : <rs ref="#p2330">mon frère</rs> avoit fait appeler
-                    encore un second medecin. <lb/>Heureusement les terribles angoisses, cesserent, et <rs ref="#p0037">mon père</rs> echapà. Notre
-                    Pasteur <persName ref="#p2348">Dilthei</persName>
+                        ref="#p0037">mon père</rs> rétomba malade, <subst>
+                        <del rend="overwritten">s</del>
+                        <add place="across">c</add>
+                    </subst>e n’etoient plus des douleurs de rhumatisme <add place="above">au bras</add> mais des douleurs <lb/>au bas ventre
+                    accompagnée <del rend="strikethrough">avec</del> de<add place="inline">s</add> terribles angoisses : j’eu<subst>
+                        <del rend="overwritten">x</del>
+                        <add place="across">s</add>
+                    </subst> quelques personnes à souper. <lb/>On commenda des sentinelles pour empecher qu’aucune voiture *ne* passât la rivière, et
+                    on <lb/>construisit un petit pont pour pouvoir traverser à pied. Le 21, j’en fis l’experience, je passai <lb/>avec <persName
+                        ref="#p2333">Mr. de stehlin</persName>
+                    <subst>
+                        <del rend="overwritten">c</del>
+                        <add place="across">l</add>
+                    </subst>e petit pont, je me mêttai ensuite dans sa voiture et je dinai chez lui ; <lb/>nous allâmes de là à la <orgName
+                        ref="#g0124">Societé Oeconomique</orgName> : <persName ref="#p2404">Mr. Model</persName> me reman<subst>
+                        <del rend="overwritten">er</del>
+                        <add place="across">as</add>
+                    </subst> jusqu’au petit pont <lb/>et mon carosse m’attendoit dejà de notre coté. Le 22. je me promenai à pied et j’allai
+                    <lb/>faire ma réverence au <persName ref="#p2336">Comte Hetmann Rasoumowski</persName>, ce Seigneur me recût très gracieusement
+                    <lb/>il s’entertint avec moi une bonne demi heure, mais il ne me parla p<subst>
+                        <del rend="overwritten">as</del>
+                        <add place="across">oint</add>
+                    </subst> des affaires <lb/>academiques. Le 20, je recûs quelques visites ; Le 24 rien de remarquable ; Le 25. <lb/>j'eus une
+                    nombreuse compagnie chez moi, qui resta à souper: Le 26 je fis quelques visites. <lb/>Le 27. j’eus une grande épouvante : etant à
+                    la Commission, on vint me dire, que je devois à l’instant <lb/>me rendre à la maison, <rs ref="#p0037">mon père</rs> tendant à sa
+                    fin : je me précipitai dans la voiture, et effecti<lb break="no"/>vement je trouvai <rs ref="#p0037">mon père</rs> très mal : <rs
+                        ref="#p2330">mon frère</rs> avoit fait appeler encore un second medecin. <lb/>Heureusement les terribles angoisses, cesserent,
+                    et <rs ref="#p0037">mon père</rs> echapà. Notre Pasteur <persName ref="#p2348">Dilthei</persName>
                     <lb/>prit ce même jour une fièvre pourpée, on fit appeler <rs ref="#p2330">mon frère</rs> pour assister à un conseil<del
                         rend="strikethrough">le</del>
-                    <lb/>d<del rend="overwritten">u</del><add place="across">es</add> medecins, mais la situation de <rs ref="#p0037">mon père</rs> ne
-                        <del rend="strikethrough">la</del><add place="above">le</add> lui <del rend="strikethrough">permettâ</del><add place="above"
-                        >permit</add> pas. Le 28 je reçûs la <lb/>triste nouvelle que notre digne et bien-aimé Pasteur etoit mort à 3 heures du matin.
+                    <lb/>d<subst>
+                        <del rend="overwritten">u</del>
+                        <add place="across">es</add>
+                    </subst> medecins, mais la situation de <rs ref="#p0037">mon père</rs> ne <subst>
+                        <del rend="strikethrough">la</del>
+                        <add place="above">le</add>
+                    </subst> lui <subst>
+                        <del rend="strikethrough">permettâ</del>
+                        <add place="above">permit</add>
+                    </subst> pas. Le 28 je reçûs la <lb/>triste nouvelle que notre digne et bien-aimé Pasteur etoit mort à 3 heures du matin.
                     <lb/>Nous sommes aprésant dans un très grand embarras et nous ne savons pas d’où <lb/>prendre un autre à la place du defunt ; on
                     nous a récommendé le <persName ref="#p2355">Prof. Kulenkamp</persName>
                     <lb/>de <placeName ref="#l0062">Gottingue</placeName>, mais Dieu sait s’il l’acceptera. Si Vous savez, Monsieur et très-honoré
@@ -271,68 +299,90 @@
                     Valets, bois et chandelles franc, et la communauté ne <lb/>manquera pas de lui procurer mille petite benefices. <rs ref="#p0037"
                         >Mon pere</rs> commencâ à se <lb/>mieux porter. Le 29 rien de remarquable : Le 30, <rs ref="#p2330">Mon frère</rs> le medecin
                     et moi allâmes <lb/>à l’église françoise, où le Pasteur suedois prononça le discours funebre du defûnt <lb/>Pasteur. toute la
-                    communeaité étoit présente excepté <del rend="strikethrough">les</del>
-                    <add place="above">quelques</add> dames et quelques autres <lb/>qui demeurant à <placeName>Wasiliostrow</placeName>, ne pouvoient
-                    pas passer la rivière. Le defunt fût <lb/>ensuite porté dans <del rend="strikethrough">un Cavot</del>
-                    <add place="above">le Cavôt</add> de l’eglise de St. Pierre, d’où il <del rend="strikethrough">est aussi maintenant</del><add
-                        place="above">a eté</add> transporté <lb/><del rend="strikethrough">sur le</del>
-                    <add place="margin-left">par eau</add>
-                    <add place="above">aux</add> cimetières de notre église qui est à <placeName>Wasiliostrow</placeName>. Le 31. Rien de remarquable.
-                    <lb/>Le 1 Avril j’allais avec <rs ref="#p2328">ma femme</rs> dans l’église lutherienne de <placeName>Wasiliostrow</placeName>.
-                    Nous <lb/>passâmes la soirée chez <rs ref="#p2330">mon frère</rs> le medecin : La Glace de la rivière rompit, <lb/>le petit pont
-                    fût de<del rend="overwritten">ç</del>chiré, et il-y-eut quelques pauvres gens <add place="above">de</add> noyés. Le 2 je <lb
-                        rend="align (right)"/>reçus <pb facs="00000029.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation"
-                        >17</note>recû une Lettre de Vous. Le 3. Quelques visites. Le 4 jour de naissance de mon cher <rs ref="#p0037">père</rs>, qui
-                    <lb/>s’etablissoit peu à peu ; Le 5 jour de naissance de <rs ref="#p2329">ma mère</rs> : il gelà bien fort cette nuit. <lb/>Le 6.
-                    La rivière fût de nouveau couvert de Glace <add place="inline">et</add>on avoit de la peine à traverser en chaloupe. <lb/><del
-                        rend="strikethrough">Le 9.</del>
+                    communeaité étoit présente excepté <subst>
+                        <del rend="strikethrough">les</del>
+                        <add place="above">quelques</add>
+                    </subst> dames et quelques autres <lb/>qui demeurant à <placeName>Wasiliostrow</placeName>, ne pouvoient pas passer la rivière. Le
+                    defunt fût <lb/>ensuite porté dans <subst>
+                        <del rend="strikethrough">un Cavot</del>
+                        <add place="above">le Cavôt</add>
+                    </subst> de l’eglise de St. Pierre, d’où il <del rend="strikethrough">est aussi maintenant</del><add place="above">a eté</add>
+                    transporté <lb/><add place="margin(left)">par eau</add><subst>
+                        <del rend="strikethrough">sur le</del>
+                        <add place="above">aux</add>
+                    </subst> cimetières de notre église qui est à <placeName>Wasiliostrow</placeName>. Le 31. Rien de remarquable. <lb/>Le 1 Avril
+                    j’allais avec <rs ref="#p2328">ma femme</rs> dans l’église lutherienne de <placeName>Wasiliostrow</placeName>. Nous <lb/>passâmes
+                    la soirée chez <rs ref="#p2330">mon frère</rs> le medecin : La Glace de la rivière rompit, <lb/>le petit pont fût de<del
+                        rend="overwritten">ç</del>chiré, et il-y-eut quelques pauvres gens <add place="above">de</add> noyés. Le 2 je <lb/>
+                    <hi rend="align(right)">reçus</hi>
+                    <pb facs="00000029.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">17</note>recû une Lettre de Vous. Le 3.
+                    Quelques visites. Le 4 jour de naissance de mon cher <rs ref="#p0037">père</rs>, qui <lb/>s’etablissoit peu à peu ; Le 5 jour de
+                    naissance de <rs ref="#p2329">ma mère</rs> : il gelà bien fort cette nuit. <lb/>Le 6. La rivière fût de nouveau couvert de Glace
+                        <add place="inline">et</add>on avoit de la peine à traverser en chaloupe. <lb/><del rend="strikethrough">Le 9.</del>
                     <persName ref="#p2333">Mr. de Stehlin</persName> me fit dire que <persName ref="#p2405">Gmelin</persName> etoit heureusement
                     arrivé : <rs ref="#p2328">ma femme</rs> se fit <lb/>saigner et se promenà en voiture. Le 7. <rs ref="#p2332">Mon frère Cadet</rs>
-                    et moi <del rend="strikethrough">primes une</del>
-                    <add place="above">traversames en</add> Chalouppe <lb/>et firent plusieures visites de l’autre coté ; nous dinames chez <persName
-                        ref="#p2333">Mr. de Stehlin</persName>, et y fimes connoissance avec <lb/><persName ref="#p2405">Gmelin</persName>, qui nous
-                    accompagna ensuite chèz nous, après quoi nous l’envoyâmes voir son <lb/>logis academique. Le 8. Nous dinames tous chez <rs
-                        ref="#p0037">mon père</rs> ; la rivière fût de nouveau couverte <lb/>de Glace et devint presque solide : on m’assura que
-                    quelques soldats aient traversé la rivière <lb/>à pied : cependant la Glace s’en allâ encore le même jour ; j’avois à souper la
-                    compagnie <lb/>de dimanche. Deux anciens et deputés de notre Eglise vinrent m’avertir que le consistoire <lb/>avoit jugé à propos
-                    de me nommer tûteur du jeune <persName ref="#p2348">Dilthei</persName> : je l’acceptai à condition <lb/>que ces messieurs me
-                    joignissent un Aide qui soit mieux au fait des affaires d’ici que je <lb/>le suis : ce ci me fût accordé et on me donnâ pour Aide
-                    le Pasteur Suedois ; <del rend="overwritten">j'a</del><add place="across">je</add> dois <lb/>aussi prendre place au consistoire
-                    pour aider à regler toutes les affaires de l’eglise. Le <lb/>9 je dinai chez le <persName ref="#p2334">Feldmarschal
-                        Munnich</persName> en nombreuse compagnie <del rend="strikethrough">qui</del><add place="across">. Ce</add> Seigneur se porte
-                    <lb/>aprésent très bien et a été extremement <del rend="strikethrough">conten</del><add place="above">joyeux</add> : il avoit
-                    justement recû la nouvelle <lb/>que sa petite fille etoit devenue Grand-mère. Le 10 je recûs quelques visites. Le 11, les
-                    <lb/>deux anciens de notre église vinrent encore me voir, comme <rs ref="#p0037">mon père</rs> se portait assés bien, <lb/>je les
-                    menai chez lui et nous y dinames. Le 12 Rien de remarquable. Le 13, <rs ref="#p2328">Ma femme</rs>
+                    et moi <subst>
+                        <del rend="strikethrough">primes une</del>
+                        <add place="above">traversames en</add>
+                    </subst> Chalouppe <lb/>et firent plusieures visites de l’autre coté ; nous dinames chez <persName ref="#p2333">Mr. de
+                        Stehlin</persName>, et y fimes connoissance avec <lb/><persName ref="#p2405">Gmelin</persName>, qui nous accompagna ensuite
+                    chèz nous, après quoi nous l’envoyâmes voir son <lb/>logis academique. Le 8. Nous dinames tous chez <rs ref="#p0037">mon père</rs>
+                    ; la rivière fût de nouveau couverte <lb/>de Glace et devint presque solide : on m’assura que quelques soldats aient traversé la
+                    rivière <lb/>à pied : cependant la Glace s’en allâ encore le même jour ; j’avois à souper la compagnie <lb/>de dimanche. Deux
+                    anciens et deputés de notre Eglise vinrent m’avertir que le consistoire <lb/>avoit jugé à propos de me nommer tûteur du jeune
+                        <persName ref="#p2348">Dilthei</persName> : je l’acceptai à condition <lb/>que ces messieurs me joignissent un Aide qui soit
+                    mieux au fait des affaires d’ici que je <lb/>le suis : ce ci me fût accordé et on me donnâ pour Aide le Pasteur Suedois ; <subst>
+                        <del rend="overwritten">j'a</del>
+                        <add place="across">je</add>
+                    </subst> dois <lb/>aussi prendre place au consistoire pour aider à regler toutes les affaires de l’eglise. Le <lb/>9 je dinai chez
+                    le <persName ref="#p2334">Feldmarschal Munnich</persName> en nombreuse compagnie <subst>
+                        <del rend="strikethrough">qui</del>
+                        <add place="across">. Ce</add>
+                    </subst> Seigneur se porte <lb/>aprésent très bien et a été extremement <subst>
+                        <del rend="strikethrough">conten</del>
+                        <add place="above">joyeux</add>
+                    </subst> : il avoit justement recû la nouvelle <lb/>que sa petite fille etoit devenue Grand-mère. Le 10 je recûs quelques visites.
+                    Le 11, les <lb/>deux anciens de notre église vinrent encore me voir, comme <rs ref="#p0037">mon père</rs> se portait assés bien,
+                    <lb/>je les menai chez lui et nous y dinames. Le 12 Rien de remarquable. Le 13, <rs ref="#p2328">Ma femme</rs>
                     <lb/>et moi traversâmes la rivière (toujours en Chalouppe, car avant que toute la Glace du <lb/>Lac de
-                        <placeName>Ladoga</placeName> ne soit passé, on ne pe<del rend="overwritten">r</del><add place="across">n</add>sera pas à
-                    remêttre le grand Pont) nous fimes <lb/>une visite à <persName ref="#p2406">Mad. Poggenpohl</persName>, qui nous invita de venir
-                    diner Lundi prochain. Le 14 <lb/>j’eus la visite de <persName ref="#p2333">Mr. de Stehlin</persName> ; <rs ref="#p0037">mon
-                        père</rs> prit une forte colique. Le 15, <rs>ma femme</rs>, mes <lb/>enfans et moi promenèrent en voiture : le soir chèz <rs
-                        ref="#p2330">mon frère</rs> le medecin, où il-y-avoit <lb/>compagnie : Le 16 fût introduit le <persName ref="#p2405">Prof.
-                        Gmelin</persName>: <rs>mon beau-frère</rs>, <persName>ma soeur déleu</persName>, <rs ref="#p2328">ma <lb/>femme</rs> et moi
-                    allerent diner chez <persName ref="#p2365">Poggenpohl</persName>; c'étoit mon jour de mariage et il y avoit <lb/>grande Compagnie:
-                    j’ecrivai encore le même jour prèsque à minuit une lettre à Vous, <lb/>Monsieur et très-chèr Oncle : mon père devint fort mal. Le
-                    17. mon père se porta mieux : <lb/>les anciens de l’eglise me vinrent voir et rapporter les reponses qu’ils ont eu de <placeName
-                        ref="#l0439">Moskou</placeName>, <lb/>Le. 18. <rs ref="#p0037">Mon père</rs> continue à se mieux porter ; <rs ref="#p2328">ma
-                        femme</rs> fit quelques visites et j’allais à la <lb/>Societé oeconomique. Le 19 j’ecrivai dix lettres excepté les billets ;
+                        <placeName>Ladoga</placeName> ne soit passé, on ne pe<subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">n</add>
+                    </subst>sera pas à remêttre le grand Pont) nous fimes <lb/>une visite à <persName ref="#p2406">Mad. Poggenpohl</persName>, qui
+                    nous invita de venir diner Lundi prochain. Le 14 <lb/>j’eus la visite de <persName ref="#p2333">Mr. de Stehlin</persName> ; <rs
+                        ref="#p0037">mon père</rs> prit une forte colique. Le 15, <rs>ma femme</rs>, mes <lb/>enfans et moi promenèrent en voiture :
+                    le soir chèz <rs ref="#p2330">mon frère</rs> le medecin, où il-y-avoit <lb/>compagnie : Le 16 fût introduit le <persName
+                        ref="#p2405">Prof. Gmelin</persName>: <rs>mon beau-frère</rs>, <persName>ma soeur déleu</persName>, <rs ref="#p2328">ma
+                        <lb/>femme</rs> et moi allerent diner chez <persName ref="#p2365">Poggenpohl</persName>; c'étoit mon jour de mariage et il y
+                    avoit <lb/>grande Compagnie: j’ecrivai encore le même jour prèsque à minuit une lettre à Vous, <lb/>Monsieur et très-chèr Oncle :
+                    mon père devint fort mal. Le 17. mon père se porta mieux : <lb/>les anciens de l’eglise me vinrent voir et rapporter les reponses
+                    qu’ils ont eu de <placeName ref="#l0439">Moskou</placeName>, <lb/>Le. 18. <rs ref="#p0037">Mon père</rs> continue à se mieux
+                    porter ; <rs ref="#p2328">ma femme</rs> fit quelques visites et j’allais à la <lb/>Societé oeconomique. Le 19 j’ecrivai dix
+                    lettres excepté les billets ; <subst>
                         <del rend="strikethrough">dans</del>
-                    <add place="above">je compte que</add> Vous aurez recû <lb/>Monsieur et très-honoré Oncle ! celle que je <add place="above"
-                        >Vous</add> avois adressé. Le 20 nous dinames tous chez <lb/><rs ref="#p0037">mon père</rs>, en nombreuse compagnie. Le 21 de
-                    grand matin à 7 heures, je fûs chez le jeune <lb/><persName ref="#p2349">Dilthei</persName> et le menai présenter au <persName
-                        ref="#p2407">General Polmann</persName>, à qui le <persName ref="#p2339">Comte Grégoire Orlow</persName> avoit <lb/>donné
-                    ordre de fournir tout ce que ce pauvre Orphelin pouvoit avoir besoin ; je fis encore <lb/>quelques visites : c’etoit d’ailleurs un
-                    jour de Grand Galla, et toute la ville fût illuminées. <lb/>J’avois quelques Gartes à souper. Le 22. Encore une grande <del
-                        rend="strikethrough">flux de Glace</del>
-                    <add place="above">inondation</add> de Glace </p>
+                        <add place="above">je compte que</add>
+                    </subst> Vous aurez recû <lb/>Monsieur et très-honoré Oncle ! celle que je <add place="above">Vous</add> avois adressé. Le 20 nous
+                    dinames tous chez <lb/><rs ref="#p0037">mon père</rs>, en nombreuse compagnie. Le 21 de grand matin à 7 heures, je fûs chez le
+                    jeune <lb/><persName ref="#p2349">Dilthei</persName> et le menai présenter au <persName ref="#p2407">General Polmann</persName>, à
+                    qui le <persName ref="#p2339">Comte Grégoire Orlow</persName> avoit <lb/>donné ordre de fournir tout ce que ce pauvre Orphelin
+                    pouvoit avoir besoin ; je fis encore <lb/>quelques visites : c’etoit d’ailleurs un jour de Grand Galla, et toute la ville fût
+                    illuminées. <lb/>J’avois quelques Gartes à souper. Le 22. Encore une grande <subst>
+                        <del rend="strikethrough">flux de Glace</del>
+                        <add place="above">inondation</add>
+                    </subst> de Glace </p>
                 <pb facs="00000030.jpg" n="4"/>
-                <note hand="#pencil" place="margin-right" type="foliation">18</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">18</note>
                 <!-- Folio 17 verso -->
                 <p>
                     <rs ref="#p0037">Mon père</rs> reprit son rhumatisme, d’ailleurs il se portoit assés bien. La Compagnie du Dimanche <lb/>etoit
-                    chèz moi. Le 23. je commencai à faire <del rend="overwritten">l'inv</del><add place="across">fai</add>re l’inventaire des effèts
-                    du defunt Pasteur, <lb/>ce qui m’occupa depuis 2 heures après midi, jusqu’à 9 heures du soir. Le 24 La riviere <del
-                        rend="overwritten">est</del><add place="across">fut</add>
+                    chèz moi. Le 23. je commencai à faire <subst>
+                        <del rend="overwritten">l'inv</del>
+                        <add place="across">fai</add>
+                    </subst>re l’inventaire des effèts du defunt Pasteur, <lb/>ce qui m’occupa depuis 2 heures après midi, jusqu’à 9 heures du soir.
+                    Le 24 La riviere <subst>
+                        <del rend="overwritten">est</del>
+                        <add place="across">fut</add>
+                    </subst>
                     <lb/>couverte de Glace : je recûs une lettre du <persName ref="#2340">Comte Orlow</persName>, qui me marquà entre autre que <rs
                         ref="#p0081">S.<lb/>M.I.</rs> vient de declarer <rs ref="#p2332">mon frère cadet</rs> Lieutenant d’artillerie, et qu’Elle lui
                     laissat le choix <lb/>du regiment dans lequel il aime mieux servir. <rs ref="#p2332">Mon frère</rs> a là dessûs choisi le Regiment
@@ -340,34 +390,37 @@
                     <lb/>Regiment, qui l’a très bien recû. C’est effectivement une grace que <rs ref="#p0081">S.M.</rs> lui fait, car selon <lb/>les
                     loix <rs ref="#p2332">mon frère</rs> n’auroit pû dévenir que tout au plus Enseigne. On enterra aujourd’hui <lb/><rs>l’Ambassadeur
                         de France</rs> ; la Fiebre pourpre a fait de terribles ravages de l’autre coté <lb/>de la ville. Ici <del rend="strikethrough"
-                        >sur</del> à <placeName>Wasiliostrow</placeName> on <del rend="strikethrough">en n’</del>
-                    <add place="above">n’en</add> a rien ressenti. <rs ref="#p2328">Ma femme</rs> fit quelques visites, <lb/>et nous eumes compagnie
-                    au souper. Hier le 25 : je continuai à faire faire sous <lb/>mon inspection l’inventaire du defunt Pasteur ; la rivière fût encore
-                    inondée de <lb/>Glace. Aujourd’hui rien de remarquable, j’eai encore quelques lettres à ecrire.</p>
+                        >sur</del> à <placeName>Wasiliostrow</placeName> on <subst>
+                        <del rend="strikethrough">en n’</del>
+                        <add place="above">n’en</add>
+                    </subst> a rien ressenti. <rs ref="#p2328">Ma femme</rs> fit quelques visites, <lb/>et nous eumes compagnie au souper. Hier le 25
+                    : je continuai à faire faire sous <lb/>mon inspection l’inventaire du defunt Pasteur ; la rivière fût encore inondée de
+                    <lb/>Glace. Aujourd’hui rien de remarquable, j’eai encore quelques lettres à ecrire.</p>
                 <p><persName ref="#p2386">Ring</persName> a obtenû une bonne pension, j’en suis charmé et doublement charmé, puisque je <lb/>crois que
                     cette pension est une suite de la vocation que je lui avois adressé. Demandez-<lb/>le, Monsieur et très-honoré Oncle ! s’il ne
                     souhaitoit pas prendre chèz lui pour <lb/>quelque tems <add place="above">un ou</add> deux russes, qui sont dejà bien habile dans
                     les ouvrages de Mechanique ? <lb/>et sous quelles conditions il les voudroit prendre ? il pourra les employer à toutes sorte
-                    <lb/>d’ouvrage, pourvû qu’ils se perfectionnent <del rend="strikethrough">son</del><add place="inline"/>dans l’art. de faire
-                    toutes sortes d’Instrumens. <lb/>Ou bien si <persName ref="#p2386">Ring</persName> ne les voudroit pas, ayez la bonté, Monsieur et
-                    très honoré Oncle, de faire <lb/>faire les mêmes propositions au Mechanicien <persName ref="#p2409">Koch</persName>. Pourvû que
-                    l’Academie arrive <lb/>au bût proposé, qui est, que ces russes se perfectionnent dans leur metier. Il est <lb/>tems de finir.
-                    Recevez ici, Monsieur mon très-chèr et très honoré Oncle ! mille <lb/>Complimens, Civilités et Respects de mon père, ma mère, ma
-                    femme, mes frères et sœurs, Enfans <lb/>etc. Mon Père se porte aujourd’hui beaucoup mieux, et le reste, excepté toujours ma pauvre
+                    <lb/>d’ouvrage, pourvû qu’ils se perfectionnent dans <del rend="strikethrough">son</del> l’art. de faire toutes sortes
+                    d’Instrumens. <lb/>Ou bien si <persName ref="#p2386">Ring</persName> ne les voudroit pas, ayez la bonté, Monsieur et très honoré
+                    Oncle, de faire <lb/>faire les mêmes propositions au Mechanicien <persName ref="#p2409">Koch</persName>. Pourvû que l’Academie
+                    arrive <lb/>au bût proposé, qui est, que ces russes se perfectionnent dans leur metier. Il est <lb/>tems de finir. Recevez ici,
+                    Monsieur mon très-chèr et très honoré Oncle ! mille <lb/>Complimens, Civilités et Respects de mon père, ma mère, ma femme, mes
+                    frères et sœurs, Enfans <lb/>etc. Mon Père se porte aujourd’hui beaucoup mieux, et le reste, excepté toujours ma pauvre
                         <lb/><rs>Tante Xsell</rs>, jouissent d’une parfaite santé : je Vous prie aussi très-honoré Oncle <lb/>de faire agréer à
                         <rs>Madame Votre épouse</rs>, Mlles Vos filles et toute Votre aimable <lb/>famille, nos devoirs et amitiés. Pour nos autres
                     Connoissances et parens de <placeName ref="#l1103">Berlin</placeName>, Vous <lb/>leur direz de nôtre part que nos sentimens de
                     respect, reconnoissance et amitié <del rend="strikethrough">sont ineffaçables</del>
-                    <lb/>ne s’efaceront jamais de nos cœurs, et que nous <del rend="strikethrough">nous recommendons</del>
-                    <add place="above">les prions</add> de nous rendre la pareille.</p>
-                <lb/>
-                <salute>Je suis avec un profond respect </salute>
-                <lb/>
-                <salute rend="align (centre)">Monsieur mon très-chèr et très honoré Oncle</salute>
-                <lb/>
-                <salute rend="align (right)">Votre très humble et très-obeïssant <lb/>Serviteur et Ami</salute>
-                <lb/>
-                <signature>J. Albert Euler</signature>
+                    <lb/>ne s’efaceront jamais de nos cœurs, et que nous <subst>
+                        <del rend="strikethrough">nous recommendons</del>
+                        <add place="above">les prions</add>
+                    </subst> de nous rendre la pareille.</p>
+                <closer>
+                    <salute>Je suis avec un profond respect </salute>
+                    <salute rend="align(center)">Monsieur mon très-chèr et très honoré Oncle</salute>
+                    <dateline>à <placeName ref="#l0020">St Petersburg</placeName> ce <date when-iso="1767-04-26">26 avril/4 mai
+                        <lb/>1767</date></dateline>
+                    <salute rend="align(right)">Votre très humble et très-obeïssant <lb/>Serviteur et Ami</salute>
+                    <signed rend="align(right)">J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

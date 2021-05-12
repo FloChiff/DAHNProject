@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov and Hagemeister.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -180,9 +188,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000058.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">36</note>
-                <opener rend="align (right)">à <placeName ref="#pl0020">St : Petersbourg</placeName> ce <date>22 Fevrier/4 Mars 1768</date><lb/>
-                    <salute rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">36</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#pl0020">St : Petersbourg</placeName> ce <date when-iso="1768-02-22">22 Fevrier/4
+                            Mars 1768</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
                 <lb/>
                 <p>Aujourd’hui je ne Vous ecrirai que ce qui est le plus <lb/>préssant ; le tems me manque et les occupations me <lb/>persecutent plus
                     que jamais. <rs ref="#p0081">S.M.I.</rs> m’a chargé de <lb/>Vous dire, très-honoré Oncle, qu’Elle a reçû du <persName ref="#p2340"
@@ -192,21 +202,22 @@
                     <rs>nôtre chef</rs> m’ordonne de Vous <lb/>mander qu’il auroit été charmé de l’accepter, mais qu’à<lb break="no"/>près avoir
                     consulté le <rs>Directeur de l’Imprimerie</rs>, il <lb/>s’est trouvé que tous les <del rend="overwritten">pers</del><add
                         place="across">gens</add> y sont tellement <lb/>occupés à des ouvrages russes, qui toutes ne sauroient être <lb/>différés,
-                        <del rend="strikethrough">désorte</del> que nous ne pouvons pas même tenir <lb/>la parole que nous avons donné au public <del
-                        rend="overwritten">a</del><add place="across">et</add> que <lb/>Vous avez encore fait inserer dans les journeaux et
-                    <lb/>Gazettes litteraires. Vôtre ouvrage, mon chèr Oncle, <lb/>risqueroit donc de rester plus qu’une année chez nous <lb/>avant
-                    que nous fussions en état de le faire imprimer ; <lb/>Et ce seroit un retardement dont le public nous auroit <lb/>peu
-                    d’obligations. <rs ref="#2340">Le Comte</rs> souhaiteroit donc que <lb/>Vous fissiez imprimer Votre ouvrage en <placeName
-                        ref="#l0001">Allemagne</placeName>. <lb rend="align (right)"/>nous <pb facs="00000059.jpg" n="2"/> nous ne manquerons pas d’en
-                    faire une bonne <lb/>provision, et après en avoir fait faire une traduction <lb/>nous profiterons de Votre permission et la ferons
-                    <lb/>imprimer dès que les ouvrages <del rend="strikethrough">d’a</del>présent seront <lb/>achevés. <rs ref="#p0037">Mon pêre</rs>
-                    a fait assembler hier les <lb/>membres du Consistoire. et j’espère que nous serons <lb/>d’aujourd’hui en huit en étât d’adresser
-                    au <persName ref="#p2527">Pasteur <lb/>La Vigne</persName> une vocation pour deservir notre église. <lb/>Il m’avoit ecrit et j’ai
-                    fait circuler sa lettre avec <lb/>un extrait de la Vôtre, mon très-honoré Oncle, <lb/>parmi les membres principaux de notre
-                        communeau<lb break="no"/>té, qui tous paroissent en être très satisfaits. La <lb/><orgName ref="#g0124">Société
-                        oeconomique</orgName> s’assemble actuellement deux fois <lb/>par semaine : il y a 150 Pieces en tout, qui ont couté <lb/>316
-                    Roubles de Port. Votre piece, mon très chèr <lb/>Oncle, roule parmis les Comtes <persName ref="#p2528">Czernitschefs</persName> et
-                        <persName>Orlovs</persName>
+                        <del rend="strikethrough">désorte</del> que nous ne pouvons pas même tenir <lb/>la parole que nous avons donné au public <subst>
+                        <del rend="overwritten">a</del>
+                        <add place="across">et</add>
+                    </subst> que <lb/>Vous avez encore fait inserer dans les journeaux et <lb/>Gazettes litteraires. Vôtre ouvrage, mon chèr Oncle,
+                    <lb/>risqueroit donc de rester plus qu’une année chez nous <lb/>avant que nous fussions en état de le faire imprimer ; <lb/>Et ce
+                    seroit un retardement dont le public nous auroit <lb/>peu d’obligations. <rs ref="#2340">Le Comte</rs> souhaiteroit donc que
+                    <lb/>Vous fissiez imprimer Votre ouvrage en <placeName ref="#l0001">Allemagne</placeName>. <lb rend="align (right)"/>nous <pb
+                        facs="00000059.jpg" n="2"/> nous ne manquerons pas d’en faire une bonne <lb/>provision, et après en avoir fait faire une
+                    traduction <lb/>nous profiterons de Votre permission et la ferons <lb/>imprimer dès que les ouvrages <del rend="strikethrough"
+                        >d’a</del>présent seront <lb/>achevés. <rs ref="#p0037">Mon pêre</rs> a fait assembler hier les <lb/>membres du Consistoire.
+                    et j’espère que nous serons <lb/>d’aujourd’hui en huit en étât d’adresser au <persName ref="#p2527">Pasteur <lb/>La
+                        Vigne</persName> une vocation pour deservir notre église. <lb/>Il m’avoit ecrit et j’ai fait circuler sa lettre avec <lb/>un
+                    extrait de la Vôtre, mon très-honoré Oncle, <lb/>parmi les membres principaux de notre communeau<lb break="no"/>té, qui tous
+                    paroissent en être très satisfaits. La <lb/><orgName ref="#g0124">Société oeconomique</orgName> s’assemble actuellement deux fois
+                    <lb/>par semaine : il y a 150 Pieces en tout, qui ont couté <lb/>316 Roubles de Port. Votre piece, mon très chèr <lb/>Oncle, roule
+                    parmis les Comtes <persName ref="#p2528">Czernitschefs</persName> et <persName>Orlovs</persName>
                     <lb/>qui ont été chargés d’examiner toutes les pieces <lb/>françoises et russes, et qui en entretiennent <rs ref="#p0081"
                         >S.M.I.</rs>
                     <lb/>A la lecture d’une de ces pieces on reconnût d’abord <lb/>l’Auteur qui est <persName ref="#p0079">Mr. de Voltaire</persName>
@@ -216,17 +227,20 @@
                     content et 12 000 païsans. Sur Votre der<lb break="no"/>niere lettre Monsieur et très-chèr Oncle, le <persName ref="#p2397">Comte
                         <lb/>Gollovin</persName> resolût d’abord, que <rs ref="#p2501">son fils</rs> devoit quitter <lb/><placeName ref="#l1103"
                         >Berlin</placeName> pour aller passer une ou deux années à <lb/><placeName ref="#l0079">Genève</placeName>, il vient pour cet
-                    effet d’adresser une lettre <lb rend="align (right)"/>pour <pb facs="00000060.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">37</note><p rend="align (left)"/>pour <persName ref="p2530">Mr de
-                        Zollickoffer</persName>, dans laquelle il tâche de <lb/>l’engager à accepter la place de Gouverneur auprès <lb/>de <rs
-                        ref="#p2501">son fils</rs> sous des conditions très acceptables. Il <lb/>voulût d’abord engager <persName ref="#p2500">Mr. de
-                        Sonntag</persName>, mais celui-ci <lb/><del rend="strikethrough">fût</del><add place="above">restât</add> trop ferme dans
-                    s*l*a resolution de retourner dans sa <lb/>patrie, et il est effectivement parti d’ici, il n’y a pas <lb/>longtems. Rien ne
-                    transpire de la lettre remarquable <lb/>dont Vous avez eu la bonté de me faire confiance : <lb/>je soupçonne que le <rs
-                        ref="#p0049">Roi</rs> au lieu de la faire expedier <lb/>a envoié une autre et qu’il a changé d’avis. Car (entre <lb/>nous) le
-                        <persName ref="#p2339">Comte Gregori Orlov</persName> (le favorit) a dit que <rs ref="#p0081">S.M.<lb/>I.</rs> avoit reçû une
-                    lettre du <rs ref="#p0049">Roi de Prusse</rs>, qui l’invite <lb/>d’accepter le titre de Protectrice de l’Ac : de <placeName
-                        ref="#l1103">Berlin</placeName>.</p>
+                    effet d’adresser une lettre <lb/>
+                    <hi rend="align (right)">pour</hi>
+                    <pb facs="00000060.jpg" n="3"/>
+                    <note hand="#pencil" place="margin(right)" type="foliation">37</note>pour <persName ref="p2530">Mr de Zollickoffer</persName>,
+                    dans laquelle il tâche de <lb/>l’engager à accepter la place de Gouverneur auprès <lb/>de <rs ref="#p2501">son fils</rs> sous des
+                    conditions très acceptables. Il <lb/>voulût d’abord engager <persName ref="#p2500">Mr. de Sonntag</persName>, mais celui-ci <lb/><subst>
+                        <del rend="strikethrough">fût</del>
+                        <add place="above">restât</add>
+                    </subst> trop ferme dans s*l*a resolution de retourner dans sa <lb/>patrie, et il est effectivement parti d’ici, il n’y a pas
+                    <lb/>longtems. Rien ne transpire de la lettre remarquable <lb/>dont Vous avez eu la bonté de me faire confiance : <lb/>je
+                    soupçonne que le <rs ref="#p0049">Roi</rs> au lieu de la faire expedier <lb/>a envoié une autre et qu’il a changé d’avis. Car
+                    (entre <lb/>nous) le <persName ref="#p2339">Comte Gregori Orlov</persName> (le favorit) a dit que <rs ref="#p0081"
+                        >S.M.<lb/>I.</rs> avoit reçû une lettre du <rs ref="#p0049">Roi de Prusse</rs>, qui l’invite <lb/>d’accepter le titre de
+                    Protectrice de l’Ac : de <placeName ref="#l1103">Berlin</placeName>.</p>
                 <p>On ne sait pas ce que <rs ref="#p0081">S.M.I.</rs> y a repondû. Le Thermomètre <lb/>a été hier et avant hier à 26 dégrés de
                         <persName ref="#p2512">Reaumur</persName>
                     <lb/>dessous le point de congelation. Les Professeurs <persName ref="#p2462">Pallas</persName> et <lb/><persName ref="#p2393"
@@ -235,12 +249,13 @@
                         Orlov</persName> a ordonné <lb/>de faire faire une belle estampe de <rs ref="#p0037">mon père</rs>.</p>
                 <p>Nous nous portons très bien, tous sans exception, <lb/>mille et milles complimens de toute ma famille, <lb/>à Vous très-honoré
                     Oncle et aux Vôtres.</p>
-                <lb/>
                 <closer><salute>je suis avec un profond respect <lb/>Votre très-humble et très obeissant <lb/>Serviteur et Neveu</salute>
-                    <lb/><signature>J. Albert Euler</signature></closer>
+                    <signed>J. Albert Euler</signed></closer>
                 <pb facs="00000061.jpg" n="4"/>
-                <p>Les 4 Berlinois qui ont offert leurs Services à <rs ref="#p0081">S.M.<lb/>I.</rs> comme je Vous l’ai marqué la derniere fois, ont
-                    <lb/>eu un refûs, leurs propositions n’étant pas accep<lb break="no"/>tables.</p>
+                <postscript>
+                    <p>Les 4 Berlinois qui ont offert leurs Services à <rs ref="#p0081">S.M.<lb/>I.</rs> comme je Vous l’ai marqué la derniere fois,
+                        ont <lb/>eu un refûs, leurs propositions n’étant pas accep<lb break="no"/>tables.</p>
+                </postscript>
             </div>
         </body>
     </text>

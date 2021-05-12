@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -185,9 +193,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000100.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">58</note> A <placeName ref="#l0020">St. Petersbourg</placeName> ce <date>1
-                    septembre 1768 9/20</date>
-                <opener>Monsieur mon très-chèr et très-honoré Oncle,</opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">58</note>
+                <opener><dateline>A <placeName ref="#l0020">St. Petersbourg</placeName> ce <date when-iso="1768-09-01">1 septembre 1768
+                        9/20</date></dateline>
+                    <salute>Monsieur mon très-chèr et très-honoré Oncle,</salute></opener>
                 <p>Le Sr <persName>Bouc</persName> est ici dans une situation bien deplorable, son hotesse, qui vient de me <lb/>quitter tout à
                     l’heure, ménace de le faire mêttre en prison, s’il ne lui paie au <lb/>bout de 4 à 5 semaines les 80 Roubles, qu’il lui doit pour
                     le logement, la table, <lb/>et les secours qu’elle lui a rendû pendant sa grande maladie qu’il a éssuié peu de tems <lb/>après son
@@ -246,11 +255,15 @@
                     et qu’il compte pouvoir venir améner <rs ref="#p2454">ma sœur</rs> au prin<lb break="no"/>tems prochain. Je serai très content,
                     s’il étoit un peu plus veridique, mais <lb/>c’est un homme qui a pris la mauvaise coutume de mentir toutes les fois qu’il
                     <lb/>ouvre la bouche. Le tems presse, et il faut finir sans ajouter un <lb/>extrait de mon journal, qui d’ailleurs ne contiendroit
-                    rien d’extraordinaire. Adieu <lb/>mon très-honoré Oncle, je vais encore ecrire quelques lignes à <rs>mon beau <lb/>père</rs>. <rs
-                        ref="#p2328">Ma femme</rs> Vous salue très respectueusement, et toute ma famille Vous <lb/>fait faire mille complimens. Gardez
-                    nous toujours Vôtre chère bienveuillance <lb/>et soyez persuadé que personne n’en est plus pénétré que Votre tres humble et très
-                    obéïssant Serviteur et Neveu <signature>J.Albert Euler</signature> [en marge] A <placeName ref="#l0020">St Petersbourg</placeName>
-                    ce 9/20 septembre 1768. </p></div>
+                    rien d’extraordinaire. Adieu <lb/>mon très-honoré Oncle, je vais encore ecrire quelques lignes à <rs>mon beau <lb/>père</rs>.</p>
+                <closer>
+                    <salute><rs ref="#p2328">Ma femme</rs> Vous salue très respectueusement, et toute ma famille Vous <lb/>fait faire mille
+                        complimens. Gardez nous toujours Vôtre chère bienveuillance <lb/>et soyez persuadé que personne n’en est plus pénétré que
+                        Votre tres humble et<lb/> très obéïssant Serviteur et Neveu </salute>
+                    <signed>J.Albert Euler</signed>
+                    <dateline rend="margin(right)">[en marge] A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1768-09-09">9/20
+                            septembre 1768</date>. </dateline></closer>
+            </div>
         </body>
     </text>
 </TEI>

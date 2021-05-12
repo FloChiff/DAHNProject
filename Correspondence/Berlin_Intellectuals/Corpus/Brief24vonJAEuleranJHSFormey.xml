@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and strikethroughs.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -181,9 +189,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000066.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">40</note><opener rend="align (right)">à <placeName ref="#l0020">St :
-                        Petersbourg</placeName> ce <date>16/27 Avril 1768</date>.<lb/><salute rend="align (left)">Monsieur mon très-chèr et très
-                        honoré Oncle,</salute></opener><lb/>
+                <note hand="#pencil" place="margin(right)" type="foliation">40</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1768-04-16">16/27
+                            Avril 1768</date>.</dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très honoré Oncle,</salute></opener>
+                <lb/>
                 <p>Je reprens la plume au bout de 5 semaines, Vous ayant <lb/>ecrit ma derniere, Monsieur et très honoré Oncle, le <lb/>14 du mois
                     passé : je commence par répondre aux <lb/>trois dernieres lettres du 14, 27 Mars et du 8 Avril, <lb/>que Vous m’avez fait
                     l’honneur de m’ecrire. <lb/><persName ref="#p2465">Mr. Guldenstädt</persName> m’a écrit de Riga, et demandé qu’on <lb/>l’y laisse
@@ -201,8 +211,9 @@
                     avoit offert. <lb/>Ici on n’en sait rien et le <persName ref="#2340">Comte Orlov</persName> garde la dessus <lb/>un profond
                     silence. L’Epicier <persName ref="#p2547">Bouc</persName> est ici et loge <lb/>à <placeName>Wasiliostrov</placeName> avec un
                     Officier hollandois ; il se porte <lb/>bien à ce qu’on m’a dit ; je n’ai pas encore pû le <lb/>voir, et m’informer de son état et
-                    de ce qu’il fait. </p><pb facs="00000067.jpg" n="2"/><p><rs ref="#p0037">Mon père</rs> vient de recevoir par le <persName
-                        ref="#p2508">Prince Dolgorouki</persName>
+                    de ce qu’il fait. </p>
+                <pb facs="00000067.jpg" n="2"/>
+                <p><rs ref="#p0037">Mon père</rs> vient de recevoir par le <persName ref="#p2508">Prince Dolgorouki</persName>
                     <lb/>une Seconde requète des Mssrs. <persName ref="#p2509">Huggenin</persName>, <persName ref="#p2548">Tournon</persName>,
                         <lb/><persName ref="#p2511">Castillon</persName> pere et fils. Le Prince s’étoit trompé <persName ref="#p2510"
                         >Sulzer</persName>
@@ -223,7 +234,7 @@
                     />eauté l’ont connû en Suede et ceux-ci louent <lb/>beaucoup ses sermons tant françois qu’allemands. <lb/>Craignant que la
                     distribution du prix oeconomique <lb/>ne causasse plusieures disputes, où je risquerois <lb/>d’être impliqué, je me suis
                     heureusement tiré de tout, <lb/>soux prétexte que je ne connois pas suffisamment <lb/>de quoi il s’agit. et que également l’état
-                    de la <pb facs="00000068.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation">41</note>rivière m’empecheroit
+                    de la <pb facs="00000068.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">41</note>rivière m’empecheroit
                     d’assister aux assemblées. <lb/>Effectivement depuis le 6 de ce mois on ne pouvoit plus <lb/>passer la riviere en carosse, et hier
                     lesa glaces s’en est <lb/>allé tout à fait ; de sorte que pour aller de l’autre <lb/>coté il faut avoir double équipageF. Le prix
                     sera <lb/>distribué mecredi prochain. C’est le fils du Jardinier <lb/><persName ref="#p2549">Neumann</persName> qui veut venir
@@ -242,17 +253,18 @@
                     <lb/>la femme de <rs ref="#p2330">mon frere</rs> le medecin accoucha d’un <lb/>fils, et nous l’allions voir. le 27 quelques
                     visites. <lb/>le 28 à l’église reformée. le 29 on nous invitâ <lb/>pour entendre la messe à la Chapelle de <rs ref="#p0081"
                         >S.M.I</rs>, <lb/>qui se lisoit dans la nuit entre <add place="above">le</add> 29 et le 30. Mais <lb/>Vous jugerez aisement,
-                    que ce n’étoit pas là mon <lb rend="align (right)"/>affaire. [en marge]F c’est-à-dire jusqu’à ce que le pont sera rémis. <pb
-                        facs="00000069.jpg" n="4"/>affaire, que je n’y ai pas été et que personne n’étoit force non <lb/>plus. le 30 jour de Pâques, à
-                    l’église ensuite chez <rs ref="#2340">mon chef</rs> et <lb/>en retournant chez <rs ref="#p2330">mon frere</rs> qui fut obligé de
-                    prendre une <lb/>nourrice pour son enfant. L’après diné nous eumes plusieures <lb/>visites ; et plusieurs vinrent aussi nous
-                    presenter des œufs <lb/>en nous felicitant, auxquels il falloit payer les œufs au-delà <lb/>du quadruple. Le 31 encore quelques
-                    visites ; j’allois vers le <lb/>soir à la cour, mais <rs ref="#p0081">S.M.I.</rs> n’étoit pas visible, je fis donc <lb/>ma cour à
-                    la belle sœur l’accouchée. Le 1 Avril chez le <persName ref="#p2335">Comte <lb/>Alexis Rasumovski</persName>, qui alloit diner
-                    chez <rs ref="#p0081">S.M.I.</rs> je dinai donc chez <lb/><rs ref="#2340">mon chef</rs>, et après diner nous eumes quelques
-                    visites ; le 2 et 3 <lb/>rien_le 4 jours de naissance de <rs ref="#p0037">mon père</rs> et le 5 celui de <lb/><rs ref="#p2329">ma
-                        mère</rs>. <rs ref="#p0037">Mon pere</rs> fit assembler la commission academique <lb/>extraordinairement pour refler les
-                    voyages de <persName ref="#p2462">Pallas</persName>, <persName ref="#p2405">Gmelin</persName>, <lb/><persName ref="#p2552"
+                    que ce n’étoit pas là mon <lb/>
+                    <hi rend="align(right)">affaire</hi>. [en marge]F c’est-à-dire jusqu’à ce que le pont sera rémis. <pb facs="00000069.jpg" n="4"
+                    />affaire, que je n’y ai pas été et que personne n’étoit force non <lb/>plus. le 30 jour de Pâques, à l’église ensuite chez <rs
+                        ref="#2340">mon chef</rs> et <lb/>en retournant chez <rs ref="#p2330">mon frere</rs> qui fut obligé de prendre une
+                    <lb/>nourrice pour son enfant. L’après diné nous eumes plusieures <lb/>visites ; et plusieurs vinrent aussi nous presenter des
+                    œufs <lb/>en nous felicitant, auxquels il falloit payer les œufs au-delà <lb/>du quadruple. Le 31 encore quelques visites ;
+                    j’allois vers le <lb/>soir à la cour, mais <rs ref="#p0081">S.M.I.</rs> n’étoit pas visible, je fis donc <lb/>ma cour à la belle
+                    sœur l’accouchée. Le 1 Avril chez le <persName ref="#p2335">Comte <lb/>Alexis Rasumovski</persName>, qui alloit diner chez <rs
+                        ref="#p0081">S.M.I.</rs> je dinai donc chez <lb/><rs ref="#2340">mon chef</rs>, et après diner nous eumes quelques visites ;
+                    le 2 et 3 <lb/>rien_le 4 jours de naissance de <rs ref="#p0037">mon père</rs> et le 5 celui de <lb/><rs ref="#p2329">ma mère</rs>.
+                        <rs ref="#p0037">Mon pere</rs> fit assembler la commission academique <lb/>extraordinairement pour refler les voyages de
+                        <persName ref="#p2462">Pallas</persName>, <persName ref="#p2405">Gmelin</persName>, <lb/><persName ref="#p2552"
                         >Falck</persName>, <persName ref="#p2465">Güldenstadt</persName> et <persName ref="#p2518">Lepechin</persName>, qui partiront
                     vers la fin du <lb/>mois prochain. Le <persName ref="#p2494">Comte de Fermov</persName> me vint voir et nous <lb/>raconta que Le
                         <persName ref="#p2350">Comte Panin</persName> Grand Gouverneur de <rs>S.A.I.</rs>
@@ -267,11 +279,12 @@
                         Alexis</persName>, et ayant fait encore d’autres cures surpren<lb break="no"/>nantes, on ne lui a non seulement rendû sa
                     place, mais S.M.<lb/>I. a encore accordé sa protection particulière : il est obligé <lb/>de demeurer au Palais imperial, et
                     entreprend à présent à <lb/>guerir les maladies les plus obstinées. Pourvû que ce bon <lb/>homme ne fasse pas une terrible chûte :
-                    il me semble qu’il <lb/>vaudroit mieux qu’il cessât de guerir.</p><pb facs="00000070.jpg" n="5"/><note hand="#pencil"
-                    place="margin-right" type="foliation">42</note>
-                <opener rend="align (centre=">Continuation.</opener><p>le 6 Avril. A l’église mais en retournant, les sentinelles <lb/>placées au
-                    rivage ne voulurent plus nous permettre de <lb/>répasser en voiture la riviere. Nous étions bien embar<lb break="no"/>rassés.
-                    Heureusement arrivâ un <rs>Lieutenant General</rs>
+                    il me semble qu’il <lb/>vaudroit mieux qu’il cessât de guerir.</p>
+                <pb facs="00000070.jpg" n="5"/>
+                <note hand="#pencil" place="margin(right)" type="foliation">42</note>
+                <p rend="align(center)">Continuation.</p>
+                <p>le 6 Avril. A l’église mais en retournant, les sentinelles <lb/>placées au rivage ne voulurent plus nous permettre de <lb/>répasser
+                    en voiture la riviere. Nous étions bien embar<lb break="no"/>rassés. Heureusement arrivâ un <rs>Lieutenant General</rs>
                     <lb/>qui nous permît de passer encore cette fois ci, mais de <lb/>ne pas nous écarter du chemin. En effet la glace com<lb
                         break="no"/>mençoit dejà à s’affoiblir, et l’après diner, nous fûmes <lb/>contraint de passer la riviere à pied, pour aller
                     chez <lb/><rs ref="#p2330">mon frère</rs> qui fit baptiser et qui nous envoia son <lb/>carosse à la rencontre. Je tins l’enfant
@@ -280,16 +293,22 @@
                     : on <lb/>donnâ à l’enfant les noms Leonhard André Charles. <lb/>Le 7 fut l’assemblée génerale dans l’église dont je Vous <lb/>ai
                     dejà parlé, Monsieur et très-honoré Oncle. Le 9 j’eus <lb/>la Visite du <persName ref="#p2485">Prof. Lowitz</persName>. Le 10
                     j’achetai un garçon <lb/>pour 30 Roubles, avec plusieurs milliers de poux : j’espère <lb/>avoir fait un bon achat ; je le ferai
-                    apprendre à friser. <lb/>Le <del rend="strikethrough">13</del><add place="above">12</add> je fis quelques visites et ensuite à
-                    l’Assemblée qui <lb/>se tient tous les Samdis au corps de cadèts. Le 13 à l’église <lb/>lutherienne. <rs ref="#p0081">S.M.I.</rs>
-                    partirent pour <placeName>Sarskoe Selo</placeName>.</p><lb/><p>Voilà tout mon sac vuidé. Cette lettre partira après <lb/>demain :
-                    s’il se passe encore quelque chose qui mérite <lb/>d’être indiquée, je l’ajouterai. Mille et mille civilités <lb/>de <rs
-                        ref="#p0037">mon père</rs> et de <rs ref="#p2329">ma mère</rs> : nos respects à <rs>Mad. Votre <lb/>épouse</rs>, bien de
-                    complimens aux Mesdemoiselles Vos <lb/>filles et de tendres amities aux petits. <rs ref="#p2328">Ma femme</rs>, et <lb/>tous se
-                    récommandent à Votre bienveuillance et amitiés. <lb/>Nos civilités à MM. <persName ref="#p2554">Pegâ</persName>, la maison
-                    Labaume, Mrs <lb/><persName ref="#p2452">Handreich</persName> etc etc je suis avec beaucoup de respect </p><p><salute
-                        rend="align (centre)">Monsieur et très honoré Oncle Votre très […] et très obeïssant Serviteur</salute></p><p><signature>[J.]
-                        Albert Euler</signature></p>.<note>[trou au bas de la page au milieu]</note></div>
+                    apprendre à friser. <lb/>Le <subst>
+                        <del rend="strikethrough">13</del>
+                        <add place="above">12</add>
+                    </subst> je fis quelques visites et ensuite à l’Assemblée qui <lb/>se tient tous les Samdis au corps de cadèts. Le 13 à l’église
+                    <lb/>lutherienne. <rs ref="#p0081">S.M.I.</rs> partirent pour <placeName>Sarskoe Selo</placeName>.</p>
+                <p>Voilà tout mon sac vuidé. Cette lettre partira après <lb/>demain : s’il se passe encore quelque chose qui mérite <lb/>d’être
+                    indiquée, je l’ajouterai. Mille et mille civilités <lb/>de <rs ref="#p0037">mon père</rs> et de <rs ref="#p2329">ma mère</rs> :
+                    nos respects à <rs>Mad. Votre <lb/>épouse</rs>, bien de complimens aux Mesdemoiselles Vos <lb/>filles et de tendres amities aux
+                    petits. <rs ref="#p2328">Ma femme</rs>, et <lb/>tous se récommandent à Votre bienveuillance et amitiés. <lb/>Nos civilités à MM.
+                        <persName ref="#p2554">Pegâ</persName>, la maison Labaume, Mrs <lb/><persName ref="#p2452">Handreich</persName> etc etc je
+                    suis avec beaucoup de respect </p>
+                <closer>
+                    <salute rend="align(center)">Monsieur et très honoré Oncle<lb/> Votre très […] et très obeïssant Serviteur</salute>
+                    <signed>[J.] Albert Euler.</signed></closer>
+                <note>[trou au bas de la page au milieu]</note>
+            </div>
         </body>
     </text>
 </TEI>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -173,8 +180,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited persName, orgName, placeName, language.</change>
@@ -186,19 +194,22 @@
         <body>
             <div type="transcription">
                 <pb facs="00000169.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">96</note> A <placeName ref="#l0020">St Petersbourg</placeName> ce <date>23
-                    Juin/4 juillet 1769</date>.<opener>Monsieur mon très chèr et très honoré Oncle</opener>, <p>Il y aura venderdi [sic] prochain six
-                    semaines que je ne Vous aie écrit, je merite des <lb/>réproches, et je dévrois m’excuser, mais j’ai tant de Choses à Vous écrire,
-                    mon très <lb/>honoré Oncle, que je crains que le papier ne me manque. Ma derniere Lettre <lb/>étoit du 15 du mois passé, j’ai reçû
-                    depuis trois de Vos lettres, savoir du 13, et 37 <lb/>de Mai et en dernier lieu du 10 de Juin. J’en vais parcourrir les articles
-                    et <lb/>réprendre ensuite le fil de mon journal. Je crois que les projets du <rs>C.de R.</rs> ont <lb/>échoüé, j’attendrai donc
-                    tout ce que Vous me promettez par le Canal de <persName>Nicolaï</persName>. Si <lb/>je réponds au D. <persName>Fermin</persName>
-                    en qualité de Secretaire de l’<orgName ref="#g0123">Academie</orgName>, je Vous adresserai la <lb/>lettre, ne sachant pas combien
-                    de tems il restera encore à <placeName ref="#l1103">Berlin</placeName>. Votre voiage à <placeName ref="#l0091">Potsdam</placeName>
+                <note hand="#pencil" place="margin-right" type="foliation">96</note>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-06-23">23 Juin/4
+                            juillet 1769</date>.</dateline><salute>Monsieur mon très chèr et très honoré Oncle,</salute>
+                </opener>
+                <p>Il y aura venderdi [sic] prochain six semaines que je ne Vous aie écrit, je merite des <lb/>réproches, et je dévrois m’excuser,
+                    mais j’ai tant de Choses à Vous écrire, mon très <lb/>honoré Oncle, que je crains que le papier ne me manque. Ma derniere Lettre
+                    <lb/>étoit du 15 du mois passé, j’ai reçû depuis trois de Vos lettres, savoir du 13, et 37 <lb/>de Mai et en dernier lieu du 10 de
+                    Juin. J’en vais parcourrir les articles et <lb/>réprendre ensuite le fil de mon journal. Je crois que les projets du <rs>C.de
+                        R.</rs> ont <lb/>échoüé, j’attendrai donc tout ce que Vous me promettez par le Canal de <persName>Nicolaï</persName>. Si
+                    <lb/>je réponds au D. <persName>Fermin</persName> en qualité de Secretaire de l’<orgName ref="#g0123">Academie</orgName>, je Vous
+                    adresserai la <lb/>lettre, ne sachant pas combien de tems il restera encore à <placeName ref="#l1103">Berlin</placeName>. Votre
+                    voiage à <placeName ref="#l0091">Potsdam</placeName>
                     <lb/>nous a tous beaucoup interessé, j’aurois souhaité qu’il eut des suites plus réelles que <lb/>les promesses des Cat et
                     [Quinties ?]. Ce sera toujours <persName>Mr. Trappe</persName> qui se chargera des <lb/>cartes géographiques du Cap.
                         <persName>Müller</persName> ; il partira surement. <rs ref="#p0037">Mon père</rs> le chargera aussi <lb/>d’un exemplaire de
-                    son <titre>Calcul intégral</titre> pour <persName>Mr. Béguelin</persName>, qui a bien tort de <lb/>supçonner que <rs ref="#p0037"
+                    son <title>Calcul intégral</title> pour <persName>Mr. Béguelin</persName>, qui a bien tort de <lb/>supçonner que <rs ref="#p0037"
                         >mon père</rs> l’ait oublié. Vous aurez la bonté, Monsieur et très chèr <lb/>Oncle de lui faire bien de complimens de la part
                     de <rs ref="#p0037">mon père</rs> et de l’assurer <lb/>de ses plus tendres souvenirs/ <persName>Mr. Trappe</persName> vous enverra
                     aussi /trois/2 exemplaires <lb/>du Second tome du <title>Calcul l’intégral</title>, que Vous aurez la bonté de donner à <lb/>Mssrs
@@ -253,7 +264,7 @@
                     congé ; tous après avoir depensé <lb/>le peu qu’ils avoient et contracté encore de déttes, viennent d’avoir <lb/>enfin le même
                     sort, c’est-à-dire, on les a emploié d’un rang plus bas : <lb/>outre cela il faut qu’ils s’équipent eux-mêmes et qu’ils fassent le
                     voiage à <pb facs="00000171.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">97</note> à leurs dépens ; je ne sais comment ils se tireront
+                    <note hand="#pencil" place="margin(right)" type="foliation">97</note> à leurs dépens ; je ne sais comment ils se tireront
                     d’affaires. D’ailleurs ils sont <lb/>tous mis dans les corps-francs, et seront par conséquent congediés dès que la <lb/>paix sera
                     conclue. Je me promenai ensuite à la bourse et de là l’observatoire <lb/>pour prendre avec le Père <persName>Mayer</persName> les
                     arrangémens nécessaires pour l’observation <lb/>du passage de Venus. Je soupai enfin chèz <persName ref="#p2404">Mr.
@@ -349,10 +360,16 @@
                         >Mr.Modell</persName>. <lb/>Hier nous eumes la visite de <rs>notre Pasteur</rs> avec son épouse. Aujourd’hui <lb/>j’expedie
                     mes lettres. Adieu Monsieur et très honoré Oncle, continuez <lb/>nous Votre bienveuïllance et soyez assuré que nous ne cesserons
                     de Vous en <lb/>marquer toujours notre réconnoïssance : Distribuez, s’il Vous plait, nos <lb/>respects, dévoirs et amitiés à
-                        <rs>Madame Votre épouse</rs> et à tous ceux <lb/>qui Vous appartiennent. </p>je suis avec un profond respect <lb/>Monsieur mon
-                très chèr et très honoré Oncle <lb/>Votre très humble et très obeïssant <lb/>Serviteur et Neveu <signature>J. Albert Euler</signature>
-                Mon bût est de câcher autant qu’il m’est possible, que je sois l’auteur de <lb/>l’écrit envoié à <placeName ref="#l0044"
-                    >Paris</placeName>. <pb facs="00000174.jpg" n="6"/>
+                        <rs>Madame Votre épouse</rs> et à tous ceux <lb/>qui Vous appartiennent.</p>
+                <closer><salute>je suis avec un profond respect </salute>
+                    <salute rend="indent">Monsieur mon très chèr et très honoré Oncle </salute>
+                    <salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur et Neveu </salute>
+                    <signed>J. Albert Euler</signed></closer>
+                <postscript>
+                    <p>Mon bût est de câcher autant qu’il m’est possible, que je sois l’auteur de <lb/>l’écrit envoié à <placeName ref="#l0044"
+                            >Paris</placeName>. </p>
+                </postscript>
+                <pb facs="00000174.jpg" n="6"/>
                 <note resp="emmanuelle.chaze">page vierge</note>
             </div>
         </body>

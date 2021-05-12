@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -182,9 +190,10 @@
             <div type="transcription">
                 <pb facs="00000038.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">24</note>
-                <opener rend="align (right)">à <placeName ref="#l0020">St : Petersbourg 1<supplied reason="paper missing">4</supplied> A<supplied
-                            reason="paper missing">out 1767</supplied>/26</placeName><salute rend="align (left)"><lb/>Monsieur mon très-chèr et
-                        très-honoré Oncle!</salute></opener>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0020">St : Petersbourg</placeName>
+                        <date when-iso="1767-08-14">1<supplied reason="paper missing">4</supplied> A<supplied reason="paper missing">out
+                                1767</supplied>/26</date></dateline>
+                    <salute rend="align(left)"><lb/>Monsieur mon très-chèr et très-honoré Oncle!</salute></opener>
                 <p>Voilà encore près de sept semaines ecoulées, sans que j’aie pû me procurer l’honneur de <lb/>Vous entretenir par ecrit ; le tems,
                     mon très-honoré Oncle, le tems se passe ici bien vite, <lb/>il me semble même, plus rapidement qu’à <placeName ref="#l1103"
                         >Berlin</placeName>, quoiqu’il soit très sur que les <lb/>jours s’y passoient plus agreablement qu’ici ; je ne puis pas dire,
@@ -192,39 +201,44 @@
                     plaisirs que <placeName ref="#l1103">Berlin</placeName> seule me peut faire gouter. Je viens <lb/>à Votre dernière lettre du 4
                     Aout, remplie de marques des bontés et des marques <lb/>de la plus précieuse amitié, dont Vous ne cessez, très chèr Oncle, de me
                     <lb/>combler : aussi sont-ce Vos lettres seules qui soient en etât de me dedommag[er] <lb/>en quelque partie de la perte que j’ai
-                    fait <del rend="overwritten">de</del><add place="abobe">en</add> Votre personne, il-y-a maintenan[t] <lb/>dejà plus qu’un an ;
-                    jugez Vous-même de là, si Vos lettres peuvent être p[our] <lb/>moi trop longues ou se suivre trop fréquemment. Vous commencez
-                    Votre <lb/>dernière par me faire deux reproches amicales, et je vais Monsieur et très <supplied reason="missing paper"
-                        >cher</supplied>
+                    fait <subst>
+                        <del rend="overwritten">de</del>
+                        <add place="above">en</add>
+                    </subst> Votre personne, il-y-a maintenan[t] <lb/>dejà plus qu’un an ; jugez Vous-même de là, si Vos lettres peuvent être p[our]
+                    <lb/>moi trop longues ou se suivre trop fréquemment. Vous commencez Votre <lb/>dernière par me faire deux reproches amicales, et
+                    je vais Monsieur et très <supplied reason="missing paper">cher</supplied>
                     <lb/>Oncle me justifier en deux môts et Vous remercier de ces reproches mêmes comme <lb/>des nouvelles marques que Vous me donnez
-                    de Votre amitié envers moi. Si j’avois <lb/><del rend="overwritten">pr</del><add place="across">pû</add> prevoir que <rs
-                        ref="#p2328">ma femme</rs> ne Vous auroit pas annoncé elle-même sa grossesse <lb/>dans la lettre qu’elle Vous a ecrite il-y-a
-                    quelque mois, et que Vous n’auriez <lb/>plus reconnû <rs ref="#p0037">l’auteur</rs> des <title>lettres ecrites à une princesse
-                        d’Allemagne</title>, je n’aurois <lb/>pas manqué de Vous mander l’une et l’autre nouvelle, car je supposois que Vous <lb/>les
-                    saviez dejà, et je n’en doutois même en aucune façon. Je ne sais par quelle <lb/>raison <persName ref="#p2333">Mr de
-                        Stehlin</persName> a tardé de vous répondre sur le sujet du jeune <persName ref="#p2385">Berger</persName> et de la
-                    <lb/>lettre de change pour son depart. Dès qu'on a reçu Votre lettre Monsieur et très chèr <lb/>Oncle, on ne balança plus de
-                    rejetter les propositions du jeune <persName ref="#p2385">Berger</persName>, de contremander <lb/>la lettre de change qu’on Vous
-                    avoit destiné et de Vous ecrire, que Vous gardiez <lb/>celle du jeune <persName ref="#p2385">Berger</persName> pour Vous faire
-                    payer Votre <del rend="strikethrough">pens</del> demi-pension. <rs ref="#p0037">Mon père</rs>
+                    de Votre amitié envers moi. Si j’avois <lb/><subst>
+                        <del rend="overwritten">pr</del>
+                        <add place="across">pû</add>
+                    </subst> prevoir que <rs ref="#p2328">ma femme</rs> ne Vous auroit pas annoncé elle-même sa grossesse <lb/>dans la lettre qu’elle
+                    Vous a ecrite il-y-a quelque mois, et que Vous n’auriez <lb/>plus reconnû <rs ref="#p0037">l’auteur</rs> des <title>lettres
+                        ecrites à une princesse d’Allemagne</title>, je n’aurois <lb/>pas manqué de Vous mander l’une et l’autre nouvelle, car je
+                    supposois que Vous <lb/>les saviez dejà, et je n’en doutois même en aucune façon. Je ne sais par quelle <lb/>raison <persName
+                        ref="#p2333">Mr de Stehlin</persName> a tardé de vous répondre sur le sujet du jeune <persName ref="#p2385">Berger</persName>
+                    et de la <lb/>lettre de change pour son depart. Dès qu'on a reçu Votre lettre Monsieur et très chèr <lb/>Oncle, on ne balança plus
+                    de rejetter les propositions du jeune <persName ref="#p2385">Berger</persName>, de contremander <lb/>la lettre de change qu’on
+                    Vous avoit destiné et de Vous ecrire, que Vous gardiez <lb/>celle du jeune <persName ref="#p2385">Berger</persName> pour Vous
+                    faire payer Votre <del rend="strikethrough">pens</del> demi-pension. <rs ref="#p0037">Mon père</rs>
                     <lb/>continue à se bien porter, Dieu en soit loué ! mais sa vûe est toujours extremem<supplied reason="folding">ent</supplied>
                     <lb/>foible ; lorsqu’il fait un tems très clair, il ne distingue rien du tout et est oblig<supplied reason="folding">é</supplied>
                     <lb/>à se faire mener tout comme <persName ref="#p2468">Mr Horguelin</persName>, mais lorsqu’il fait un peu obscur, il <lb/>peut
                     marcher tout seul et même distinguer les couleurs, les habits, les portes, et <supplied reason="folding">les</supplied><lb/>degrés
                     des montées. Quant à moi, très honoré Oncle, je suis toujours très occupé <lb/>et plus à l’académie et à la couronne qu’à moi et à
                     ma famille, cependant je <lb/>me ménage aussi bien que je puis et je refuse plutôt <del rend="strikethrough">bien</del> des
-                    commissions <lb/>que de risquer ma <del rend="strikethrough">situatio</del> santé. <add place="margin-left">Vous avez très bien
+                    commissions <lb/>que de risquer ma <del rend="strikethrough">situatio</del> santé. <add place="margin(left)">Vous avez très bien
                         fait, mon très-honoré Oncle, d’ecrire directement à <persName ref="#p2467">S.E.Mad. la Generale de Brown</persName> : c’est
-                        sans doute le plus court chemin. Quand récévrons nous la piece que Vous avez promis d’envoyer à la Societe oeconomique pour
-                        concourir au prix proposé ? <persName ref="#p2462">Mr. Pallas</persName> m’a tout remis : recevez en ici mes très humbles
-                        rémercimens.</add>
+                        sans doute le plus court chemin.<lb/> Quand récévrons nous la piece que Vous avez promis d’envoyer à la Societe oeconomique
+                        pour concourir au prix proposé ?<lb/>
+                        <persName ref="#p2462">Mr. Pallas</persName> m’a tout remis : recevez en ici mes très humbles rémercimens.</add>
                     <pb facs="00000039.jpg" n="2"/>Ma femme commença à soupçonner que le Sr <persName ref="#p2460">Fauche</persName> en question
-                    pourroit peut-être bien être <lb/>un certain <persName ref="#p2469">Bonnafous</persName>, frère de sa mère qui après avoir <del
-                        rend="strikethrough">subit</del>
-                    <add place="above">eu</add> toutes sortes d’aventures, aie <lb/>changé de nom, comme surtout les françois ont coutume de faire :
-                    Mais Vous jugerez d’abord <lb/>mon très honoré Oncle. Si ce soupçon peut avoir lieu ou non ? Maintenant je vais <lb/>Vous marquer
-                    en très peu de môts tout ce qui nous est arrivé depuis les 7 semaines que je ne <lb/>Vous ai pas ecrit. <rs>Mon beaufrère</rs> fit
-                    baptiser son fils le 8 Juillet par le <rs>Pasteur Suedois</rs>
+                    pourroit peut-être bien être <lb/>un certain <persName ref="#p2469">Bonnafous</persName>, frère de sa mère qui après avoir <subst>
+                        <del rend="strikethrough">subit</del>
+                        <add place="above">eu</add>
+                    </subst> toutes sortes d’aventures, aie <lb/>changé de nom, comme surtout les françois ont coutume de faire : Mais Vous jugerez
+                    d’abord <lb/>mon très honoré Oncle. Si ce soupçon peut avoir lieu ou non ? Maintenant je vais <lb/>Vous marquer en très peu de
+                    môts tout ce qui nous est arrivé depuis les 7 semaines que je ne <lb/>Vous ai pas ecrit. <rs>Mon beaufrère</rs> fit baptiser son
+                    fils le 8 Juillet par le <rs>Pasteur Suedois</rs>
                     <lb/>mais selon les rits de nôtre eglise, l’enfant reçût les noms Leonhard, Albert, Charles, et <rs>ma sœur <lb/>ainée</rs>, <rs
                         ref="#p2330">mon frère</rs> le medecin et moi furent les parains. Le 15, le Secretaire de notre Commission <lb/>Academique
                     donna à toute l’academie un grand diner, c’etoit le jour de naissance de <rs ref="#2340">notre Chef</rs>. <lb/>le 17 je reçû du
@@ -257,9 +271,9 @@
                     rarement. Mille et mille respects, amitiés, complimens &amp; civilités de toute notre maison <lb/>à toutes nos connoissances
                     Berlinoises et en particulier à Vous, <rs>Mad. Votre epouse</rs> et <lb/>toute Vôtre aimable famille, <persName ref="#p2472">Mll.
                         Regal</persName>, <persName ref="#p2479">la Baume</persName> etc etc etc je suis avec un <lb/>très profond respect.</p>
-                <closer><salute rend="align (centre)">Monsieur mon très-chèr honoré Oncle.</salute>
-                    <salute rend="align (right)"><lb/>Votre très humble &amp; très obe£issant Serviteur et <lb/>Neveu</salute>
-                    <signature>J. Albert Euler</signature></closer>
+                <closer><salute rend="align(center)">Monsieur mon très-chèr honoré Oncle.</salute>
+                    <salute rend="align(right)"><lb/>Votre très humble &amp; très obe£issant Serviteur et <lb/>Neveu</salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

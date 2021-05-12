@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov and Tschernischev.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and strike-throughs.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -181,20 +189,23 @@
             <div type="transcription">
                 <pb facs="00000062.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">38.</note>
-                <opener rend="align (right)">à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date>14/25 de Mars 1768</date>.<lb/><salute
-                        rend="align (left)">Monsieur mon très-chèr et très-honoré oncle !</salute></opener>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1768-03-14">14/25 de
+                            Mars 1768</date>.</dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré oncle !</salute></opener>
                 <lb/>
                 <p>J’ai bien reçû Vos quatres lettres du 30 Janvier, 7 et 20 <lb/>fevrier et en dernier lieu celle du 1 de Mars : mais jus<lb
                         break="no"/>qu’ici il n’a été impossible d’y repondre ; même aujourd’hui <lb/>serai-je obligé d’être très laconique et de ne
                     m’étendre <lb/>que sur ce qui est le plus pressant. J’ai ensuite très bien <lb/>lû le nom de l’Epicier à la rüe de Spandau, qui
-                    doit être <lb/>arrivé ici, mais je n’ai encore rien pû apprendre de lui, <lb/>(<persName ref="#p2531">Brouk</persName>) je crois
-                        <del rend="overwritten">q</del><add place="across">s</add>urement qu’il n’est point venû jusqi’ici. <lb/>J’ai dejà ecrit deux
-                    fois au <persName ref="#p2527">Pasteur La Vigne</persName>, j’ai aussi <lb/>reçû sa lettre, et à moins qu’il ne se soit pas en<lb
-                        break="no"/>gagé autre-part, il sera surement le nôtre : j’attends sa <lb/>reponse pour lui envoïer ensuite une vocation en
-                    <lb/>forme avec de l’argent pour le voiage. <rs ref="#p0037">Mon père</rs> a <lb/>reçû tout nouvellement une lettre du <persName
-                        ref="#p2532">Prince Guillaume <lb/>de Brunswig</persName> contenant une commission pour vendre une <lb/>belle collection des
-                    portraits des hommes célebres, et qui <lb/>sont à voir chez <persName ref="#p0152">Pitra</persName>. Il repondra dans une
-                    huitaine. <lb/>Toutes les fois que j’ai pris la liberté de parler à <rs ref="#2340">mon Chef</rs>
+                    doit être <lb/>arrivé ici, mais je n’ai encore rien pû apprendre de lui, <lb/>(<persName ref="#p2531">Brouk</persName>) je crois <subst>
+                        <del rend="overwritten">q</del>
+                        <add place="across">s</add>
+                    </subst>urement qu’il n’est point venû jusqi’ici. <lb/>J’ai dejà ecrit deux fois au <persName ref="#p2527">Pasteur La
+                        Vigne</persName>, j’ai aussi <lb/>reçû sa lettre, et à moins qu’il ne se soit pas en<lb break="no"/>gagé autre-part, il sera
+                    surement le nôtre : j’attends sa <lb/>reponse pour lui envoïer ensuite une vocation en <lb/>forme avec de l’argent pour le voiage.
+                        <rs ref="#p0037">Mon père</rs> a <lb/>reçû tout nouvellement une lettre du <persName ref="#p2532">Prince Guillaume <lb/>de
+                        Brunswig</persName> contenant une commission pour vendre une <lb/>belle collection des portraits des hommes célebres, et qui
+                    <lb/>sont à voir chez <persName ref="#p0152">Pitra</persName>. Il repondra dans une huitaine. <lb/>Toutes les fois que j’ai pris
+                    la liberté de parler à <rs ref="#2340">mon Chef</rs>
                     <lb/>de la lettre de l’<orgName ref="#g0120">Acad. de Berlin</orgName> à <rs ref="#p0081">S.M.I.</rs> et qui n’est <lb/>depuis
                     longtems plus un secret, il rit et ne me repond <lb/>pas. J’ai toujours esperé à cette occasion de pouvoir <lb/>retourner à
                         <placeName ref="#l1103">Berlin</placeName> comme deputé Academicien de <rs ref="#p0081">S.M.I.</rs>
@@ -214,18 +225,20 @@
                     <lb/>et c’est un grand thrésor. Est-ce que <persName ref="#p2465">Guldenstadt</persName> est <lb/>dejà parti ? je n’ai point reçû
                     de ses lettres. J’ai prevûs <lb/>très-chèr Oncle, Votre réponse à l’égard de l’ouvrage du <lb/>Suedois, et j’ai été charmé d’avoir
                     pû par là me de<lb break="no"/>barrasser de lui. Le jeune <persName ref="#p2534">Buddenbroeck</persName> deviendra <lb/>quelque
-                    jour très riche, si son père continue à prendre <lb/><del rend="overwritten">à</del><add place="across">et</add> à tuer des femmes
-                    qui lui laissent de bien sans <lb/>l’affliger. Les fidèles serviteurs du <rs ref="#p0049">Roi de Prusse</rs>, qui ont <lb/>voulû
-                    s’engager ici, ont eu un refûs dans toutes les <lb/>formes. <persName ref="#p2524">La Riviere</persName> a decampé, mais <persName
-                        ref="#p2535">Berlot</persName> reste, <lb/>je ne sai pas ce que ce dernier intentionne : il vit très <lb/>largement, frequente
-                    la cour, a été appellé à <placeName ref="#l0439">Moscou</placeName>, <lb/>présenté à <rs ref="#p0081">S.M.I.</rs> et s’est loué un
-                    beau logement pour. <lb/>plusieures années. J’ai lû dans la <title>Gazette</title> de <persName ref="#p0071"
-                        >francheville</persName>
+                    jour très riche, si son père continue à prendre <lb/><subst>
+                        <del rend="overwritten">à</del>
+                        <add place="across">et</add>
+                    </subst> à tuer des femmes qui lui laissent de bien sans <lb/>l’affliger. Les fidèles serviteurs du <rs ref="#p0049">Roi de
+                        Prusse</rs>, qui ont <lb/>voulû s’engager ici, ont eu un refûs dans toutes les <lb/>formes. <persName ref="#p2524">La
+                        Riviere</persName> a decampé, mais <persName ref="#p2535">Berlot</persName> reste, <lb/>je ne sai pas ce que ce dernier
+                    intentionne : il vit très <lb/>largement, frequente la cour, a été appellé à <placeName ref="#l0439">Moscou</placeName>,
+                    <lb/>présenté à <rs ref="#p0081">S.M.I.</rs> et s’est loué un beau logement pour. <lb/>plusieures années. J’ai lû dans la
+                        <title>Gazette</title> de <persName ref="#p0071">francheville</persName>
                     <lb/>l’article que je Vous ai envoïé : il s’y est glissé quelques <lb/>fautes d’impression :
                         <placeName>Sowetzki-Monaster</placeName> n’est qu’un seul <lb/>endroit ; Monaster signifie un Couvant. <rs ref="#p0081"
                         >S.M.I.</rs> a <lb/>fait Capitaine le <persName ref="#p2514">Lieutenant Istenief</persName> : et voilà encore <lb/>une article
                     pour les <title>Gazettes litteraires</title> de la part <lb rend="align(right)"/>de<pb facs="00000064.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">39</note> de <persName ref="#p2347">Mr. Rumovsky</persName>. <rs
+                    <note hand="#pencil" place="margin(right)" type="foliation">39</note> de <persName ref="#p2347">Mr. Rumovsky</persName>. <rs
                         ref="#p2328">Ma femme</rs> Vous présente ses <lb/>respects, Monsieur et très honoré Oncle et vous prie <lb/>B. de donner
                     Vous-même en main propre <add place="above">et que personne ne le voie.</add> l’incluse à notre <lb/>chère <persName ref="#p2536"
                         >Cousine Labaume</persName>. Si Vous dinez, très chèr Oncle <lb/>chez <persName ref="#p2508">Dolgoroucki</persName>, <persName
@@ -264,10 +277,10 @@
                     <lb/>rendis mes <del rend="strikethrough">visit</del> respects, de même qu’au <rs>grand <lb/>Duc</rs> ; qui est arrivé le 18
                     fevrier. En voici <lb/>assés, milles respects, civilités, amitiés à <rs>Mad. <lb/>Votre Epouse</rs>, toute Votre famille et toutes
                     <lb/>nos connoissances. je suis très parfaitement</p>
-                <lb/>
-                <closer><salute>Monsieur et très honoré Oncle <lb rend="align (centre)"/><lb/>Votre très-humble et très obeïssant <lb/>Serviteur et
-                        Neveu</salute>
-                    <lb/><signature>J. Albert Euler</signature></closer>
+                <closer>
+                    <salute>Monsieur et très honoré Oncle</salute>
+                    <salute rend="align(center)">Votre très-humble et très obeïssant <lb/>Serviteur et Neveu</salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

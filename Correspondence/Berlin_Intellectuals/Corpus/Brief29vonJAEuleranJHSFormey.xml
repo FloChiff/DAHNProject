@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -157,7 +164,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -170,8 +177,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120, persName 0037.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
@@ -186,18 +194,20 @@
             <div type="transcription">
                 <pb facs="00000092.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">54</note>
-                <placeName ref="#l0020">Petersbourg</placeName> le <date>18/29 Juillet 1768</date><lb/><opener>Monsieur mon très chèr et très honoré
-                    Oncle,</opener><p>Je reçûs bien la lettre que Vous m’avez fait l’honneur de m’adresser le 5/16 de ce <lb/>mois, et j’attends à
-                    présant la réponse aux deux autres que je Vous avois envoié <lb/>très honoré oncle, le 20 et 24 du mois passé vieux stile. Rien
-                    n’est plus certain, <lb/><rs ref="#p2340">notre Chef</rs> prétend très serieusement que les Academiciens païent de leurs gages
-                    <lb/>toutes les lettres qu’ils reçoivent ou qu’ils écrivent à moins que ces lettres ne <lb/>contiennent quelques articles qui
-                    regardent l’<orgName ref="#g0123">Académie</orgName>. Au fond du cœur chacun <lb/>s’en mocque, et si l’on a envie d’écrire on
-                    trouve toujours quelque pretexte aca<lb break="no"/>démique, de même si l’on reçoit des lettres, on ne manque jamais d’y trouver
-                    <lb/>quelques lignes qui regardant les sciences, méritent d’être communiquées <lb/>à l’Academie. Ne soiez pas surpris, Monsieur et
-                    très cher Oncle, de ce que <lb/><rs ref="#p2340">notre Chef</rs> ne Vous a pas répondû, presque tous les grands Seigneurs de cet
-                    <lb/>empire ont contracté cette habitude. Pour nous Berlinois, accoutumés <lb/>que le Roi même nous réponde, nous trouvons très
-                    mauvais et même impoli, <lb/>que des Seigneurs bien inférieurs à ce monarque, n’observent pas la même <lb/>conduite. Si Vous voiez
-                    pouviez voir, mon très cher Oncle, tous nos Seigneurs d’ici, Vous <lb/>les croiriez tous dix fois plus occupés que le <rs>Roi de
+                <opener><dateline rend="align(right)"><placeName ref="#l0020">Petersbourg</placeName> le <date when-iso="1768-07-18">18/29 Juillet
+                            1768</date></dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
+                <p>Je reçûs bien la lettre que Vous m’avez fait l’honneur de m’adresser le 5/16 de ce <lb/>mois, et j’attends à présant la réponse aux
+                    deux autres que je Vous avois envoié <lb/>très honoré oncle, le 20 et 24 du mois passé vieux stile. Rien n’est plus certain,
+                        <lb/><rs ref="#p2340">notre Chef</rs> prétend très serieusement que les Academiciens païent de leurs gages <lb/>toutes les
+                    lettres qu’ils reçoivent ou qu’ils écrivent à moins que ces lettres ne <lb/>contiennent quelques articles qui regardent l’<orgName
+                        ref="#g0123">Académie</orgName>. Au fond du cœur chacun <lb/>s’en mocque, et si l’on a envie d’écrire on trouve toujours
+                    quelque pretexte aca<lb break="no"/>démique, de même si l’on reçoit des lettres, on ne manque jamais d’y trouver <lb/>quelques
+                    lignes qui regardant les sciences, méritent d’être communiquées <lb/>à l’Academie. Ne soiez pas surpris, Monsieur et très cher
+                    Oncle, de ce que <lb/><rs ref="#p2340">notre Chef</rs> ne Vous a pas répondû, presque tous les grands Seigneurs de cet <lb/>empire
+                    ont contracté cette habitude. Pour nous Berlinois, accoutumés <lb/>que le Roi même nous réponde, nous trouvons très mauvais et
+                    même impoli, <lb/>que des Seigneurs bien inférieurs à ce monarque, n’observent pas la même <lb/>conduite. Si Vous voiez pouviez
+                    voir, mon très cher Oncle, tous nos Seigneurs d’ici, Vous <lb/>les croiriez tous dix fois plus occupés que le <rs>Roi de
                         Prusse</rs>, et je puis bien <lb/>Vous assurer qu’aucun d’eux ne fait pas la dix millième partie dans une <lb/>année, de ce
                     que le roi fait dans un seul jour. Je pourrois un jour <lb/>Vous entretenir bien longtems sur cet article, si je *re*venois un
                     jour à <placeName ref="l1103">Berlin</placeName>, et <lb/>je suis toujours encore très intentionné de le faire. Cependant vous
@@ -243,7 +253,7 @@
                     <lb/>le secrétaire de <placeName ref="#l0092">Prusse</placeName> se nomme <persName>Huttel</persName>, je m’étois trompé. Nous
                     sommes très <lb/>curieux d’apprendre ce que l’<orgName ref="#g0120">Academie de Berlin</orgName> fera pour le passage de Venus :
                         <pb facs="00000094.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">55</note> Enverra-t-on quelques observateurs, et où ? Je continuerai
+                    <note hand="#pencil" place="margin(right)" type="foliation">55</note> Enverra-t-on quelques observateurs, et où ? Je continuerai
                     mon journal. le 24 et 25 <lb/>du mois passé, rien d’extraordinaire, le 26 pareillement, j’avois à soupper Mr.
                         <persName>Dilthey</persName> et <lb/>nous nous promenames après souper en Chalouppe. Entre tous les plaisirs de <placeName
                         ref="#l0020">Petersbourg</placeName>
@@ -315,19 +325,29 @@
                     mois. Le 17 Mr. <persName>Berland</persName> me vint voir, je fis ensuite plusieures visites, <lb/>et j’ammenai le Pasteur
                         <persName>la Vigne</persName> qui dina chez <rs ref="#p0037">mon père</rs>. Ensuite à la promenade. <lb/>Aujourd’hui, car hier
                     le Pasteur <persName>La Vigne</persName> preta serment et rien d’ailleurs de remarquable, <lb/><rs ref="#p2328">ma femme</rs> alla
-                    à l’assemblée du petit Corps de Cadets.<pb facs="00000096.jpg" n="5"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">56</note> Du 22 juillet 1768 <lb/>Ma lettre va partir aujourd’hui.
-                    Avant-hier après avoir été le matin à <lb/>l’église, nous fimes une promenade à pied chez <rs>mon frere</rs> le medecin, où
-                    étoient <lb/><persName>Mr.</persName> et <persName>Mad. Lavigne</persName> ; mes enfans étoient avec nous et cette promenade leur
-                    fit <lb/>beaucoup de bien. Hier nous fimes une promenade en chalouppe pour <lb/><placeName>Krougliostrov</placeName>, une isle
-                    fort plaisante à l’embouchure de la <placeName>Neva</placeName>, et nous <lb/>nous y divertimes très bien. Adieu Monsieur et très
-                    honoré Oncle : nos <lb/>respects, devoirs et amitiés, à <rs>Madame Votre épouse</rs> et toute Votre chere famille.</p>
-                <p>Conservez nous toujours dans Votre gracieuses bienveuillance et soiez persuadé <lb/>que je resterai pendant toute ma vie, </p>mon
-                très chèr et très honoré Oncle Votre très humble et très obéissant Neveu et Serviteur <signature>J. Albert Euler</signature>
-                <p>P.S. Mr <persName>Bout</persName> en me donnant l’incluse me pria de Vous supplier, <lb/>très honoré Oncle, de parler un môt en sa
-                    faveur ; il demande, à ce <lb/>qu’il me dit 40 ducats, et il compte de pouvoir se tirer d’affaire avec cette somme. <lb/>F Mssr.
-                        <persName>Mallet</persName> et <persName>Pictet</persName> me vint voir.</p><pb facs="00000097.jpg" n="6"/><note
-                    resp="emmanuelle.chaze">page vierge</note></div>
+                    à l’assemblée du petit Corps de Cadets.</p>
+                <pb facs="00000096.jpg" n="5"/>
+                <note hand="#pencil" place="margin(right)" type="foliation">56</note>
+                <p rend="align(center)">Du 22 juillet 1768 </p>
+                <p>Ma lettre va partir aujourd’hui. Avant-hier après avoir été le matin à <lb/>l’église, nous fimes une promenade à pied chez <rs>mon
+                        frere</rs> le medecin, où étoient <lb/><persName>Mr.</persName> et <persName>Mad. Lavigne</persName> ; mes enfans étoient avec
+                    nous et cette promenade leur fit <lb/>beaucoup de bien. Hier nous fimes une promenade en chalouppe pour
+                        <lb/><placeName>Krougliostrov</placeName>, une isle fort plaisante à l’embouchure de la <placeName>Neva</placeName>, et nous
+                    <lb/>nous y divertimes très bien. Adieu Monsieur et très honoré Oncle : nos <lb/>respects, devoirs et amitiés, à <rs>Madame Votre
+                        épouse</rs> et toute Votre chere famille.</p>
+                <closer><salute>Conservez nous toujours dans Votre gracieuses bienveuillance et soiez persuadé <lb/>que je resterai pendant toute ma
+                        vie, mon très chèr et très honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et très obéissant<lb/> Neveu et Serviteur</salute>
+                    <signed>J. Albert Euler</signed></closer>
+                <postscript>
+                    <label>P.S. </label>
+                    <p>Mr <persName>Bout</persName> en me donnant l’incluse me pria de Vous supplier, <lb/>très honoré Oncle, de parler un môt en sa
+                        faveur ; il demande, à ce <lb/>qu’il me dit 40 ducats, et il compte de pouvoir se tirer d’affaire avec cette somme.</p>
+                    <p>F Mssr. <persName>Mallet</persName> et <persName>Pictet</persName> me vint voir.</p>
+                </postscript>
+                <pb facs="00000097.jpg" n="6"/>
+                <note resp="emmanuelle.chaze">page vierge</note>
+            </div>
         </body>
     </text>
 </TEI>

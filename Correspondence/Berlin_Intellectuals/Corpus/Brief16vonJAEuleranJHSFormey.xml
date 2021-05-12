@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -165,8 +172,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
@@ -180,9 +188,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000042.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">26</note>
-                <opener rend="align (right)">à <placeName>St : Petersbourg</placeName> ce <date>31 Aout/11 Septem. 1767</date>.<lb/><salute
-                        rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">26</note>
+                <opener><dateline rend="align(right)">à <placeName>St : Petersbourg</placeName> ce <date when-iso="1767-08-31">31 Aout/11 Septem.
+                            1767</date>.</dateline>
+                    <salute rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
                 <lb/>
                 <p>J’ai l’honneur de Vous mander, que ce fût hier matin à deux heures <lb/>et demi, que <rs ref="#p2328">ma femme</rs> accoucha d’une
                     fille le plus heureusement <lb/>qu’il est possible : pour cette fois-cy, elle n’a eu besoin ni de <lb/>sage-femme, ni d’aucune
@@ -196,11 +205,14 @@
                         Baume</persName>, <persName ref="#p2477">Mll. De Grase</persName>, <persName ref="#p2478">Pegât</persName>, <lb/>et <persName
                         ref="#p2452">Handreich</persName>, dès que l’occasion se presentera.</p>
                 <p>Nos respects à Madame Votre épouse et mille Complimens <lb/>à toute Votre aimable famille : je suis avec un profond respect</p>
-                <closer><salute rend="align (centre)">Monsieur mon très-chèr et très-honoré Oncle</salute>
-                    <lb/><salute rend="align (right)">Votre très humble et <lb/>très-obéïssant Serviteur et neveu</salute>
-                    <lb/><signature>J. Albert Euler</signature></closer>
-                <pb facs="00000043.jpg" n="2"/>
-                <p>A Monsieur Monsieur le Professeur Formey <foreign xml:lang="la">Catera quis nervit</foreign></p>
+                <closer><salute rend="align(center)">Monsieur mon très-chèr et très-honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et <lb/>très-obéïssant Serviteur et neveu</salute>
+                    <signed>J. Albert Euler</signed>
+                    <pb facs="00000043.jpg" n="2"/>
+                    <address>
+                        <addrLine>A Monsieur Monsieur le Professeur Formey </addrLine>
+                        <addrLine><foreign xml:lang="la">Catera quis nervit</foreign></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -172,8 +179,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -185,9 +193,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000115.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">67</note> A <placeName ref="#l0020">St Petersbourg</placeName> ce
-                    <date>5/16 Décembre 1768</date>
-                <opener>Monsieur, mon très-chèr et très-honoré Oncle,</opener>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1768-12-05">5/16
+                            Décembre 1768</date></dateline>
+                    <salute>Monsieur, mon très-chèr et très-honoré Oncle,</salute>
+                    <note hand="#pencil" place="margin(right)" type="foliation">67</note></opener>
                 <p>je n’aurois pas tardé à Vous écrire, mon très-honoré Oncle, si la commu<lb break="no"/>nication entre notre isle et le continent
                     s’avoit fait plûtot. Votre der<lb break="no"/>niere lettre du 26 Novembre avec la réponse de l’<orgName ref="#g0120">Academie
                         Roiale de <lb/>Berlin</orgName> sur celle que <rs ref="#p0037">mon père</rs> lui a fait écrire, nous est parvenu <lb/>le 30
@@ -230,11 +239,14 @@
                     que Vous nous avez expedié <lb/>ne sont pas arrivé, et n’arriveront probablement pas cette année. <lb/>N’avez-vous pas reçû les
                     nôtres ? je n’apprends plus rien du Sr. <persName>Bouc</persName>. <lb/>Nous Vous enverrons Votre semestre la semaine prochaine.
                     L’Etât <lb/>de Mr <persName>Labaume</persName> nous touche veritablement. je finis en nous recom<lb break="no"/>mendant à Votre
-                    bien veuillance ; <rs ref="#p2328">ma femme</rs> Vous embrasse, mon très <lb/>honoré Oncle, toute ma famille Vous présente ses
-                    dévoirs, mille <lb/>respects, civilités et amitiés à <rs>Madame Votre épouse</rs> et toute Votre chere <lb/>famille et je suis
-                    avec un profond respect Votre très humble et très obeïssant Serviteur et neveu <signature>J. Albert Euler</signature>. [en marge]
-                    Nous souhaitons que Vous parveniez heureusement à la fin de cette année, et nous nous <lb/>réservons de nous acquittés de notre
-                    devoir à la premiere occasion qui se présentera.</p></div>
+                    bien veuillance ; </p>
+                <closer><salute><rs ref="#p2328">ma femme</rs> Vous embrasse, mon très <lb/>honoré Oncle, toute ma famille Vous présente ses dévoirs,
+                        mille <lb/>respects, civilités et amitiés à <rs>Madame Votre épouse</rs> et toute Votre chere <lb/>famille et je suis avec un
+                        profond respect Votre très humble et très obeïssant<lb/> Serviteur et neveu </salute><signed>J. Albert
+                    Euler.</signed></closer>
+                <note place="margin">Nous souhaitons que Vous parveniez heureusement à la fin de cette année, et nous nous <lb/>réservons de nous
+                    acquittés de notre devoir à la premiere occasion qui se présentera.</note>
+            </div>
         </body>
     </text>
 </TEI>

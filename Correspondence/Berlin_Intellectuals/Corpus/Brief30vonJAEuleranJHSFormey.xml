@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,9 +178,10 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
-            <change wbo="#emmanuelle.chaze" when-iso="2014-11-18">Edited placeName.</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+            <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120, persName 0037.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
             <change when-iso="2014-10-18" who="#emmanuelle.chaze">Edited text.</change>
@@ -185,7 +193,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000098.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">57</note><opener>Monsieur mon très honoré et très chèr Oncle,</opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">57</note>
+                <opener><salute>Monsieur mon très honoré et très chèr Oncle,</salute></opener>
                 <p>Voici une lettre que l’<orgName ref="#g0123">Academie</orgName> vous prie, de faire parvenir <lb/>à son adresse le plutôt possible.
                     Car nous ne sommes pas trop <lb/>sur si Mr. <persName>Waitz</persName> est à <placeName ref="#l0155">Cassel</placeName> ou s’il
                     n’y est plus, et il Vous sera <lb/>aisé de l’apprendre. Notre pasteur <persName>La Vigne</persName> a déjà preché <lb/>trois fois,
@@ -199,13 +208,19 @@
                     lui faut que du monde. Je l’avois <lb/>présenté avec au comte <persName>Gregoire Orlov</persName>, qui lui donne une pension
                     <lb/>de 150 roubles pour pouvoir faire ses études. Mais il faut que <lb/>j’aille au Conseil Academique, je compte que maintenant
                     le destin <lb/>de notre <orgName ref="#g0123">Academie</orgName> sera bientôt fixé terminé. Dieu veuille écarter du <lb/>nouveau
-                    Reglement toutes les bêtises qui le menaçent. Adieu <lb/>mon très chèr et très honoré Oncle, mille respects de <rs ref="#p2328">ma
-                        chere <lb/>femme</rs>, milles amitiés de <rs ref="#p0037">mon père</rs> et de <rs ref="#p2329">ma mère</rs> ; mes enfans
-                    <lb/>se recommandent à Votre bienveuïllance ; nos respects à <rs>Mad. <lb/>Votre epouse</rs> et bien de Complimens à
-                    Mesdemoiselles Vos <lb/>filles, à toute Votre chère famille, et à toutes nos <lb/>connoissances.</p> Je suis avec un profond
-                respect <lb/>Votre <pb facs="00000099.jpg" n="2"/> Votre très humble et très obéïssant Serviteur et <lb/>neveu <signature>J. Albert
-                    Euler</signature> à <placeName ref="#l0020">Petersbourg</placeName> ce <date>12/23 Aout <lb/>1768</date>. A Monsieur Monsieur le
-                Professeur <persName>Formey</persName>
+                    Reglement toutes les bêtises qui le menaçent.</p>
+                <closer><salute>Adieu <lb/>mon très chèr et très honoré Oncle, mille respects de <rs ref="#p2328">ma chere <lb/>femme</rs>, milles
+                        amitiés de <rs ref="#p0037">mon père</rs> et de <rs ref="#p2329">ma mère</rs> ; mes enfans <lb/>se recommandent à Votre
+                        bienveuïllance ; nos respects à <rs>Mad. <lb/>Votre epouse</rs> et bien de Complimens à Mesdemoiselles Vos <lb/>filles, à
+                        toute Votre chère famille, et à toutes nos <lb/>connoissances.Je suis avec un profond respect </salute>
+                    <salute><hi rend="align(right)">Votre</hi>
+                        <pb facs="00000099.jpg" n="2"/> Votre très humble et très obéïssant Serviteur et <lb/>neveu</salute>
+                    <signed>J. Albert Euler</signed>
+                    <dateline>à <placeName ref="#l0020">Petersbourg</placeName> ce <date>12/23 Aout <lb/>1768</date>.</dateline>
+                    <address>
+                        <addrLine>A Monsieur<lb/> Monsieur le Professeur<lb/>
+                            <persName>Formey</persName></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

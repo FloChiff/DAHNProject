@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -172,8 +179,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -185,9 +193,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000159.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">91</note> A <placeName ref="#l0020">St : Petersbourg</placeName> ce
-                    <date>15/26 May 1769</date>.<lb/>
-                <opener>Monsieur mon très chèr et très honoré Oncle,</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">91</note>
+                <opener>
+                    <dateline rend="align(right)"> A <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1769-05-15">15/26 May
+                            1769</date>.</dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
                 <p>j’ai reçû avec un plaisir infini Vos deux dernieres lettres <lb/>du 25 Avril et 2 de May n.st. et je Vous rend mille <lb/>graces,
                     mon très honoré Oncle, de la part que Vous pre<lb break="no"/>nez à tout ce qui nous régarde et des peines que Vous <lb/>Vous
                     donnez à executer ce que nous prennons la liberté <lb/>à Vous conferer. La bonté que Vous nous avez témoig<lb break="no"/>né
@@ -224,7 +234,7 @@
                         <orgName ref="#g0120">Academie</orgName>, <lb/>qu’il aime veritablement comme son nourrisson. Je ne <lb/>comprens pas la
                     raison pourquoi Vous avez été obligé <lb/>de paier le port pour une de mes dernieres lettres ? <lb/>avez-vous aussi paié les
                     suivans ? je n’ai jamais aussi <pb facs="00000161.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">92</note> bien que <persName ref="#p2333">Mr. de Stählin</persName>
+                    <note hand="#pencil" place="margin(right)" type="foliation">92</note> bien que <persName ref="#p2333">Mr. de Stählin</persName>
                     affrachi [sic] les lettres, on l’a toujours fait <lb/>à la Poste, et le règlement du bureau de Poste parle que <lb/>chacun doit
                     /Affranchir/ païer le port de toutes les lettres <lb/>tant de celles qu’il reçoit que de celles qu’il envoit jusqu’à
                     <lb/>l’endroit même. C’est un impôt terrible pour les habitans <lb/>de <placeName ref="#l0020">Petersbourg</placeName>. On a
@@ -267,15 +277,18 @@
                         <lb/>Winterstadt</persName> : Aujourd’hui le 14 j’écris une demi douzaine <lb/>de lettres ; demain s’il plait à Dieu, je
                     fermerai /les/ <lb/>celle-ci. Vous celebrerez Monsieur et très honoré <lb/>Oncle le 17/23 du mois prochain la XXVme fête de
                     <lb/>Votre mariage, agréez ici nos très sincères felicita<lb break="no"/>tions et les vœux les plus ardens pour Votre conser<lb
-                        break="no"/>vation et pour celle de <rs>Madame Votre épouse</rs>, à laquelle <lb/>nous Vous prions de présenter nos dévoirs.
-                    <lb/>V.T.H.S. <signature>Jean Albert Euler</signature>.</p><pb facs="00000163.jpg" n="5"/>
-                <note hand="#pencil" place="margin-right" type="foliation">93</note>
-                <p># ce 15 May. <lb/>Le nouveau marié vient d’être enterré : on dit qu’il a vecû dans <lb/>la plus parfaite union avec sa chère
-                    moitié: je souhaite à <lb/>Votre domestique un bonheur plus durable.#</p><p>Après avoir lû le mémoire de <persName>Mr.
-                        Lambert</persName> sur le <title>Calcul In<lb break="no"/>tegral</title>, <rs ref="#p0037">mon père</rs> ne pouvoit s’empecher
-                    de crier tout haut <lb/>Tanti nominis indignum. Je fis hier au soir une pro<lb break="no"/>menade à pied. Après souper je reçûs
-                    Votre derniere lettre <lb/>du 13 May avec la Réponse de <persName>Mr. de Voltaire</persName> à <persName>Mr. de Sr.
-                        Lambert</persName>
+                        break="no"/>vation et pour celle de <rs>Madame Votre épouse</rs>, à laquelle <lb/>nous Vous prions de présenter nos
+                    dévoirs.</p>
+                <p rend="indent">V.T.H.S. Jean Albert Euler.</p>
+                <pb facs="00000163.jpg" n="5"/>
+                <note hand="#pencil" place="margin(right)" type="foliation">93</note>
+                <p># <hi rend="align(center)">ce 15 May</hi>. </p>
+                <p>Le nouveau marié vient d’être enterré : on dit qu’il a vecû dans <lb/>la plus parfaite union avec sa chère moitié: je souhaite à
+                    <lb/>Votre domestique un bonheur plus durable.#</p>
+                <p>Après avoir lû le mémoire de <persName>Mr. Lambert</persName> sur le <title>Calcul In<lb break="no"/>tegral</title>, <rs
+                        ref="#p0037">mon père</rs> ne pouvoit s’empecher de crier tout haut <lb/><hi rend="latin">Tanti nominis indignum</hi>. Je fis
+                    hier au soir une pro<lb break="no"/>menade à pied. Après souper je reçûs Votre derniere lettre <lb/>du 13 May avec la Réponse de
+                        <persName>Mr. de Voltaire</persName> à <persName>Mr. de Sr. Lambert</persName>
                     <lb/>je l’ai lû à table et je vais la communiquer à <rs ref="#p2340">mon Chef</rs>. Son <lb/>Epouse doit /avoir/ être accouchée à
                     une campagne où elle étoit en <lb/>visite. Le récit de Votre voiage à <placeName ref="#l0091">Potsdamm</placeName> nous a /bien/
                     <lb/>fait bien de plaisir, il me semble voir <rs>Cat</rs> avec son air de <lb/>suffisance. Est-ce que l’<orgName ref="#g0120"
@@ -283,13 +296,20 @@
                     Libraire <persName>Nicolai</persName>, Monsieur et très honoré Oncle, ayez <lb/>la bonté de lui dire, qu’il n’oublie pas de
                     m’envoier les <lb/>livres que je lui ai demandé à differentes réprises. Demain <lb/>on vendra la Bibliothèque de feu <persName>Mr.
                         Braun</persName>, mais je <lb/>n’acheterai rien. Vos deux premieres lettres arrivèrent ordine <lb/>inverso, et cette derniere
-                    n’est resté en chemin que 12 jours. <lb/>j’ai l’honneur d’être avec un profond respect <lb/>Monsieur mon très chèr et très honoré
-                    Oncle <lb/>Votre très humble et très obéïssant Serviteur <lb/>et neveu <signature>Jean Albert Euler</signature>. <pb
-                        facs="00000164.jpg" n="6"/>je Vous prie encore Mr. et très honoré Oncle, de faire <lb/>nos complimens à Mdmslls. Vos filles,
-                    et toute Votre aimable <lb/>famille ; et en cas qu’il se présente l’occasion, à <persName>Mll. <lb/>Handreich</persName>,
-                        <persName>Pegât</persName>, Directeur <persName>Marggraaf</persName>, Prof. <persName>Meckel</persName>, <lb/><persName>Mr.
-                        Küsler</persName>, <persName>Thibault</persName>, <persName>Weguelin</persName>, <persName>Toussaint</persName> et en général
-                    <lb/>à toutes nos connoîssances de <placeName ref="#l103">Berlin</placeName>.</p></div>
+                    n’est resté en chemin que 12 jours.</p>
+                <closer><salute>j’ai l’honneur d’être avec un profond respect</salute>
+                    <salute rend="indent">Monsieur mon très chèr et très honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et très obéïssant Serviteur <lb/>et neveu </salute>
+                    <signed>Jean Albert Euler.</signed></closer>
+                <pb facs="00000164.jpg" n="6"/>
+                <postscript>
+                    <p>je Vous prie encore Mr. et très honoré Oncle, de faire <lb/>nos complimens à Mdmslls. Vos filles, et toute Votre aimable
+                        <lb/>famille ; et en cas qu’il se présente l’occasion, à <persName>Mll. <lb/>Handreich</persName>, <persName>Pegât</persName>,
+                        Directeur <persName>Marggraaf</persName>, Prof. <persName>Meckel</persName>, <lb/><persName>Mr. Küsler</persName>,
+                            <persName>Thibault</persName>, <persName>Weguelin</persName>, <persName>Toussaint</persName> et en général <lb/>à toutes
+                        nos connoîssances de <placeName ref="#l103">Berlin</placeName>.</p>
+                </postscript>
+            </div>
         </body>
     </text>
 </TEI>

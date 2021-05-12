@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-09" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
             <change when-iso="2014-10-19" who="#emmanuelle.chaze">Edited metadata, lb and pb.</change>
             <change when-iso="2014-09-25" who="#emmanuelle.chaze">Edited layout.</change>
@@ -182,8 +190,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000141.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">82</note> A <placeName ref="#l0020">St Petersbourg</placeName> ce dernier
-                    <date>Mars</date> 1769 ou 11 Avril n.St. <opener>Monsieur mon très chèr et très honoré Oncle.</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">82</note>
+                <opener>
+                    <dateline rend="align(right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-03-31">dernier Mars
+                            1769</date> ou 11 Avril n.St. </dateline><salute>Monsieur mon très chèr et très honoré Oncle.</salute></opener>
                 <p>je commencerai au jour d’hui par Vous annoncer la mort de <lb/>mon /petit/ neveu, fils de <rs>mon frère</rs> le médecin ; cette
                     mort nous <lb/>a bien affligé, c’etoit un très joli enfant ; il nâquit le 25 <lb/>Mars 1768 à 1 heure et demi après minuit, et il
                     est mort le <lb/>25 mars 1769 à la même minute. Nous l’enterrâmes le 28. <lb/><rs>Ma pauvre belle sœur</rs> est presque
@@ -224,8 +234,12 @@
                     profiter, malgré <lb/>/la crainte qu’elle a/ l’aversion qu’elle a pour le voiage sur mer, <lb/>elle se résoudroit à tout, pour
                     avoir la satisfaction de Vous révoir <lb/>un jour. Mille respects, civilités et amitiés de toute notre <lb/>famille à Vous, mon
                     très-honoré Oncle, <rs>Mad. Votre épouse</rs>, <lb/>Mlls Vos filles, toute Votre aimable famille, et enfin <lb/>à toutes nos
-                    chères connoissance de <placeName ref="~#l1103">Berlin</placeName>.</p>[en marge à gauche] je suis très respectueusement en me
-                récomendant à Votre bienveuïllance Votre très humble <lb/>Serviteur et neveu <signature>Jean Albert Euler</signature></div>
+                    chères connoissance de <placeName ref="~#l1103">Berlin</placeName>.</p>
+                <closer>
+                    <salute rend="margin(right)">je suis très respectueusement en me récomendant à Votre bienveuïllance Votre très humble
+                        <lb/>Serviteur et neveu </salute>
+                    <signed>Jean Albert Euler</signed></closer>
+            </div>
         </body>
     </text>
 </TEI>

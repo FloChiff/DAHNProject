@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -182,8 +190,9 @@
             <div type="transcription">
                 <pb facs="00000044.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">27</note>
-                <opener rend="align (right)">à <placeName>St : Petersbourg</placeName> ce <date>7/18 Septembre 1767</date><lb/>
-                    <salute rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
+                <opener><dateline rend="align(right)">à <placeName>St : Petersbourg</placeName> ce <date when-iso="1767-09-07">7/18 Septembre
+                            1767</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
                 <lb/>
                 <p>J’ai l’honneur de Vous envoïer les 6 Exemplaires ci-joints du <rs>Catalogue</rs>
                     <lb/>des livres de notre <orgName ref="#g0123">Academie</orgName>, pour les distribuer ou plutôt communiquer <lb/>à Vos
@@ -214,10 +223,10 @@
                     <lb/>je me rendis à l’encans. Le 1. Septembre j’eus quelques <lb/>visites qui m’incommodèrent beaucoup. Le 2. nous fûmes <lb/>tous
                     en Garte chez mon père ; Le <persName ref="#p2377">General de Molina</persName> m’apporte <lb/>une lettre de mon beau frère
                         <persName ref="#p2480">Louïs Hagmeister</persName> qu’il avoit <lb/>rencontre à <placeName ref="#l0563">Carlsbade</placeName>
-                    : le 3 – à l’encans et depuis <lb/>rien de remarquable. Mille Complimens de toute <lb/> ma famille. <closer><salute>j’ai l’honneur
-                            d’être avec un profond <lb/>respect Monsieur mon très-honoré Oncle</salute><salute rend="align (right)">Votre
-                            <lb/>très-humble et très-obeïssant Serviteur et Neveu </salute>
-                        <lb/><signature>J. Albert Euler</signature></closer></p>
+                    : le 3 – à l’encans et depuis <lb/>rien de remarquable. Mille Complimens de toute <lb/> ma famille.</p>
+                <closer><salute>j’ai l’honneur d’être avec un profond <lb/>respect Monsieur mon très-honoré Oncle</salute>
+                    <salute rend="align(right)">Votre <lb/>très-humble et très-obeïssant Serviteur et Neveu </salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

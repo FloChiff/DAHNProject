@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -184,9 +192,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000153.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">88</note> à <placeName ref="#l0020">St Petersbourg</placeName> ce
-                    <date>1/12 May 1769</date>
-                <opener>Monsieur mon très chèr et très honoré Oncle,</opener><lb/>
+                <note hand="#pencil" place="margin-right" type="foliation">88</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-05-01">1/12 May
+                            1769</date></dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
                 <p>Nos trouppes viennent de remporter une éclatante Victoire et <placeName>Chozzim</placeName> est <lb/>pris par assaut. L’action doit
                     avoir couté aux turcs 60 mille hommes, dont <lb/>20000 ont été faits prisonniers, et les prisonniers que les russes ont fait dans
                         <lb/><placeName>Chozzim</placeName> même doivent être au nombre de 15000. Le courrier qui a porté <lb/>cette grande nouvelle,
@@ -213,13 +222,18 @@
                     et mes enfans dans le petit bois, au bord de la mer ; le tems est <lb/>magnifique, mais point de verdure. <rs ref="#p2328">Ma
                         femme</rs> et moi nous nous <lb/>récommandons à Votre bienveuïllance : <rs ref="#p0037">mon père</rs> et <rs ref="#p2329">ma
                         mère</rs> Vous <lb/>font faire mille complimens ; distribuez, S’il Vous plait, Monsieur <lb/>et très chèr Oncle, nos dévoir et
-                    amitiés à <rs>Madame Votre <lb/>épouse</rs> et à toute Votre chère famille.</p><p>A Monsieur <lb/>Monsieur le Professeur
-                        <persName>Formey</persName>
-                    <lb/>Ministre de la Parole de Dieu <lb/>et Secretaire perpetuel de l’<orgName ref="#g0120">Academie <lb/>Roiale des Sciences et
-                        belles-lettres</orgName>
-                    <lb/>de <placeName ref="#l1103">Berlin</placeName> etc etc à <placeName ref="#l1103">Berlin</placeName>
-                    <lb/>je suis avec un profond respect </p>Monsieur mon très chèr et très honoré Oncle <lb/>Votre très humble et très obeïssant
-                <lb/>Serviteur et Neveu <signature>J. Albert Euler</signature></div>
+                    amitiés à <rs>Madame Votre <lb/>épouse</rs> et à toute Votre chère famille.</p>
+                <closer><address>
+                        <addrLine>A Monsieur </addrLine>
+                        <addrLine>Monsieur le Professeur <persName>Formey</persName></addrLine>
+                        <addrLine>Ministre de la Parole de Dieu <lb/>et Secretaire perpetuel de l’<orgName ref="#g0120">Academie <lb/>Roiale des
+                                Sciences et belles-lettres</orgName>
+                            <lb/>de <placeName ref="#l1103">Berlin</placeName> etc etc </addrLine>
+                        <addrLine>à <placeName ref="#l1103">Berlin</placeName></addrLine>
+                    </address><salute>je suis avec un profond respect </salute><salute rend="indent">Monsieur mon très chèr et très honoré Oncle
+                        </salute><salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur et Neveu </salute><signed>J. Albert
+                        Euler</signed></closer>
+            </div>
         </body>
     </text>
 </TEI>

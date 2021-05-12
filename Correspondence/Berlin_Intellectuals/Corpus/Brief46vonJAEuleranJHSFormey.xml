@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -172,8 +179,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -185,41 +193,49 @@
         <body>
             <div type="transcription">
                 <pb facs="00000155.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">89</note> [lettre dictée à quelqu’un, écriture différente] A <placeName
-                    ref="#l0020">St : Pétersbourg</placeName> ce <date>15/26 May 1769</date><lb/><opener>Monsieur mon très chèr et très honoré
-                    Oncle:</opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">89</note>
+                <note> [lettre dictée à quelqu’un, écriture différente]</note>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St : Pétersbourg</placeName> ce <date when-iso="1769-05-15">15/26 May
+                            1769</date></dateline><salute>Monsieur mon très chèr et très honoré Oncle:</salute></opener>
                 <p>L’<orgName ref="g0123">Academie Imperiale</orgName> Vous prie de vouloir bien témoigner <lb/>à votre illustre <orgName ref="#g0120"
                         >Academie</orgName> ses remercimens pour le beau <lb/>présent qu’Elle vient de lui destiner, elle ne manquera <lb/>pas de
-                    saisir toutes les occasions pour lui en marquer <lb/>sa reconnoîssance.</p><p>L’<orgName ref="#g0123">academie</orgName> vous
-                    rémercie aussi, Monsieur et très honoré <lb/>Oncle, de la peine que Vous Vous donnez à L’instruire de <lb/>ce qui se passe dans le
-                    monde litteraire. Les deux pie<lb break="no"/>ces fugitives par <persName>Mr. de Voltaire</persName> et le <rs>mémoire</rs> de
-                        <persName>Mr. <lb/>Lambert</persName> sur le <title>Calcul intégral</title> lui ont fait bien de <lb/>plaisir, aussi bien que
-                    les <rs>observations méthéorologiques</rs>
-                    <lb/>faites par <persName>Mr. Beguelin</persName>.</p><p>Le père <persName>Mayer</persName> vient d’arriver avec son compagnon le
-                    <lb/>frere <persName>Stahl</persName>, et ils ont d’abord commencé leurs observati= <lb/>à Monsieur le Professeur
-                        <persName>Formeÿ</persName> à <placeName ref="#l1103">Berlin</placeName>
+                    saisir toutes les occasions pour lui en marquer <lb/>sa reconnoîssance.</p>
+                <p>L’<orgName ref="#g0123">academie</orgName> vous rémercie aussi, Monsieur et très honoré <lb/>Oncle, de la peine que Vous Vous
+                    donnez à L’instruire de <lb/>ce qui se passe dans le monde litteraire. Les deux pie<lb break="no"/>ces fugitives par <persName>Mr.
+                        de Voltaire</persName> et le <rs>mémoire</rs> de <persName>Mr. <lb/>Lambert</persName> sur le <title>Calcul intégral</title>
+                    lui ont fait bien de <lb/>plaisir, aussi bien que les <rs>observations méthéorologiques</rs>
+                    <lb/>faites par <persName>Mr. Beguelin</persName>.</p>
+                <p>Le père <persName>Mayer</persName> vient d’arriver avec son compagnon le <lb/>frere <persName>Stahl</persName>, et ils ont d’abord
+                    commencé leurs observati= <lb/>à Monsieur le Professeur <persName>Formeÿ</persName> à <placeName ref="#l1103">Berlin</placeName>
                     <pb facs="00000156.jpg" n="2"/> ons astronomiques ; l’<orgName ref="#g0123">academie</orgName> est tres contente de cette
                     <lb/>nouvelle acquisition, et comme le tems est actuellement <lb/>tres beau, elle ne doute pas que Mr. <persName>Mayer</persName>
-                    ne rem<lb break="no"/>plisse pas le bût de sa déstination.</p><p>Ms. <persName>Mallet</persName> a écrit de
-                        <placeName>Ponoi</placeName> ; que le tems ne lui aiant <lb/>pas encore permis de faire des observations astrono<lb break="no"
-                    />miques, il s’est occupé à déterminer la longuer du <lb/>Pendule simple qu’il a trouvée de 64/100 de lignes <lb/>plus longue,
-                    qu’on ne l’a observée à <placeName ref="#l0044">Paris</placeName>. Il a <lb/>aussi fait plusieures experiences pour déterminer
-                    <lb/>l’inclinaison de l’aiguille aimantée ; il l’avoit trou<lb break="no"/>vée ici à <placeName ref="#l0020"
-                        >Petersbourg</placeName> au mois de Janvier de 73 ½ <lb/>dégrés ; en passant par <placeName>Kola</placeName> il la trouva de
-                    67 ¾ <lb/>à 68 dégrés, et en dernier lieu à <placeName>Ponoi</placeName> de 66 ½ dégrés. <lb/>On /im/prime actuellement le
-                    quatrieme et dernier Volume <lb/>de <title>flora sibirica</title>. L’<orgName ref="#g0123">academie</orgName> Vous enverra par la
-                    <lb/>premiere Occasion, Monsieur et très honoré Oncle, <lb/>le 3me Volume de cette <title>flora, Gmelini Historia <lb/>fucorum et
-                        novorum Commentariorum</title> Tom. /12e/XII. <lb/>Le Professeur <persName>Roumowski</persName> mande à l’<orgName
-                        ref="#g0123">academie</orgName>, qu’il <lb/>vient <pb facs="00000157.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">90</note> vient d’envoier Ms. <persName>Ochtinski</persName>,
+                    ne rem<lb break="no"/>plisse pas le bût de sa déstination.</p>
+                <p>Ms. <persName>Mallet</persName> a écrit de <placeName>Ponoi</placeName> ; que le tems ne lui aiant <lb/>pas encore permis de faire
+                    des observations astrono<lb break="no"/>miques, il s’est occupé à déterminer la longuer du <lb/>Pendule simple qu’il a trouvée de
+                    64/100 de lignes <lb/>plus longue, qu’on ne l’a observée à <placeName ref="#l0044">Paris</placeName>. Il a <lb/>aussi fait
+                    plusieures experiences pour déterminer <lb/>l’inclinaison de l’aiguille aimantée ; il l’avoit trou<lb break="no"/>vée ici à
+                        <placeName ref="#l0020">Petersbourg</placeName> au mois de Janvier de 73 ½ <lb/>dégrés ; en passant par
+                        <placeName>Kola</placeName> il la trouva de 67 ¾ <lb/>à 68 dégrés, et en dernier lieu à <placeName>Ponoi</placeName> de 66 ½
+                    dégrés. <lb/>On /im/prime actuellement le quatrieme et dernier Volume <lb/>de <title>flora sibirica</title>. L’<orgName
+                        ref="#g0123">academie</orgName> Vous enverra par la <lb/>premiere Occasion, Monsieur et très honoré Oncle, <lb/>le 3me Volume
+                    de cette <title>flora, Gmelini Historia <lb/>fucorum et novorum Commentariorum</title> Tom. /12e/XII. <lb/>Le Professeur
+                        <persName>Roumowski</persName> mande à l’<orgName ref="#g0123">academie</orgName>, qu’il <lb/>vient <pb facs="00000157.jpg"
+                        n="3"/>
+                    <note hand="#pencil" place="margin(right)" type="foliation">90</note> vient d’envoier Ms. <persName>Ochtinski</persName>,
                     Astronome, à <placeName>Kuldin</placeName> pour <lb/>y faire l’observation du passage de Venus devant le <lb/>disque du soleil, Il
-                    y aura donc en tout quatres <lb/>observations faites en la <placeName ref="#l0121">Lapponie</placeName> Russienne. <lb/>j’ai
-                    l’honneur d’être tres respectueusement <lb/>Monsieur et très honoré Oncle [écriture d’euler] <lb/>Votre <lb/>très humble et très
-                    obeïssant Serviteur et <lb/>Neveu <signature>Jean Albert Euler</signature></p><p>Si Mr. le Conseiller <persName>de
-                        Francheville</persName> souhaite d’insérer dans ses <lb/><rs>Gazettes litteraires</rs> la partie la plus interessante de ce
-                    que j’ai l’honneur <lb/>de Vous transcrire, Monsieur et très honoré Oncle, il pourra toujours <lb/>le faire sans qu’on y trouve à
-                    rédire de la part de l’<orgName ref="#g0123">Academie Imperiale</orgName>.</p><pb facs="00000158.jpg" n="4"/>
-                <note resp="emmanuelle.chaze">page vierge</note></div>
+                    y aura donc en tout quatres <lb/>observations faites en la <placeName ref="#l0121">Lapponie</placeName> Russienne.</p>
+                <closer><salute>j’ai l’honneur d’être tres respectueusement </salute><salute rend="align(center)">Monsieur et très honoré Oncle
+                        </salute><handShift new="#major_hand"/>
+                    <salute rend="align(right)">Votre <lb/>très humble et très obeïssant Serviteur et <lb/>Neveu </salute><signed>Jean Albert
+                        Euler</signed></closer>
+                <postscript>
+                    <p>Si Mr. le Conseiller <persName>de Francheville</persName> souhaite d’insérer dans ses <lb/><rs>Gazettes litteraires</rs> la
+                        partie la plus interessante de ce que j’ai l’honneur <lb/>de Vous transcrire, Monsieur et très honoré Oncle, il pourra
+                        toujours <lb/>le faire sans qu’on y trouve à rédire de la part de l’<orgName ref="#g0123">Academie Imperiale</orgName>.</p>
+                </postscript>
+                <pb facs="00000158.jpg" n="4"/>
+                <note resp="emmanuelle.chaze">page vierge</note>
+            </div>
         </body>
     </text>
 </TEI>

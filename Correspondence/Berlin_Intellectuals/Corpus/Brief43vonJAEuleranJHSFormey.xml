@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -72,7 +79,7 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="1769-04-20"/>
+                            <docDate when="1769-04-28"/>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -122,11 +129,11 @@
                     <history>
                         <origin>
                             <p xml:lang="de">Der Brief wurde in <origPlace ref="#l0020">Sankt-Petersburg</origPlace> am <origDate
-                                    when-iso="1769-04-20">20. April 1769</origDate> verfasst.</p>
+                                    when-iso="1769-04-28">20. April 1769</origDate> verfasst.</p>
                             <p xml:lang="en">The letter was written in <origPlace ref="#l0020">Saint Petersburg</origPlace> on <origDate
-                                    when-iso="1769-04-20">20 April 1769</origDate>.</p>
+                                    when-iso="1769-04-28">20 April 1769</origDate>.</p>
                             <p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l0020">Saint-Pétersbourg</origPlace> le <origDate
-                                    when-iso="1769-04-20">20 avril 1769</origDate>.</p></origin>
+                                    when-iso="1769-04-28">20 avril 1769</origDate>.</p></origin>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,15 +172,16 @@
                 <correspAction type="sent">
                     <persName ref="https://viaf.org/viaf/10601695/">Johann Albrecht Euler</persName>
                     <placeName ref="https://www.geonames.org/498817">Sankt-Petersburg</placeName>
-                    <date when-iso="1769-04-20"/>
+                    <date when-iso="1769-04-28"/>
                 </correspAction>
                 <correspAction type="received">
                     <persName ref="https://viaf.org/viaf/51703551/">Jean-Henri Samuel Formey</persName>
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-07" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -185,47 +193,55 @@
         <body>
             <div type="transcription">
                 <pb facs="00000145.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">84</note> A <placeName ref="#l0020">St. Petersbourg</placeName> ce <date>28
-                    Avril/9 Mai 1769</date>. <opener>Monsieur mon très-chèr et très-honoré Oncle,</opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">84</note>
+                <opener>
+                    <dateline rend="align(right)">A <placeName ref="#l0020">St. Petersbourg</placeName> ce <date when-iso="1769-04-28">28 Avril/9 Mai
+                            1769</date>. </dateline><salute>Monsieur mon très-chèr et très-honoré Oncle,</salute></opener>
                 <p><orgName ref="#g0123">L’Academie Imperiale</orgName> m’a chargé de Vous remercier de la <lb/>lettre que Vous lui avez écrite et des
                     diverses nouvelles litte<lb break="no"/>raires qui y sont contenües : Elle Vous prie, mon très honoré <lb/>Oncle de vouloir bien
                     continuer à lui mander ce qui se passe <lb/>dans le monde litteraire, dont elle sait que Vous êtez toujours <lb/>mieux instruit
                     que personne. <rs ref="#p2340">Son Excellence</rs> le Chef de <lb/>notre <orgName ref="#g0123">Academie</orgName> m’a chargé en
                     particulier de Vous faire <lb/>ses rémercimens pour les choses obligeantes que Vous lui <lb/>dites dans cette lettre, et de Vous
-                    faire bien des compli<lb break="no"/>mens de sa part.</p><p><rs ref="#p2340">Notre chef</rs> vient de communiquer à l’<orgName
-                        ref="#g0123">Academie</orgName> une <lb/>lettre qu’il a reçû de <placeName ref="#l1103">Berlin</placeName> du Mechanicien
-                        <persName>Elckner</persName>, <lb/>et dans laquelle cet Artiste lui offre ses services. Sur <lb/>cela l’<orgName ref="#g0123"
-                        >Academie</orgName> a trouvé bon que je Vous prie, Mon<lb break="no"/>sieur et très honoré Oncle, de faire venir cet homme
-                    <lb/>chèz <pb facs="00000146.jpg" n="2"/> chèz Vous pour lui dire que l’<orgName ref="#g0123">Academie</orgName> aiant
-                    actuellement <lb/>un nombre suffisant d’habiles Mechaniciens et Opticiens <lb/>en son service, elle ne sauroit accepter ses
-                    propositions.</p><p>Le père <persName>Meier</persName> ecrit de <placeName ref="#l0084">Hambourg</placeName>, qu’il va
-                    incessamment <lb/>partir pour <placeName>Travemünden</placeName>, où il compte de s’embarquer <lb/>avec son compagnon le Père
-                        <persName>Sthal</persName> et tous ses instrumens <lb/>sur le premier vaisseau qui partira soit pour ici directe<lb break="no"
-                    />ment soit pour quelqu’autre port de la <placeName ref="#l0019">Russie</placeName>. Je <lb/>crains beaucoup, qu’il n’arrive trop
-                    tard.</p><p>Le Major <persName>Krassilnikoff</persName> connû par ses voiages et les obser<lb/>vations astronomiques qu’il a fait
-                    en partie avec feu Mr <lb/>de l’Isle en partie seul puis l’isle d’<placeName>Oesel</placeName> jusqu’à l’ex<lb break="no"/>tremité
-                    de <placeName>Kamtschacka</placeName>, est en attendant chargé de faire <lb/>avec l’adjoint <persName>Lexell</persName> les
-                    observations correspondantes <lb/>à l’observatoire d’ici.</p><p>Tous nos Astronomes sont déjà arrivés aux endroits de leur
-                    <lb/>déstination, d’où ils ont écrit à l’<orgName ref="#g0123">Academie</orgName>, en notifiant <lb/>qu’ils sont actuellement
-                    occupé à faire bâtir leurs <lb/>observatoires. Le Prof. <persName>Lowitz</persName> n’a pas encore écrit <lb/>mais <pb
-                        facs="00000147.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">85</note>mais selon toutes les apparences ne sera-t-il pas loin <lb/>de
-                        <placeName>Gurief</placeName>.</p><p>Mr <persName>Aepinus</persName> notre Collegue a été nommé Conseiller <lb/>d’Etat de
-                        <rs>Sa Majesté Imperiale</rs>.</p><p>Mr. le Professeur <persName>Gmelin</persName> présentement à
-                        <placeName>Woronesch</placeName>
+                    faire bien des compli<lb break="no"/>mens de sa part.</p>
+                <p><rs ref="#p2340">Notre chef</rs> vient de communiquer à l’<orgName ref="#g0123">Academie</orgName> une <lb/>lettre qu’il a reçû de
+                        <placeName ref="#l1103">Berlin</placeName> du Mechanicien <persName>Elckner</persName>, <lb/>et dans laquelle cet Artiste lui
+                    offre ses services. Sur <lb/>cela l’<orgName ref="#g0123">Academie</orgName> a trouvé bon que je Vous prie, Mon<lb break="no"
+                    />sieur et très honoré Oncle, de faire venir cet homme <lb/>chèz <pb facs="00000146.jpg" n="2"/> chèz Vous pour lui dire que
+                        l’<orgName ref="#g0123">Academie</orgName> aiant actuellement <lb/>un nombre suffisant d’habiles Mechaniciens et Opticiens
+                    <lb/>en son service, elle ne sauroit accepter ses propositions.</p>
+                <p>Le père <persName>Meier</persName> ecrit de <placeName ref="#l0084">Hambourg</placeName>, qu’il va incessamment <lb/>partir pour
+                        <placeName>Travemünden</placeName>, où il compte de s’embarquer <lb/>avec son compagnon le Père <persName>Sthal</persName> et
+                    tous ses instrumens <lb/>sur le premier vaisseau qui partira soit pour ici directe<lb break="no"/>ment soit pour quelqu’autre port
+                    de la <placeName ref="#l0019">Russie</placeName>. Je <lb/>crains beaucoup, qu’il n’arrive trop tard.</p>
+                <p>Le Major <persName>Krassilnikoff</persName> connû par ses voiages et les obser<lb/>vations astronomiques qu’il a fait en partie
+                    avec feu Mr <lb/>de l’Isle en partie seul puis l’isle d’<placeName>Oesel</placeName> jusqu’à l’ex<lb break="no"/>tremité de
+                        <placeName>Kamtschacka</placeName>, est en attendant chargé de faire <lb/>avec l’adjoint <persName>Lexell</persName> les
+                    observations correspondantes <lb/>à l’observatoire d’ici.</p>
+                <p>Tous nos Astronomes sont déjà arrivés aux endroits de leur <lb/>déstination, d’où ils ont écrit à l’<orgName ref="#g0123"
+                        >Academie</orgName>, en notifiant <lb/>qu’ils sont actuellement occupé à faire bâtir leurs <lb/>observatoires. Le Prof.
+                        <persName>Lowitz</persName> n’a pas encore écrit <lb/>mais <pb facs="00000147.jpg" n="3"/>
+                    <note hand="#pencil" place="margin(right)" type="foliation">85</note>mais selon toutes les apparences ne sera-t-il pas loin
+                    <lb/>de <placeName>Gurief</placeName>.</p>
+                <p>Mr <persName>Aepinus</persName> notre Collegue a été nommé Conseiller <lb/>d’Etat de <rs>Sa Majesté Imperiale</rs>.</p>
+                <p>Mr. le Professeur <persName>Gmelin</persName> présentement à <placeName>Woronesch</placeName>
                     <lb/>vient d’envoier à l’<orgName ref="#g0123">Academie</orgName> le IVle et dernier Vo<lb break="no"/>lume des <title>flora
                         sibirica</title>, qu’on va mêttre incessament <lb/>sous presse. Son Ouvrage <title>de furis</title> et le IIIme Volume <lb/>de
                         <title>flora sibirica</title> sont à vendre. L’<orgName ref="#g0123">Academie</orgName> Vous <lb/>en enverra, Monsieur et très
                     honoré Oncle, des <lb/>exemplaires avec les premiers vaisseaux, et nous <lb/>aurons soin cette fois-ci, que l’ordre soit mieux
                     <lb/>observé : je me flatte cependant que Vous aurez <lb/>enfin reçû les livres que l’<orgName ref="#g0123">Academie</orgName>
-                    Vous envoia <lb/>il-y-a plus de 8 mois.</p><p>Les Glazes de <placeName>Ladoga</placeName> ont commencé à paroître le 12 <lb/>de ce
-                    mois, et elles n’ont pas discontinuées jusqu’à <lb/>présent : pour la plupart nous avons eu de jours <lb/>beaux et un tems de
-                    printems : le baromêtre a eté <lb/>le <pb facs="00000148.jpg" n="4"/> Le 16 de ce mois à 28 pouces et 7/10 et le 19 à 27 pouces et
-                    8/10 <lb/>le 18 à 6 heures du matin le thermomètre étoit à 154 <lb/>degrés, et le 27 après midi à 123 dégrés de Deslisle.
-                    <lb/>L’Annonce que Vous m’avez communiqué, Monsieur <lb/>et très honoré Oncle, a été présenté à l’<orgName ref="#g0123"
-                        >Academie</orgName>. <lb/>Aprésent il n’y a que Mr <persName ref="#p2333">de Stählin</persName> qui sache <lb/>l’anglois.</p>
-                j’ai l’honneur d’être avec un profond respect <lb/> Monsieur et très honoré Oncle <lb/>Votre très humble et très obeïssant
-                <lb/>Serviteur <signature>Jean Albert Euler</signature>. </div>
+                    Vous envoia <lb/>il-y-a plus de 8 mois.</p>
+                <p>Les Glazes de <placeName>Ladoga</placeName> ont commencé à paroître le 12 <lb/>de ce mois, et elles n’ont pas discontinuées jusqu’à
+                    <lb/>présent : pour la plupart nous avons eu de jours <lb/>beaux et un tems de printems : le baromêtre a eté <lb/>le <pb
+                        facs="00000148.jpg" n="4"/> Le 16 de ce mois à 28 pouces et 7/10 et le 19 à 27 pouces et 8/10 <lb/>le 18 à 6 heures du matin
+                    le thermomètre étoit à 154 <lb/>degrés, et le 27 après midi à 123 dégrés de Deslisle. <lb/>L’Annonce que Vous m’avez communiqué,
+                    Monsieur <lb/>et très honoré Oncle, a été présenté à l’<orgName ref="#g0123">Academie</orgName>. <lb/>Aprésent il n’y a que Mr
+                        <persName ref="#p2333">de Stählin</persName> qui sache <lb/>l’anglois.</p>
+                <closer><salute>j’ai l’honneur d’être avec un profond respect </salute>
+                    <salute rend="align(center)">Monsieur et très honoré Oncle </salute>
+                    <salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur </salute>
+                    <signed rend="align(right)">Jean Albert Euler.</signed>
+                </closer>
+            </div>
         </body>
     </text>
 </TEI>

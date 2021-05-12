@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -172,8 +179,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited persName, orgName, placeName, language</change>
@@ -185,57 +193,69 @@
         <body>
             <div type="transcription">
                 <pb facs="00000165.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">94</note> [lettre écrite sous la dictée] A <placeName ref="#l0020">St.
-                    Petersbourg</placeName> ce <date>23 Juin/4 Juillet 1769</date>.<lb/>
-                <opener>Monsieur mon très chèr et très honoré Oncle !</opener><lb/><p>J’ai reçû avec un très grand plaisir, Vos deux dernieres
-                    <lb/>lettres du 27 Mai et 13 Juin, et je les ai d’abord communi<lb break="no"/>qué à l’<orgName>académie Imperiale</orgName>, qui
-                    toujours se rémercie de <lb/>toutes les nouvelles intérressantes que Vous lui mandez. <lb/>je joins ici un extrait des
-                        <title>observations méthéorologi<lb break="no"/>ques</title> que j’ai fait pendant les cinq premiers mois de <lb/>cette année,
-                    et je Vous prie, Monsieur et très honoré On<lb break="no"/>cle, de vouloir bien le communique à <persName>Monsieur Begue<lb
-                            break="no"/>lin</persName> en l’assurant de mes très humbles devoirs.</p><p>L’<orgName ref="#g0123">academie</orgName>
-                    vient de Vous envoier le 11me Volume du <lb/><title>Calcul intégral</title>, le XIIme des <title>Commentaires</title>, un exem<lb
-                        break="no"/>plaire complet de <title>Flora Sibirica, et Gmelini His<lb break="no"/>toria fucorum</title> ; elle espère que
-                    Vous les récevrez <lb/>cette fois-ci plus promtement que l’année passée. <lb/>Les <lb/>à Monsieur le Professeur
-                        <persName>Formey</persName> a <placeName ref="#l1103">Berlin</placeName>. <pb facs="00000166.jpg" n="2"/> Les ouvrages du
-                    Doctor <persName>Fermin</persName> sont enfin arrivés, et <lb/>l’<orgName ref="#g0123">academie</orgName> les a reçû avec beaucoup
-                    de plaisir : je <lb/>fûs d’abord chargé de lui en rémercier, mais a<lb break="no"/>près avoir communiqué sa lettre datée de
-                        <placeName>Mastricht</placeName>
+                <note hand="#pencil" place="margin(right)" type="foliation">94</note>
+                <!--[lettre écrite sous la dictée]-->
+                <opener>
+                    <dateline rend="align(right)">A <placeName ref="#l0020">St. Petersbourg</placeName> ce <date when-iso="1769-06-23">23 Juin/4
+                            Juillet 1769</date>.</dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle !</salute></opener>
+                <p>J’ai reçû avec un très grand plaisir, Vos deux dernieres <lb/>lettres du 27 Mai et 13 Juin, et je les ai d’abord communi<lb
+                        break="no"/>qué à l’<orgName>académie Imperiale</orgName>, qui toujours se rémercie de <lb/>toutes les nouvelles
+                    intérressantes que Vous lui mandez. <lb/>je joins ici un extrait des <title>observations méthéorologi<lb break="no"/>ques</title>
+                    que j’ai fait pendant les cinq premiers mois de <lb/>cette année, et je Vous prie, Monsieur et très honoré On<lb break="no"/>cle,
+                    de vouloir bien le communique à <persName>Monsieur Begue<lb break="no"/>lin</persName> en l’assurant de mes très humbles
+                    devoirs.</p>
+                <p>L’<orgName ref="#g0123">academie</orgName> vient de Vous envoier le 11me Volume du <lb/><title>Calcul intégral</title>, le XIIme
+                    des <title>Commentaires</title>, un exem<lb break="no"/>plaire complet de <title>Flora Sibirica, et Gmelini His<lb break="no"
+                        />toria fucorum</title> ; elle espère que Vous les récevrez <lb/>cette fois-ci plus promtement que l’année passée. <lb/>Les
+                    <lb/>à Monsieur le Professeur <persName>Formey</persName> a <placeName ref="#l1103">Berlin</placeName>. <pb facs="00000166.jpg"
+                        n="2"/> Les ouvrages du Doctor <persName>Fermin</persName> sont enfin arrivés, et <lb/>l’<orgName ref="#g0123"
+                        >academie</orgName> les a reçû avec beaucoup de plaisir : je <lb/>fûs d’abord chargé de lui en rémercier, mais a<lb break="no"
+                    />près avoir communiqué sa lettre datée de <placeName>Mastricht</placeName>
                     <lb/>11 avril, au <rs ref="#p2340">comte</rs> notre Chef, qui est sur une de ses <lb/>terres, il me fit dire que j’attende son
                     rétour en <lb/>ville pour y répondre. Le 23 et le 24 du mois passé <lb/>ont été très favorables pour l’observation du pas<lb
                         break="no"/>sage de Venus devant le disque du Soleil. <lb/>Vous récevrez avec la présente, Monsieur et très hono<lb break="no"
                     />ré Oncle 2. Exemplaires de <rs>l’écrit</rs> que notre <orgName>Acade<lb break="no"/>mie</orgName> vient de publier, sur cette
                     observation, et que <lb/>vous aurez la bonté de communiquer à Votre illus<lb break="no"/>tre <orgName ref="#g0120"
                         >Academie</orgName>. En cas que Vos Astronomes aient <lb/>pû observer quelque chose, ils sont prié instam<lb break="no"/>ment
-                    de nous le communiquer.</p><p><rs>Sa Majesté</rs> notre très gracieuse souveraine a <lb/>observé Elle-même ces deux phénomênes à
-                    une <lb/>maison de Campagne située près d’<placeName>Oranienbaum</placeName>
+                    de nous le communiquer.</p>
+                <p><rs>Sa Majesté</rs> notre très gracieuse souveraine a <lb/>observé Elle-même ces deux phénomênes à une <lb/>maison de Campagne
+                    située près d’<placeName>Oranienbaum</placeName>
                     <lb/>où <pb facs="00000167.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">95</note> où Elle a passé le 23 de Mai Dépuis 6 heures du <lb/>soir
+                    <note hand="#pencil" place="margin(right)" type="foliation">95</note> où Elle a passé le 23 de Mai Dépuis 6 heures du <lb/>soir
                     jusqu’au 11 heures du lendemain, toujours oc<lb break="no"/>cupée à contempler les astres. <persName>Mr. Aepinus</persName> à eu
-                    <lb/>l’honneur de l’assister. </p><p><persName>Mr. Pictet</persName> vient d’envoier à l’<orgName ref="#g0123">Academie</orgName>
-                    le <rs>Journal <lb/>de ses Observations faites à <placeName>Oumba</placeName></rs>. Il n’a pas été <lb/>favorisé du Ciel, [car
-                    ?]il ne faisoit que pleuvoir <lb/>pendant tout le passage. D’ailleurs le tems lui <lb/>à permis de faire l’observation de
-                    l’ecclipse, <lb/>et plusieures autres observations qui serviront <lb/>toujours à déterminer la situation
-                        d’<placeName>Oumba</placeName>. <lb/>Il y a trouvé la declinaison de l’aiguille <lb/>aimantée de 3 dégré 30 minutes à
-                    l’oüest.</p><p> Les phÿsiciens envoiés par l’<orgName ref="#g0123">Academie Imperiale</orgName>
+                    <lb/>l’honneur de l’assister. </p>
+                <p><persName>Mr. Pictet</persName> vient d’envoier à l’<orgName ref="#g0123">Academie</orgName> le <rs>Journal <lb/>de ses
+                        Observations faites à <placeName>Oumba</placeName></rs>. Il n’a pas été <lb/>favorisé du Ciel, [car ?]il ne faisoit que
+                    pleuvoir <lb/>pendant tout le passage. D’ailleurs le tems lui <lb/>à permis de faire l’observation de l’ecclipse, <lb/>et
+                    plusieures autres observations qui serviront <lb/>toujours à déterminer la situation d’<placeName>Oumba</placeName>. <lb/>Il y a
+                    trouvé la declinaison de l’aiguille <lb/>aimantée de 3 dégré 30 minutes à l’oüest.</p>
+                <p> Les phÿsiciens envoiés par l’<orgName ref="#g0123">Academie Imperiale</orgName>
                     <lb/>pour faire des découvertes en Histoire naturelle, <lb/>continuent à nous envoier des déscriptions très <lb/>intérressantes
                     des environs, qu’ils parcourent, <lb/>et à enrichir notre Cabinet des curiosités natu<lb/>relles de toutes sorties de pieces rares
                     et instructi <lb/>ves <pb facs="00000168.jpg" n="4"/> ves. Le Professeur <persName>Gmelin</persName> a rencontré sur sa <lb/>route
                     des cheveaux sauvages, et dont il vient <lb/>d’envoier deux peaux à l’<orgName ref="#g0123">Academie</orgName> avec une de<lb
                         break="no"/>scription exacte de ces animaux et de la manière <lb/>de les chasser. Selon cette déscription les cheve<lb
                         break="no"/>aux sauvages ne se laissent point apprivoiser ; <lb/>ils font beaucoup de dégât et débauchent, les <lb/>juments
-                    des habitans, qui ensuite démeurent <lb/>avec eux et se dégénerent tout à fait.</p><p> [écriture d’Euler] j’ai lû l’extrait de ma
-                    derniere lettre que Vous avez eu la bonté de faire insérer <lb/>dans la <title>Gazette</title> de
-                        <persName>Francheville</persName>. Vous êtes prié, Monsieur et très honoré Oncle, <lb/>de continuer avec cette publication,
-                    toutes les fois que Vous trouverez <lb/>dans mes lettres quelque chose qui puisse intéresser le public.</p><p> Nous venons dans ce
-                    moment de récévoir des nouvelles de <persName>Mr. Mallet</persName>, qui <lb/>est à <placeName>Ponoi</placeName> : il a eu un tems
-                    peu favorable, cépendant l’entrée de Venus <lb/>et la fin de l’ecclipse du Soleil ont été observé avec une grande exacti<lb
-                        break="no"/>tude : nous allons le publier incessament, et compte de pouvoir dans <lb/>la huitaine Vous en envoier quelques
-                    exemplaires. Voici en attendant <lb/>un petit extrait de ses observations, mais que Vous ne publierez pas encore. <lb/>Latitude de
-                        <placeName>Ponoi</placeName> 67°4’30’’, Longitude 2h30’ de <placeName ref="#l0044">Paris</placeName> à l’orient. <lb/>Premier
-                    Contact de Venus le 23 May à 9h56’33’’ au soir <lb/>Second Contact à 10h15’3’’ Temps vrai : Fin de l’ecclipse <lb/>à 12h7’55’’ le
-                    24 May. <lb/>j’ai l’honneur d’être avec un profond réspect <lb/>Monsieur mon très chèr et très honoré Oncle <lb/>Votre très humble
-                    et très obeïssant <lb/>Serviteur et Neveu <lb/><signature>Jean Albert Euler</signature><lb/>#c’est à dire par les gazettes ou
-                    journeaux</p></div>
+                    des habitans, qui ensuite démeurent <lb/>avec eux et se dégénerent tout à fait.</p>
+                <p>
+                    <handShift new="#major_hand"/> j’ai lû l’extrait de ma derniere lettre que Vous avez eu la bonté de faire insérer <lb/>dans la
+                        <title>Gazette</title> de <persName>Francheville</persName>. Vous êtes prié, Monsieur et très honoré Oncle, <lb/>de continuer
+                    avec cette publication, toutes les fois que Vous trouverez <lb/>dans mes lettres quelque chose qui puisse intéresser le
+                    public.</p>
+                <p> Nous venons dans ce moment de récévoir des nouvelles de <persName>Mr. Mallet</persName>, qui <lb/>est à
+                        <placeName>Ponoi</placeName> : il a eu un tems peu favorable, cépendant l’entrée de Venus <lb/>et la fin de l’ecclipse du
+                    Soleil ont été observé avec une grande exacti<lb break="no"/>tude : nous allons le publier incessament, et compte de pouvoir dans
+                    <lb/>la huitaine Vous en envoier quelques exemplaires. Voici en attendant <lb/>un petit extrait de ses observations, mais que Vous
+                    ne publierez pas encore. <lb/>Latitude de <placeName>Ponoi</placeName> 67°4’30’’, Longitude 2h30’ de <placeName ref="#l0044"
+                        >Paris</placeName> à l’orient. <lb/>Premier Contact de Venus le 23 May à 9h56’33’’ au soir <lb/>Second Contact à 10h15’3’’
+                    Temps vrai : Fin de l’ecclipse <lb/>à 12h7’55’’ le 24 May.</p>
+                <closer><salute>j’ai l’honneur d’être avec un profond réspect</salute>
+                    <salute rend="indent">Monsieur mon très chèr et très honoré Oncle</salute>
+                    <salute rend="indent(right)">Votre très humble et très obeïssant <lb/>Serviteur et Neveu </salute><signed>Jean Albert
+                        Euler</signed></closer>
+                <note>#c’est à dire par les gazettes ou journeaux</note>
+            </div>
         </body>
     </text>
 </TEI>

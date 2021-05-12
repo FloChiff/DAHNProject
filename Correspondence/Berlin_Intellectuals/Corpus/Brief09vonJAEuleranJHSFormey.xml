@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section </repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
@@ -179,32 +187,43 @@
         <body>
             <div type="transcription">
                 <pb facs="00000023.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">14.</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">14.</note>
                 <!-- Folio 14 recto is the address of recipient -->
-                <p>A Monsieur <lb/>Monsieur le Professeur Formey <lb/>Secretaire perpetuel de l’<orgName ref="#g0120">Academie <lb/>Roïale</orgName>
-                    des Sciences et belles lettres de <lb/>Berlin &amp;&amp;&amp; <lb/>à Berlin</p>
+                <opener>
+                    <address rend="align(center)">
+                        <addrLine>A Monsieur</addrLine>
+                        <addrLine>Monsieur le Professeur Formey </addrLine>
+                        <addrLine>Secretaire perpetuel de l’<orgName ref="#g0120">Academie <lb/>Roïale</orgName> des Sciences et belles lettres de
+                            <lb/>Berlin &amp;&amp;&amp; </addrLine>
+                        <addrLine>à Berlin</addrLine>
+                    </address></opener>
                 <pb facs="00000024.jpg" n="2"/>
-                <note hand="#pencil" place="margin-right" type="foliation">14v</note>
-                <opener rend="align(right)">A <placeName ref="#l0020">St: Petersbourg</placeName> ce <date>20 Avril 1767 1 Mai (écriture
-                        ajoutée)</date><salute rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">14v</note>
+                <opener>
+                    <dateline rend="align(right)">A <placeName ref="#l0020">St: Petersbourg</placeName> ce <date when-iso="1767-04-20">20 Avril 1767 1
+                            Mai (écriture ajoutée)</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle !</salute></opener>
                 <p>Cette lettre ressemblera à ces courtes visites, que <lb/>j’avois autrefois l’honneur de Vous faire les <lb/>matins, ces visites que
                     je regretterai toujours <lb/>et que je trocquerai volontiers contre les plus longues <lb/>lettres que Vous avez la bonté de
                     m’adresser, <del rend="strikethrough">et</del>
                     <lb/>qui cependant pour aujourd’hui<del rend="strikethrough">t</del> font mon unique <lb/>consolation. Je Vous dirai cependant une
-                    nouvelle, <lb/>Monsieur et très honoré Oncle ! qui ne manquera <lb/>pas de Vous faire autant de plaisir qu<del rend="overwritten"
-                        >’un</del><add place="across">e</add> quatres <lb/>pages de mon ecriture, c’est que graces au ciel <lb/><rs ref="#p0037">mon
-                        père</rs> commence à se mieux porter, qu’il n’y a <lb/>plus rien à craindre pour lui et qu’il est au contraire <lb/>en chemin
-                    d’être bientôt tout à fait retabli.</p>
+                    nouvelle, <lb/>Monsieur et très honoré Oncle ! qui ne manquera <lb/>pas de Vous faire autant de plaisir qu<subst>
+                        <del rend="overwritten">’un</del>
+                        <add place="across">e</add>
+                    </subst> quatres <lb/>pages de mon ecriture, c’est que graces au ciel <lb/><rs ref="#p0037">mon père</rs> commence à se mieux
+                    porter, qu’il n’y a <lb/>plus rien à craindre pour lui et qu’il est au contraire <lb/>en chemin d’être bientôt tout à fait
+                    retabli.</p>
                 <p>Voilà tout ce que j’avois à Vous mander très honoré <lb/>Oncle. j’ai d’ailleurs commencé une longue epitre <lb/>que je finirai
                     aussitôt qu’il me le sera possible <lb/>et que je Vous enverrai ensuite avec la première <lb/>Occasion ; un pauvre extrait de mon
                     journal, <lb/>une rapsodie de mille bagatelles. Vous aurez <lb/>dejà recû ma dernière reponse à Vos précedentes <lb/>lettres,
                     datée du 19 avril, avec un billet pour <lb/><persName ref="p2351">D’Anières</persName>. Mes respects à <rs>Madame Votre
                         epouse</rs>
                     <lb/>et civilités à toute Votre chère famille, <rs ref="#p2328">ma femme</rs>
-                    <lb/>fait autant et mille complimens de <rs ref="#p0037">mon père</rs> et <lb/>de toute notre famille. <salute>Adieu mon très chèr
-                        et très honoré Oncle ! jouïssez longtems d’une bonne santé et n’oubliez jamais </salute></p>
-                <p><salute rend="align (right)">Votre très humble <lb/>et très obeïssant Serviteur et Neveu</salute></p>
-                <signature>J. Albert Euler</signature>
+                    <lb/>fait autant et mille complimens de <rs ref="#p0037">mon père</rs> et <lb/>de toute notre famille.</p>
+                <closer>
+                    <salute>Adieu mon très chèr<lb/> et très honoré Oncle ! jouïssez longtems d’une<lb/> bonne santé et n’oubliez jamais </salute>
+                    <salute rend="align(right)">Votre très humble <lb/>et très obeïssant Serviteur et Neveu</salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

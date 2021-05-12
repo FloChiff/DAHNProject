@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -146,7 +153,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -163,8 +170,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
             <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
@@ -179,11 +187,12 @@
             <div type="transcription">
                 <pb facs="00000048.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">29</note>
-                <opener rend="align (right)"><placeName ref="#l0020">St : Petersbourg</placeName> ce <date>2/13 Nov : 1767</date><lb/>
-                    <salute rend="align (left)">Monsieur mon très-chèr et très-honoré Oncle,</salute></opener>
-                <lb/>
+                <opener>
+                    <dateline rend="align(right)"><placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1767-11-02">2/13 Nov :
+                            1767</date></dateline>
+                    <salute rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle,</salute></opener>
                 <p>Je Vous prie d’avoir la bonté <del rend="strikethrough">l’incluse</del> d’expedier l’incluse au prem<lb break="no"/>ier jour de
-                    poste : il contient une affaire qui regarde <rs rf="#p2480">mon beau-frère</rs>
+                    poste : il contient une affaire qui regarde <rs ref="#p2480">mon beau-frère</rs>
                     <lb/>j’ai dejà depuis six jours une fievre de fluxion très forte, qui me fait <lb/>chanter pendant les nuits, à ce qu’on dit, les
                     plus belles chansons, et qui <lb/>me rend incapable de tout pendant le jour. Le <persName ref="#p2493">Général Fermor</persName>
                     est <lb/>mort à <placeName ref="#l0439">Moskau</placeName> et hier a été l’enterrement du <persName ref="#p2334">Feld-Marschal
@@ -193,8 +202,8 @@
                 <p>je suis bien mortifié que mon étât de <del rend="strikethrough">sant</del> maladie m’empeche de Vous <lb/>ecrire plus au long. et
                     suis avec un profond respect </p>
                 <lb/>
-                <closer><salute rend="align (right)">Votre très-humble et très-obeissant Serviteur et <lb/>Neveu </salute>
-                    <signature>J. Albert Euler</signature></closer>
+                <closer><salute rend="align(right)">Votre très-humble et très-obeissant Serviteur et <lb/>Neveu </salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
@@ -185,8 +193,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000125.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">74</note> à <placeName ref="#l0020">St Petersbourg</placeName> ce <date>27
-                    Fevrier/10 Mars 1769</date> : <opener>Monsieur mon très-chèr et très-honoré Oncle,</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">74</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-02-27">27 Fevrier/10
+                            Mars 1769</date> : </dateline><salute>Monsieur mon très-chèr et très-honoré Oncle,</salute></opener>
                 <p>Mr. <persName ref="#p2333">de Stählin</persName> s’étant démis de la Charge de <lb/>Sécretaire perpetuel de l’<orgName ref="#g0123"
                         >Academie Imperiale</orgName>
                     <lb/>des Sciences, S.E. Msgr. Le Comte <persName ref="#p2340">Volodimer <lb/>Orlov</persName> vient de me la conférer ad interim
@@ -199,16 +209,17 @@
                     et qui me si <lb/>chère que j’aimerai mieux de réfuser la <lb/>charge offerte et perdre tous les émolumens <lb/>qui <pb
                         facs="00000126.jpg" n="2"/> qui y sont attachés que de perdre celle-là. <lb/>j’espère de Votre bonté, Monsieur et très
                     <lb/>honoré Oncle, que Vous ne voudrez ni l’un <lb/>ni l’autre et que Vous tâcherez de me con<lb break="no"/>server ce double
-                    avantage.</p><p>j’ai enfin eu le bonheur de parler au Comte <lb/><persName>Czernichef</persName> et de lui faire la proposition
-                    <lb/>dont Vous m’aviez chargé. Il me combla <lb/>de politesses, et comme il ne dinoit pas ce <lb/>jour là chez lui, il me fit
-                    présenter à <lb/>son épouse, et chez laquelle je fus obliger <lb/>de diner. Quant à la réponse elle est né<lb break="no"/>gative
-                    et voici ses propres termes. <lb/>Nous avons plus des officiers qu’il nous <lb/>en faut, cependant si Mr le Capitaine de
+                    avantage.</p>
+                <p>j’ai enfin eu le bonheur de parler au Comte <lb/><persName>Czernichef</persName> et de lui faire la proposition <lb/>dont Vous
+                    m’aviez chargé. Il me combla <lb/>de politesses, et comme il ne dinoit pas ce <lb/>jour là chez lui, il me fit présenter à
+                    <lb/>son épouse, et chez laquelle je fus obliger <lb/>de diner. Quant à la réponse elle est né<lb break="no"/>gative et voici ses
+                    propres termes. <lb/>Nous avons plus des officiers qu’il nous <lb/>en faut, cependant si Mr le Capitaine de
                         <lb/><persName>Sers</persName> vouloit à tout hazard se rendre ici, <lb/>peut-être le pourrois-je emploier comme
                     <lb/>Lieutenant : je lui répondis à cela, qu’un <lb/>Capitaine Prussien ne servira jamais au <lb/>dessous /de/ son grade, chez
                     quelque puissance <lb/>que cela soit, et il me repartit, je le fais <lb/>très bien, mais la regle ne souffre aucune
                     <lb/>exception, je le conseille /donc/ de rester là où <lb/>il est. Je Vous ai adressé le 1er de ce <lb/>mois <pb
                         facs="00000127.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">75</note> un petit pacquet contenant quelques lettres, <lb/>almanacs,
+                    <note hand="#pencil" place="margin(right)" type="foliation">75</note> un petit pacquet contenant quelques lettres, <lb/>almanacs,
                     avec le certificat mortuaire que <lb/>Vous m’aviez démandé, Monsieur et très honoré <lb/>Oncle ; j’en ai chargé un nommé Grand,
                     qui <lb/>venant de <placeName ref="#l0439">Moscou</placeName> passa par ici pour aller <lb/>en droiture à <placeName ref="#l1103"
                         >Berlin</placeName>, j’espere que Vous <lb/>aurez bien reçû le tout à l’heure qu’il est. <lb/>Quant à l’autre envoi, nous
@@ -246,7 +257,7 @@
                     <lb/>Enfin je me rendis au <orgName>Consistoire</orgName> pour regler <lb/>les comptes. Le 16 nous apprimes la nouvelle <lb/>des
                     trois actions victorieuses pour nous trouppes. <lb/>Le 17. Nous dinames tous chez notre bon Pasteur <lb/><persName>La
                         Vigne</persName>, et nous fûmes bien gai : ensuite chez Mr <pb facs="00000129.jpg" n="5"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">76</note> Mr. <persName ref="#p2404">Model</persName>, qui guerissoit
+                    <note hand="#pencil" place="margin(right)" type="foliation">76</note> Mr. <persName ref="#p2404">Model</persName>, qui guerissoit
                         <rs ref="#p2328">ma femme</rs> de ses maux <lb/>de dents en lui faisant appliquer l’Oleum Caja<lb break="no"/>pur sur du
                     cotton dans le creux du dent gaté. <lb/>Le 18. j’examinai les éleves de l’<orgName ref="#g0123">Academie</orgName>, dont
                         <lb/><rs>S.E.</rs> m’avoit chargé. Après diner au <orgName>Consistoire</orgName>
@@ -273,13 +284,17 @@
                     commission du Capitaine <persName>Möller</persName>, <lb/>et je lui ai acheté toutes les cartes géographiques <lb/>qui ont parû
                     jusqu’ici à notre <orgName ref="#g0123">Academie</orgName>. Le <lb/>tout monte à 10 Rbl 25 sous faisant 12 Ecus <lb/>19 ½ gros
                     argent de <placeName ref="#l1103">Berlin</placeName>. Dès que je verrai <lb/>Mr. <persName>Bachmann</persName> je ne manquerai pas
-                    de regler <lb/>le reste et de Vous en donner Avis.</p><p>Je reitère mes très humbles rémercimens pour <lb/>toutes Vos bontés,
-                    Monsieur et très honoré, <lb/>Oncle, et je Vous prie de vouloir toujours <lb/>me conserver Votre affection, qui m’est des
-                    <lb/>plus precieuses. <rs ref="#p2328">Ma femme</rs> Vous conserve <lb/>aime avec ces sentimens que Vous lui <lb/>connoissez. <rs
-                        ref="#p0037">Mon père</rs>, <rs ref="#p2329">ma mère</rs>, et toute <lb/>notre famille Vous font faire mille compli<lb
-                        break="no"/>mens ; je Vous prie de faire autant de <lb/>notre part à <rs>Mad. Votre épouse</rs>, à Mll <lb/>Vos filles, toute
-                    Votre aimable famille, <lb/>enfin à toutes nos connoissances de Berlin.</p> étant très respectueusement <lb/>Votre très humble et
-                très obéïssant <lb/>Serviteur et Neveu <signature>J. Albert Euler</signature></div>
+                    de regler <lb/>le reste et de Vous en donner Avis.</p>
+                <p>Je reitère mes très humbles rémercimens pour <lb/>toutes Vos bontés, Monsieur et très honoré, <lb/>Oncle, et je Vous prie de
+                    vouloir toujours <lb/>me conserver Votre affection, qui m’est des <lb/>plus precieuses. <rs ref="#p2328">Ma femme</rs> Vous
+                    conserve <lb/>aime avec ces sentimens que Vous lui <lb/>connoissez. <rs ref="#p0037">Mon père</rs>, <rs ref="#p2329">ma mère</rs>,
+                    et toute <lb/>notre famille Vous font faire mille compli<lb break="no"/>mens ; je Vous prie de faire autant de <lb/>notre part à
+                        <rs>Mad. Votre épouse</rs>, à Mll <lb/>Vos filles, toute Votre aimable famille, <lb/>enfin à toutes nos connoissances de
+                    Berlin.</p>
+                <closer><salute>étant très respectueusement</salute>
+                    <salute rend="align(right)">Votre très humble et très obéïssant <lb/>Serviteur et Neveu </salute>
+                    <signed rend="align(right)">J. Albert Euler</signed></closer>
+            </div>
         </body>
     </text>
 </TEI>

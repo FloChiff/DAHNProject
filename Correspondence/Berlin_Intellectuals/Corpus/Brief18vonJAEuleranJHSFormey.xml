@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -147,7 +154,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -164,8 +171,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -181,18 +189,23 @@
             <div type="transcription">
                 <pb facs="00000046.jpg" n="1"/>
                 <note hand="#pencil" place="margin-right" type="foliation">28</note>
-                <opener rend="align (right)">à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date>12/23 Octobre 1767</date>.<lb/><salute
-                        rend="align (left)">Monsieur mon très-chè<del rend="overwritten">z</del><add place="across">r</add> et très-honoré Oncle
-                        !</salute></opener>
+                <opener><dateline>à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1767-10-12">12/23 Octobre
+                        1767</date>.</dateline>
+                    <salute rend="align(left)">Monsieur mon très-chè<subst>
+                            <del rend="overwritten">z</del>
+                            <add place="across">r</add>
+                        </subst> et très-honoré Oncle !</salute></opener>
                 <lb/>
                 <p>Dieu veuille conserver Vos chèrs fils et Vous faire la grace qu’ils se <lb/>tirent heureusement d’affaire ! je suis bien inquièt à
                     leur égard, et <lb/>je Vous conjure, très honoré Oncle, de <add place="above">ne</add> vouloir pas tarder à me donner <lb/>de
                     leurs nouvelles : J’ai reçû toutes Vos lettres et je les ai lue comme <lb/>de coutume, c’est-à-dire avec un plaisir infini ; mon
-                    père, à qui je les <lb/>lis aussi et qui n’en perd pas une syllabe <del rend="overwritten">me prie</del><add place="across"
-                        >m’ordonne</add> de Vous présenter <lb/>ses devoirs et de Vous supplier de vouloir bien continuer de donner <lb/>de Vos
-                    nouvelles aussi souvant qu’il Vous sera possible. J’ai fait <lb/>baptiser le 13 du mois passé par le <rs>Pasteur Suedois</rs>, et
-                    j’ai fait <lb/>donner à ma petite les noms <persName>Anne Emilie Jeanne</persName> ; le <persName ref="#p2334">Feld Mareshal
-                        <lb/>Comte Münnich</persName>, <persName>Mad. La Conseillère d’Etât de Schumacher</persName>, <persName ref="#p2406">Mad.
+                    père, à qui je les <lb/>lis aussi et qui n’en perd pas une syllabe <subst>
+                        <del rend="overwritten">me prie</del>
+                        <add place="across">m’ordonne</add>
+                    </subst> de Vous présenter <lb/>ses devoirs et de Vous supplier de vouloir bien continuer de donner <lb/>de Vos nouvelles aussi
+                    souvant qu’il Vous sera possible. J’ai fait <lb/>baptiser le 13 du mois passé par le <rs>Pasteur Suedois</rs>, et j’ai fait
+                    <lb/>donner à ma petite les noms <persName>Anne Emilie Jeanne</persName> ; le <persName ref="#p2334">Feld Mareshal <lb/>Comte
+                        Münnich</persName>, <persName>Mad. La Conseillère d’Etât de Schumacher</persName>, <persName ref="#p2406">Mad.
                         Poggenpohl</persName>, <lb/><rs ref="#p2331">ma belle sœur</rs> la femme du medecin et ma belle sœur
                         <persName>Hagmeister</persName>
                     <lb/>de <placeName ref="#l1103">Berlin</placeName> ont été le Parain et les maraines. L’Expedition des <rs>Almanacs</rs>
@@ -220,15 +233,17 @@
                     ici mon Journal. J’ai reçû Monsieur et très-honoré Oncle, <lb/>la pièce pour le prix proposé par la <orgName ref="#g0123">Société
                         oeconomique</orgName>, que Vous <lb/>m’avez adressé, et je l’ai d’abord donné à <persName ref="#p2333">Mr. de
                         Stehlin</persName> son Secretaire ; <lb/>Si Vous souhaitez un <hi rend="underlined">recipisse</hi>, je Vous en procurerai
-                    d’abord un <lb/>mais comme toutes <del rend="overwritten">s</del><add place="across">c</add>es pieces sont si bien et si
-                    religieusement gardées, <lb/>je ne crois pas qu’il le soit necessaire : je Vous en repondrai toujours. <lb/>Pour la <del
-                        rend="strikethrough">mort</del> fausse nouvelle de la mort de <persName ref="#p2486">Mr. Bell</persName>, elle nous a tout
-                    fait <lb/>bien de plaisir, et est venûe encore à tems ; car nous nous étions proposés <lb/><del rend="strikethrough">d’en
-                        faire</del> de la communiquer encore le même soir à <rs>ma belle sœur</rs>, lorsque Votre <lb/>seconde lettre arriva. Dans
-                    Votre lettre du 21 Septembre, Monsieur et <lb/>très-honoré Oncle, Vous me parlez d’un accident singulier d’<persName ref="#p2487"
-                        >Ignatius <lb/>Muller</persName> et du <persName ref="#p2488">Conseiller privé d’Holzendorff</persName>, mais Vous avez
-                    oubliez <lb/>de m’en faire part ; oserai-je bien Vous prier de le faire encore en <lb/>répondant à celle-cy ? Comment va l’affaire
-                    des <persName ref="#p2489">Behmers</persName> ?</p>
+                    d’abord un <lb/>mais comme toutes <subst>
+                        <del rend="overwritten">s</del>
+                        <add place="across">c</add>
+                    </subst>es pieces sont si bien et si religieusement gardées, <lb/>je ne crois pas qu’il le soit necessaire : je Vous en repondrai
+                    toujours. <lb/>Pour la <del rend="strikethrough">mort</del> fausse nouvelle de la mort de <persName ref="#p2486">Mr.
+                        Bell</persName>, elle nous a tout fait <lb/>bien de plaisir, et est venûe encore à tems ; car nous nous étions proposés
+                        <lb/><del rend="strikethrough">d’en faire</del> de la communiquer encore le même soir à <rs>ma belle sœur</rs>, lorsque Votre
+                    <lb/>seconde lettre arriva. Dans Votre lettre du 21 Septembre, Monsieur et <lb/>très-honoré Oncle, Vous me parlez d’un accident
+                    singulier d’<persName ref="#p2487">Ignatius <lb/>Muller</persName> et du <persName ref="#p2488">Conseiller privé
+                        d’Holzendorff</persName>, mais Vous avez oubliez <lb/>de m’en faire part ; oserai-je bien Vous prier de le faire encore en
+                    <lb/>répondant à celle-cy ? Comment va l’affaire des <persName ref="#p2489">Behmers</persName> ?</p>
                 <p><rs ref="#p2328">Ma femme</rs> Vous présente ses très-obeissants Respects, et nous prions tous <lb/><rs>Madame Votre Epouse</rs> de
                     vouloir bien agrées nos très humbles civilités. <lb/>Voilà <placeName ref="#l1103">Berlin</placeName> en joye et en fêtes : nous
                         <unclear reason="illegible">f</unclear> embrassons Mesdemoiselles <lb/>Vos filles et toute Vôtre aimable famille, enfin mille
@@ -236,10 +251,9 @@
                         ref="#p2452">Handreich</persName>, <lb/><persName ref="#p2490">degrave</persName>, etc etc <persName ref="#p2563">Mr.
                         Marggraaf</persName>, <persName ref="#p2491">Mekel</persName>, <persName ref="#p2492">Küster</persName>, etc etc</p>
                 <closer><salute>je suis avec un profond respect</salute>
-                    <lb/><salute rend="align (centre)">Monsieur mon très-chèr et très-honoré Oncle</salute>
-                    <lb/><salute rend="align (right)">Votre <lb/>très-humble et très-obeïssant <lb/>Neveu et Serviteur</salute></closer>
-                <lb/>
-                <signature>J. Albert Euler</signature>
+                    <salute rend="align(center)">Monsieur mon très-chèr et très-honoré Oncle</salute>
+                    <salute rend="align(right)">Votre <lb/>très-humble et très-obeïssant <lb/>Neveu et Serviteur</salute>
+                    <signed>J. Albert Euler</signed></closer>
             </div>
         </body>
     </text>

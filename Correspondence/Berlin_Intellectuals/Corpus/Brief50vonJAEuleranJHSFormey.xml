@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -172,8 +179,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName g0123.</change>
             <change when-iso="2014-11-06" who="#emmanuelle.chaze">Edited persName, orgName, placeName, language.</change>
@@ -185,9 +193,12 @@
         <body>
             <div type="transcription">
                 <pb facs="00000175.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">99</note> à <placeName ref="#l0020">St : Petersbourg</placeName> ce
-                    <date>3/14 Juillet 1769</date>.<lb/><opener><salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener><p>Je me prens
-                    la liberté de Vous adrésser avec la présente, <lb/>1.)La lettre de rémerciment pour le Docteur <persName>Fermin</persName>
+                <note hand="#pencil" place="margin(right)" type="foliation">99</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0020">St : Petersbourg</placeName> ce <date when-iso="1769-07-03">3/14
+                            Juillet 1769</date>.</dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
+                <p>Je me prens la liberté de Vous adrésser avec la présente, <lb/>1.)La lettre de rémerciment pour le Docteur
+                        <persName>Fermin</persName>
                     <lb/>2.) Une lettre pour <persName>Mr. Bell</persName> ; 3.) une lettre pour <rs>mon <lb/>beau père</rs>, que Vous aurez la bonté,
                     Monsieur et très <lb/>honoré Oncle, de faire rémettre à leurs adresses. 4.)<lb/><title>Des Observations méthéorologiques</title>
                     pour <persName>Mr. Beguelin</persName>, <lb/>auquel nous prions de faire nos complimens. 5.) <lb/>Une <rs>Gazette</rs>, dont
@@ -224,16 +235,22 @@
                         <persName>Trinette</persName> allâmes <lb/>souper chez <persName>Mr. Model</persName>. Aujourd’hui jour de Poste. <lb/>Vous ne
                     m’avez rien mandé de <persName>Mll. De Strantz</persName>
                     <pb facs="00000177.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">100</note> que fait-elle et où est-elle ? Nous nous portons tous
+                    <note hand="#pencil" place="margin(right)" type="foliation">100</note> que fait-elle et où est-elle ? Nous nous portons tous
                     <lb/>très bien, et je suis comme toujours chargé à Vous faire, <lb/>Monsieur et très honoré Oncle, mille et mille compli<lb
                         break="no"/>mens, de <rs>Papa</rs>, <rs>Mama</rs> et toute la famille ; <rs ref="#p2328">ma <lb/>femme</rs> surtout Vous
                     assure de sa plus tendre <lb/>amitié, et nous Vous prions de vouloir toujours <lb/>nous conserver, et à nos enfans, Votre
                     précieuse <lb/>bienveuillance ! Distribuez, s’il Vous plait, <lb/>nos respects, dévoirs et amitiés à Madame <lb/><rs>Votre
-                        épouse</rs>, Mlls Vos filles, Vos aimables <lb/>petits, et à tous ceux qui veuïllent bien se <lb/>souvenir de nous. <lb/>je
-                    suis avec un profond respect <lb/>Monsieur mon très chèr et très honoré <lb/>Oncle <lb/>Votre <lb/>très humble et très obéïssant
-                    <lb/>Serviteur et Neveu <signature>Jean Albert Neveu</signature><lb/>je me suis trompé <persName ref="#p2333">Mr. de
-                        Stählin</persName> Vous <lb/>envoit, mon chèr Oncle, une lettre pour <lb/><placeName ref="#l0004">Leipzig</placeName></p><pb
-                    facs="00000178.jpg" n="4"/><note resp="emmanuelle.chaze">page vierge</note></div>
+                        épouse</rs>, Mlls Vos filles, Vos aimables <lb/>petits, et à tous ceux qui veuïllent bien se <lb/>souvenir de nous.</p>
+                <closer><salute>je suis avec un profond respect </salute><salute rend="indent">Monsieur mon très chèr et très honoré <lb/>Oncle
+                        </salute><salute rend="align(right)">Votre <lb/>très humble et très obéïssant <lb/>Serviteur et Neveu </salute><signed
+                        rend="align(right)">Jean Albert Neveu</signed></closer>
+                <postscript>
+                    <p>je me suis trompé <persName ref="#p2333">Mr. de Stählin</persName> Vous <lb/>envoit, mon chèr Oncle, une lettre pour
+                            <lb/><placeName ref="#l0004">Leipzig</placeName></p>
+                </postscript>
+                <pb facs="00000178.jpg" n="4"/>
+                <note resp="emmanuelle.chaze">page vierge</note>
+            </div>
         </body>
     </text>
 </TEI>

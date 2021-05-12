@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
@@ -185,8 +193,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000109.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">62</note> A <placeName ref="#l0020">St Petersbourg</placeName> ce
-                    <date>18/29 Novembre 1768</date>. <opener>Monsieur mon très chèr et très honoré Oncle,</opener>
+                <note hand="#pencil" place="margin(right)" type="foliation">62</note>
+                <opener><dateline rend="align(right)">A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1768-11-18">18/29
+                            Novembre 1768</date>.</dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
                 <p>Il y a bien long tems que je ne me suis entretenû avec Vous, notre très <lb/>honoré Oncle, et j’ai en attendant reçû les deux
                     dernieres lettres dont Vous <lb/>m’avez honoré le 9 et 22 du mois passé, aux quelles je vais répondre à répondre à cet
                     <lb/>instant. Le Sieur <persName>Bouc</persName> ne m’est plus venu voir, il y a très long tems, j’ignore <lb/>ce qu’il est
@@ -241,10 +251,10 @@
                         Foussadier</persName> et ensuite au <lb/><orgName>Consistoire</orgName>, ou on m’elût Ancien de l’église, que auant déjà
                     fonctionné <lb/>en cette qualitié près de deux ans sans avoir eu la vocation formelle. <lb/>Le 21 furent expediés les Lettres
                     circulaires de <rs>mon pere</rs> pour les # <pb facs="00000111.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">63</note># <orgName>Academies de Berlin, Paris et Londres</orgName>. Le
-                    22 je fis plusieures visites : <lb/>j’allois ensuite à la <orgName ref="#g0124">Société oeconomique</orgName>, et je finissois la
-                    journée pour aller <lb/>souper chez Mr. <persName ref="#p2404">Modell</persName> avec <rs ref="#p2328">ma femme</rs>. Le 23 je me
-                    fis saigner par <lb/>précaution. Le Comte <persName>de Fermor</persName> me vint voir et me porta la nouvelle <lb/>que <rs>son
+                    <note hand="#pencil" place="margin(right)" type="foliation">63</note># <orgName>Academies de Berlin, Paris et Londres</orgName>.
+                    Le 22 je fis plusieures visites : <lb/>j’allois ensuite à la <orgName ref="#g0124">Société oeconomique</orgName>, et je finissois
+                    la journée pour aller <lb/>souper chez Mr. <persName ref="#p2404">Modell</persName> avec <rs ref="#p2328">ma femme</rs>. Le 23 je
+                    me fis saigner par <lb/>précaution. Le Comte <persName>de Fermor</persName> me vint voir et me porta la nouvelle <lb/>que <rs>son
                         père</rs> avoit envin obtenû sa dimission, qu’il avoit dejà cherché <lb/>depuis long tems et que <rs ref="#p0081">S.M.I.</rs>
                     lui a fait présent d’un épée d’or <lb/>garni richement de brillans. Ce Géneral vit à présent sur ses terres <lb/>près de
                         <placeName ref="#l0511">Riga</placeName>. Le 24 on ôta le pont et on vit paroître les glaces <lb/>de
@@ -266,20 +276,28 @@
                     <lb/>Les regimens qui vont contre les Turcks defilerent devant nôtre maison en <lb/>Chalouppes, ce qui étoit très beau à voir. Le
                     13 j’allois rendre visite au <lb/>Comte General en Chef <persName>de Czernitschef</persName> et à quelques autres Seigneurs.
                     <lb/>Le 16 mon jour de naissance et l’arrivée de Mr. <persName>Kologriv</persName> : je finis <lb/>en me recommandant à Votre
-                    amitié et bienveuïllance : <rs ref="#p2328">ma femme</rs>
-                    <lb/>et toute ma famille font autant et je suis avec le plus profond <lb/>respect Votre très humble et très obeïssant Serviteur et
-                    Neveu J. Albert Euler </p><pb facs="00000113.jpg" n="5"/>
-                <note hand="#pencil" place="margin-right" type="foliation">66</note><p>Je rouvre ma lettre, Monsieur et très-honoré Oncle, <lb/>pour
-                    Vous mandez que notre <orgName ref="#g0123">Académie</orgName> vient enfin <lb/>de recevoir les livres que Vous lui aviez adressé.
-                    <lb/>Ces livres ont déjà été à la douane, il y a presque <lb/>trois mois, mais nous n’en avons eu aucune <lb/>connoissance et la
-                    caisse a risqué d’être vendû <lb/>publiquement, les gens de la douane ne sachant <lb/>pas à qui elle est adressée. C’est par
-                    hazard, <lb/>qu’un des domestiques de l’<orgName ref="#g0123">Académie</orgName> instruit de l’em<lb break="no"/>barras où nous
-                    étions à l’égard de cet envoi, en <lb/>eut connoissance ; nous fimes donc d’abord ouvrir <lb/>la caisse à la douane et aiant vû
-                    qu’elle con<lb break="no"/>tenoit effectivement les livres que nous attendons <lb/>nous l’avons fait rétirer chez nous, et envoié
-                    sur <lb/>le champ au Comte <persName>de Solins</persName> le présent que <lb/>Votre <orgName ref="#0120">Academie</orgName> fait à
-                        <rs ref="#p0081">S.M.I.</rs> Le Libraire <persName>Nicolai</persName> avoit négligé de nous envoier le con<lb break="no"
-                    />noissement. C’est une grande faute de sa part.</p><pb facs="00000114.jpg" n="6"/><note resp="emmanuelle.chaze">page
-                    vierge</note>Preussisches G Bibliothek Berlin </div>
+                    amitié et bienveuïllance :</p>
+                <closer><salute><rs ref="#p2328">ma femme</rs>
+                        <lb/>et toute ma famille font autant et je suis avec le plus profond <lb/>respect Votre très humble et très obeïssant
+                        Serviteur et Neveu</salute>
+                    <signed>J. Albert Euler </signed></closer>
+                <pb facs="00000113.jpg" n="5"/>
+                <note hand="#pencil" place="margin(right)" type="foliation">66</note>
+                <postscript>
+                    <p>Je rouvre ma lettre, Monsieur et très-honoré Oncle, <lb/>pour Vous mandez que notre <orgName ref="#g0123">Académie</orgName>
+                        vient enfin <lb/>de recevoir les livres que Vous lui aviez adressé. <lb/>Ces livres ont déjà été à la douane, il y a presque
+                        <lb/>trois mois, mais nous n’en avons eu aucune <lb/>connoissance et la caisse a risqué d’être vendû <lb/>publiquement, les
+                        gens de la douane ne sachant <lb/>pas à qui elle est adressée. C’est par hazard, <lb/>qu’un des domestiques de l’<orgName
+                            ref="#g0123">Académie</orgName> instruit de l’em<lb break="no"/>barras où nous étions à l’égard de cet envoi, en <lb/>eut
+                        connoissance ; nous fimes donc d’abord ouvrir <lb/>la caisse à la douane et aiant vû qu’elle con<lb break="no"/>tenoit
+                        effectivement les livres que nous attendons <lb/>nous l’avons fait rétirer chez nous, et envoié sur <lb/>le champ au Comte
+                            <persName>de Solins</persName> le présent que <lb/>Votre <orgName ref="#0120">Academie</orgName> fait à <rs ref="#p0081"
+                            >S.M.I.</rs> Le Libraire <lb/><persName>Nicolai</persName> avoit négligé de nous envoier le con<lb break="no"/>noissement.
+                        C’est une grande faute de sa part.</p>
+                </postscript>
+                <pb facs="00000114.jpg" n="6"/>
+                <note resp="emmanuelle.chaze">page vierge<stamp>Preussisches G Bibliothek Berlin </stamp></note>
+            </div>
         </body>
     </text>
 </TEI>

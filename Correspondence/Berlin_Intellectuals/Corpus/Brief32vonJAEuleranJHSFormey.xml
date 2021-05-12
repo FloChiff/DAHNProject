@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
@@ -185,44 +193,47 @@
         <body>
             <div type="transcription">
                 <pb facs="00000102.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">60</note> à <placeName ref="#l0020">St Petersbourg</placeName> ce <date>30
-                    septembre/11 Octobre 1768</date>. Monsieur mon très chèr et très honoré Oncle, <p>Vos lettres commencent à être moins fréquentes,
-                    et cela nous fait bien de la <lb/>peine : je n’ose soupçonner que la rareté de mes lettres en sont une cause, <lb/>Vous êtes trop
-                    juste, Vous nous aimez trop, très-chèr et très-honoré Oncle, <lb/>pour nous priver d’une satisfaction, (je puis même dire d’un
-                    bienfait dans l’é<lb break="no"/>loignement où nous sommes obligé de vivre de Vous,), parce que les circon<lb break="no"/>stances
-                    ne me permmettent pas à Vous écrire aussi souvant que je le souhai<lb break="no"/>terois. Le bon Pasteur <persName>La
-                        Vigne</persName> est très sensible à Votre amitié: il Vous <lb/>avoit écrit, d'abord après avoir prononcé ses deux sermons
-                    d'Entrée, mais il <lb/>a donné sa lettre à Mr. <persName>Dilthey</persName>, et j’espère que celui-ci Vous l’aura rémis <lb/>à
-                    l’heure qu’il est. Il m’auroit cela non obstant donné une lettre pour <lb/>Vous si les deux fêtes de la couronne et la
-                    distribution de la commu<lb break="no"/>nion pendant deux dimanches de suite n’étoient pas entrevenû. <lb/>Ce sera donc pour la
-                    premiere occasion à venir. Par rapport à la démoiselle, <lb/>qu’un Seigneur Lifflandois souhaitoit d’engager auprès de sa fille,
-                    je lui ai <lb/>fait écrire, que Vous en aviez trouvé une et qu’il n’avoit qu’à s’adresser <lb/>directement à Vous ; je n’ai eu
-                    point de réponse la dessûs ; et s’il ne Vous <lb/>a pas écrit, c’est sa faute, j’ai fait ce qu’on demandoit de moi, et c’est à
-                    <lb/>lui de faire le reste. Aussi n’ai-je pas trouvé le Baron <persName>de Goltz</persName> chez <lb/>lui, et j’ignore s’il aura
-                    reçû Votre lettre : cependant je n’en doute pas <lb/>et je suis surpris, que ce Cavalier, qui est à tous égards des plus
-                    éstimables, <lb/>ne Vous aie pas donné un môt de réponse. Peut être qu’il négocie <lb/>actuellement pour le bien de Mr.
-                        <persName>de Malechovcki</persName>, et qu’il voudra attendre <lb/>la fin de toute l’affaire pour Vous en /pouvoir/ rendre con
-                    un compte exact. <lb/>Nous n’avons pas encore reçû la caisse que Vous avez eu la bonté de <lb/>nous expedier par
-                        <persName>Nicolaï</persName>, mais nous l’attendons tous les jours.</p><p>Vous reçevrez celle que nous Vous avons expedié, il
-                    y a près de trois mois, vers la fin du mois d’octobre, ou plus surement au commence<lb break="no"/>ment du mois de Novembre.
-                    L’estampe que Vous m’avez envoié <lb/>mon très chèr Oncle, avec Votre derniere lettre, est un secret que nous <lb/>n’avons pas <pb
-                        facs="00000103.jpg" n="2"/> n’avons pas pû déchiffrer ; nous soupçonnos (sic) cependant que le portrait qui se <pb/>trouve aux
-                    pieds du Satyre est celui de <persName>Voltaire</persName>. Vous me ferez un plaisir <lb/>de me donner quelques môts
-                    d’eclaircissemens. Nous comptons de communier <lb/>dimanche qui vient, la division allemande de notre famille a communié dimanche
-                    <lb/>passé. Le Pasteur <persName>La Vigne</persName> a expliqué le 21 de ce mois la parabole de <lb/>l’enfant prodigue, et il a
-                    fait un discours des plus éloquents. Nous trouvons <lb/>de plus en plus en lui un homme réspectable, aussi est-il très bien aimé
-                    <lb/>de toute la communeauté. Ma derniere lettre est du 9 de ce mois : le 10 <lb/>je fis une visite au <rs>Prince
-                        Vice-Chancellier</rs>, un très aimable Seigneur, et <lb/>qui ressemble beaucoup par sa politesse aux Seigneurs Prussiens.
-                    Après diner <lb/>je fis encores quelques visites entr’autres chez Mad. <persName>Poggenpohl</persName> ; ensuite, <lb/>à la
-                        <orgName ref="#g0124">Société oeconomique</orgName>, où il y avoit élection d’un nouveau président. <lb/>Le choix tomboit sur
-                    la personne du Conseiller d’Etât <persName>Melissino</persName>. Après <lb/>mon rétour me vinrent voir Mssrs.
-                        <persName>Mallet</persName> et <persName>Pictet</persName>. Le 14 à l’Eglise, <lb/>le 15 je reçûs Votre derniere lettre du 13
-                    Sept. Le 16 je reçûs une <lb/>lettre de Mr. <persName>de Sonntag</persName> qui s’ennuïe mortellement dans son héritage, et
-                    <lb/>qui ne cesse de me charger des complimens pour Vous, Monsieur <lb/>et très honoré Oncle. Le 20. jour de naissance du
-                        <rs>Grand-Duc</rs> ; j’allois <lb/>à la cour, et la ville fût illuminée. Le 21 à l’église et le 22 <lb/>encore à la cour :
-                    c’étoit la fête du courronnement de <rs ref="#p0081">S.M.I.</rs> et <lb/>la ville étoit encore illuminée. J’esperois ces jours de
-                    rencontrer Mr. <lb/>le baron <persName>de Goltz</persName>, mais il n’y étoit pas. Je reçûs des lettres du Docteur
-                        <lb/><persName>Büsching</persName> et de mon pupille <persName>Dilthey</persName> de <placeName ref="#l1103"
+                <note hand="#pencil" place="margin(right)" type="foliation">60</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1768-09-30">30 septembre/11
+                            Octobre 1768</date>.</dateline>
+                    <salute>Monsieur mon très chèr et très honoré Oncle,</salute></opener>
+                <p>Vos lettres commencent à être moins fréquentes, et cela nous fait bien de la <lb/>peine : je n’ose soupçonner que la rareté de mes
+                    lettres en sont une cause, <lb/>Vous êtes trop juste, Vous nous aimez trop, très-chèr et très-honoré Oncle, <lb/>pour nous priver
+                    d’une satisfaction, (je puis même dire d’un bienfait dans l’é<lb break="no"/>loignement où nous sommes obligé de vivre de Vous,),
+                    parce que les circon<lb break="no"/>stances ne me permmettent pas à Vous écrire aussi souvant que je le souhai<lb break="no"
+                    />terois. Le bon Pasteur <persName>La Vigne</persName> est très sensible à Votre amitié: il Vous <lb/>avoit écrit, d'abord après
+                    avoir prononcé ses deux sermons d'Entrée, mais il <lb/>a donné sa lettre à Mr. <persName>Dilthey</persName>, et j’espère que
+                    celui-ci Vous l’aura rémis <lb/>à l’heure qu’il est. Il m’auroit cela non obstant donné une lettre pour <lb/>Vous si les deux
+                    fêtes de la couronne et la distribution de la commu<lb break="no"/>nion pendant deux dimanches de suite n’étoient pas entrevenû.
+                    <lb/>Ce sera donc pour la premiere occasion à venir. Par rapport à la démoiselle, <lb/>qu’un Seigneur Lifflandois souhaitoit
+                    d’engager auprès de sa fille, je lui ai <lb/>fait écrire, que Vous en aviez trouvé une et qu’il n’avoit qu’à s’adresser
+                    <lb/>directement à Vous ; je n’ai eu point de réponse la dessûs ; et s’il ne Vous <lb/>a pas écrit, c’est sa faute, j’ai fait ce
+                    qu’on demandoit de moi, et c’est à <lb/>lui de faire le reste. Aussi n’ai-je pas trouvé le Baron <persName>de Goltz</persName>
+                    chez <lb/>lui, et j’ignore s’il aura reçû Votre lettre : cependant je n’en doute pas <lb/>et je suis surpris, que ce Cavalier, qui
+                    est à tous égards des plus éstimables, <lb/>ne Vous aie pas donné un môt de réponse. Peut être qu’il négocie <lb/>actuellement
+                    pour le bien de Mr. <persName>de Malechovcki</persName>, et qu’il voudra attendre <lb/>la fin de toute l’affaire pour Vous en
+                    /pouvoir/ rendre con un compte exact. <lb/>Nous n’avons pas encore reçû la caisse que Vous avez eu la bonté de <lb/>nous expedier
+                    par <persName>Nicolaï</persName>, mais nous l’attendons tous les jours.</p>
+                <p>Vous reçevrez celle que nous Vous avons expedié, il y a près de trois<lb/> mois, vers la fin du mois d’octobre, ou plus surement au
+                        commence<lb break="no"/>ment du mois de Novembre. L’estampe que Vous m’avez envoié <lb/>mon très chèr Oncle, avec Votre
+                    derniere lettre, est un secret que nous <lb/>n’avons pas <pb facs="00000103.jpg" n="2"/> n’avons pas pû déchiffrer ; nous
+                    soupçonnos (sic) cependant que le portrait qui se <pb/>trouve aux pieds du Satyre est celui de <persName>Voltaire</persName>. Vous
+                    me ferez un plaisir <lb/>de me donner quelques môts d’eclaircissemens. Nous comptons de communier <lb/>dimanche qui vient, la
+                    division allemande de notre famille a communié dimanche <lb/>passé. Le Pasteur <persName>La Vigne</persName> a expliqué le 21 de
+                    ce mois la parabole de <lb/>l’enfant prodigue, et il a fait un discours des plus éloquents. Nous trouvons <lb/>de plus en plus en
+                    lui un homme réspectable, aussi est-il très bien aimé <lb/>de toute la communeauté. Ma derniere lettre est du 9 de ce mois : le 10
+                    <lb/>je fis une visite au <rs>Prince Vice-Chancellier</rs>, un très aimable Seigneur, et <lb/>qui ressemble beaucoup par sa
+                    politesse aux Seigneurs Prussiens. Après diner <lb/>je fis encores quelques visites entr’autres chez Mad.
+                        <persName>Poggenpohl</persName> ; ensuite, <lb/>à la <orgName ref="#g0124">Société oeconomique</orgName>, où il y avoit
+                    élection d’un nouveau président. <lb/>Le choix tomboit sur la personne du Conseiller d’Etât <persName>Melissino</persName>. Après
+                    <lb/>mon rétour me vinrent voir Mssrs. <persName>Mallet</persName> et <persName>Pictet</persName>. Le 14 à l’Eglise, <lb/>le 15 je
+                    reçûs Votre derniere lettre du 13 Sept. Le 16 je reçûs une <lb/>lettre de Mr. <persName>de Sonntag</persName> qui s’ennuïe
+                    mortellement dans son héritage, et <lb/>qui ne cesse de me charger des complimens pour Vous, Monsieur <lb/>et très honoré Oncle.
+                    Le 20. jour de naissance du <rs>Grand-Duc</rs> ; j’allois <lb/>à la cour, et la ville fût illuminée. Le 21 à l’église et le 22
+                    <lb/>encore à la cour : c’étoit la fête du courronnement de <rs ref="#p0081">S.M.I.</rs> et <lb/>la ville étoit encore illuminée.
+                    J’esperois ces jours de rencontrer Mr. <lb/>le baron <persName>de Goltz</persName>, mais il n’y étoit pas. Je reçûs des lettres du
+                    Docteur <lb/><persName>Büsching</persName> et de mon pupille <persName>Dilthey</persName> de <placeName ref="#l1103"
                         >Berlin</placeName>, dont Vous aurez dejà <lb/>fait la connoissance : je reçûs aussi une lettre du Doct.
                         <persName>Guldenstadt</persName> de <lb/><placeName ref="#l0439">Moscou</placeName>, et nôtre <orgName ref="#g0123"
                         >Academie</orgName> est très content des rapports qu’il Lui <lb/>envoie de tems en tems : j’eus ce même jour grand monde chez
@@ -232,7 +243,7 @@
                         <persName>Braun</persName>, et je fis plusieurs visites à nos academiciens. <lb/>Hier nous étions à l’enterrement du feu Prof.
                         <persName>Braun</persName>. <rs ref="#p0037">Mon père</rs>
                     <lb/>vient de faire une découverte qui fera bien de bruit dans le monde <lb/>savant <pb facs="00000104.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">61</note> savant, et à la quelle j’ai le bonheur de n’avoir pas peu de
+                    <note hand="#pencil" place="margin(right)" type="foliation">61</note> savant, et à la quelle j’ai le bonheur de n’avoir pas peu de
                     part. Ceci <lb/>m’occupe actuellement, et m’occupera encore vraisemblablement pendant bien <lb/>des mois. Dès que <rs ref="#p0037"
                         >mon père</rs> s’est apperçû de la heureuse réussite de <lb/>ce travail, il m’a dicté une lettre circulaire, que je vais
                     mêttre au nêt <lb/>môt pour môt. et dont j’enverrai des Copies aux <orgName>Academies roiales de <lb/>Berlin, de Paris et de la
@@ -251,10 +262,15 @@
                     bien que le russe assés joliment, et il profite <lb/>beaucoup dans l’école où je l’envoie régulièrement. J’ai des maîtres
                     <lb/>pour <persName>Trinette</persName> et j’en suis aussi très content. Les deux autres sont <lb/>encore des poupées. et viennent
                     à merveille. Adieu Monsieur <lb/>et très-honoré Oncle, je me recommende à Votre gracieuse <lb/>bienveuïllance et suis avec le plus
-                    profond respect <lb/>Votre très-humble et très-obéïssant Serviteur et Neveu <signature>J. Albert Euler</signature><pb
-                        facs="00000105.jpg" n="4"/> Voici aussi une Lettre de Mr <persName>Bouc</persName> à sa femme, qu’il m’a apporté <lb/>il n’y a
-                    pas longtems : je Vous le recommande ; la derniere fois il ne <lb/>m’envoioit aucune lettre, il croioit alors pouvoir trouver
-                    quelque <lb/>condition. Mais son esperance a échoüé.</p>
+                    profond respect</p>
+                <closer><salute rend="align(right)">Votre très-humble et très-obéïssant Serviteur et Neveu</salute>
+                    <signed rend="align(right)">J. Albert Euler</signed></closer>
+                <pb facs="00000105.jpg" n="4"/>
+                <postscript>
+                    <p>Voici aussi une Lettre de Mr <persName>Bouc</persName> à sa femme, qu’il m’a apporté <lb/>il n’y a pas longtems : je Vous le
+                        recommande ; la derniere fois il ne <lb/>m’envoioit aucune lettre, il croioit alors pouvoir trouver quelque <lb/>condition.
+                        Mais son esperance a échoüé.</p>
+                </postscript>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-07" who="#emmanuelle.chaze">Edited orgName, placeName, persName, and language.</change>
@@ -184,8 +192,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000149.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">86</note> à <placeName ref="#l0020">St Petersbourg</placeName> ce <date>28
-                    Avril 1769</date> v. St. <opener>Monsieur mon tres-cher et très honoré Oncle</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">86</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-04-28">28 Avril
+                            1769</date> v. St. </dateline><salute>Monsieur mon tres-cher et très honoré Oncle</salute></opener>
                 <p>j’ai reçû avec un plaisir infini Votre derniere lettre du 10 Avril et Vous <lb/>pouvez être persuadé que la part que Vous prennez,
                     mon très honoré Oncle <lb/>à l’amelioration de mon sort n’en augmente pas mediocrement le prix. <lb/>je prends encore la liberté
                     de Vous charger de ces incluses en Vous priant <lb/>de vouloir bien les faire parvenir à leurs adresses. Ce que Vous me mandez
@@ -230,11 +240,11 @@
                     peut-être que son oncle fera <lb/>quelque chose en sa faveur, lorsqu’il verra qu’il tâche si honnetement de <lb/>se tirer
                     d’affaire. Le 19 Pâques, où je reçûs les felicitations des <lb/>soldats academiques, qui me présentèrent des œufs, et que je fûs
                     obligé de <lb/>paier <pb facs="00000151.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">87</note>päier bien chèrement. C’est une vieille coutume de ce pais-ci.
-                    le 20 j’eus à <lb/>diner Mr le Professeur <persName>Muller</persName> d’<placeName ref="#l0269">Erlangen</placeName> avec son fils
-                    qui est venû présenter un <lb/>Ouvrage à <rs ref="#p0081">S.M.I.</rs> mais qui régrette bien avoir fait ce voiage. Ce n’est plus
-                    <lb/>comme jadis : outre celui-ci dinerent chez moi, Mr <persName>Trappe</persName>, Mr <persName>Marre</persName> et <rs>mon
-                        <lb/>frère</rs>. Mr <persName>Marre</persName> me dit que son père ne pensoit plus de quitter <placeName ref="#l1103"
+                    <note hand="#pencil" place="margin(right)" type="foliation">87</note>päier bien chèrement. C’est une vieille coutume de ce
+                    pais-ci. le 20 j’eus à <lb/>diner Mr le Professeur <persName>Muller</persName> d’<placeName ref="#l0269">Erlangen</placeName> avec
+                    son fils qui est venû présenter un <lb/>Ouvrage à <rs ref="#p0081">S.M.I.</rs> mais qui régrette bien avoir fait ce voiage. Ce
+                    n’est plus <lb/>comme jadis : outre celui-ci dinerent chez moi, Mr <persName>Trappe</persName>, Mr <persName>Marre</persName> et
+                        <rs>mon <lb/>frère</rs>. Mr <persName>Marre</persName> me dit que son père ne pensoit plus de quitter <placeName ref="#l1103"
                         >Berlin</placeName>, et <lb/>Messieurs du <orgName>Consistoire françois</orgName> ne l’accumuloient plus de commissions come
                     auparavant. <lb/>je Vous suis bien obligé de ce bon service, que Vous venez de rendre au /bon Sieur/ <lb/>bon Sieur
                         <persName>Marre</persName> sur la réprésentation que j’ai pris la liberté de Vous faire : Après diner <lb/>j’eus plusieures
@@ -261,9 +271,10 @@
                         femme</rs>
                     <lb/>et <pb facs="00000152.jpg" n="4"/>et toute ma famille Vous présentent leurs civilités et amitiés. <lb/>Nous nous portons tous
                     très bien : distribuez s’il Vous plait nos <lb/>dévoirs et complimens à <rs>Madame Votre épouse</rs> : Mlls Vos filles, <lb/>toute
-                    Votre aimable famille et toutes nos chères connoîssances de <lb/><placeName ref="#l1103">Berlin</placeName>. </p>je suis avec
-                beaucoup de respect <lb/>Monsieur et très honoré Oncle <lb/>Votre très humble et très obeïssant <lb/>Serviteur et Neveu
-                    <signature>Jean Albert Euler</signature>
+                    Votre aimable famille et toutes nos chères connoîssances de <lb/><placeName ref="#l1103">Berlin</placeName>. </p>
+                <closer><salute rend="align(center)">je suis avec beaucoup de respect <lb/>Monsieur et très honoré Oncle</salute>
+                    <salute rend="align(right)">Votre très humble et très obeïssant <lb/>Serviteur et Neveu </salute>
+                    <signed rend="align(right)">Jean Albert Euler</signed></closer>
             </div>
         </body>
     </text>

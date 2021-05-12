@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -171,8 +178,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName 0123 and 0120.</change>
             <change when-iso="2014-11-13" who="#emmanuelle.chaze">Edited orgName Société Oeconomique.</change>
@@ -186,8 +194,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000135.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">79</note> A <placeName ref="#l0020">St Petersbourg</placeName> ce <date>24
-                    Mars/4 Avril 1769</date>. <opener>Monsieur mon très chèr et très honoré Oncle</opener>
+                <note hand="#pencil" place="margin-right" type="foliation">79</note>
+                <opener>
+                    <dateline rend="align(right)"> A <placeName ref="#l0020">St Petersbourg</placeName> ce <date when-iso="1769-03-24">24 Mars/4 Avril
+                            1769</date>. </dateline><salute>Monsieur mon très chèr et très honoré Oncle</salute></opener>
                 <p>Après Vous avoir donné des nouvelles de notre <orgName ref="#g0123">Academie</orgName>, je vais m’entretenir avec Vous, <lb/>mon
                     très honoré Oncle, des affaires qui nous interressent plus particulierement. <lb/>Vos deux dernieres lettres contiennent tant des
                     événemens sureprennantes, que je ne <lb/>sais par où commencer. Mr. <persName>de la Baume</persName> le Père est donc mort, que
@@ -247,7 +257,7 @@
                     nous en aller bien légerement après nous avoir proméné au de la d’une heure aux <lb/>coridors qui étaient aussi froides que de la
                     glace : heureusement je ne pris qu’un <lb/>rhume de cerveau et mon domestique revint avec les pelisses le lendemain. Il avoit
                     <lb/>été en attendant dans quelques cabaret et n’avoit pas crû que nous quitterions cette <lb/>belle <pb facs="00000137.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">80</note>belle masquerade avant 3 heures du matin. Le 28 nous eumes
+                    <note hand="#pencil" place="margin(right)" type="foliation">80</note>belle masquerade avant 3 heures du matin. Le 28 nous eumes
                     quelques visites, et <rs ref="#p2328">ma femme</rs> mena <lb/>les enfans en voiture voir les montagnes de /russes/ glace, desquels
                     les russes ne se lassent <lb/>pas de déscendre soit en petits traineaux soit en patins. Le 1er mars j’allais prendre congé <lb/>du
                     Prof. <persName>Lowitz</persName> et après diner au <orgName>consistoire</orgName>. Le 3 j’eus la visite du Comte <persName>de
@@ -308,8 +318,10 @@
                     <lb/>Article, et pour le second ne Vous inquietez pas. Huit jours après Mr. <persName ref="#p2333">de <lb/>Stählin</persName> se
                     démit de sa charge et <rs>S.E.</rs> me nomma Secretaire de l’Academie. <lb/>Nous vous prions, très honoré Oncle, de nous conserver
                     toujours <lb/>Votre précieuse bienveuïllance : Distribuez à <rs>Madame Votre épouse</rs> et tout <lb/>Votre aimable famille nos
-                    dévoirs et tendres amitiés et soiez persuadé que <lb/>je ne cesserai d’être</p> Votre très humble et très obéïssant Serviteur et
-                Neveu <signature>J. Albert Euler</signature></div>
+                    dévoirs et tendres amitiés et soiez persuadé que <lb/>je ne cesserai d’être</p>
+                <closer><salute>Votre très humble et très obéïssant Serviteur et Neveu </salute>
+                    <signed rend="align(right)">J. Albert Euler</signed></closer>
+            </div>
         </body>
     </text>
 </TEI>

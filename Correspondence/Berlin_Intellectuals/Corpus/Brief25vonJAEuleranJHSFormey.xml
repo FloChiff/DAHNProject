@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Formey Papers</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100">Französisch</language>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -175,8 +182,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov. Edited date.</change>
             <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and corrections.</change>
             <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
@@ -191,8 +199,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000072.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">43</note><lb/><opener rend="align (left)">Monsieur mon très-chèr et
-                    très-honoré Oncle,</opener><lb/>
+                <note hand="#pencil" place="margin(right)" type="foliation">43</note>
+                <opener rend="align(left)">Monsieur mon très-chèr et très-honoré Oncle,</opener>
+                <lb/>
                 <p>je commence la présente lettre ce mardi 20/31 May, mais je <lb/>ne compte pas de la finir avant venderdi prochain : je Vous
                     <lb/>écrirois bien plus souvant, très-honoré Oncle, si je pouvois <lb/>me desacoutûmer de remplir d’abord quatre et même plusieurs
                     <lb/>pages entieres, le plaisir que j’ai de Vous entretenir est trop <lb/>grand, et il me coute de la peine d’y mettre des bornes.
@@ -209,18 +218,19 @@
                     entier nous peut offrir dans <lb/>l’éloignement où nous sommes obligés de vivre de Vous. <lb/>Vous devinerez aisément, notre très
                     honoré Oncle, que <lb/>je parle de Votre portrait, quelle surprise agréable pour <lb/>nous ! nous l’attendons avec impatience, et
                     nous le <lb/>baiserons mille et mille fois : pardonnez moi cette expression, <lb/>je ne sais comment déceler notre joie ; les
-                    sentimens de <lb/>notre contentement et de notre réconnoissance sont trop <lb/>vives, et les expressions me manquent. Je vais
-                        parcour<lb rend="align (right)"/>rir <pb facs="00000073.jpg" n="2"/>rir mon journal et en transcrire ce qui merite le plus
-                    <lb/>Votre attention : je finirai par répondre aux lettres que nous <lb/>avons eu le bonheur de récevoir de Vous. La derniere
-                    étant <lb/>du 17 Avril, le 18 fût introduit le <persName ref="#p2485">Prof. Lowitz</persName> qui ne s’est arreté <lb/>à
-                        <placeName ref="#l1103">Berlin</placeName> que deux heures, je présentai a l’<orgName ref="#g0123">Academie</orgName> un
-                        <lb/><rs>mémoire physique de molu fluidorum</rs> : le 19 je reçûs de <lb/>lettres, de Vous Monsieur et très-chèr Oncle, de
-                        <rs>mon beau <lb/>pere</rs> et du <persName ref="#p2527">Pasteur la Vigne</persName> à qui quelqu’un avoit donné <lb/>des
-                    informations très peu fondées et même calomnieuses de <lb/>notre communueauté, mais nous lui avons d’abord répondû et
-                    <lb/>appaisé, de sorte que je ne doute nullement qu’il n’accepte notre <lb/>chaire : nous l’attendons à présent dans quelques
-                    semaines. Le <lb/><persName ref="#p2546">Pasteur Brounne</persName> arriva ce même jour, un fort honnête homme <lb/>et un digne
-                    Pasteur ; il m’apporta plusieures nouvelles de <lb/><placeName ref="#l0089">Zuric</placeName> et une lettre de mon ami <persName
-                        ref="#p2555">Rhan</persName>. <persName ref="#p2390">Mll. Winterstadt</persName>
+                    sentimens de <lb/>notre contentement et de notre réconnoissance sont trop <lb/>vives, et les expressions me manquent. Je vais parcour<lb/>
+                    <hi rend="align(right)">rir</hi>
+                    <pb facs="00000073.jpg" n="2"/>rir mon journal et en transcrire ce qui merite le plus <lb/>Votre attention : je finirai par
+                    répondre aux lettres que nous <lb/>avons eu le bonheur de récevoir de Vous. La derniere étant <lb/>du 17 Avril, le 18 fût
+                    introduit le <persName ref="#p2485">Prof. Lowitz</persName> qui ne s’est arreté <lb/>à <placeName ref="#l1103">Berlin</placeName>
+                    que deux heures, je présentai a l’<orgName ref="#g0123">Academie</orgName> un <lb/><rs>mémoire physique de molu fluidorum</rs> :
+                    le 19 je reçûs de <lb/>lettres, de Vous Monsieur et très-chèr Oncle, de <rs>mon beau <lb/>pere</rs> et du <persName ref="#p2527"
+                        >Pasteur la Vigne</persName> à qui quelqu’un avoit donné <lb/>des informations très peu fondées et même calomnieuses de
+                    <lb/>notre communueauté, mais nous lui avons d’abord répondû et <lb/>appaisé, de sorte que je ne doute nullement qu’il n’accepte
+                    notre <lb/>chaire : nous l’attendons à présent dans quelques semaines. Le <lb/><persName ref="#p2546">Pasteur Brounne</persName>
+                    arriva ce même jour, un fort honnête homme <lb/>et un digne Pasteur ; il m’apporta plusieures nouvelles de <lb/><placeName
+                        ref="#l0089">Zuric</placeName> et une lettre de mon ami <persName ref="#p2555">Rhan</persName>. <persName ref="#p2390">Mll.
+                        Winterstadt</persName>
                     <lb/>dinâ avec nous et nous allâmes à l’assemblée publique <lb/>qui se tient tous les samdis au petit corps des cadets, qui
                     <lb/>dansent et soupent en présence d’une cohüe de beau monde. <lb/>Le grand corps de cadets donne ses assemblées aux dimanches
                     <lb/>et le couvant des filles aux Lundis. Le 20 à notre église, <lb/>ou nous fîmes avertir par la chaire, que le <persName
@@ -237,8 +247,9 @@
                     <lb/>reçût de <rs ref="#p0081">S.M.I.</rs> le cordon bleu. Le 22 rien de notable. Le <lb/>23 je donnai à diner au <persName
                         ref="#p2546">Pasteur Brounner</persName>, <persName ref="#p2485">Prof. Lowitz</persName>, <lb/><rs>son fils</rs>, <persName
                         ref="#p2556">Mr. Dahler</persName>, Diacre de nôtre église et à toute ma fa<lb break="no"/>mille ; nous étions 22 personnes à
-                    table. J’allais ensuite <lb/>dans la Societé oeconomique à pied c’est-à-dire après avoir <lb rend="align (right)"/>traversé <pb
-                        facs="00000074.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation">44</note>traversé la rivière en
+                    table. J’allais ensuite <lb/>dans la Societé oeconomique à pied c’est-à-dire après avoir <lb/>
+                    <hi rend="align(right)">traversé</hi>
+                    <pb facs="00000074.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">44</note>traversé la rivière en
                     chalouppe. Je fus surpris de voir que tout <lb/>les grands seigneurs avoient tout à fait changé de sentiment et qu’ils
                     <lb/>étoient tous pour une liberté sans bornes. Ces Messieurs adjugerent <lb/>le prix que remportât <persName ref="#p2557">Mr.
                         Bearde</persName> à <placeName ref="#l0852">Aix la Chapelle</placeName>, et les <lb/>autres billets bûrent tous jettés dans un
@@ -248,20 +259,23 @@
                     unaniment approuvées furent rejettées, <lb/>et Vous sentez bien très honoré Oncle que j’ai pris le partis de me <lb/>taire. Le 24
                     et 25 rien de notable : Le 26 à la préparation : Le <lb/>27, Communia toute notre famille exceptée ma sœur <persName ref="#p2454"
                         >Delen</persName> qui <lb/>a été indisposée ; <rs ref="#p2331">la femme</rs> du Medecin en étoit aussi et c’étoit sa
-                    <lb/>premiere sortie. Le <persName ref="#p2546">Pasteur Brounner</persName> prononçâ un excellent <lb/>Sermon et fût applaudi de
-                        tou<del rend="overwritten">tes</del><add place="across">s</add> les auditeurs. Vers le soir <lb/>nous nous promenâmes en
-                    voitures, moi, <rs ref="#p2328">ma femme</rs> et de mes enfans. <lb/>Le 28. Le <persName ref="#p2546">Pastor Brounner</persName>
-                    vint prendre congé de nous et je soupai <lb/>avec lui chez <rs ref="#p0037">mon père</rs>. Le 29 j’ecris au <rs ref="#p2563"
-                        >Directeur Marggraaf</rs> et <lb/>à <rs ref="#p2456">mon beau père</rs> ; <rs ref="#p2328">ma femme</rs> et moi traverserent
-                    la riviere <lb/>en chalouppe : <del rend="strikethrough">elle</del> je l’accompagnai ensuite à pied chez <rs ref="#p2330">mon
-                        frere</rs>
+                    <lb/>premiere sortie. Le <persName ref="#p2546">Pasteur Brounner</persName> prononçâ un excellent <lb/>Sermon et fût applaudi de tou<subst>
+                        <del rend="overwritten">tes</del>
+                        <add place="across">s</add>
+                    </subst> les auditeurs. Vers le soir <lb/>nous nous promenâmes en voitures, moi, <rs ref="#p2328">ma femme</rs> et de mes enfans.
+                    <lb/>Le 28. Le <persName ref="#p2546">Pastor Brounner</persName> vint prendre congé de nous et je soupai <lb/>avec lui chez <rs
+                        ref="#p0037">mon père</rs>. Le 29 j’ecris au <rs ref="#p2563">Directeur Marggraaf</rs> et <lb/>à <rs ref="#p2456">mon beau
+                        père</rs> ; <rs ref="#p2328">ma femme</rs> et moi traverserent la riviere <lb/>en chalouppe : <del rend="strikethrough"
+                        >elle</del> je l’accompagnai ensuite à pied chez <rs ref="#p2330">mon frere</rs>
                     <lb/>le medecin et j’allai au consistoire. Le 30 dina chez moi une <lb/><rs>Tante Xsell</rs> arrivée de <placeName ref="#l0439"
                         >Moskou</placeName>, j’allai ensuite à la <orgName ref="#g0124">Societé oecono<lb break="no"/>mique</orgName>, où le <persName
                         ref="#p2558">Comte Stroganov</persName> fût créé président. Le 1 de May je <lb/>reçû encore une lettre de <persName
                         ref="#p2500">Mr. de Sonntag</persName> de <placeName ref="#l0032">Vienne</placeName>. Le 2 je <lb/>reçû une lettre de Vous mon
                     très honoré Oncle : les glaces <lb/>de <placeName>Ladoga</placeName> arriverent et couvrirent la riviere ensorte que <lb/>le
-                    passage par la riviere devint très dangereu<del rend="overwritten">se</del><add place="across">x</add>. Le 3 <lb/>je finis le
-                        <title>2d Tome des <hi n="1" rend="underlined">Lettres à une Princesse d’Allemagne</hi></title>
+                    passage par la riviere devint très dangereu<subst>
+                        <del rend="overwritten">se</del>
+                        <add place="across">x</add>
+                    </subst>. Le 3 <lb/>je finis le <title>2d Tome des <hi n="1" rend="underlined">Lettres à une Princesse d’Allemagne</hi></title>
                     <lb/>il ne manque aprésent que 4 feuilles à imprimer. Le 4 jour <lb/>de naissance de <rs ref="#p2328">ma chere femme</rs> que Dieu
                     veuille benir ! <lb/>je passai cette journée chez moi très content. Le 5. du grand matin <lb/>brûla une maison de pierre pas loin
                     de nous, mais le bon ordre <lb/>empechà que l’incendie n’alloit plus loin. <persName ref="#p2559">Mad. la Veuve Lehmann</persName>
@@ -286,112 +300,127 @@
                         Gouverneur</rs> reçût la dessûs ordre de brûler <lb/>tout ce qu’il avoit eu sur son corps lorsqu’il étoit chez <rs>sa
                         maitresse</rs>, <lb/>de rester ensuite 15 jours chez <rs ref="#p2562">son frere</rs> le General en Chef, <lb/>après quoi il
                     pourra venir à <placeName>Peterhof</placeName>, où il sera obligé de <lb/>séjourner encore quelques jours avant d’oser paroître à
-                        <placeName>Sarskoe Selo</placeName>.</p><p rend="align (centre)">Ce 26 May 1768</p><p rend="align (left)">Ayant fait lever les
-                    planches de ma chambre et charger <lb/>la porte, j’ai été obligé de remettre la continuation de cette <lb/>lettre
-                    jusqu’aujourd’hui : je reprens donc le fil de mon <lb/>journal. Le 11 de ce mois j’allais avec mes enfans à l’église, <lb/>nous
-                    passâmes la riviere en chalouppe et l’équipage de mon <lb/>frère nous attendit de l’autre coté. <rs ref="#p2330">Mon frere</rs> le
-                    medecin <lb/>avec <rs ref="#p2331">sa femme</rs> nous vinrent voir après diner, et <persName ref="#p2465">Mr Guteden<lb break="no"
-                        />stet</persName> soupa chez nous. Le 12 quelques visites. Le 13 les Glaces <lb/>de <placeName>Ladoga</placeName> couvrirent
-                    la riviere de nouveau. Le 14 arriverent <lb/>35 vaisseaux et <persName ref="#p2465">Mr. Guldenstadt</persName> et quelques autres
-                    nous rendirent <lb/>visite. <rs ref="#2328">Ma femme</rs> en faisoit le 15 et le 16 le pont fût <lb/>construit qui depuis ce jour
-                    rétablit la communication <lb/>avec l’autre côté de la ville. Le 1<del rend="overwritten">5</del><add place="across">7</add>
-                    mourût la <persName ref="#p2529">Comtesse <lb/>Scheremettov</persName>, la promise du <persName ref="#p2350">Comte
+                        <placeName>Sarskoe Selo</placeName>.</p>
+                <p rend="align(center)">Ce 26 May 1768</p>
+                <p>Ayant fait lever les planches de ma chambre et charger <lb/>la porte, j’ai été obligé de remettre la continuation de cette
+                    <lb/>lettre jusqu’aujourd’hui : je reprens donc le fil de mon <lb/>journal. Le 11 de ce mois j’allais avec mes enfans à l’église,
+                    <lb/>nous passâmes la riviere en chalouppe et l’équipage de mon <lb/>frère nous attendit de l’autre coté. <rs ref="#p2330">Mon
+                        frere</rs> le medecin <lb/>avec <rs ref="#p2331">sa femme</rs> nous vinrent voir après diner, et <persName ref="#p2465">Mr
+                            Guteden<lb break="no"/>stet</persName> soupa chez nous. Le 12 quelques visites. Le 13 les Glaces <lb/>de
+                        <placeName>Ladoga</placeName> couvrirent la riviere de nouveau. Le 14 arriverent <lb/>35 vaisseaux et <persName ref="#p2465"
+                        >Mr. Guldenstadt</persName> et quelques autres nous rendirent <lb/>visite. <rs ref="#2328">Ma femme</rs> en faisoit le 15 et
+                    le 16 le pont fût <lb/>construit qui depuis ce jour rétablit la communication <lb/>avec l’autre côté de la ville. Le 1<subst>
+                        <del rend="overwritten">5</del>
+                        <add place="across">7</add>
+                    </subst> mourût la <persName ref="#p2529">Comtesse <lb/>Scheremettov</persName>, la promise du <persName ref="#p2350">Comte
                         Panin</persName>, on avoit mis *promis* <lb/>un prix de 50000 roubles pour celui des medecins qui <lb/>la retabliroit : mais
                     la mort se mocqua des medecins. <lb/>je rendis ce jour plusieures visites. Le 18 matin à <lb/>l’église et après diner chez <rs
                         ref="#p2330">mon frere</rs> le medecin. <persName ref="#p2465">Mr. <lb/>Guldenstadt</persName> soupa chez nous et Mssrs.
                         <persName ref="#p0371">Mallet</persName> et <persName ref="#p2516">Pictet</persName>
-                    <lb/>arriverent qui me vinrent voir le 19.</p><pb facs="00000076.jpg" n="5"/><note hand="#pencil" place="margin-right"
-                    type="foliation">45</note><p>Le 20 May je recûs une lettre de Vous, très honoré <lb/>Oncle, et avec celle-cy des lettres du
-                        <persName ref="#p2563">Directeur Marggraf</persName>
+                    <lb/>arriverent qui me vinrent voir le 19.</p>
+                <pb facs="00000076.jpg" n="5"/>
+                <note hand="#pencil" place="margin(right)" type="foliation">45</note>
+                <p>Le 20 May je recûs une lettre de Vous, très honoré <lb/>Oncle, et avec celle-cy des lettres du <persName ref="#p2563">Directeur
+                        Marggraf</persName>
                     <lb/>et du Papa <persName ref="#p2456">Hagmeister</persName>. <persName ref="#p2390">Mll. Winterstadt</persName> nous vint voir,
                     elle <lb/>est très bien et a grande ésperance d’avancer à la premiere <lb/>occasion ; je ne doute pas qu’elle ne fasse quelque
                     jour sa <lb/>fortune. Si elle devient Directrice du couvant ou de quel<lb break="no"/>qu’un des autres établissemens, elle aura
-                    toujours 1000 roubles <lb/>par an, <del rend="strikethrough">et</del><add place="above">avec</add> logement, table, equipage,
-                    bois, chandelles et do<lb break="no"/>mestiques. <persName ref="#p2465">Mr. Guldenstadt</persName> soupa encore chez nous, il me
-                    paroit <lb/>être un garçon d’un excellent caractere. Le 21 nous dinâmes <lb/>tous avec quelques academiciens chez <rs ref="#p0037"
-                        >Papa</rs> et nous cele<lb break="no"/>brames le jour des nôces de <rs ref="#p2330">mon frere</rs>. Apres diner à <lb/>la
-                        <orgName ref="#g0124">Societé oeconomique</orgName>. Le 22 au couvent des filles <lb/>nobles. Le 23 je dinai chez le <persName
-                        ref="#2340">Comte Orlov</persName> mon chef. <lb/>Mssrs <persName ref="#p0371">Mallet</persName> &amp; <persName ref="#p2516"
-                        >Pictet</persName> me vinrent voir vers le soir et me <lb/>rémirent Votre portrait, très chèr Oncle, avec tous les
-                    <lb/>papiers et livres que Vous leur avez donné. J’ai donné <lb/>à <persName ref="#p2333">Mr. de Stalin</persName> le petit livre
-                    qui y étoit <del rend="strikethrough">avec prix</del> joint. <lb/>Il nous semble, Monsieur et très-honoré Oncle, que selon
-                    <lb/>Votre Portrait, Vous Vous êtez changé à Votre avantage, <lb/>Au moins avez-vous l’air très bien portant, et cela nous
-                    <lb/>fait beaucoup de plaisir. Le 24 au matin je me pro<lb break="no"/>menai beaucoup en faisant plusieurs visites : <rs
-                        ref="#p2328">ma femme</rs>
+                    toujours 1000 roubles <lb/>par an, <subst>
+                        <del rend="strikethrough">et</del>
+                        <add place="above">avec</add>
+                    </subst> logement, table, equipage, bois, chandelles et do<lb break="no"/>mestiques. <persName ref="#p2465">Mr.
+                        Guldenstadt</persName> soupa encore chez nous, il me paroit <lb/>être un garçon d’un excellent caractere. Le 21 nous dinâmes
+                    <lb/>tous avec quelques academiciens chez <rs ref="#p0037">Papa</rs> et nous cele<lb break="no"/>brames le jour des nôces de <rs
+                        ref="#p2330">mon frere</rs>. Apres diner à <lb/>la <orgName ref="#g0124">Societé oeconomique</orgName>. Le 22 au couvent des
+                    filles <lb/>nobles. Le 23 je dinai chez le <persName ref="#2340">Comte Orlov</persName> mon chef. <lb/>Mssrs <persName
+                        ref="#p0371">Mallet</persName> &amp; <persName ref="#p2516">Pictet</persName> me vinrent voir vers le soir et me <lb/>rémirent
+                    Votre portrait, très chèr Oncle, avec tous les <lb/>papiers et livres que Vous leur avez donné. J’ai donné <lb/>à <persName
+                        ref="#p2333">Mr. de Stalin</persName> le petit livre qui y étoit <del rend="strikethrough">avec prix</del> joint. <lb/>Il nous
+                    semble, Monsieur et très-honoré Oncle, que selon <lb/>Votre Portrait, Vous Vous êtez changé à Votre avantage, <lb/>Au moins
+                    avez-vous l’air très bien portant, et cela nous <lb/>fait beaucoup de plaisir. Le 24 au matin je me pro<lb break="no"/>menai
+                    beaucoup en faisant plusieurs visites : <rs ref="#p2328">ma femme</rs>
                     <lb/>sortir pour en faire pareillement : et les anglois illumi<lb break="no"/>nerent leurs maison à l’occasion du jour de
                     naissance de <lb/>leur roi, qu’ils celebrent tous les ans très magnifique<lb break="no"/>ment. Hier je fûs avec
                         <persName>Trinette</persName> à l’église et vers le soir <lb/>je fis atteler 4 chevaux de louage à mon grand <lb/>carosse,
                         <del rend="strikethrough">n<gap reason="unclear"/></del> où nous nous fourrames tous, savoir <lb/>six grandes personnes et mes
-                    deux ainés. <del rend="overwritten">e</del><add place="across">E</add>nsuite nous <lb/>partîmes pour <placeName>Kamini
-                        Ostrov</placeName>, une très belle Isle apparte<lb break="no"/>nante au <rs>grand Duc</rs>, où il y avoit une affluance
-                    terrible <lb/>des gens qui se promenoient. En disant qu’il y avoit <lb/>1000 voitûres, je ne dis surement pas trop. Le Jardin est
-                    <lb/>assés joli et les environs ne ressemblent pas mal au <lb/>parc de <placeName ref="#l1103">Berlin</placeName>. A 8 heures nous
-                    fûmes de rétour. <pb facs="00000077.jpg" n="6"/> Aujourd’hui je reçû une lettre de Vous, Monsieur et <lb/>très honoré Oncle, et
-                    maintenant je vais réprendre <lb/>toutes Vos lettres pour repondre aux articles princi<lb break="no"/>pales qui y sont contenues.
-                    Je felicite l’<orgName ref="#g0120">Academie de <lb/>Berlin</orgName> de la glorieuse acquisition qu’elle vient de faire <lb/>dans
-                    la personne de <rs ref="#p0081">S.M.I.</rs> et d’être son confrere ne <lb/>flatte pas peu ma vanité. J’en fis d’abord l’ouverture
-                    à <lb/><rs ref="#2340">notre Chef</rs> qui en parût très surpris, m’assurant que <rs ref="#p0081">S.M.<lb/>I.</rs> ne lui en avoit
-                    jamais parlé. Le beau présent surtout <lb/>qui étoit joint à la lettre très gracieuse que Vous avéz <lb/>reçû, lui fit quelque
-                    peine ; nous l’avions possedé avant <lb/>quelque tems, et comme <rs ref="#p0037">mon père</rs> le pressa de faire copier <lb/>ces
-                    cartes géographiques, il répondit que <rs ref="#p0081">S.M.I.</rs> nous en <lb/>sera surement présent, or aiant l’original il
-                    seroit très <lb/>superflû d’en tirer copie. Cependant <rs ref="#p0081">S.M.I.</rs> ordonna de <lb/>les Lui rendre et voilà
-                    qu’elles sont à <placeName ref="#l1103">Berlin</placeName>. Je fis <lb/>ensuite ma commission et je disais au <rs ref="#2340"
-                        >Comte</rs> que c’étoit Vous <lb/><del rend="strikethrough">qui aviez</del> par qui tout s’est fait : il me repondit là
-                    <lb/>dessûs que comme <rs ref="#p0081">S.M.I.</rs> ne lui en a jamais parlé, il <lb/>ne conviendroit en aucune façon qu’il Lui en
-                    parla : <lb/>il tâchera cependant faire ensorte qu’Elle l’apprenne des <lb/>autres. En attendant je l’ai dit à tous ceux que j’ai
-                    vû, <lb/>et je suis sur, <hi n="1" rend="underlined">qu’en cas que <rs ref="#p0081">S.M.I.</rs></hi> veuille faire quelque
-                    <lb/>gratification à ce sujet, Elle ne sera pas embarrassée à <lb/>qui Elle la feroit. Comme Vous ne me parlez plus dans <lb/>Vos
-                    lettres suivantes des suites de l’enlevement de la <lb/><persName ref="#p2541">Kamke</persName>, je suppose que le <rs
-                        ref="#p2540">Pere</rs> y a acquiescé. Nous <lb/>attendons tous les jours le <persName ref="#p2397">Comte de
-                        Gollovin</persName> revenant de <placeName ref="#l1103">Berlin</placeName>. <lb/>j’ai dejà prié son pere de faire en sorte que
-                    le <persName ref="#p2508">Prince Dolgor</persName>. <lb/>n’aprenne rien de Votre intercession. L’affaire de <persName ref="#p2564"
-                        >Mr. <lb/>De Gualtieri</persName> et son issüe nous a bien diverti. il n’y que des <lb/>tels echecs qui seront en état de le
-                    rendre sage, et je lui <lb/>souhaite pour son propre bien encore trois à quatres sembla<lb break="no"/>bles humiliations. Pour la
-                    famille des Thomas, j’ai eu <lb/>l’honneur de faire leur connoissance chez feu la <persName ref="#p2565">Tante
-                        <lb/>Bonafous</persName>, toutes moulées sur la même moule me <pb facs="00000078.jpg" n="7"/><note hand="#pencil"
-                        place="margin-right" type="foliation">46.</note>Paroîssent des d’autant de copies d’un original des plus ridi<lb break="no"
-                    />cules : interessées au plus haut dégré elles ne rougissent pas de <lb/>prodiguer les plus basses flatteries. J’ai envoié par mes
-                        pen<lb break="no"/>sionnaires de <persName>Schepoteef</persName>, (qui sont des parents de la <lb/><persName ref="#p2566"
-                        >princesse Daschkov</persName>, demeurante toujours à <placeName ref="#l0439">Moskau</placeName>) les <lb/>deux traductions
-                    que Vous avez faites des vers de cette <lb/>princesse : j’y ai encore joint les deux traductions miserables <lb/>du <rs>C. de
-                        Fr.</rs> et j’attends aprésent tous les jours une reponse. <lb/>Déjà de notre tems <persName ref="#p2567">Mr.
-                        d’Ammon</persName> recût de <rs ref="#p0081">S.M.I.</rs> un <lb/>présent de 500 Ducats pour lui avoir présentés ses tables
-                    <lb/>génealogiques : il voulût encore que <rs ref="#p0037">mon père</rs> les lui payât <lb/>en se faisant les rembourser ici : je
-                    crois qu’il est en corres<lb break="no"/>pondance avec les <persName ref="#p2542">Comtes de Czernitschef</persName>. Il faut bien
-                    que <lb/>je Vous dise un môt de notre <persName ref="#p2405">Mr. Gmelin</persName> ; j’y ajouterais <lb/>volontiers une
-                    description de tous les autres membres de <lb/>notre illustre <orgName ref="#g0123">Academie</orgName>, qui <del
-                        rend="strikethrough">tous</del> à quelques uns de près <lb/>sont tous de vrais origineaux. Le <persName ref="#p2405">Prof.
-                        Gmelin</persName> donc est <lb/>d’ailleurs un très bon garçon, et on dit <del rend="strikethrough">qu</del>aussi qu’il
-                    <lb/>est très savant ; mais il s’enyvre tous les jours et quand <lb/>il est bien yvre il ne ressemble pas mal à un fous. Les
-                    <lb/>après diner chez lui ressemblent à des vrais bachanales, c’est <lb/>alors que chez lui s’assemblent <del rend="strikethrough"
-                        >presque tous</del> les buveurs <lb/>les plus renommés. Le Champagne le <del rend="strikethrough">xzayne</del> Bourgogne
-                    <lb/>et surtout le Punschnapf ne quitte pas sa table et cela <lb/>continue ordinairement jusqu’à 2 heures du matin. <persName
-                        ref="#p2465">Mr. <lb/>Guldenstadt</persName> qui loge chez lui s’en plaint beaucoup et souhaite <lb/>ardement de pouvoir s’en
-                    debarrasser. <persName ref="#p2547">L’Epicier Bout</persName>
+                    deux ainés. <subst>
+                        <del rend="overwritten">e</del>
+                        <add place="across">E</add>
+                    </subst>nsuite nous <lb/>partîmes pour <placeName>Kamini Ostrov</placeName>, une très belle Isle apparte<lb break="no"/>nante au
+                        <rs>grand Duc</rs>, où il y avoit une affluance terrible <lb/>des gens qui se promenoient. En disant qu’il y avoit <lb/>1000
+                    voitûres, je ne dis surement pas trop. Le Jardin est <lb/>assés joli et les environs ne ressemblent pas mal au <lb/>parc de
+                        <placeName ref="#l1103">Berlin</placeName>. A 8 heures nous fûmes de rétour. <pb facs="00000077.jpg" n="6"/> Aujourd’hui je
+                    reçû une lettre de Vous, Monsieur et <lb/>très honoré Oncle, et maintenant je vais réprendre <lb/>toutes Vos lettres pour repondre
+                    aux articles princi<lb break="no"/>pales qui y sont contenues. Je felicite l’<orgName ref="#g0120">Academie de
+                        <lb/>Berlin</orgName> de la glorieuse acquisition qu’elle vient de faire <lb/>dans la personne de <rs ref="#p0081">S.M.I.</rs>
+                    et d’être son confrere ne <lb/>flatte pas peu ma vanité. J’en fis d’abord l’ouverture à <lb/><rs ref="#2340">notre Chef</rs> qui
+                    en parût très surpris, m’assurant que <rs ref="#p0081">S.M.<lb/>I.</rs> ne lui en avoit jamais parlé. Le beau présent surtout
+                    <lb/>qui étoit joint à la lettre très gracieuse que Vous avéz <lb/>reçû, lui fit quelque peine ; nous l’avions possedé avant
+                    <lb/>quelque tems, et comme <rs ref="#p0037">mon père</rs> le pressa de faire copier <lb/>ces cartes géographiques, il répondit
+                    que <rs ref="#p0081">S.M.I.</rs> nous en <lb/>sera surement présent, or aiant l’original il seroit très <lb/>superflû d’en tirer
+                    copie. Cependant <rs ref="#p0081">S.M.I.</rs> ordonna de <lb/>les Lui rendre et voilà qu’elles sont à <placeName ref="#l1103"
+                        >Berlin</placeName>. Je fis <lb/>ensuite ma commission et je disais au <rs ref="#2340">Comte</rs> que c’étoit Vous <lb/><del
+                        rend="strikethrough">qui aviez</del> par qui tout s’est fait : il me repondit là <lb/>dessûs que comme <rs ref="#p0081"
+                        >S.M.I.</rs> ne lui en a jamais parlé, il <lb/>ne conviendroit en aucune façon qu’il Lui en parla : <lb/>il tâchera cependant
+                    faire ensorte qu’Elle l’apprenne des <lb/>autres. En attendant je l’ai dit à tous ceux que j’ai vû, <lb/>et je suis sur, <hi n="1"
+                        rend="underlined">qu’en cas que <rs ref="#p0081">S.M.I.</rs></hi> veuille faire quelque <lb/>gratification à ce sujet, Elle ne
+                    sera pas embarrassée à <lb/>qui Elle la feroit. Comme Vous ne me parlez plus dans <lb/>Vos lettres suivantes des suites de
+                    l’enlevement de la <lb/><persName ref="#p2541">Kamke</persName>, je suppose que le <rs ref="#p2540">Pere</rs> y a acquiescé. Nous
+                    <lb/>attendons tous les jours le <persName ref="#p2397">Comte de Gollovin</persName> revenant de <placeName ref="#l1103"
+                        >Berlin</placeName>. <lb/>j’ai dejà prié son pere de faire en sorte que le <persName ref="#p2508">Prince Dolgor</persName>.
+                    <lb/>n’aprenne rien de Votre intercession. L’affaire de <persName ref="#p2564">Mr. <lb/>De Gualtieri</persName> et son issüe nous
+                    a bien diverti. il n’y que des <lb/>tels echecs qui seront en état de le rendre sage, et je lui <lb/>souhaite pour son propre bien
+                    encore trois à quatres sembla<lb break="no"/>bles humiliations. Pour la famille des Thomas, j’ai eu <lb/>l’honneur de faire leur
+                    connoissance chez feu la <persName ref="#p2565">Tante <lb/>Bonafous</persName>, toutes moulées sur la même moule me <pb
+                        facs="00000078.jpg" n="7"/><note hand="#pencil" place="margin(right)" type="foliation">46.</note>Paroîssent des d’autant de
+                    copies d’un original des plus ridi<lb break="no"/>cules : interessées au plus haut dégré elles ne rougissent pas de <lb/>prodiguer
+                    les plus basses flatteries. J’ai envoié par mes pen<lb break="no"/>sionnaires de <persName>Schepoteef</persName>, (qui sont des
+                    parents de la <lb/><persName ref="#p2566">princesse Daschkov</persName>, demeurante toujours à <placeName ref="#l0439"
+                        >Moskau</placeName>) les <lb/>deux traductions que Vous avez faites des vers de cette <lb/>princesse : j’y ai encore joint les
+                    deux traductions miserables <lb/>du <rs>C. de Fr.</rs> et j’attends aprésent tous les jours une reponse. <lb/>Déjà de notre tems
+                        <persName ref="#p2567">Mr. d’Ammon</persName> recût de <rs ref="#p0081">S.M.I.</rs> un <lb/>présent de 500 Ducats pour lui
+                    avoir présentés ses tables <lb/>génealogiques : il voulût encore que <rs ref="#p0037">mon père</rs> les lui payât <lb/>en se
+                    faisant les rembourser ici : je crois qu’il est en corres<lb break="no"/>pondance avec les <persName ref="#p2542">Comtes de
+                        Czernitschef</persName>. Il faut bien que <lb/>je Vous dise un môt de notre <persName ref="#p2405">Mr. Gmelin</persName> ; j’y
+                    ajouterais <lb/>volontiers une description de tous les autres membres de <lb/>notre illustre <orgName ref="#g0123"
+                        >Academie</orgName>, qui <del rend="strikethrough">tous</del> à quelques uns de près <lb/>sont tous de vrais origineaux. Le
+                        <persName ref="#p2405">Prof. Gmelin</persName> donc est <lb/>d’ailleurs un très bon garçon, et on dit <del
+                        rend="strikethrough">qu</del>aussi qu’il <lb/>est très savant ; mais il s’enyvre tous les jours et quand <lb/>il est bien yvre
+                    il ne ressemble pas mal à un fous. Les <lb/>après diner chez lui ressemblent à des vrais bachanales, c’est <lb/>alors que chez lui
+                    s’assemblent <del rend="strikethrough">presque tous</del> les buveurs <lb/>les plus renommés. Le Champagne le <del
+                        rend="strikethrough">xzayne</del> Bourgogne <lb/>et surtout le Punschnapf ne quitte pas sa table et cela <lb/>continue
+                    ordinairement jusqu’à 2 heures du matin. <persName ref="#p2465">Mr. <lb/>Guldenstadt</persName> qui loge chez lui s’en plaint
+                    beaucoup et souhaite <lb/>ardement de pouvoir s’en debarrasser. <persName ref="#p2547">L’Epicier Bout</persName>
                     <lb/>ne vient pas me voir, dont je suis très surpris, il n’a pas <lb/>même communié à notre église : je l’ai fait inviter mais
                     <lb/>il paroit qu’il nous craint, et jusqu’ici je n’ai pas eu le <lb/>tems de l’aller voir. <persName ref="#p2511">Mr. de
                         Castillon</persName> a obtenû le second <lb/>refus, et je crois qu’il ne reviendra plus : mais il sera <lb/>bien acharné
                     contre toute la russie. J’espere que Vous <lb/>nous enverrez, Monsieur et très-honoré Oncle un exemplaire <lb/>de la nouvelle
                     Liste des Academiciens de <placeName ref="#l1103">Berlin</placeName>, dont <lb/>nous tous sommes très curieux. J’ai pareillement
-                    ré <lb rend="align (right)"/>commandé <pb facs="00000079.jpg" n="8"/>le jeune <persName ref="#p2568">Poggenpohl</persName> à notre
-                        <persName ref="#p2569">Professeur Schlözzer</persName> qui actuelle<lb break="no"/>ment est à <placeName ref="#l0062"
-                        >Göttingue</placeName>. On loue beaucoup ce jeune garçon. <lb/>Le petit <persName ref="#p2570">D’anckelmann</persName> est
-                    donc époux, mais qui a le <lb/>bonheur d’être sa chere épouse ? <persName ref="#p2333">Mr. de Sthalin</persName> s’in<lb
-                        break="no"/>formera chez le <rs>Directeur des Postes d’ici</rs>, si le livre <lb/>en question est arrivé, et dès que <rs
-                        ref="#p2340">nôtre chef</rs> retournera <lb/>à <placeName>Sarskoe Selo</placeName>, je le prierai de s’informer de cela chez
-                    <lb/>le <rs ref="#p2561">Grand Duc</rs> lui-même. Quant au pauvre <persName ref="#p2571">Malechovski</persName>
+                    ré <lb/>
+                    <hi rend="align(right)">commandé</hi>
+                    <pb facs="00000079.jpg" n="8"/>le jeune <persName ref="#p2568">Poggenpohl</persName> à notre <persName ref="#p2569">Professeur
+                        Schlözzer</persName> qui actuelle<lb break="no"/>ment est à <placeName ref="#l0062">Göttingue</placeName>. On loue beaucoup ce
+                    jeune garçon. <lb/>Le petit <persName ref="#p2570">D’anckelmann</persName> est donc époux, mais qui a le <lb/>bonheur d’être sa
+                    chere épouse ? <persName ref="#p2333">Mr. de Sthalin</persName> s’in<lb break="no"/>formera chez le <rs>Directeur des Postes
+                        d’ici</rs>, si le livre <lb/>en question est arrivé, et dès que <rs ref="#p2340">nôtre chef</rs> retournera <lb/>à
+                        <placeName>Sarskoe Selo</placeName>, je le prierai de s’informer de cela chez <lb/>le <rs ref="#p2561">Grand Duc</rs>
+                    lui-même. Quant au pauvre <persName ref="#p2571">Malechovski</persName>
                     <lb/>je ne manquerai pas d’aller au premier jour chez le <persName ref="#p0165">Baron <lb/>de Goltz</persName>, et je verrai alors
-                    ce qu’il y aura à faire.</p><p>Je finis aujourd’hui ce 27 de Mai : hier au soir <lb/>nous eumes encore la visite du <persName
-                        ref="#p2572">Baron de Bieligenstein</persName>
+                    ce qu’il y aura à faire.</p>
+                <p>Je finis aujourd’hui ce 27 de Mai : hier au soir <lb/>nous eumes encore la visite du <persName ref="#p2572">Baron de
+                        Bieligenstein</persName>
                     <lb/>avec sa femme et un <persName ref="#p2573">Mr. de la Termiere</persName> Bibliothecaire <lb/>du <rs ref="#p2561">Grand
                         Duc</rs> et ci-dévant Sigisbé de la <persName ref="#p2574">Chancelliere <lb/>Worontzov</persName>. <persName ref="#p2465">Mr.
                         Guldenstadt</persName> soupa chez nous et nous <lb/>nous promenâmes tous après souper. Toute notre <lb/>famille se porte à
                     merveille : mon petit <persName ref="#p2576">Hans</persName> va <lb/>à une école chez un François nommé <persName ref="#p2575"
                         >Nodrin</persName>, qui <lb/>tient aussi des Pensionnaires. Mille respects, devoirs, <lb/>tendresses de nous tous à Vous très
-                    cher Oncle et à <lb/>toute Votre famille : je suis avec un profond respect</p><salute>Votre très humble et très obeïssant
-                    Serviteur et <lb/>Neveu</salute>
-                <signature>J.Albert Euler</signature>
-                <placeName ref="#l0020">St. Petersbourg</placeName> ce <lb/><date>27 Mai/7 Juin 1768</date>. </div>
+                    cher Oncle et à <lb/>toute Votre famille : je suis avec un profond respect</p>
+                <closer>
+                    <salute>Votre très humble et très obeïssant Serviteur et <lb/>Neveu</salute>
+                    <signed>J.Albert Euler</signed>
+                    <dateline><placeName ref="#l0020">St. Petersbourg</placeName> ce <lb/><date when-iso="1768-05-27">27 Mai/7 Juin 1768</date>.
+                    </dateline></closer>
+            </div>
         </body>
     </text>
 </TEI>
