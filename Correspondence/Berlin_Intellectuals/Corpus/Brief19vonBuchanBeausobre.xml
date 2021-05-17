@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -163,7 +170,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -180,8 +187,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-23" who="#anne.baillot">Added the highlight @mark.</change>
@@ -194,29 +202,36 @@
         <body>
             <div type="transcription">
                 <pb facs="00000348.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">35</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1764-06-08">8 juin 1764</date></dateline>
-                <salute>Monsieur et trés cher Ami</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">35</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1764-06-08">8 juin
+                        1764</date></dateline>
+                    <salute rend="indent">Monsieur et trés cher Ami</salute></opener>
                 <p>Je viens de recevoir Votre derniere lettre avec les ecrits, que Vous y avés joints. L’<title ref="#w00031">eloge de la
-                        guerre</title><note resp="#anne.baillot"><seg xml:lang="de">Das Werk wurde in <persName ref="#p0071">Franchevilles</persName>
-                            <title ref="#w00031">Gazette littéraire</title> vom <date when-iso="1764-06-11">11. Juni 1764</date>
-                            kommentiert.</seg><seg xml:lang="fr">L'ouvrage a fait l'objet d'un commentaire dans le numéro du <date
-                                when-iso="1764-06-11">11 juin 1764</date> de la <title ref="#w00031">Gazette littéraire</title> de <persName
-                                ref="#p0071">Francheville</persName>.</seg></note> est un <lb/>ouvrage d’ecolier; je ne parle pas du fond de la
-                    question, car pour l’honneur de l’Auteur je veux croire, que c’est un jeu <lb/>d’esprit, mais je parle de la maniere, dont elle
-                    est traitée. Quand <persName ref="#p0092">Helvetius</persName> soutient, que la difference du grand genie et du <lb/>sot ne vient,
-                    que de la differente education, qu’ils ont reçue, quand <persName ref="#p0068">Rousseau</persName> veut me persuader, que là
-                    meilleure education <lb/>est celle de former un sauvage de son eleve, ils choisissent des raisonnements si apparents, ils les
-                    revetissent d’un style si en<lb break="no"/>chanteur, qu’au premier moment on est presque forcé à être de leur sentiment, et qu’il
-                    faut un grand calme de l’ame et <lb/>une reflexion profonde, pour decouvrir le <subst>
+                        guerre</title><note resp="#anne.baillot">
+                        <p xml:lang="en">The book was the subject of a commentary in the edition of <date when-iso="1764-06-11">June 11th, 1764</date>
+                            from the <title ref="#w00031">Gazette littéraire</title> of <persName ref="#p0071">Francheville</persName>.</p>
+                        <p xml:lang="de">Das Werk wurde in <persName ref="#p0071">Franchevilles</persName>
+                            <title ref="#w00031">Gazette littéraire</title> vom <date when-iso="1764-06-11">11. Juni 1764</date> kommentiert.</p>
+                        <p xml:lang="fr">L'ouvrage a fait l'objet d'un commentaire dans le numéro du <date when-iso="1764-06-11">11 juin 1764</date>
+                            de la <title ref="#w00031">Gazette littéraire</title> de <persName ref="#p0071">Francheville</persName>.</p>
+                    </note> est un <lb/>ouvrage d’ecolier; je ne parle pas du fond de la question, car pour l’honneur de l’Auteur je veux croire, que
+                    c’est un jeu <lb/>d’esprit, mais je parle de la maniere, dont elle est traitée. Quand <persName ref="#p0092">Helvetius</persName>
+                    soutient, que la difference du grand genie et du <lb/>sot ne vient, que de la differente education, qu’ils ont reçue, quand
+                        <persName ref="#p0068">Rousseau</persName> veut me persuader, que là meilleure education <lb/>est celle de former un sauvage
+                    de son eleve, ils choisissent des raisonnements si apparents, ils les revetissent d’un style si en<lb break="no"/>chanteur, qu’au
+                    premier moment on est presque forcé à être de leur sentiment, et qu’il faut un grand calme de l’ame et <lb/>une reflexion
+                    profonde, pour decouvrir le <subst>
                         <del rend="strikethrough">fonds</del>
                         <add place="inline">faux</add>
                     </subst> de leurs arguments: Au lieu de cela je ne trouve dans l’<title ref="w00031">Eloge de la <lb/>guerre</title> une
                     declamation puerile, un stile guindé, des traits d’histoire entierement faux ou mal appliqués et les marques <lb/>d’un esprit peu
-                    philosophique. Quand des plages<note resp="#anne.baillot"><seg xml:lang="de">Vielleicht ist "pages" gemeint.</seg><seg
-                            xml:lang="fr">Peut-être faut-il lire "pages".</seg></note> encore recentes deposent aussi ouvertement contre la guerre, il
-                    auroit <lb/>fallu des raisonnements plus specieux, pour le louer; pour prouver la verité triviale, que la guerre est quelquefois
-                    juste, <lb/>necessaire, louable même, il n’êtoit pas besoin d’un pompeux etalage de mots, pour montrer, <subst>
+                    philosophique. Quand des plages<note resp="#anne.baillot">
+                        <p xml:lang="en">Maybe we have to read "pages".</p>
+                        <p xml:lang="de">Vielleicht ist "pages" gemeint.</p>
+                        <p xml:lang="fr">Peut-être faut-il lire "pages".</p>
+                    </note> encore recentes deposent aussi ouvertement contre la guerre, il auroit <lb/>fallu des raisonnements plus specieux, pour le
+                    louer; pour prouver la verité triviale, que la guerre est quelquefois juste, <lb/>necessaire, louable même, il n’êtoit pas besoin
+                    d’un pompeux etalage de mots, pour montrer, <subst>
                         <del rend="overwritten">qu'il</del>
                         <add place="across">que la</add>
                     </subst> guerre produit quel<lb break="no"/>quefois de belles actions, il ne faut pas que se souvenir, que la Sagesse Eternelle a
@@ -225,14 +240,17 @@
                     educations, n’aye pas rougi, de faire <lb/>imprimer un Ouvrage pareil, que dans le premier moment je n’ai pas pu retenir ces
                     reflexions. Je ne suis pas plus con<lb break="no"/>tent de l’<rs ref="#w00093">Ouvrage Allemand</rs>; le style diffus, les
                     reflexions communes, la maniere indecente de parler des Souverains dece<lb break="no"/><hi hand="#pencil_02" rend="mark">lent fort
-                        bien <persName ref="#p0093">Justi</persName> dans cet ecrit;<note resp="#anne.baillot"><seg xml:lang="de">Es geht
-                                offensichtlich um das <date when="1760">1760</date> von <persName ref="#p0093">Justi</persName> veröffentlichte Werk
-                                    <title ref="#w00032">Leben und Character des Grafen von Brühls</title>.</seg><seg xml:lang="fr">Ce passage se
-                                rapporte manifestement à l'ouvrage <title ref="#w00032">Leben und Character des Grafen von Brühls</title> publié par
-                                    <persName ref="#p0093">Justi</persName> en <date when="1760">1760</date>.</seg></note> mais ce qu’on y pourroit
-                        chercher, des anecdotes peu connues, un tableau de Gouvernement</hi> du <lb/><persName ref="#p0094">Comte de Bruhl</persName>,
-                    de son faste, de ses richesses p. ne s’y trouve pas. Vous avés fort bien fait, de ne pas permettre la vente de <lb/>cet ouvrage,
-                    car le <rs ref="#p0049">Roi</rs> y est aussi peu menagé, que les autres Princes, et plusieurs de <subst>
+                        bien <persName ref="#p0093">Justi</persName> dans cet ecrit;<note resp="#anne.baillot">
+                            <p xml:lang="en">This passage clearly relates to the book <title ref="#w00032">Leben und Character des Grafen von
+                                    Brühls</title> published by <persName ref="#p0093">Justi</persName> in <date when="1760">1760</date>.</p>
+                            <p xml:lang="de">Es geht offensichtlich um das <date when="1760">1760</date> von <persName ref="#p0093">Justi</persName>
+                                veröffentlichte Werk <title ref="#w00032">Leben und Character des Grafen von Brühls</title>.</p>
+                            <p xml:lang="fr">Ce passage se rapporte manifestement à l'ouvrage <title ref="#w00032">Leben und Character des Grafen von
+                                    Brühls</title> publié par <persName ref="#p0093">Justi</persName> en <date when="1760">1760</date>.</p>
+                        </note> mais ce qu’on y pourroit chercher, des anecdotes peu connues, un tableau de Gouvernement</hi> du <lb/><persName
+                        ref="#p0094">Comte de Bruhl</persName>, de son faste, de ses richesses p. ne s’y trouve pas. Vous avés fort bien fait, de ne
+                    pas permettre la vente de <lb/>cet ouvrage, car le <rs ref="#p0049">Roi</rs> y est aussi peu menagé, que les autres Princes, et
+                    plusieurs de <subst>
                         <del rend="overwritten">c</del>
                         <add place="across">s</add>
                     </subst>es Officiers, <persName ref="#p0095">Schmettau</persName>, <persName ref="#p0096">Wolffers<lb break="no"
@@ -252,10 +270,13 @@
                     <lb/>on est, je crois justifié, quand les circonstances ne favorisent pas le dessein qu’on a. Pour ce qui regarde le premier
                         p<supplied reason="border of page; bound too tight">oint,</supplied>
                     <lb/>il faut dire avec <persName ref="#p0024">Horace</persName>: Laetus in praesens animus, quod ultra est oderit curare.<note
-                        resp="#anne.baillot"><seg xml:lang="de"><persName ref="#p0024">Horaz</persName>, <title ref="#w00009">Carmina</title>, Buch
-                            II, Gedicht XVI, Verse 24-25; übersetzt: "Frohen Sinnes das Heute geniessend, lass das Morgen sein".</seg><seg
-                            xml:lang="fr"><persName ref="#p0024">Horace</persName>, <title rend="#w00009">Poèmes</title>, Livre II, Poème XVI, vers
-                            24-25: "L'âme joyeuse du présent n'aura nul souci de la suite".</seg>
+                        resp="#anne.baillot">
+                        <p xml:lang="en"><persName ref="#p0024">Horace</persName>, <title rend="#w00009">Poems</title>, Book II, Poem XVI, verse
+                            24-25: "Blest in the present, look not forth"</p>
+                        <p xml:lang="de"><persName ref="#p0024">Horaz</persName>, <title ref="#w00009">Carmina</title>, Buch II, Gedicht XVI, Verse
+                            24-25; übersetzt: "Frohen Sinnes das Heute geniessend, lass das Morgen sein".</p>
+                        <p xml:lang="fr"><persName ref="#p0024">Horace</persName>, <title rend="#w00009">Poèmes</title>, Livre II, Poème XVI, vers
+                            24-25: "L'âme joyeuse du présent n'aura nul souci de la suite".</p>
                     </note>
                     <hi hand="#pencil_02" rend="mark">Vous avés jusqu’à present <supplied cert="low" reason="border of page; bound too tight">la
                             pensée</supplied>

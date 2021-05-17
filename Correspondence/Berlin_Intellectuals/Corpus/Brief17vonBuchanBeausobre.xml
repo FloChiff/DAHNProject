@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -164,7 +171,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -181,8 +188,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-06" who="#anne.baillot">Added note on Voltaire's epigram.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
@@ -196,10 +204,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000342.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">32</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-12-16">16 Decembre
-                    1763</date></dateline>
-                <salute>Monsieur et très cher Ami,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">32</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-12-16">16 Decembre
+                        1763</date></dateline>
+                    <salute>Monsieur et très cher Ami,</salute></opener>
                 <p>J'ai reçu les <title ref="#w00026">Poésies diverses</title>, que Vous m'avés envoyés; je les ai fait venir pour l'<rs ref="#p0073"
                         >Envoyé de Suede</rs>, ainsi <lb/>Vous auriés <add place="above">eu</add> tort de m'en faire present; cependant je trouve, que
                         <persName ref="#p0074">Voss</persName> les vend un peu cher, car il me semble, que pendant <lb/>la guerre il les vendoit à 10
@@ -207,40 +216,54 @@
                         >Voss</persName>, 5 pour <persName ref="#p0072">Obedes</persName>
                     <lb/>et un pour les deux ecus, qu'il faut encore à <persName ref="#p0072">Obedes</persName> et pour les autres fraix, s'il y en a.
                     Ayés la bonté, de m'en<lb break="no"/>voyer les <title ref="#w00029">Poésies allemandes</title> de la <persName ref="#p0075"
-                        >Karschin</persName><note resp="#anne.baillot"><seg xml:lang="de">Die <title ref="#w00029">Auserlesenen Gedichte</title> von
-                                <persName ref="#p0075">Anna Louisa Karsch</persName> erschienen erst <date when="1764">1764</date>.</seg><seg
-                            xml:lang="fr">L'anthologie de poèmes<title ref="#w00029">Auserlesene Gedichte</title> d'<persName ref="#p0075">Anna Louisa
-                                Karsch</persName> ne parut que l'année suivante, en <date when="1764">1764</date>.</seg></note> sur du papier fin, de
-                    même, que 4 <title ref="#w00030">Almanacs de poche francois de <lb/><placeName ref="#l1103">Berlin</placeName></title>, qu'on vend
-                    ordinairement à 16 ou 20 gros et marqués moi, s'il Vous plait, ce que je Vous dois, tant pour ceci <lb/>que pour les autres
-                    remises, que Vous m'avés fait. <persName ref="#p0077">Eichstedt</persName> m'a notifié l'accouchement de <rs ref="#p0078">sa
-                        femme</rs>, mais il <lb/>me parle seulement de 3 filles et d'un fruit imparfait. L'epigramme de <persName ref="#p0079"
-                        >Voltaire</persName> sur <persName ref="#p0080">le Franc de Pompignan</persName><note resp="#anne.baillot"><seg xml:lang="de"
-                            >Es handelt sich vermutlich um das berühmte Epigramm <persName ref="#p0079">Voltaires</persName>: "Savez-vous pourquoi
-                            Jérémie/ A tant pleuré durant sa vie?/ C'est qu'en prophète il prédisait/ Qu'un jour Lefranc le traduirait", urpsrünglich
-                            gegen Baculard d'Arnaud gerichtet und gegen Lefranc de Pompignan, der allerdings nie Jeremias übersetzte, umschrieb.(Mit
-                            Dank an Prof. Theodore Braun)</seg><seg xml:lang="fr">Il s'agit très probablement de l'épigramme célèbre de <persName
-                                ref="#p0079">Voltaire</persName>: "Savez-vous pourquoi Jérémie/ A tant pleuré durant sa vie?/ C'est qu'en prophète il
-                            prédisait/ Qu'un jour Lefranc le traduirait". Cette épigramme visait initialement Baculard d'Arnaud; Voltaire s'est
-                            contenté de changer le nom de la personne visée par l'attaque, en dépit du fait que Lefranc de Pompignan n'a jamais
-                            traduit Jérémie.(Merci au professeur Theodore Braun pour la confirmation de la référence)</seg></note>
+                        >Karschin</persName><note resp="#anne.baillot">
+                        <p xml:lang="en">The anthology of poems <title ref="#w00029">Auserlesene Gedichte</title> from <persName ref="#p0075">Anna
+                                Louisa Karsch</persName> was only released the year aftern in <date when="1764">1764</date>.</p>
+                        <p xml:lang="de">Die <title ref="#w00029">Auserlesenen Gedichte</title> von <persName ref="#p0075">Anna Louisa
+                                Karsch</persName> erschienen erst <date when="1764">1764</date>.</p>
+                        <p xml:lang="fr">L'anthologie de poèmes<title ref="#w00029">Auserlesene Gedichte</title> d'<persName ref="#p0075">Anna Louisa
+                                Karsch</persName> ne parut que l'année suivante, en <date when="1764">1764</date>.</p>
+                    </note> sur du papier fin, de même, que 4 <title ref="#w00030">Almanacs de poche francois de <lb/><placeName ref="#l1103"
+                            >Berlin</placeName></title>, qu'on vend ordinairement à 16 ou 20 gros et marqués moi, s'il Vous plait, ce que je Vous
+                    dois, tant pour ceci <lb/>que pour les autres remises, que Vous m'avés fait. <persName ref="#p0077">Eichstedt</persName> m'a
+                    notifié l'accouchement de <rs ref="#p0078">sa femme</rs>, mais il <lb/>me parle seulement de 3 filles et d'un fruit imparfait.
+                    L'epigramme de <persName ref="#p0079">Voltaire</persName> sur <persName ref="#p0080">le Franc de Pompignan</persName><note
+                        resp="#anne.baillot">
+                        <p xml:lang="en">It is most likely the famous epigram from <persName ref="#p0079">Voltaire</persName>: "Savez-vous pourquoi
+                            Jérémie/ A tant pleuré durant sa vie?/ C'est qu'en prophète il prédisait/ Qu'un jour Lefranc le traduirait". This epigram
+                            targeted initially Baculard d'Arnaud; Voltaire simply changed the name of the person targeted by the attack, despite the
+                            fact that Lefranc de Pompignan never translated Jérémie. (Thanks to Professor Theodore Braun for confirmation of the
+                            reference)</p>
+                        <p xml:lang="de">Es handelt sich vermutlich um das berühmte Epigramm <persName ref="#p0079">Voltaires</persName>: "Savez-vous
+                            pourquoi Jérémie/ A tant pleuré durant sa vie?/ C'est qu'en prophète il prédisait/ Qu'un jour Lefranc le traduirait",
+                            urpsrünglich gegen Baculard d'Arnaud gerichtet und gegen Lefranc de Pompignan, der allerdings nie Jeremias übersetzte,
+                            umschrieb.(Mit Dank an Prof. Theodore Braun)</p>
+                        <p xml:lang="fr">Il s'agit très probablement de l'épigramme célèbre de <persName ref="#p0079">Voltaire</persName>: "Savez-vous
+                            pourquoi Jérémie/ A tant pleuré durant sa vie?/ C'est qu'en prophète il prédisait/ Qu'un jour Lefranc le traduirait".
+                            Cette épigramme visait initialement Baculard d'Arnaud; Voltaire s'est contenté de changer le nom de la personne visée par
+                            l'attaque, en dépit du fait que Lefranc de Pompignan n'a jamais traduit Jérémie.(Merci au professeur Theodore Braun pour
+                            la confirmation de la référence)</p>
+                    </note>
                     <lb/>me paroit plus supportable encore, que ses vers à l'<rs ref="#p0081">Imperatrice de <placeName ref="#l0019"
                             >Russie</placeName></rs>, qu'on a vu dans toutes les gazettes. <lb/><hi hand="#pencil_02" rend="mark"><rs ref="#p0080">Le
                             Franc</rs>, aprés avoir insulté à son reception à l'Academie Françoise tous les Membres de ce corps,<note
-                            resp="#anne.baillot"><seg xml:lang="de">Im Jahre <date when="1760">1760</date>.</seg><seg xml:lang="fr">En <date
-                                    when="1760">1760</date>.</seg></note> meritoit une <lb/>Epigramme plus piquante. L'affaire du <persName
-                            ref="#p0082">Comte de Wartensleben</persName> avec le <persName ref="#p0083">Landgrave de Cassel</persName> doit nous
-                            in<lb break="no"/>teresser tous nous autres Envoyés,</hi> parcequ'on a enfreint nos droits et notre sureté, mais <add
-                        place="above">à</add> serieusement parler <lb/>on voit par les demarches posterieures du <rs ref="#p0083">Landgrave</rs>,
-                    qu'il reconnoit avoir fait un faux pas, et qu'il ne sait <lb/>pas trop, comment s'en tirer. L'<rs ref="#p0073">Envoyé de
-                        Suede</rs>, qui est ici sait mieux maintenir ses droits; il y a environ <lb/>6 semaines, qu'on arreta l'hote de sa maison, et
-                    qu'on voulut le transporter chés lui: il ne voulut jamais <lb/>permettre, que des gens armés entrassent dans la maison où il
-                    êtoit, et il obtint, qu'on envoyat lui faire des <lb/>excuses, et qu'on ne donnat qu'un Officier et une ordonnance sans armes pour
-                    gardes à son hote. Le projet <lb/>que Vous me faites, pour faire venir du vin de <placeName ref="#l0052">Bourgogne</placeName>
-                    ici, n'est pas facile à executer, mais je crois, qu'il <lb/>seroit possible de faire venir ce vin à <placeName ref="#l0054"
-                        >Strasbourg</placeName> et de là ici par un voiturier, quand il auroit même d'autre <lb/>charge que de vin. Si <persName
-                        ref="#p0071">Francheville</persName> croit le pouvoir faire de cette façon, je le prie, de me faire venir une demi <lb/>queu
-                    de Romanay et une demie queu d'une autre bonne sorte de vin de <placeName ref="#l0052">Bourgogne</placeName>.</p>
+                            resp="#anne.baillot">
+                            <p xml:lang="en">In <date when="1760">1760</date>.</p>
+                            <p xml:lang="de">Im Jahre <date when="1760">1760</date>.</p>
+                            <p xml:lang="fr">En <date when="1760">1760</date>.</p>
+                        </note> meritoit une <lb/>Epigramme plus piquante. L'affaire du <persName ref="#p0082">Comte de Wartensleben</persName> avec
+                        le <persName ref="#p0083">Landgrave de Cassel</persName> doit nous in<lb break="no"/>teresser tous nous autres Envoyés,</hi>
+                    parcequ'on a enfreint nos droits et notre sureté, mais <add place="above">à</add> serieusement parler <lb/>on voit par les
+                    demarches posterieures du <rs ref="#p0083">Landgrave</rs>, qu'il reconnoit avoir fait un faux pas, et qu'il ne sait <lb/>pas trop,
+                    comment s'en tirer. L'<rs ref="#p0073">Envoyé de Suede</rs>, qui est ici sait mieux maintenir ses droits; il y a environ <lb/>6
+                    semaines, qu'on arreta l'hote de sa maison, et qu'on voulut le transporter chés lui: il ne voulut jamais <lb/>permettre, que des
+                    gens armés entrassent dans la maison où il êtoit, et il obtint, qu'on envoyat lui faire des <lb/>excuses, et qu'on ne donnat qu'un
+                    Officier et une ordonnance sans armes pour gardes à son hote. Le projet <lb/>que Vous me faites, pour faire venir du vin de
+                        <placeName ref="#l0052">Bourgogne</placeName> ici, n'est pas facile à executer, mais je crois, qu'il <lb/>seroit possible de
+                    faire venir ce vin à <placeName ref="#l0054">Strasbourg</placeName> et de là ici par un voiturier, quand il auroit même d'autre
+                    <lb/>charge que de vin. Si <persName ref="#p0071">Francheville</persName> croit le pouvoir faire de cette façon, je le prie, de me
+                    faire venir une demi <lb/>queu de Romanay et une demie queu d'une autre bonne sorte de vin de <placeName ref="#l0052"
+                        >Bourgogne</placeName>.</p>
                 <pb facs="00000343.jpg" n="2"/>
                 <p><hi rend="underline">79</hi> a trouvé en 36.4.13.9.39. ce qui lui convient, selon ce, que Vous me marqués; elle veut être traitée
                     de cette <lb/>facon, et selon toutes les apparences, ce sera à la fin une autre 116.26.13.36.24.8.</p>

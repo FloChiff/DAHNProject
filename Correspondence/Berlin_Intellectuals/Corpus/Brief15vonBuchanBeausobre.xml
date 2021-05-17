@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -163,7 +170,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -180,8 +187,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-23" who="#anne.baillot">Added the highlighting mark for the Anstreichung.</change>
@@ -195,10 +203,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000334.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">28</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-10-21">2I d'Octobre
-                    1763</date>.</dateline>
-                <salute>Monsieur et très cher Ami,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">28</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-10-21">2I d'Octobre
+                        1763</date>.</dateline>
+                    <salute rend="indent">Monsieur et très cher Ami,</salute></opener>
                 <p>Vous ne pouvés pas Vous imaginer, quel plaisir me font Vos lettres; je reconnois toujours en <lb/>Vous cet ami, qui sacrifie ses
                     plaisirs à celui de ceux qu'il aime. Il n'y a que le mauvais êtat de <lb/>Votre santé, qui me fait de la peine; ayés en soin, je
                     Vous prie, et conservés moi un ami, que je reverrai <lb/>avec tant de plaisir. C'est alors, que nous epancherons nos cœurs, et que
@@ -253,7 +262,7 @@
                         <del rend="overwritten">u</del>
                         <add place="across">e</add>
                     </subst> sot à un autre. <pb facs="00000336.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">29</note>Tachons, cher Ami, d'être toujours bons, justes et utiles aux
+                    <note hand="#pencil" place="margin(right)" type="foliation">29</note>Tachons, cher Ami, d'être toujours bons, justes et utiles aux
                     autres, autant, que nous le pouvons, et regardons <lb/>le reste plûtôt, comme un surcroit, que comme une partie necessaire de
                     notre bonheur. Vous l'emportés infiniment <lb/>sur le point de l'utilité, et si j'entre en concurrence avec Vous, ce n'est que par
                     les efforts, que je fais, d'être bon et <lb/>juste. Ne croyés pourtant pas, que je pousse l'indifference trop loin; je ne me
@@ -273,14 +282,16 @@
                     l'amusement imaginable, Vous êtes pourtant obligé, de Vous y interesser, car elle m'a fait passer <lb/>une soirée delicieuse, et
                     comme mon Ami, Vous devés y prendre part. Voilà une façon neuve, de faire <lb/>trouver une lettre bonne, mais les Votres me
                     donnent tant de plaisir, que je voudrois faire valoir la mien<lb break="no" type="none"/>ne d'un coté.</p>
-                <p>Je suis faché, que la vente des livres de Savoi<note resp="#anne.baillot"><seg xml:lang="de">Oder Sarri.</seg><seg xml:lang="fr">Ou
-                            bien Sarri.</seg></note> se fasse dans un tems, où je n'ai point d'ar<lb break="no"/>gent, pour en acheter. Si le
-                    catalogue de <persName ref="#p0054">Neaulme</persName> ne coute pas au delà de 2. ecus, je Vous <lb/>prie, de me l'envoyer. On m'a
-                    prié, de procurer la description de la pompe funebre de la Reine <lb/><persName ref="#p0055">Sophie Charlotte</persName>, Epouse
-                    de <persName ref="#p0056">Frederic I.</persName> avec les tailles douces; si elle n'est pas trop chere, ayés la bonté, <lb/>de me
-                    l'envoyer d'abord, si elle est à un fort haut prix, de me le marquer premierement. <closer>Soyés aussi sain, aussi <lb/>content et
-                        aussi heureux, que je le souhaite</closer></p>
-                <signed rend="align(right)">B.</signed>
+                <p>Je suis faché, que la vente des livres de Savoi<note resp="#anne.baillot">
+                        <p xml:lang="en">Or maybe Sarri.</p>
+                        <p xml:lang="de">Oder Sarri.</p>
+                        <p xml:lang="fr">Ou bien Sarri.</p></note> se fasse dans un tems, où je n'ai point d'ar<lb break="no"/>gent, pour en acheter.
+                    Si le catalogue de <persName ref="#p0054">Neaulme</persName> ne coute pas au delà de 2. ecus, je Vous <lb/>prie, de me l'envoyer.
+                    On m'a prié, de procurer la description de la pompe funebre de la Reine <lb/><persName ref="#p0055">Sophie Charlotte</persName>,
+                    Epouse de <persName ref="#p0056">Frederic I.</persName> avec les tailles douces; si elle n'est pas trop chere, ayés la bonté,
+                    <lb/>de me l'envoyer d'abord, si elle est à un fort haut prix, de me le marquer premierement.</p>
+                <closer><salute>Soyés aussi sain, aussi <lb/>content et aussi heureux, que je le souhaite</salute>
+                    <signed rend="align(right)">B.</signed></closer>
             </div>
         </body>
     </text>

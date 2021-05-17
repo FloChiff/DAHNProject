@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -124,7 +131,7 @@
                             <p xml:lang="de">Der Brief wurde in <origPlace ref="#l0013">Magdeburg</origPlace> am <origDate when="1762-01-21">21.
                                     Januar 1762</origDate> verfasst.</p>
                             <p xml:lang="en">The letter was written in <origPlace ref="#l0013">Magdeburg</origPlace> on <origDate when="1762-01-21">21
-                                    January 1762</origDate>&gt;.</p>
+                                    January 1762</origDate>.</p>
                             <p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l0013">Magdebourg</origPlace> le <origDate when="1762-01-21">21
                                     janvier 1762</origDate>.</p>
                         </origin>
@@ -159,7 +166,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -176,8 +183,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-16" who="#anne.baillot">Cleaned up metadata, added English title there and missing index references in the
@@ -189,8 +197,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000310.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">16</note>
-                <salute rend="align(left)">Monsieur</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">16</note>
+                <opener><salute>Monsieur</salute></opener>
                 <p>Il y a des personnes, à qui on ne donne point de Commissions, parceque leur negligence les fait executer <lb/>mal; pour Vous on
                     doit avoir honte, de Vous en donner par la raison du contraire. A peine Vous avois je mar<lb break="no"/>qué, que j'aimerois à
                     avoir l'<title ref="#w00010">Encyclopedie</title> de <persName ref="#p0035">Baumgarten</persName>, si le hazard Vous l'offroit,
@@ -199,8 +207,8 @@
                     Ami, je suis tout honteux des peines, que je Vous ai causé, mais je ne puis nier <lb/>que Vous m'ayiés fait bien de plaisir par la
                     partie, que Vous m'avés envoyé, et ou malgré le peu, qu'elle contient, <lb/>j'ai reconnu l'esprit de <persName ref="#p0035"
                         >Baumgarten</persName><subst>
-                        <del>,</del>
-                        <add>.</add>
+                        <del rend="overwritten">,</del>
+                        <add place="across">.</add>
                     </subst> J'avoue aussi, que je Vous aurai une obligation infinie, si Vous pourrés <lb/>me faire avoir l'ouvrage en entier, et que
                     je donnerai volontiers une gratification, proportionnée à un tel <lb/>ouvrage à celui, qui Vous le communiquera. Vous ne m'avés
                     pas moins fait de plaisir, en me donnant avis <lb/>de la convention entre le <persName ref="#p0128">Duc de Bevern</persName> et le
@@ -247,7 +255,7 @@
                     l'evangile aux Payens, et par d'autres moyens; mais quelquefois <lb/>elle nous laisse dans une grande ignorance sur ce sujet.
                     C'est ainsi, que nous voyons les Apotres, armés d'une force <lb/>surnaturelle, precher apres l'ascension de <persName ref="#p0030"
                         >Jesus-Christ</persName> au peuple d'<placeName ref="#l0038">Israël</placeName> les verités les plus relevées. Je Vous avoue
-                        <pb facs="00000312.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation">17</note>que je serois trés
+                        <pb facs="00000312.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">17</note>que je serois trés
                     embarrassé à Vous expliquer distinctement la maniere, dont cela s'est fait; mais je n'y vois aucu<lb break="no"/>ne contradiction,
                     parceque quelque chose de pareil nous arrive tous les jours. Nous meditons souvent une verité avec <lb/>la plus grande
                     application; sans que tous nos efforts nous y fassent voir plus clair. Une autre fois, que nous y pensons <lb/>le moins, un rayon
@@ -260,19 +268,22 @@
                     raisonnables, autant que leur conduite le permettroit, et pour manifester ainsi sa gloire <lb/>de la maniere la plus sûre. Exemt
                     de toutes les foiblesses humaines, il n'a point d'enfant cheri, le bonheur duquel <lb/>il voudroit procurer aux depens des autres;
                     il a donc établi un ordre general, par l'observation duquel tous ses créa<lb break="no" type="none"/>tures peuvent devenir
-                    heureux. Quiconque enfraint<note resp="#anne.baillot"><seg xml:lang="de">Es ist nicht klar, ob zuerst "enfraint", dann die
-                            Korrektur "enfreint" eingetragen wurde oder zuerst die richtige Form "enfreint", dann "enfraint".</seg><seg xml:lang="fr"
-                            >La tache empêche de voir si le mot de départ est "enfraint", corrigé pour donner "enfreint", ou s'il y avait d'abord
-                            l'orthographe "enfreint", puis la correction "enfraint".</seg></note> cet ordre n'offense pas Dieu à proprement parler,
-                    puisqu'un <lb/>Etre aussi parfait, que lui est trop elevé au dessus des offenses humaines, mais il determine Dieu à le punir, tant
-                    <lb/>pour sa propre correction que pour l'exemple des autres. Il y a differentes sortes de punition, des naturelles, suites
-                    <lb/>inevitables des vices. Tels sont les maladies causées par les excés et sur tout les remords de la conscience. Mais <lb/>rien
-                    n'empeche de soutenir que Dieu a aussi decerné des peines arbitraires pour les pecheurs obstinés. Les re<lb break="no"/>mords ne
-                    peuvent pas cesser comme Vous l'avés très bien remarqué, tant que le souvenir dure, c'est à dire, tant <lb/>qu'un homme reste la
-                    meme personne, et ainsi un homme, qui a commis un peché sera eternellement moins heureux, <lb/>que s'il ne l'avoit pas commis. À
-                    l'egard de ces peines je crois, qu'il n'y a point de pardon à esperer, puisque ce seroit <lb/>changer la nature de nôtre être.
-                    Quelle triste verité pour les hommes, quand ils comparent les bonnes et les mauvaises <lb/>actions de leur vie passée! Mais à
-                    l'egard des peines arbitraires, je crois, qu'un pardon peut avoir lieu. Elles sont <lb/>principalement pour l'exemple des autres
+                    heureux. Quiconque enfraint<note resp="#anne.baillot">
+                        <p xml:lang="en">The stain prevents from seing if the first word is "enfraint", corrected to give "enfreint", or if it had
+                            first the spelling "enfreint", then the correction "enfraint".</p>
+                        <p xml:lang="de">Es ist nicht klar, ob zuerst "enfraint", dann die Korrektur "enfreint" eingetragen wurde oder zuerst die
+                            richtige Form "enfreint", dann "enfraint".</p>
+                        <p xml:lang="fr">La tache empêche de voir si le mot de départ est "enfraint", corrigé pour donner "enfreint", ou s'il y avait
+                            d'abord l'orthographe "enfreint", puis la correction "enfraint".</p></note> cet ordre n'offense pas Dieu à proprement
+                    parler, puisqu'un <lb/>Etre aussi parfait, que lui est trop elevé au dessus des offenses humaines, mais il determine Dieu à le
+                    punir, tant <lb/>pour sa propre correction que pour l'exemple des autres. Il y a differentes sortes de punition, des naturelles,
+                    suites <lb/>inevitables des vices. Tels sont les maladies causées par les excés et sur tout les remords de la conscience. Mais
+                    <lb/>rien n'empeche de soutenir que Dieu a aussi decerné des peines arbitraires pour les pecheurs obstinés. Les re<lb break="no"
+                    />mords ne peuvent pas cesser comme Vous l'avés très bien remarqué, tant que le souvenir dure, c'est à dire, tant <lb/>qu'un homme
+                    reste la meme personne, et ainsi un homme, qui a commis un peché sera eternellement moins heureux, <lb/>que s'il ne l'avoit pas
+                    commis. À l'egard de ces peines je crois, qu'il n'y a point de pardon à esperer, puisque ce seroit <lb/>changer la nature de nôtre
+                    être. Quelle triste verité pour les hommes, quand ils comparent les bonnes et les mauvaises <lb/>actions de leur vie passée! Mais
+                    à l'egard des peines arbitraires, je crois, qu'un pardon peut avoir lieu. Elles sont <lb/>principalement pour l'exemple des autres
                     et après le grand exemple de la punition du peché dans la personne <lb/>de <persName ref="#p0030">Jesus-Christ</persName>, elles
                     peuvent être remises à celui, qui par une foi vive en son sauveur se croit reconcilié à Dieu, et prend <lb/>par là une resolution
                     vive et efficace de ne plus offenser cet Etre misericordieux. Vous croyés, que les hommes ne senti<lb break="no"/>ront les peines
@@ -285,30 +296,36 @@
                     </subst> de pechés, puisqu'ils seroient commis avec plus de lumieres. <lb/>Il n'y auroit rien de si heureux, que de vivre d'une
                     façon inconsiderée, puisqu'alors la reflexion, qui precede nos actions <supplied reason="border of page, binding too tight"
                         >,</supplied><lb/>ne serviroit pas à aggraver notre peine. Je crois, comme Vous Monsieur, qu'on demandera moins de ceux, qui
-                    ont m<supplied reason="border of page, binding too tight">oins</supplied> reçu, mais il faut, que ce defaut de lumieres vienne
-                    d'une impuissance naturelle et non de la negligence de l'homme<supplied reason="border of page, binding too tight">.</supplied>
-                    Voila ce que j'ai à dire sur les matieres, que Vous m'avés proposé. Pardonnes, cher Ami, si je Vous ai ennuyé par <lb/>des longues
-                    discussions sur des sujets, que Vous savés mieux que moi; mais le celebre Poëte Anglois <persName ref="#p0038">Young</persName>
-                    <supplied reason="border of page, binding too tight">dit, que</supplied> l'esprit s'aiguise par le commerce avec des amis, et
-                    c'est le principal fruit, que j'ai taché à retirer de ces dissertations.</p>
+                    ont m<supplied reason="border of page, binding too tight">oins</supplied>
+                    <lb/>reçu, mais il faut, que ce defaut de lumieres vienne d'une impuissance naturelle et non de la negligence de l'homme<supplied
+                        reason="border of page, binding too tight">.</supplied><lb/> Voila ce que j'ai à dire sur les matieres, que Vous m'avés
+                    proposé. Pardonnes, cher Ami, si je Vous ai ennuyé par <lb/>des longues discussions sur des sujets, que Vous savés mieux que moi;
+                    mais le celebre Poëte Anglois <persName ref="#p0038">Young</persName>
+                    <supplied reason="border of page, binding too tight">dit, que</supplied>
+                    <lb/>l'esprit s'aiguise par le commerce avec des amis, et c'est le principal fruit, que j'ai taché à retirer de ces
+                    dissertations.</p>
                 <p>Hier une estaffette de Mr <persName ref="#p0138">Jourdan</persName> nous a porté la nouvelle, que l'<rs ref="#p0039">Imperatrice de
-                        Russie</rs> êtoit morte <date when-iso="1762-01-05">le 5 de <lb/>ce mois</date>. Cette nouvelle est-elle vraye,<note
-                        resp="#anne.baillot"><seg xml:lang="de">Elisabeth von Russland starb am 5. Januar 1762. Katharina II. wurde im Juli 1762 ihre
-                            Nachfolgerin.</seg><seg xml:lang="fr">L'impératrice Elisabeth de Russie est décédée le 5 janvier 1762; Catherine II lui
-                            succèda en juillet 1762.</seg></note> et si elle l'est produira t'elle des effets favorables pour nous? Ce sont des sujets
-                    <lb/>pour animer la conversation des politiques, mais que l'avenir seul peut eclaircir. Le <rs ref="#p0049">Roi</rs> a rappellé
-                    les Officiers <lb/>Autrichiens relachés sur leur parole. Le Prince <persName ref="#p0139">Lobkowitz</persName> et le Prince
-                        <persName ref="#p0140">Lichtenstein</persName> sont deja arrivés. Le <persName ref="#p0141">Prince de <lb/>Coburg</persName>,
-                        <persName ref="#p0142">de Salm</persName> et d'autres sont en chemin. Ainsi nous verrons bientôt <rs ref="#l0013">nôtre
-                        ville</rs>
-                    <add place="above">presque</add> aussi remplie de petits Princes <lb/>de l'Empire, que <placeName ref="#l0032">Vienne</placeName>.
-                        <salute>Portés Vous bien et continués moi Votre amitié et Votre correspondance.</salute> à <placeName ref="#l0013"
-                            >Magde<supplied reason="border of page, binding too tight">bourg</supplied></placeName> ce <date when="1762-01-21">21
-                        Janvier 1762</date>.</p>
-                <p>Dans ce moment je viens de recevoir Votre lettre du <date when-iso="1762-01-19">19</date>; je n'ai pas voulu differer à Vous
-                    repondre,que l'<title ref="#w00036"><supplied reason="border of page, binding too tight">histoi</supplied><lb break="no"
-                        />re</title> de <persName ref="#p0143"><unclear cert="medium">Sobieskyne</unclear></persName> ne m'appartient pas; je l'ai
-                    acheté peu avant que de partir de <placeName ref="#l1103">Berlin</placeName> et je l'ai ici.</p>
+                        Russie</rs> êtoit morte <date when-iso="1762-01-05">le 5 de <lb/>ce mois</date>. Cette nouvelle est-elle vraye, <note
+                        resp="#anne.baillot">
+                        <p xml:lang="en">The empress Elizabeth from Russia died on January 5th, 1762; Catherine II succeeded him in July 1762.</p>
+                        <p xml:lang="de">Elisabeth von Russland starb am 5. Januar 1762. Katharina II. wurde im Juli 1762 ihre Nachfolgerin.</p>
+                        <p xml:lang="fr">L'impératrice Elisabeth de Russie est décédée le 5 janvier 1762; Catherine II lui succèda en juillet
+                            1762.</p></note> et si elle l'est produira t'elle des effets favorables pour nous? Ce sont des sujets <lb/>pour animer la
+                    conversation des politiques, mais que l'avenir seul peut eclaircir. Le <rs ref="#p0049">Roi</rs> a rappellé les Officiers
+                    <lb/>Autrichiens relachés sur leur parole. Le Prince <persName ref="#p0139">Lobkowitz</persName> et le Prince <persName
+                        ref="#p0140">Lichtenstein</persName> sont deja arrivés. Le <persName ref="#p0141">Prince de <lb/>Coburg</persName>, <persName
+                        ref="#p0142">de Salm</persName> et d'autres sont en chemin. Ainsi nous verrons bientôt <rs ref="#l0013">nôtre ville</rs>
+                    <add place="above">presque</add> aussi remplie de petits Princes <lb/>de l'Empire, que <placeName ref="#l0032"
+                    >Vienne</placeName>.</p>
+                <closer><salute>Portés Vous bien et continués moi Votre amitié et Votre correspondance.</salute><dateline> à <placeName ref="#l0013"
+                                >Magde<supplied reason="border of page, binding too tight">bourg</supplied></placeName> ce <date when="1762-01-21">21
+                            Janvier 1762</date>.</dateline></closer>
+                <postscript>
+                    <p>Dans ce moment je viens de recevoir Votre lettre du <date when-iso="1762-01-19">19</date>; je n'ai pas voulu differer à Vous
+                        repondre,que l'<title ref="#w00036"><supplied reason="border of page, binding too tight">histoi</supplied><lb break="no"
+                            />re</title> de <persName ref="#p0143"><unclear cert="medium">Sobieskyne</unclear></persName> ne m'appartient pas; je l'ai
+                        acheté peu avant que de partir de <placeName ref="#l1103">Berlin</placeName> et je l'ai ici.</p>
+                </postscript>
             </div>
         </body>
     </text>

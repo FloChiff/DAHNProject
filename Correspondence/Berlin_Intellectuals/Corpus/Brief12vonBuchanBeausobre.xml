@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -171,7 +178,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-20" who="#anne.baillot">Cleaned up metadata, added English title and missing references to index in the
@@ -201,44 +209,51 @@
         <body>
             <div type="transcription">
                 <pb facs="00000322.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">22</note>
-                <dateline rend="align(right)">à Magdebourg ce 12 Mars 1762</dateline>
-                <salute>Monsieur,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">22</note>
+                <opener>
+                    <dateline rend="align(right)">à Magdebourg ce 12 Mars 1762</dateline>
+                    <salute>Monsieur,</salute></opener>
                 <p>J'ai recu Vos deux dernieres lettres aussi bien que les <title ref="#w00014">Annales Typographiques</title> et la Traduction
-                    <lb/>de l'<title ref="#w00015">Iliade</title> par <persName ref="#p0045">Bitaubé</persName><note resp="#anne.baillot"><seg
-                            xml:lang="de"><persName ref="#p0045">Bitaubé</persName>
-                            <title ref="#w00015">Ilias</title> erschien <date when="1762">1762</date>.</seg><seg xml:lang="fr">L'<title ref="#w00015"
-                                >Iliade</title> de <persName ref="#p0045">Bitaubé</persName> est parue en <date when="1762">1762</date>.</seg></note>.
-                    Si une oreille Allemande, aussi peu accoutumé à la veritable prononciation <lb/>Francoise, que la mienne, peut juger de l'harmonie
-                    du style Francois, il me paroit, qu'il y en a beaucoup<lb/> dans l'<rs ref="#w00015">Ouvrage de Mr. <persName ref="#p0045"
-                            >Bitaubé</persName></rs>. Néantmoins je ne sai pas, s'il a bien fait, de tronquer et de changer <lb/>ainsi son <rs
-                        ref="#p0033">Auteur</rs>. Ce n'est pas, parceque j'ai aucun doute sur les defauts d'<persName ref="#p0033">Homere</persName>,
-                    que je desapprouve <lb/>cela, mais parceque je crois, qu'il est difficile, de retoucher le chef d'œuvre d'un maitre dans l'art,
-                    sans <lb/>le gater. Ordinairement il y peint si bien son propre caractere, celui de son siecle et de sa nation, qu'on ne <lb/>peut
-                    en retrancher rien, sans lui faire perdre ses beautés. Cette peinture naive des mœurs et des coutumes <lb/>est un des principaux
-                    merites d'<persName ref="#p0033">Homere</persName>, comme tous les Critiques en conviennent; faire les acteurs de <lb/>ce Poëme
-                    plus polis, plus elegants, qu'ils ne le sont dans le Poëte Grec, c'est lui ôter une grande partie de <lb/>sa vraisemblance. Je
-                    n'ai encore lu, que le premier livre de cette nouvelle traduction; je tacherai, de confirmer <lb/>ce, que j'ai dit par un exemple,
-                    tiré de ce livre. Nestor est decrit toujours dans <persName ref="p0033">Homere</persName>, comme un Prince <lb/>à qui beaucoup de
-                    bon sens naturel, l'age et une longue experience ont acquis une grande autorité par<lb break="no"/>mi les Grecs. C'est
-                    conformement à ce caractere, qu'<persName ref="#p0033">Homere</persName> le fait parler, lors qu'il se leve dans le Concile
-                    <lb/>des Grecs, pour appaiser la querelle d'Achille et d'Agamemnon. Il fait voir son bon cœur, en deplo<lb break="no"/>rant avec
-                    une effusion de cœur les maux, que cette desunion causeroit; il tache d'etablir son autorité par <lb/>le credit, qu'il a eu sur
-                    l'esprit des plus fameux héros de l'antiquité, et sa memoire, lui fournissant à cette <lb/>occasion plusieurs faits memorables de
-                    ces héros, il ne peut resister à l'envie si naturelle aux vieillards, de <lb/>conter et de se faire valoir; enfin il conseille à
-                    Agamemnon, de renvoyer Chryseis et de ne pas enlever Brisëis, <lb/>en le prenant par son foible, et en lui faisant entendre, que
-                    lui, Chef de tant de vaillants Princes, auroit moins <lb/>de peine à surmonter ses passions, qu'Achille, dont il tacheroit encore
-                    d'appaiser la fougue par ces discours.</p>
+                    <lb/>de l'<title ref="#w00015">Iliade</title> par <persName ref="#p0045">Bitaubé</persName>
+                    <note resp="#anne.baillot">
+                        <p xml:lang="en">The <title ref="#w00015">Iliad</title> from <persName ref="#p0045">Bitaubé</persName> is released in <date
+                                when="1762">1762</date>.</p>
+                        <p xml:lang="de"><persName ref="#p0045">Bitaubé</persName>
+                            <title ref="#w00015">Ilias</title> erschien <date when="1762">1762</date>.</p>
+                        <p xml:lang="fr">L'<title ref="#w00015">Iliade</title> de <persName ref="#p0045">Bitaubé</persName> est parue en <date
+                                when="1762">1762</date>.</p></note>. Si une oreille Allemande, aussi peu accoutumé à la veritable prononciation
+                    <lb/>Francoise, que la mienne, peut juger de l'harmonie du style Francois, il me paroit, qu'il y en a beaucoup<lb/> dans l'<rs
+                        ref="#w00015">Ouvrage de Mr. <persName ref="#p0045">Bitaubé</persName></rs>. Néantmoins je ne sai pas, s'il a bien fait, de
+                    tronquer et de changer <lb/>ainsi son <rs ref="#p0033">Auteur</rs>. Ce n'est pas, parceque j'ai aucun doute sur les defauts
+                        d'<persName ref="#p0033">Homere</persName>, que je desapprouve <lb/>cela, mais parceque je crois, qu'il est difficile, de
+                    retoucher le chef d'œuvre d'un maitre dans l'art, sans <lb/>le gater. Ordinairement il y peint si bien son propre caractere, celui
+                    de son siecle et de sa nation, qu'on ne <lb/>peut en retrancher rien, sans lui faire perdre ses beautés. Cette peinture naive des
+                    mœurs et des coutumes <lb/>est un des principaux merites d'<persName ref="#p0033">Homere</persName>, comme tous les Critiques en
+                    conviennent; faire les acteurs de <lb/>ce Poëme plus polis, plus elegants, qu'ils ne le sont dans le Poëte Grec, c'est lui ôter
+                    une grande partie de <lb/>sa vraisemblance. Je n'ai encore lu, que le premier livre de cette nouvelle traduction; je tacherai, de
+                    confirmer <lb/>ce, que j'ai dit par un exemple, tiré de ce livre. Nestor est decrit toujours dans <persName ref="p0033"
+                        >Homere</persName>, comme un Prince <lb/>à qui beaucoup de bon sens naturel, l'age et une longue experience ont acquis une
+                    grande autorité par<lb break="no"/>mi les Grecs. C'est conformement à ce caractere, qu'<persName ref="#p0033">Homere</persName> le
+                    fait parler, lors qu'il se leve dans le Concile <lb/>des Grecs, pour appaiser la querelle d'Achille et d'Agamemnon. Il fait voir
+                    son bon cœur, en deplo<lb break="no"/>rant avec une effusion de cœur les maux, que cette desunion causeroit; il tache d'etablir
+                    son autorité par <lb/>le credit, qu'il a eu sur l'esprit des plus fameux héros de l'antiquité, et sa memoire, lui fournissant à
+                    cette <lb/>occasion plusieurs faits memorables de ces héros, il ne peut resister à l'envie si naturelle aux vieillards, de
+                    <lb/>conter et de se faire valoir; enfin il conseille à Agamemnon, de renvoyer Chryseis et de ne pas enlever Brisëis, <lb/>en le
+                    prenant par son foible, et en lui faisant entendre, que lui, Chef de tant de vaillants Princes, auroit moins <lb/>de peine à
+                    surmonter ses passions, qu'Achille, dont il tacheroit encore d'appaiser la fougue par ces discours.</p>
                 <p>J'ai lu toujours avec plaisir ce discours dans la <title ref="#w00016">traduction de <persName ref="#p0046"
                     >Pope</persName></title>, /car Vous savés, que je ne puis pas le <pb facs="00000323.jpg" n="2"/>lire dans l'Original/ mais je l'ai
                     entierement méconnu dans cette nouvelle Traduction. Au feu, à <lb/>la vivacité de son discours je crois entendre parler un jeune
                     guerrier, et je suis tout etonné, quand il exige du <lb/>respêt pour son grand age et quand il parle des grands hommes du siecle
                     passé. Tant il est vrai, que la regle <lb/>de <persName ref="#p0024">Horace</persName>: <hi rend="underlined"><foreign
                             xml:lang="la">Intererit multum, davusne loquatur, an heros, maturusne senex, an adhuc florente ju<lb break="no"/>venta
-                            fervidus</foreign>.</hi><note resp="#anne.baillot"><seg xml:lang="fr">Horace, <title ref="#w00017">Art poétique</title>,
-                            vers 113 à 128. Littéralement: Cela fera une grande différence si c'est Davus (un esclave) qui parle ou un héros, un
-                            vieillard d'âge avancé ou un jeune homme bouillonnant. </seg><seg xml:lang="de">Horaz, <title ref="#w00017">Ars
-                                Poetica</title>, Verse 113 bis 128.</seg></note>
+                            fervidus</foreign>.</hi>
+                    <note resp="#anne.baillot">
+                        <p xml:lang="en">Horace, <title ref="#w00017">Ars Poetica</title>, verse 113 to 128. Literally: it will be a big difference if
+                            it is Davus (a slave) who speaks or a hero, an elderly old man or a bubbling young man.</p>
+                        <p xml:lang="fr">Horace, <title ref="#w00017">Art poétique</title>, vers 113 à 128. Littéralement: Cela fera une grande
+                            différence si c'est Davus (un esclave) qui parle ou un héros, un vieillard d'âge avancé ou un jeune homme bouillonnant. </p>
+                        <p xml:lang="de">Horaz, <title ref="#w00017">Ars Poetica</title>, Verse 113 bis 128.</p></note>
                     <!-- Deutsche Übersetzung fehlt!! --> est fondée dans la nature, et tant il est dangereux, de vouloir retrancher des passages,
                     qu'on croit <lb/>foibles et languissantes. La fin de ce discours est encore entierement differente dans les deux traductions.
                     <lb/>Agamemnon auroit eu sujet de se trouver choqué par les dernieres paroles; que Mr. <persName ref="#p0045">Bitaubé</persName>

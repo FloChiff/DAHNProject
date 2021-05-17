@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-22" who="#anne.baillot">Cleaned up metadata, added English title, added missing index references in the
@@ -202,10 +210,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000326.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">24</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-07-22">22 Juillet
-                    1763</date>.</dateline>
-                <salute>Monsieur,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">24</note>
+                <opener>
+                    <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-07-22">22 Juillet
+                        1763</date>.</dateline>
+                    <salute>Monsieur,</salute></opener>
                 <p>Je Vous avois preparé deja une longue lettre pour l'ordinaire passé. Vous y auriés vu un <lb/>grand orage, qui me surprit à 1 1/2
                     mile de <placeName ref="#l1103">Berlin</placeName> avec une pompeuse description d'un ciel obscur<lb break="no"/>ci, uniquement
                     eclairé par des eclairs, suivis de coups de tonnerre: Vous y auriés vu quelques <lb/>autres petites avantures fort peu

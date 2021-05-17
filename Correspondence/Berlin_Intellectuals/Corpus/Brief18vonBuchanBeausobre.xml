@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -166,7 +173,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -183,8 +190,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-22" who="#anne.baillot">Cleaned up the metadata, added English title, added missing reference to index in the
@@ -196,10 +204,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000344.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">33</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-12-23">23 Decembre
-                    1763</date>.</dateline>
-                <salute>Monsieur et tres cher Ami,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">33</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-12-23">23 Decembre
+                        1763</date>.</dateline>
+                    <salute rend="indent">Monsieur et tres cher Ami,</salute></opener>
                 <p>Vous aurés appris par ma derniere lettre le nouveau changement, qui vient d’arriver ici, <lb/>et qui change entierement la façe des
                     affaires. <rs ref="#p0089">Feu l’Electeur</rs> s’êtant declaré concurrent <lb/>pour la Couronne de <placeName ref="#l0046"
                         >Pologne</placeName>, ma personne êtoit de quelque importance ici, à cause de l’in<lb break="no"/>fluence, que le <rs
@@ -231,7 +239,8 @@
                     l’experience me <lb/>prouve de plus en plus, que je ne serai à ma place et heureux, que quand je demeurerai <lb/>à <placeName
                         ref="#l0040">Stolpe</placeName>. Je souhaite ardemment l’arrivée du moment, où cela peut se faire de b<supplied
                         reason="border of page; bound too tight">onne</supplied>
-                    <lb/>grace, et si j’y ai quelquefois la societé de mes amis, il n’y a homme au monde <lb/>que j’envierai. Cura ut valeas.</p>
+                    <lb/>grace, et si j’y ai quelquefois la societé de mes amis, il n’y a homme au monde <lb/>que j’envierai. <hi rend="latin">Cura ut
+                        valeas.</hi></p>
             </div>
         </body>
     </text>

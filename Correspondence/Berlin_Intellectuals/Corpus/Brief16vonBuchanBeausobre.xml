@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -177,8 +184,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-22" who="#anne.baillot">Cleaned up metadata, added English title, added missing references to index in
@@ -190,10 +198,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000338.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">30</note>
-                <dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-11-30">30me Novembre
-                    1763</date>.</dateline>
-                <salute>Monsieur et très cher Ami,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">30</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0003">Dresde</placeName> ce <date when="1763-11-30">30me Novembre
+                            1763</date>.</dateline>
+                    <salute rend="indent">Monsieur et très cher Ami,</salute></opener>
                 <p>L'obligation, que je Vous ai de Vos lettres est d'autant plus grande, que Vous faîtes un œu<lb/>vre tout-à-fait gratuit, parceque
                     je ne puis pas Vous rendre ma correspondance aussi interessante, <lb/>que la Votre l'est pour moi. Que pourrés Vous attendre de
                     moi? des nouvelles politiques, nous en <lb/>apprenons nous mêmes ce, qu'il y a de plus interessant par les lettres de <placeName
@@ -224,24 +232,34 @@
                         ref="#0057">Velly</persName> et de <title ref="#w00020">l'his <supplied reason="border of page; bound too tight"
                             >toire</supplied>
                         <lb/>du bas-Empire</title> par <persName ref="#p0058">le Beau</persName>, je n'en ai pas de nouvelles encore. Il m'a fallu
-                    attendre deux mois <title ref="#w00021">l'histoire <lb/>de la maison de Tudor</title> par <persName ref="#p0059"
-                        >Hume</persName>,<note resp="#anne.baillot"><seg xml:lang="de">In der <date when="1763">1763</date> erschienenen Übersetzung
-                            von <persName ref="#p0060">Octavie Belot</persName>.</seg><seg xml:lang="fr">Dans la traduction d'<persName ref="#p0060"
-                                >Octavie Bélot</persName> parue en <date when="1763">1763</date>.</seg></note> et quoique ce soit <persName
-                        ref="#p0061">Arkstée</persName> et <persName ref="#p0062">Merkus</persName>, Libraires de <placeName ref="#l0004"
-                        >Leipsic</placeName>, qui la debitent, <supplied reason="border of page; bound too tight">je</supplied>
+                    attendre deux mois <title ref="#w00021">l'histoire <lb/>de la maison de Tudor</title> par <persName ref="#p0059">Hume</persName>,
+                        <note resp="#anne.baillot">
+                        <p xml:lang="en">In the translation from <persName ref="#p0060">Octavie Bélot</persName> released in <date when="1763"
+                                >1763</date>.</p>
+                        <p xml:lang="de">In der <date when="1763">1763</date> erschienenen Übersetzung von <persName ref="#p0060">Octavie
+                                Belot</persName>.</p>
+                        <p xml:lang="fr">Dans la traduction d'<persName ref="#p0060">Octavie Bélot</persName> parue en <date when="1763"
+                            >1763</date>.</p>
+                    </note> et quoique ce soit <persName ref="#p0061">Arkstée</persName> et <persName ref="#p0062">Merkus</persName>, Libraires de
+                        <placeName ref="#l0004">Leipsic</placeName>, qui la debitent, <supplied reason="border of page; bound too tight">je</supplied>
                     <lb/>n'ai pas pu avoir l'edition in 4, que je souhaitois, parceque j'ai l'<title ref="#w00022">histoire de la maison de
-                        Stuart</title><note resp="#anne.baillot"><seg xml:lang="de">Ebenfalls von <persName ref="#p0059">David
-                            Hume</persName>.</seg><seg xml:lang="fr">Également de <persName ref="#p0059">David Hume</persName>.</seg></note> dans le
-                        <supplied reason="border of page; bound too tight">même</supplied>
+                        Stuart</title>
+                    <note resp="#anne.baillot">
+                        <p xml:lang="en">Also from <persName ref="#p0059">David Hume</persName>.</p>
+                        <p xml:lang="de">Ebenfalls von <persName ref="#p0059">David Hume</persName>.</p>
+                        <p xml:lang="fr">Également de <persName ref="#p0059">David Hume</persName>.</p></note> dans le <supplied
+                        reason="border of page; bound too tight">même</supplied>
                     <lb/>format, mais j'ai êté obligé, de me contenter d'une edition en 12. De même, je n'ai pu avoir, que la tradu<supplied
                         reason="border of page; bound too tight">ction</supplied>
                     <lb/>allemande des <title ref="#w00023">lettres de <persName ref="#p0063">Milady Montagu</persName></title>. A propos de ces
                     lettres je Vous informerai de quelques anecd<supplied reason="border of page; bound too tight">otes</supplied>
-                    <lb/>de cette Dame, que j'ai apprises de <persName ref="#p0064">Milady Stormont</persName><note resp="#anne.baillot"><seg
-                            xml:lang="de">Wahrscheinlich die Ehefrau des englischen Botschafters in Dresden.</seg><seg xml:lang="fr">Il s'agit très
-                            probablement de l'épouse de l'Ambassadeur d'Angleterre à Dresde.</seg></note>. <rs ref="#p0063">Milady Montagu</rs> ne
-                    vîvoit pas trop bien <supplied reason="border of page; bound too tight">avec</supplied>
+                    <lb/>de cette Dame, que j'ai apprises de <persName ref="#p0064">Milady Stormont</persName>
+                    <note resp="#anne.baillot">
+                        <p xml:lang="en">This is probably the wife of the English Ambassador in Dresde.</p>
+                        <p xml:lang="de">Wahrscheinlich die Ehefrau des englischen Botschafters in Dresden.</p>
+                        <p xml:lang="fr">Il s'agit très probablement de l'épouse de l'Ambassadeur d'Angleterre à Dresde.</p>
+                    </note>. <rs ref="#p0063">Milady Montagu</rs> ne vîvoit pas trop bien <supplied reason="border of page; bound too tight"
+                        >avec</supplied>
                     <lb/><rs ref="#p0065">son mari</rs>, et êtoit même separée de lui volontairement depuis quelque tems: un beau jour elle revient
                         <supplied reason="border of page; bound too tight">dans</supplied>
                     <lb/>sa maison pour y accoucher d'un enfant, que la longueur de son absence ne permettoit pas au mari, de <supplied
@@ -265,7 +283,7 @@
                     <lb/>de l'amour conjugal: <persName ref="#p0066">Milady Bute</persName>, sa fille a eu soin de retirer tous ces manuscrits des
                     mains des librai<supplied reason="border of page; bound too tight">res</supplied>
                     <lb/>à grands fraix, parce qu'elle ne jugea pas, qu'ils contribueroient à l'honneur de sa mere, s'ils devenoient <pb
-                        facs="00000340.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation">31</note>publics; ce n'est, que malgré
+                        facs="00000340.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">31</note>publics; ce n'est, que malgré
                     elle, que les <rs ref="#w00023">lettres</rs> ont paru. Voilà une histoire, que la lecture des lettres <lb/>n'auroit pas du faire
                     soupçonner; ecrites d'un stile vif et plaisant, quelquefois satirique, elles paroissent <lb/>marquer beaucoup de douceur d'esprit
                     dans l'<rs ref="#p0063">Auteur</rs>. Comme je ne connois pas la liaison des familles de l'<placeName ref="#l0022">An<lb break="no"
@@ -275,56 +293,73 @@
                     à mon sujet, aprés cette longue digression, je Vous dirai, que l'êtat des li<lb break="no"/>brairies d'ici s'accomode assés avec
                     celui de mes finances, en me privant du desir d'acheter des livres. <lb/>Il y en a cependant, que je Vous prie, de m'envoyer de
                         <placeName ref="#l1103">Berlin</placeName>; si par exemple l'impression de l'ecrit de <lb/><persName ref="#p0067"
-                        >Moise</persName>, qui a remporté le prix à l'Academie,<note resp="#anne.baillot"><seg xml:lang="de"><date when="1763"
-                                >1763</date> gewann <persName ref="#p0067">Moses Mendelssohn</persName> die erste Preisausschreibung der <placeName
-                                ref="#l1103">Berliner</placeName> Akademie der Wissenschaften mit einer Abhandlung über Evidenz in Metaphysischen
-                            Wissenschaften. </seg><seg xml:lang="fr"><persName ref="#p0067">Moses Mendelssohn</persName> avait remporté la première
-                            question mise au concours à l'Académie des Sciences de <placeName ref="#l1103">Berlin</placeName>, en <date when="1763"
-                                >1763</date>. Son texte porte sur l'évidence dans les sciences métaphysiques.</seg></note> est achevé, ou si l'on peut
-                    avoir un exemplaire de l'Educa<lb break="no"/>tion Nationale de <persName ref="#p0068">Rousseau</persName>,<note
-                        resp="#anne.baillot"><seg xml:lang="de">Gemeint ist wahrscheinlich der <date when="1762">1762</date> erschienene <title
-                                ref="#w00024">Emile ou de l'éducation</title>.</seg><seg xml:lang="fr">Il s'agit probablement d' <title ref="#w00024"
-                                >Émile ou de l'éducation</title>, qui était paru en 1762.</seg></note> je Vous prie, de me les envoyer aussi bien,
-                    qu'un exemplaire du livre allemand <lb/>qui a paru depuis quelque tems à <placeName ref="#l1103">Berlin</placeName> sous le titre:
-                        <title ref="w00025"><hi rend="kurrent">Die Staats-Verwaltung des Herrn</hi>
+                        >Moise</persName>, qui a remporté le prix à l'Academie,<note resp="#anne.baillot">
+                        <p xml:lang="en"><persName ref="#p0067">Moses Mendelssohn</persName> won the first question asked in the contest of the
+                                <placeName ref="#l1103">Berlin</placeName> Science Academy, in <date when="1763">1763</date>. Its text is about the
+                            evidence in metaphysical sciences.</p>
+                        <p xml:lang="de"><date when="1763">1763</date> gewann <persName ref="#p0067">Moses Mendelssohn</persName> die erste
+                            Preisausschreibung der <placeName ref="#l1103">Berliner</placeName> Akademie der Wissenschaften mit einer Abhandlung über
+                            Evidenz in Metaphysischen Wissenschaften. </p>
+                        <p xml:lang="fr"><persName ref="#p0067">Moses Mendelssohn</persName> avait remporté la première question mise au concours à
+                            l'Académie des Sciences de <placeName ref="#l1103">Berlin</placeName>, en <date when="1763">1763</date>. Son texte porte
+                            sur l'évidence dans les sciences métaphysiques.</p>
+                    </note> est achevé, ou si l'on peut avoir un exemplaire de l'Educa<lb break="no"/>tion Nationale de <persName ref="#p0068"
+                        >Rousseau</persName>, <note resp="#anne.baillot">
+                        <p xml:lang="en">It is probably <title ref="#w00024">Émile ou de l'éducation</title>, released in 1762.</p>
+                        <p xml:lang="de">Gemeint ist wahrscheinlich der <date when="1762">1762</date> erschienene <title ref="#w00024">Emile ou de
+                                l'éducation</title>.</p>
+                        <p xml:lang="fr">Il s'agit probablement d' <title ref="#w00024">Émile ou de l'éducation</title>, qui était paru en 1762.</p>
+                    </note> je Vous prie, de me les envoyer aussi bien, qu'un exemplaire du livre allemand <lb/>qui a paru depuis quelque tems à
+                        <placeName ref="#l1103">Berlin</placeName> sous le titre: <title ref="w00025"><hi rend="kurrent">Die Staats-Verwaltung des
+                            Herrn</hi>
                         <persName ref="#p0069">William <lb/>Pitt</persName>
                         <hi rend="kurrent">in und außerhalb <placeName ref="#l0051">Groß-Britannien</placeName></hi></title>, où l'administation de
                         <persName ref="#p0069">Guillaume Pitt</persName> p. Je Vous prie aussi <lb/>de Vous informer ce que la belle Edition des
                         <title ref="#w00026">Poesies diverses</title> en 4to et l'edition en 4to des <title ref="#w00027">Memoires <lb/>de <placeName
-                            ref="#l0007">Brandebourg</placeName></title><note resp="#anne.baillot"><seg xml:lang="de">Beide Bücher, die <title
-                                ref="#w00026">Poésies Diverses</title> von <date when="1762">1762</date> und die <title ref="#w00027">Mémoires pour
-                                servir à la Maison de Brandebourg</title> von <date when="1751">1751</date>, stammen von <persName ref="#p0049"
-                                >Friedrich II.</persName></seg><seg xml:lang="fr">Les deux ouvrages (les <title ref="#w00026">Poésies Diverses</title>
-                            de <date when="1762">1762</date> et les <title ref="#w00027">Mémoires pour servir à la Maison de Brandebourg</title> de
-                                <date when="1751">1751</date>)sont de <persName ref="#p0049">Frédéric II.</persName></seg></note> coute en Ducats.
-                    Pour ce que Vous m'avés ecrit du <rs ref="#w00006">nouveau livre du <rs ref="#p00019">Marquis</rs><note resp="#anne.baillot"><seg
-                                xml:lang="de">Gemeint ist der <persName ref="#p0019">Marquis d'Argens</persName> und seine Übersetzung des <title
-                                    ref="#w00006">Ocellus Lucanus</title>.</seg><seg xml:lang="fr">Il s'agit du <persName ref="#p0019">Marquis
-                                    d'Argens</persName> et de sa traduction d'<title ref="#w00006">Ocellus Lucanus</title>.</seg></note></rs>, je
-                    <lb/>lui pardonnerois volontiers d'avoir des doutes sur la Religion Chretienne, Vous savés, que je ne me pique <lb/>pas d'une
-                    orthodoxie fort rigide; mais de vouloir etayer les absurdités du Paganisme <subst>
+                            ref="#l0007">Brandebourg</placeName></title><note resp="#anne.baillot">
+                        <p xml:lang="en">Both books (<title ref="#w00026">Poésies Diverses</title> of <date when="1762">1762</date> and <title
+                                ref="#w00027">Mémoires pour servir à la Maison de Brandebourg</title> of <date when="1751">1751</date>) are from
+                                <persName ref="#p0049">Frederick II.</persName></p>
+                        <p xml:lang="de">Beide Bücher, die <title ref="#w00026">Poésies Diverses</title> von <date when="1762">1762</date> und die
+                                <title ref="#w00027">Mémoires pour servir à la Maison de Brandebourg</title> von <date when="1751">1751</date>,
+                            stammen von <persName ref="#p0049">Friedrich II.</persName></p>
+                        <p xml:lang="fr">Les deux ouvrages (les <title ref="#w00026">Poésies Diverses</title> de <date when="1762">1762</date> et les
+                                <title ref="#w00027">Mémoires pour servir à la Maison de Brandebourg</title> de <date when="1751">1751</date>)sont de
+                                <persName ref="#p0049">Frédéric II.</persName></p>
+                    </note> coute en Ducats. Pour ce que Vous m'avés ecrit du <rs ref="#w00006">nouveau livre du <rs ref="#p00019">Marquis</rs><note
+                            resp="#anne.baillot">
+                            <p xml:lang="en">It is the <persName ref="#p0019">Marquis d'Argens</persName> and his translation from <title
+                                    ref="#w00006">Ocellus Lucanus</title>.</p>
+                            <p xml:lang="de">Gemeint ist der <persName ref="#p0019">Marquis d'Argens</persName> und seine Übersetzung des <title
+                                    ref="#w00006">Ocellus Lucanus</title>.</p>
+                            <p xml:lang="fr">Il s'agit du <persName ref="#p0019">Marquis d'Argens</persName> et de sa traduction d'<title
+                                    ref="#w00006">Ocellus Lucanus</title>.</p>
+                        </note></rs>, je <lb/>lui pardonnerois volontiers d'avoir des doutes sur la Religion Chretienne, Vous savés, que je ne me
+                    pique <lb/>pas d'une orthodoxie fort rigide; mais de vouloir etayer les absurdités du Paganisme <subst>
                         <del rend="strikethrough">contre</del>
                         <add place="inline">au</add>
                     </subst>prejudice <lb/>de la dite Religion, c'est une entreprise, dont je ne vois pas la possibilité et encore moins
                     l'utilité.</p>
-                <dateline rend="align(center)">ce <date when="1763-12-02">2 Decembre</date></dateline>
+                <p rend="align(center)">ce <date when="1763-12-02">2 Decembre</date></p>
                 <p>J'ai trouvé ici le <rs ref="#w00025">livre allemand sur l'administration de <persName ref="#p0069">Pitt</persName></rs>, mais je
                     Vous prie, de m'envoyer <lb/>les <title ref="#w00026">Poesies diverses</title> et les <title ref="#w00027">Memoires de <placeName
                             ref="#l0007">Brandebourg</placeName></title>, Editions in 4to, en me marquant le prix en <lb/>Ducats, et d'avoir soin,
                     qu'ils soient assés bien empaquetés, pourque la pluye ne perce pas.</p>
                 <p>Je viens, de recevoir Votre lettre du <date when="1763-11-28">28</date>. Vos reflexions sur mes affaires domestiques sont fort
-                    justes; <lb/>mais malheureusement, meliora video, proboque, deteriora sequor.<note resp="#anne.baillot"><seg xml:lang="de">Zitat
-                            aus <persName ref="#p0070">Ovid</persName>s <title ref="#w00028">Metamorphosen</title>, Gesang VII, Verse 20-21: Ich sehe
-                            das Bessere, bejahe es, folge aber dem Schlechteren.</seg><seg xml:lang="fr">Citation tirée d'<persName ref="#p0070"
-                                >Ovide</persName>, les<title ref="#w00028">Métamorphoses</title>, Chant VII, vs. 20-21: Je vois ce qu'il y a de
-                            meilleur et je l'approuve, mais je suis ce qu'il y a de moins bon.</seg></note> Cependant j'avois deja annoncé <pb
-                        facs="00000341.jpg" n="4"/>hier à mon maitre d'hotel, que je ne le garderois pas; et Votre lettre m'a confirmé dans une
-                    resolution, qui ne laissoit <lb/>pas, de me faire de la peine. Pour ce, qui regarde mes comptes, je les revois bien moimême, mais
-                    comme je ne m'entends pas à la cui<lb break="no"/>sine, je ne sai, ni ce qu'il faut, ni ce que cela coute et c'est principalement
-                    dans ces comptes, que je ne puis eviter, d'être trompé. Les expedi<lb break="no"/>ents, que Vous me proposés, sont impratiquables,
-                    comme je pourrois Vous le prouver, si j'avois le plaisir de Vous parler, mais ce seroit trop <lb/>long pour une lettre. J'accepte
-                    avec plaisir l'offre, que Vous me faites; de me faire avoir du vin de <placeName ref="#l0052">Bourgogne</placeName> par <persName
-                        ref="#p0071">Francheville</persName>
+                    justes; <lb/>mais malheureusement, meliora video, proboque, deteriora sequor.<note resp="#anne.baillot">
+                        <p xml:lang="en">Quote from the <title ref="#w00028">Metamorphoses</title> of <persName ref="#p0070">Ovid</persName>, Chant
+                            VII, vs. 20-21: I see which is the more proper course, and I approve of it, while I follow the wrong one.</p>
+                        <p xml:lang="de">Zitat aus <persName ref="#p0070">Ovid</persName>s <title ref="#w00028">Metamorphosen</title>, Gesang VII,
+                            Verse 20-21: Ich sehe das Bessere, bejahe es, folge aber dem Schlechteren.</p>
+                        <p xml:lang="fr">Citation tirée d'<persName ref="#p0070">Ovide</persName>, les<title ref="#w00028">Métamorphoses</title>,
+                            Chant VII, vs. 20-21: Je vois ce qu'il y a de meilleur et je l'approuve, mais je suis ce qu'il y a de moins bon.</p>
+                    </note> Cependant j'avois deja annoncé <pb facs="00000341.jpg" n="4"/>hier à mon maitre d'hotel, que je ne le garderois pas; et
+                    Votre lettre m'a confirmé dans une resolution, qui ne laissoit <lb/>pas, de me faire de la peine. Pour ce, qui regarde mes
+                    comptes, je les revois bien moimême, mais comme je ne m'entends pas à la cui<lb break="no"/>sine, je ne sai, ni ce qu'il faut, ni
+                    ce que cela coute et c'est principalement dans ces comptes, que je ne puis eviter, d'être trompé. Les expedi<lb break="no"/>ents,
+                    que Vous me proposés, sont impratiquables, comme je pourrois Vous le prouver, si j'avois le plaisir de Vous parler, mais ce seroit
+                    trop <lb/>long pour une lettre. J'accepte avec plaisir l'offre, que Vous me faites; de me faire avoir du vin de <placeName
+                        ref="#l0052">Bourgogne</placeName> par <persName ref="#p0071">Francheville</persName>
                     <lb/>et je Vous prie, de me procurer un feuillet de Romanay; je ne sai pas, combien de bouteilles un feuillet contient; s'il n'y a
                     pas <lb/>au delà de I00 Bouteilles, je Vous prierois; de me faire venir deux feuillets de Romanay et un feuillet d'une autre bonne
                     sorte <lb/>de vin de <placeName ref="#l0052">Bourgogne</placeName>, et de me marquer, comment ils me seroient adressés; et où il

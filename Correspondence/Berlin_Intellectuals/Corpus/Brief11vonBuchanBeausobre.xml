@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -168,7 +175,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -185,8 +192,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-20" who="#anne.baillot">Cleaned up metadata and text, added English title.</change>
@@ -197,10 +205,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000318.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">20</note>
-                <dateline rend="align(right)">à <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-02-23">23. Fevrier
-                    1762</date></dateline>
-                <salute>Monsieur</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">20</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-02-23">23. Fevrier
+                            1762</date></dateline>
+                    <salute>Monsieur</salute></opener>
                 <p>J’ai êté à <placeName ref="#l0029">Brounsvic</placeName>; j’ai vu une Cour brillante par elle même et par le nombre des etran<lb
                         break="no"/>gers, qui y etoient venus de toute part, une maison composée de Princes et de Princesses aimables <lb/>un digne
                     Chef de cette maison et un Prince, <!-- Hier fehlt Aufschlüsselung der gemeinten Personen -->qui, en faisant esperer, de remplacer
@@ -228,20 +236,25 @@
                     conduite à l’av<supplied reason="border of page; bound too tight">enir.</supplied>
                     <lb/>J’approuve les arrangements, que Vous voulés faire des livres, que <persName ref="#p0016">Jasperd</persName> Vous a envoyé
                     pour <lb/>moi, je Vous prie de les lui payer. Comme les deux premier Tomes du <title ref="#w00013">Dictionnaire</title> de
-                        <persName ref="#p0044">Savary</persName><note resp="#anne.baillot"><seg xml:lang="de">Das <title ref="#w00013">Dictionnaire
-                                universel de commerce</title> der Brüder <persName ref="#p0044">Jacques Savary des Bruslons</persName> und <persName
-                                ref="#p0150">Louis-Philémon Savary</persName>, der nach dem Tod seines Bruders die Publikation fertigstellte, wurde
-                            zuerst <date when="1732">1732</date> veröffentlicht und entwickelte sich zu einem erfolgreichen enzyklopädischen
-                            Handelslexikon.</seg><seg xml:lang="fr">Le <title ref="#w00013">Dictionnaire universel de commerce</title> a été publié
-                            par deux frères, <persName ref="#p0044">Jacques Savary des Bruslons</persName>, et <persName ref="#p0150">Louis-Philémon
-                                Savary</persName>, qui acheva la préparation de l'ouvrage après la mort de son frère et le fit paraître en <date
-                                when="1723">1723</date>. L'ouvrage, le premier de son genre, connut un vif succès en Europe.</seg></note>
+                        <persName ref="#p0044">Savary</persName>
+                    <note resp="#anne.baillot">
+                        <p xml:lang="en">The <title ref="#w00013">Dictionnaire universel de commerce</title> was published by two brothers, <persName
+                                ref="#p0044">Jacques Savary des Bruslons</persName>, and <persName ref="#p0150">Louis-Philémon Savary</persName>, who
+                            achieved the preparation of the work after the death of his brother and released it in <date when="1723">1723</date>. The
+                            book, the first of its kind, was a huge hit in Europe.</p>
+                        <p xml:lang="de">Das <title ref="#w00013">Dictionnaire universel de commerce</title> der Brüder <persName ref="#p0044">Jacques
+                                Savary des Bruslons</persName> und <persName ref="#p0150">Louis-Philémon Savary</persName>, der nach dem Tod seines
+                            Bruders die Publikation fertigstellte, wurde zuerst <date when="1732">1732</date> veröffentlicht und entwickelte sich zu
+                            einem erfolgreichen enzyklopädischen Handelslexikon.</p>
+                        <p xml:lang="fr">Le <title ref="#w00013">Dictionnaire universel de commerce</title> a été publié par deux frères, <persName
+                                ref="#p0044">Jacques Savary des Bruslons</persName>, et <persName ref="#p0150">Louis-Philémon Savary</persName>, qui
+                            acheva la préparation de l'ouvrage après la mort de son frère et le fit paraître en <date when="1723">1723</date>.
+                            L'ouvrage, le premier de son genre, connut un vif succès en Europe.</p></note>
                     <lb/>sont avec plusieurs de mes autres livres à <placeName ref="#l0045">Augsbourg</placeName>, je Vous prie de faire brocher en
                     attendant <lb/>le 3me. Vous m’obligerés, si Vous m’envoyés les <title ref="#w00014">Annales Typographiques</title> du mois de
                         <date when="1762-02">Fevrier</date>
-                    <lb/>et s’ils ont paru ceux du mois de <date when="1762-03">Mars</date>. <closer>Aimés moi toujours et <salute>soyés persuadé de
-                            mon amitié constante et sincere.</salute></closer>
-                </p>
+                    <lb/>et s’ils ont paru ceux du mois de <date when="1762-03">Mars</date>.</p>
+                <closer><salute>Aimés moi toujours et soyés persuadé de mon amitié constante et sincere.</salute></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -159,7 +166,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -176,8 +183,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-16" who="#anne.baillot">Cleaned metadata, added English title there and missing index references in the
@@ -189,8 +197,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000306.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">14</note>
-                <salute>Monsieur,</salute>
+                <note hand="#pencil" place="margin(right)" type="foliation">14</note>
+                <opener><salute>Monsieur,</salute></opener>
                 <p>Vous m'avés ecrit deux lettres, si remplies de reflexions justes et philosophiques, deux qualités, qui devroient <lb/>toujours être
                     ensemble, mais qui ne le sont, que rarement, que si j'avois moins envie de m'instruire, que de briller, je <lb/>trouverois mon
                     avantage à n'y repondre pas. Vous joués dans nôtre commerce epistolaire le role de <persName ref="#p0031">Socrate</persName>, en
@@ -259,8 +267,8 @@
                     >pour</supplied><lb/>procurer aux hommes quelques idées des perfections Divines, qu'ils ne pouvoient obtenir, que par des choses
                         sens<supplied reason="border of page, binding too tight">ibles,</supplied><lb/> puisque toutes nos idées se fondent en dernier
                     lieu en celles, que les sens nous donnent et 3/ ce n'est qu'en rappellant <pb facs="00000308.jpg" n="3"/><note hand="#pencil"
-                        place="margin-right" type="foliation">15</note>à la mémoire des hommes, qu'ils doivent entendre ces idées spirituellement. Par
-                    tout ceci je crois <lb/>avoir droit de conclure, qu'il y a dans l'<title ref="#w00008">Ancien Testament</title> beaucoup de
+                        place="margin(right)" type="foliation">15</note>à la mémoire des hommes, qu'ils doivent entendre ces idées spirituellement.
+                    Par tout ceci je crois <lb/>avoir droit de conclure, qu'il y a dans l'<title ref="#w00008">Ancien Testament</title> beaucoup de
                     verités au dessus de la raison humai<lb break="no"/>ne de ce tems là. Si les Juifs avoient cultivé les Arts et les Sciences, on
                     pourroit croire, que c'est la culture <lb/>de leur Esprit, qui les a guidés à la connoissance de ces verités; mais Vous les
                     trouverés presque dans toutes <lb/>les Sciences humaines autant au dessous des autres peuples; qu'ils leurs êtoient superieurs
@@ -284,10 +292,10 @@
                     pourrions point y decouvrir des contradictions, si nos forces suffi<lb break="no"/>soient à les analyser entièrement; mais de
                     quelle verité avons nous cette sorte de certitude, et un grand <lb/>degré de probabilité ne suffit-il pas presque toujours, pour
                     nous determiner?</p>
-                <p>Ce n'est ici, que le premier point de Votre lettre; les autres feront peut-être l'objet d'une autre reponse. <closer>je finis, en
-                        Vous <lb/>priant, de faire remettre l'incluse à la poste, si elle va encore en sureté vers ces contrées. <dateline>à
-                                <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-01-12">12 Janvier
-                        <lb/>1762</date>.</dateline></closer></p>
+                <p>Ce n'est ici, que le premier point de Votre lettre; les autres feront peut-être l'objet d'une autre reponse.</p>
+                <closer><salute>je finis, en Vous <lb/>priant, de faire remettre l'incluse à la poste, si elle va encore en sureté vers ces contrées. </salute>
+                    <dateline>à <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-01-12">12 Janvier
+                    <lb/>1762</date>.</dateline></closer>
             </div>
         </body>
     </text>

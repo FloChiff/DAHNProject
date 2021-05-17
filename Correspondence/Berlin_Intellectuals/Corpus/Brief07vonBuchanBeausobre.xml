@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -158,7 +165,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -175,8 +182,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-16" who="#anne.baillot">Cleaned up metadata, added English title there and missing index references in the
@@ -193,35 +201,41 @@
         <body>
             <div type="transcription">
                 <pb facs="00000302.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">12</note>
-                <p><salute>Monsieur,</salute><lb/>Je ne puis assés reconnoitre la bonté, avec laquelle Vous Vous chargés et l’exactitude avec laquelle
-                    Vous exe<lb break="no"/>cutés mes commissions; je ne souhaiterois rien de plus, que de pouvoir Vous être utile à mon tour, et à
-                    moins de vou<lb break="no"/>loir m’accabler sous le poids de la reconnoissance, Vous en userés librement, des que l’occasion s’en
-                    presente. Il n’y a <lb/>aucun des livres de feu <persName ref="#p0013">Mr de Mauperthuis</persName>, que j’ai notés, qui manque
-                    selon l’avertissement. Comme Vous Vous êtes <lb/>offert obligeamment à avoir soin de me faire avoir ceux, que je voudrois acheter,
-                    je Vous aurois envoyé une note avec <lb/>les prix; mais je Vous prie, de me marquer, combien d’argent il Vous reste encore des 100
-                    ecus, que je Vous ai fait payer <lb/>afin de pouvoir me regler là dessus.</p>
-                <p> Quoique je me repete tous les jours la maxime d’<persName ref="#p0024">Horace</persName>: <foreign xml:lng="la">Quid sit futurum
-                        cras, fuge quarere, et quem fors dierum <lb/>cunque dabit, lucro appone</foreign>,<note resp="#anne.baillot"><seg
-                            xml:lang="de">Horaz, <title ref="w00009">Oden</title>, I,9: "<foreign xml:lang="la">Quid sit futurum cras, fuge quaerere,
+                <note hand="#pencil" place="margin(right)" type="foliation">12</note>
+                <opener><salute>Monsieur,</salute></opener>
+                <p>Je ne puis assés reconnoitre la bonté, avec laquelle Vous Vous chargés et l’exactitude avec laquelle Vous exe<lb break="no"/>cutés
+                    mes commissions; je ne souhaiterois rien de plus, que de pouvoir Vous être utile à mon tour, et à moins de vou<lb break="no"/>loir
+                    m’accabler sous le poids de la reconnoissance, Vous en userés librement, des que l’occasion s’en presente. Il n’y a <lb/>aucun des
+                    livres de feu <persName ref="#p0013">Mr de Mauperthuis</persName>, que j’ai notés, qui manque selon l’avertissement. Comme Vous
+                    Vous êtes <lb/>offert obligeamment à avoir soin de me faire avoir ceux, que je voudrois acheter, je Vous aurois envoyé une note
+                    avec <lb/>les prix; mais je Vous prie, de me marquer, combien d’argent il Vous reste encore des 100 ecus, que je Vous ai fait
+                    payer <lb/>afin de pouvoir me regler là dessus.</p>
+                <p> Quoique je me repete tous les jours la maxime d’<persName ref="#p0024">Horace</persName>: <foreign xml:lang="la">Quid sit futurum
+                        cras, fuge quarere, et quem fors dierum <lb/>cunque dabit, lucro appone</foreign>,<note resp="#anne.baillot">
+                        <p xml:lang="en">Horace, <title ref="w00009">Odes</title>, I, 9:"<foreign xml:lang="la">Quid sit futurum cras, fuge quaerere,
+                                et quem fors dierum cumque dabit, lucro adpone</foreign>"; in English: "Leave off asking what tomorrow will bring, and
+                            whatever days fortune will give, count them as profit"</p>
+                        <p xml:lang="de">Horaz, <title ref="w00009">Oden</title>, I,9: "<foreign xml:lang="la">Quid sit futurum cras, fuge quaerere,
                                 et quem fors dierum cumque dabit, lucro adpone</foreign>"; Deutsch: "Was morgen sein wird, frage Du nicht: Gewinn sei
-                            jeden Tag Dir, den das Geschick verleiht."</seg><seg xml:lang="fr">Horace, <title ref="w00009">Odes</title>, I,
-                                9:"<foreign xml:lang="la">Quid sit futurum cras, fuge quaerere, et quem fors dierum cumque dabit, lucro
-                                adpone</foreign>"; en franÇais: "Ce que sera demain, ne t'en soucie guère; Cueille chaque jour que t'offre le
-                            Sort."</seg></note> cela ne sert gueres à me rendre plus tranquile sur la triste situation de notre Etat. Vous <lb/>avés
-                    l’occasion, de parler à beaucoup d’Officiers, qui reviennent de la <placeName ref="#l0016">Pomeranie</placeName> et d’autres
-                    personnes, qui peuvent<lb/> être instruits sur les affaires de ce pays là. Si Vous apprenés quelque chose de la maniere, dont les
-                    choses se sont <lb/>passés dans ce pays là, ayés la bonté, de me l’écrire. On dit, que le <persName ref="#p0126">General
-                        Schenkendorff</persName> a eu son congé, parce <lb/>qu’il a refusé d’attaquer les Russes. Il est difficile de juger sur des
-                    choses, dont on n’est pas entierement instruit, <lb/>et qui ne sont pas de notre sphere; mais selon toutes les apparences, il doit
-                    y avoir été commis bien des fautes dans <lb/>cette Campagne, puisque sans le moindre coup important on est parvenu à ruiner une
-                    fort belle armée beaucoup <lb/>plus, qu’on n’auroit fait par deux batailles perdues. Je ne m’attends point à recevoir des
-                    nouvelles de mes ter<lb break="no"/>res, puisque je crois, que les Russes y dominent deja; cependant, sans affecter un vain
-                    Patriotisme, je me console<lb break="no"/>rois facilement des pertes, que je ferai à cette occasion, pourvu que les choses
-                    tournent mieux la Campagne <lb/>prochaine. Hoc erat in votis; et utinam non solum in votis.<note resp="#anne.baillot"><seg
-                            xml:lang="de">Zitat aus <persName ref="#p0024">Horaz</persName>: "Das war in meinen Gebeten und hoffentlich bleibt es
-                            nicht nur Gebet."</seg><seg xml:lang="fr">Citation d'<persName ref="#p0024">Horace</persName>: "Voilà ce que je
-                            souhaitais, et pourvu que cela ne reste pas un souhait."</seg></note>
+                            jeden Tag Dir, den das Geschick verleiht."</p>
+                        <p xml:lang="fr">Horace, <title ref="w00009">Odes</title>, I, 9:"<foreign xml:lang="la">Quid sit futurum cras, fuge quaerere,
+                                et quem fors dierum cumque dabit, lucro adpone</foreign>"; en franÇais: "Ce que sera demain, ne t'en soucie guère;
+                            Cueille chaque jour que t'offre le Sort."</p></note> cela ne sert gueres à me rendre plus tranquile sur la triste
+                    situation de notre Etat. Vous <lb/>avés l’occasion, de parler à beaucoup d’Officiers, qui reviennent de la <placeName ref="#l0016"
+                        >Pomeranie</placeName> et d’autres personnes, qui peuvent<lb/> être instruits sur les affaires de ce pays là. Si Vous apprenés
+                    quelque chose de la maniere, dont les choses se sont <lb/>passés dans ce pays là, ayés la bonté, de me l’écrire. On dit, que le
+                        <persName ref="#p0126">General Schenkendorff</persName> a eu son congé, parce <lb/>qu’il a refusé d’attaquer les Russes. Il
+                    est difficile de juger sur des choses, dont on n’est pas entierement instruit, <lb/>et qui ne sont pas de notre sphere; mais selon
+                    toutes les apparences, il doit y avoir été commis bien des fautes dans <lb/>cette Campagne, puisque sans le moindre coup important
+                    on est parvenu à ruiner une fort belle armée beaucoup <lb/>plus, qu’on n’auroit fait par deux batailles perdues. Je ne m’attends
+                    point à recevoir des nouvelles de mes ter<lb break="no"/>res, puisque je crois, que les Russes y dominent deja; cependant, sans
+                    affecter un vain Patriotisme, je me console<lb break="no"/>rois facilement des pertes, que je ferai à cette occasion, pourvu que
+                    les choses tournent mieux la Campagne <lb/>prochaine. Hoc erat in votis; et utinam non solum in votis.<note resp="#anne.baillot"
+                            ><p xml:lang="en">Quote from <persName ref="#p0024">Horace</persName>: "Here is what I wished, and as long as it does not
+                            remain a wish."</p>
+                        <p xml:lang="de">Zitat aus <persName ref="#p0024">Horaz</persName>: "Das war in meinen Gebeten und hoffentlich bleibt es nicht
+                            nur Gebet."</p><p xml:lang="fr">Citation d'<persName ref="#p0024">Horace</persName>: "Voilà ce que je souhaitais, et
+                            pourvu que cela ne reste pas un souhait."</p></note>
                 </p>
                 <p>Je ne sai pas, si Vous avés trouvé beaucoup de plaisir à parcourir les reflexions de ma derniere lettre et si elles Vous <lb/>ont
                     fait naìtre l’envie, d’en lire la suite; je Vous l’envois pourtant, mais avec la demande, de ne la lire pas, si Vous n’avés
@@ -259,7 +273,7 @@
                         <lb/><persName ref="#p0029">Josephe</persName> l’a copié servilement; si on veut juger impartialement et ne pas se jetter
                     entierement dans le Pyrrhonis<lb break="no"/>me historique, on sera obligé de convenir, qu’il y a infiniment plus d’epreuves pour
                     la verité de l’histoire Sainte <pb facs="00000304.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">13</note>que pour celle d’aucun historien Profane. Mais pourquoi
+                    <note hand="#pencil" place="margin(right)" type="foliation">13</note>que pour celle d’aucun historien Profane. Mais pourquoi
                     l’Ecriture Sainte se renferme t’elle <lb/>a l’histoire des Juifs, pourquoi ne parle t’elle pas de l’histoire des autres peuples.
                     La reponse à cette questi<lb break="no"/>on n’appartient pas à mon but, je n’ai pas à rendre conte des omissions mais je veux
                     seulement montrer <lb/>que ce qui est contenu dans la <title ref="#w00008">Bible</title> est conforme à la raison. Outre cela il y
@@ -307,10 +321,9 @@
                 <p>Voilà les reflexions, que je Vous avois promis sur les preuves de la verité de la religion Chretienne. Si Vous n’y <lb/>trouvés
                     point de nouveau, Vous y trouverés au moins mes pensées, et Vous excuserés avec Votre indulgence ordinaire <lb/>la negligence du
                     stile et peut être les fautes de raisonnement. Il faut être aussi persuadé de Votre amitié, que je le <lb/>suis, pour ne pas
-                    craindre de la perdre par l’ennui, que je vous cause par mes lettres. <closer><salute>Portés vous bien et n’oubliés <lb/>pas Votre
-                            ami.</salute>
-                        <dateline>à <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-01-04">4 Janvier
-                        1762</date></dateline>.</closer></p>
+                    craindre de la perdre par l’ennui, que je vous cause par mes lettres.</p>
+                <closer><salute>Portés vous bien et n’oubliés <lb/>pas Votre ami.</salute>
+                    <dateline>à <placeName ref="#l0013">Magdebourg</placeName> ce <date when="1762-01-04">4 Janvier 1762</date>.</dateline></closer>
             </div>
         </body>
     </text>

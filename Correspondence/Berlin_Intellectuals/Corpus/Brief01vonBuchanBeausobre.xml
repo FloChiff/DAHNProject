@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -49,8 +50,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Beausobre Papers (NL 235)</collection>
@@ -146,7 +153,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -162,8 +169,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-14" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-10-13" who="#anne.baillot">Corrected last mistakes in template implementation of Oct. 12th, 2012.</change>
             <change when-iso="2012-10-12" who="#anne.baillot">Updated metadata (trilingual fields now according to template as in editorial guidelines
@@ -185,16 +193,18 @@
         <body>
             <div type="transcription">
                 <pb facs="00000280.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">1</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">1</note>
                 <opener>
-                    <salute rend="align(center)">Monsieur,</salute>
+                    <salute rend="indent">Monsieur,</salute>
                 </opener>
                 <p>Le commencement de Votre dernière lettre a du être bien <lb/>flatteur pour moi. <foreign xml:lang="la">Laudari a laudato
-                        viro</foreign><note resp="#anne.baillot"><seg xml:lang="de"><persName ref="#p0003">Cicero</persName>-Zitat: "Es ist rühmlich,
-                            von einem gelobten Mann gelobt zu werden".</seg>
-                        <seg xml:lang="fr">Citation de <persName ref="#p0003">Cicéron</persName>: "être loué par un homme louable".</seg></note> est
-                    une chose qui <lb/>n’êtoit pas même indifférente a <persName ref="#p0003">Ciceron</persName>; mais je sens trop bien, <lb/>que
-                    Vous m’avés voulu plutôt montrer, ce que je devois être, que <unclear cert="high" reason="stain">ce</unclear>
+                        viro</foreign><note resp="#anne.baillot"><p xml:lang="en">Quote from <persName ref="#p0003">Cicero</persName>: "to be praised
+                            by a commendable man".</p>
+                        <p xml:lang="de"><persName ref="#p0003">Cicero</persName>-Zitat: "Es ist rühmlich, von einem gelobten Mann gelobt zu
+                            werden".</p>
+                        <p xml:lang="fr">Citation de <persName ref="#p0003">Cicéron</persName>: "être loué par un homme louable".</p></note> est une
+                    chose qui <lb/>n’êtoit pas même indifférente a <persName ref="#p0003">Ciceron</persName>; mais je sens trop bien, <lb/>que Vous
+                    m’avés voulu plutôt montrer, ce que je devois être, que <unclear cert="high" reason="stain">ce</unclear>
                     <lb/>que je suis. Moi utile a mes amis! de l’indulgence desquels jai <lb/>le plus grand besoin, utile a ma famille, qui jusqu’ici
                     a été plutôt <lb/>mon soutien, que moi le sien, utile a la patrie, qui jusqu'à present <lb/>n’a reconnu en moi qu’un citoyen tres
                     superflu et qui n’a rien fait <lb/>pour elle. Mais je Vous suis bien obligé de m’avoir montré la car<lb break="no"/>riere, que je
@@ -212,15 +222,16 @@
                     ce que tout n’y est <lb/>pas mieux. Si les personnes, qui crient et ecrivent tant contre l’Op<lb break="no"/>timisme employoient
                     la moitié de ce tems a perfectionner leurs <lb/>facultés, et a en faire l’usage dû et convenable, tout seroit encore <pb
                         facs="00000282.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">2</note>mieux dans ce meilleur monde. Pardonnés ce petit raisonnement
+                    <note hand="#pencil" place="margin(right)" type="foliation">2</note>mieux dans ce meilleur monde. Pardonnés ce petit raisonnement
                     <lb/>a un commencant, qui ne commence a begayer, que pour être instruit<lb/>et soutenu par Vos leçons. J’espere d’en profiter bien
                     tôt plus, croyant <lb/>me pouvoir rendre a <placeName ref="#l1103">Berlin</placeName> vers le milieu ou la fin de la semaine
                     <lb/>qui vient. Ce pays est trop sterile en nouvelles pour Vous pouvoir <lb/> en donner en revange de ceux, que Vous m’ecrivés de
                     Berlin. <lb/>
-                    <rs ref="#p0103">Mon frere</rs> Vous fait ses compliments et commence a se retablir <lb/>et moi je ne cesserai jamais d’etre,
-                        <salute rend="align(center)">Monsieur,</salute></p>
-                <p rend="align(right)">Votre tres humble serviteur <signed>Buch</signed></p>
-                <p rend="align(right)">à <placeName ref="#l0008">Blumenow</placeName> ce <date when="1759-04-30">30 Avril 1759</date></p>
+                    <rs ref="#p0103">Mon frere</rs> Vous fait ses compliments et commence a se retablir <lb/>et moi je ne cesserai jamais d’etre,</p>
+                <closer><salute rend="align(right)">Monsieur,</salute>
+                    <dateline rend="align(left)">à <placeName ref="#l0008">Blumenow</placeName><lb/> ce <date when="1759-04-30">30 Avril<lb/>
+                            1759</date></dateline>
+                    <signed rend="align(right)">Votre tres humble serviteur<lb/> Buch</signed></closer>
             </div>
         </body>
     </text>

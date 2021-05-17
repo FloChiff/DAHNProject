@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -176,8 +183,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-16" who="#anne.baillot">Added the missing references to the indizes and English title.</change>
@@ -192,23 +200,27 @@
         <body>
             <div type="transcription">
                 <pb facs="00000294.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">8</note>
-                <dateline rend="align(right)">à Magdebourg ce 19 Novembre 1761</dateline>
-                <p><salute rend="align(center)">Monsieur,</salute><lb/>Je vous ai bien d’obligation des livres, que Vous m’avés envoyés; faites relier
-                    s’il Vous plait <lb/>ceux, que Vous avés gardé à <placeName ref="#l1103">Berlin</placeName> selon le modèle des autres Auteurs
-                    Classiques. C’est principale<lb break="no" type="none"/>ment à Votre recommandation, que j’ai gardé la nouvelle edition des <title
-                        ref="#w00003">Instructions militaires</title> et <lb/><title ref="#w00004">les progrés du Commerce</title>; je Vous renvois
-                    les œuvres de <persName ref="#p0015">Grecourt</persName>. Ce livre a êté un peu endommagés <lb/>parceque la pluye avoit percé la
-                    toile cirée; Si <persName ref="#p0016">Jasperd</persName> refuse, de le reprendre, gardés le pour moi. Jasperd <lb/>m’etrille
-                    d’une façon si horrible, que je m’adresserai à un autre libraire, desque je serai de retour à <lb/><placeName ref="#l1103"
-                        >Berlin</placeName> ou plutot encore. Il met tous les livres a un prix exorbitant, quelquefois au double, de <lb/>ce qu’on
-                    peut les avoir autre part. J’ai payé les <title ref="#w00005">Contes moraux</title> de <persName ref="#p0017">Marmontel</persName>
-                    de 2-16g, le <rs ref="w00035">livre <lb/>de la Nature</rs> a 3 ecus. Vous pouvés voir dans le catalogue de Haude<note
-                        resp="#anne.baillot"><seg xml:lang="de">Der Buchhändler <persName ref="#p0018">Haude</persName> war eigentlich schon seit 1748
-                            tot; sein Schwager Johann Carl Spener betrieb die Buchhandlung unter dem Namen Haude &amp; Spener weiter.</seg><seg
-                            xml:lang="fr">Le libraire <persName ref="#p0018">Ambrosius Haude</persName> était en réalité mort depuis 1748. Sa veuve et
-                            son beau-frère Johann Carl Spener ont repris la maison à sa mort: elle est surtout connue sous le nom "Haude &amp;
-                            Spener".</seg></note>, qu'il vend le premier <lb/>à 1-8g et le second a 2 ecus; outre plusieurs autres articles, que j’ai
+                <note hand="#pencil" place="margin(right)" type="foliation">8</note>
+                <opener><dateline rend="align(right)">à <placeName ref="#l0013">Magdebourg</placeName> ce <date when-iso="1761-11-19">19 Novembre
+                            1761</date></dateline>
+                    <salute rend="indent">Monsieur,</salute></opener>
+                <p>Je vous ai bien d’obligation des livres, que Vous m’avés envoyés; faites relier s’il Vous plait <lb/>ceux, que Vous avés gardé à
+                        <placeName ref="#l1103">Berlin</placeName> selon le modèle des autres Auteurs Classiques. C’est principale<lb break="no"
+                        type="none"/>ment à Votre recommandation, que j’ai gardé la nouvelle edition des <title ref="#w00003">Instructions
+                        militaires</title> et <lb/><title ref="#w00004">les progrés du Commerce</title>; je Vous renvois les œuvres de <persName
+                        ref="#p0015">Grecourt</persName>. Ce livre a êté un peu endommagés <lb/>parceque la pluye avoit percé la toile cirée; Si
+                        <persName ref="#p0016">Jasperd</persName> refuse, de le reprendre, gardés le pour moi. Jasperd <lb/>m’etrille d’une façon si
+                    horrible, que je m’adresserai à un autre libraire, desque je serai de retour à <lb/><placeName ref="#l1103">Berlin</placeName> ou
+                    plutot encore. Il met tous les livres a un prix exorbitant, quelquefois au double, de <lb/>ce qu’on peut les avoir autre part.
+                    J’ai payé les <title ref="#w00005">Contes moraux</title> de <persName ref="#p0017">Marmontel</persName> de 2-16g, le <rs
+                        ref="w00035">livre <lb/>de la Nature</rs> a 3 ecus. Vous pouvés voir dans le catalogue de Haude<note resp="#anne.baillot">
+                        <p xml:lang="en">The bookseller <persName ref="#p0018">Ambrosius Haude</persName> was actually dead since 1748. His widow and
+                            brother-in-law Johann Carl Spener have taken back his house at his death: it is mostly known under the name "Haude &amp;
+                            Spener".</p><p xml:lang="de">Der Buchhändler <persName ref="#p0018">Haude</persName> war eigentlich schon seit 1748 tot;
+                            sein Schwager Johann Carl Spener betrieb die Buchhandlung unter dem Namen Haude &amp; Spener weiter.</p><p xml:lang="fr"
+                            >Le libraire <persName ref="#p0018">Ambrosius Haude</persName> était en réalité mort depuis 1748. Sa veuve et son
+                            beau-frère Johann Carl Spener ont repris la maison à sa mort: elle est surtout connue sous le nom "Haude &amp;
+                            Spener".</p></note>, qu'il vend le premier <lb/>à 1-8g et le second a 2 ecus; outre plusieurs autres articles, que j’ai
                     oublié. Il y a dans <lb/>le Catalogue de Haude une <title ref="#w00033">Histoire generale de la naissance et des progrés de la
                         Compagnie <lb/>de Jesus</title> en 4 Vol. en 12.; je Vous prie, de Vous informer, si elle est bonne et de l’acheter en ce cas
                     <lb/>pour moi. Vous me ferés plaisir, de me faire avoir les <title ref="#w00034">propos de table de Sans-Souci</title>. Je n’ose
@@ -227,30 +239,33 @@
                     du subterfuge de sou<lb break="no" type="none"/>mettre la raison à la foi, quand il avançoit une proposition hardie; ce moyen de
                     se tirer <lb/>d’affaire me paroit trop petit et trop usé pour qu’on dusse s’en servir encore. Je ne sai<lb/> par quelle fatalité
                     le materialisme gagne de jour en jour. L’<rs ref="#p0021">auteur</rs> du <rs ref="#w00035">livre de la <lb/>nature</rs><note
-                        resp="#anne.baillot"><seg xml:lang="de">Gemeint ist <persName ref="#p0021">Charles Bonnets</persName>
+                        resp="#anne.baillot"><p xml:lang="en">It is the <title ref="#w00035">Contemplation de la Nature</title> from <persName
+                                ref="#p0021">Charles Bonnet</persName>, which first registered edition is however the one at <persName ref="#p0120"
+                                >Marc-Michel Rey</persName> in <placeName ref="#l0033">Amsterdam</placeName> in <date when="1764">1764</date>.</p>
+                        <p xml:lang="de">Gemeint ist <persName ref="#p0021">Charles Bonnets</persName>
                             <title ref="#w00035">Contemplation de la Nature</title>, deren Erstausgabe allerdings erst <date when="1764">1764</date>
                             bei <persName ref="#p0120">Marc-Michel Rey</persName> in <placeName ref="#l0033">Amsterdam</placeName> nachgewiesen
-                            ist.</seg><seg xml:lang="fr">Il s'agit de la <title ref="#w00035">Contemplation de la Nature</title> de <persName
-                                ref="#p0021">Charles Bonnet</persName>, dont la première édition répertoriée est cependant celle chez <persName
-                                ref="#p0120">Marc-Michel Rey</persName> à <placeName ref="#l0033">Amsterdam</placeName> en <date when="1764"
-                                >1764</date>.</seg></note> me paroit aussi être de ce sentiment, qui à mon avis, peut tres bien consister <lb/>avec
-                    les principes de la religion, mais tres peu avec ceux de la raison. Les deux premi<lb break="no" type="none"/>eres parties de ce
-                    livre me paroissent fort ingenieuses, mais il deraisonne pitoyable<lb break="no" type="none"/>ment dans les deux dernieres.
-                    Quelques Anglois ont supposé gratuitement à l’hom<lb break="no" type="none"/>me un instinct moral né avec lui. <persName
-                        ref="#p0021">Mr. Bonnet</persName> /car on assure, qu’il est l’auteur de ce <lb/>livre/ en fait un sixieme sens. Selon ma
-                    theorie on sent les choses individuelles et <lb/>existantes, mais jamais des idées abstraites, telles que sont celles des rapports
-                    des êtres <lb/>qui les rendent bon ou mauvais. On sent la dissolution des continues, en se faisant <lb/>couper une jambe et ce
-                    sentiment est appellé douleur, mais je doute, qu’on puisse <lb/>sentir, si cette operation est moralement bonne ou mauvaise. Dans
-                    la derniere <lb/>partie de cet ouvrage, que l’Auteur appelle la Physique de l’Esprit, il se jette <lb/>dans un dedale de faux
-                    raisonnements, qu’il seroit trop long, trop ennuyant, et <lb/>peut-être trop au-dessus de mes forces, de debrouiller. J’ai voulu
-                    seulement Vous <lb/>donner une idée de la foiblesse de quelqu’uns de ses raisonnements.</p>
+                            ist.</p><p xml:lang="fr">Il s'agit de la <title ref="#w00035">Contemplation de la Nature</title> de <persName ref="#p0021"
+                                >Charles Bonnet</persName>, dont la première édition répertoriée est cependant celle chez <persName ref="#p0120"
+                                >Marc-Michel Rey</persName> à <placeName ref="#l0033">Amsterdam</placeName> en <date when="1764"
+                        >1764</date>.</p></note> me paroit aussi être de ce sentiment, qui à mon avis, peut tres bien consister <lb/>avec les
+                    principes de la religion, mais tres peu avec ceux de la raison. Les deux premi<lb break="no" type="none"/>eres parties de ce livre
+                    me paroissent fort ingenieuses, mais il deraisonne pitoyable<lb break="no" type="none"/>ment dans les deux dernieres. Quelques
+                    Anglois ont supposé gratuitement à l’hom<lb break="no" type="none"/>me un instinct moral né avec lui. <persName ref="#p0021">Mr.
+                        Bonnet</persName> /car on assure, qu’il est l’auteur de ce <lb/>livre/ en fait un sixieme sens. Selon ma theorie on sent les
+                    choses individuelles et <lb/>existantes, mais jamais des idées abstraites, telles que sont celles des rapports des êtres <lb/>qui
+                    les rendent bon ou mauvais. On sent la dissolution des continues, en se faisant <lb/>couper une jambe et ce sentiment est appellé
+                    douleur, mais je doute, qu’on puisse <lb/>sentir, si cette operation est moralement bonne ou mauvaise. Dans la derniere
+                    <lb/>partie de cet ouvrage, que l’Auteur appelle la Physique de l’Esprit, il se jette <lb/>dans un dedale de faux raisonnements,
+                    qu’il seroit trop long, trop ennuyant, et <lb/>peut-être trop au-dessus de mes forces, de debrouiller. J’ai voulu seulement Vous
+                    <lb/>donner une idée de la foiblesse de quelqu’uns de ses raisonnements.</p>
                 <p><persName ref="#p0022">Thulemeier</persName>, qui arrivera ce soir, ou demain matin à <placeName ref="#l1103">Berlin</placeName>,
                     Vous dira toutes les nou<lb break="no"/>velles, qu’on fait ici. Je ne crois pas, qu’il y aura encore cette année des evenements
                     <lb/>en <placeName ref="#l0002">Saxe</placeName>. On dit que le <persName ref="#p0121">Prince Ferdinand</persName> a remporté de
                     nouveau quelques avantages <lb/>sur les Francois; que les deux armées se preparent à entrer en quartier d’hyver, et que <lb/>le
                     Prince etablira <del rend="strikethrough">le sien</del> son quartier general à <placeName ref="#l0034">Goslar</placeName>. Je
                     crois, comme Vous, que nous <pb facs="00000296.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">9</note>aurons encore une Campagne. Plut à Dieu, que ce fut la
+                    <note hand="#pencil" place="margin(right)" type="foliation">9</note>aurons encore une Campagne. Plut à Dieu, que ce fut la
                     derniere. Les <lb/>affaires de <placeName ref="#l0016">Pomeranie</placeName> decideront beaucoup; malgré la retraite de <persName
                         ref="#p0122">Butterlin</persName>
                     <lb/>je crains encore de ce coté, à moins, que le <persName ref="#p0009">General Platen</persName> ne soit plus propre à bien
@@ -268,9 +283,9 @@
                         >Berlin</placeName>; il Vous payra <lb/>alors, je crois, les 100 ecus; s’il vient chés Vous, je vous prie, de lui remettre le
                     conte <lb/>inclus, et de lui dire, qu’il le paye, et qu’il charge <persName ref="#p0125">Mr. Wlömer</persName>, qui est <lb/>mon
                     Avocat, de faire les Avances des fraix de justice, que j’aurai à payer, et <lb/>de demander le remboursement de mon Justicier.
-                    Pardon de toutes les commissi<lb break="no"/>ons, que je Vous donne. <closer><salute>Portés vous bien et soyés assuré de mon
-                            entier attachement.</salute>
-                    </closer></p>
+                    Pardon de toutes les commissi<lb break="no"/>ons, que je Vous donne.</p>
+                <closer><salute>Portés vous bien et soyés assuré de mon entier attachement.</salute>
+                </closer>
             </div>
         </body>
     </text>

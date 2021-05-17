@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß Beausobre (NL 235)</collection>
@@ -170,7 +177,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="fr" usage="100"/>
+                <language ident="fr"/>
             </langUsage>
             <correspDesc>
                 <correspAction type="sent">
@@ -187,8 +194,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-05-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Changed respStmt according to new rules.</change>
             <change when-iso="2012-03-05" who="#anne.baillot">Corrected the visualization from the beta version of the edition.</change>
             <change when-iso="2012-02-22" who="#anne.baillot">Cleaned up metadata, added English title, added missing references to the
@@ -200,38 +208,48 @@
         <body>
             <div type="transcription">
                 <pb facs="00000330.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">26</note>
-                <dateline rend="align(right)">à Dresde ce 7 Octobre 1763.</dateline>
-                <salute>Monsieur,</salute>
-                <p><opener>J'ai reçu les trois lettres, que Vous m'avés ecrit en huit jours et s'il est vrai, que Vous avés eu de <lb/>plaisir à les
-                        ecrire, j'en ai eu infiniment plus à les recevoir. Je ne puis pas rendre mes lettres aussi <lb/>interessantes, que les Votres
-                        le sont, mais je juge par ce qui m'arrive dans de pareils cas, que Vous serés <lb/>bien aise, d'avoir au moins quelques
-                        nouvelles de moi.</opener> Le <rs ref="#p0048">Roi de <placeName ref="#l0046">Pologne</placeName></rs> mourut subitement <date
-                        when="1763-10-05">avant <lb/>hier</date> après midi d'un coup d'apoplexie, apres avoir êté incommodé quelque jours d'un rhume,
-                    qu'il avoit <lb/>trop negligé. Cette mort va changer extremement la face des affaires: les Polonois auront occasion <lb/>d'exercer
-                    leur liberté d'election, et cela ne se fait jamais, sans qu'il y ait des factions, tandis que la <placeName ref="#l0002"
-                        >Saxe</placeName>
-                    <lb/>tranquille sait deja son nouveau maitre, et paroit consolée.<note resp="#anne.baillot"><seg xml:lang="de"><persName
-                                ref="#p0048">August III.</persName>, König von <placeName ref="#l0046">Polen</placeName> und Nachfolger <persName
-                                ref="#p0169">August des Starken</persName>, war wie sein Vater ebenfalls Kurfürst von <placeName ref="#l0002"
-                                >Sachsen</placeName> gewesen. Das Wahlprocedere des polnischen Königs stand unter starker Kritik, vgl. z.B. <date
-                                when="1740">1740</date> unter der Feder <persName ref="#p0049">Friedrichs</persName>, im <title ref="#w00018"
+                <note hand="#pencil" place="margin(right)" type="foliation">26</note>
+                <opener>
+                    <dateline rend="align(right)">à Dresde ce 7 Octobre 1763.</dateline>
+                    <salute>Monsieur,</salute></opener>
+                <p>J'ai reçu les trois lettres, que Vous m'avés ecrit en huit jours et s'il est vrai, que Vous avés eu de <lb/>plaisir à les ecrire,
+                    j'en ai eu infiniment plus à les recevoir. Je ne puis pas rendre mes lettres aussi <lb/>interessantes, que les Votres le sont,
+                    mais je juge par ce qui m'arrive dans de pareils cas, que Vous serés <lb/>bien aise, d'avoir au moins quelques nouvelles de moi.
+                    Le <rs ref="#p0048">Roi de <placeName ref="#l0046">Pologne</placeName></rs> mourut subitement <date when="1763-10-05">avant
+                        <lb/>hier</date> après midi d'un coup d'apoplexie, apres avoir êté incommodé quelque jours d'un rhume, qu'il avoit <lb/>trop
+                    negligé. Cette mort va changer extremement la face des affaires: les Polonois auront occasion <lb/>d'exercer leur liberté
+                    d'election, et cela ne se fait jamais, sans qu'il y ait des factions, tandis que la <placeName ref="#l0002">Saxe</placeName>
+                    <lb/>tranquille sait deja son nouveau maitre, et paroit consolée.<note resp="#anne.baillot">
+                        <p xml:lang="en">The King of <placeName ref="#l0046">Poland</placeName>
+                            <persName ref="#p0048">Augustus III</persName>, successor of <persName ref="#p0169">Augustus the Strong</persName>, was,
+                            like his father behind him, also Elector of Saxony. The question of the election form for the King of Poland was the
+                            subject of criticism, like for example in 1740 under the pen of Dauphin of Prussia in its <title ref="#w00018"
+                                >Antimachiavel</title>, chapter XX: "Poland provides us examples of this: the transactions surrounding the throne are
+                            so venal that it seems that this purchase is done at the public markets. The King of Poland, by opening his purse, draws
+                            from his path any opposition."(Preuß, vol. 8, <ref target="http://friedrich.uni-trier.de/de/oeuvres/8/147/"
+                            >p.147</ref></p>
+                        <p xml:lang="de"><persName ref="#p0048">August III.</persName>, König von <placeName ref="#l0046">Polen</placeName> und
+                            Nachfolger <persName ref="#p0169">August des Starken</persName>, war wie sein Vater ebenfalls Kurfürst von <placeName
+                                ref="#l0002">Sachsen</placeName> gewesen. Das Wahlprocedere des polnischen Königs stand unter starker Kritik, vgl.
+                            z.B. <date when="1740">1740</date> unter der Feder <persName ref="#p0049">Friedrichs</persName>, im <title ref="#w00018"
                                 >Antimachiavel</title>, Kapitel XX (<persName ref="#p0050">Preuß</persName>, Bd. VIII, <ref
-                                target="http://friedrich.uni-trier.de/de/oeuvres/8/147/">S. 147</ref>)</seg><seg xml:lang="fr">Le roi de <placeName
-                                ref="#l0046">Pologne</placeName>
+                                target="http://friedrich.uni-trier.de/de/oeuvres/8/147/">S. 147</ref>)</p>
+                        <p xml:lang="fr">Le roi de <placeName ref="#l0046">Pologne</placeName>
                             <persName ref="#p0048">Auguste III</persName>, sucesseur d'<persName ref="#p0169">Auguste le Fort</persName>, était, comme
                             son père avant lui, également prince électeur de Saxe. La question de la forme de l'élection du roi de Pologne faisait
                             l'objet de critiques, comme par exemple en 1740 sous la plume du dauphin de Prusse dans son <title ref="#w00018"
                                 >Antimachiavel</title>, chapitre XX: "La Pologne nous en fournit des exemples: on y trafique si grossièrement du trône
                             qu'il semble que cet achat se fasse aux marchés publics, et la libéralité d'un roi de Pologne écarte de son chemin toute
-                            opposision."(Preuß, vol. 8, <ref target="http://friedrich.uni-trier.de/de/oeuvres/8/147/">p.147</ref></seg></note> On dit,
+                            opposision."(Preuß, vol. 8, <ref target="http://friedrich.uni-trier.de/de/oeuvres/8/147/">p.147</ref></p></note> On dit,
                     que la <placeName ref="#l0046">Pologne</placeName> pendant le regne <lb/>pacifique de 30 ans du <rs ref="#p0048">feu Roi</rs> /car
-                    il est mort justement le jour de son election/ est parvenue à un <lb/>êtat si florissant, que ceux qui t'ont<note
-                        resp="#anne.baillot"><seg xml:lang="de">Gemeint ist nicht "t'ont", sondern "l'ont".</seg><seg xml:lang="fr">Lire non pas
-                            "t'ont", mais "l'ont"</seg></note> vu avant ce tems là ne la reconnoissent pas. Jusqu'ici le chan<lb break="no"/>gement de
-                    maître n'a produit rien de remarquable ici. 87, 17.36.1.14.24.40, 35.50.2, 9.10.113.140, <lb/>11.8.147,
-                    7.4.38.17.26.24.143.39.30.129.11.13.40, 9I, 24.13, 3.18, 3.18.49.4.2.24.113.6, 50.24.8. personne
-                    <lb/>34.127.47.143.4.29.32.28.36.138.10.14.4I.2,35.56.6,95,122. <add rend="strikethrough">d</add>30.14,
+                    il est mort justement le jour de son election/ est parvenue à un <lb/>êtat si florissant, que ceux qui t'ont <note
+                        resp="#anne.baillot">
+                        <p xml:lang="en">Read not "t'ont', but "l'ont".</p>
+                        <p xml:lang="de">Gemeint ist nicht "t'ont", sondern "l'ont".</p>
+                        <p xml:lang="fr">Lire non pas "t'ont", mais "l'ont"</p></note> vu avant ce tems là ne la reconnoissent pas. Jusqu'ici le
+                        chan<lb break="no"/>gement de maître n'a produit rien de remarquable ici. 87, 17.36.1.14.24.40, 35.50.2, 9.10.113.140,
+                    <lb/>11.8.147, 7.4.38.17.26.24.143.39.30.129.11.13.40, 9I, 24.13, 3.18, 3.18.49.4.2.24.113.6, 50.24.8. personne
+                    <lb/>34.127.47.143.4.29.32.28.36.138.10.14.4I.2,35.56.6,95,122. <del rend="strikethrough">d</del>30.14,
                     jamais.40.26.58.19.10.4.4I.13,30.56, <lb/>22.28.16.24.147.tout le monde 29.6,38.13.29.I.38.3.8, 11.26.22.22.2,
                     39.6.33.34.38.16.13.40 <lb/>pour 22.28.4. que 22.26.24, 16.129.40.58.20.2I.12.143.10.24.17.8. ne 22.88,
                     14.13.4I.41.2.<lb/>3.I.129.40, 50.24, 33.10.5.4.36.14.24.4I.23.18, 9.2, 7.26.24.20.58.147.12.28.24, 6.136, 3.18,
