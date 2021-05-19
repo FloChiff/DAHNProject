@@ -62,6 +62,20 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                     </affiliation>
                                 </principal>
                                 <respStmt>
+                                    <resp>Edited by</resp>
+                                    <persName ref="#anne.baillot">
+                                        <forename>Anne</forename>
+                                        <surname>Baillot</surname>
+                                    </persName>
+                                </respStmt>
+                                <respStmt>
+                                    <resp>Edited by</resp>
+                                    <persName ref="#stephane.tison">
+                                        <forename>Stéphane</forename>
+                                        <surname>Tison</surname>
+                                    </persName>
+                                </respStmt>
+                                <respStmt>
                                     <resp>Transcription by</resp>
                                     <persName ref="#floriane.chiffoleau">
                                         <forename>Floriane</forename>
@@ -225,13 +239,13 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                         <profileDesc>
                             <correspDesc>
                                 <correspAction type="sent">
-                                    <persName ref="#p0001">Paul d'Estournelles de Constant</persName>
-                                    <placeName ref="#"> </placeName>
+                                    <persName ref="https://viaf.org/viaf/15798950/">Paul d'Estournelles de Constant</persName>
+                                    <placeName ref="https://www.geonames.org/"> </placeName>
                                     <date when-iso="{date}"/>
                                 </correspAction>
                                 <correspAction type="received">
-                                    <persName ref="#p0002">Nicholas Murray Butler</persName>
-                                    <placeName ref="#l0003">New-York</placeName>
+                                    <persName ref="https://viaf.org/viaf/17333392/">Nicholas Murray Butler</persName>
+                                    <placeName ref="https://www.geonames.org/5128581">New-York</placeName>
                                 </correspAction>
                                 <correspContext>
                                     <ref type="prev" target="Lettre{before_number}_{before_date}.xml"/>
@@ -243,7 +257,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                             </langUsage>
                         </profileDesc>
                         <revisionDesc status="proposed">
-                            <change when-iso="2021-02-24" who="#floriane.chiffoleau">Creation of the file</change>
+                            <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
                         </revisionDesc>
                     </teiHeader>
                     <text>
