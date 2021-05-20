@@ -128,16 +128,16 @@
                         <origin>
                             <p xml:lang="de">Der Brief wurde am <origDate when-iso="1819-09-20">20. September 1819</origDate> in <origPlace
                                     ref="#l1103">Berlin</origPlace> geschrieben. Die Jahresberichte von <persName ref="#p0178">Boeckhs</persName> Hand
-                                verblieben bei seinen Aufzeichnungen und gingen später in das Universitätsarchiv ein. Das <persName ref="#g0064"
-                                    >Ministerium</persName> erhielt die Abschrift eines Schreibers.</p>
+                                verblieben bei seinen Aufzeichnungen und gingen später in das Universitätsarchiv ein. Das <orgName ref="#g0064"
+                                    >Ministerium</orgName> erhielt die Abschrift eines Schreibers.</p>
                             <p xml:lang="en">The letter was written in <origPlace ref="#l1103">Berlin</origPlace> on <origDate when-iso="1819-09-20"
                                     >20 September 1819</origDate>. The annual reports written by <persName ref="#p0178">Boeckh</persName> remained
-                                with him and later became part of the university archive. The <persName ref="#g0064">ministry</persName> received a
+                                with him and later became part of the university archive. The <orgName ref="#g0064">ministry</orgName> received a
                                 copy by a scribe.</p>
                             <p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l1103">Berlin</origPlace> le <origDate when-iso="1819-09-20">20
                                     septembre 1819</origDate>. Les rapports annuels autographes de <persName ref="#p0178">Boeckh</persName> ont
                                 d'abord été conservés avec ses documents personnels, puis transmis aux archives de l'université, tandis que le
-                                    <persName ref="#g0064">ministère</persName> a conservé un duplicat réalisé par un copiste.</p>
+                                    <orgName ref="#g0064">ministère</orgName> a conservé un duplicat réalisé par un copiste.</p>
                         </origin>
                     </history>
                 </msDesc>
@@ -190,53 +190,751 @@
         </profileDesc>
         <revisionDesc>
             <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+            <change when-iso="2020-08-03" who="#sabine.seifert">Final revision and corrections of
+                transcription and encoding.</change>
+            <change when-iso="2020-07-30" who="#sabine.seifert">Encoding of page 5. Publication
+                online.</change>
+            <change when-iso="2020-07-25" who="#sabine.seifert">Encoding of page 3 and 4.</change>
+            <change when-iso="2020-07-24" who="#sabine.seifert">Encoding of page 1 and 2.</change>
+            <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin
+                (persName to orgName).</change>
             <change when-iso="2020-05-14" who="#sabine.seifert">Encoding of metadata.</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <div type="transcription">
-                <pb facs="00000166b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <pb n="1" facs="00000166b.jpg"/>
+                <note type="foliation" place="margin-right">
                     <subst hand="#blue_pen">
                         <del rend="overwritten"><seg hand="#pencil">99</seg>
                         </del>
                         <add place="across">99</add>
                     </subst>
                 </note>
+                <p>Einem hohen <orgName ref="#g0064">Ministerium der geistlichen<pc>=</pc>
+                            Unterrichts<pc>-</pc>
+                        <lb/>und Medicinalangelegenheiten</orgName> beehrt sich der <rs ref="#p0178"
+                            >Unter<lb break="no" type="sh"/>zeichnete</rs> den Jahresbericht über
+                    den Zustand des<lb/><orgName ref="#g0079">philologischen Seminars</orgName> im
+                    verflossenen akademischen<lb/>Jahre pflichtschuldigst zu erstatten.</p>
                 <div>
-                    <p>[Transkription folgt - Transcription coming soon]</p>
+                    <head><label>I.</label>
+                        <hi rend="underline">Übersicht der Mitglieder</hi>.</head>
+                    <p>Nach dem Abgange der im vorigen <ref target="Brief012Boeckh"
+                            >Jahresberichte</ref><lb/>aufgeführten ordentlichen Mitglieder <hi
+                            rend="underline"><persName ref="#p0677">Ullrich</persName></hi>,
+                        welcher<lb/>gegenwärtig bei der <orgName ref="#g0117"><choice>
+                                <abbr>Königl.</abbr>
+                                <expan>Königlichen</expan>
+                            </choice> Bibliothek</orgName> arbeitet, und<lb/><hi rend="underline"
+                                ><persName ref="#p1442"><choice>
+                                    <abbr>Fr.</abbr>
+                                    <expan>Friedrich</expan>
+                                </choice> Gaupp</persName></hi> und <hi rend="underline"><persName
+                                ref="#p1443">Ernst Gaupp</persName></hi>, welche zur
+                        Vollendung<lb/>ihrer iuristischen Studien nach <placeName ref="#l0062"
+                            >Göttingen</placeName> gingen,<lb/>und der außerordentlichen <hi
+                            rend="underline"><persName ref="#p0674">Wölke</persName></hi>, ietzigen
+                        Lehrers<lb/>an einem G&#255;mnasium in dem Königreich <placeName
+                            ref="#l0046">Polen</placeName>,<lb/><hi rend="underline"><persName
+                                ref="#p1570">Reinhold</persName></hi>, welcher in <placeName
+                            ref="#l0100">Jena</placeName> als Privatdocent lebt,<lb/>und <hi
+                            rend="underline"><persName ref="#p3733">Trede</persName></hi>, der in
+                        sein Vaterland <placeName ref="#l0562">Holstein</placeName> zurückgegan<lb
+                            break="no"/>gen ist, bleiben im <date when-iso="1818-10/1819-02">Winter
+                            1818-1819.</date> von den<lb/>ältern <orgName ref="#g0047">ordentlichen
+                            Mitgliedern</orgName> übrig:<lb rend="both"/>
+                        <list>
+                            <label>1.</label>
+                            <item><persName ref="#p0676"><choice>
+                                        <abbr>Chr. Friedr.</abbr>
+                                        <expan>Christian Friedrich</expan>
+                                    </choice> Neue</persName> von <placeName ref="#l1103"
+                                    >Spandau</placeName></item>
+                            <lb/>
+                            <label>2.</label>
+                            <item><persName ref="#p1438"><choice>
+                                        <abbr>Gottfr.</abbr>
+                                        <expan>Gottfried</expan>
+                                    </choice> Bernhard&#255;</persName> von <placeName ref="#l0587"
+                                    >Landsberg an <choice>
+                                        <abbr>d.</abbr>
+                                        <expan>der</expan>
+                                    </choice> Warthe</placeName>,</item>
+                            <lb/>
+                            <label>3.</label>
+                            <item><persName ref="#p1447"><choice>
+                                        <abbr>Fr. Gottl.</abbr>
+                                        <expan>Friedrich Gottlob</expan>
+                                    </choice> Starke</persName> aus <choice>
+                                    <abbr>d. Herzogth.</abbr>
+                                    <expan>dem Herzogthum</expan>
+                                </choice>
+                                <placeName ref="#l0002">Sachsen</placeName>,</item>
+                            <lb/>
+                            <label>4.</label>
+                            <item><persName ref="#p1949"><choice>
+                                        <abbr>Chr.</abbr>
+                                        <expan>Christian</expan>
+                                    </choice> Ernst Glasewald</persName>
+                                <rs ref="#l0002">ebendaher</rs>,</item>
+                            <lb/>
+                            <label>5.</label>
+                            <item><persName ref="#p1446"><choice>
+                                        <abbr>Joh.</abbr>
+                                        <expan>Johann</expan>
+                                    </choice> Kreuser</persName>
+                                <choice>
+                                    <abbr>v.</abbr>
+                                    <expan>von</expan>
+                                </choice>
+                                <placeName ref="#l0006">Köln</placeName>,</item>
+                            <lb/>
+                            <label>6.</label>
+                            <item><persName ref="#p1441"><choice>
+                                        <abbr>Gust. Fr. Wilh.</abbr>
+                                        <expan>Gustav Friedrich Wilhelm</expan>
+                                    </choice> Fehmer</persName> aus <placeName ref="#l0016"
+                                    >Pom&#772;ern</placeName>,</item>
+                            <lb/>
+                            <label>7.</label>
+                            <item><persName ref="#p1457"><choice>
+                                        <abbr>Aug.</abbr>
+                                        <expan>August</expan>
+                                    </choice> Koberstein</persName> aus <placeName ref="#l0016"
+                                    >Pom&#772;ern</placeName>,</item>
+                            <lb/>
+                            <label>8.</label>
+                            <item><persName ref="#p1950"><choice>
+                                        <abbr>Fr.</abbr>
+                                        <expan>Friedrich</expan>
+                                    </choice> Zelle</persName> von <placeName ref="#l0749"
+                                    >Spandau</placeName>:</item>
+                        </list>
+                        <lb rend="both"/>wozu noch<lb rend="both"/><list>
+                            <label>9.</label>
+                            <item><persName ref="#p0145">Karl He&#255;se</persName> aus <choice>
+                                    <abbr>d.</abbr>
+                                    <expan>dem</expan>
+                                </choice>
+                                <rs ref="#l0464">Oldenburgischen</rs></item>
+                        </list><lb rend="both"/>kam, welcher bisher außerordentliches Mitglied
+                        gewesen<lb/>war. Als <orgName ref="#g0098">außerordentliche
+                            Mitglieder</orgName> blieben von<lb/>den frühern übrig:<lb rend="both"/><list>
+                            <label>1.</label>
+                            <item><persName ref="#p1955"><choice>
+                                        <abbr>Jos.</abbr>
+                                        <expan>Josef</expan>
+                                    </choice> Gassman&#772;</persName> aus <placeName ref="#l0782"
+                                    >Wingerode bei Heiligenstadt</placeName>,</item>
+                            <lb/>
+                            <label>2.</label>
+                            <item><persName ref="#p3732"><choice>
+                                        <abbr>Ge. Friedr.</abbr>
+                                        <expan>Georg Friedrich</expan>
+                                    </choice> Marquard</persName> aus <choice>
+                                    <abbr>d.</abbr>
+                                    <expan>dem</expan>
+                                </choice>
+                                <rs ref="#l1139">Mecklenburgischen</rs>,</item>
+                        </list><lb rend="both"/>wozu noch kamen:<lb rend="both"/><list>
+                            <label>3.</label>
+                            <item><persName ref="#p3734"><choice>
+                                        <abbr>Ferd. v.</abbr>
+                                        <expan>Ferdinand von</expan>
+                                    </choice> Fre&#255;man&#772;</persName> aus <placeName
+                                    ref="#l1141">Livland</placeName>,</item>
+                            <lb/>
+                            <label>4.</label>
+                            <item><persName ref="#p3735"><choice>
+                                        <abbr>Eberh.</abbr>
+                                        <expan>Eberhard</expan>
+                                    </choice> Wiens</persName> aus <placeName ref="#l0187"
+                                    >Westphalen</placeName>,<note resp="#sabine.seifert"><persName
+                                        ref="#p3735">Wiens</persName> stammte aus <placeName
+                                        ref="#l0560">Burgsteinfurt</placeName>.</note></item>
+                        </list><lb rend="both"/>einige andere, welche sich noch gemeldet hatten,
+                        haben<lb/>so wenig Theil genom&#772;en, daß sie nicht genan&#772;t
+                        zu<lb/>werden verdienen.</p>
+                    <p>Für das folgende <date when-iso="1819-03/09">Som&#772;erhalbeiahr</date>
+                        blieben alle ge<lb break="no"/>nan&#772;ten mit Ausschluss des <persName
+                            ref="#p1457">Koberstein</persName>, welcher für<lb/>dieses Halbeiahr mit
+                        dem Vorbehalt wiederaufge<lb break="no"/>nom&#772;en zu werden austrat;
+                        dagegen wurden noch<lb/>als <orgName ref="#g0048">ordentliche
+                            Mitglieder</orgName> aufgenom&#772;en:<lb rend="both"/><list>
+                            <item><persName ref="#p1951"><choice>
+                                        <abbr>J. A. H.</abbr>
+                                        <expan>Johann August Heinrich</expan>
+                                    </choice> Lindner</persName> von <placeName ref="#l0268"
+                                    >Dessau</placeName>,</item>
+                            <lb/>
+                            <item><persName ref="#p1590"><choice>
+                                        <abbr>Fr.</abbr>
+                                        <expan>Friedrich</expan>
+                                    </choice> Kritz</persName> aus dem <rs ref="#l0253"
+                                    >Erfurtischen</rs>.</item>
+                        </list></p>
+                    <p>Als <orgName ref="#g0099">außerordentliche Mitglieder</orgName> traten noch
+                            hinzu:<lb rend="both"/><list>
+                            <item><persName ref="#p1355"><choice>
+                                        <abbr>Fr.</abbr>
+                                        <expan>Friedrich</expan>
+                                    </choice> Paul</persName> aus <placeName ref="#l1079"
+                                    >Schwedt</placeName>,</item>
+                            <lb/>
+                            <item><persName ref="#p3729">Carl Schmidt</persName>
+                                <choice>
+                                    <abbr>v.</abbr>
+                                    <expan>von</expan>
+                                </choice>
+                                <placeName ref="#l0246">Hildesheim</placeName>,</item>
+                            <lb/>
+                            <item><persName ref="#p1953"><choice>
+                                        <abbr>Wilh.</abbr>
+                                        <expan>Wilhelm</expan>
+                                    </choice> Heindorf</persName>
+                                <choice>
+                                    <abbr>v.</abbr>
+                                    <expan>von</expan>
+                                </choice>
+                                <placeName ref="#l1103">Berlin</placeName>,</item>
+                        </list><lb rend="both"/>abgerechnet einige andere, welche sich zwar
+                        gemeldet<lb/>hatten, aber keinen besondern Antheil nahmen. So be<lb
+                            break="no"/>stand daher das <orgName ref="#g0079">Seminar</orgName> in
+                        dem <date when-iso="1819-03/09">abgelaufenen<lb/>Som&#772;er</date> aus 10
+                        ordentlichen Mitgliedern, von welchen<lb/>iedoch drei, <hi rend="underline"
+                                ><persName ref="#p1447">Starke</persName></hi>, <hi rend="underline"
+                                ><persName ref="#p1950">Zelle</persName></hi>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <hi rend="underline"><persName ref="#p1441">Fehmer</persName></hi>, aus
+                        verschiedenen<lb/>Gründen nicht dasienige, was zu fordern ist,
+                        leisteten;<lb/>der erste, weil er durch Schulgeschäfte, der andere,<lb/>weil
+                        er durch den Militärdienst verhindert wurde.<lb/>Die Zahl der
+                        außerordentlichen Mitglieder betrug nach<lb/>obigen Angaben 7.</p>
                 </div>
-                <pb facs="00000167b.jpg" n="2"/>
+                <pb n="2" facs="00000167b.jpg"/>
                 <div>
-                    <p>[Transkription folgt - Transcription coming soon]</p>
+                    <head><label>II.</label>
+                        <hi rend="underline">Übungen des Seminars</hi>.</head>
+                    <p>Diese wurden wie gewöhnlich regelmäßig angestellt.</p>
+                    <p><label>1)</label> Zur <hi rend="underline">Interpretation</hi> legte <choice>
+                            <abbr>Hr Prof.</abbr>
+                            <expan>Herr Professor</expan>
+                        </choice>
+                        <persName ref="#p0394">Buttmann</persName> das<lb/>erste Buch des <persName
+                            ref="#p0003">Cicero</persName>
+                        <title ref="#w06012">de <choice>
+                                <abbr>Nat. Deor.</abbr>
+                                <expan>Natura Deorum</expan>
+                            </choice></title>
+                        <persName ref="#p1185">Juvenals</persName><lb/>1. <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> 2. <title ref="#w05811">Satire</title> und das zweite Buch der <rs
+                            ref="#p0070">Ovidischen</rs><lb/><title ref="#w03292">Fasten</title>
+                        vor; bei dem <rs ref="#p0178">Unterzeichneten</rs> wurde in
+                        beiden<lb/>halben Jahren der <persName ref="#p1021">Herodot</persName>
+                            behandelt.<note resp="#sabine.seifert">Es handelt sich wahrscheinlich um
+                                <persName ref="#p1021">Herodots</persName>
+                            <title ref="#w00442">Historien</title>.</note></p>
+                    <p><label>2)</label> Folgende <hi rend="underline">Abhandlungen</hi> wurden von
+                        den Mitgliedern<lb/>geliefert:<lb rend="both"/>
+                        <hi rend="latin"><list>
+                                <label>1.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1457"
+                                            >Koberstein</persName></hi>: <title ref="#w05896">De
+                                        exegetis sive monstratoribus<lb/>apud
+                                    Graecos</title>.</item>
+                                <lb/>
+                                <label>2.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p0676"
+                                            >Neue</persName></hi>: <title ref="#w05933"
+                                        >Com&#772;entatio in Platonis Critonem</title>.</item>
+                                <lb/>
+                                <label>3.</label>
+                                <item>Von <rs ref="#p0676">demselben</rs>: <title rend="#w05934"
+                                        >Commentatio in Platonis<lb/>Menonem</title>.</item>
+                                <lb/>
+                                <label>4.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1949"
+                                            >Glasewald</persName></hi>: <title ref="#w05865"
+                                        >Com&#772;entarius in Taciti Agri<lb break="no"
+                                        />colam</title>.</item>
+                                <lb/>
+                                <label>5.</label>
+                                <item>Von <rs ref="#p1949">demselben</rs>: <title ref="#w05866">In
+                                        locos aliquot ex Ovidii<lb/>Fastis</title>.</item>
+                                <lb/>
+                                <label>6.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p0145"
+                                            >He&#255;se</persName></hi>: <title ref="#w05881">In
+                                        locos aliquot ex T. Livii<lb/>libro primo</title>.</item>
+                                <lb/>
+                                <label>7.</label>
+                                <item>Von <rs ref="#p0145">demselben</rs>: <title ref="#w05882"
+                                        >Com&#772;entatio in D. Junii Juve<lb break="no"/>nalis
+                                        Satiram IV</title>.</item>
+                                <lb/>
+                                <label>8.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1438"
+                                            >Bernhard&#255;</persName></hi>: <title ref="#w05839">De
+                                        C&#255;renis pars prima</title>, <add place="above">zum
+                                        zweiten mahl <gap reason="illegible" extent="one_word"
+                                            /><note resp="#sabine.seifert">Eine erste Fassung dieser
+                                            Arbeit hatte <persName ref="#p1438"
+                                                >Bernhard&#255;</persName> bereits ein Jahr zuvor
+                                            eingereicht, wie aus dem <ref target="Brief012Boeckh#2"
+                                                >Jahresbericht 1818, S. 2</ref>,
+                                        hervorgeht.</note></add></item>
+                                <lb/>
+                                <label>9.</label>
+                                <item> Von <rs ref="#p1438">demselben</rs>: <title ref="#w05840">De
+                                        C&#255;renis pars secunda</title>.</item>
+                                <lb/>
+                                <label>10.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1447"
+                                            >Starke</persName></hi>: <title ref="#w05972">Quaeritur,
+                                        quid de numinis<lb/>divini societate cum rebus humanis
+                                        senserit<lb/>Herodotus, P.I.</title></item>
+                                <lb/>
+                                <label>11.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1951"
+                                            >Lindner</persName></hi>: <title ref="#w05914">De
+                                        Terentio Menandri
+                                    imitatore<lb/>Com&#772;entatio</title>.</item>
+                                <lb/>
+                                <label>12.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1590"
+                                            >Kritz</persName></hi>: <title ref="#w05903"
+                                        >Animadversiones ad Sallustii Catili<lb break="no" type="sh"
+                                        />nam</title>.</item>
+                                <lb/>
+                                <label>13.</label>
+                                <item>Von <hi rend="underline"><persName ref="#p1446"
+                                            >Kreuser</persName></hi>: <title ref="#w05900">De
+                                        Druidis</title>.</item>
+                                <lb/>
+                                <label>14.</label>
+                                <item>Von <rs ref="#p1446">demselben</rs>: <title ref="#w05901">De
+                                        Eridane</title>.</item>
+                            </list></hi></p>
+                    <p><hi rend="mark">Die zwölf ersten Abhandlungen erfolgen in der
+                        Beilage;</hi><lb/>von <hi rend="underline"><persName ref="#p1446"
+                                >Kreuser</persName></hi> habe ich seine Abhandlungen aller Erin<lb
+                            break="no"/>nerungen <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> angewandter Mühe ungeachtet nicht er<lb break="no"/>halten können,
+                        um sie einem hohen <orgName ref="#g0064"
+                        >Ministerium</orgName><lb/>einzuliefern; und es ist ganz offenbar, daß er
+                            ver<lb break="no"/>drießlich über die an denselben gerügten
+                        Fehler<lb/>sie mir absichtlich entzogen hat. Unter den
+                        übrigen<lb/>Abhandlungen ist die von <persName ref="#p1951"
+                            >Lindner</persName>, welcher noch ein<lb/>Anfänger ist, die schwächste:
+                        besser schon sind die von<lb/><persName ref="#p1457">Koberstein</persName>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <persName ref="#p1949">Glasewald</persName>; die besten die von <persName
+                            ref="#p0676">Neue</persName>,<lb/><persName ref="#p1438"
+                            >Bernhard&#255;</persName>, <persName ref="#p0145">He&#255;se</persName>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <persName ref="#p1447">Starke</persName>.</p>
+                    <p><label>3)</label> Mündlich wurden wie gewöhnlich folgende <hi
+                            rend="underline">Auf<lb break="no" type="sh"/>gaben</hi> behandelt:<lb
+                            rend="both"/>
+                        <foreign xml:lang="la"><hi rend="latin"><list>
+                                    <label>1.</label>
+                                    <item>Explicetur locus <persName ref="#p1028"
+                                            >Pausaniae</persName>
+                                        <rs ref="#w06032">Lacon.</rs> c.XI.<lb/>§.6.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap><lb/>de
+                                        cuius loci difficultate vide<lb/><persName ref="#p1367"
+                                            >Wesseling</persName> ad <persName ref="#p1021"
+                                            >Herodot.</persName>
+                                        <rs ref="#w00442">IX,35</rs>.</item>
+                                    <lb/>
+                                    <label>2.</label>
+                                    <item>Disputetur de loco <title ref="#w04350"
+                                            >Od&#255;ss.</title>
+                                        <gap reason="illegible" extent="one_char"/>, 70.</item>
+                                    <pb n="3" facs="00000168b.jpg"/>
+                                    <note type="foliation" place="margin-right">
+                                        <subst hand="#blue_pen">
+                                            <del rend="overwritten"><seg hand="#pencil">100</seg>
+                                            </del>
+                                            <add place="across">100</add>
+                                        </subst>
+                                    </note>
+                                    <label>3.</label>
+                                    <item>Quomodo restituendum sit oraculum apud<lb/>Schol.
+                                            <persName ref="#p0176">Pind.</persName>
+                                        <title ref="#w04386">P&#255;th.</title> IV,10.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+                                        &#38;c.</item>
+                                    <lb/>
+                                    <label>4.</label>
+                                    <item>An recte iam emendatur sit locus <persName ref="#p0958"
+                                            >Velleii</persName><lb/><rs ref="#w06055">II, 48,
+                                            4.</rs>
+                                        <quote><hi rend="underline">Huius animo</hi> — <hi
+                                                rend="underline">sufficere
+                                        possent</hi>.</quote></item>
+                                    <lb/>
+                                    <label>5.</label>
+                                    <item>Quaeritur de loco <persName ref="#p0003">Cic.</persName>
+                                        <title ref="#w06054">Tusc.</title> I,9. <quote><hi
+                                                rend="underline">Nam et<lb/>agere animam</hi> — <hi
+                                                rend="underline">et ex animi
+                                        sententia</hi>.</quote></item>
+                                    <lb/>
+                                    <label>6.</label>
+                                    <item>Emendetur fragmentum <rs ref="#p0176">Pindaricum</rs>
+                                        apud<lb/>Athenaeum X, p.411. B.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+                                        &#38;c.</item>
+                                    <lb/>
+                                    <label>7.</label>
+                                    <item>Emendetur fragmentum <rs ref="#p0176">Pindaricum</rs>
+                                            apud<lb/><rs ref="#p0215">Plutarchum</rs>
+                                        <title ref="#w06057">de exilio</title> c.9.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap><lb/>
+                                        etc.</item>
+                                    <lb/>
+                                    <label>8.</label>
+                                    <item>Constituendum et explicandum propono<lb/>locem <persName
+                                            ref="#p0212">Taciti</persName>
+                                        <title ref="#w06033">vit. Agric.</title> c. 36. <quote><hi
+                                                rend="underline">Interim<lb/>equitum turmae
+                                                fugere</hi> — <hi rend="underline">minimeque e<lb
+                                                  break="no" type="sh"/>questris</hi></quote>
+                                        &#38;c.</item>
+                                    <lb/>
+                                    <label>9.</label>
+                                    <item>Explicetur <persName ref="#p0192">Sophocles</persName>
+                                        <title ref="#w04337">Trach.</title> 56.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>10.</label>
+                                    <item>Explicetur locus <persName ref="#p0003">Cic.</persName>
+                                        <title ref="#w06046">de Offic.</title> I,5.
+                                        §.15-17.<lb/>imprimis verba : <quote><hi rend="underline"
+                                                >Velut ex ea parte, quae<lb/>prima descripta
+                                                est</hi> — <hi rend="underline">inventio veri</hi>,
+                                            et: <hi rend="underline">Ut enim<lb/>quisque</hi> — <hi
+                                                rend="underline">haberi solet</hi>.</quote></item>
+                                    <lb/>
+                                    <label>11.</label>
+                                    <item>Apud <persName ref="#p0034">Platonem</persName>
+                                        <title ref="#w06058">Phaedon.</title> 2. p.58. ed. <persName
+                                            ref="#p1302">Steph.</persName><lb/>quaeritur an delendem
+                                        sit
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+                                    <lb/>
+                                    <label>12.</label>
+                                    <item>Disputetur de <persName ref="#p0174">Virg.</persName>
+                                        <title ref="#w00317">Aeneid.</title> I,8.
+                                            <quote>Quo<lb/>numinde laeso</quote>.</item>
+                                    <lb/>
+                                    <label>13.</label>
+                                    <item>Dicatur de ambiguitate loci <persName ref="#p1056"
+                                            >Thuc&#255;d.</persName><lb/><rs ref="#w05818">I,3.</rs>
+                                        <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap><lb/>&#38;c.</item>
+                                    <lb/>
+                                    <label>14.</label>
+                                    <item>Inquiratur in verba <persName ref="#p1056"
+                                            >Thuc&#255;didis</persName>
+                                        <rs ref="#w05818"
+                                            >I,5.</rs><lb/><gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+                                        &#38;c.</item>
+                                    <lb/>
+                                    <label>15.</label>
+                                    <item>Disputetur de loco <persName ref="#p1056"
+                                            >Thuc&#255;didis</persName>
+                                        <rs ref="#w05818">II,42.</rs><lb/>extr.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+                                    <lb/>
+                                    <label>16.</label>
+                                    <item>Quaeritur utrum verba in <persName ref="#p0003"
+                                            >Ciceronis</persName><lb/><title ref="#w06046">de
+                                            Off.</title> III, §.83. <quote><hi rend="underline"
+                                                >Capitalis Eteocles</hi> — <hi rend="underline"
+                                                  >exce<lb break="no" type="sh"/>perit</hi>,</quote>
+                                        bene se habeant necne.</item>
+                                    <lb/>
+                                    <label>17.</label>
+                                    <item>Disputetur de loco <persName ref="#p0003">Cic.</persName>
+                                        <title ref="#w06046">Off.</title> I,1. <quote><hi
+                                                rend="underline">Quam<lb break="no" type="sh"/>quam
+                                                te, Marce fili</hi> — — <hi rend="underline">ut par
+                                                sis<lb/>in utriusque orationis
+                                            facultate</hi>.</quote></item>
+                                    <lb/>
+                                    <label>18.</label>
+                                    <item>Disseratur de verbis <persName ref="#p0003"
+                                            >Ciceronis</persName>
+                                        <title ref="#w06012">de<lb/>nat. deor.</title> I,23. extr.
+                                                <quote><hi rend="underline">Quae primum<lb/>multae
+                                                sunt</hi> — — <hi rend="underline">ista enim
+                                                  flagitia<lb/><persName ref="#p2060"
+                                                  >Democriti</persName></hi>.</quote></item>
+                                    <lb/>
+                                    <label>19.</label>
+                                    <item>Proponitur <persName ref="#p0212">Tac.</persName>
+                                        <title ref="#w06026">German.</title> C.28. <quote><hi
+                                                rend="underline">Ne<lb/>ubii quidem</hi> — — <hi
+                                                rend="underline">non ut
+                                        custodirentur</hi>.</quote></item>
+                                    <pb n="4" facs="00000169b.jpg"/>
+                                    <label>20.</label>
+                                    <item>At disputandum proponitur <persName ref="#p1266"
+                                            >Sallust</persName>: <title ref="#w06059"
+                                        >Catil.</title><lb/>3. <quote><hi rend="underline">Ac me cum
+                                                ab reliquorum malis moribus</hi><lb/> — — <hi
+                                                rend="underline">invidia
+                                        vexabat</hi>.</quote></item>
+                                    <lb/>
+                                    <label>21.</label>
+                                    <item>Dicatur de <persName ref="#p1266">Sallust</persName>:
+                                            <title ref="#w06059">Catil.</title> 31. <quote><hi
+                                                rend="underline">Ad hoc<lb/>mulieres</hi> — — <hi
+                                                rend="underline">afflictare sese</hi>.</quote>
+                                    </item>
+                                    <lb/>
+                                    <label>22.</label>
+                                    <item>Constituatur lectio ap. <persName ref="#p0212"
+                                            >Tacit.</persName>
+                                        <title ref="#w06033">Agric.</title> c.6.<lb/><quote><hi
+                                                rend="underline">Ludos et inania honoris modo
+                                                rationis<lb/>atque abundantiae
+                                        duxit.</hi></quote></item>
+                                    <lb/>
+                                    <label>23.</label>
+                                    <item>Quaeritur quomodo intelligenda sint verba<lb/><persName
+                                            ref="#p0174">Virgil.</persName>
+                                        <title ref="#w00317">Aen.</title> VI, 7.8. <quote><hi
+                                                rend="underline">Pars densa ferarum
+                                                tecta<lb/>rapit</hi></quote> &#38;c.</item>
+                                    <lb/>
+                                    <label>24.</label>
+                                    <item>Constituendum propono locum <persName ref="#p1210"
+                                            >Luciani</persName>
+                                        <title ref="#w06060">A<lb break="no" type="sh"/>mor.</title>
+                                        42.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>25.</label>
+                                    <item>Quaeritur quid videatur de loco apud<lb/><persName
+                                            ref="#p0353">Aesch&#255;l.</persName>
+                                        <title ref="#w00446">Agam.</title> 1017.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>26.</label>
+                                    <item><persName ref="#p0353">Aesch&#255;li</persName> locum
+                                            <title ref="#w00446">Agam.</title> 250.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+                                        &#38;c.<lb/>interpretandum propono.</item>
+                                    <lb/>
+                                    <label>27.</label>
+                                    <item>Constituatur significatio verborum <quote><hi
+                                                rend="underline">Molli<lb/>fulta pede
+                                            est</hi></quote> ap. <persName ref="#p0024"
+                                            >Hor.</persName>
+                                        <title ref="#w05806">Sat.</title> I,2,88.</item>
+                                    <lb/>
+                                    <label>28.</label>
+                                    <item>Quid statuendum est de loco illo <persName ref="#p0865"
+                                                >Aristo<lb break="no" type="sh"/>telis</persName>
+                                        <title ref="#w06037">art. poet.</title> C.1. §.12. <rs
+                                            ref="#w06061">ed.</rs>
+                                        <persName ref="#p0486">Herm.</persName>
+                                        <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>29.</label>
+                                    <item>Dicatur de <persName ref="#p0882">Eurip.</persName>
+                                        <title ref="#w06062">Hecub.</title> 165.
+                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>30.</label>
+                                    <item>Disputetur de <persName ref="#p0034">Platonis</persName>
+                                        <title ref="#w06063">Criton.</title> p.45.
+                                            extr.<lb/><gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap></item>
+                                    <lb/>
+                                    <label>31.</label>
+                                    <item>Dicatur de <persName ref="#p1056">Thuc.</persName>
+                                        <rs ref="#w05818">II,83.</rs>
+                                        <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+                                    <lb/>
+                                    <label>32.</label>
+                                    <item>Quaeritur quid videatur de loco <persName ref="#p0003"
+                                                >Cicero<lb break="no" type="sh"/>nis</persName>
+                                        <title ref="#w06064">Epist. ad. Q. Fr.</title> III,2.
+                                                <quote><hi rend="underline">Interim ipso<lb/>decimo
+                                                die</hi> — — <hi rend="underline">introducti
+                                                publicani</hi>.</quote></item>
+                                </list></hi></foreign></p>
                 </div>
-                <pb facs="00000168b.jpg" n="3"/>
-                <note place="margin-right" type="foliation">
-                    <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">100</seg>
-                        </del>
-                        <add place="across">100</add>
-                    </subst>
-                </note>
                 <div>
-                    <p>[Transkription folgt - Transcription coming soon]</p>
+                    <head><label>III.</label>
+                        <hi rend="underline">Zuerkan&#772;te Prämien.</hi></head>
+                    <p>In dem <date when-iso="1818-10/1819-02">Winterhalbeniahre</date> ertheilte
+                        ein hohes <orgName ref="#g0064">Mi<lb break="no"/>nisterium</orgName> auf
+                        des <rs ref="#p0178">Unterzeichneten</rs> Antrag durch<lb/>das Rescript vom
+                            <date when-iso="1819-04-09">9. April</date> dem <hi rend="underline"
+                                ><persName ref="#p0676">Neue</persName></hi>, <hi rend="underline"
+                                ><persName ref="#p1438">Bernhard&#255;</persName></hi>,<lb/><hi
+                            rend="underline"><persName ref="#p1447">Starke</persName></hi>, <hi
+                            rend="underline"><persName ref="#p1949">Glasewald</persName></hi>, <hi
+                            rend="underline"><persName ref="#p1446">Kreuser</persName></hi>, <hi
+                            rend="underline"><persName ref="#p1457">Koberstein</persName></hi>
+                            und<lb/><hi rend="underline"><persName ref="#p0145"
+                                >He&#255;se</persName></hi>, iedem eine Unterstützung von 25 <choice>
+                            <abbr>rl</abbr>
+                            <expan>Reichsthaler</expan>
+                        </choice>, und<lb/>dem <hi rend="underline"><persName ref="#p1441">Gustav
+                                Fehmer</persName></hi> aus <placeName ref="#l0016"
+                            >Pom&#772;ern</placeName> 20 <choice>
+                            <abbr>rl</abbr>
+                            <expan>Reichsthaler</expan>
+                        </choice>. Der<lb/>letztgenan&#772;te hatte noch keine Abhandlung ge<lb
+                            break="no"/>liefert, wurde aber seines übrigen Eifers wegen<lb/>würdig
+                        geachtet, zu einer Prämie empfohlen zu<lb/>werden; da er indeß auch im
+                        vergangenen <date when-iso="1819-03/09">Som&#772;er</date><lb/>noch keine
+                        schriftliche Arbeit eingereicht hat,<lb/>habe ich ihn in den Vorschlägen für
+                        dieses<lb/>Halbeiahr übergangen und nur die Studiosen<lb/><hi
+                            rend="underline"><persName ref="#p0676">Neue</persName></hi>, <hi
+                            rend="underline"><persName ref="#p1438">Bernhard&#255;</persName></hi>,
+                            <hi rend="underline"><persName ref="#p1949">Glasewald</persName></hi>,
+                            <hi rend="underline"><persName ref="#p1446">Kreuser</persName></hi>, <hi
+                            rend="underline"><persName ref="#p0145"
+                            >He&#255;se</persName></hi>,<lb/><hi rend="underline"><persName
+                                ref="#p1951">Lindner</persName></hi>, <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <hi rend="underline"><persName ref="#p1590">Kritz</persName></hi>, ieden zu
+                        einer Prämie von<pb n="5" facs="00000170b.jpg"/>
+                        <note type="foliation" place="margin-right">
+                            <subst hand="#blue_pen">
+                                <del rend="overwritten"><seg hand="#pencil">101</seg>
+                                </del>
+                                <add place="across">101</add>
+                            </subst>
+                        </note>25 <choice>
+                            <abbr>rl</abbr>
+                            <expan>Reichsthaler</expan>
+                        </choice> ehrerbietigst empfohlen; worauf das hohe<lb/><orgName ref="#g0064"
+                            >Ministerium</orgName> durch das Rescript vom <date
+                            when-iso="1819-08-23">23. August</date><lb/>denselben diese
+                        Unterstützung zuerkan&#772;t hat.<lb/>Außerdem genehmigte dasselbe unter dem
+                            <date when-iso="1818-10-26">26.<lb/>October 1818.</date> den Vorschlag
+                        des <rs ref="#p0178">Directors</rs>, dem<lb/>ietzo zu <placeName
+                            ref="#l0060">Halle</placeName> befindlichen <hi rend="latin"><persName
+                                ref="#p0509">Dr. Meier</persName></hi> aus<lb/>den frühern
+                        Ersparnissen der Gelder des <orgName ref="#g0079">Semi<lb break="no"
+                            />nars</orgName> 50 <choice>
+                            <abbr>rl</abbr>
+                            <expan>Reichsthaler</expan>
+                        </choice> zur Beihülfe zu den Promo<lb break="no"/>tionskosten zu
+                        bewilligen. Auch ietzo ist noch<lb/>ein Überschuß von 50 <choice>
+                            <abbr>rl</abbr>
+                            <expan>Reichsthaler</expan>
+                        </choice> vorhanden, der ent<lb break="no"/>weder auf dieselbe Art oder zur
+                        Vermehrung<lb/>der Prämien in einem etwa sich ergebenden<lb/>geeigneten
+                        Falle in Zukunft angewandt werden kan&#772;.</p>
                 </div>
-                <pb facs="00000169b.jpg" n="4"/>
                 <div>
-                    <p>[Transkription folgt - Transcription coming soon]</p>
+                    <head><label>IV.</label>
+                        <hi rend="underline">In&#772;erer Zustand des Seminars.</hi></head>
+                    <p>Dieser ist im Ganzen genom&#772;en seit dem vorigen Jahre<lb/>sich gleich
+                        geblieben, außer daß einige der ältern<lb/>Mitglieder, nahmentlich <hi
+                            rend="underline"><persName ref="#p0676">Neue</persName></hi>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <hi rend="underline"><persName ref="#p1438">Bernhard&#255;</persName></hi>
+                        bereits<lb/>bedeutend vorgeschritten sind, und auch etliche der<lb/>neuen,
+                        wie <hi rend="underline"><persName ref="#p0145">He&#255;se</persName></hi>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice>
+                        <hi rend="underline"><persName ref="#p1590">Kritz</persName></hi>, zu sehr
+                        guten Hoff<lb break="no"/>nungen berechtigen: auch haben die meisten
+                            lobens<lb break="no"/>werten Fleiß <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> Eifer bewiesen; die Ausnahmen<lb/>sind oben bei der Übersicht der
+                        Mitglieder be<lb break="no"/>rührt worden. Über den <choice>
+                            <abbr>Stud.</abbr>
+                            <expan>Studiosus</expan>
+                        </choice>
+                        <hi rend="underline"><persName ref="#p1446">Kreuser</persName></hi>
+                        habe<lb/>ich im Auftrage eines hohen <orgName ref="#g0064"
+                            >Ministeriums</orgName><lb/>unter dem <date when-iso="1819-05-31">31.
+                            Mai 1819.</date> besonders berichtet;<lb/>der Zweck aber, welchen
+                        dasselbe durch die<lb/>nach dem Rescript vom <date when-iso="1819-06-15">15.
+                            Juni <choice>
+                                <abbr>d. J.</abbr>
+                                <expan>des Jahres</expan>
+                            </choice></date> ihm<lb/>verliehene weitere Unterstützung und die
+                        mir<lb/>aufgetragene Ermahnung desselben <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> die Lei<lb break="no"/>tung seiner Studien hat erreichen
+                        wollen,<lb/>ist nicht erreicht worden, da <choice>
+                            <abbr>Hr</abbr>
+                            <expan>Herr</expan>
+                        </choice>
+                        <persName ref="#p1446">Kreuser</persName><lb/>nunmehr abgegangen ist, und
+                        von der ihm<lb/>eröffneten Aussicht noch ein ferneres Jahr<lb/>die huldvoll
+                        ihm gegebene Unterstützung zu<lb/>empfangen, sich nicht hat wollen halten
+                        lassen.<lb/>Seinen letzten Reden nach scheint er dem Schul<lb break="no"
+                        />fache sich gänzlich entziehen zu wollen.</p>
+                    <p>Zu der im vorigen <ref target="Brief012Boeckh#2">Jahresberichte</ref>
+                        erhobenen Klage<lb/>über die schlechte Latinität ist in Bezug auf
+                            das<lb/><orgName ref="#g0079">Seminar</orgName> für dieses Jahr kein
+                        bedeutender Anlaß<lb/>vorhanden; und obgleich der in der Beilage zu<lb/> dem
+                        voriährigen <ref target="Brief012Boeckh">Berichte</ref> geäußerte
+                        Wunsch,<lb/>es möchte ein Repetent für das <orgName ref="#g0079"
+                            >philologische<lb/>Seminar</orgName> angestellt werden, wiederholt
+                        werden<lb/>kan&#772;, so trage ich doch gegenwärtig Bedenken,<lb/>darauf
+                        anzutragen, da mir ietzo kein dazu<lb/>geeigneter iunger Man&#772;
+                        bekan&#772;t ist, nachdem der<lb/>im vorigen Jahre von mir vorgeschlagene
+                            <hi rend="latin"><persName ref="#p0518">Dr.<lb/><hi rend="underline"
+                                    >Carl Müller</hi></persName></hi> durch seine Berufung an die
+                            <orgName ref="#g0112">Universität<lb/>Göttingen</orgName> als <choice>
+                            <abbr>außerordentl.</abbr>
+                            <expan>außerordentlicher</expan>
+                        </choice> Professor der alten<lb/>Litteratur, eine für seine Ausbildung
+                            vortheil<lb break="no"/>hafte Stelle erhalten hat.</p>
                 </div>
-                <pb facs="00000170b.jpg" n="5"/>
-                <note place="margin-right" type="foliation">
-                    <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">101</seg>
-                        </del>
-                        <add place="across">101</add>
-                    </subst>
-                </note>
-                <div>
-                    <p>[Transkription folgt - Transcription coming soon]</p>
-                </div>
+                <note hand="#brown_pen" place="margin-left"><choice>
+                        <abbr>mund. d.</abbr>
+                        <expan>mundiert den</expan>
+                    </choice> 15 <gap reason="illegible" extent="two_chars"/><lb/><persName
+                        ref="#p3868">Wernicke</persName></note>
+                <closer><dateline><placeName ref="#l1103">Berlin</placeName>
+                        <choice>
+                            <abbr>d.</abbr>
+                            <expan>den</expan>
+                        </choice>
+                        <date when-iso="1819-09-20">20. September 1819.</date></dateline><milestone
+                        unit="none" rend="vertical-rule align(center)"/><hi rend="align(right)">der
+                            <rs ref="#p0178">Director</rs> des <orgName ref="#g0079"
+                            >philologischen<lb/>Seminars</orgName> der hiesigen<lb/><orgName
+                            ref="#g0122">Universität</orgName>.</hi><lb/><signed rend="align(right)"
+                            ><hi rend="latin"><persName ref="#p0178">Böckh.</persName></hi></signed>
+                </closer>
             </div>
         </body>
     </text>
