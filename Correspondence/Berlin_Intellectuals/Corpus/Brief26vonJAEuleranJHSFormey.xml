@@ -118,6 +118,11 @@
                                 <p xml:lang="fr">Main de l'expéditeur Jean Albert Euler, texte à l'encre noire, en écriture latine (langue:
                                     français).</p>
                             </handNote>
+                            <handNote medium="black_ink" scope="minor" scribe="writer" scribeRef="#p0165" xml:id="new_hand">
+                                <p xml:lang="de">Hand des Baron von der Goltz, Brieftext in schwarzer Tinte (französische Sprache).</p>
+                                <p xml:lang="en">Hand of the baron of Goltz, body text in black ink (language: French).</p>
+                                <p xml:lang="fr">Main du baron de Goltz, texte à l'encre noire (langue: français).</p>
+                            </handNote>
                             <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
                                 <p xml:lang="de">Hand des Archivars, der die Foliierung des Konvoluts in Bleistift vorgenommen hat.</p>
                                 <p xml:lang="en">Hand of the archivist who numbered the bundle (pencil).</p>
@@ -181,6 +186,7 @@
             </correspDesc>
         </profileDesc>
         <revisionDesc status="approved">
+            <change when-iso="2021-06-02" who="#floriane.chiffoleau">Added a new hand and identified it in the body</change>
             <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
             <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-18" who="#emmanuelle.chaze">Edited placeName.</change>
@@ -198,8 +204,8 @@
             <div type="transcription">
                 <pb facs="00000080.jpg" n="1"/>
                 <note hand="#pencil" place="margin(right)" type="foliation">48</note>
-                <div type="note">
-                    <note>[écriture du Baron de Goltz] Note</note>
+                <div type="note" hand="#new_hand">
+                    <note> Note</note>
                     <p>Si Mr. le General, <persName type="bi">Matachowski</persName> et en meme<lb/> tems Colonel d’un Regiment d’Hussars Prussiens
                         <lb/>est encore en vie, et qui d’ailleurs est aussi <lb/>dans le Cas d’etre proselite tout come celui <lb/>en question ; Il
                         est à souhaiter que le dernier <lb/>s’adressat au dit General.</p>
@@ -208,9 +214,9 @@
                         <lb/>en trop fraiche mémoire, pour qu’on ne puisse <lb/>pas en prendre le modele pour revendiquer <lb/>le patrimoine de
                             <persName type="bi">Mr. Matachowski</persName> en question.</p>
                 </div>
-                <div type="letter">
+                <div type="letter" hand="#major_hand">
                     <opener>
-                        <salute>[écriture d’Euler] Monsieur mon très-chèr et très-honoré Oncle,</salute>
+                        <salute> Monsieur mon très-chèr et très-honoré Oncle,</salute>
                     </opener>
                     <p>Voici une notre que Mr. le Chambellan <persName type="bi">Baron de Goltz</persName> vient de <lb/>me remettre tout à l’heure.
                         D’ailleurs ce cavallier souhaite d’appren<lb break="no"/>dre au juste tous les détails des affaires de <persName type="bi">Mr
@@ -243,7 +249,7 @@
                             1768</date>.</dateline>
                     </closer>
                 </div>
-                <div type="letter">
+                <div type="letter" hand="#major_hand">
                     <pb facs="00000082.jpg" n="3"/>
                     <note hand="#pencil" place="margin-right" type="foliation">49</note>
                     <p rend="align(center)">Suite de mon Journal.</p>
