@@ -15,6 +15,7 @@
   - Scripts
     - Correction
     - Encoding
+    - Modification
     - Transcription
   - Training
     - Ground Truth
@@ -58,6 +59,7 @@ In here, there are scripts for three parts of the program: transcription, post-p
 For the transcription, there is a script to transcribe with Kraken by using a command line, instead of the eScriptorium interface.
 For post-processing, there are scripts to help correcting the text after ocerisation. There is two types of scripts: one that search errors and one that correct them. The scripts are available for XML types files (PAGE and ALTO) and TEXT files.
 Finally, for encoding, there are three scripts: one to encode metadata, one to encode texts and one to correct recurring errors due to the previously mentioned script.
+There also is a fourth folder : modification. This one does not contain files linked directly to the program of the digital edition of corpus but is related to the edition. This folder contains scripts for the update and transformation of already TEI XML encoded files (transcriptions, indexes) that must be added to the last part of the program : the publication.
 
 #### Documentation
 There are many elements in the *Project development* folder that requires help to use it correctly and easily. 
