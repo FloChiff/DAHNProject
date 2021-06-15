@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -238,8 +247,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-06-30" who="#johanna.preusse">Added comment regarding the letter of Tieck to von der Hagen. Added respStmt for
                 Theresa Schmidt.</change>
             <change when-iso="2017-06-26" who="#johanna.preusse">Finished encoding / Upload.</change>
@@ -249,8 +259,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000956.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">279</note>
-                <p><note hand="#pencil_two" place="inline">Tieck an Raumer</note></p>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">279</note>
+                <note hand="#pencil_two" place="inline">Tieck an Raumer</note>
                 <opener>
                     <dateline rend="align(right)"><date when-iso="1840-02-18">Den <hi rend="underline">18 <hi rend="latin"><choice>
                                         <abbr>Febr.</abbr>
@@ -264,7 +274,7 @@
                 </opener>
                 <p>Wieder habe ich so lange gezögert, Ihnen zu schreiben, <lb/> daß ich mich schämen muß. Doch – – <hi rend="latin">&amp;c &amp;c</hi>
                     — <lb/> Wie schöne Briefe habe ich seit dem von Ihnen erhalten! <lb/> Schöne, aber nicht erfreuliche. – Wie kommen Sie, <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> der ächte Mann, zu dieser Hypochondrie, zu dem Kleinmuth?<note
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> der ächte Mann, zu dieser Hypochondrie, zu dem Kleinmuth?<note
                         resp="#johanna.preusse">1840-1842 erschien die <rs ref="#w05776" type="bi">2. Auflage</rs> von Raumers <hi rend="latin"
                             >Geschichte der Hohenstaufen</hi>. Die erneute Auseinandersetzung mit seinem Werk (<rs ref="#w00220" type="bi"
                             >Erstveröffentlichung</rs> 1823–25) und dessen Rezeption machte Raumer offenbar zu schaffen, worauf neben dem dem
@@ -278,14 +288,15 @@
                             <expan>Johann</expan>
                         </choice>
                         <lb/> Müller</persName> erinnern, (der Brief ist jezt auch gedruckt) daß es <lb/> Ihnen ziemt, über Alles das, was verdrüßlich
-                    sein <lb/> möchte, kein <hi rend="latin">Mouvement</hi> zu machen.<note resp="#johanna.preusse">Der Brief Schlözers an Müller, auf
-                        den Tieck anspielt, handelt vom Umgang mit Kritiken: „Eine Recension! Eine Recension! – Mann, Schweizermann, seyen Sie <hi
-                            rend="latin">größer</hi>! Sie kennen die Welt, also auch die literarische, hoffentlich auch noch die literarische deutsche
-                        Welt. Wenn mir einer <hi rend="latin">mündlich</hi> sagte, ich wäre ein Dummkopf, so geb’ ich ihm ein par Ohrfeigen. Sagt mir
-                        aber einer in einem Epigramm oder in einer Recension, ich wäre ein Rindvieh, ich hätte gestolen, ich hätte einen falschen Eid
-                        getan, so mache ich kein <hi rend="latin">mouvement</hi>. Und Sie – einer Recension – eines <hi rend="latin">Anonymi</hi> –
-                        wegen wollen die ganze Autorschaft aufgeben? O Mann! Schweizermann!“ (Schlözer an Müller, <date when-iso="1781-01-16">16.
-                            Januar 1781</date>, in: <title ref="#w05777">Briefe an Johann von Müller III</title>, S. 49).</note>
+                    sein <lb/> möchte, kein <hi rend="latin">Mouvement</hi> zu machen.<note resp="#johanna.preusse"><p xml:lang="de">Der Brief
+                            Schlözers an Müller, auf den Tieck anspielt, handelt vom Umgang mit Kritiken: „Eine Recension! Eine Recension! – Mann,
+                            Schweizermann, seyen Sie <hi rend="latin">größer</hi>! Sie kennen die Welt, also auch die literarische, hoffentlich auch
+                            noch die literarische deutsche Welt. Wenn mir einer <hi rend="latin">mündlich</hi> sagte, ich wäre ein Dummkopf, so geb’
+                            ich ihm ein par Ohrfeigen. Sagt mir aber einer in einem Epigramm oder in einer Recension, ich wäre ein Rindvieh, ich hätte
+                            gestolen, ich hätte einen falschen Eid getan, so mache ich kein <hi rend="latin">mouvement</hi>. Und Sie – einer Recension
+                            – eines <hi rend="latin">Anonymi</hi> – wegen wollen die ganze Autorschaft aufgeben? O Mann! Schweizermann!“ (Schlözer an
+                            Müller, <date when-iso="1781-01-16">16. Januar 1781</date>, in: <title ref="#w05777">Briefe an Johann von Müller
+                                III</title>, S. 49).</p></note>
                 </p>
                 <p>
                     <date when-iso="1840-02-22">Den 22<hi rend="superscript">sten</hi>
@@ -295,20 +306,23 @@
                             </choice></hi></date> Ihre Werke werden stehn bleiben und gelesen werden, <lb/> wenn das Meiste der jetzigen Tage völlig
                     vergessen ist. Es mag <lb/> anmassend klingen, von der Zukunft prophezeien zu wollen, <lb/> aber es giebt doch auch ein Gefühl
                     nicht nur, sondern selbst eine <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> Ueberzeugung und richtige Einsicht von der Vortreflichkeit eines
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> Ueberzeugung und richtige Einsicht von der Vortreflichkeit eines
                     <lb/> Werkes, das unmöglich den gesunden und unpartheiischen Sinn <lb/> täuschen kann. Wie jezt in der Physik alle 12 Wochen eine
                     <lb/> neue, unerhörte und ungeahndete Entdeckung auftaucht, über <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> welche die Kundigen jubeln, und neue Naturgesetze wahrnehmen, <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> wo ich als Laye nur neue Erscheinungen wahrnehmen kann, – <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> so eifern jezt viele neue Geschichtschreiber wett mit diesen, <lb/>
-                    Alles neuzugestalten, ganz neue Ansichten zu erfinden, wie <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> oft willkührlich aus der Luft gegriffen, oder vorige, längst <lb/>
-                    <note hand="#pencil_three" place="margin-left inline">+</note> ausgemachte Dinge fratzenhaft auf den Kopf zu stellen. <lb/>
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> welche die Kundigen jubeln, und neue Naturgesetze wahrnehmen, <lb/>
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> wo ich als Laye nur neue Erscheinungen wahrnehmen kann, – <lb/>
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> so eifern jezt viele neue Geschichtschreiber wett mit diesen,
+                    <lb/> Alles neuzugestalten, ganz neue Ansichten zu erfinden, wie <lb/>
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> oft willkührlich aus der Luft gegriffen, oder vorige, längst <lb/>
+                    <note hand="#pencil_three" place="margin(left) inline">+</note> ausgemachte Dinge fratzenhaft auf den Kopf zu stellen. <lb/>
                     <persName ref="#p0794" type="bi">Ranke</persName> mag sich nur hüthen, daß ihn seine zu rasche Combination <lb/> und
                     Entdeckungslust nicht in diese <gap extent="1w" reason="illegible"/><!-- Asterien? -->, in diese <hi rend="latin">enfans <lb/>
-                        perdus</hi> der wahren Armen hinein treibt. <unclear>Langen</unclear><note resp="#johanna.preusse">Möglicherweise ist
-                            <persName ref="#p3705" type="bi">Friedrich Albert von Langenn</persName> gemeint.</note> hier (ihr wahrer <lb/> Freund und
-                    Bewundrer) erzählte mir, daß er den faulen <persName ref="#p3704" type="bi">Kaiser <hi rend="latin">Frd III</hi></persName>
+                        perdus</hi> der wahren Armen hinein treibt. <unclear>Langen</unclear><note resp="#johanna.preusse"><p xml:lang="de"
+                            >Möglicherweise ist <persName ref="#p3705" type="bi">Friedrich Albert von Langenn</persName> gemeint.</p><p xml:lang="fr"
+                            >Il s'agit peut-être de <persName ref="#p3705" type="bi"> Friedrich Albert von Langenn </persName>.</p><p xml:lang="en"
+                            >Possibly <persName ref="#p3705" type="bi"> Friedrich Albert von Langenn </persName> is meant.</p></note> hier (ihr
+                    wahrer <lb/> Freund und Bewundrer) erzählte mir, daß er den faulen <persName ref="#p3704" type="bi">Kaiser <hi rend="latin">Frd
+                            III</hi></persName>
                     <lb/> in seinem neusten Buche<!-- Buch von Langen? um 1840 über Frd III? --> rechtfertigen, und so zu sagen bewundern will. </p>
                 <pb facs="00000957.jpg" n="2"/>
                 <p> Den <date when-iso="1840-02-25"><hi rend="underline">25<hi rend="superscript">sten</hi>
@@ -386,7 +400,7 @@
                     Kunst und Poesie; da er von allen diesen grossen Gegenständen <lb/> gar keine Kenntniß nicht nur besizt, sondern ihm selbst der
                     Sinn <lb/> für diese Erscheinungen des Göttlichen abgeht. Ich habe eine sonderbare Erfahrung <lb/> beim Lesen gemacht. <lb/>
                     <pb facs="00000958.jpg" n="3"/>
-                    <note hand="#pencil_one" place="margin-right" type="foliation">280</note> Ich liebe <persName ref="#p2767" type="bi"
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">280</note> Ich liebe <persName ref="#p2767" type="bi"
                         >Kant</persName> nicht. Seine Bücher liegen ganz ausserhalb meines <lb/> Horizontes. Aber so oft <hi rend="latin"><persName
                             ref="#p0310" type="bi"><choice>
                                 <abbr>St.</abbr>
@@ -418,9 +432,12 @@
                     <lb/> für die nachgelassenen Dramen der <hi rend="underline latin"><persName ref="#p0374" type="bi"><choice>
                                 <abbr>Adel.</abbr>
                                 <expan>Adelheid</expan>
-                            </choice> Reinbold</persName></hi>.<note resp="#johanna.preusse">Die geplante Ausgabe nachgelassener Dramen der 1839
-                        verstorbenen <persName ref="#p0374" type="bi">Adelheid Reinbold</persName> kam nicht zustande.</note> Woll<supplied
-                        reason="damage">ten</supplied>
+                            </choice> Reinbold</persName></hi>.<note resp="#johanna.preusse"><p xml:lang="de">Die geplante Ausgabe nachgelassener
+                            Dramen der 1839 verstorbenen <persName ref="#p0374" type="bi">Adelheid Reinbold</persName> kam nicht zustande.</p>
+                        <p xml:lang="fr">L'édition prévue des drames posthumes de <persName ref="#p0374" type="bi"> Adelheid Reinbold </persName>,
+                            décédé en 1839, ne s'est pas concrétisée.</p>
+                        <p xml:lang="en">The planned edition of posthumous dramas by <persName ref="#p0374" type="bi"> Adelheid Reinbold </persName>,
+                            who died in 1839, did not materialize.</p></note> Woll<supplied reason="damage">ten</supplied>
                     <lb/> Sie nicht auch für Ihre Bekannten <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -449,35 +466,47 @@
                         <expan>und</expan>
                     </choice> bin auch Theilnehmer. </p>
                 <p> Nun Adieu! Bald sehn wir uns. Schreiben Sie <lb/> recht bald, und recht umständlich, um so schöner. – Ich <lb/> lege für unsren
-                        <hi rend="latin"><persName ref="#p0199" type="bi">Hagen</persName></hi> ein Blatt ein.<note resp="#johanna.preusse">Vgl. den
-                        Brief von Tieck an <persName ref="#p0199" type="bi">von der Hagen</persName> vom <date when-iso="1840-03-04">4. März
-                            1840</date>, in dem sich Tieck für das Geschenk der drei <title ref="#w05778">Minnesinger</title>-Bände bedankt. Der Brief
-                        ist nachzulesen bei <rs ref="#w05779" type="bi">Schweikert 1974</rs>, S. 257f.</note> Allen den Ihrigen <lb/> meine <choice>
+                        <hi rend="latin"><persName ref="#p0199" type="bi">Hagen</persName></hi> ein Blatt ein.<note resp="#johanna.preusse"><p
+                            xml:lang="de">Vgl. den Brief von Tieck an <persName ref="#p0199" type="bi">von der Hagen</persName> vom <date
+                                when-iso="1840-03-04">4. März 1840</date>, in dem sich Tieck für das Geschenk der drei <title ref="#w05778"
+                                >Minnesinger</title>-Bände bedankt. Der Brief ist nachzulesen bei <rs ref="#w05779" type="bi">Schweikert 1974</rs>, S.
+                            257f.</p>
+                        <p xml:lang="fr">Voir la lettre de Tieck à <persName ref="#p0199" type="bi"> de der Hagen </persName> de <date
+                                when-iso="1840-03-04">4 Mars 1840</date>, dans lequel Tieck remercie pour le don des trois volumes <title
+                                ref="#w05778"> Minnesinger </title>. La lettre peut être lue à <rs ref="#w05779" type="bi">Schweikert 1974</rs>, p.
+                            257f.</p>
+                        <p xml:lang="en">See the letter from Tieck to <persName ref="#p0199" type="bi"> from der Hagen </persName> from <date
+                                when-iso="1840-03-04">4 March 1840</date>, in which Tieck thanks for the gift of the three <title ref="#w05778">
+                                Minnesinger </title> volumes. The letter can be read at <rs ref="#w05779" type="bi"> Schweikert 1974 </rs>, p.
+                            257f.</p></note> Allen den Ihrigen <lb/> meine <choice>
                         <abbr>herzl.</abbr>
                         <expan>herzlichen</expan>
-                    </choice> Grüsse <anchor xml:id="a1"/>
+                    </choice> Grüsse <!--<anchor xml:id="a1"/>-->
                 </p>
                 <closer><signed rend="align(center)">Ihr <lb/> getreuer <choice>
                             <abbr>Frd</abbr>
                             <expan>Freund</expan>
                         </choice>
                         <lb/>
-                        <hi rend="latin">L. Tieck.</hi></signed></closer>
-                <pb facs="00000959.jpg" n="4"/>
-                <stamp>[Stempel:] DRESDEN <date when-iso="1840-03-uu"><gap extent="1c"/> MAERZ 40</date></stamp>
-                <note resp="#johanna.preusse">Neben dem Datumsstempel von Anfang März 1840 trägt das Umschlagblatt einige weitere Postvermerke.</note>
-                <address rend="vertical">
-                    <addrLine rend="align(center)">An den Herrn</addrLine>
-                    <addrLine rend="align(center)">Regierungsrath und Professor <hi rend="latin underline">Friedrich</hi>
-                    </addrLine>
-                    <addrLine rend="align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgebohren</addrLine>
-                    <milestone rend="horizontal-rule align(center)" unit="none"/>
-                    <addrLine rend="align(left)"><hi rend="underline">frei</hi>
-                    </addrLine>
-                    <addrLine rend="align(center)"><hi rend="latin underline">Berlin</hi>
-                    </addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline">Kochstraße</hi>.</addrLine>
-                </address>
+                        <hi rend="latin">L. Tieck.</hi></signed>
+                    <pb facs="00000959.jpg" n="4"/>
+                    <stamp>[Stempel:] DRESDEN <date when="1840-03"><gap extent="1c"/> MAERZ 40</date></stamp>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Neben dem Datumsstempel von Anfang März 1840 trägt das Umschlagblatt einige weitere
+                            Postvermerke.</p><p xml:lang="fr">En plus du timbre à date du début mars 1840, la page de garde porte quelques autres
+                            billets d'affranchissement.</p><p xml:lang="en">In addition to the date stamp from the beginning of March 1840, the cover
+                            sheet bears a few other postage notes.</p></note>
+                    <address rend="vertical">
+                        <addrLine rend="align(center)">An den Herrn</addrLine>
+                        <addrLine rend="align(center)">Regierungsrath und Professor <hi rend="latin underline">Friedrich</hi>
+                        </addrLine>
+                        <addrLine rend="align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgebohren</addrLine>
+                        <milestone rend="horizontal-rule align(center)" unit="none"/>
+                        <addrLine rend="align(left)"><hi rend="underline">frei</hi>
+                        </addrLine>
+                        <addrLine rend="align(center)"><hi rend="latin underline">Berlin</hi>
+                        </addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline">Kochstraße</hi>.</addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

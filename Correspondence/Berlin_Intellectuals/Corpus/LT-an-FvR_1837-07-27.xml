@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -221,8 +230,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-04-25" who="#johanna.preusse">Upload.</change>
             <change when-iso="2017-03-30" who="#johanna.preusse">Added index links.</change>
             <change when-iso="2017-03-21" who="#johanna.preusse">Finished encoding of body.</change>
@@ -233,19 +243,20 @@
         <body>
             <div type="transcription">
                 <pb facs="00000940.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">271</note>
-                <p><note hand="#pencil_two" place="inline"><hi rend="underline">Tieck an Raumer</hi></note></p>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">271</note>
+                <note hand="#pencil_two" place="inline"><hi rend="underline">Tieck an Raumer</hi></note>
                 <opener><salute rend="align(center)">Mein geliebter Freund,</salute></opener>
                 <p> Mit Wehmuth reiche ich Ihnen die Hand bei <lb/> dieser ziemlich langen Trennung, von uns und <lb/> dem Vaterlande. Ich fange an,
                     abergläubisch <lb/> zu werden, und bin nicht selten in einer ängst<lb break="no"/>lichen Stimmung. Sie waren schon einmal <lb/> in
-                            <hi><placeName ref="#l0044" type="bi">Paris</placeName></hi> lebensgefährlich krank,<note resp="#johanna.preusse">Raumer
-                        war bereits 1827 und 1830 zu Forschungszwecken nach Paris gereist.</note> Sie sind auf <lb/> Reisen zu fleissig und gönnen
-                    sich zu wenig <lb/> Ruhe; auch das leztemal kamen sie mit kran<lb break="no"/>kem Beine an, was leicht gefährlich werden <lb/>
-                    konnte. – Ich sehe Sie also in diesem Jahre nicht <lb/> mehr, ich will Ihnen von meiner Trauer darüber <lb/> nicht vorschwatzen. –
-                    Was Sie mir von jenen <lb/> politischen Narrenpossen schrieben, diesen jäm<lb break="no"/>merlichen Denunziationen, hat doch auch
-                    seine <lb/> sehr ernsthafte Seite. Man kann sich niemals <lb/> das Kindische erlauben, wenn man nicht über<lb break="no"/>zeugt
-                    ist, daß die Behörden, die männlich sein <lb/> sollten, ebenfalls kindisch sind: wenn man <lb/> nicht weiß, daß es keine
-                    öffentliche Stim̄e <lb/>
+                            <hi><placeName ref="#l0044" type="bi">Paris</placeName></hi> lebensgefährlich krank,<note resp="#johanna.preusse"><p
+                            xml:lang="de">Raumer war bereits 1827 und 1830 zu Forschungszwecken nach Paris gereist.</p><p xml:lang="fr">Raumer s'était
+                            déjà rendu à Paris à des fins de recherche en 1827 et 1830.</p><p xml:lang="en">Raumer had already traveled to Paris for
+                            research purposes in 1827 and 1830.</p></note> Sie sind auf <lb/> Reisen zu fleissig und gönnen sich zu wenig <lb/> Ruhe;
+                    auch das leztemal kamen sie mit kran<lb break="no"/>kem Beine an, was leicht gefährlich werden <lb/> konnte. – Ich sehe Sie also
+                    in diesem Jahre nicht <lb/> mehr, ich will Ihnen von meiner Trauer darüber <lb/> nicht vorschwatzen. – Was Sie mir von jenen <lb/>
+                    politischen Narrenpossen schrieben, diesen jäm<lb break="no"/>merlichen Denunziationen, hat doch auch seine <lb/> sehr ernsthafte
+                    Seite. Man kann sich niemals <lb/> das Kindische erlauben, wenn man nicht über<lb break="no"/>zeugt ist, daß die Behörden, die
+                    männlich sein <lb/> sollten, ebenfalls kindisch sind: wenn man <lb/> nicht weiß, daß es keine öffentliche Stim̄e <lb/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -275,8 +286,8 @@
                         <expan>und</expan>
                     </choice>
                     <placeName ref="#l0092" type="bi">Preussen</placeName>, gerade <pb facs="00000942.jpg" n="3"/>
-                    <note hand="#pencil_one" place="margin-right" type="foliation">272</note> jezt! Und Sie werden eigentlich verfolgt, weil <lb/> Sie
-                        <placeName ref="#l0092" type="bi">Preussen</placeName> so innig lieben; so übertrieben, <lb/> möchte man sagen, wenn der wahre
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">272</note> jezt! Und Sie werden eigentlich verfolgt, weil <lb/>
+                    Sie <placeName ref="#l0092" type="bi">Preussen</placeName> so innig lieben; so übertrieben, <lb/> möchte man sagen, wenn der wahre
                     Patriotismus <lb/> je übertrieben werden könnte. – <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>Aber jene matt
                     <lb/> gewordene moralische Elasticität muß sich wieder <lb/> erheben und spannen. <stamp>[Stempel:] Staatsbibliothek Preußischer
                         Kulturbesitz</stamp>
@@ -299,13 +310,21 @@
                     <hi rend="latin"><persName ref="#p3678" type="bi">v. Stockhausen</persName></hi> verheirathet worden: auch <lb/>
                     <hi rend="latin"><persName ref="#p2797 #p2798" type="bi">Cubieres</persName></hi> sind wieder hier. Aber <hi rend="latin"
                             ><persName ref="#p2323" type="bi">Baudis<lb break="no"/>sin</persName></hi> ist im̄er noch sehr traurig. Der Arme ist
-                    <lb/> eigentlich ganz verlassen.<note resp="#johanna.preusse">Nachdem 1836 Heinrich Wolf von Baudissins <rs ref="#p2324" type="bi"
-                            >Frau</rs> gestorben war, wurde nach der Adoptivtochter (und Nichte) <persName ref="#p2797" type="bi">Isabella von
-                            Baudissin</persName> mit <persName ref="#p2798" type="bi">Simon de Cubières</persName> nun auch deren Schwester <persName
-                            ref="#p3677" type="bi">Clotilde</persName> verheiratet.</note> Und ich sehe nicht <lb/> ein, wie ihm zu helfen wäre. – Oft
-                    bin <lb/> ich noch leidend, als Nachwirkung von jenem <lb/> verwünschten Fall.<note resp="#johanna.preusse">Gemeint ist
-                        wahrscheinlich Tiecks Unfall auf der Fahrt zur Kur im August 1836.</note> Mir scheint auch, als wenn <lb/> seit dem mein
-                    Gemüth finsterer wäre. </p>
+                    <lb/> eigentlich ganz verlassen.<note resp="#johanna.preusse"><p xml:lang="de">Nachdem 1836 Heinrich Wolf von Baudissins <rs
+                                ref="#p2324" type="bi">Frau</rs> gestorben war, wurde nach der Adoptivtochter (und Nichte) <persName ref="#p2797"
+                                type="bi">Isabella von Baudissin</persName> mit <persName ref="#p2798" type="bi">Simon de Cubières</persName> nun auch
+                            deren Schwester <persName ref="#p3677" type="bi">Clotilde</persName> verheiratet.</p><p xml:lang="fr">Après le décès de
+                                l'<rs ref="#p2324" type="bi">épouse</rs> de Heinrich Wolf von Baudissin en 1836, la fille adoptive (et nièce) fut
+                            nommée <persName ref="#p2797" type="bi"> Isabella von Baudissin </persName> avec <persName ref="#p2798" type="bi"> Simon
+                                de Cubières </persName> maintenant aussi sa soeur <persName ref="#p3677" type="bi">Clotilde </persName> marié.</p><p
+                            xml:lang="en">After Heinrich Wolf von Baudissin's <rs ref="#p2324" type="bi"> wife </rs> died in 1836, the adopted
+                            daughter (and niece) was named <persName ref="#p2797" type="bi"> Isabella von Baudissin </persName> with <persName
+                                ref="#p2798" type="bi"> Simon de Cubières </persName> now also her sister <persName ref="#p3677" type="bi"> Clotilde
+                            </persName> married.</p></note> Und ich sehe nicht <lb/> ein, wie ihm zu helfen wäre. – Oft bin <lb/> ich noch leidend,
+                    als Nachwirkung von jenem <lb/> verwünschten Fall.<note resp="#johanna.preusse"><p xml:lang="de">Gemeint ist wahrscheinlich Tiecks
+                            Unfall auf der Fahrt zur Kur im August 1836.</p><p xml:lang="fr">Il s'agit probablement de l'accident de Tieck sur le
+                            chemin de la cure en août 1836.</p><p xml:lang="en">This is probably Tieck's accident on the way to the cure in August
+                            1836.</p></note> Mir scheint auch, als wenn <lb/> seit dem mein Gemüth finsterer wäre. </p>
                 <p> Ja, ja, Sie müssen bald wieder kom̄en. <lb/> Warum leben Sie nicht mit <rs ref="#p0201" type="bi">Frau</rs>
                     <choice>
                         <abbr>u</abbr>
@@ -336,10 +355,12 @@
                         Streichung der Stelle von Raumer.</note><lb/> Brun̄enkur hier wäre ja ein guter Vorwand <lb/> zum Urlaub. – <hi rend="latin"
                             ><persName ref="#p0711" type="bi">Uechtritz</persName></hi> war nur kurze <lb/> Zeit hier: als Mädchen gefiel mir <rs
                         ref="#p3493" type="bi">die kleine</rs>
-                    <lb/> sonst mehr als Frau.<note resp="#johanna.preusse">Seit Mai 1837 war Marie von Balan, auf die sich Tieck hier wohl bezieht,
-                        mit Friedrich von Uechtritz verheiratet.</note>
-                    <anchor xml:id="a1"/> Er neigt in der Poesie <lb/> etwas zum Pedantismus; ich warne: denn <lb/> nur ein ungeheurs Talent kann das
-                        ver<lb break="no"/>tragen: dann, wie bei <hi rend="latin"><persName ref="#p1508" type="bi">Dante</persName></hi> wird das
+                    <lb/> sonst mehr als Frau.<note resp="#johanna.preusse"><p xml:lang="de">Seit Mai 1837 war Marie von Balan, auf die sich Tieck
+                            hier wohl bezieht, mit Friedrich von Uechtritz verheiratet.</p><p xml:lang="fr">Marie von Balan, à laquelle Tieck fait
+                            probablement référence ici, était mariée à Friedrich von Uechtritz depuis mai 1837.</p><p xml:lang="en">Marie von Balan,
+                            to whom Tieck is probably referring here, had been married to Friedrich von Uechtritz since May 1837.</p></note>
+                    <!--<anchor xml:id="a1"/>--> Er neigt in der Poesie <lb/> etwas zum Pedantismus; ich warne: denn <lb/> nur ein ungeheurs Talent
+                    kann das ver<lb break="no"/>tragen: dann, wie bei <hi rend="latin"><persName ref="#p1508" type="bi">Dante</persName></hi> wird das
                     Genie <lb/> dadurch erhöht: <hi rend="latin"><persName ref="#p1520" type="bi">B. Jonson</persName></hi> wäre gar nichts, <lb/>
                     wenn ihm jene Pedantrie nicht so ausser<lb break="no"/>ordentlich geholfen hätte: zulezt hat sie ihn <lb/> freilich auch wieder
                     vernichtet.. <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a2"/><hi rend="latin"><persName ref="#p0249" type="bi"
@@ -391,7 +412,7 @@
                                 <abbr>Lud.</abbr>
                                 <expan>Ludwig</expan>
                             </choice> Tieck.</hi></signed>
-                    <anchor xml:id="a2"/><lb/>
+                    <!--<anchor xml:id="a2"/><lb/>-->
                     <salute>Grüssen Sie doch <rs ref="#p0858" type="bi">meinen Bruder</rs>. Er soll kom̄en!</salute>
                 </closer>
             </div>

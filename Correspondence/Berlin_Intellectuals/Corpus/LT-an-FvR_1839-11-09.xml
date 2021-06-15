@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -222,8 +231,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-26" who="#johanna.preusse">Corrected "vector" to "rector". Additional minor corrections.</change>
             <change when-iso="2017-05-25" who="#johanna.preusse">Finished encoding / Upload.</change>
         </revisionDesc>
@@ -232,8 +242,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000952.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">277</note>
-                <p><note hand="#pencil_two" place="inline align(center)">Tieck an Raumer</note></p>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">277</note>
+                <note hand="#pencil_two" place="inline align(center)">Tieck an Raumer</note>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>
                 <opener><salute rend="align(center)">Geliebter Freund,</salute></opener>
                 <p> Wie könnte <hi rend="underline">Ich</hi> einem Sterblichen zürnen, <lb/> der mir nicht schreibt? – und gar Ihnen, von <lb/> dem
@@ -246,9 +256,9 @@
                     Menschen, ohne sich vorzudrängen <lb/> oder abzusprechen: wenn er erzählt, hat <lb/> Alles Inhalt. Vielleicht interessirt es Sie
                     auch, <lb/> durch ihn Manches von <placeName ref="#l0025" type="bi">Amerika</placeName> zu erfahren: <lb/> in jedem Fall bitte ich
                     Sie, sich seiner recht <lb/> freundschaftlich anzunehmen. </p>
-                <anchor xml:id="a1"/>
+                <!--<anchor xml:id="a1"/>-->
                 <pb facs="00000953.jpg" n="2"/>
-                <stamp rend="align(right)">[Achteckiges Zeichen mit Krone und Buchstabenfolge]</stamp>
+                <fw><stamp rend="align(right)">[Achteckiges Zeichen mit Krone und Buchstabenfolge]</stamp></fw>
                 <!-- Stempel oder Wasserzeichen? Evtl. "HTM" vom Morettischen HOftheater?? -->
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a2"/>
                 <p>
@@ -256,37 +266,62 @@
                         rend="underline">klein</hi>
                     <lb/> wenig besser, als sonst gefallen. Ich kann <lb/> aber mit ihm durchaus nichts anfangen; er <lb/> mit sich selber wohl auch
                     nicht. Es ist gewiß <lb/> ein verlohrner Mensch. Ich kann nicht anders, <lb/> als der <rs ref="#p0198" type="bi">Mutter</rs> böse
-                    sein, die ihn mit der <hi rend="latin">Gröben</hi><note resp="#johanna.preusse">Mit „der Gröben“ ist wahrscheinlich die Großmutter
-                        von Hugo Solger und Mutter von Henriette Solger, <persName ref="#p3690" type="bi">Henriette Emilie von der Groeben</persName>
-                        gemeint. Vermutlich unterstützte sie <persName ref="#p0198" type="bi">Henriette Solger</persName> bei der Erziehung <persName
-                            ref="#p3684" type="bi">Hugos</persName> und seiner <rs ref="#p3691 #p3692 #p3693" type="bi">drei Schwestern</rs>, seit
-                        deren Vater (und Tiecks Freund) <persName ref="#p0146" type="bi">Karl Wilhelm Ferdinand Solger</persName> 1819 verstorben
-                        war.</note>
+                    sein, die ihn mit der <hi rend="latin">Gröben</hi><note resp="#johanna.preusse"><p xml:lang="de">Mit „der Gröben“ ist
+                            wahrscheinlich die Großmutter von Hugo Solger und Mutter von Henriette Solger, <persName ref="#p3690" type="bi">Henriette
+                                Emilie von der Groeben</persName> gemeint. Vermutlich unterstützte sie <persName ref="#p0198" type="bi">Henriette
+                                Solger</persName> bei der Erziehung <persName ref="#p3684" type="bi">Hugos</persName> und seiner <rs
+                                ref="#p3691 #p3692 #p3693" type="bi">drei Schwestern</rs>, seit deren Vater (und Tiecks Freund) <persName ref="#p0146"
+                                type="bi">Karl Wilhelm Ferdinand Solger</persName> 1819 verstorben war.</p><p xml:lang="fr">"Der Gröben" est
+                            probablement la grand-mère d'Hugo Solger et la mère d'Henriette Solger, <persName ref="#p3690" type="bi"> Henriette Emilie
+                                von der Groeben </persName>. Vraisemblablement, elle a soutenu <persName ref="#p0198" type="bi"> Henriette Solger
+                            </persName> en élevant <persName ref="#p3684" type="bi"> Hugos </persName> et ses <rs ref="#p3691 #p3692 #p3693" type="bi"
+                                > trois soeurs </rs>, depuis que leur père (et ami Tiecks) <persName ref="#p0146" type="bi"> Karl Wilhelm Ferdinand
+                                Solger </persName> est décédé en 1819.</p><p xml:lang="en">"Der Gröben" is probably the grandmother of Hugo Solger and
+                            mother of Henriette Solger, <persName ref="#p3690" type="bi"> Henriette Emilie von der Groeben </persName>. Presumably she
+                            supported <persName ref="#p0198" type="bi"> Henriette Solger </persName> in raising <persName ref="#p3684" type="bi">
+                                Hugos </persName> and his <rs ref="#p3691 #p3692 #p3693" type="bi"> three sisters </rs>, since their father (and
+                            Tiecks friend) <persName ref="#p0146" type="bi"> Karl Wilhelm Ferdinand Solger </persName> died in 1819.</p></note>
                     <lb/> und der Schwester Hülfe zusammen recht ge<lb break="no"/>flissentlich verdorben haben. <stamp>[Stempel:] Staatsbibliothek
                         Preußischer Kulturbesitz</stamp>
                 </p>
-                <p> Mir ist es gleich, womit unser neues Haus <lb/> eröffnet wird;<note resp="#johanna.preusse">Das 1839 im Bau begriffene Königliche
-                        Hoftheater in Dresden wurde am <date when-iso="1841-04-13">13. April 1841</date> mit <persName ref="#p0194" type="bi"
-                            >Goethes</persName>
-                        <title ref="#w00362">Torquato Tasso</title> eröffnet.</note> es ist nur deshalb nicht gut, mit <lb/> einer Oper anzufangen, um
-                    den Hochmuth der <lb/> Operisten nicht zu vermehren: auch wird die <lb/>
+                <p> Mir ist es gleich, womit unser neues Haus <lb/> eröffnet wird;<note resp="#johanna.preusse"><p xml:lang="de">Das 1839 im Bau
+                            begriffene Königliche Hoftheater in Dresden wurde am <date when-iso="1841-04-13">13. April 1841</date> mit <persName
+                                ref="#p0194" type="bi">Goethes</persName>
+                            <title ref="#w00362">Torquato Tasso</title> eröffnet.</p><p xml:lang="fr">Le Théâtre de la Cour Royale de Dresde, qui
+                            était en construction en 1839, a ouvert ses portes le <date when-iso="1841-04-13">13 Avril 1841</date> ouvert avec
+                                <persName ref="#p0194" type="bi"> Goethe </persName>
+                            <title ref="#w00362"> Torquato Tasso </title>.</p><p xml:lang="en">The Royal Court Theater in Dresden, which was under
+                            construction in 1839, was opened on <date when-iso="1841-04-13">13 April 1841</date> opened with <persName ref="#p0194"
+                                type="bi"> Goethe's </persName>
+                            <title ref="#w00362"> Torquato Tasso </title>.</p></note> es ist nur deshalb nicht gut, mit <lb/> einer Oper anzufangen,
+                    um den Hochmuth der <lb/> Operisten nicht zu vermehren: auch wird die <lb/>
                     <hi rend="latin"><persName ref="#p3694" type="bi">Devrient</persName></hi> niemals die <hi rend="latin">Armida</hi> singen (sie
-                    ist <lb/> schon jezt nicht zur <hi rend="latin">Ifigenie</hi> zu bringen)<note resp="#johanna.preusse"><persName ref="#p3694"
-                            type="bi">Wilhelmine Schröder-Devrient</persName> sang in den folgenden Jahren sowohl die Armida als auch die Iphigenie in
-                            <persName ref="#p0252" type="bi">Glucks</persName> gleichnamigen <rs ref="#w05764 #w05765 #w05766" type="bi">Opern</rs>.
-                        Auf welche der beiden <rs ref="#w05765 #w05766" type="bi">Iphigenie-Opern</rs> sich Tieck bezieht, ist unklar. Die Hauptrolle
-                        von <title ref="#w05766">Iphigenie in Tauris</title> hatte Schröder-Devrient jedoch bereits mehrmals gesungen, als der Brief
-                        verfasst wurde.</note> und so <lb/> brächten wir denn einen kläglichen modernen <lb/> Mischmasch zum Vorschein: vielleicht
-                    eine bedeut<lb break="no"/>same Einweihung: ein Prolog zu aller Dum̄heit. </p>
+                    ist <lb/> schon jezt nicht zur <hi rend="latin">Ifigenie</hi> zu bringen)<note resp="#johanna.preusse"><p xml:lang="de"><persName
+                                ref="#p3694" type="bi">Wilhelmine Schröder-Devrient</persName> sang in den folgenden Jahren sowohl die Armida als auch
+                            die Iphigenie in <persName ref="#p0252" type="bi">Glucks</persName> gleichnamigen <rs ref="#w05764 #w05765 #w05766"
+                                type="bi">Opern</rs>. Auf welche der beiden <rs ref="#w05765 #w05766" type="bi">Iphigenie-Opern</rs> sich Tieck
+                            bezieht, ist unklar. Die Hauptrolle von <title ref="#w05766">Iphigenie in Tauris</title> hatte Schröder-Devrient jedoch
+                            bereits mehrmals gesungen, als der Brief verfasst wurde.</p><p xml:lang="fr"><persName ref="#p3694" type="bi"> Wilhelmine
+                                Schröder-Devrient </persName> a chanté Armida et Iphigénie dans <persName ref="#p0252" type="bi"> Glucks les années
+                                suivantes </persName> du même nom <rs ref="#w05764 #w05765 #w05766" type="bi"> opéras </rs>. On ne sait pas à quel des
+                            deux <rs ref="#w05765 #w05766" type="bi"> opéras d'Iphigénie </rs> Tieck fait référence. Cependant, Schröder-Devrient
+                            avait déjà chanté le rôle principal de <title ref="#w05766"> Iphigénie en Taureau </title> à plusieurs reprises lors de la
+                            rédaction de la lettre.</p><p xml:lang="en"><persName ref="#p3694" type="bi"> Wilhelmine Schröder-Devrient </persName>
+                            sang both Armida and Iphigenie in <persName ref="#p0252" type="bi"> Glucks in the following years </persName> of the same
+                            name <rs ref="#w05764 #w05765 #w05766" type="bi"> operas </rs>. It is unclear which of the two <rs ref="#w05765 #w05766"
+                                type="bi"> Iphigenie operas </rs> Tieck is referring to. However, Schröder-Devrient had already sung the leading role
+                            of <title ref="#w05766"> Iphigenia in Tauris </title> several times when the letter was written.</p></note> und so <lb/>
+                    brächten wir denn einen kläglichen modernen <lb/> Mischmasch zum Vorschein: vielleicht eine bedeut<lb break="no"/>same Einweihung:
+                    ein Prolog zu aller Dum̄heit. </p>
                 <p>
                     <hi rend="latin"><persName ref="#p0852" type="bi">Max</persName></hi> hat nun wieder <rs ref="#w05753 #w05750" type="bi">2 <choice>
                             <abbr>Bdchen</abbr>
                             <expan>Bändchen</expan>
                         </choice> meiner <hi rend="latin">No<lb break="no" type="sh"/>vellen</hi></rs> heraus gegeben, in denen sich 3 neue <lb/>
                     Kleinigkeiten befinden, 1) <hi rend="latin"><title ref="#w05754">der Schutgeist</title></hi>, – den <lb/>
-                    <anchor xml:id="a2"/>
+                    <!--<anchor xml:id="a2"/>-->
                     <pb facs="00000954.jpg" n="3"/>
-                    <note hand="#pencil_one" place="margin-right" type="foliation">278</note>
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">278</note>
                     <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a3"/> Sie schon kennen, 2) <hi><title ref="#w05751"
                             >Abendgespräche</title></hi>, und <lb/> 3) <hi rend="latin"><title ref="#w05752">die Glocke von Arragon</title></hi>. Ich
                     bin immer <lb/> von neuem beschämt, daß Sie nicht von mir <lb/> unmittelbar alle meine Schriften erhalten, <lb/> da Sie mir Alles
@@ -302,9 +337,9 @@
                     hat mich überfallen; ein wahres <lb/> Talent ist der Fleiß doch auch, man kann sich <lb/> nicht zu allen Zeiten dazu zwingen,
                     vollends in <lb/> meiner Beschäftigung. <hi rend="underlin">Lesen</hi>, <hi rend="underline"><unclear cert="low"><hi rend="latin"
                                 >Lamur</hi></unclear></hi>, immer! </p>
-                <anchor xml:id="a3"/>
+                <!--<anchor xml:id="a3"/>-->
                 <pb facs="00000955.jpg" n="4"/>
-                <stamp rend="align(right)">[Achteckiges Zeichen mit Krone und Buchstabenfolge]</stamp>
+                <fw><stamp rend="align(right)">[Achteckiges Zeichen mit Krone und Buchstabenfolge]</stamp></fw>
                 <!-- Buchstabenfolge="HTM?" Evtl. für Morettisches Hoftheater?-->
                 <p> Wie die From̄en bei Ueberschauung ihres Lebens <lb/> im̄erdar die nächste, persönlichste Einwirkung <lb/> Gottes ausspüren und im
                     Kleinsten bewundern, <lb/> – so verwundre ich mich oft über Glück, Zufall, <lb/> Stimmung, Krankheit <choice>

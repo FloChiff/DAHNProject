@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -226,8 +233,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-19" who="#johanna.preusse">Added comment regarding Ludlow's Memoirs.</change>
             <change when-iso="2017-04-25" who="#johanna.preusse">Upload of letter</change>
             <change when-iso="2016-11-22" who="#johanna.preusse">Encoded body</change>
@@ -238,7 +246,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000928.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">265</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">265</note>
                 <note hand="#pencil_three" place="inline">[<date when-iso="1834-02-28">28. 2. 34</date>]</note>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>
                 <opener><salute rend="align(center)">Geliebter Freund,</salute></opener>
@@ -249,22 +257,34 @@
                             <abbr>Rec.</abbr>
                             <expan>Recension</expan>
                         </choice></unclear> oder Anzeige, oder Gutachten, fertig sein <lb/> soll: so knabenhaft, wie die von <hi rend="latin"
-                            ><persName ref="#p3667" type="bi">Marmier</persName></hi><note resp="#johanna.preusse">Welche Ankündigung oder Rezension
-                        Xavier Marmiers Tieck meint, ist bislang ungeklärt. Erwähnenswert ist aber, dass Marmier Raumer seine 1833 erschienenen
-                        fliegenden Blätter (Feuilles volantes) gewidmet hat. Innerhalb dieser Gedichtsammlung sind das erste Gedicht („Le soir sur la
-                        terrasse“) sowie ein weiteres („Adieu“) Ludwig Tieck gewidmet.</note>, könnte ich in <lb/> einer Viertelstunde schreiben; sie
-                    ist über die Gebühr na<lb break="no"/>seweis und elend. <hi rend="latin underline"><persName ref="#0322" type="bi"
-                            >Barante</persName></hi>, mit seiner Stümperei, Ihnen <lb/> gegen über als der Bessere. – Ich habe Ihnen noch <lb/> nicht
-                    einmal für die <hi rend="latin"><choice>
+                            ><persName ref="#p3667" type="bi">Marmier</persName></hi><note resp="#johanna.preusse"><p xml:lang="de">Welche Ankündigung
+                            oder Rezension Xavier Marmiers Tieck meint, ist bislang ungeklärt. Erwähnenswert ist aber, dass Marmier Raumer seine 1833
+                            erschienenen fliegenden Blätter (Feuilles volantes) gewidmet hat. Innerhalb dieser Gedichtsammlung sind das erste Gedicht
+                            („Le soir sur la terrasse“) sowie ein weiteres („Adieu“) Ludwig Tieck gewidmet.</p><p xml:lang="fr">Il n'a pas encore été
+                            précisé de quelle annonce ou revue Xavier Marmiers Tieck signifie. Il convient de mentionner, cependant, que Marmier a
+                            dédié ses Feuilles volantes (Feuilles volantes), publiées en 1833, à Raumer. Au sein de ce recueil de poèmes, le premier
+                            poème (« Le soir sur la terrasse ») et un autre (« Adieu ») sont dédiés à Ludwig Tieck.</p><p xml:lang="en">It has not yet
+                            been clarified which announcement or review Xavier Marmiers Tieck means. It is worth mentioning, however, that Marmier
+                            dedicated his flying leaves (Feuilles volantes), published in 1833, to Raumer. Within this collection of poems, the first
+                            poem (“Le soir sur la terrasse”) and another (“Adieu”) are dedicated to Ludwig Tieck.</p></note>, könnte ich in <lb/>
+                    einer Viertelstunde schreiben; sie ist über die Gebühr na<lb break="no"/>seweis und elend. <hi rend="latin underline"><persName
+                            ref="#0322" type="bi">Barante</persName></hi>, mit seiner Stümperei, Ihnen <lb/> gegen über als der Bessere. – Ich habe
+                    Ihnen noch <lb/> nicht einmal für die <hi rend="latin"><choice>
                             <abbr>Mem.</abbr>
                             <expan>Memoiren</expan>
-                        </choice></hi> von <hi rend="latin"><persName ref="#3666" type="bi">Ludlow</persName></hi><note resp="#johanna.preusse"
-                        >Gemeint sein könnten zwei Editionen der Ludlow-Memoiren, wie sie im <rs ref="#w03592" type="bi">Auktionskatalog</rs> zum
-                        Verkauf von Tiecks Bibliothek (1849) als Position 5745 und 5746 aufgeführt sind: <title ref="#w05762">Memoirs, London
-                            1751</title> und <title ref="#w05763">Ses mémoires, Amsterdam 1699</title>. </note> gedankt, die Sie <lb/> mir zum
-                    Angedenken schenken. – Der Brief <rs ref="#p0859" type="bi">Ihres Bruders</rs>, <lb/> der jezt eben mit dem Ihrigen angekom̄en
-                    ist, hat mir sehr <lb/> wohl gefallen. – Wir haben hier nun <hi rend="latin underline"><title ref="#w05589">Cromwells
-                        Ende</title></hi>
+                        </choice></hi> von <hi rend="latin"><persName ref="#3666" type="bi">Ludlow</persName></hi><note resp="#johanna.preusse"><p
+                            xml:lang="de">Gemeint sein könnten zwei Editionen der Ludlow-Memoiren, wie sie im <rs ref="#w03592" type="bi"
+                                >Auktionskatalog</rs> zum Verkauf von Tiecks Bibliothek (1849) als Position 5745 und 5746 aufgeführt sind: <title
+                                ref="#w05762">Memoirs, London 1751</title> und <title ref="#w05763">Ses mémoires, Amsterdam 1699</title>. </p>
+                        <p xml:lang="fr">Cela pourrait signifier deux éditions des mémoires de Ludlow, répertoriées dans le <rs ref="#w03592"
+                                type="bi"> catalogue de vente aux enchères </rs> en vente par la bibliothèque de Teck (1849) sous les références 5745
+                            et 5746 : <title ref="#w05762"> Mémoires, Londres 1751 </title> et <title ref="#w05763"> Ses mémoires, Amsterdam 1699
+                            </title>.</p><p xml:lang="en">This could mean two editions of the Ludlow memoirs, as listed in the <rs ref="#w03592"
+                                type="bi"> auction catalog </rs> for sale by Teck's library (1849) as item 5745 and 5746: <title ref="#w05762">
+                                Memoirs, London 1751 </title> and <title ref="#w05763"> Ses mémoires, Amsterdam 1699 </title>.</p></note> gedankt, die
+                    Sie <lb/> mir zum Angedenken schenken. – Der Brief <rs ref="#p0859" type="bi">Ihres Bruders</rs>, <lb/> der jezt eben mit dem
+                    Ihrigen angekom̄en ist, hat mir sehr <lb/> wohl gefallen. – Wir haben hier nun <hi rend="latin underline"><title ref="#w05589"
+                            >Cromwells Ende</title></hi>
                     <lb/>
                     <choice>
                         <abbr>v.</abbr>
@@ -310,7 +330,7 @@
                         <abbr>dse</abbr>
                         <expan>diese</expan>
                     </choice> Anstrengungen und <lb/> der Aufwand meiner Zeit beweisen wohl das Gegentheil. </p>
-                <anchor xml:id="a1"/>
+                <!--<anchor xml:id="a1"/>-->
                 <pb facs="00000929.jpg" n="2"/>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a2"/>
                 <p> Es wäre für das hiesige Theater, <choice>
@@ -347,30 +367,32 @@
                             <abbr>L.</abbr>
                             <expan>Ludwig</expan>
                         </choice> Tieck. <lb/>
-                        <hi rend="underline">In Eile</hi>. </signed></closer>
-                <anchor xml:id="a2"/>
-                <pb facs="00000930.jpg" n="3"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">266</note>
-                <pb facs="00000931.jpg" n="4"/>
-                <address rend="vertical">
+                        <hi rend="underline">In Eile</hi>. </signed>
+                    <!--<anchor xml:id="a2"/>-->
+                    <pb facs="00000930.jpg" n="3"/>
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">266</note>
+                    <pb facs="00000931.jpg" n="4"/>
                     <stamp>[Stempel:] DRESDEN <date when-iso="1834-02-28">28 Feb 34</date></stamp>
-                    <note resp="#johanna.preusse">Neben dem Poststempel mit dem Datum vom 28. Februar 1834 trägt das Umschlagblatt weitere
-                        Postvermerke.</note>
-                    <addrLine rend="align(center)">Herrn Regirungs=Rath</addrLine>
-                    <addrLine rend="align(center)"><choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> Professor <hi rend="latin"><persName ref="#p0187" type="bi"><choice>
-                                    <abbr>F.</abbr>
-                                    <expan>Friedrich</expan>
-                                </choice>
-                                <hi rend="underline">von Raumer</hi></persName></hi></addrLine>
-                    <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
-                    <milestone rend="horizontal-rule align(center)" unit="none"/>
-                    <addrLine rend="align(center)"><hi rend="underline">Kochstraße</hi></addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" rend="latin" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
+                    <address rend="vertical">
+                        <note resp="#johanna.preusse"><p xml:lang="de">Neben dem Poststempel mit dem Datum vom 28. Februar 1834 trägt das
+                                Umschlagblatt weitere Postvermerke.</p><p xml:lang="fr">Outre le cachet de la poste du 28 février 1834, la feuille de
+                                couverture porte d'autres billets d'affranchissement.</p><p xml:lang="en">In addition to the postmark dated February
+                                28, 1834, the cover sheet bears other postage notes.</p></note>
+                        <addrLine rend="align(center)">Herrn Regirungs=Rath</addrLine>
+                        <addrLine rend="align(center)"><choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> Professor <hi rend="latin"><persName ref="#p0187" type="bi"><choice>
+                                        <abbr>F.</abbr>
+                                        <expan>Friedrich</expan>
+                                    </choice>
+                                    <hi rend="underline">von Raumer</hi></persName></hi></addrLine>
+                        <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
+                        <milestone rend="horizontal-rule align(center)" unit="none"/>
+                        <addrLine rend="align(center)"><hi rend="underline">Kochstraße</hi></addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" rend="latin" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>
