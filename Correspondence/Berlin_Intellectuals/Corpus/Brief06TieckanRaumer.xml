@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE"> Germany </country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -230,8 +237,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-06-24" who="#johanna.preusse">Changed identification of Kalkreuth.</change>
             <change when-iso="2015-06-23" who="#johanna.preusse">Added some more english and french translations of metadata.</change>
             <change when-iso="2015-04-13" who="#johanna.preusse">Added comments on Tieck's job as a dramaturge and his "Schriften".</change>
@@ -292,11 +300,13 @@
                     <lb/>bei Ihnen an, ob Sie mir, vielleicht auch durch <hi rend="latin"><persName ref="#p0195" type="bi">Krausens</persName></hi>
                     Hülfe 800 <lb/>oder 600 Thaler durch einen Wechsel, oder sonst übermachen können, den <lb/>ich Ihnen <date when="1824-06-24"
                         >künftigen Johannis</date>, oder, wenn es sein muß, nach <lb/> der Ostermesse zahle. Ich kann diese Zahlung mit Sicherheit
-                    versprechen, <lb/>weil ich durchaus bis dahin wegen der Herausgabe meiner Schriften <note resp="#johanna.preusse">Tiecks <title
-                            ref="#w04458">Schriften</title> erschienen ab 1828 bei Georg Reimer.</note><lb/>im Reinen sein, schon die Ersten Bände
-                    geliefert haben will <lb/> und muß, und vom Buchhändler, der es unternimmt, gleich bei <lb/>Ablieferung des ersten Druckvorraths
-                    ein <hi rend="latin">Capital</hi> verlange. </p>
-                <anchor xml:id="a1"/>
+                    versprechen, <lb/>weil ich durchaus bis dahin wegen der Herausgabe meiner Schriften <note resp="#johanna.preusse"><p xml:lang="de"
+                            >Tiecks <title ref="#w04458">Schriften</title> erschienen ab 1828 bei Georg Reimer.</p><p xml:lang="fr">Les <title
+                                ref="# w04458">écrits</title> de Tiecks parus à partir de 1828 par Georg Reimer.</p><p xml:lang="en">Tiecks <title
+                                ref="# w04458"> writings </title> appeared from 1828 by Georg Reimer.</p></note><lb/>im Reinen sein, schon die Ersten
+                    Bände geliefert haben will <lb/> und muß, und vom Buchhändler, der es unternimmt, gleich bei <lb/>Ablieferung des ersten
+                    Druckvorraths ein <hi rend="latin">Capital</hi> verlange. </p>
+                <!--<anchor xml:id="a1"/>-->
                 <pb facs="00000852.jpg" n="2"/>
                 <delSpan hand="#red_hand" rend="strikethrough" spanTo="#a2"/>
                 <p>Aber auch ohne dies erhalte ich mehr als das Erbetene für <lb/>jene <hi rend="latin">Novellen</hi>, deren Bezahlung ich mir gleich
@@ -346,13 +356,17 @@
                         rend="latin"><persName ref="#p3630" type="bi">Kalkreuth</persName></hi> wohl meine Verschreibung, <lb/>als Bürgen
                     unterzeichnen, wenn Sie es verlangten. (Es kommt noch <lb/>hinzu, <hi rend="underline">was aber ganz unter uns beiden bleibt</hi>,
                     daß eine Anstellung <lb/><rs ref="#l0003" type="bi">hier</rs> beim Theater immer wahrscheinlicher wird.<note
-                        resp="#johanna.preusse">Tieck wurde 1825 Dramaturg am Dresdener Theater. Die Stelle, auf die er bereits längere Zeit
-                        hingearbeitet hatte, wurde ihm Ende 1824 zugesagt. (Vgl. <title ref="#w05615">Ludwig Tieck. Leben - Werk - Wirkung, Berlin
-                            2011</title>, S.409f.)</note> Ich darf aber nicht hülfsbe<lb break="no"/>dürftig thun, und noch weniger meinen Credit
-                    verliehren: gelingt es, so <lb/>kann ich noch leichter Ihnen, oder dem Freunde, oder Banquier, der durch Ihre <lb/>Vermittlung mir
-                    hilft, zurück zahlen.) Ich darf in meiner Verlegenheit auf <lb/>die Zinsen auch nicht zu ängstlich sehn. – Ich füge nichts mehr
-                    hinzu, ich <lb/>weiß, Sie helfen mir, wenn Sie Rath wissen. Vielleicht finden Sie durch <lb/>Ihren Credit in dem grossen <hi
-                        rend="latin"><placeName ref="#l1103" type="bi"><choice>
+                        resp="#johanna.preusse"><p xml:lang="de">Tieck wurde 1825 Dramaturg am Dresdener Theater. Die Stelle, auf die er bereits
+                            längere Zeit hingearbeitet hatte, wurde ihm Ende 1824 zugesagt. (Vgl. <title ref="#w05615">Ludwig Tieck. Leben - Werk -
+                                Wirkung, Berlin 2011</title>, S.409f.)</p><p xml:lang="fr">Tieck devient dramaturge au théâtre de Dresde en 1825. Le
+                            poste pour lequel il travaillait depuis longtemps fut promis à la fin de 1824. (Cf. <title ref="#w05615"> Ludwig Tieck.
+                                Vie - Travail - Effet, Berlin 2011 </title>, p. 409f.)</p><p xml:lang="en">Tieck became a dramaturge at the Dresden
+                            theater in 1825. The position, for which he had already worked for a long time, was promised to him at the end of 1824.
+                            (Cf. <title ref="#w05615"> Ludwig Tieck. Life - Work - Effect, Berlin 2011 </title>, p. 409f.)</p></note> Ich darf aber
+                    nicht hülfsbe<lb break="no"/>dürftig thun, und noch weniger meinen Credit verliehren: gelingt es, so <lb/>kann ich noch leichter
+                    Ihnen, oder dem Freunde, oder Banquier, der durch Ihre <lb/>Vermittlung mir hilft, zurück zahlen.) Ich darf in meiner Verlegenheit
+                    auf <lb/>die Zinsen auch nicht zu ängstlich sehn. – Ich füge nichts mehr hinzu, ich <lb/>weiß, Sie helfen mir, wenn Sie Rath
+                    wissen. Vielleicht finden Sie durch <lb/>Ihren Credit in dem grossen <hi rend="latin"><placeName ref="#l1103" type="bi"><choice>
                                 <abbr>Berl.</abbr>
                                 <expan>Berlin</expan>
                             </choice></placeName></hi> doch eher Rath <choice>
@@ -362,12 +376,15 @@
                     nicht so, daß ich sie darum ansprechen kann. – </p>
                 <p> Wie Sie mir fehlen, sage ich nicht: ich bin in diesen Wochen <lb/>wieder recht verwöhnt worden. Diese Einsamkeit drückt mich
                     <lb/>manchmal sehr. Die Fortsetzung der <hi rend="latin"><title ref="#w00232">Ceven̄en</title></hi> ist begonnen, gestern die
-                    <lb/>Arbeit mit Hülfe der <hi rend="latin"><persName ref="#p0198" type="bi">Solger</persName></hi><note resp="#anne.baillot"
-                        >Gemeint ist Henriette Solger, die Witwe des 1819 verstorbenen Philosophen und engen Freunds Tiecks <persName ref="#p0146"
-                            type="bi">K.W.F. Solger</persName>.</note> bei den <hi rend="latin">Solger</hi>schen Papieren<note resp="#anne.baillot"
-                        >Die Arbeit an den Solgerschen Papieren bildete die Grundlage für die 1826 von Tieck und Raumer herausgebenen <title
-                            ref="#w00211">Nachgelassenen Schriften und Briefwechsel</title>
-                        <persName ref="#p0146" type="bi">Solgers</persName>.</note>: ich schicke <anchor xml:id="a2"/>
+                    <lb/>Arbeit mit Hülfe der <hi rend="latin"><persName ref="#p0198" type="bi">Solger</persName></hi><note resp="#anne.baillot"><p
+                            xml:lang="de">Gemeint ist Henriette Solger, die Witwe des 1819 verstorbenen Philosophen und engen Freunds Tiecks <persName
+                                ref="#p0146" type="bi">K.W.F. Solger</persName>.</p><p xml:lang="fr">This is Henriette Solger, the widow of the
+                            philosopher and close friend Tiecks who died in 1819, <persName ref="# p0146" type="bi"> K.W.F. Solger </persName>.</p><p
+                            xml:lang="fr">Il s'agit d'Henriette Solger, la veuve du philosophe et ami proche de Tiecks décédé en 1819, <persName
+                                ref="#p0146" type="bi"> K.W.F. Solger </persName>.</p></note> bei den <hi rend="latin">Solger</hi>schen Papieren<note
+                        resp="#anne.baillot">Die Arbeit an den Solgerschen Papieren bildete die Grundlage für die 1826 von Tieck und Raumer
+                        herausgebenen <title ref="#w00211">Nachgelassenen Schriften und Briefwechsel</title>
+                        <persName ref="#p0146" type="bi">Solgers</persName>.</note>: ich schicke <!--<anchor xml:id="a2"/>-->
                     <pb facs="00000853.jpg" n="3"/>
                     <note hand="#pencil" rend="align(right)" type="foliation">223</note>
                     <delSpan hand="#red_hand" rend="strikethrough" spanTo="#a3"/> gewiß Ende der Woche ein Paket ab. Lachen habe ich müssen, <lb/>als
@@ -375,7 +392,7 @@
                     <lb/>meiner Krankheit damit beschäftigt, und es während dieser <lb/>nur vergessen. Sie hätten sich also ganz umsonst mit dem
                     <lb/>ungeheuren Paket geschleppt, das Sie mir nachher doch hätten <lb/>wieder senden müssen: ich denke, Sie können die Sachen dann
                     <lb/>gleich nach <hi rend="latin"><placeName ref="#l0004" type="bi">Leipzig</placeName></hi> zum Druck senden..</p>
-                <anchor xml:id="a3"/>
+                <!--<anchor xml:id="a3"/>-->
                 <p>Sie fehlen uns allen, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -401,31 +418,31 @@
                 <closer>
                     <signed rend="align(center)">Ihr <lb/> ewiger Freund, <lb/>
                         <hi rend="latin">L. Tieck.</hi></signed>
-                </closer>
-                <pb facs="00000854.jpg" n="4"/>
-                <stamp rend="vertical">Stempel: "Staatsbibliothek Preußischer Kulturbesitz"</stamp>
-                <stamp rend="vertical">Stempel: "DRESDEN 15. Sept. 23"</stamp>
-                <note hand="#dark_hand" place="inline vertical align-right"><unclear extent="2c" reason="illegible">99</unclear></note>
-                <address>
-                    <addrLine rend="vertical align(center)">An des Herrn</addrLine>
-                    <addrLine rend="vertical align(center)">Regirungs=Raths und Professors</addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="latin"><choice>
-                                <abbr>Frd.</abbr>
-                                <expan>Friedrich</expan>
+                    <pb facs="00000854.jpg" n="4"/>
+                    <stamp rend="vertical">Stempel: "Staatsbibliothek Preußischer Kulturbesitz"</stamp>
+                    <stamp rend="vertical">Stempel: "DRESDEN 15. Sept. 23"</stamp>
+                    <note hand="#dark_hand" place="inline vertical align-right"><unclear extent="2c" reason="illegible">99</unclear></note>
+                    <address>
+                        <addrLine rend="vertical align(center)">An des Herrn</addrLine>
+                        <addrLine rend="vertical align(center)">Regirungs=Raths und Professors</addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="latin"><choice>
+                                    <abbr>Frd.</abbr>
+                                    <expan>Friedrich</expan>
+                                </choice>
+                                <hi rend="underline">von Raumer</hi></hi>
+                            <choice>
+                                <abbr>hochwohlgeb.</abbr>
+                                <expan>hochwohlgebohren</expan>
                             </choice>
-                            <hi rend="underline">von Raumer</hi></hi>
-                        <choice>
-                            <abbr>hochwohlgeb.</abbr>
-                            <expan>hochwohlgebohren</expan>
-                        </choice>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)">
-                        <note hand="#red_hand_2" place="inline"><unclear extent="3-4c" reason="illegible">333</unclear></note>
-                        <hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName>.</hi></addrLine>
-                </address>
-                <note hand="#black_hand" place="inline vertical align-right"><unclear extent="6c" reason="illegible">551.3.</unclear></note>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)">
+                            <note hand="#red_hand_2" place="inline"><unclear extent="3-4c" reason="illegible">333</unclear></note>
+                            <hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName>.</hi></addrLine>
+                    </address>
+                    <note hand="#black_hand" place="inline vertical align-right"><unclear extent="6c" reason="illegible"
+                    >551.3.</unclear></note></closer>
             </div>
         </body>
     </text>

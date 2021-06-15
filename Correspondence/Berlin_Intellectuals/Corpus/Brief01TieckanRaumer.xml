@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE"> Germany </country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -215,8 +222,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-06-23" who="#johanna.preusse">Added some more english and french translations of metadata.</change>
             <change when-iso="2015-04-30" who="#johanna.preusse">Changed element "language" inside the header.</change>
             <change when-iso="2015-04-23" who="#johanna.preusse">Corrected encoding of handNote.</change>
@@ -246,10 +254,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000829.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">210</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">210</note>
                 <note hand="#red_hand" place="inline">Tieck an Raumer</note>
-                <opener rend="align(right)">
-                    <dateline><placeName ref="#l0066" type="bi"><hi rend="latin">Zibingen</hi>, bei <hi rend="latin">Crossen</hi></placeName>, den <lb/>
+                <opener>
+                    <dateline rend="align(right)"><placeName ref="#l0066" type="bi"><hi rend="latin">Zibingen</hi>, bei <hi rend="latin"
+                            >Crossen</hi></placeName>, den <lb/>
                         <date when-iso="1815-03-30">30<hi rend="superscript">ten</hi>
                             <hi rend="latin">März</hi>. 1815.</date></dateline></opener>
                 <p>Längst hätt' ich Ihnen, theurer Freund, auf den <lb/>freundlichen Brief antworten sollen, den ich schon vor <lb/>geraumer Zeit von
@@ -276,13 +285,12 @@
                     einige Stadien der Begeiste<lb break="no"/>rung <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> dem wahren Erkenntniß der Poesie <lb/>ferner. <note resp="#anne.baillot"><seg xml:lang="de">An dieser Stelle beginnt der
-                            Auszug in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 279.</seg><seg
-                            resp="#anne.baillot" xml:lang="fr">Début de l'extrait figurant dans les <title ref="#w00222">Lebenserinnerungen und
-                                Briefwechsel</title>, de Raumer, vol. I, p. 279.</seg><seg resp="#anne.baillot" xml:lang="en">Here begins the excerpt
-                            from Raumer's <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 279.</seg></note> Unter so
-                    vielen Genies dieser neuern <pb facs="00000830.jpg" n="2"/>Tage, die ich Ihnen wohl nicht nahmhaft zu <lb/>machen brauche, stehe
-                    ich schon längst als ein Philister, <lb/><choice>
+                    </choice> dem wahren Erkenntniß der Poesie <lb/>ferner. <note resp="#anne.baillot"><p xml:lang="de">An dieser Stelle beginnt der
+                            Auszug in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 279.</p><p xml:lang="fr"
+                            >Début de l'extrait figurant dans les <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, de Raumer, vol. I,
+                            p. 279.</p><p xml:lang="en">Here begins the excerpt from Raumer's <title ref="#w00222">Lebenserinnerungen und
+                                Briefwechsel</title>, vol. I, p. 279.</p></note> Unter so vielen Genies dieser neuern <pb facs="00000830.jpg" n="2"
+                    />Tage, die ich Ihnen wohl nicht nahmhaft zu <lb/>machen brauche, stehe ich schon längst als ein Philister, <lb/><choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> habe mich von jeher so zu ihnen verhalten, denn <lb/>ich hasse nichts so sehr als Anarchie, sei es im Staat, <lb/>in der
@@ -302,52 +310,51 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Talent. Ich kehre die <lb/>alte Beschuldigung lieber<note resp="#anne.baillot">
-                        <seg xml:lang="de">Statt "lieber" steht in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> (Bd. I, S.
-                            279) "wieder".</seg><seg resp="#anne.baillot" xml:lang="fr">Au lieu de "lieber", <persName ref="#p0187" type="bi"
-                                >Raumer</persName> lit dans les <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de (vol. I, p. 279)
-                            lisent "wieder".</seg><seg resp="#anne.baillot" xml:lang="en">Instead of "lieber", <persName ref="#p0187" type="bi"
-                                >Raumer</persName>'s <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> (vol. I, p. 279) read
-                            "wieder".</seg></note> um, <choice>
+                        <p xml:lang="de">Statt "lieber" steht in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> (Bd. I, S.
+                            279) "wieder".</p><p xml:lang="fr">Au lieu de "lieber", <persName ref="#p0187" type="bi">Raumer</persName> lit dans les
+                                <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de (vol. I, p. 279) lisent "wieder".</p><p
+                            xml:lang="en">Instead of "lieber", <persName ref="#p0187" type="bi">Raumer</persName>'s <title ref="#w00222"
+                                >Lebenserinnerungen und Briefwechsel</title> (vol. I, p. 279) read "wieder".</p></note> um, <choice>
                         <abbr>ud</abbr>
                         <expan>und</expan>
                     </choice> sehe in jenen <lb/>naturalistischen Dilettanten, in jenen Verschmähern der <lb/>Ordnung <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> der Erkenntniß,<note resp="#anne.baillot"><seg xml:lang="de">Anstelle eines Kommas steht eine Klammer in Raumers <title
-                                ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</seg><seg resp="#anne.baillot" xml:lang="fr"
-                            >Au lieu d'une virgule, parenthèse ouvrante ici dans les <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>,
-                            de <persName ref="#p0187" type="bi">Raumers</persName>, vol. I, p. 280.</seg><seg resp="#anne.baillot" xml:lang="en"
-                            >Instead of a coma <persName ref="#p0187" type="bi">Raumer's</persName>
-                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280 read a left parenthesis.</seg></note> die
+                    </choice> der Erkenntniß,<note resp="#anne.baillot"><p xml:lang="de">Anstelle eines Kommas steht eine Klammer in Raumers <title
+                                ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</p><p xml:lang="fr">Au lieu d'une virgule,
+                            parenthèse ouvrante ici dans les <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, de <persName
+                                ref="#p0187" type="bi">Raumers</persName>, vol. I, p. 280.</p><p xml:lang="en">Instead of a coma <persName
+                                ref="#p0187" type="bi">Raumer's</persName>
+                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280 read a left parenthesis.</p></note> die
                     sich einbilden, das <lb/>Schöne <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Grosse<note resp="#anne.baillot"><seg xml:lang="de">"Grosse und Schöne" in <persName ref="#p0187" type="bi"
+                    </choice> Grosse<note resp="#anne.baillot"><p xml:lang="de">"Grosse und Schöne" in <persName ref="#p0187" type="bi"
                                 >Raumers</persName>
-                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</seg><seg xml:lang="fr">"Grosse und
-                            Schöne" in: <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, de <persName ref="#p0187" type="bi"
-                                >Raumers</persName>, vol. I, p. 280.</seg><seg xml:lang="en">"Grosse und Schöne" in <persName ref="#p0187" type="bi"
-                                >Raumer</persName>'s <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280.</seg></note>
-                    ginge verlohren, wenn man es sich <lb/>zum Verständniß bringen will,<note resp="#anne.baillot"><seg xml:lang="de">Anstelle des
-                            Kommas wird hier die Klammer geschlossen in Raumers <title ref="#w00222">Lebenserinnerungen</title>, Bd. I, S.
-                            280.</seg><seg xml:lang="fr">Au lieu d'une virgule, parenthèse fermante ici dans les <title ref="#w00222"
-                                >Lebenserinnerungen und Briefwechsel</title>, de <persName ref="#p0187" type="bi">Raumers</persName>, vol. I, p.
-                            280.</seg><seg resp="#anne.baillot" xml:lang="en">Instead of a coma <persName ref="#p0187" type="bi">Raumer's</persName>
-                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280 read a right parenthesis.</seg></note>
-                    die ächten Philister. <lb/>Denn leben sie nicht von zwei oder drei Begriffen, <lb/>die wir immer wieder anhören müssen? Sind sie
+                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</p><p xml:lang="fr">"Grosse und Schöne"
+                            in: <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, de <persName ref="#p0187" type="bi"
+                                >Raumers</persName>, vol. I, p. 280.</p><p xml:lang="en">"Grosse und Schöne" in <persName ref="#p0187" type="bi"
+                                >Raumer</persName>'s <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280.</p></note>
+                    ginge verlohren, wenn man es sich <lb/>zum Verständniß bringen will,<note resp="#anne.baillot"><p xml:lang="de">Anstelle des
+                            Kommas wird hier die Klammer geschlossen in Raumers <title ref="#w00222">Lebenserinnerungen</title>, Bd. I, S. 280.</p><p
+                            xml:lang="fr">Au lieu d'une virgule, parenthèse fermante ici dans les <title ref="#w00222">Lebenserinnerungen und
+                                Briefwechsel</title>, de <persName ref="#p0187" type="bi">Raumers</persName>, vol. I, p. 280.</p><p xml:lang="en"
+                            >Instead of a coma <persName ref="#p0187" type="bi">Raumer's</persName>
+                            <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280 read a right parenthesis.</p></note> die
+                    ächten Philister. <lb/>Denn leben sie nicht von zwei oder drei Begriffen, <lb/>die wir immer wieder anhören müssen? Sind sie
                     <lb/>wohl des Enthusiasmus fähig? Ist selbst ihre <lb/>Idolatrie unseres <persName ref="#p0194" type="bi">Göthe</persName> etwas
                     anders als Spieß<lb break="no"/>bürgerei, die ehemals eben so über <persName ref="#p0203" type="bi"><hi rend="latin"
                             >Klopstock</hi></persName>, oder <lb/><persName ref="#p0204" type="bi"><hi rend="latin">Wieland</hi></persName>, oder
                         <persName ref="#p0205" type="bi"><hi rend="latin">Bodmer</hi></persName> faselte? Darinn besteht ja <lb/>der <unclear
-                        cert="medium" reason="illegible"><hi rend="latin">Badant</hi></unclear><note resp="#anne.baillot"><seg xml:lang="de">Statt
+                        cert="medium" reason="illegible"><hi rend="latin">Badant</hi></unclear><note resp="#anne.baillot"><p xml:lang="de">Statt
                             "Badant" steht in <persName ref="#p0187" type="bi">Raumers</persName>
                             <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> (Bd. I, S. 280) "Pedant". Vielleicht hier eine
-                            Verschmelzung der zwei französischen Termini "badaud" und "pédant"?</seg><seg resp="#anne.baillot" xml:lang="fr">Au lieu
-                            de "Badant", les <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de<persName ref="#p0187" type="bi"
-                                >Raumer</persName> (vol. I, p. 280) lisent "Pedant" (peut-être une confusion entre "badaud" et "pédant"?).</seg><seg
-                            resp="#anne.baillot" xml:lang="en">Instead of "Badant", <persName ref="#p0187" type="bi">Raumer</persName>'s <title
-                                ref="#w00222">Lebenserinnerungen und Briefwechsel</title> (vol. I, p. 280) read "Pedant" (maybe a confusion between
-                            the two French terms "badaud" and "pédant"?).</seg></note>, daß er nur eins kennt <choice>
+                            Verschmelzung der zwei französischen Termini "badaud" und "pédant"?</p><p xml:lang="fr">Au lieu de "Badant", les <title
+                                ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de<persName ref="#p0187" type="bi">Raumer</persName> (vol.
+                            I, p. 280) lisent "Pedant" (peut-être une confusion entre "badaud" et "pédant"?).</p><p xml:lang="en">Instead of "Badant",
+                                <persName ref="#p0187" type="bi">Raumer</persName>'s <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>
+                            (vol. I, p. 280) read "Pedant" (maybe a confusion between the two French terms "badaud" and "pédant"?).</p></note>, daß er
+                    nur eins kennt <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> will, ohne <lb/>Kraft <choice>
@@ -357,7 +364,7 @@
                         <del rend="strikethrough">I</del>
                         <add place="above">i</add>
                     </subst>hnen der herrliche<pb facs="00000831.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">211</note>
+                    <note hand="#pencil" place="margin(right)" type="foliation">211</note>
                     <hi rend="latin"><persName ref="#p0146" type="bi">Solger</persName></hi> ein Gräuel, dessen Natur sie gar nicht ein<lb break="no"
                     />mal ahnden, um den man, wie um eine schöne Bild<lb break="no"/>säule, herum gehn, <choice>
                         <abbr>u</abbr>
@@ -376,10 +383,10 @@
                     </choice> sich ihnen alles verzerrt. Von frühester <lb/>Jugend habe ich mich von diesen Naturspielen los<lb break="no"/>gesagt.
                     Möchten sie doch lieber gleich über einen <lb/><hi rend="latin">Dendriten</hi>, als einen <persName ref="#p0207" type="bi"><hi
                             rend="latin">Claude Lorrain</hi></persName> sprechen, denn wenn <lb/>sie aufrichtig sind, müssen sie in jenem mehr als in
-                    <lb/>diesem sehn. – <note resp="#anne.baillot"><seg xml:lang="de">Ende des Auszugs in Raumers <title ref="#w00222"
-                                >Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</seg><seg xml:lang="fr">Fin du passage figurant dans les
-                                <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de Raumer vol. I, p. 280.</seg><seg xml:lang="en">End
-                            of the excerpt in Raumer's <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280.</seg></note>
+                    <lb/>diesem sehn. – <note resp="#anne.baillot"><p xml:lang="de">Ende des Auszugs in Raumers <title ref="#w00222"
+                                >Lebenserinnerungen und Briefwechsel</title>, Bd. I, S. 280.</p><p xml:lang="fr">Fin du passage figurant dans les
+                                <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title> de Raumer vol. I, p. 280.</p><p xml:lang="en">End
+                            of the excerpt in Raumer's <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, vol. I, p. 280.</p></note>
                     Aber zugleich bin ich, wenn auch nicht <lb/>böse, doch ein weniges empfindlich, daß Sie mir, <lb/>Liebster, nach so schönen
                     Versprechungen, Ihre Univer<lb break="no"/>salgeschichte nicht habe gönnen wollen. Wäre ich nicht <lb/>mehr träge als boshaft, so
                     hätte ich Ihnen den <lb/>abgeredeten Bogen voll Critik darüber zugesandt, <lb/>ohne sie gelesen zu haben. Seitdem ist auch Ihr
@@ -391,12 +398,12 @@
                     </choice>, da Sie diesen so weit hinaus schieben.</p>
                 <pb facs="00000832.jpg" n="4"/>
                 <p>Der Ihnen dieses Blatt übergiebt, ist ein <persName ref="#p0209" type="bi"><hi rend="latin">Neveu</hi></persName><note
-                        resp="#anne.baillot"><seg xml:lang="de">Also ein Neffe. Gemeint ist wahrscheinlich der Sohn seiner Schwester <persName
-                                ref="#p0208" type="bi">Sophie</persName>, <persName ref="#p0209" type="bi">Wilhelm Bernhardi</persName>.</seg><seg
+                        resp="#anne.baillot"><p xml:lang="de">Also ein Neffe. Gemeint ist wahrscheinlich der Sohn seiner Schwester <persName
+                                ref="#p0208" type="bi">Sophie</persName>, <persName ref="#p0209" type="bi">Wilhelm Bernhardi</persName>.</p><p
                             xml:lang="fr">Il s'agit probablement du fils de sa soeur <persName ref="#p0208" type="bi">Sophie</persName>, <persName
-                                ref="#p0209" type="bi">Wilhelm Bernhardi</persName>.</seg><seg xml:lang="en">This nephew is probably the son of his
+                                ref="#p0209" type="bi">Wilhelm Bernhardi</persName>.</p><p xml:lang="en">This nephew is probably the son of his
                             sister <persName ref="#p0208" type="bi">Sophie</persName>, <persName ref="#p0209" type="bi">Wilhelm
-                            Bernhardi</persName>.</seg></note> von <lb/>mir, dem ich alles Gute wünsche, <choice>
+                            Bernhardi</persName>.</p></note> von <lb/>mir, dem ich alles Gute wünsche, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> also auch, daß <lb/>Sie sich seiner etwas <subst>

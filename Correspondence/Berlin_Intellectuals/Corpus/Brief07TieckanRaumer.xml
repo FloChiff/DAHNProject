@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -78,8 +79,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -227,8 +234,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-06-23" who="#johanna.preusse">Added some more english and french translations of metadata.</change>
             <change when-iso="2015-04-30" who="#johanna.preusse">Changed header element "language".</change>
             <change when-iso="2015-04-24" who="#johanna.preusse">Added another handNote (red_hand_two); added a comment; minor corrections of
@@ -251,7 +259,7 @@
             <change when-iso="2012-01-19" who="#alexander.meyer">Updated encoding (various small changes)</change>
             <change when-iso="2011-11-16" who="#alexander.meyer">Updated encoding (various small changes)</change>
             <change when-iso="2011-06-15" who="#anna.busch">Added annotations and corrections</change>
-            <change when-iso="2011-06-11" who="#solenne.coutagne">Added <att>hand</att></change>
+            <change when-iso="2011-06-11" who="#solenne.coutagne">Added @hand</change>
             <change when-iso="2011-06-05" who="#solenne.coutagne">Encoding</change>
             <change when-iso="2011-05-02" who="#sabine.seifert">Transcription</change>
         </revisionDesc>
@@ -260,7 +268,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000855.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">224</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">224</note>
                 <opener>
                     <dateline rend="align(right)">
                         <hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date when-iso="1823-10-06">6<hi
@@ -276,18 +284,28 @@
                     </choice> die 3 Flaschen Champa<lb break="no"/>gner erhalten, sobald Sie nur wieder hier sind, denn nach dem <lb/>Buchstaben haben
                     Sie gewonnen, und Ihr Ausspruch ist nach diesem <lb/>wahr geworden. Meiner vielleicht nach dem Geist. Ich schicke<lb/> Ihnen
                     nehmlich zugleich in Einem Paket <hi rend="underline">Alles</hi> was von der <lb/>Correspondenz und aus den Tagebüchern mir zur
-                        Bekanntma<lb break="no"/>chung geeignet schien<note resp="#anne.baillot">Es handelt sich um die Auswahl der Texte für <title
-                            ref="#w00211">Solgers Nachgelassene Schriften und Briefwechsel</title>.</note>, und Sie werden auch darinn wieder Recht
-                    <lb/>haben, daß es nur für Einen Band, aber gewiß für einen <lb/>starken, über 30 Bogen <hi rend="latin"><choice>
+                        Bekanntma<lb break="no"/>chung geeignet schien<note resp="#anne.baillot"><p xml:lang="de">Es handelt sich um die Auswahl der
+                            Texte für <title ref="#w00211">Solgers Nachgelassene Schriften und Briefwechsel</title>.</p><p xml:lang="fr">Il s'agit de
+                            la sélection des textes pour <title ref="#w00211"> Nachlassene Schriften und Briefwechsel de Solger </title>.</p><p
+                            xml:lang="en">It concerns the selection of the texts for <title ref="#w00211"> Solger's Nachlassene Schriften und
+                                Briefwechsel </title>.</p></note>, und Sie werden auch darinn wieder Recht <lb/>haben, daß es nur für Einen Band, aber
+                    gewiß für einen <lb/>starken, über 30 Bogen <hi rend="latin"><choice>
                             <abbr>Mscpt.</abbr>
                             <expan>Manuscript</expan>
                         </choice></hi> liefert.</p>
-                <p><note resp="#johanna.preusse" subtype="1">Am Rande dieses Absatzes befinden sich neben den Randbemerkungen "Rohde"(?) und
-                        "Eichstädt"(?) noch jeweils zwei vertikale Markierungen des Brieftexts in Bleistift und roter Farbe, wahrscheinlich von
-                        Raumers Hand.</note>
-                    <note hand="#pencil_two" place="margin-left"><unclear cert="medium" reason="illegible">Rohde</unclear></note> Im <hi
-                        rend="underline">Ersten</hi> Bande<note resp="#anne.baillot">In einem späteren Arbeitsschritt wurden Band I und II getauscht:
-                        Band I enthält Briefe und Tagebuchauszüge, Band II wissenschaftliche Arbeiten.</note> wird <del rend="strikethrough"
+                <p><note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Am Rande dieses Absatzes befinden sich neben den Randbemerkungen
+                            "Rohde"(?) und "Eichstädt"(?) noch jeweils zwei vertikale Markierungen des Brieftexts in Bleistift und roter Farbe,
+                            wahrscheinlich von Raumers Hand.</p><p xml:lang="fr">Dans la marge de ce paragraphe, en plus des notes marginales "Rohde"
+                            (?) et "Eichstädt" (?), il y a deux marques verticales du texte de la lettre au crayon et en rouge, probablement de la
+                            main de Raumer.</p><p xml:lang="en">In the margin of this paragraph, in addition to the marginal notes "Rohde" (?) And
+                            "Eichstädt" (?), There are two vertical markings of the letter text in pencil and red, probably by Raumer's
+                        hand.</p></note>
+                    <note hand="#pencil_two" place="margin(left)"><unclear cert="medium" reason="illegible">Rohde</unclear></note> Im <hi
+                        rend="underline">Ersten</hi> Bande<note resp="#anne.baillot"><p xml:lang="de">In einem späteren Arbeitsschritt wurden Band I
+                            und II getauscht: Band I enthält Briefe und Tagebuchauszüge, Band II wissenschaftliche Arbeiten.</p><p xml:lang="fr">Dans
+                            une étape ultérieure, les volumes I et II ont été échangés : le volume I contient des extraits de lettres et de journaux
+                            intimes, le volume II des articles scientifiques.</p><p xml:lang="en">In a later step, Volumes I and II were swapped:
+                            Volume I contains letters and diary excerpts, Volume II scientific papers.</p></note> wird <del rend="strikethrough"
                         >alsch</del> also erscheinen: <note hand="#pencil_two" place="inline above"><unclear cert="low" reason="illegible">1</unclear>
                         <choice>
                             <unclear cert="low" reason="illegible">Band</unclear>
@@ -313,19 +331,38 @@
                             </subst>)</label>
                         <item>die <title ref="#w00213">Recen<lb break="no"/>sion</title> über <persName ref="#p0190" type="bi">Schlegel</persName>s
                                 <title ref="#w00212">Werck</title>, so wie die Hälfte der Vorrede zum <lb/>
-                            <title ref="#w00214">Sofokles</title><note resp="#anne.baillot">Gekürzt wurde die metrische Hälfte des Textes.</note>,
-                            ingleichen ein kleinerer Aufsatz im <title ref="#w00215">Pantheon</title> (die <lb/>
-                            <note hand="#pencil_two" place="margin-left"><unclear cert="medium" reason="illegible">Eichstädt</unclear></note>
+                            <title ref="#w00214">Sofokles</title><note resp="#anne.baillot"><p xml:lang="de">Gekürzt wurde die metrische Hälfte des
+                                    Textes.</p>
+                                <p xml:lang="en">The metric half of the text has been shortened.</p>
+                                <p xml:lang="fr">La moitié métrique du texte a été raccourcie.</p></note>, ingleichen ein kleinerer Aufsatz im <title
+                                ref="#w00215">Pantheon</title> (die <lb/>
+                            <note hand="#pencil_two" place="margin(left)"><unclear cert="medium" reason="illegible">Eichstädt</unclear></note>
                             Recension über <persName ref="#p0193" type="bi">Werner</persName> wird wohl verlohren gegangen sein)<note
-                                resp="#anne.baillot">Vgl. in <title ref="#w00211">Solgers Nachgelassene Schriften und Briefwechsel</title>, Bd. I, S.
-                                159: "... habe ich mein Probestück gemacht an der Tragödie Attila von Werner. Meine Affection zu diesem lieben Mann
-                                ist Dir wohl bekannt, und ich habe gesucht ihm zu reichen, was ich für hinlänglich halte. Ich habe die Recension schon
-                                abgeschickt und bin begierig, was sie bei der Redaction für Eindruck machen wird. Indessen hoffe ich, die gehörige
-                                Mäßigung nicht überschritten zu haben.*) [*Fußnote: Die Redaction fand nicht für gut, diese Recension
-                                aufzunehmen.]"</note><lb/> Dazu müste wohl der <title ref="#w00217">Aufsatz über die <hi rend="latin"><title
-                                        ref="#w00216">Wahlverwandschaften</title></hi></title><note resp="#anne.baillot">Dieser Text wurde tatsächlich
-                                dem Band I (Briefe und Tagebuchauszüge) eingegliedert; vgl. <title ref="#w00211">Solgers Nachgelassene Schriften und
-                                    Briefwechsel</title>, Bd. I, S. 175-185. </note>
+                                resp="#anne.baillot"><p xml:lang="de">Vgl. in <title ref="#w00211">Solgers Nachgelassene Schriften und
+                                        Briefwechsel</title>, Bd. I, S. 159: "... habe ich mein Probestück gemacht an der Tragödie Attila von Werner.
+                                    Meine Affection zu diesem lieben Mann ist Dir wohl bekannt, und ich habe gesucht ihm zu reichen, was ich für
+                                    hinlänglich halte. Ich habe die Recension schon abgeschickt und bin begierig, was sie bei der Redaction für
+                                    Eindruck machen wird. Indessen hoffe ich, die gehörige Mäßigung nicht überschritten zu haben.*) [*Fußnote: Die
+                                    Redaction fand nicht für gut, diese Recension aufzunehmen.]"</p>
+                                <p xml:lang="fr">Cf. dans <title ref="# w00211"> Solger's Nachgelassene Schriften und Briefwechsel </title>, Vol. I,
+                                    p. 159 : "... J'ai fait mon essai sur la tragédie Attila von Werner. Mon affection pour ce Cher homme, vous le
+                                    savez bien, et j'ai essayé de lui donner ce que je pense être suffisant. J'ai déjà envoyé la critique et j'ai hâte
+                                    de voir quelle impression cela fera sur la rédaction. J'espère cependant que le la modération appropriée n'a pas
+                                    été dépassée *) [* Note de bas de page : L'équipe éditoriale n'a pas pensé qu'il serait bon d'inclure cette
+                                    critique.] "</p>
+                                <p xml:lang="en">Cf. in <title ref="# w00211"> Solger's Nachgelassene Schriften und Briefwechsel </title>, Vol. I, p.
+                                    159: "... I made my test piece on the tragedy Attila von Werner. My affection for this Dear man, you know well,
+                                    and I have tried to give him what I think is sufficient. I have already sent the review and am eager to see what
+                                    kind of impression it will make on the editorial staff. I hope, however, that the appropriate moderation has not
+                                    been exceeded *) [* Footnote: The editorial team did not think it would be good to include this review.] "</p>
+                            </note><lb/> Dazu müste wohl der <title ref="#w00217">Aufsatz über die <hi rend="latin"><title ref="#w00216"
+                                        >Wahlverwandschaften</title></hi></title><note resp="#anne.baillot"><p xml:lang="de">Dieser Text wurde
+                                    tatsächlich dem Band I (Briefe und Tagebuchauszüge) eingegliedert; vgl. <title ref="#w00211">Solgers Nachgelassene
+                                        Schriften und Briefwechsel</title>, Bd. I, S. 175-185. </p>
+                                <p xml:lang="fr">Ce texte a en fait été incorporé dans le Volume I (Lettres et extraits de journaux intimes) ; cf.
+                                        <title ref="#w00211"> Écrits posthumes et correspondance de Solger </title>, Tome I, pp. 175-185.</p>
+                                <p xml:lang="en">This text was actually incorporated into Volume I (Letters and Diary Excerpts); cf. <title
+                                        ref="#w00211">Solger's post-processed writings and correspondence </title>, vol. I, pp. 175-185</p></note>
                             <lb/>kommen, von dem hier gesprochen wurde, <choice>
                                 <abbr>u</abbr>
                                 <expan>und</expan>
@@ -334,17 +371,25 @@
                         <label>5)</label>
                         <item>einige metri<lb break="no"/>sche Uebersetzungen, die ebenfalls im <hi rend="latin"><title ref="#w00215"
                                 >Pantheon</title></hi> stehn, denen <lb/>ich hier noch einige abgeschriebenen beilege für den Ersten <lb/>Band;<note
-                                resp="#anne.baillot">Diese Übersetzungen wurden nicht in <title ref="#w00211">Solgers Nachgelassene Schriften und
-                                    Briefwechsel</title> aufgenommen.</note> Ich weiß nicht, ob Ihnen <subst>
+                                resp="#anne.baillot"><p xml:lang="de">Diese Übersetzungen wurden nicht in <title ref="#w00211">Solgers Nachgelassene
+                                        Schriften und Briefwechsel</title> aufgenommen.</p><p xml:lang="fr">Ces traductions n'étaient pas incluses
+                                    dans <title ref="#w00211"> Les écrits et correspondances de Solger </title>.</p><p xml:lang="en">These
+                                    translations were not included in <title ref="#w00211">Solger's Legacy Writings and
+                                Correspondence</title>.</p></note> Ich weiß nicht, ob Ihnen <subst>
                                 <del rend="strikethrough">allen</del>
                                 <add place="above">beiden</add>
                             </subst> die gereimten<!-- gereimten = unterstrichen von Bleistift / Raumer --> eben<lb break="no"/>falls so schwach
                             vorkommen werden, wie sie mir erschienen <lb/>sind, ist dies der Fall, so können diese wohl zurück gelegt
                             <lb/>werden.</item>
                     </list></p>
-                <p>Sie beiden Freunde<note resp="#anne.baillot">Gemeint sind die zwei Herausgeber der <title ref="#w00211">Nachgelassenen Schriften
-                            und Briefwechsel</title>: <persName ref="#p0187" type="bi">Friedrich von Raumer</persName> und <persName ref="#p0195"
-                            type="bi">Ludwig Krause</persName>.</note> sollen also nun das Recht über Leben <pb facs="00000856.jpg" n="2"/>
+                <p>Sie beiden Freunde<note resp="#anne.baillot"><p xml:lang="de">Gemeint sind die zwei Herausgeber der <title ref="#w00211"
+                                >Nachgelassenen Schriften und Briefwechsel</title>: <persName ref="#p0187" type="bi">Friedrich von Raumer</persName>
+                            und <persName ref="#p0195" type="bi">Ludwig Krause</persName>.</p><p xml:lang="fr">Il s'agit des deux éditeurs des <title
+                                ref="# w00211"> anciens écrits et correspondance </title> : <persName ref="#p0187" type="bi"> Friedrich von Raumer
+                            </persName> et <persName ref="#p0195" type="bi"> Ludwig Krause </persName>.</p><p xml:lang="en">This refers to the two
+                            editors of the <title ref="#w00211"> legacy writings and correspondence </title>: <persName ref="#p0187" type="bi">
+                                Friedrich von Raumer </persName> and <persName ref="#p0195" type="bi"> Ludwig Krause </persName>.</p></note> sollen
+                    also nun das Recht über Leben <pb facs="00000856.jpg" n="2"/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -384,14 +429,24 @@
                     <label>3)</label>
                     <item>Die Briefe der Freunde scheinen mir eben deshalb gut dazwischen <lb/>zu stehn, auch sind die meisten, wenn auch nicht alle,
                         nothwendig, <lb/>um die <persName ref="p0146" type="bi">Solgerschen</persName> zu verstehn. Verkürzen Sie an Ihren eigenen <pb
-                            facs="00000857.jpg" n="3"/><note hand="#pencil" place="margin-right" type="foliation">225</note> nicht zuviel, vielleicht
+                            facs="00000857.jpg" n="3"/><note hand="#pencil" place="margin(right)" type="foliation">225</note> nicht zuviel, vielleicht
                         nur einige dubiöse Stellen. – Aber <lb/>– wo ist der Brief an <persName ref="#p0199" type="bi">Hagen</persName> über die <hi
-                            rend="latin">Niebelungen</hi><note resp="#anne.baillot">Brief von Solger an von der Hagen vom 11. September 1819; vgl.
-                                <title ref="w00211">Solgers Nachgelassene Schriften und Briefwechsel</title>, Bd. 1, S. 741-749. Dazu auch der Brief
-                            von von der Hagen an Solger vom <date when="1819-09-09">9. September 1819</date> (ebd., S. 738-741) und der Folgebrief
-                            Solgers an von der Hagen vom <date when="1819-09-19">19. September 1819</date> (ebd., S. 749-760), gefolgt von dessen
-                            Antwort vom <date when="1819-09-19">19. September 1819</date> (ebd., S. 760-772).</note>? – Es ist zu <lb/>verwundern, daß
-                        gar keine Briefe an <hi rend="latin"><persName ref="#p0195" type="bi">Krause</persName></hi> dabei sind.</item>
+                            rend="latin">Niebelungen</hi><note resp="#anne.baillot"><p xml:lang="de">Brief von Solger an von der Hagen vom 11.
+                                September 1819; vgl. <title ref="w00211">Solgers Nachgelassene Schriften und Briefwechsel</title>, Bd. 1, S. 741-749.
+                                Dazu auch der Brief von von der Hagen an Solger vom <date when="1819-09-09">9. September 1819</date> (ebd., S.
+                                738-741) und der Folgebrief Solgers an von der Hagen vom <date when="1819-09-19">19. September 1819</date> (ebd., S.
+                                749-760), gefolgt von dessen Antwort vom <date when="1819-09-19">19. September 1819</date> (ebd., S. 760-772).</p><p
+                                xml:lang="fr">Lettre de Solger à von der Hagen du 11 septembre 1819 ; cf. <title ref="w00211"> Écrits et
+                                    correspondance post-traités de Solger </title>, tome 1, pp. 741-749. Aussi la lettre de von der Hagen à Solger du
+                                    <date when="1819-09-09"> 9. Septembre 1819 </date> (ibid., P. 738-741) et la lettre de suivi de Solger à von der
+                                Hagen datée du <date when="1819-09-19"> 19. Septembre 1819 </date> (ibid., Pp. 749-760), suivi de sa réponse de <date
+                                    when="1819-09-19"> 19. Septembre 1819 </date> (ibid., Pp. 760-772).</p><p xml:lang="en">Letter from Solger to von
+                                der Hagen dated September 11, 1819; cf. <title ref="w00211"> Solger's post-processed writings and correspondence
+                                </title>, vol. 1, pp. 741-749. Also the letter from von der Hagen to Solger dated <date when="1819-09-09"> 9.
+                                    September 1819 </date> (ibid., P. 738-741) and the follow-up letter from Solger to von der Hagen dated <date
+                                    when="1819-09-19"> 19. September 1819 </date> (ibid., Pp. 749-760), followed by his answer from <date
+                                    when="1819-09-19">19. September 1819</date> (ibid., Pp. 760-772).</p></note>? – Es ist zu <lb/>verwundern, daß gar
+                        keine Briefe an <hi rend="latin"><persName ref="#p0195" type="bi">Krause</persName></hi> dabei sind.</item>
                 </list>
                 <p>Jezt ist nur mein Wunsch und meine Bitte: – daß Sie <lb/>beide sobald als möglich das Paket absolviren, – die Sache <lb/>mit <hi
                         rend="latin"><persName ref="#p0188" type="bi">Brockhaus</persName></hi><!-- oder p0189? --> ganz richtig machen, – und daß ich
@@ -446,8 +501,12 @@
                     </choice> Kinder verlangen – </p>
                 <pb facs="00000858.jpg" n="4"/>
                 <p>Wie danke ich Ihnen für die schnelle Hülfe! Sie sind <lb/>ein wahrer Freund. Ich wünsche nur, daß meine Verlegenheit Sie <lb/>nicht
-                    gegen mich verstimmt. <note resp="#johanna.preusse">Offenbar hatte Raumer Tieck Geld geliehen - vgl. Tiecks Bitte darum im <ref
-                            target="Brief06TieckanRaumer.xml">Brief vom 15. September 1823</ref>. </note>
+                    gegen mich verstimmt. <note resp="#johanna.preusse"><p xml:lang="de">Offenbar hatte Raumer Tieck Geld geliehen - vgl. Tiecks Bitte
+                            darum im <ref target="Brief06TieckanRaumer.xml">Brief vom 15. September 1823</ref>. </p><p xml:lang="fr">Apparemment,
+                            Raumer avait prêté de l'argent à Tieck - voir la demande de Tieck à ce sujet dans la <ref
+                                target="Brief06TieckanRaumer.xml">lettre du 15 septembre 1823</ref>.</p><p xml:lang="en">Apparently Raumer had lent
+                            Tieck money - see Tieck's request about it in the <ref target="Brief06TieckanRaumer.xml">letter of September 15, 1823
+                            </ref>.</p></note>
                     <delSpan hand="#red_hand" rend="strikethrough" spanTo="#End"/>Kann <persName ref="#p0195" type="bi">Krause</persName>, dem ich
                     vorläufig <lb/>auch herzlich danke, mir noch irgend mit dem Erbetenen helfen, <lb/>so bin ich denn <date when="1823">in diesem
                         Jahr</date> über alle Sorge hinüber. – <lb/>Ich werde Ihnen mit nächster Post meine Schuldverschreibung<lb/> für <persName
@@ -463,10 +522,17 @@
                         <expan>und</expan>
                     </choice>
                     <hi rend="latin"><persName ref="#p0195" type="bi">Krause</persName></hi> wieder gut <lb/>machen kann. –</p>
-                <closer><hi rend="latin"><title ref="#w00220">Die Hohenstaufen</title></hi><note resp="#anne.baillot"><title ref="#w00220">Die
-                            Geschichte der Hohenstaufen und ihrer Zeit</title> war das große Lebenswerk <persName ref="#p0187" type="bi">Friedrich von
-                            Raumers</persName>; hier handelt es sich wohl um den ersten Band bzw. die ersten Bände. Erst 1825 lagen die insgesamt 6
-                        Bände vor.</note> habe ich jezt erhalten, zu <lb/>meiner grossen Freude.<lb/>
+                <closer><hi rend="latin"><title ref="#w00220">Die Hohenstaufen</title></hi><note resp="#anne.baillot"><p xml:lang="de"><title
+                                ref="#w00220">Die Geschichte der Hohenstaufen und ihrer Zeit</title> war das große Lebenswerk <persName ref="#p0187"
+                                type="bi">Friedrich von Raumers</persName>; hier handelt es sich wohl um den ersten Band bzw. die ersten Bände. Erst
+                            1825 lagen die insgesamt 6 Bände vor.</p>
+                        <p xml:lang="fr"><title ref="# w00220"> L'histoire des Hohenstaufen et de leur époque </title> fut l'œuvre de toute une vie de
+                                <persName ref="# p0187" type="bi"> Friedrich von Raumers </persName>; c'est probablement le premier tome ou les
+                            premiers tomes. Le total de 6 volumes n'était disponible qu'en 1825.</p>
+                        <p xml:lang="en"><title ref="# w00220"> The history of the Hohenstaufen and their time </title> was the great life's work of
+                                <persName ref="# p0187" type="bi"> Friedrich von Raumers </persName>; this is probably the first volume or the first
+                            volumes. The total of 6 volumes were only available in 1825.</p>
+                    </note> habe ich jezt erhalten, zu <lb/>meiner grossen Freude.<lb/>
                     <salute>Meine Grüsse <rs ref="#p0201" type="bi">Ihrer Frau</rs>
                         <choice>
                             <abbr>u</abbr>
@@ -479,7 +545,7 @@
                         <unclear cert="medium" reason="illegible">viel</unclear>
                     </choice>: diese Arbeit hat<lb/> mir alle Zeit bis jezt genom̄en.<lb/>
                     <salute>Ich <unclear cert="medium" reason="illegible">umarme</unclear> Sie mit der herzlichsten Freundschaft</salute><lb/>
-                    <anchor xml:id="End"/>
+                    <!--<anchor xml:id="End"/>-->
                     <signed rend="align(center)">Ihr <lb/>
                         <hi rend="latin">L. Tieck.</hi></signed></closer>
             </div>

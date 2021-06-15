@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -217,8 +224,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-09-06" who="#johanna.preusse">Adjusted comment regarding letters between 1815 and 1818 (changed link and page
                 numbers).</change>
             <change when-iso="2015-06-23" who="#johanna.preusse">Added some more english and french translations of metadata.</change>
@@ -242,19 +250,24 @@
         <body>
             <div type="transcription">
                 <pb facs="00000833.jpg" n="1"/>
-                <note resp="#anne.baillot">Zwischen dem ersten Brief (30. März 1815) und diesem zweiten Brief vom 2. Februar 1818 sind zwei Briefe
-                    Tiecks an Raumer nachgewiesen: einer vom 16. Juni 1816 (gedruckt bei <title ref="#w05781">Zeydel und Matenko 1930</title>, S.
-                    20-22) und einer vom 21. Dezember 1817 (gedruckt in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd.
-                    II, S. 77-79).</note>
-                <note hand="#pencil" place="align-right" type="foliation">212</note>
-                <note hand="#red_hand" place="inline top-right">Tieck an Raumer</note>
-                <p><add hand="#major_hand" place="inline top-left"><del hand="#red_hand" rend="strikethrough"><hi rend="latin">NB</hi>. Wollen, kön̄en
-                            Sie nur Ihr Versprechen <lb/> halten, mit dem <hi rend="underline">nächsten</hi> Briefe, (der aber <hi rend="underline"
-                                >bald</hi>
-                            <lb/> kommen muß) <hi rend="latin"><choice>
-                                    <abbr>Mscpt.</abbr>
-                                    <expan>Manuscripte</expan>
-                                </choice></hi> beizulegen? Geht es <lb/> nicht, wenigstens bald einen Brief!</del></add></p>
+                <note resp="#anne.baillot"><p xml:lang="de">Zwischen dem ersten Brief (30. März 1815) und diesem zweiten Brief vom 2. Februar 1818
+                        sind zwei Briefe Tiecks an Raumer nachgewiesen: einer vom 16. Juni 1816 (gedruckt bei <title ref="#w05781">Zeydel und Matenko
+                            1930</title>, S. 20-22) und einer vom 21. Dezember 1817 (gedruckt in Raumers <title ref="#w00222">Lebenserinnerungen und
+                            Briefwechsel</title>, Bd. II, S. 77-79).</p><p xml:lang="fr">Entre la première lettre (30 mars 1815) et cette deuxième
+                        lettre du 2 février 1818, deux lettres de Tieck à Raumer sont documentées : une du 16 juin 1816 (imprimée par <title
+                            ref="#w05781"> Zeydel et Matenko 1930 </title>, pp. 20-22) et un du 21 décembre 1817 (imprimé dans Raumers <title
+                            ref="#w00222"> Memoirs and Correspondence </title>, Vol. II, pp. 77-79) .</p><p xml:lang="en">Between the first letter
+                        (March 30, 1815) and this second letter of February 2, 1818, two letters from Tieck to Raumer are documented: one dated June
+                        16, 1816 (printed by <title ref="#w05781">Zeydel und Matenko 1930</title>, pp. 20-22) and one from December 21, 1817 (printed
+                        in Raumers <title ref="#w00222">Memoirs and Correspondence </title>, Vol. II, pp. 77-79).</p></note>
+                <note hand="#pencil" place="align(right)" type="foliation">212</note>
+                <note hand="#red_hand" place="inline top(right)">Tieck an Raumer</note>
+                <note hand="#major_hand" place="top(left)"><del hand="#red_hand" rend="strikethrough"><hi rend="latin">NB</hi>. Wollen, kön̄en Sie nur
+                        Ihr Versprechen <lb/> halten, mit dem <hi rend="underline">nächsten</hi> Briefe, (der aber <hi rend="underline">bald</hi>
+                        <lb/> kommen muß) <hi rend="latin"><choice>
+                                <abbr>Mscpt.</abbr>
+                                <expan>Manuscripte</expan>
+                            </choice></hi> beizulegen? Geht es <lb/> nicht, wenigstens bald einen Brief!</del></note>
                 <opener>
                     <dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0066" type="bi">Ziebingen</placeName></hi>, den <date
                             when-iso="1818-02-02">2<hi rend="superscript">ten</hi>
@@ -288,9 +301,12 @@
                     </choice> plaudern, was <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> wie es mir einfällt, auf die <lb/>Gefahr hin, das Beste zu vergessen. – <note resp="#anne.baillot">Beginn des Auszugs
-                        aus dem Brief, der sich in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II. S. 81
-                        befindet.</note> Sie haben die Worte über <lb/>die Nachahmung alter <choice>
+                    </choice> wie es mir einfällt, auf die <lb/>Gefahr hin, das Beste zu vergessen. – <note resp="#anne.baillot"><p xml:lang="de"
+                            >Beginn des Auszugs aus dem Brief, der sich in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>,
+                            Bd. II. S. 81 befindet.</p><p xml:lang="fr">Début de l'extrait de la lettre, qui se trouve dans les <title ref="#w00222"
+                                >Mémoires et Correspondance</title> de Raumer, Tome II. P. 81.</p><p xml:lang="en">Beginning of the excerpt from the
+                            letter, which can be found in Raumer's <title ref="#w00222">Memoirs and Correspondence</title>, Vol. II. P. 81.</p></note>
+                    Sie haben die Worte über <lb/>die Nachahmung alter <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> grosser Muster mir aus der Seele gespro<lb break="no"/>chen. Die wahre Art, sein Individuum auszusprechen, schließt
@@ -312,8 +328,11 @@
                         <unclear cert="medium" reason="illegible">Darsteller</unclear>
                         <unclear cert="medium" reason="illgible">Darstellen</unclear>
                     </choice>
-                    <note resp="#anne.baillot">In Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 82, wird an
-                        dieser Stelle die Lesart "Darstellen" vorgezogen.</note>, Zeit <choice>
+                    <note resp="#anne.baillot"><p xml:lang="de">In Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S.
+                            82, wird an dieser Stelle die Lesart "Darstellen" vorgezogen.</p><p xml:lang="fr">Dans les <title ref="w00222">Memoirs and
+                                Correspondence</title> de Raumer, tome II, p. 82, la lecture "représenter" est préférée à ce stade.</p><p
+                            xml:lang="en">In Raumer's <title ref="w00222">Memoirs and Correspondence</title>, Vol. II, p. 82, the reading "represent"
+                            is preferred at this point.</p></note>, Zeit <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Vortrag, alles fließt von selbst in ein<lb break="no"/>ander. Will man nun diese Vortreflichkeit, Vollendung <choice>
@@ -387,7 +406,7 @@
                     </choice> ich alle übrigen <lb/>historischen Schauspiele neben diesen nicht einmal nennen mag. – Da <lb/>ich darauf komme: es ist
                     leicht, diesen Sachen eine Wirkung, selbst eine <lb/>starke zu geben, wenn man sie unter einen moralischen, empfindsamen,
                     <lb/>sogenannten poetischen Gesichtspunkt stellt; oder wenn man z. B. didaktisch<pb facs="00000835.jpg" n="3"/>
-                    <note hand="#pencil" place="margin-right" type="foliation">213</note>
+                    <note hand="#pencil" place="margin(right)" type="foliation">213</note>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -401,15 +420,24 @@
                     </choice> Schönheit eins werden; <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> jene oben<note resp="#anne.baillot">Ich folge der Lesart aus Raumers <title ref="w00222">Lebenserinnerungen und
-                            Briefwechsel</title>, Bd. II, S. 83; eine andere mögliche Lesart wäre "eben".</note> genannte <lb/>manierirte Bedingungen
-                    würden es nur entstellen; von hinzugefügten <lb/>Lügen nicht einmal zu sprechen, die ich gantz verwerfe.<note resp="anne.baillot"
-                        >Die ganze Stelle "von hinzugefügten Lügen... verwerfe." ist in Raumers <title ref="w00222">Lebenserinnerungen und
-                            Briefwechsel</title>, Bd. II, S. 83 unterstrichen.</note> Ist denn der Geist <lb/>der Geschichte, das grosse Schicksal,
-                    der Untergang des<note resp="#anne.baillot">In Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S.
-                        83, wird an dieser Stelle die Lesart "der" vorgezogen.</note> Herrlichen, etwas andres <lb/>als Poesie? Ihr erster Kreutzzug
-                    hat mir recht von neuem Muth ge<lb break="no"/>macht; denn als Historiker haben Sie geleistet, was ich meine; man steht <lb/>so
-                    gantz in den Sachen, man verwundert sich über nichts, man macht alles <lb/>mit, <choice>
+                    </choice> jene oben<note resp="#anne.baillot"><p xml:lang="de">Ich folge der Lesart aus Raumers <title ref="w00222"
+                                >Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 83; eine andere mögliche Lesart wäre "eben".</p><p
+                            xml:lang="fr">Je suis la lecture des <title ref="w00222">Mémoires et correspondance</title> de Raumer, tome II, p. 83 ;
+                            une autre lecture possible serait "pair".</p><p xml:lang="en">I follow the reading from Raumer's <title ref="w00222">
+                                Memoirs and Correspondence</title>, Vol. II, p. 83; another possible reading would be "even".</p></note> genannte
+                    <lb/>manierirte Bedingungen würden es nur entstellen; von hinzugefügten <lb/>Lügen nicht einmal zu sprechen, die ich gantz
+                        verwerfe.<note resp="anne.baillot"><p xml:lang="de">Die ganze Stelle "von hinzugefügten Lügen... verwerfe." ist in Raumers
+                                <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 83 unterstrichen.</p><p xml:lang="fr">Tout
+                            le passage de "mensonges ajoutés ... jetez." est souligné dans les <title ref="w00222">Memoirs and Correspondence</title>
+                            de Raumer, tome II, p. 83.</p><p xml:lang="en">The whole passage of "added lies ... discard." is underlined in Raumer's
+                                <title ref="w00222"> Memoirs and Correspondence </title>, Vol. II, p. 83.</p></note> Ist denn der Geist <lb/>der
+                    Geschichte, das grosse Schicksal, der Untergang des<note resp="#anne.baillot"><p xml:lang="de">In Raumers <title ref="w00222"
+                                >Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 83, wird an dieser Stelle die Lesart "der" vorgezogen.</p><p
+                            xml:lang="fr">Dans les <title ref="w00222"> Memoirs and Correspondence </title> de Raumer, tome II, p. 83, la lecture "le"
+                            est préférée à ce stade.</p><p xml:lang="en">In Raumer's <title ref="w00222"> Memoirs and Correspondence </title>, Vol.
+                            II, p. 83, the reading "the" is preferred at this point.</p></note> Herrlichen, etwas andres <lb/>als Poesie? Ihr erster
+                    Kreutzzug hat mir recht von neuem Muth ge<lb break="no"/>macht; denn als Historiker haben Sie geleistet, was ich meine; man steht
+                    <lb/>so gantz in den Sachen, man verwundert sich über nichts, man macht alles <lb/>mit, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> jener klare Tagesduft einer überzeugenden Gleichgültigkeit <lb/>(erlauben Sie mir den Ausdruck) ist über alle Gruppen <choice>
@@ -434,8 +462,11 @@
                     nicht nach 5 Minuten mich <lb/>einheimisch gefühlt, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> die Gegend gewissermassen vergessen <lb/>hätte; darum mir<note resp="#anne.baillot">In Raumers <title ref="w00222"
-                            >Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 84 wurde der Satz ergänzt: "Darum ist mir".</note> nichts fremder <choice>
+                    </choice> die Gegend gewissermassen vergessen <lb/>hätte; darum mir<note resp="#anne.baillot"><p xml:lang="de">In Raumers <title
+                                ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 84 wurde der Satz ergänzt: "Darum ist mir".</p><p
+                            xml:lang="fr">Dans les <title ref="w00222"> Memoirs and Correspondence </title> de Raumer, tome II, p. 84, la phrase a été
+                            ajoutée : "C'est pourquoi c'est moi".</p><p xml:lang="en">In Raumer's <title ref="w00222"> Memoirs and Correspondence
+                            </title>, Vol. II, p. 84, the sentence was added: "That's why it's me".</p></note> nichts fremder <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> fataler als die staunenden <lb/>Naturenthusiasten, die im̄er staunen, immer hingerissen sind, <lb/>ohne nur zur Ruhe,
@@ -475,8 +506,10 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> layenmässig es auch heraus kommen <lb/>mag; ein andermal. Ich hatte es am meisten gegen jenes Doppelte in Ihrer<note
-                        resp="#anne.baillot">In Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 84 steht "der"
-                        statt "Ihrer".</note>
+                        resp="#anne.baillot"><p xml:lang="de">In Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S.
+                            84 steht "der" statt "Ihrer".</p><p xml:lang="fr">Dans les <title ref="w00222"> Memoirs and Correspondence </title> de
+                            Raumer, tome II, p. 84, "le" remplace "le vôtre".</p><p xml:lang="en">In Raumer's <title ref="w00222"> Memoirs and
+                                Correspondence </title>, Vol. II, p. 84, "the" stands instead of "yours".</p></note>
                     <lb/>Universalhistorie, vom Festhalten des Alten, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -501,8 +534,10 @@
                         <expan>und</expan>
                     </choice> Entwickeln, hört genau genom̄en die Geschichte auf: – <lb/>alle diese Ahndungen, die mir vorschweben, die ich nur hier
                     als Wolkenbilder <lb/>vorführe, möchte ich einmal mir selber entwickeln: denn auch die Vaterlands<lb break="no"/>liebe, aus ihrem
-                    wahren <hi rend="latin">Locus</hi> gerissen, wird Thorheit, wie alles Wahre.<note resp="#anne.baillot">Ende des Auszugs in Raumers
-                            <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 85.</note></p>
+                    wahren <hi rend="latin">Locus</hi> gerissen, wird Thorheit, wie alles Wahre.<note resp="#anne.baillot"><p xml:lang="de">Ende des
+                            Auszugs in Raumers <title ref="w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 85.</p><p xml:lang="fr">Fin
+                            de l'extrait des <title ref="w00222"> Mémoires et correspondance </title> de Raumer, tome II, p. 85.</p><p xml:lang="en"
+                            >End of excerpt in Raumer's <title ref="w00222"> Memoirs and Correspondence </title>, Vol. II, p. 85.</p></note></p>
                 <p>Ich freue mich, daß <persName ref="#p0216" type="bi"><hi rend="latin">Manso</hi></persName> am <hi rend="latin"><title
                             ref="#w00226">Fortunat</title></hi> Freude hat, sagen Sie <lb/>es ihm, das ist mir weit mehr, als wen̄ ich es von den
                     jungen Halbpoeten <lb/>höre, die gar nicht mehr wissen, wenn sie lügen. – Von meiner <lb/>Freundschaft <choice>
@@ -523,9 +558,12 @@
                 <p>Auch darüber soll in meinem <persName ref="#p0206" type="bi"><hi rend="latin"><choice>
                                 <abbr>Shaksp.</abbr>
                                 <expan>Shakespeare</expan>
-                            </choice></hi></persName><note resp="#anne.baillot">Tieck plante ein umfangreiches, literaturhistorisches Werk über
-                        Shakespeare, woran er immer wieder arbeitete, das er jedoch bis zu seinem Lebensende nie fertigstellte.</note> Manches gesagt
-                    werden, <choice>
+                            </choice></hi></persName><note resp="#anne.baillot"><p xml:lang="de">Tieck plante ein umfangreiches, literaturhistorisches
+                            Werk über Shakespeare, woran er immer wieder arbeitete, das er jedoch bis zu seinem Lebensende nie fertigstellte.</p><p
+                            xml:lang="fr">Tieck a prévu un vaste travail littéraire et historique sur Shakespeare, sur lequel il a travaillé encore et
+                            encore, mais qu'il n'a jamais terminé jusqu'à la fin de sa vie.</p><p xml:lang="en">Tieck planned an extensive,
+                            literary-historical work on Shakespeare, which he worked on again and again, but which he never finished until the end of
+                            his life.</p></note> Manches gesagt werden, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> ich <lb/>hoffe, <subst>
@@ -534,9 +572,8 @@
                     </subst> sollen zu denen gehören, die sich überzeugen lassen, daß <lb/>wir <hi rend="underline">gar kein</hi> Theater haben <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> haben <hi rend="underline">können</hi>: <closer><signed rend="align(right)">Ganz Ihr <hi rend="latin">L.
-                            Tieck.</hi></signed></closer>
-                </p>
+                    </choice> haben <hi rend="underline">können</hi>:</p>
+                <closer><signed rend="align(right)">Ganz Ihr <hi rend="latin">L. Tieck.</hi></signed></closer>
             </div>
         </body>
     </text>
