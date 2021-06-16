@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>1100 E 57th St</street>
+                                <postCode>60637 </postCode>
+                                <settlement>Chicago, IL</settlement>
+                                <country key="US">United States</country>
+                            </address>
+                        </location>
                         <institution>University of Chicago, Joseph Regenstein Library</institution>
                         <repository>Special Collections</repository>
                         <collection>Immanuel Bekker Papers, Box 3</collection>
@@ -179,8 +186,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-06-11" who="#johanna.preusse">Checked encoding, some corrections and additions.</change>
             <change when-iso="2015-05-13/2015-05-28" who="#johanna.preusse">Encoding of body.</change>
             <change when-iso="2015-05-12" who="#johanna.preusse">Finished encoding of header, added transcription.</change>
@@ -323,65 +331,67 @@
                     Hoffnungen geben <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> diesen Erfüllung – recht aus tiefstem Herzen kom̄en diese <lb/> Worte mein geliebter Freund. <closer><salute>Schreiben
-                            Sie bald.</salute>
-                        <signed>Ihre <choice>
-                                <abbr>H.</abbr>
-                                <expan>Henriette</expan>
-                            </choice></signed></closer></p>
-                <add place="margin-left-vertical">Dauern <subst>
-                        <del rend="overwritten">die</del>
-                        <add place="across">der</add>
-                    </subst> italienische Unterricht noch? Wie ist die neu <unclear reason="illegible">Piene</unclear>? Ist <persName ref="#p0196"
-                        type="bi">Reimers</persName> Kind <lb/> glüklich operirt? Haben Sie Gevatter gestanden? Hübsch Antwort auf <hi
-                        rend="underline">alles</hi> Liebster.</add>
-                <pb facs="demo-46-cut.jpg" n="2"/>
-                <p><add place="margin-left-vertical"> Sollte ich noch dazu kom̄en zum morgenden Posttag an <persName ref="#p1638" type="bi"
-                            >Bunsen</persName> zu schreiben, wozu ich eine Veran<lb break="no"/>laßung habe, so bitte ich Sie den Brief, es sei zur
-                        Post oder durch das Departement (<persName ref="#p0519" type="bi">Niebuhrs</persName>
-                        <lb/> Gewißenhaftigkeit nicht zu hoch nehmend) zu besorgen; schike ich ihn dieses Mal nicht so kömt er <lb/> nächstens <choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> Sie besorgen ihn <hi rend="latin">come lei piace</hi> auch schike ich ihn ohne Adresse damit Sie sie gehörig machen.
-                        <lb/> Grüßen Sie mir alle große <choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> kleine <choice>
-                            <abbr>Schl–s</abbr>
-                            <expan>Schleiermachers</expan>
-                        </choice>, <persName ref="#p3629" type="bi">Bleke</persName> den guten auch, die lieben <persName ref="#p3138 #p3140"
-                            type="bi">Horkels</persName>
-                        <lb/> bei denen Sie wol mit <persName ref="#p1142" type="bi">Brandis</persName> waren.</add>
-                </p>
-                <p>
-                    <add place="margin-left-vertical">Schreiben Sie bald <choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> viel <choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> glauben Sie nur daß wie sich auch das von Ihnen geschriebene gestalten <lb/> mag, ich sehe es in seiner Wahrheit.
-                        Ich habe einen lieben Brief von der <unclear reason="illegible">Gein-</unclear> gehabt worin <lb/> auch Ihrer freundlichst
-                        gedacht wird. <choice>
-                            <abbr>d.</abbr>
-                            <expan>den</expan>
-                        </choice>
-                        <date when-iso="1821-07-18">18<hi rend="superscript">ten</hi> July <choice>
-                                <abbr>21</abbr>
-                                <expan>1821</expan>
-                            </choice></date></add>
-                </p>
-                <p>
-                    <add place="margin-right-vertical"><rs ref="#p3623" type="bi">Meine Schwester</rs>, die sich einbildet <lb/> Sie mögen sie nicht
-                        leiden, grüßt <lb/> Sie freundlich.</add>
-                </p>
-                <p>
-                    <add place="margin-right-vertical">Bis zum <date when-iso="1821-08-21">21t <choice>
-                                <abbr>Aug.</abbr>
-                                <expan>August</expan>
-                            </choice></date> bleibe ich <lb/> hier dan̄ gehe ich wieder <lb/> über <placeName ref="#l1035" type="bi">Lanke</placeName>
-                        nach Hause. Bald <lb/> wird es ein Jahr daß ich <lb/> Sie dort wiedersah.</add>
-                </p>
+                    </choice> diesen Erfüllung – recht aus tiefstem Herzen kom̄en diese <lb/> Worte mein geliebter Freund.</p>
+                <closer><salute>Schreiben Sie bald.</salute>
+                    <signed>Ihre <choice>
+                            <abbr>H.</abbr>
+                            <expan>Henriette</expan>
+                        </choice></signed></closer>
+                <postscript>
+                    <p><add place="margin(left)-vertical">Dauern <subst>
+                                <del rend="overwritten">die</del>
+                                <add place="across">der</add>
+                            </subst> italienische Unterricht noch? Wie ist die neu <unclear reason="illegible">Piene</unclear>? Ist <persName
+                                ref="#p0196" type="bi">Reimers</persName> Kind <lb/> glüklich operirt? Haben Sie Gevatter gestanden? Hübsch Antwort
+                            auf <hi rend="underline">alles</hi> Liebster.</add></p>
+                    <pb facs="demo-46-cut.jpg" n="2"/>
+                    <p><add place="margin(left)-vertical"> Sollte ich noch dazu kom̄en zum morgenden Posttag an <persName ref="#p1638" type="bi"
+                                >Bunsen</persName> zu schreiben, wozu ich eine Veran<lb break="no"/>laßung habe, so bitte ich Sie den Brief, es sei
+                            zur Post oder durch das Departement (<persName ref="#p0519" type="bi">Niebuhrs</persName>
+                            <lb/> Gewißenhaftigkeit nicht zu hoch nehmend) zu besorgen; schike ich ihn dieses Mal nicht so kömt er <lb/> nächstens <choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> Sie besorgen ihn <hi rend="latin">come lei piace</hi> auch schike ich ihn ohne Adresse damit Sie sie gehörig
+                            machen. <lb/> Grüßen Sie mir alle große <choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> kleine <choice>
+                                <abbr>Schl–s</abbr>
+                                <expan>Schleiermachers</expan>
+                            </choice>, <persName ref="#p3629" type="bi">Bleke</persName> den guten auch, die lieben <persName ref="#p3138 #p3140"
+                                type="bi">Horkels</persName>
+                            <lb/> bei denen Sie wol mit <persName ref="#p1142" type="bi">Brandis</persName> waren.</add>
+                    </p>
+                    <p>
+                        <add place="margin(left)-vertical">Schreiben Sie bald <choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> viel <choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> glauben Sie nur daß wie sich auch das von Ihnen geschriebene gestalten <lb/> mag, ich sehe es in seiner
+                            Wahrheit. Ich habe einen lieben Brief von der <unclear reason="illegible">Gein-</unclear> gehabt worin <lb/> auch Ihrer
+                            freundlichst gedacht wird. <choice>
+                                <abbr>d.</abbr>
+                                <expan>den</expan>
+                            </choice>
+                            <date when-iso="1821-07-18">18<hi rend="superscript">ten</hi> July <choice>
+                                    <abbr>21</abbr>
+                                    <expan>1821</expan>
+                                </choice></date></add>
+                    </p>
+                    <p>
+                        <add place="margin(right)-vertical"><rs ref="#p3623" type="bi">Meine Schwester</rs>, die sich einbildet <lb/> Sie mögen sie
+                            nicht leiden, grüßt <lb/> Sie freundlich.</add>
+                    </p>
+                    <p>
+                        <add place="margin(right)-vertical">Bis zum <date when-iso="1821-08-21">21t <choice>
+                                    <abbr>Aug.</abbr>
+                                    <expan>August</expan>
+                                </choice></date> bleibe ich <lb/> hier dan̄ gehe ich wieder <lb/> über <placeName ref="#l1035" type="bi"
+                                >Lanke</placeName> nach Hause. Bald <lb/> wird es ein Jahr daß ich <lb/> Sie dort wiedersah.</add>
+                    </p>
+                </postscript>
             </div>
         </body>
     </text>

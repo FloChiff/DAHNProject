@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -221,8 +230,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-19" who="#johanna.preusse">Modified comment regarding Tieck's book collection. Added comment regarding the book
                 by Collier.</change>
             <change when-iso="2017-05-18" who="#johanna.preusse">Added comment regarding Raumer's position in the Prussian censor board.</change>
@@ -236,7 +246,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000936.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">269</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">269</note>
                 <opener><salute rend="align(center)">Geliebter Freund,</salute></opener>
                 <p>Es ist so Vieles vorgefallen, seit dem wir uns nicht <lb/> gesehn haben, daß ich nicht weiß, wo ich anheben soll. Dem <lb/> Him̄el
                     sei Dank, daß Sie wieder hergestellt sind, daß alle Ge<lb break="no"/>fahr und alle Schmerzen und Leiden vorüber sind. Ich war Tag
@@ -245,27 +255,45 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> ich freue mich, wenn Sie <lb/> mir vorlesen und erzählen werden. Werden Sie wieder über <lb/> Ihren Aufenthalt dort und
-                    Ihre Erfahrungen etwas drucken <lb/> lassen?<note resp="#johanna.preusse">Raumer war bereits 1835 zu Forschungszwecken nach
-                        England gereist, woraus die Reisebeschreibung <title ref="#w05509">England im Jahre 1835</title> entstanden war. 1836 hatte
-                        er, nach einem Besuch bei den Tiecks im April, den Sommer wieder in England verbracht, wie aus einem <ref
-                            target="Brief21DorotheaTieckanUechtritz">Brief Dorothea Tiecks vom 7. April</ref> (S. 4) hervorgeht.</note> Ueber jene
-                    Berliner Clique läßt sich gar nichts <lb/> mehr sagen, denn diese Menschen sind allzu verächtlich: sie <lb/> wissen auch selbst um
-                    ihre Lügen, Verdrehungen und Verleum<lb break="no"/>dungen recht gut. Dies mal glaube ich, ist es nicht <hi rend="latin"><persName
-                            ref="#p0049" type="bi"><choice>
+                    Ihre Erfahrungen etwas drucken <lb/> lassen?<note resp="#johanna.preusse"><p xml:lang="de">Raumer war bereits 1835 zu
+                            Forschungszwecken nach England gereist, woraus die Reisebeschreibung <title ref="#w05509">England im Jahre 1835</title>
+                            entstanden war. 1836 hatte er, nach einem Besuch bei den Tiecks im April, den Sommer wieder in England verbracht, wie aus
+                            einem <ref target="Brief21DorotheaTieckanUechtritz">Brief Dorothea Tiecks vom 7. April</ref> (S. 4) hervorgeht.</p>
+                        <p xml:lang="fr">Raumer avait déjà voyagé en Angleterre à des fins de recherche en 1835, d'où la description de voyage <title
+                                ref="#w05509"> Angleterre en 1835 </title>. En 1836, après une visite chez les Tieck en avril, il avait de nouveau
+                            passé l'été en Angleterre, selon une <ref target="Brief21DorotheaTieckanUechtritz">lettre de Dorothea Tiecks datée du 7
+                                avril </ref> (p. 4).</p>
+                        <p xml:lang="en">Raumer had already traveled to England for research purposes in 1835, from which the travel description
+                                <title ref="#w05509"> England in 1835 </title> arose. In 1836, after a visit to the Tiecks in April, he had spent the
+                            summer in England again, according to a <ref target="Brief21DorotheaTieckanUechtritz">letter from Dorothea Tiecks dated
+                                April 7th </ref> (p. 4).</p></note> Ueber jene Berliner Clique läßt sich gar nichts <lb/> mehr sagen, denn diese
+                    Menschen sind allzu verächtlich: sie <lb/> wissen auch selbst um ihre Lügen, Verdrehungen und Verleum<lb break="no"/>dungen recht
+                    gut. Dies mal glaube ich, ist es nicht <hi rend="latin"><persName ref="#p0049" type="bi"><choice>
                                 <abbr>Fried.</abbr>
                                 <expan>Friedrich</expan>
                             </choice> II</persName></hi>, über <lb/> den sie die Beleidigten spielen, sondern wohl wegen der <lb/> Russischen
                         <persName ref="#p0039" type="bi">Elisabeth</persName>, was sie aber nicht sagen wollen, weil <lb/> sie sich schämen. Dies
                     ganze Wesen ist jezt so heillos <lb/> und albern, daß die Armseligkeit gewiß bald enden muß. <lb/> Die Censur wird ihre Rolle auf
                     diese Art nicht fortspielen <lb/> können. Und wenn Sie sich nicht gekränkt fühlen, so hat <lb/> die Abgeschmacktheit auch nichts
-                    zu bedeuten.<note resp="#johanna.preusse">Raumer, der selbst Mitglied des preußischen Oberzensurkollegiums gewesen war, hatte
-                        dieses Amt <date when-iso="1831">1831</date> gekündigt. Auf welche spezifischen Konflikte mit der Zensur Tieck hier referiert,
-                        ist bisher nicht bekannt.</note>
+                    zu bedeuten.<note resp="#johanna.preusse"><p xml:lang="de">Raumer, der selbst Mitglied des preußischen Oberzensurkollegiums
+                            gewesen war, hatte dieses Amt <date when-iso="1831">1831</date> gekündigt. Auf welche spezifischen Konflikte mit der
+                            Zensur Tieck hier referiert, ist bisher nicht bekannt.</p>
+                        <p xml:lang="fr">Raumer, qui était lui-même membre de la haute commission de censure prussienne, avait démissionné de ce poste
+                            en <date when-iso="1831"> 1831 </date>. On ne sait pas encore à quels conflits spécifiques avec la censure Tieck fait
+                            référence ici.</p>
+                        <p xml:lang="en">Raumer, who himself was a member of the Prussian senior censorship board, had resigned from this office in
+                                <date when-iso="1831"> 1831 </date>. It is not yet known which specific conflicts with the censorship Tieck is
+                            referring to here.</p></note>
                 </p>
                 <p>
-                    <hi rend="latin">Brockhaus</hi><note resp="'johanna.preusse">Gemeint ist entweder <persName ref="#p3470" type="bi"
-                            >Heinrich</persName> oder <persName ref="#p0188" type="bi">Friedrich Arnold Brockhaus</persName> (der Jüngere).</note> hat
-                    mir die <rs ref="#w05738" type="bi">Marie</rs> und den <rs ref="#w05739" type="bi">Friedrich</rs> noch <lb/> nicht gesendet.<note
+                    <hi rend="latin">Brockhaus</hi><note resp="'johanna.preusse"><p xml:lang="de">Gemeint ist entweder <persName ref="#p3470"
+                                type="bi">Heinrich</persName> oder <persName ref="#p0188" type="bi">Friedrich Arnold Brockhaus</persName> (der
+                            Jüngere).</p>
+                        <p xml:lang="fr">Cela signifie soit <persName ref="#p3470" type="bi"> Heinrich </persName> soit <persName ref="#p0188"
+                                type="bi"> Friedrich Arnold Brockhaus </persName> (le plus jeune).</p>
+                        <p xml:lang="en">This means either <persName ref="#p3470" type="bi"> Heinrich </persName> or <persName ref="#p0188"
+                                type="bi"> Friedrich Arnold Brockhaus </persName> (the younger one).</p></note> hat mir die <rs ref="#w05738"
+                        type="bi">Marie</rs> und den <rs ref="#w05739" type="bi">Friedrich</rs> noch <lb/> nicht gesendet.<note
                         resp="#johanna.preusse">Durch den Kontext ist es sehr wahrscheinlich, dass Tieck hier auf die 1836 bei Brockhaus erschienenen
                         ersten zwei Teile von Raumers „Beiträgen zur neueren Geschichte aus dem britischen Museum und Reichsarchive“ anspielt. „Marie“
                         bezieht sich demnach auf Maria Stuart als Thema von <rs ref="#w05738" type="bi">Teil 1</rs>, und „Friedrich“ auf Friedrich II.
@@ -276,10 +304,14 @@
                     ich habe diesmal von dem <lb/> Winter eine grosse Furcht: viel mehr als sonst. </p>
                 <pb facs="00000937.jpg" n="2"/>
                 <p> (So eben erhalte ich Ihren neuesten <supplied reason="stain">l</supplied>angen Brief über <lb/>
-                    <hi rend="latin"><persName ref="#p3668" type="bi">Byron</persName></hi><note resp="#johanna.preusse">Gemeint ist der Brief von
-                        Raumer an Tieck vom 3., 4. und 5. November 1836. Raumer hat ihn später publiziert, vgl. <title ref="#w00222"
-                            >Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 367–377</note>, ich versage mir aber die Freude, ihn jezt schon
-                    zu lesen, <lb/>
+                    <hi rend="latin"><persName ref="#p3668" type="bi">Byron</persName></hi><note resp="#johanna.preusse"><p xml:lang="de">Gemeint ist
+                            der Brief von Raumer an Tieck vom 3., 4. und 5. November 1836. Raumer hat ihn später publiziert, vgl. <title ref="#w00222"
+                                >Lebenserinnerungen und Briefwechsel</title>, Bd. II, S. 367–377</p>
+                        <p xml:lang="fr">Il s'agit de la lettre de Raumer à Tieck des 3, 4 et 5 novembre 1836. Raumer l'a publiée plus tard, voir
+                                <title ref="#w00222"> Memoirs and Correspondence </title>, Tome II, p 367- 377</p>
+                        <p xml:lang="en">This is the letter from Raumer to Tieck of November 3rd, 4th and 5th, 1836. Raumer published it later, see
+                                <title ref="#w00222"> Memoirs and Correspondence </title>, Vol. II, p 367-377</p></note>, ich versage mir aber die
+                    Freude, ihn jezt schon zu lesen, <lb/>
                     <choice>
                         <unclear>nur</unclear>
                         <unclear>um</unclear>
@@ -291,13 +323,25 @@
                                 <abbr>Shaksp.</abbr>
                                 <expan>Shakspeare</expan>
                             </choice></persName></hi> und die Bühne nicht mit<lb break="no"/>gebracht. Aus den Auszügen kann ich nicht klug werden.
-                    Können <lb/> Sie mir das Büchelchen, welches mir sehr wichtig ist, nicht verschaffen?<note resp="#johanna.preusse">Tieck gelang es
-                        offenbar noch, das "Büchelchen" (Colliers "History of English Dramatic Poetry") zu ergattern, denn es taucht 1849, als Tiecks
-                        Bibliothek versteigert wurde, im Auktionskatalog von Asher auf, vgl. <title ref="#w03592">Bibliotheca Tieckiana</title>
-                        (Position 6997).</note>
-                    <lb/> Mich wundert, daß es Ihnen <hi rend="latin">Murray</hi><note resp="#johanna.preusse">In Frage kommen zwei Verleger mit dem
-                        Namen John Murray, <rs ref="#p3675" type="bi">Vater</rs> (1778-1843) und <rs ref="#p3676" type="bi">Sohn</rs> (1808-1892), die
-                        das Verlagshaus John Murray in London in der betreffenden Zeit gemeinsam führten.</note> nicht mit gegeben hat, da er mir <lb/>
+                    Können <lb/> Sie mir das Büchelchen, welches mir sehr wichtig ist, nicht verschaffen?<note resp="#johanna.preusse"><p
+                            xml:lang="de">Tieck gelang es offenbar noch, das "Büchelchen" (Colliers "History of English Dramatic Poetry") zu
+                            ergattern, denn es taucht 1849, als Tiecks Bibliothek versteigert wurde, im Auktionskatalog von Asher auf, vgl. <title
+                                ref="#w03592">Bibliotheca Tieckiana</title> (Position 6997).</p>
+                        <p xml:lang="fr">Tieck a apparemment réussi à mettre la main sur le "Büchelchen" (Collier's "History of English Dramatic
+                            Poetry"), car il est apparu dans le catalogue de vente aux enchères d'Asher en 1849 lorsque la bibliothèque de Tieck a été
+                            vendue aux enchères, cf. <title ref="#w03592"> Bibliotheca Tieckiana </title> (rubrique 6997).</p>
+                        <p xml:lang="en">Tieck apparently still managed to get hold of the "Büchelchen" (Collier's "History of English Dramatic
+                            Poetry") because it appeared in Asher's auction catalog in 1849 when Tieck's library was auctioned, cf. <title
+                                ref="#w03592"> Bibliotheca Tieckiana </title> (heading 6997).</p></note>
+                    <lb/> Mich wundert, daß es Ihnen <hi rend="latin">Murray</hi><note resp="#johanna.preusse"><p xml:lang="de">In Frage kommen zwei
+                            Verleger mit dem Namen John Murray, <rs ref="#p3675" type="bi">Vater</rs> (1778-1843) und <rs ref="#p3676" type="bi"
+                                >Sohn</rs> (1808-1892), die das Verlagshaus John Murray in London in der betreffenden Zeit gemeinsam führten.</p>
+                        <p xml:lang="fr">Deux éditeurs nommés John Murray sont mis en avant <rs ref="#p3675" type="bi"> père </rs> (1778-1843) et <rs
+                                ref="#p3676" type="bi">fils </rs> (1808-1892) qui dirigeaient alors conjointement la maison d'édition John Murray à
+                            Londres.</p>
+                        <p xml:lang="en">Two publishers named John Murray, <rs ref="#p3675" type="bi"> father </rs> (1778-1843) and <rs ref="#p3676"
+                                type="bi"> son </rs> (1808-1892), come into question, who jointly ran the John Murray publishing house in London at
+                            the time.</p></note> nicht mit gegeben hat, da er mir <lb/>
                     <rs ref="#w05741" type="bi">das Erste</rs> sogar zweimal hat zukommen lassen. – <stamp>[Stempel:] Staatsbibliothek Preußischer
                         Kulturbesitz</stamp>
                 </p>
@@ -305,14 +349,28 @@
                     <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>
                     <persName ref="#p3672" type="bi">Graf <hi rend="latin">York</hi></persName> hat mir endlich, vor wenigen Tagen geschrieben. Wären
                     <lb/> Sie doch hier, um mit Ihnen dies Geschäft besprechen zu können, da ich <lb/> in solchen Angelegenheiten so ungeschickt
-                        bin.<note resp="#johanna.preusse">Tieck plante aus finanzieller Bedrängnis heraus den Verkauf seiner Bibliothek an den Grafen
-                        Yorck von Wartenburg, wovon auch der sieben Tage zuvor verfasste <ref target="HvF-an-FvR_1836-11-04.xml">Brief von Henriette
-                            von Finckenstein an Raumer</ref> handelt. Zu der verwickelten Geschichte des mehrfachen Verkaufs von Tiecks
-                        Büchersammlungen vgl. Achim Hölters Beitrag zu Tiecks Bibliothek im <rs ref="#w05615" type="bi">Tieck-Handbuch</rs>. Zur
-                        virtuellen Rekonstruktion der Bestände und ihres Verbleibs vgl. das FWF-Projekt <hi rend="latin">Ludwig Tiecks Bibliothek.
-                            Anatomie einerromantisch-komparatistischen Büchersammlung.</hi> Universität Wien, Abteilung für Vergleichende
-                        Literaturwissenschaft, Projektleitung: Univ.-Prof. Dr. Achim Hölter, M.A.</note> Ich schreibe Ihnen <lb/> die Hauptstelle ab,
-                    damit ich nicht falsch berichte: </p>
+                        bin.<note resp="#johanna.preusse"><p xml:lang="de">Tieck plante aus finanzieller Bedrängnis heraus den Verkauf seiner
+                            Bibliothek an den Grafen Yorck von Wartenburg, wovon auch der sieben Tage zuvor verfasste <ref
+                                target="HvF-an-FvR_1836-11-04.xml">Brief von Henriette von Finckenstein an Raumer</ref> handelt. Zu der verwickelten
+                            Geschichte des mehrfachen Verkaufs von Tiecks Büchersammlungen vgl. Achim Hölters Beitrag zu Tiecks Bibliothek im <rs
+                                ref="#w05615" type="bi">Tieck-Handbuch</rs>. Zur virtuellen Rekonstruktion der Bestände und ihres Verbleibs vgl. das
+                            FWF-Projekt <hi rend="latin">Ludwig Tiecks Bibliothek. Anatomie einerromantisch-komparatistischen Büchersammlung.</hi>
+                            Universität Wien, Abteilung für Vergleichende Literaturwissenschaft, Projektleitung: Univ.-Prof. Dr. Achim Hölter,
+                            M.A.</p>
+                        <p xml:lang="fr">En raison de difficultés financières, Tieck prévoyait de vendre sa bibliothèque au comte Yorck von
+                            Wartenburg, comme mentionné dans la <ref target="HvF-an-FvR_1836-11-04.xml"> Lettre d'Henriette von Finckenstein à Raumer
+                            </ref>, écrite sept jours plus tôt. Sur l'histoire compliquée des ventes multiples des collections de livres de Tieck,
+                            voir la contribution d'Achim Hölter à la bibliothèque de Tieck dans le <rs ref="#w05615" type="bi"> manuel de Tieck
+                            </rs>. Pour une reconstitution virtuelle des fonds et de leur localisation, voir le projet FWF <hi rend="latin"> Ludwig
+                                Tiecks Bibliothek. Anatomie d'une collection de livres comparés romantiques. </hi> Université de Vienne, Département
+                            de littérature comparée, Gestion de projet : Univ.-Prof. Dr. Achim Hölter, M.A.</p>
+                        <p xml:lang="en">Due to financial distress, Tieck planned to sell his library to Count Yorck von Wartenburg, as said in the
+                                <ref target="HvF-an-FvR_1836-11-04.xml"> Letter from Henriette von Finckenstein to Raumer </ref> written seven days
+                            earlier. On the complicated history of the multiple sales of Tieck's book collections, see Achim Hölter's contribution to
+                            Tieck's library in the <rs ref="#w05615" type="bi"> Tieck-Handbuch </rs>. For a virtual reconstruction of the holdings
+                            and their whereabouts, see the FWF project <hi rend="latin"> Ludwig Tiecks Bibliothek. Anatomy of a romantic-comparative
+                                book collection. </hi> University of Vienna, Department of Comparative Literature, Project Management: Univ.-Prof. Dr.
+                            Achim Hölter, M.A.</p></note> Ich schreibe Ihnen <lb/> die Hauptstelle ab, damit ich nicht falsch berichte: </p>
                 <p>„ich zahle an Ihre <choice>
                         <abbr>Fräul.</abbr>
                         <expan>Fräulein</expan>
@@ -356,9 +414,9 @@
                         <expan>und</expan>
                     </choice> der Zahler das Ca<lb break="no"/>pital niemals giebt? Wozu von einem reichen Mann, der auf <lb/> der andern Seite wieder
                         großmüthig<del rend="strikethrough">)</del> handelt, diese verwickelnde Bedingung? </p>
-                <anchor xml:id="a1"/>
+                <!--<anchor xml:id="a1"/>-->
                 <pb facs="00000938.jpg" n="3"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">270</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">270</note>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a2"/>
                 <p><rs ref="#p3672" type="bi">Er</rs> wünscht, daß ich die Sache sogleich gerichtlich abmache. In <lb/> einer Hinsicht, wegen der
                     Ungewißheit des Lebens vortheilhaft: <lb/> – aber ich könnte mir <choice>
@@ -391,10 +449,14 @@
                             <expan>von</expan>
                         </choice>
                         <date when-iso="1587">1587</date></rs>
-                    <lb/> für ein wahres Bagatell erhalten habe?<note resp="#johanna.preusse">Holinsheds <hi rend="latin">Chronicles</hi> wurden von
-                        Shakespeare als Quelle für seine historischen Dramen benutzt und waren daher für den Shakespeareforscher Tieck von
-                        Interesse.</note> In meiner <lb/> Krankheit in <hi rend="latin"><placeName ref="#l0152" type="bi">Baden</placeName></hi>, war
-                    diese Nachricht, mir ein rechter <lb/> Trost in Leiden <choice>
+                    <lb/> für ein wahres Bagatell erhalten habe?<note resp="#johanna.preusse"><p xml:lang="de">Holinsheds <hi rend="latin"
+                                >Chronicles</hi> wurden von Shakespeare als Quelle für seine historischen Dramen benutzt und waren daher für den
+                            Shakespeareforscher Tieck von Interesse.</p><p xml:lang="fr">Les <hi rend="latin"> Chroniques </hi> d'Holinsheds ont été
+                            utilisées par Shakespeare comme source pour ses drames historiques et ont donc intéressé les recherches de Shakespeare de
+                            Tieck.</p><p xml:lang="en">Holinsheds <hi rend="latin"> Chronicles </hi> were used by Shakespeare as a source for his
+                            historical dramas and were therefore of interest to the Shakespeare researchs of Tieck.</p></note> In meiner <lb/>
+                    Krankheit in <hi rend="latin"><placeName ref="#l0152" type="bi">Baden</placeName></hi>, war diese Nachricht, mir ein rechter <lb/>
+                    Trost in Leiden <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Schmerzen. Sie werden dies Buche selbst auf <lb/> grossen <choice>
@@ -434,7 +496,7 @@
                     <hi rend="latin"><persName ref="#p0944" type="bi">Porson</persName></hi> besessen: für die Kleinigkeit war mir dies für den <lb/>
                     Kritiker unentbehrliche Buch wie geschenkt, um meine <hi rend="latin">Doublette</hi>
                     <lb/> einmal gegen eine spanische, oder andre Seltenheit eintauschen zu können. </p>
-                <anchor xml:id="a2"/>
+                <!--<anchor xml:id="a2"/>-->
                 <pb facs="00000939.jpg" n="4"/>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a3"/>
                 <p> Sie sehn, <persName ref="#p3672" type="bi">Yorks</persName> künftige <choice>
@@ -450,22 +512,33 @@
                             <expan>und</expan>
                         </choice></add> ob Sie meinen, man solle sie <lb/> ohne allen Einwand annehmen. <lb/>
                 </p>
-                <anchor xml:id="a3"/>
+                <!--<anchor xml:id="a3"/>-->
                 <p> Heut Mittag werden wir Ihren grossen <persName ref="#p3668" type="bi">Byron</persName>s=Brief <lb/> nach Tische gemeinsam
-                        lesen<note resp="#johanna.preusse">Der betreffende Brief vom 3., 4. und 5. November 1836, von dem bereits die Rede war, ist
-                        nachzulesen in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechseln</title>, Bd. II, S. 367–377.</note>; ich
-                    werde ihn denen mittheilen, nachher, die Sin̄ <choice>
+                        lesen<note resp="#johanna.preusse"><p xml:lang="de">Der betreffende Brief vom 3., 4. und 5. November 1836, von dem bereits die
+                            Rede war, ist nachzulesen in Raumers <title ref="#w00222">Lebenserinnerungen und Briefwechseln</title>, Bd. II, S.
+                            367–377.</p><p xml:lang="fr">La lettre pertinente des 3, 4 et 5 novembre 1836, dont nous avons déjà parlé, peut être lue
+                            dans les <title ref="#w00222"> Mémoires et Correspondance </title> de Raumer, tome II, p. 367 - 377.</p><p xml:lang="en"
+                            >The relevant letter of November 3rd, 4th and 5th, 1836, of which we have already spoken, can be read in Raumer's <title
+                                ref="#w00222"> Memoirs and Correspondence </title>, Vol. II, p. 367 -377.</p></note>; ich werde ihn denen mittheilen,
+                    nachher, die Sin̄ <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Ken̄tniß haben. Mich dünkt, ich habe Ihren <lb/> zweiten psychologischen Brief<note resp="#johanna.preusse"
-                        >Wahrscheinlich handelt es sich bei dem erwähnten Brief um denjenigen vom 9. Januar 1836, wo Raumer sich mit der Psychologie
-                        von Carl Gustav Carus auseinandersetzt. Raumer hat den Brief in Auszügen veröffentlicht (vgl. <title ref="#w04745"
-                            >Litterarischer Nachlaß II</title>, S. 168-169).</note> auch unserm <hi rend="latin"><persName ref="#p2447" type="bi"
-                            >Carus</persName></hi> mitge<lb break="no"/>theilt. Vielleicht antworte ich Ihnen über <persName ref="#p3668" type="bi"
-                        >Byron</persName>, den ich mir sehr <lb/> hoch gestellt habe, der aber jezt in meiner Erinnrung etwas <lb/> erloschen ist.
-                    Ueber <hi rend="latin"><persName ref="#w05734 #w05735" type="bi">Eckerman̄</persName></hi> liesse sich viel sprechen;<note
-                        resp="#johanna.preusse">Gemeint sind Eckermanns "Gespräche mit Goethe". Die ersten zwei der insgesamt drei Bände waren 1836
-                        gerade frisch erschienen.</note>
+                    </choice> Ken̄tniß haben. Mich dünkt, ich habe Ihren <lb/> zweiten psychologischen Brief<note resp="#johanna.preusse"><p
+                            xml:lang="de">Wahrscheinlich handelt es sich bei dem erwähnten Brief um denjenigen vom 9. Januar 1836, wo Raumer sich mit
+                            der Psychologie von Carl Gustav Carus auseinandersetzt. Raumer hat den Brief in Auszügen veröffentlicht (vgl. <title
+                                ref="#w04745">Litterarischer Nachlaß II</title>, S. 168-169).</p><p xml:lang="fr">La lettre mentionnée est
+                            probablement celle du 9 janvier 1836, où Raumer traite de la psychologie de Carl Gustav Carus. Raumer a publié des
+                            extraits de la lettre (voir <title ref="#w04745"> Litterarischer Nachlass II </title>, pp. 168-169).</p><p xml:lang="en"
+                            >The letter mentioned is probably the one from January 9, 1836, where Raumer deals with the psychology of Carl Gustav
+                            Carus. Raumer published excerpts from the letter (cf. <title ref="#w04745"> Litterarischer Nachlaß II </title>, pp.
+                            168-169).</p></note> auch unserm <hi rend="latin"><persName ref="#p2447" type="bi">Carus</persName></hi> mitge<lb
+                        break="no"/>theilt. Vielleicht antworte ich Ihnen über <persName ref="#p3668" type="bi">Byron</persName>, den ich mir sehr
+                    <lb/> hoch gestellt habe, der aber jezt in meiner Erinnrung etwas <lb/> erloschen ist. Ueber <hi rend="latin"><persName
+                            ref="#w05734 #w05735" type="bi">Eckerman̄</persName></hi> liesse sich viel sprechen;<note resp="#johanna.preusse"><p
+                            xml:lang="de">Gemeint sind Eckermanns "Gespräche mit Goethe". Die ersten zwei der insgesamt drei Bände waren 1836 gerade
+                            frisch erschienen.</p><p xml:lang="fr">Il s'agit des "Conversations avec Goethe" d'Eckermann. Les deux premiers des trois
+                            volumes venaient de paraître frais en 1836.</p><p xml:lang="en">This is Eckermann's "Conversations with Goethe". The first
+                            two of the three volumes had just appeared fresh in 1836.</p></note>
                     <hi rend="latin"><persName ref="#p0713" type="bi">Löbell</persName></hi>
                     <lb/> hatte die größte Lust, einzelne Stellen zu kom̄entiren, <lb/> lobend, fragend, zweifelnd: ich meinte in <hi rend="latin"
                             ><placeName ref="#l0065" type="bi">Heidelberg</placeName></hi>, ich <lb/> könnte auch Com̄entar zum Text schreiben:
