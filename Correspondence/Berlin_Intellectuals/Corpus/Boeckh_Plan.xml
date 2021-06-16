@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -53,8 +54,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -214,8 +221,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-10-15" who="#sabine.seifert">Corrected minor typos.</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Updated content of element correspContext.</change>
             <change when-iso="2020-04-06" who="#sabine.seifert">Corrected a typo in the transcription.</change>
@@ -252,13 +260,13 @@
         <body>
             <div type="transcription">
                 <pb facs="00000004b.jpg" n="1"/>
-                <p><hi rend="underline">Abschrift</hi><note place="margin-right" type="foliation">
+                <note><hi rend="underline">Abschrift</hi><note place="margin(right)" type="foliation">
                         <subst hand="#blue_pen">
                             <del rend="overwritten"><seg hand="#pencil">2</seg>
                             </del>
                             <add place="across">2</add>
                         </subst>
-                    </note></p>
+                    </note></note>
                 <head rend="align(center)">Plan<lb/>zur Einrichtung des <orgName ref="#g0079" type="bi">philologischen Seminars</orgName><lb/>der
                         <orgName ref="#g0122" type="bi">Universität</orgName> zu <placeName ref="#l1103" type="bi">Berlin</placeName>.</head>
                 <div n="1" type="paragraph">
@@ -303,7 +311,7 @@
                             resp="#sabine.seifert">Von der Eröffnung des <orgName ref="#g0079" type="bi">Seminars</orgName>
                             <date when-iso="1812">1812</date> an hatte <persName ref="#p0178" type="bi">August Boeckh</persName> die Direktion bis zu
                             seinem Todesjahr <date when-iso="1867">1867</date> inne.</note> und besteht aus zwölf <hi rend="underline">or<fw
-                                type="catch">dent</fw></hi><pb break="no" facs="00000006b.jpg" n="3"/><note place="margin-right" type="foliation">
+                                type="catch">dent</fw></hi><pb break="no" facs="00000006b.jpg" n="3"/><note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">3</seg>
                                 </del>
@@ -318,9 +326,12 @@
                         eines ordent<lb break="no"/>lichen Mitgliedes mit Verzichtleistung auf das damit verbundene Be<supplied reason="damage"
                             >ne</supplied><lb break="no"/>ficium haben will, und sich den daraus folgenden Verpflichtungen unterwirft,<lb/>soll zwar
                         von den ordentlichen Mitgliedern nicht ausgeschlossen, aber als <hi rend="underline"><supplied reason="damage"
-                                >super</supplied><lb break="no"/>numerar</hi><note resp="#sabine.seifert">Supernumerar(ius), hier: ein über die
-                            gewöhnliche Zahl Aufgenommener, der den Titel tragen darf, aber auf die Prämien Verzicht leistet.</note> angesehen
-                        werden.</p>
+                                >super</supplied><lb break="no"/>numerar</hi><note resp="#sabine.seifert"><p xml:lang="de">Supernumerar(ius), hier:
+                                ein über die gewöhnliche Zahl Aufgenommener, der den Titel tragen darf, aber auf die Prämien Verzicht leistet.</p>
+                            <p xml:lang="fr">Supernumerar(ius), ici : personne admise au-dessus du numéro habituel, qui est autorisée à porter le
+                                titre, mais renonce aux bonus.</p>
+                            <p xml:lang="en">Supernumerar(ius), here: someone admitted above the usual number, who is allowed to bear the title, but
+                                waives the bonuses.</p></note> angesehen werden.</p>
                 </div>
                 <div n="4" type="paragraph">
                     <head rend="align(center)" xml:id="plan4">§ 4.<lb rend="both"/><hi rend="underline">Von der Aufnahme der ordentlichen Mitglieder.
@@ -329,30 +340,42 @@
                         eingeschrieben, des<lb break="no"/>gleichen ob sie Inländer oder Ausländer seyen, wird nicht in Betracht<lb/>gezogen, außer
                         daß bei gleicher Würdigkeit und Bedürftigkeit dem bei<fw type="catch">der</fw><pb facs="00000007b.jpg" n="4"/>der <orgName
                             ref="#g0137" type="bi">philosophischen Facultät</orgName> eingeschriebenen Studirenden vor dem bei<lb/>einer andern
-                        Facultät eingetragenen und eben so dem Inländer<lb/>vor dem Ausländer<note resp="#sabine.seifert">Dies bezieht sich auf die
-                            Grenzen <placeName ref="#l0092" type="bi">Preußens</placeName>.</note> der Vorzug gegeben wird. Bloße Bedürftig<lb
-                            break="no"/>keit darf kein Beweggrund zu Aufnahme seyn; jedoch ist dahin<lb/>zu sehen, daß bei gleichen Fähigkeiten und
-                        Kenntnissen der Ärmere<lb/>vor dem Bemitteltern bedacht werde; so wie diejenigen, welche<lb/>im Stande sind, jede
-                        Unterstützung zu verschmähen, von selbst da<lb break="no"/>rauf Verzicht zu leisten haben. Ob jemand, welcher sich um
-                        die<lb/>Stelle eines ordentlichen Mitgliedes bewirbt, schon vorher einige<lb/>Zeit auf Universitäten studirt habe oder nicht,
-                        macht bei der<lb/>Aufnahme keinen Unterschied, so bald derjenige welcher das Uni<lb break="no"/>versitäts Studium erst
-                        anfängt, bewährt, daß er die zum Eintre<lb break="no"/>ten in das <orgName ref="#g0079" type="bi">Seminar</orgName>
-                        nothwendigen Erfordernisse besitze; jedoch<lb/>soll ein solcher besonders streng geprüft, und nur dann, wen̄ er<lb/>allen
-                        Forderungen genügt, aufgenom̄en, im entgegengesetz<lb break="no"/>ten Fall aber auf eine spätere Zeit verwiesen werden.–</p>
+                        Facultät eingetragenen und eben so dem Inländer<lb/>vor dem Ausländer<note resp="#sabine.seifert"><p xml:lang="de">Dies
+                                bezieht sich auf die Grenzen <placeName ref="#l0092" type="bi">Preußens</placeName>.</p>
+                            <p xml:lang="fr">Il s'agit des bordures <placeName ref="#l0092" type="bi"> Preussens </placeName>.</p><p xml:lang="en"
+                                >This refers to the borders <placeName ref="#l0092" type="bi"> Preussens </placeName>.</p></note> der Vorzug gegeben
+                        wird. Bloße Bedürftig<lb break="no"/>keit darf kein Beweggrund zu Aufnahme seyn; jedoch ist dahin<lb/>zu sehen, daß bei
+                        gleichen Fähigkeiten und Kenntnissen der Ärmere<lb/>vor dem Bemitteltern bedacht werde; so wie diejenigen, welche<lb/>im
+                        Stande sind, jede Unterstützung zu verschmähen, von selbst da<lb break="no"/>rauf Verzicht zu leisten haben. Ob jemand,
+                        welcher sich um die<lb/>Stelle eines ordentlichen Mitgliedes bewirbt, schon vorher einige<lb/>Zeit auf Universitäten studirt
+                        habe oder nicht, macht bei der<lb/>Aufnahme keinen Unterschied, so bald derjenige welcher das Uni<lb break="no"/>versitäts
+                        Studium erst anfängt, bewährt, daß er die zum Eintre<lb break="no"/>ten in das <orgName ref="#g0079" type="bi"
+                            >Seminar</orgName> nothwendigen Erfordernisse besitze; jedoch<lb/>soll ein solcher besonders streng geprüft, und nur dann,
+                        wen̄ er<lb/>allen Forderungen genügt, aufgenom̄en, im entgegengesetz<lb break="no"/>ten Fall aber auf eine spätere Zeit
+                        verwiesen werden.–</p>
                     <p>Folgendes sind die allgemeinen Erfordernisse zur Aufnahme:<lb rend="both"/><list>
                             <label xml:id="plan4.1">1.,</label>
                             <item> Fleiß und Unbescholtenheit der Sitten und des Charac<lb break="no"/>ters, welche, wenn der Director den Aspiranten
                                 nicht<lb/>genugsam kennt, durch Zeugnisse zu erweisen sind.<lb/>Wer bereits in eine vierzehntägige oder noch
                                 längere<lb/>Gefängnißstrafe verfallen ist, oder das <foreign xml:lang="la"><hi rend="latin">Consilium
-                                    abeundi</hi></foreign><note resp="#sabine.seifert">Consilium abeundi: Verweis von der Universität und zeitweise
-                                    Entziehung der akademischen Bürgerrechte. Die Immatrikulation an einer anderen Universität ist, im Gegensatz zur
-                                    Relegation, möglich sowie die Neuimmatrikulation nach einer Straffrist an der Universität, die das Consilium
-                                    abeundi ausgesprochen hat (<persName ref="#p2852" type="bi">Paschke</persName> (1999): <title ref="#w04678"
-                                        >Studentenhistorisches Lexikon</title>, S. 70 f.).</note><lb/>unterschrieben hat, kann nicht aufgenom̄en
-                                werden.</item>
+                                    abeundi</hi></foreign><note resp="#sabine.seifert"><p xml:lang="de">Consilium abeundi: Verweis von der Universität
+                                        und zeitweise Entziehung der akademischen Bürgerrechte. Die Immatrikulation an einer anderen Universität ist,
+                                        im Gegensatz zur Relegation, möglich sowie die Neuimmatrikulation nach einer Straffrist an der Universität,
+                                        die das Consilium abeundi ausgesprochen hat (<persName ref="#p2852" type="bi">Paschke</persName> (1999):
+                                            <title ref="#w04678">Studentenhistorisches Lexikon</title>, S. 70 f.).</p>
+                                    <p xml:lang="fr">Consilium abeundi : expulsion de l'université et privation temporaire des droits civiques
+                                        académiques. Contrairement à la relégation, l'inscription dans une autre université est possible ainsi que la
+                                        réinscription à l'université après une période de pénalité imposée par le Consilium abeundi (<persName
+                                            ref="#p2852" type="bi"> Paschke </persName>) (1999) : <title ref="#w04678"> Studentenhistorisches Lexikon
+                                        </title>, p. 70 sq.).</p>
+                                    <p xml:lang="en">Consilium abeundi: expulsion from the university and temporary deprivation of academic civil
+                                        rights. In contrast to relegation, enrollment at another university is possible as well as re-enrollment at
+                                        the university after a penalty period imposed by the Consilium abeundi (<persName ref="#p2852" type="bi">
+                                            Paschke </persName>) (1999): <title ref="#w04678"> Studentenhistorisches Lexikon </title>, p. 70
+                                    f.).</p></note><lb/>unterschrieben hat, kann nicht aufgenom̄en werden.</item>
                             <fw type="catch">2.</fw>
                             <pb facs="00000008b.jpg" n="5"/>
-                            <note place="margin-right" type="foliation">
+                            <note place="margin(right)" type="foliation">
                                 <subst hand="#blue_pen">
                                     <del rend="overwritten"><seg hand="#pencil">4</seg>
                                     </del>
@@ -402,7 +425,7 @@
                             break="no"/>ben darf. Findet sich durch die Prüfung, daß die Abhandlung,<lb/>auf welche der Aspirant zum Examen zugelassen
                         worden,<lb/>mit seinen Kenntnißen und Fähigkeiten in einem solchen<lb/>Mißverhältniß und Widerspruch stehe, daß sie nicht
                         als<lb/>sein Werk und wissenschaftliches Eigenthum angesehen werden<lb/>könne, so kann er vor Ablauf von drey Semestern
-                            nicht<fw type="catch">wieder</fw><pb facs="00000010b.jpg" n="7"/><note place="margin-right" type="foliation"><subst
+                            nicht<fw type="catch">wieder</fw><pb facs="00000010b.jpg" n="7"/><note place="margin(right)" type="foliation"><subst
                                 hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">5</seg>
                                 </del>
@@ -449,7 +472,7 @@
                             </choice> 4.</ref>;<lb/>auch sollen diejenigen, welche den <ref target="#plan1">§ 1</ref>. bezeichneten Zweck<lb/>des
                         Studiums der Philologie nicht haben, sondern nur eine<lb/>ausgezeichnete Liebe zu dieser Wissenschaft und die <ref
                             target="#plan4.3">§ 4.</ref><fw>N<hi n="2" rend="superscript underline">o</hi></fw><pb facs="00000012b.jpg" n="9"/><note
-                            place="margin-right" type="foliation"><subst hand="#blue_pen">
+                            place="margin(right)" type="foliation"><subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">6</seg>
                                 </del>
                                 <add place="across">6</add>
@@ -458,9 +481,10 @@
                                 <expan>Nummer</expan>
                             </choice> 3.</ref> bezeichneten Kenntnisse besitzen von den außerordentlichen<lb/>Stellen nicht ausgeschloßen werden. Zur
                         Prüfung derselben reicht<lb/>eine einzugebende Probeschrift hin, ohne daß die Aspiranten sich<lb/>einem Examen zu unterwerfen
-                        hätten, da nicht anzunehmen ist,<lb/>daß jemand, um sich die mit keinem Emolument<note resp="#sabine.seifert">Emolument:
-                            Nebeneinkommen.</note> verbundene Stelle<lb/>eines außerordentlichen Mitgliedes zu erwerben, mit einer<lb/>Abhandlung
-                        welche nicht sein wissenschaftliches Eigenthum ist,<lb/>werde täuschen wollen.</p>
+                        hätten, da nicht anzunehmen ist,<lb/>daß jemand, um sich die mit keinem Emolument<note resp="#sabine.seifert"><p xml:lang="de"
+                                >Emolument: Nebeneinkommen.</p><p xml:lang="fr">Emolument : Revenu supplémentaire.</p><p xml:lang="en">Emolument:
+                                Extra income.</p></note> verbundene Stelle<lb/>eines außerordentlichen Mitgliedes zu erwerben, mit
+                        einer<lb/>Abhandlung welche nicht sein wissenschaftliches Eigenthum ist,<lb/>werde täuschen wollen.</p>
                 </div>
                 <div n="7" type="paragraph">
                     <head rend="align(center)">§ 7.<lb rend="both"/><hi rend="underline">Von dem Austritt und der Ausstoßung aus dem <orgName
@@ -508,7 +532,7 @@
                         </list></p>
                     <p>Wer, nachdem er zwei Jahre hindurch ordentliches Mit<lb break="no"/>glied gewesen, nach genauer Erfüllung aller Verbindlich<lb
                             break="no"/>keiten und mit der vollkom̄enen Zufriedenheit des<lb/>Directors austritt erhält ein gedrucktes Diplom, auf
-                            wel<fw type="catch">chem</fw><pb break="no" facs="00000014b.jpg" n="11"/><note place="margin-right" type="foliation"
+                            wel<fw type="catch">chem</fw><pb break="no" facs="00000014b.jpg" n="11"/><note place="margin(right)" type="foliation"
                                 ><subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">7</seg>
                                 </del>
@@ -561,7 +585,7 @@
                                 scheinen.</item>
                             <fw type="catch">2,</fw>
                             <pb facs="00000016b.jpg" n="13"/>
-                            <note place="margin-right" type="foliation"><subst hand="#blue_pen">
+                            <note place="margin(right)" type="foliation"><subst hand="#blue_pen">
                                     <del rend="overwritten"><seg hand="#pencil">8</seg>
                                     </del>
                                     <add place="across">8</add>
@@ -579,15 +603,22 @@
                                 erhält sie<lb/>der Verfasser wieder auf drei Tage zurück, und händigt<lb/>sie sechs Tage vor der Versammlung, für
                                 welche sie be<lb break="no"/>stimmt ist, dem Director ein. Nach der Verlesung derselben<lb/>wird sie von dem Director
                                 zu den <foreign xml:lang="la"><hi rend="latin">Actis <orgName ref="#g0079" type="bi"
-                                    >Seminarii</orgName></hi></foreign><note resp="#sabine.seifert">Die Seminararbeiten müssen an die Verfasser
-                                    zurückgegeben worden sein, denn weder befinden sie sich in den Unterlagen des philologischen Seminars im Archiv
-                                    der Humboldt-Universität zu Berlin noch in denen des Geheimen Staatsarchivs Preußischer Kulturbesitz.</note>
-                                gelegt,<lb/>so jedoch, daß der Verfasser sie zur nochmaligen Umarbeitung<lb/>oder Verbeßerung einiger Puncte
-                                zurückfordern darf:<fw type="catch">auch</fw><pb facs="00000017b.jpg" n="14"/>auch kann der Director dieses dem
-                                Verfasser bei einer<lb/>übrigens nicht unwürdig befundenen Abhandlung zur<lb/>Pflicht machen. Wird eine Abhandlung des
-                                    <rs ref="#g0079" type="bi">Instituts</rs><lb/>ganz unwürdig befunden, so giebt sie der Director<lb/>dem Verfasser
-                                mit Mißbilligung zurück und er muß<lb/>dieselbe von neuem ausarbeiten, oder nach Befinden<lb/>eine ganz neue anstatt
-                                der erstern einliefern, welche<lb/>jedoch nicht vorgelesen werden darf.</item>
+                                    >Seminarii</orgName></hi></foreign><note resp="#sabine.seifert"><p xml:lang="de">Die Seminararbeiten müssen an die
+                                        Verfasser zurückgegeben worden sein, denn weder befinden sie sich in den Unterlagen des philologischen
+                                        Seminars im Archiv der Humboldt-Universität zu Berlin noch in denen des Geheimen Staatsarchivs Preußischer
+                                        Kulturbesitz.</p>
+                                    <p xml:lang="fr">Les documents du séminaire doivent avoir été rendus à l'auteur, car ils ne figurent ni dans les
+                                        documents du séminaire philologique dans les archives de l'Université Humboldt de Berlin ni dans ceux des
+                                        Archives secrètes d'État du patrimoine culturel prussien.</p>
+                                    <p xml:lang="en">The seminar papers must have been returned to the author, because they are neither in the
+                                        documents of the philological seminar in the archive of the Humboldt University in Berlin nor in those of the
+                                        Secret State Archives of Prussian Cultural Heritage.</p></note> gelegt,<lb/>so jedoch, daß der Verfasser sie
+                                zur nochmaligen Umarbeitung<lb/>oder Verbeßerung einiger Puncte zurückfordern darf:<fw type="catch">auch</fw><pb
+                                    facs="00000017b.jpg" n="14"/>auch kann der Director dieses dem Verfasser bei einer<lb/>übrigens nicht unwürdig
+                                befundenen Abhandlung zur<lb/>Pflicht machen. Wird eine Abhandlung des <rs ref="#g0079" type="bi"
+                                >Instituts</rs><lb/>ganz unwürdig befunden, so giebt sie der Director<lb/>dem Verfasser mit Mißbilligung zurück und er
+                                muß<lb/>dieselbe von neuem ausarbeiten, oder nach Befinden<lb/>eine ganz neue anstatt der erstern einliefern,
+                                welche<lb/>jedoch nicht vorgelesen werden darf.</item>
                             <lb/>
                             <label xml:id="plan9.3">3,</label>
                             <item>Alle vierzehn Tage, in den Wochen in welchen keine<lb/>Abhandlung gelesen wird, versammelt sich das <orgName
@@ -598,7 +629,7 @@
                                 nöthigen<lb/>Falls selbst: auch kann er die Auflösung auf die näch<lb break="no"/>ste Sitzung verschieben und einzelne
                                 Mitglieder<lb/>mit der Lösung in derselben beauftragen. Ferner<lb/>kann der Director selbst in den Sitzungen den
                                     Mit<lb break="no"/>gliedern einige Fragen und Aufgaben zur Lösung<lb/>entweder gleich für die Sitzung, in welcher
-                                    sie<fw type="catch">auf<lb break="no"/></fw><pb facs="00000018b.jpg" n="15"/><note place="margin-right"
+                                    sie<fw type="catch">auf<lb break="no"/></fw><pb facs="00000018b.jpg" n="15"/><note place="margin(right)"
                                     type="foliation"><subst hand="#blue_pen">
                                         <del rend="overwritten"><seg hand="#pencil">9</seg>
                                         </del>
@@ -634,15 +665,15 @@
                         Semesters<lb/>zu leisten habe, und zu welcher Zeit; auch hat er dafür zu<lb/>sorgen, daß für die ersten sechs Wochen des
                         folgenden<lb/>halben Jahres, nehmlich für die drei ersten Versam̄lungen<lb/>zum Lesen der Abhandlungen, die Schriften der
                         Mitglieder<lb/>noch in dem vorhergehenden Semester in Circulation gesetzt<lb/>werden. Außerdem hat der Fiscal die Mitglieder
-                        mit<lb/>allen sie betreffenden Statuten<note resp="#sabine.seifert">Die <ref
-                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement#1">Statuten</ref> des <orgName
-                                ref="#g0079" type="bi">philologischen Seminars</orgName> wurden am <date when-iso="1812-05-28">28. Mai 1812</date> vom
-                                <orgName ref="#g0063" type="bi">Innenministerium</orgName> verabschiedet und beruhen auf dem vorliegenden, von
-                                <persName ref="#p0178" type="bi">Boeckh</persName> ausgearbeiteten Plan. Sie liegen gedruckt vor u.a. im <title
-                                ref="#w00383">Berliner Universitätskalender 1813</title>, S.24-28, und bei <persName ref="#p1243" type="bi"
-                                >Koch</persName> (1839/40): <title ref="#w00384">Die Preussischen Universitäten</title>, Bd. 2,2 S.560-562.</note> des
-                            <orgName ref="#g0079" type="bi">Seminars</orgName> nach ei<lb break="no"/>nem vom Director ihm mitzutheilenden Auszug
-                        aus<lb/>demselben bekan̄t zu machen, <choice>
+                        mit<lb/>allen sie betreffenden Statuten<note resp="#sabine.seifert"><p xml:lang="de">Die <ref
+                                    target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement#1">Statuten</ref> des
+                                    <orgName ref="#g0079" type="bi">philologischen Seminars</orgName> wurden am <date when-iso="1812-05-28">28. Mai
+                                    1812</date> vom <orgName ref="#g0063" type="bi">Innenministerium</orgName> verabschiedet und beruhen auf dem
+                                vorliegenden, von <persName ref="#p0178" type="bi">Boeckh</persName> ausgearbeiteten Plan. Sie liegen gedruckt vor
+                                u.a. im <title ref="#w00383">Berliner Universitätskalender 1813</title>, S.24-28, und bei <persName ref="#p1243"
+                                    type="bi">Koch</persName> (1839/40): <title ref="#w00384">Die Preussischen Universitäten</title>, Bd. 2,2
+                                S.560-562.</p><p xml:lang="fr"/><p xml:lang="en"/></note> des <orgName ref="#g0079" type="bi">Seminars</orgName> nach
+                            ei<lb break="no"/>nem vom Director ihm mitzutheilenden Auszug aus<lb/>demselben bekan̄t zu machen, <choice>
                             <abbr>u</abbr>
                             <expan>und</expan>
                         </choice> sowohl auf die genaue<lb/>Befolgung der Ordnung in den verschiedenen Übungen,<lb/>als auch auf den Fleiß der
@@ -651,7 +682,7 @@
                     <p>Will ein außerordentliches Mitglied thätigen An<lb break="no"/>theil an den Übungen nehmen (<ref target="#plan3">§ 3.</ref>) so
                         setzt der Fiscal<lb/>nach vorher gegangener Einwilligung des Directors<lb/>seinen Namen an der von letzterem bestimmten
                         Stelle<lb/>in die Liste. Wer durch Unpäßlichkeit oder andere dringen<fw type="catch">de</fw><pb break="no"
-                            facs="00000020b.jpg" n="17"/><note place="margin-right" type="foliation"><subst hand="#blue_pen">
+                            facs="00000020b.jpg" n="17"/><note place="margin(right)" type="foliation"><subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">10</seg>
                                 </del>
                                 <add place="across">10</add>
@@ -708,7 +739,7 @@
                             </choice> Bibliothek</orgName><lb/>haben, so daß sie besonders eine größere Anzahl<lb/>Bücher als andere Studenten, aus
                         derselben erhalten<lb/>kön̄en. Ein strafbarer Misbrauch dieser Vergünsti<lb break="no"/>gung hat dagegen Ausstoßung aus dem
                             <rs ref="#g0079" type="bi">Institut</rs> zur <fw type="catch">Folge</fw><pb facs="00000022b.jpg" n="19"/><note
-                            place="margin-right" type="foliation"><subst hand="#blue_pen">
+                            place="margin(right)" type="foliation"><subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">11</seg>
                                 </del>
                                 <add place="across">11</add>
@@ -728,7 +759,7 @@
                         ausführlich<lb/>zu berichten, und jedesmal die zwei vorzüglichsten<lb/>der eingelieferten Abhandlungen dem Berichte bei<lb
                             break="no"/>zulegen.</p>
                 </div>
-                <milestone rend="horizontal-rule"/>
+                <milestone rend="horizontal-rule" unit="none"/>
             </div>
         </body>
     </text>

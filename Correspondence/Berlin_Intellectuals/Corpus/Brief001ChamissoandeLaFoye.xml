@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -253,8 +260,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Re-organized information in first footnote and bibl element.</change>
             <change when-iso="2013-07-17" who="#sabine.seifert">Superfluous spaces before notes deleted.</change>
@@ -282,50 +290,50 @@
             <div type="transcription">
                 <pb facs="00000003.jpg" n="1"/>
                 <note hand="#pencil_1" type="foliation">1J3</note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">1</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">1</note>
                 <note resp="#sabine.seifert">
-                    <seg xml:lang="de">Es handelt sich um eine von <persName ref="#p0237" type="bi">Chamisso</persName> angefertigte Abschrift eines
-                        an ihn gerichteten Briefes von <persName ref="#p0247" type="bi">Helmina von Chézy</persName>, die frühestens <date
+                    <p xml:lang="de">Es handelt sich um eine von <persName ref="#p0237" type="bi">Chamisso</persName> angefertigte Abschrift eines an
+                        ihn gerichteten Briefes von <persName ref="#p0247" type="bi">Helmina von Chézy</persName>, die frühestens <date
                             when-iso="1810-07">Ende Juli 1810</date> entstanden sein kann. Sie liegt gedruckt vor in <persName ref="#p0261" type="bi"
                             >Riegels</persName> Edition der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> als
                         Teil des Briefes 74 von Chamisso an seinen Freund <persName ref="#p0248" type="bi">Louis de La Foye</persName>, der auf <date
-                            when-iso="1810-08">Anfang August 1810</date> datiert wird.</seg>
-                    <seg xml:lang="en">This is a copy made by <persName ref="#p0237" type="bi">Chamisso</persName> of a letter sent to him by
-                            <persName ref="#p0247" type="bi">Helmina von Chézy</persName>. It is printed in <persName ref="#p0261" type="bi"
-                            >Riegel</persName>'s edition of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                        as part of letter 74 from Chamisso to his friend <persName ref="#p0248" type="bi">Louis de La Foye</persName> which is dated
-                        to the <date when-iso="1810-08">beginning of August 1810</date>.</seg>
-                    <seg xml:lang="fr">Il s'agit d'une copie, réalisée par <persName ref="#p0237" type="bi">Chamisso</persName>, d'une lettre qui lui
-                        a envoyée <persName ref="#p0247" type="bi">Helmina von Chézy</persName>, au plus tôt <date when-iso="1810-07">fin juillet
+                            when-iso="1810-08">Anfang August 1810</date> datiert wird.</p>
+                    <p xml:lang="en">This is a copy made by <persName ref="#p0237" type="bi">Chamisso</persName> of a letter sent to him by <persName
+                            ref="#p0247" type="bi">Helmina von Chézy</persName>. It is printed in <persName ref="#p0261" type="bi">Riegel</persName>'s
+                        edition of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> as part of letter 74 from
+                        Chamisso to his friend <persName ref="#p0248" type="bi">Louis de La Foye</persName> which is dated to the <date
+                            when-iso="1810-08">beginning of August 1810</date>.</p>
+                    <p xml:lang="fr">Il s'agit d'une copie, réalisée par <persName ref="#p0237" type="bi">Chamisso</persName>, d'une lettre qui lui a
+                        envoyée <persName ref="#p0247" type="bi">Helmina von Chézy</persName>, au plus tôt <date when-iso="1810-07">fin juillet
                             1810</date>. Elle est reproduite, avec quelques modifications d'orthographe et de ponctuation, dans la <title
                             ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> de <persName ref="#p0261" type="bi"
                             >Riegel</persName>, comme faisant partie de la lettre 74 de Chamisso à son ami <persName ref="#p0248" type="bi">Louis de
-                            La Foye</persName> de <date when-iso="1810-08">début août 1810</date>.</seg></note>
+                            La Foye</persName> de <date when-iso="1810-08">début août 1810</date>.</p></note>
                 <lg type="poem">
                     <note resp="#sabine.seifert">
-                        <seg xml:lang="de">Diese Verse bilden die vierte Strophe des Gedichtes <title ref="#w00259">Abschiedsgruß</title> in <persName
+                        <p xml:lang="de">Diese Verse bilden die vierte Strophe des Gedichtes <title ref="#w00259">Abschiedsgruß</title> in <persName
                                 ref="#p0247" type="bi">Helmina von Chézys</persName>
                             <title ref="#w00252">Gedichte der Enkelin der Karschin</title> von 1812 (Band 2, S.12). Der Druck unterscheidet sich in
                             der Zeichensetzung, Rechtschreibung, der Groß- und Kleinschreibung und auch inhaltlich von der Abschrift <persName
-                                ref="#p0237" type="bi">Chamissos</persName>.</seg>
-                        <seg xml:lang="en">These lines are the fourth stanza of the poem <title ref="#w00259">Abschiedsgruß</title> in <persName
+                                ref="#p0237" type="bi">Chamissos</persName>.</p>
+                        <p xml:lang="en">These lines are the fourth stanza of the poem <title ref="#w00259">Abschiedsgruß</title> in <persName
                                 ref="#p0247" type="bi">Helmina von Chézy</persName>'s <title ref="#w00252">Gedichte der Enkelin der Karschin</title>,
                             published in 1812, with variations in punctuation, spelling, upper and lower case. There are also some changes with
-                            regards to content.</seg>
-                        <seg xml:lang="fr">Ces vers forment la première strophe du poème <title ref="#w00259">Abschiedsgruß</title> publié par
-                                <persName ref="#p0247" type="bi">Helmina von Chézys</persName> dans ses <title ref="#w00252">Gedichte der Enkelin der
+                            regards to content.</p>
+                        <p xml:lang="fr">Ces vers forment la première strophe du poème <title ref="#w00259">Abschiedsgruß</title> publié par <persName
+                                ref="#p0247" type="bi">Helmina von Chézys</persName> dans ses <title ref="#w00252">Gedichte der Enkelin der
                                 Karschin</title>, publiés en 1812 avec quelques variations dans l'orthographe et la ponctuation par rapport à la
-                            version présentée ici.</seg>
+                            version présentée ici.</p>
                     </note>
-                    <l>Andre Blühten andre Au<unclear cert="high" extend="two letters" reason="stain">ge</unclear>n<note resp="#anna.busch">
-                            <seg xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> und der <title
-                                    ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "Augen" statt "Auen".</seg>
-                            <seg xml:lang="en"> In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title> and of
-                                    <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "Augen"
-                                instead of "Auen".</seg>
-                            <seg xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title> et la
+                    <l>Andre Blühten andre Au<unclear cert="high" extent="two letters" reason="stain">ge</unclear>n<note resp="#anna.busch">
+                            <p xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> und der <title ref="#w00253"
+                                    >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "Augen" statt "Auen".</p>
+                            <p xml:lang="en"> In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title> and of <title
+                                    ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "Augen" instead of
+                                "Auen".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title> et la
                                     <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, on lit "Augen" et non
-                                "Auen".</seg>
+                                "Auen".</p>
                         </note> -</l>
                     <l>Mit mir geht mein traurig Herz.</l>
                     <l>Will ich in die Ferne schauen</l>
@@ -333,45 +341,45 @@
                     <l>Thränen send ich zu den Sternen,</l>
                     <l>Thränen sinken in die Fluth</l>
                     <l>Gram will<note resp="#anna.busch">
-                            <seg xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> steht "wird" statt
-                                "will".</seg>
-                            <seg xml:lang="en">In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, the text
-                                reads "wird" instead of "will".</seg>
-                            <seg xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, on
-                                lit "wird" et non "will".</seg>
+                            <p xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> steht "wird" statt
+                                "will".</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, the text
+                                reads "wird" instead of "will".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, on lit
+                                "wird" et non "will".</p>
                         </note> sich nur dann entfernen,</l>
-                    <l>Wenn dein<note resp="#sabine.seifert"><seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                                    Chamisso, Fragments inédits</title> steht "mein" statt "dein".</seg><seg xml:lang="en">In the print version of the
-                                    <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "mein"
-                                instead of "dein".</seg><seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance
-                                    d'Adalbert de Chamisso, Fragments inédits</title>, on lit "mein" et non "dein".</seg></note> Herz an deinem
-                            ruht.<note resp="#sabine.seifert">
-                            <seg xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> lautet dieser Vers: "Wann
-                                mein Herz gebrochen ruht!".</seg>
-                            <seg xml:lang="en">In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, the text
-                                reads "Wann mein Herz gebrochen ruht!".</seg>
-                            <seg xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, ce
-                                vers apparaît sous la forme: "Wann mein Herz gebrochen ruht!".</seg>
+                    <l>Wenn dein<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                    Fragments inédits</title> steht "mein" statt "dein".</p><p xml:lang="en">In the print version of the <title
+                                    ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "mein" instead of
+                                "dein".</p><p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de
+                                    Chamisso, Fragments inédits</title>, on lit "mein" et non "dein".</p></note> Herz an deinem ruht.<note
+                            resp="#sabine.seifert">
+                            <p xml:lang="de">Im Druck der <title ref="#w00252">Gedichte der Enkelin der Karschin</title> lautet dieser Vers: "Wann
+                                mein Herz gebrochen ruht!".</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, the text
+                                reads "Wann mein Herz gebrochen ruht!".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans les <title ref="#w00252">Gedichte der Enkelin der Karschin</title>, ce vers
+                                apparaît sous la forme: "Wann mein Herz gebrochen ruht!".</p>
                         </note></l>
                 </lg>
                 <milestone rend="horizontal-rule" unit="none"/>
                 <p>Da glänzt der halbe Mond, da steht die Kirche,<lb/>Die Vögel zwitschern in den Baumen, es ist alles<lb/>wie es war, aber die Seele
                     der Natur fehlt, der Geliebte<lb/>Die Hoffnung fehlt, die ich nicht laßen und nicht<lb/>faßen kann. Heute an denselben Tisch, wo
                     wir<lb/>so oft mit unsern <rs type="bi">Kindern</rs><note resp="#anna.busch">
-                        <seg xml:lang="de"><persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> und <persName ref="#p0265" type="bi"
-                                >Max von Chézy</persName>.</seg>
-                        <seg xml:lang="en"><persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> and <persName ref="#p0265" type="bi"
-                                >Max von Chézy</persName>.</seg>
-                        <seg xml:lang="fr"><persName ref="#p0264" type="bi">Wilhelm Theodor de Chézy</persName> et <persName ref="#p0265" type="bi"
-                                >Max de Chézy</persName>.</seg>
+                        <p xml:lang="de"><persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> und <persName ref="#p0265" type="bi"
+                                >Max von Chézy</persName>.</p>
+                        <p xml:lang="en"><persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> and <persName ref="#p0265" type="bi"
+                                >Max von Chézy</persName>.</p>
+                        <p xml:lang="fr"><persName ref="#p0264" type="bi">Wilhelm Theodor de Chézy</persName> et <persName ref="#p0265" type="bi">Max
+                                de Chézy</persName>.</p>
                     </note> gegessen, überfiel mich<lb/>eine durchbohrende Sehnsucht und Wehmuth. Im<lb/>Garten der guten alten <persName ref="#p0259"
                         type="bi">Marie</persName><note resp="#sabine.seifert">
-                        <seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                            "Maria" statt "Marie".</seg>
-                        <seg xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, the text reads "Maria" instead of "Marie".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, on lit "Maria" et non "Marie".</seg>
+                        <p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                            "Maria" statt "Marie".</p>
+                        <p xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title>, the text reads "Maria" instead of "Marie".</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title>, on lit "Maria" et non "Marie".</p>
                     </note>, wo ich an deinem<lb/>Herzen geweint, weine ich noch oft. Ebenjetzt<lb/>wollte ich in eine tödliche Abspannung
                     versinken<lb/>fühlte wieder einen Aügenblik wie so unzählbare schon<lb/>die unnennbarste grausammste Stimmung, wo alles<lb/>Nieder
                     wärts strebt - da rettet mich dein Bild und<lb/>giebt mir Thränen.<lb/></p>
@@ -382,8 +390,8 @@
                         <abbr>ware</abbr>
                         <expan>wäre</expan>
                     </choice> der todt mir süß gewesen.,<note resp="#sabine.seifert">
-                        <seg xml:lang="de"><persName ref="#p0247" type="bi">Helmina von Chézy</persName> lebte seit <date when-iso="1801">1801</date>
-                            in <placeName ref="#l0044" type="bi">Paris</placeName> und heiratete <date when-iso="1806">1806</date> den französischen
+                        <p xml:lang="de"><persName ref="#p0247" type="bi">Helmina von Chézy</persName> lebte seit <date when-iso="1801">1801</date> in
+                                <placeName ref="#l0044" type="bi">Paris</placeName> und heiratete <date when-iso="1806">1806</date> den französischen
                             Orientalisten <persName ref="#p0260" type="bi">Antoine Léonard de Chézy</persName>, mit dem sie zwei Söhne, <persName
                                 ref="#p0264" type="bi">Wilhelm Theodor</persName> und <persName ref="#p0265" type="bi">Max</persName>, bekam. Im <date
                                 when-iso="1810">Frühsommer 1810</date> übersetzte sie mit <persName ref="#p0237" type="bi">Chamisso</persName> die
@@ -393,8 +401,8 @@
                                 <placeName ref="#l0077" type="bi">Chaumont</placeName> bei <persName ref="#p0255" type="bi">Madame de Staël</persName>
                             mit August Wilhelm von Schlegel zu arbeiten. Helmina kehrte im <date when-iso="1810-09">September 1810</date> nach
                                 <placeName ref="#l0001" type="bi">Deutschland</placeName> zurück. Beide korrespondierten noch einige Zeit
-                            miteinander.</seg>
-                        <seg xml:lang="en">Since <date when-iso="1801">1801</date>, <persName ref="#p0247" type="bi">Helmina von Chézy</persName> has
+                            miteinander.</p>
+                        <p xml:lang="en">Since <date when-iso="1801">1801</date>, <persName ref="#p0247" type="bi">Helmina von Chézy</persName> has
                             lived in <placeName ref="#l0044" type="bi">Paris</placeName> where she married French Orientalist <persName ref="#p0260"
                                 type="bi">Antoine Léonard de Chézy</persName> in <date when-iso="1806">1806</date> and with whom she had two sons,
                                 <persName ref="#p0264" type="bi">Wilhelm Theodor</persName> and <persName ref="#p0265" type="bi">Max</persName>. In
@@ -403,8 +411,8 @@
                             that time, they had an affair. In <date when-iso="1810-07">July</date>, Chamisso left <placeName ref="#l0044" type="bi"
                                 >Paris</placeName> to work with August Wilhelm von Schlegel at <persName ref="#p0255" type="bi">Madame de
                                 Staël</persName>'s. Helmina returned to <placeName ref="#l0001" type="bi">Germany</placeName> in <date
-                                when-iso="1810-09">September 1810</date>. They continued to correspond for some time.</seg>
-                        <seg xml:lang="fr"><persName ref="#p0247" type="bi">Helmina von Chézy</persName> a vécu à <placeName ref="#l0044" type="bi"
+                                when-iso="1810-09">September 1810</date>. They continued to correspond for some time.</p>
+                        <p xml:lang="fr"><persName ref="#p0247" type="bi">Helmina von Chézy</persName> a vécu à <placeName ref="#l0044" type="bi"
                                 >Paris</placeName> à partir de <date when-iso="1801">1801</date>. Elle épouse en <date when-iso="1806">1806</date>
                             l'orientaliste <persName ref="#p0260" type="bi">Antoine Léonard de Chézy</persName>, dont elle a deux fils, <persName
                                 ref="#p0264" type="bi">Wilhelm Theodor</persName> et <persName ref="#p0265" type="bi">Max</persName>. Au début de
@@ -413,7 +421,7 @@
                             s'établit alors entre Chamisso et Helmina. Mais dès <date when-iso="1810-07">juillet 1810</date>, Chamisso quitte Paris
                             pour <placeName ref="#l0077" type="bi">Chaumont</placeName>, pour travailler chez <persName ref="#p0255" type="bi">Madame
                                 de Staël</persName> avec August Wilhelm von Schlegel, tandis qu'Helmina rentre en <date when-iso="1810-09">septembre
-                                1810</date> en Allemagne. Ils continuent alors à s'écrire durant quelques années.</seg>
+                                1810</date> en Allemagne. Ils continuent alors à s'écrire durant quelques années.</p>
                     </note></p>
             </div>
         </body>

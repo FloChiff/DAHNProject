@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -54,8 +55,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -256,8 +263,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-10-16" who="#sabine.seifert">Corrected minor typos.</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Updated content of element correspContext.</change>
             <change when-iso="2020-04-03" who="#sabine.seifert">Corrected a typo in the transcription.</change>
@@ -279,23 +287,29 @@
         <body>
             <div type="transcription">
                 <pb facs="00000025b.jpg" n="1"/>
-                <p>
-                    <note place="margin-right" type="foliation">
-                        <subst hand="#blue_pen">
-                            <del rend="overwritten">
-                                <seg hand="#pencil">13</seg>
-                            </del>
-                            <add place="across">13</add>
-                        </subst>
-                    </note>
-                </p>
+                <note place="margin(right)" type="foliation">
+                    <subst hand="#blue_pen">
+                        <del rend="overwritten">
+                            <seg hand="#pencil">13</seg>
+                        </del>
+                        <add place="across">13</add>
+                    </subst>
+                </note>
                 <head rend="align(center)"><hi rend="latin">Reglement</hi><lb/>für das <orgName ref="#g0079" type="bi">philologische
                         Seminarium</orgName> bei der<lb/><orgName ref="#g0122" type="bi">Universität</orgName> zu <placeName ref="#l1103" type="bi"
-                        >Berlin</placeName>.<note resp="#sabine.seifert">Die Statuten des <orgName ref="#g0079" type="bi">philologischen
-                            Seminars</orgName> der <orgName ref="#g0122" type="bi">Berliner Universität</orgName> wurden am <date
-                            when-iso="1812-05-28">28. Mai 1812</date> genehmigt. Die Eröffnungssitzung des Seminars fand mit einer Versammlung aller
-                        Mitglieder am <date when-iso="1812-06-27">27. Juni 1812</date> statt (HUB, UA, Phil. Fak. Nr. 99, Bl. 17v).</note></head>
-                <milestone rend="horizontal-rule"/>
+                        >Berlin</placeName>.<note resp="#sabine.seifert"><p xml:lang="de">Die Statuten des <orgName ref="#g0079" type="bi"
+                                >philologischen Seminars</orgName> der <orgName ref="#g0122" type="bi">Berliner Universität</orgName> wurden am <date
+                                when-iso="1812-05-28">28. Mai 1812</date> genehmigt. Die Eröffnungssitzung des Seminars fand mit einer Versammlung
+                            aller Mitglieder am <date when-iso="1812-06-27">27. Juni 1812</date> statt (HUB, UA, Phil. Fak. Nr. 99, Bl. 17v).</p>
+                        <p xml:lang="fr">Les statuts du <orgName ref="# g0079" type="bi"> séminaire philologique </orgName> de l'<orgName
+                                ref="# g0122" type="bi"> Université de Berlin </orgName> ont été approuvés le <date when-iso="1812-05-28"> 28 Mai 1812
+                            </date>. La séance d'ouverture du séminaire a eu lieu avec une réunion de tous les membres le <date when-iso="1812-06-27">
+                                27. Juin 1812 </date> (HUB, UA, Phil. Fac. No. 99, Bl. 17v).</p><p xml:lang="en">The statutes of the <orgName
+                                ref="# g0079" type="bi"> philological seminar </orgName> of the <orgName ref="# g0122" type="bi"> Berlin University
+                            </orgName> were approved on the <date when-iso="1812-05-28">28 May 1812 </date>. The opening session of the seminar took
+                            place with a meeting of all members on <date when-iso="1812-06-27"> 27. June 1812 </date> (HUB, UA, Phil. Fac. No. 99, Bl.
+                            17v).</p></note></head>
+                <milestone rend="horizontal-rule" unit="none"/>
                 <div n="1" type="paragraph">
                     <head rend="align(center)" xml:id="p1">
                         <hi rend="underline">§ 1.</hi>
@@ -332,18 +346,25 @@
                         <hi rend="underline">§ 4.</hi>
                     </head>
                     <p>Die Aufnahme erfolgt nach einer strengen Prüfung,<lb/>nachdem der Aspirant eine Probearbeit eingereicht<lb/>hat, und über
-                        diese, so wie über die nötigen Vor<lb break="no"/>kenntnisse überhaupt von dem Director<note resp="#sabine.seifert">Von der
-                            Eröffnung des <orgName ref="#g0079" type="bi">Seminars</orgName>
-                            <date when-iso="1812">1812</date> an hatte <persName ref="#p0178" type="bi">August Boeckh</persName> die Direktion bis zu
-                            seinem Todesjahr <date when-iso="1867">1867</date> inne.</note> der <rs ref="#g0079" type="bi">Anstalt</rs><lb/>geprüft,
-                        und reif befunden worden ist.</p>
+                        diese, so wie über die nötigen Vor<lb break="no"/>kenntnisse überhaupt von dem Director<note resp="#sabine.seifert"><p
+                                xml:lang="de">Von der Eröffnung des <orgName ref="#g0079" type="bi">Seminars</orgName>
+                                <date when-iso="1812">1812</date> an hatte <persName ref="#p0178" type="bi">August Boeckh</persName> die Direktion bis
+                                zu seinem Todesjahr <date when-iso="1867">1867</date> inne.</p><p xml:lang="fr">Dès l'ouverture du <orgName
+                                    ref="# g0079" type="bi"> séminaire </orgName> en <date when-iso="1812"> 1812 </date>
+                                <persName ref="#p0178" type="bi"> August Boeckh </persName> a tenu la direction jusqu'à l'année de sa mort <date
+                                    when-iso="1867"> 1867 </date>.</p><p xml:lang="en">From the opening of the <orgName ref="# g0079" type="bi">
+                                    seminar </orgName> in <date when-iso="1812"> 1812 </date>, <persName ref="#p0178" type="bi"> August Boeckh
+                                </persName> held the management until the year of his death <date when-iso="1867"> 1867 </date>.</p></note> der <rs
+                            ref="#g0079" type="bi">Anstalt</rs><lb/>geprüft, und reif befunden worden ist.</p>
                 </div>
                 <div n="5" type="paragraph">
                     <head rend="align(center)" xml:id="p5">
                         <hi rend="underline">§ 5.</hi>
                     </head>
-                    <p>Ausländer<note resp="#sabine.seifert">Dies bezieht sich auf die Grenzen <placeName ref="#l0092" type="bi"
-                            >Preußens</placeName>.</note>, wenn sie auch wieder in ihr Vaterland<lb/>zurückkehren, können, im Falle sie sich durch
+                    <p>Ausländer<note resp="#sabine.seifert"><p xml:lang="de">Dies bezieht sich auf die Grenzen <placeName ref="#l0092" type="bi"
+                                    >Preußens</placeName>.</p><p xml:lang="fr">Il s'agit des bordures <placeName ref="#l0092" type="bi"> Preussens
+                                </placeName>.</p><p xml:lang="en">This refers to the borders <placeName ref="#l0092" type="bi"> Preussens
+                                </placeName>.</p></note>, wenn sie auch wieder in ihr Vaterland<lb/>zurückkehren, können, im Falle sie sich durch
                         Talent und<lb/>Eifer besonders auszeichnen, als Seminaristen, gleich<lb/>den Inländern, aufgenommen werden.</p>
                 </div>
                 <div n="6" type="paragraph">
@@ -353,8 +374,12 @@
                     <p>Die Anzahl der ordentlichen Mitglieder des <orgName ref="#g0079" type="bi">Semi<lb break="no"/>narii</orgName>, wird für jetzt
                         auf <hi rend="underline">Acht</hi> festgesetzt; sie kann<lb/>jedoch in der Folge nach Befinden der Umstände<lb/>und nach
                         vorgängiger Genehmigung des <orgName ref="#g0063" type="bi">Departe<lb break="no"/>ments des Kultus und öffentlichen
-                            Unterrichts</orgName> ver<lb break="no"/>mehrt werden.<note resp="#sabine.seifert">Die Zahl der Mitglieder wurde im <date
-                                when-iso="1815-0315">März 1815</date> von 8 auf 10 erhöht (HUB, UA, Phil. Fak. Nr. 99, Bl. 41).</note></p>
+                            Unterrichts</orgName> ver<lb break="no"/>mehrt werden.<note resp="#sabine.seifert"><p xml:lang="de">Die Zahl der
+                                Mitglieder wurde im <date when-iso="1815-0315">März 1815</date> von 8 auf 10 erhöht (HUB, UA, Phil. Fak. Nr. 99, Bl.
+                                41).</p>
+                            <p xml:lang="fr">Le nombre de membres est passé de 8 à 10 en <date when-iso="1815-0315"> mars 1815 </date> (HUB, UA, Phil.
+                                Fac. No. 99, Bl. 41).</p><p xml:lang="en">The number of members was increased from 8 to 10 in <date
+                                    when-iso="1815-0315"> March 1815 </date> (HUB, UA, Phil. Fac. No. 99, Bl. 41).</p></note></p>
                 </div>
                 <div n="7" type="paragraph">
                     <head rend="align(center)" xml:id="p7">
@@ -363,7 +388,7 @@
                     <p>Auch wird es dem Direktor überlassen, zur<fw><hi rend="underline"><choice>
                                     <abbr>ordentl.</abbr>
                                     <expan>ordentlichen</expan>
-                                </choice></hi></fw><pb facs="00000027b.jpg" n="3"/><note place="margin-right" type="foliation">
+                                </choice></hi></fw><pb facs="00000027b.jpg" n="3"/><note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">14</seg>
                                 </del>
@@ -422,7 +447,7 @@
                                 Alterthumswissenschaft.<lb/>Alle vierzehn Tage ist eine Abendversam̄lung<lb/>von unbestim̄ter Dauer zum Vorlesen
                                 von<lb/>dergleichen Ausarbeitungen festgesetzt, wo denn<lb/>zugleich die Seminaristen unter Leitung des<lb/>Directors
                                 welcher die ihm eingehändigten<fw><hi rend="underline">Aus<lb break="no"/></hi></fw><pb facs="00000029b.jpg" n="5"
-                                    /><note place="margin-right" type="foliation">
+                                    /><note place="margin(right)" type="foliation">
                                     <subst hand="#blue_pen">
                                         <del rend="overwritten"><seg hand="#pencil">15</seg>
                                         </del>
@@ -435,6 +460,7 @@
                                 zur rechten Zeit ohne<lb/>gegründete Entschuldigung abgiebt, kann<lb/>deswegen von dem <orgName ref="#g0079" type="bi"
                                     >Seminario</orgName> ausge<lb break="no"/>schlossen werden.</item>
                             <lb/>
+                            <label/>
                             <item>Alle vierzehn Tage in denjenigen Wo<lb break="no"/>chen, in welchen keine Abhandlung gelesen<lb/>wird, versam̄eln
                                 sich die Seminaristen gleich<lb break="no"/>falls Abends zu dem Zwecke, daß sie über<lb/>dasjenige, was ihnen in ihren
                                 Studien dun<supplied reason="overlapping folio">kel</supplied><lb/>geblieben, Fragen aufwerfen. Jedes or<lb break="no"
@@ -458,7 +484,7 @@
                         und durch Einsendung der Probe<lb break="no"/>arbeiten zu motivirenden Vorschlag des<lb/>Directors, Prämien aus dem
                             Universi<lb break="no"/>tätsfonds angewiesen werden. Da auch<lb/>vorausgesetzt wird, daß der Director<lb/>die Studien der
                         Seminaristen dergestalt<lb/>zu leiten suchen werde, daß jeder von ihnen<lb/>bei Zeiten einen philologischen Gegenstand<fw><hi
-                                rend="underline">zur</hi></fw><pb facs="00000031b.jpg" n="7"/><note place="margin-right" type="foliation">
+                                rend="underline">zur</hi></fw><pb facs="00000031b.jpg" n="7"/><note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
                                 <del rend="overwritten"><seg hand="#pencil">16</seg>
                                 </del>
@@ -467,14 +493,15 @@
                         </note>zur besondern gelehrten Bearbeitung, die<lb/>der öffentlichen Bekanntmachung einst<lb/>würdig seÿ, sich erwähle, so
                         sollen die Se<lb break="no"/>minaristen, welche bei ihrem, in der Re<lb break="no"/>gel mit dem Abgang von der Unive<supplied
                             reason="paper missing">r</supplied><lb break="no"/>sität erfolgenden Austritt aus der Ansta<supplied
-                            reason="overlapping folio">lt</supplied><lb/>dergleichen Specimina<note resp="#sabine.seifert">Spezimen:
-                            Probearbeit.</note> des Fleißes und der<lb/>Gelehrsamkeit liefern, durch Entschädigung<lb/>für die Kosten des Drucks und
-                        ihrer Promo<lb break="no"/>tion ausgezeichnet werden. Zu diese<supplied reason="paper missing">m</supplied><lb/>Behuf und zu
-                        den obgedachten Prämien<lb/>so wie zur Remuneration des Directors<lb/>ist die Summe von Fünfhundert Thalern<lb/>jährlich auf
-                        dem Universitäts Etat ausge<lb break="no"/>setzt, auf welche die Prämien, so wie <supplied reason="paper missing"
-                            >die</supplied><lb/>erwähnten Entschädigungen und die Remune<lb break="no"/>ration von dem <orgName ref="#g0063" type="bi"
-                            >Departement des Kultu<supplied reason="paper missing">s</supplied><lb/>und öffentlichen Unterrichts</orgName> auf den
-                        Bericht<lb/>des Directors am Schluße jedes Semes<lb break="no"/>ters angewiesen werden.</p>
+                            reason="overlapping folio">lt</supplied><lb/>dergleichen Specimina<note resp="#sabine.seifert"><p xml:lang="de">Spezimen:
+                                Probearbeit.</p><p xml:lang="fr">Spécimen : Travail d'essai.</p><p xml:lang="en">Specimen: Trial work.</p></note> des
+                        Fleißes und der<lb/>Gelehrsamkeit liefern, durch Entschädigung<lb/>für die Kosten des Drucks und ihrer Promo<lb break="no"
+                        />tion ausgezeichnet werden. Zu diese<supplied reason="paper missing">m</supplied><lb/>Behuf und zu den obgedachten
+                        Prämien<lb/>so wie zur Remuneration des Directors<lb/>ist die Summe von Fünfhundert Thalern<lb/>jährlich auf dem Universitäts
+                        Etat ausge<lb break="no"/>setzt, auf welche die Prämien, so wie <supplied reason="paper missing">die</supplied><lb/>erwähnten
+                        Entschädigungen und die Remune<lb break="no"/>ration von dem <orgName ref="#g0063" type="bi">Departement des Kultu<supplied
+                                reason="paper missing">s</supplied><lb/>und öffentlichen Unterrichts</orgName> auf den Bericht<lb/>des Directors am
+                        Schluße jedes Semes<lb break="no"/>ters angewiesen werden.</p>
                 </div>
                 <div n="13" type="paragraph">
                     <head rend="align(center)" xml:id="p13">
@@ -489,22 +516,24 @@
                         Prämien<lb/>angeführt werden. Empfehlungen von<lb/>Subjecten, welche der Anstellung in Lehr<lb break="no"/>ämtern sich schon
                         würdig zeigen, können<lb/>hiemit füglich verbunden werden.</p>
                 </div>
-                <p>Den ersten Bericht erwartet das <orgName ref="#g0063" type="bi">De<lb break="no"/>partement</orgName> im <date when-iso="1813-08"
-                        >August</date> oder <date when-iso="1813-09">September<lb/> des Jahres 1813</date>.</p>
-                <closer>
-                    <dateline><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName>, den <date when-iso="1812-05-28">28<hi
-                                rend="superscript underline">ten</hi>
-                            <hi rend="latin">Mai</hi> 1812.</date></dateline>
-                    <signed><orgName ref="#g0063" type="bi">Departement für den Kultus und öffentlichen Unterricht</orgName><lb/>im <orgName
-                            ref="#g0068" type="bi">Ministerium des Innern</orgName>.</signed><lb rend="both"/>
-                    <signed hand="#brown_ink">
-                        <hi rend="align(center) latin">
-                            <persName ref="#p0681" type="bi">Schuckmann</persName>
-                        </hi>
-                    </signed>
-                </closer>
-                <lb rend="both"/>
-                <p hand="#ink"><hi rend="latin">Reglement</hi>.</p>
+                <div>
+                    <p>Den ersten Bericht erwartet das <orgName ref="#g0063" type="bi">De<lb break="no"/>partement</orgName> im <date
+                            when-iso="1813-08">August</date> oder <date when-iso="1813-09">September<lb/> des Jahres 1813</date>.</p>
+                    <closer>
+                        <dateline><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName>, den <date when-iso="1812-05-28">28<hi
+                                    rend="superscript underline">ten</hi>
+                                <hi rend="latin">Mai</hi> 1812.</date></dateline>
+                        <signed><orgName ref="#g0063" type="bi">Departement für den Kultus und öffentlichen Unterricht</orgName><lb/>im <orgName
+                                ref="#g0068" type="bi">Ministerium des Innern</orgName>.</signed><lb rend="both"/>
+                        <signed hand="#brown_ink">
+                            <hi rend="align(center) latin">
+                                <persName ref="#p0681" type="bi">Schuckmann</persName>
+                            </hi>
+                        </signed>
+                    </closer>
+                    <lb rend="both"/>
+                    <note hand="#ink"><hi rend="latin">Reglement</hi>.</note>
+                </div>
             </div>
         </body>
     </text>
