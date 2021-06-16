@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -180,8 +187,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-16" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-02-04" who="#sabine.seifert">Changed link to Boeckh's book catalogue. Added information on acquisition and
                 corrected content of respStmt for digitization.</change>
@@ -204,11 +212,19 @@
                     Andenken, welches Sie <subst>
                         <del rend="overwritten">i</del>
                         <add place="across">I</add>
-                    </subst>hrer verstorbenen <rs ref="#p1482" type="bi">Frau</rs><note resp="#sabine.seifert"><persName ref="#p1482" type="bi">Rahel
-                            Varnhagen von Ense</persName> starb am <date when-iso="1833-03-07">7. März 1833</date>.</note> durch <rs ref="#w01291"
-                        type="bi">Her<lb break="no"/>ausgabe ihrer Briefe</rs> gesetzt haben, ihm wenn auch nur zur Lesung<lb/>zu verschaffen. Mein
-                        Exemplar<note resp="#sabine.seifert"><persName ref="#p0178" type="bi">Boeckh</persName> verzeichnet sein Exemplar als Nr. 2164
-                        in seinem <ref target="Boeckh_Buchkatalog#53">„Katalog meiner Bücher“, S. 53</ref>.</note> möchte ich jedoch daran nicht
+                    </subst>hrer verstorbenen <rs ref="#p1482" type="bi">Frau</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p1482"
+                                type="bi">Rahel Varnhagen von Ense</persName> starb am <date when-iso="1833-03-07">7. März 1833</date>.</p>
+                        <p xml:lang="fr"><persName ref="#p1482" type="bi">Rahel Varnhagen von Ense</persName> est décédée le <date
+                                when-iso="1833-03-07">7 Mars 1833 </date>.</p>
+                        <p xml:lang="en"><persName ref="#p1482" type="bi"> Rahel Varnhagen von Ense</persName> died on <date when-iso="1833-03-07"> 7
+                                March 1833 </date>.</p></note> durch <rs ref="#w01291" type="bi">Her<lb break="no"/>ausgabe ihrer Briefe</rs> gesetzt
+                    haben, ihm wenn auch nur zur Lesung<lb/>zu verschaffen. Mein Exemplar<note resp="#sabine.seifert"><p xml:lang="de"><persName
+                                ref="#p0178" type="bi">Boeckh</persName> verzeichnet sein Exemplar als Nr. 2164 in seinem <ref
+                                target="Boeckh_Buchkatalog#53">„Katalog meiner Bücher“, S. 53</ref>.</p>
+                        <p xml:lang="fr"><persName ref="#p0178" type="bi"> Boeckh </persName> répertorie sa copie sous le n° 2164 dans son <ref
+                                target="Boeckh_Buchkatalog#53"> " Catalogue de mes livres ", p. 53 </ref>.</p>
+                        <p xml:lang="en"><persName ref="#p0178" type="bi"> Boeckh </persName> lists his copy as No. 2164 in his <ref
+                                target="Boeckh_Buchkatalog#53"> "Catalog of my books", p. 53 </ref>.</p></note> möchte ich jedoch daran nicht
                     setzen,<lb/>da dergleichen seltene Bücher nicht leicht wieder zurückgesandt werden.<lb/>Sollten Sie noch disponible Exemplare
                     haben, so würden Sie einen<lb/>treuen Verehrer sehr erfreuen, wen̄ Sie ihm eines schenkten, welches<lb/>ich, der ich ihm aber
                     schreiben muß, zur Beförderung übernehmen möchte.</p>
@@ -225,13 +241,13 @@
                         <date when-iso="1834-06-20">20. Juni 1834.</date>
                     </dateline><signed rend="align(right)"><hi rend="latin">
                             <persName ref="#p0178" type="bi">Böckh</persName></hi>.</signed></closer>
-                <note place="margin-left" rend="vertical">An<lb/>Herrn <choice>
+                <note place="margin(left)" rend="vertical">An<lb/>Herrn <choice>
                         <abbr>Geh.</abbr>
                         <expan>Geheimen</expan>
                     </choice> Legationsrath pp. <persName ref="#p0249" type="bi"><choice>
                             <abbr>v.</abbr>
                             <expan>von</expan>
-                        </choice> Varnhagen</persName><lb/><seg rend="align(right)">Hochwohlgeboren</seg></note>
+                        </choice> Varnhagen</persName><lb/><hi rend="align(right)">Hochwohlgeboren</hi></note>
             </div>
         </body>
     </text>
