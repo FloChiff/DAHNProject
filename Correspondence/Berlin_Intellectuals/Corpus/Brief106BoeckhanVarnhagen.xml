@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -181,8 +188,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-05-11" who="#sabine.seifert">Updated values for @extent according to new encoding guidelines.</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-03-06" who="#sabine.seifert">Corrected minor errors.</change>
@@ -201,7 +209,7 @@
                     <placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1837-06-01">1. Juni 1837.</date></note>
                 <lb/>
                 <lb/>
-                <opener rend="align(center)"><salute>Verehrtester Gönner!</salute></opener>
+                <opener><salute rend="align(center)">Verehrtester Gönner!</salute></opener>
                 <lb rend="both"/>
                 <p><persName ref="#p0276" type="bi"><choice>
                             <abbr>Alex. v.</abbr>
@@ -220,14 +228,20 @@
                         <del rend="overwritten"><gap extent="2c" reason="illegible"/></del>
                         <add place="across">hö</add>
                     </subst>chst angenehm angeregt hat.<lb/>Dies will ich einzeln nicht aufzählen; zum Theil sind es Dinge, die Sie schwerlich leicht
-                        er<lb break="no"/>rathen würden. Aber die Gedichte<note resp="#sabine.seifert"><persName ref="#p0249" type="bi"
-                            >Varnhagens</persName>
-                        <title ref="#w02415">Denkwürdigkeiten</title> enthalten neben Autobiographischem zur Jugendzeit, wie z.B. die Freundschaft zu
-                            <persName ref="#p0237" type="bi">Chamisso</persName> und die gemeinsame Herausgabe des <title ref="#w00255"
-                            >Musenalmanachs</title>, auch Gedichte von Varnhagen.</note> darf ich nicht vergessen; hier fand ich Sie wieder auf
-                    einem<lb/>alten Felde, wo ich Sie zuerst kennen gelernt hatte, und wurde in eine frohe Jugendwelt<lb/>zurückversetzt, mit welcher
-                    die jetzige wenig Aehnlichkeit mehr hat. Gelegentlich muß ich<lb/>noch über andere Parthien reden, wenn ich das Glück habe Sie zu
-                    sehen, was lange sich nicht getroffen hat.</p>
+                        er<lb break="no"/>rathen würden. Aber die Gedichte<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0249"
+                                type="bi">Varnhagens</persName>
+                            <title ref="#w02415">Denkwürdigkeiten</title> enthalten neben Autobiographischem zur Jugendzeit, wie z.B. die Freundschaft
+                            zu <persName ref="#p0237" type="bi">Chamisso</persName> und die gemeinsame Herausgabe des <title ref="#w00255"
+                                >Musenalmanachs</title>, auch Gedichte von Varnhagen.</p><p xml:lang="fr">Les <title ref="#w02415">Mémoires</title> de
+                                <persName ref="#p0249" type="bi"> Varnhagens </persName> contiennent des informations autobiographiques sur la
+                            jeunesse, telles que l'amitié avec <persName ref="#p0237" type="bi"> Chamisso </persName> et la coédition du <title
+                                ref="#w00255"> Musenalmanach </title>, également des poèmes de Varnhagen.</p><p xml:lang="en"><persName ref="#p0249"
+                                type="bi"> Varnhagens </persName>'s <title ref="#w02415"> Memoirs </title> contain autobiographical information about
+                            youth, such as friendship with <persName ref="#p0237" type="bi"> Chamisso </persName> and the joint publication of the
+                                <title ref="#w00255"> Musenalmanach </title>, also poems by Varnhagen.</p></note> darf ich nicht vergessen; hier fand
+                    ich Sie wieder auf einem<lb/>alten Felde, wo ich Sie zuerst kennen gelernt hatte, und wurde in eine frohe
+                    Jugendwelt<lb/>zurückversetzt, mit welcher die jetzige wenig Aehnlichkeit mehr hat. Gelegentlich muß ich<lb/>noch über andere
+                    Parthien reden, wenn ich das Glück habe Sie zu sehen, was lange sich nicht getroffen hat.</p>
                 <closer><salute rend="align(right)">Mit der herzlichsten Hochachtung und Verehrung</salute><milestone
                         rend="vertical-rule align(right)" unit="none"/>
                     <dateline><placeName ref="#l1103" type="bi">Berlin</placeName>

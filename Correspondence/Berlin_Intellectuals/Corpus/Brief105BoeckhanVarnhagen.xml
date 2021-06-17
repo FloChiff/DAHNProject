@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -176,8 +183,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-03-06" who="#sabine.seifert">Corrected minor errors.</change>
             <change when-iso="2014-02-04" who="#sabine.seifert">Added information on acquisition and corrected content of respStmt for
@@ -196,17 +204,31 @@
                 <lb/>
                 <lb/>
                 <p>Meinen herzlichen Dank, verehrtester Freund und Gön̄er, für Ihre<lb/>schöne <title ref="#w03310">Galerie</title>, aus welcher ich
-                    doch einige Bildnisse mehr ken̄e,<lb/>als Sie wissen. Daß Sie meiner Erwähnung gethan haben<note resp="#sabine.seifert"><persName
-                            ref="#p0249" type="bi">Varnhagen</persName> schreibt in seinem Buch <title ref="#w03310">Galerie von Bildnissen aus
-                            Rahel's Umgang und Briefwechsel</title>: "Vor allem würde hier nöthig sein, daß <persName ref="#p0689" type="bi">Wilhelm
-                            von Humboldt</persName> selbst, dessen Karakteristik aus dem Standpunkte seiner öffentlichen Erscheinung neuerlich
-                            <persName ref="#p0178" type="bi">Böckh</persName> vortrefflich begonnen hat, auch von menschlich-persönlicher Seite in dem
-                        ganzen Umfange seiner Geistesgröße gehörig aufgefaßt wäre" (S. 141f.).</note>, ist<lb/>zu viel Ehre; es thut mir leid, daß ich
-                    bis jetzo nicht im Stande<lb/>gewesen bin, ein wirkliches <hi rend="latin">Elogium</hi> von <persName ref="#p0689" type="bi"><choice>
+                    doch einige Bildnisse mehr ken̄e,<lb/>als Sie wissen. Daß Sie meiner Erwähnung gethan haben<note resp="#sabine.seifert"><p
+                            xml:lang="de"><persName ref="#p0249" type="bi">Varnhagen</persName> schreibt in seinem Buch <title ref="#w03310">Galerie
+                                von Bildnissen aus Rahel's Umgang und Briefwechsel</title>: "Vor allem würde hier nöthig sein, daß <persName
+                                ref="#p0689" type="bi">Wilhelm von Humboldt</persName> selbst, dessen Karakteristik aus dem Standpunkte seiner
+                            öffentlichen Erscheinung neuerlich <persName ref="#p0178" type="bi">Böckh</persName> vortrefflich begonnen hat, auch von
+                            menschlich-persönlicher Seite in dem ganzen Umfange seiner Geistesgröße gehörig aufgefaßt wäre" (S. 141f.).</p>
+                        <p xml:lang="fr"><persName ref="#p0249" type="bi"> Varnhagen </persName> écrit dans son livre <title ref="#w03310"> galerie de
+                                portraits des interactions et de la correspondance de Rahel </title> : " Au-dessus de tout serait ici Il faut que
+                                <persName ref="#p0689" type="bi">Wilhelm von Humboldt</persName> lui-même, dont les caractéristiques du point de vue
+                            de son apparition publique soient encore <persName ref="#p0178" type=" bi">Böckh</persName> a excellemment commencé,
+                            serait également bien compris du côté humain-personnel dans toute l'étendue de sa grandeur intellectuelle "(p. 141f.)</p>
+                        <p xml:lang="en"><persName ref="#p0249" type="bi">Varnhagen</persName> writes in his book <title ref="#w03310"> gallery of
+                                portraits from Rahel's interactions and correspondence </title>: "Above all would be here It is necessary that
+                                <persName ref="#p0689" type="bi">Wilhelm von Humboldt</persName> himself, whose characteristics from the standpoint of
+                            his public appearance are again <persName ref="#p0178" type="bi">Böckh</persName> has started excellently, would also be
+                            properly understood from the human-personal side in the full scope of his intellectual greatness "(p. 141f.).</p></note>,
+                    ist<lb/>zu viel Ehre; es thut mir leid, daß ich bis jetzo nicht im Stande<lb/>gewesen bin, ein wirkliches <hi rend="latin"
+                        >Elogium</hi> von <persName ref="#p0689" type="bi"><choice>
                             <abbr>Wilh. v.</abbr>
                             <expan>Wilhelm von</expan>
-                        </choice> Humboldt</persName> zu<lb/>schreiben<note resp="#sabine.seifert"><persName ref="#p0689" type="bi"
-                            >Humboldt</persName> starb am <date when-iso="1835-04-08">8. April 1835</date>.</note>, wozu ich größerer Muße bedarf.</p>
+                        </choice> Humboldt</persName> zu<lb/>schreiben<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0689" type="bi"
+                                >Humboldt</persName> starb am <date when-iso="1835-04-08">8. April 1835</date>.</p><p xml:lang="fr"><persName
+                                ref="#p0689" type="bi">Humboldt</persName> est décédé le <date when-iso="1835-04-08">8 avril 1835</date>.</p><p
+                            xml:lang="en"><persName ref="#p0689" type="bi">Humboldt</persName> died on <date when-iso="1835-04-08">8 April 1835
+                            </date>.</p></note>, wozu ich größerer Muße bedarf.</p>
                 <closer><salute rend="align(right)">Mit herzlicher Verehrung und<lb/>Hochachtung</salute><milestone rend="vertical-rule align(right)"
                         unit="none"/><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>
                         <choice>

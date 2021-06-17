@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -182,8 +189,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-03-06" who="#sabine.seifert">Corrected minor errors.</change>
             <change when-iso="2014-02-08" who="#sabine.seifert">Added encoding of w03317.</change>
@@ -201,31 +209,56 @@
                     <placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1840-12-03">3. December 1840.</date></note>
                 <lb/>
                 <lb/>
-                <opener rend="align(center)"><salute>Verehrtester Freund und Gönner, </salute></opener>
+                <opener><salute rend="align(center)">Verehrtester Freund und Gönner, </salute></opener>
                 <lb rend="both"/>
                 <p><persName ref="#p2226" type="bi"><choice>
                             <abbr>Hr. v.</abbr>
                             <expan>Herr von</expan>
-                        </choice> Henning</persName> hat mir einige Exemplare Ihrer Anzeige meiner Reden<note resp="#sabine.seifert">Hier handelt es
-                        sich vermutlich um die <date when-iso="1840">1840</date> gedruckten Reden <title ref="w03311">Oratio in sollemnibus
-                            parentalibus</title> und <title ref="#w03312">Rede zur Trauerfeier Seiner Hochseligen Majestät des
-                    Königs</title>.</note><lb/>zuzustellen die Güte gehabt. Die Abfassung dieser Reden habe ich jederzeit<lb/>für das undankbarste
-                    Geschäft gehalten<note resp="#sabine.seifert">Am <date when-iso="1850-10-21">21. Oktober 1850</date> schreibt <persName
-                            ref="#p0178" type="bi">Boeckh</persName> an <persName ref="#p0276" type="bi">Alexander von Humboldt</persName>: "Wenn ich
-                        mit der Lebensbahn, die mir vorgezeichnet worden, irgend Ursache habe, unzufrieden zu sein, so beklage ich, dass Gott im Zorn
-                        mich zum Redner bestimmt hat. Immer und immer wieder muss ich mich der Allerweltskritik aussetzen, während mein Grundsatz ist:
-                            <foreign xml:lang="grv"><hi rend="greek">λάδε βιώσας</hi></foreign>." (<rs ref="#w03313" type="bi">Hoffmann</rs>, S. 444).
-                        Übersetzung des griechischem Ausdrucks von <persName ref="#p0215" type="bi">Plutarch</persName>: "Lebe im
-                    Verborgenen".</note>; jetzt erste ärnte ich den Dank,<lb/>aber den allerschönsten und weit größern, als meine kühnsten Hoff<lb
-                        break="no"/>nungen ihn hätten erwarten lassen. Um so dankbarer bin ich wieder da<lb break="no"/>für; und so wenig Ihnen daran
-                    gelegen seÿn kann, wenn ich dies gegen<lb/>Sie ausspreche, umso mehr drängt es mich, Ihnen meine herzliche<lb/>Erkenntlichkeit für
-                    Ihre gütige und edle Auffassung meiner Worte<lb/>auszusprechen, die mir der größte Lohn und zugleich der werthvollste
-                    Ersatz<lb/>für die unverständige oder übelwollende Auslegung ist, die ich von einigen<lb/>meiner akademischen Collegen<note
-                        resp="#sabine.seifert">In seiner Abschrift identifiziert <persName ref="#p0249" type="bi">Varnhagen</persName> die "Collegen"
-                        als <persName ref="#p0794" type="bi">Leopold von Ranke</persName>, <persName ref="#p0642" type="bi">Karl Lachmann</persName>,
-                            <persName ref="#p0413" type="bi">Martin Lichtenstein</persName>, <persName ref="#p0784" type="bi">Ignaz von
-                            Olfers</persName>.</note> erfahren habe, auf deren Beistimmung ich freilich<lb/>von vorn herein nicht hätte rechnen
-                    sollen. Erhalten Sie mir ferner Ihr<lb/>gütiges Wohlwollen.</p>
+                        </choice> Henning</persName> hat mir einige Exemplare Ihrer Anzeige meiner Reden<note resp="#sabine.seifert"><p xml:lang="de"
+                            >Hier handelt es sich vermutlich um die <date when-iso="1840">1840</date> gedruckten Reden <title ref="#w03311">Oratio in
+                                sollemnibus parentalibus</title> und <title ref="#w03312">Rede zur Trauerfeier Seiner Hochseligen Majestät des
+                                Königs</title>.</p><p xml:lang="fr">Ce sont probablement les discours de <date when-iso="1840"> 1840 </date>
+                            <title ref="#w03311"> Oratio in sollemnibus parentalibus </title> et <title ref="#w03312"> Discours aux funérailles
+                                service de Sa Très Sainte Majesté le Roi </title>.</p><p xml:lang="en">These are probably the <date when-iso="1840">
+                                1840 </date> speeches <title ref="#w03311"> Oratio in sollemnibus parentalibus </title> and <title ref="#w03312">
+                                Speech at the funeral service of His Most Blessed Majesty the King </title>.</p></note><lb/>zuzustellen die Güte
+                    gehabt. Die Abfassung dieser Reden habe ich jederzeit<lb/>für das undankbarste Geschäft gehalten<note resp="#sabine.seifert">
+                        <p xml:lang="de">Am <date when-iso="1850-10-21">21. Oktober 1850</date> schreibt <persName ref="#p0178" type="bi"
+                                >Boeckh</persName> an <persName ref="#p0276" type="bi">Alexander von Humboldt</persName>: "Wenn ich mit der
+                            Lebensbahn, die mir vorgezeichnet worden, irgend Ursache habe, unzufrieden zu sein, so beklage ich, dass Gott im Zorn mich
+                            zum Redner bestimmt hat. Immer und immer wieder muss ich mich der Allerweltskritik aussetzen, während mein Grundsatz ist:
+                                <foreign xml:lang="grv"><hi rend="greek">λάδε βιώσας</hi></foreign>." (<rs ref="#w03313" type="bi">Hoffmann</rs>, S.
+                            444). Übersetzung des griechischem Ausdrucks von <persName ref="#p0215" type="bi">Plutarch</persName>: "Lebe im
+                            Verborgenen".</p><p xml:lang="fr">Le <date when-iso="1850-10-21"> 21 Octobre 1850 </date>, <persName ref="#p0178"
+                                type="bi"> Boeckh </persName> écrit à <persName ref="#p0276" type="bi"> Alexander von Humboldt </persName> : " Si j'ai
+                            des raisons d'être insatisfait du chemin de vie qui m'a été tracé, je me plains que Dieu m'a fait un orateur en colère.Je
+                            dois encore et encore m'exposer à la critique quotidienne, alors que mon principe est : <foreign xml:lang="grv">
+                                <hi rend="greek"> λάδε βιώσας </hi>
+                            </foreign>. " (<rs ref="#w03313" type="bi"> Hoffmann </rs>, p.444). Traduction de l'expression grecque de <persName
+                                ref="#p0215" type="bi"> Plutarque </persName> : "Vivre en secret".</p><p xml:lang="en">On <date when-iso="1850-10-21">
+                                21 October 1850 </date>, <persName ref="#p0178" type="bi"> Boeckh </persName> writes to <persName ref="#p0276"
+                                type="bi"> Alexander von Humboldt </persName>: " If I have any reason to be dissatisfied with the path in life that
+                            has been mapped out for me, I complain that God has made me a speaker in anger. Again and again I have to expose myself to
+                            everyday criticism, while my principle is: <foreign xml:lang="grv">
+                                <hi rend="greek"> λάδε βιώσας </hi>
+                            </foreign>. " (<rs ref="# w03313" type="bi"> Hoffmann </rs>, p. 444). Translation of the Greek expression of <persName
+                                ref="# p0215" type="bi"> Plutarch </persName>: "Live in secret".</p></note>; jetzt erste ärnte ich den Dank,<lb/>aber
+                    den allerschönsten und weit größern, als meine kühnsten Hoff<lb break="no"/>nungen ihn hätten erwarten lassen. Um so dankbarer bin
+                    ich wieder da<lb break="no"/>für; und so wenig Ihnen daran gelegen seÿn kann, wenn ich dies gegen<lb/>Sie ausspreche, umso mehr
+                    drängt es mich, Ihnen meine herzliche<lb/>Erkenntlichkeit für Ihre gütige und edle Auffassung meiner Worte<lb/>auszusprechen, die
+                    mir der größte Lohn und zugleich der werthvollste Ersatz<lb/>für die unverständige oder übelwollende Auslegung ist, die ich von
+                    einigen<lb/>meiner akademischen Collegen<note resp="#sabine.seifert"><p xml:lang="de">In seiner Abschrift identifiziert <persName
+                                ref="#p0249" type="bi">Varnhagen</persName> die "Collegen" als <persName ref="#p0794" type="bi">Leopold von
+                                Ranke</persName>, <persName ref="#p0642" type="bi">Karl Lachmann</persName>, <persName ref="#p0413" type="bi">Martin
+                                Lichtenstein</persName>, <persName ref="#p0784" type="bi">Ignaz von Olfers</persName>.</p><p xml:lang="fr">Dans sa
+                            copie, <persName ref="#p0249" type="bi"> Varnhagen </persName> identifie les "collègues" comme <persName ref="#p0794"
+                                type="bi"> Leopold von Ranke </persName> , <persName ref="#p0642" type="bi"> Karl Lachmann </persName>, <persName
+                                ref="#p0413" type="bi"> Martin Lichtenstein </persName>, <persName ref="#p0784 " type="bi"> Ignaz von Olfers
+                            </persName>.</p><p xml:lang="en">In his copy, <persName ref="#p0249" type="bi"> Varnhagen </persName> identifies the
+                            "colleagues" as <persName ref="#p0794" type="bi"> Leopold von Ranke </persName>, <persName ref="#p0642" type="bi"> Karl
+                                Lachmann </persName>, <persName ref="#p0413" type="bi"> Martin Lichtenstein </persName>, <persName ref="#p0784"
+                                type="bi"> Ignaz von Olfers </persName>.</p></note> erfahren habe, auf deren Beistimmung ich freilich<lb/>von vorn
+                    herein nicht hätte rechnen sollen. Erhalten Sie mir ferner Ihr<lb/>gütiges Wohlwollen.</p>
                 <closer><salute rend="align(right)">Mit der innigsten Verehrung und Ergebenheit <lb/>Ihr</salute><milestone
                         rend="vertical-rule align(right)" unit="none"/><dateline><date when-iso="1840-12-03">3/12 40.</date></dateline><salute
                         rend="align(right)">gehorsamster</salute>

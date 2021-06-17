@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-02-10" who="#sabine.seifert">Corrected French translation.</change>
             <change when-iso="2014-02-08" who="#sabine.seifert">Encoding of metadata, transcription and annotation.</change>
@@ -203,11 +211,23 @@
                         >Berlin</placeName>, den <date when-iso="1858-04-16">16. April 1858.</date></note>
                 <lb/>
                 <lb/>
-                <opener rend="align(center)">Hochgeehrtes <rs ref="#p1894" type="bi">Fräulein</rs><note resp="#sabine.seifert"><persName ref="#p1894"
-                            type="bi">Ludmilla Assing</persName> ist die Nichte von <persName ref="#p0249" type="bi">Varnhagen</persName>. Sie erbte
-                        nach dessen Tod die Handschriftensammlung und gab <persName ref="#p0249" type="bi">Varnhagens</persName>
-                        <title ref="#w03318">Tagebücher</title> sowie Briefe <persName ref="#p1482" type="bi">Rahel Varnhagens</persName> und
-                            <persName ref="#p0276" type="bi">Alexander von Humboldts</persName> heraus.</note>,</opener>
+                <opener><salute rend="align(center)">Hochgeehrtes <rs ref="#p1894" type="bi">Fräulein</rs><note resp="#sabine.seifert">
+                            <p xml:lang="de"><persName ref="#p1894" type="bi">Ludmilla Assing</persName> ist die Nichte von <persName ref="#p0249"
+                                    type="bi">Varnhagen</persName>. Sie erbte nach dessen Tod die Handschriftensammlung und gab <persName ref="#p0249"
+                                    type="bi">Varnhagens</persName>
+                                <title ref="#w03318">Tagebücher</title> sowie Briefe <persName ref="#p1482" type="bi">Rahel Varnhagens</persName> und
+                                    <persName ref="#p0276" type="bi">Alexander von Humboldts</persName> heraus.</p>
+                            <p xml:lang="fr"><persName ref="# p1894" type="bi"> Ludmilla Assing </persName> est la nièce de <persName ref="# p0249"
+                                    type="bi"> Varnhagen </persName>. Après sa mort, elle hérite de la collection de manuscrits et édite les <title
+                                    ref="# w03318"> journaux intimes </title> de <persName ref="# p0249" type="bi"> Varnhagens </persName> et des
+                                lettres de <persName ref=" # p1482" type=" bi "> Rahel Varnhagens </persName> et de <persName ref=" # p0276"
+                                    type=" bi "> Alexander von Humboldts </persName>.</p>
+                            <p xml:lang="en"><persName ref="# p1894" type="bi"> Ludmilla Assing </persName> is the niece of <persName ref="# p0249"
+                                    type="bi"> Varnhagen </persName>. After his death she inherited the manuscript collection and edited the <title
+                                    ref="# w03318"> diaries </title> of<persName ref="# p0249" type="bi"> Varnhagens </persName> and the letters
+                                    of<persName ref="# p1482" type=" bi "> Rahel Varnhagens </persName> and <persName ref=" # p0276" type=" bi ">
+                                    Alexander von Humboldts </persName>.</p>
+                        </note>,</salute></opener>
                 <lb rend="both"/>
                 <p>Mit großem Bedauern sehe ich mich in der Lage, die sehr gütige Ein<lb break="no"/>ladung auf <date when-iso="1858-04-17"
                         >Morgen</date> nicht annehmen zu können. Schon seit etlichen Tagen<lb/>bin ich auf dieselbe Zeit zu einer Conferenz
@@ -229,13 +249,12 @@
                     <signed>
                         <hi rend="latin align(right)"><persName ref="p0178" type="bi">Böckh</persName>.</hi>
                     </signed>
-                </closer>
-                <pb facs="krakau_boeckh_varnhagen_14.jpg" n="2"/>
-                <stamp rend="align(right)">Poststempel [<hi rend="majuscule"><placeName ref="#l1103" type="bi">BERLIN</placeName> STADTPOST-EX<unclear
-                            cert="medium" reason="faded">P</unclear> IX</hi> 16/1 12-1Vm]</stamp>
-                <lb/>
-                <note hand="postman">[Markierungen der Post]</note>
-                <p><hi rend="latin"><address>
+                    <pb facs="krakau_boeckh_varnhagen_14.jpg" n="2"/>
+                    <stamp rend="align(right)">Poststempel [<hi rend="majuscule"><placeName ref="#l1103" type="bi">BERLIN</placeName>
+                                STADTPOST-EX<unclear cert="medium" reason="faded">P</unclear> IX</hi> 16/1 12-1Vm]</stamp>
+                    <lb/>
+                    <note hand="postman">[Markierungen der Post]</note>
+                    <hi rend="latin"><address>
                             <addrLine rend="align(center)">An</addrLine>
                             <addrLine rend="align(center)">Fräulein <persName ref="#p1894" type="bi">Ludmilla Assing</persName></addrLine>
                             <addrLine rend="align(center)">(<choice>
@@ -247,12 +266,12 @@
                                     <abbr>Mauerstr.</abbr>
                                     <expan>Mauerstraße</expan>
                                 </choice> 36.</addrLine>
-                        </address></hi></p>
-                <pb facs="krakau_boeckh_varnhagen_15.jpg" n="3"/>
-                <stamp rend="align(right)">Poststempel [16/1 1-2 Nm]</stamp>
-                <lb/>
-                <stamp rend="align(right)">Bibliotheksstempel [<hi rend="majuscule">STAATSBIBLIOTHEK <placeName ref="#l1103" type="bi"
-                            >BERLIN</placeName></hi>]</stamp>
+                        </address></hi>
+                    <pb facs="krakau_boeckh_varnhagen_15.jpg" n="3"/>
+                    <stamp rend="align(right)">Poststempel [16/1 1-2 Nm]</stamp>
+                    <lb/>
+                    <stamp rend="align(right)">Bibliotheksstempel [<hi rend="majuscule">STAATSBIBLIOTHEK <placeName ref="#l1103" type="bi"
+                                >BERLIN</placeName></hi>]</stamp></closer>
             </div>
         </body>
     </text>
