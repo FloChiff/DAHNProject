@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -266,8 +273,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-09" who="#janine.katins">Encoding up to line 530.</change>
         </revisionDesc>
@@ -276,9 +284,9 @@
         <body>
             <div type="transcription">
                 <pb facs="PPN739750399|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">11</note>
-                <note hand="#pencil_4" place="bottom-margin-left" type="foliation">47</note>
-                <note hand="#pencil_2" place="top-margin-left">3</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">11</note>
+                <note hand="#pencil_4" place="bottom-margin(left)" type="foliation">47</note>
+                <note hand="#pencil_2" place="top-margin(left)">3</note>
                 <opener><dateline rend="align(left)">Mittwoch den <date when-iso="1823-06-18">18</date><hi rend="superscript">ten</hi>. <note
                             hand="#pencil_3" place="inline">1823</note><lb/>Im botanischen Garten zu <placeName ref="#l0248" type="bi"
                             >Greifswald.</placeName>
@@ -287,50 +295,84 @@
                     über dich selber, meine <hi rend="latin"><persName ref="#p1723" type="bi">Antonie</persName></hi>! einen <hi rend="underline"
                         >ordentlichen<lb/>Briefen</hi> kannst Du schreiben, hast Du mir geschrieben, <rs ref="#p1723" type="bi">mein Kind</rs>! deinen
                     lieben<lb/>Liebes Brief, den ich recht pünklich, wenn ich ihn erwartet, erhalten, hat mich<lb/>hocherfreut, und ich fühle recht
-                    bescheiden, daß ich keinen solchen <add place="above">zu</add> schreiben<lb/><del rend="stikethrough"><unclear cert="medium"
-                            extent="1w" reason="illegible">konne</unclear></del>
-                    <add place="above">vermag</add> Du hast mir dein ganze Herz auf dem Papier geschickt, und<lb/>anstatt Dir nur ein Stück von dem
-                    Meinen <del rend="strikethrough">schicken zu <unclear extent="1w" reason="illegible"/></del>
-                    <add place="above">zurück zu schicken</add> werde<lb/>ich Dir entweder eine Abhandlung oder Gott weiß was niederschreiben.
-                    —<lb/>Das Schreiben ist für euch (ungelehrten) Frauen, eine Sache der Natur, es ist<lb/>immer für uns eine Sache der
-                    Gelehrsamkeit. — da ich Geschriebenes doch<lb/><del rend="erasure">immer</del>
+                    bescheiden, daß ich keinen solchen <add place="above">zu</add> schreiben<lb/><subst>
+                        <del rend="stikethrough"><unclear cert="medium" extent="1w" reason="illegible">konne</unclear></del>
+                        <add place="above">vermag</add>
+                    </subst> Du hast mir dein ganze Herz auf dem Papier geschickt, und<lb/>anstatt Dir nur ein Stück von dem Meinen <subst>
+                        <del rend="strikethrough">schicken zu <unclear extent="1w" reason="illegible"/></del>
+                        <add place="above">zurück zu schicken</add>
+                    </subst> werde<lb/>ich Dir entweder eine Abhandlung oder Gott weiß was niederschreiben. —<lb/>Das Schreiben ist für euch
+                    (ungelehrten) Frauen, eine Sache der Natur, es ist<lb/>immer für uns eine Sache der Gelehrsamkeit. — da ich Geschriebenes
+                        doch<lb/><del rend="erasure">immer</del>
                     <hi rend="underline">machen</hi> muß , so dünkt es mich, daß es immer noch am besten <del rend="erasure"><unclear extent="1w"
                             reason="illegible"/></del><lb/>ausfällt, wenn es sich zum Liedchen gestaltet, ich <del rend="strikethrough">fühle</del>
                     bin mir bewust nur die<lb/>Verse davon gemacht zu haben, und so war s mit meinem letzten Wanderlied.</p>
                 <p>Die Zeit wird mir unaussprechlich lang, ich bin lustlos schläfrig und<lb/>leer, Ja ich scheue mich in dieser Stimmung an dich zu
-                    schreiben, und<lb/>so kommt es auch daß bei allem innern Dra<del rend="overwritten">g</del><add place="across">ng</add> ich nur
-                    eben die<lb/>Feder ergreife, <del n="3" rend="strikethrough">als</del>
-                    <add place="above">wenn</add> der Posttag und die Stunde mich mahnen.</p>
+                    schreiben, und<lb/>so kommt es auch daß bei allem innern Dra<subst>
+                        <del rend="overwritten">g</del>
+                        <add place="across">ng</add>
+                    </subst> ich nur eben die<lb/>Feder ergreife, <subst>
+                        <del n="3" rend="strikethrough">als</del>
+                        <add place="above">wenn</add>
+                    </subst> der Posttag und die Stunde mich mahnen.</p>
                 <p>Ich bin mit dir, meine liebe gute <persName ref="#p1723" type="bi">Antonie</persName>, vollkommen zufrieden.<lb/><cit>
                         <quote>Du bist mein starkes Madchen.</quote>
-                    </cit> halte dich wacker und froh, wir <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                        >w</add>erden uns<lb/>bald wiedersehen. – ich will dir einiges erzählen.</p>
+                    </cit> halte dich wacker und froh, wir <subst>
+                        <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                        <add place="across">w</add>
+                    </subst>erden uns<lb/>bald wiedersehen. – ich will dir einiges erzählen.</p>
                 <p> Ich bin hier äusserst liebreich und achtungsvoll aufgenom̄en worden. Ich<lb/><del n="2" rend="strikethrough">coursire</del>
-                    kein[?] Prophet in seinem Lande, ich coursire als Weltumsegler<note resp="#henrike.bobzien">Eine Anspielung auf Chamissos
-                        Teilnahme an der Expedition mit der Rurik 1815-1818 (vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S.
-                        258-259). <cit>
-                            <quote>Für Chamisso endete die Weltumseglung mit einem persönlichen Triumph […] [er] wurde nach seiner Rückkehr nach
-                                Berlin gefeiert, mit der Ehrendoktorwürde der Universität geehrt, von wissenschaftlichen Gesellschaften umworben. Mit
-                                der wissenschaftlichen Ausbeute seiner Reise erkaufte er sich die gesellschaftliche Anerkennung, die ihm bis dato in
-                                Preußen verweigert worden war.</quote>
-                        </cit> (vgl. <persName ref="#" type="bi">Michael Bienert</persName>, 2004, S. 65).</note><lb/>Conversations Lexicons Mann, und
-                    Mann ohne Schatten.<note resp="#henrike.bobzien">Dies ist ein Hinweis auf die Figur Peter Schlemihl in Chamissos <title
-                            ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>. Einen interessanten Sucheinstieg für Ausgaben dieses Werks
-                        bietet die Seite der <ref target="http://chamisso-gesellschaft.de/schlemihliana/schlemihl_ausgaben/">Chamisso-Gesellschaft
-                            e.V.</ref> [Zugriff 10.07.2014].</note> Die Professoren der<lb/>Universität kommen mir entgegen. <hi rend="latin"
-                            ><persName ref="#p3141" type="bi">Hornschuch</persName></hi> ist ein sehr guter<lb/>Junge, hinter dem aber nicht vieles zu
-                    suchen ist. <hi rend="latin"><persName ref="#p3126" type="bi">Borges</persName></hi> ist durchaus<lb/>gemüthlich und freudig. –
-                    von <hi rend="latin"><persName ref="#p3142" type="bi">Therese</persName></hi> sage ich dir nichts, du wirst sie hoffentlich<lb/>in
-                        <hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi> sehen, Sie wird ih<del rend="overwritten"
-                        >n</del><add place="across">ren</add>
+                    kein[?] Prophet in seinem Lande, ich coursire als Weltumsegler<note resp="#henrike.bobzien"><p xml:lang="de">Eine Anspielung auf
+                            Chamissos Teilnahme an der Expedition mit der Rurik 1815-1818 (vgl. <persName ref="#p0408" type="bi">Werner
+                                Feudel</persName>, 1988, S. 258-259). <cit>
+                                <quote>Für Chamisso endete die Weltumseglung mit einem persönlichen Triumph […] [er] wurde nach seiner Rückkehr nach
+                                    Berlin gefeiert, mit der Ehrendoktorwürde der Universität geehrt, von wissenschaftlichen Gesellschaften umworben.
+                                    Mit der wissenschaftlichen Ausbeute seiner Reise erkaufte er sich die gesellschaftliche Anerkennung, die ihm bis
+                                    dato in Preußen verweigert worden war.</quote>
+                            </cit> (vgl. <persName ref="#" type="bi">Michael Bienert</persName>, 2004, S. 65).</p><p xml:lang="fr">Une allusion à la
+                            participation de Chamisso à l'expédition avec le Rurik 1815-1818 (cf. <persName ref="#p0408" type="bi"> Werner Feudel
+                            </persName>, 1988, pp. 258-259). <cit>
+                                <quote> Pour Chamisso, la circumnavigation s'est terminée par un triomphe personnel [...] [il] a été célébré après son
+                                    retour à Berlin, honoré d'un doctorat honorifique de l'université, courtisé par les sociétés scientifiques. Avec
+                                    le rendement scientifique de son voyage, il acheta la reconnaissance sociale qu'on lui avait refusé jusqu'ici en
+                                    Prusse. </quote>
+                            </cit> (cf. <persName ref="#" type="bi"> Michael Bienert </persName>, 2004, p. 65).</p><p xml:lang="en">An allusion to
+                            Chamisso's participation in the expedition with the Rurik 1815-1818 (cf. <persName ref="#p0408" type="bi"> Werner Feudel
+                            </persName>, 1988, pp. 258-259). <cit>
+                                <quote> For Chamisso the circumnavigation ended with a personal triumph [...] [he] was celebrated after his return to
+                                    Berlin, honored with an honorary doctorate from the university, courted by scientific societies. With the
+                                    scientific yield of his trip, he bought the social recognition that he had been refused to date in Prussia.
+                                </quote>
+                            </cit> (cf. <persName ref="#" type="bi"> Michael Bienert </persName>, 2004, p. 65).</p></note><lb/>Conversations Lexicons
+                    Mann, und Mann ohne Schatten.<note resp="#henrike.bobzien"><p xml:lang="de">Dies ist ein Hinweis auf die Figur Peter Schlemihl in
+                            Chamissos <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>. Einen interessanten Sucheinstieg für
+                            Ausgaben dieses Werks bietet die Seite der <ref target="http://chamisso-gesellschaft.de/schlemihliana/schlemihl_ausgaben/"
+                                >Chamisso-Gesellschaft e.V.</ref> [Zugriff 10.07.2014].</p><p xml:lang="fr">Il s'agit d'une référence au personnage
+                            Peter Schlemihl dans Chamissos <title ref="#w00339"> la merveilleuse histoire de Peter Schlemihl </title>. La page du <ref
+                                target="http://chamisso-gesellschaft.de/schlemihliana/schlemihl_expenses/"> Chamisso-Gesellschaft e.V. </ref>
+                            [consulté le 10 juillet 2014] offre un point d'entrée de recherche intéressant pour les numéros de ce travail.</p><p
+                            xml:lang="en">This is a reference to the character Peter Schlemihl in Chamissos <title ref="#w00339"> Peter Schlemihl's
+                                wondrous story </title>. The page of the <ref
+                                target="http://chamisso-gesellschaft.de/schlemihliana/schlemihl_expenses/"> Chamisso-Gesellschaft e.V. </ref>
+                            [accessed July 10, 2014] offers an interesting search entry point for editions of this work.</p></note> Die Professoren
+                    der<lb/>Universität kommen mir entgegen. <hi rend="latin"><persName ref="#p3141" type="bi">Hornschuch</persName></hi> ist ein sehr
+                    guter<lb/>Junge, hinter dem aber nicht vieles zu suchen ist. <hi rend="latin"><persName ref="#p3126" type="bi"
+                        >Borges</persName></hi> ist durchaus<lb/>gemüthlich und freudig. – von <hi rend="latin"><persName ref="#p3142" type="bi"
+                            >Therese</persName></hi> sage ich dir nichts, du wirst sie hoffentlich<lb/>in <hi rend="latin"><placeName ref="#l1103"
+                            type="bi">Berlin</placeName></hi> sehen, Sie wird ih<subst>
+                        <del rend="overwritten">n</del>
+                        <add place="across">ren</add>
+                    </subst>
                     <add place="above">Mann</add> gegen Anfang des künftigen Monaths von<lb/><del rend="erasure"><unclear extent="1c"
                             reason="illegible"/></del>
                     <placeName ref="#l1103" type="bi">Berlin</placeName> aus <add place="above">nach</add>
-                    <hi rend="latins"><placeName ref="#l0044" type="bi">Paris</placeName></hi> ablaufen lassen und <del rend="erasure"><unclear
-                            extent="1w" reason="illegible"/></del>
-                    <add place="above">indeß</add> mit Freunden nach <placeName ref="#l0003" type="bi">Dresden</placeName> reisen.<lb/>Sie treffen
-                    gegen den 1<del rend="overwritten"><unclear reason="illegible"/></del><add place="across">2</add><hi rend="superscript">ten</hi>
-                    künftigen Monaths in <placeName ref="#l1103" type="bi">Berlin</placeName> ein. </p>
+                    <hi rend="latins"><placeName ref="#l0044" type="bi">Paris</placeName></hi> ablaufen lassen und <subst>
+                        <del rend="erasure"><unclear extent="1w" reason="illegible"/></del>
+                        <add place="above">indeß</add>
+                    </subst> mit Freunden nach <placeName ref="#l0003" type="bi">Dresden</placeName> reisen.<lb/>Sie treffen gegen den 1<subst>
+                        <del rend="overwritten"><unclear reason="illegible"/></del>
+                        <add place="across">2</add>
+                    </subst><hi rend="superscript">ten</hi> künftigen Monaths in <placeName ref="#l1103" type="bi">Berlin</placeName> ein. </p>
                 <pb facs="PPN739750399|PHYS_0002" n="2"/>
                 <p>Die <hi rend="latin"><persName ref="#p3127" type="bi">Borges</persName></hi> ist ein recht heiteres, liebes Wesen, in dieser
                     Verbindung scheint<lb/><rs ref="#p3126" type="bi">dem Mann</rs> ein frisches Leben aufgegangen zu sein. Ich mag selbst gern
@@ -353,22 +395,37 @@
                 <p>Die <hi rend="latin">Uni</hi>versität der Garten, die Museen, die <hi rend="latin">Biblio</hi>thek sehen sehr<lb/>erfreulig aus, es
                     ist alles im Aufkommen begriffen auch hat sich die<lb/>Zahl der Studirenden, von 50. auf 150 vermehrt, und zu arbeiten
                     ist<lb/>gute gelegenheit da. dagegen sind die Klagen allgemein es frißt<lb/>einer den Andern auf, und gönnt ihm nicht die Luft die
-                    er athmet<lb/>Die Behörden durchkreuzen sich, Der Berichten, <del rend="overwritten">r</del><add place="across">R</add>echnungen,
-                    Klageschriften ist<lb/>kein Ende, der bewusste Landeshauptmann wird als ein Scheusal dargestellt.</p>
+                    er athmet<lb/>Die Behörden durchkreuzen sich, Der Berichten, <subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">R</add>
+                    </subst>echnungen, Klageschriften ist<lb/>kein Ende, der bewusste Landeshauptmann wird als ein Scheusal dargestellt.</p>
                 <p>— Es ist über all, wie bei uns, — die guten Leuten <add place="above">hier</add> glauben daß <hi rend="underline"><placeName
                             ref="#l1103" type="bi">Berlin</placeName></hi><lb/>ein <hi rend="latin">Synonymon</hi>
-                    <add place="above">anderer <del rend="overwritten">n</del><add place="across">N</add>a<del rend="overwritten">h</del><add
-                            place="across">me</add></add> von <hi rend="underline latin">Paradies</hi> sei. <space extent="1w"/> Es finden sich auch
-                    unter den<lb/>Professoren alle Inventarien Stücke von der absonderlichsten Sorte. —<lb/>Ein Professor und seine Söhne haben <del
-                        n="2" rend="strikethrough">ge</del> einander gestern<lb/>auf offener Strasse die Köpfe wund geschlagen. </p>
+                    <add place="above">anderer <subst>
+                            <del rend="overwritten">n</del>
+                            <add place="across">N</add>
+                        </subst>a<subst>
+                            <del rend="overwritten">h</del>
+                            <add place="across">me</add>
+                        </subst></add> von <hi rend="underline latin">Paradies</hi> sei. <space extent="1w"/> Es finden sich auch unter
+                    den<lb/>Professoren alle Inventarien Stücke von der absonderlichsten Sorte. —<lb/>Ein Professor und seine Söhne haben <del n="2"
+                        rend="strikethrough">ge</del> einander gestern<lb/>auf offener Strasse die Köpfe wund geschlagen. </p>
                 <pb facs="PPN739750399|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">12</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">12</note>
                 <p>Der Brief, de<supplied reason="damage">n Du</supplied> mir geschickt hast ist von <hi rend="latin"><persName ref="#p3131" type="bi"
-                            >Eschscholz</persName></hi>.<note resp="#henrike.bobzien"><persName ref="#p3131" type="bi">Eschscholtz</persName> war u.a.
-                        Schiffsarzt und Naturforscher. Auf der Rurik während der Expedition unter der Leitung von <persName ref="#p1756" type="bi"
-                            >Otto von Kotzebue</persName> (Vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 97), lernte er
-                            <persName ref="#p0237" type="bi">Adelbert von Chamisso</persName> kennen.</note> was<lb/>sagst du dazu daß er zum zweiten
-                    Mal die Reise um die Welt<lb/>mit <persName ref="#p1756" type="bi">Kotzebue</persName> macht. <cit>
+                            >Eschscholz</persName></hi>.<note resp="#henrike.bobzien"><p xml:lang="de"><persName ref="#p3131" type="bi"
+                                >Eschscholtz</persName> war u.a. Schiffsarzt und Naturforscher. Auf der Rurik während der Expedition unter der Leitung
+                            von <persName ref="#p1756" type="bi">Otto von Kotzebue</persName> (Vgl. <persName ref="#p0408" type="bi">Werner
+                                Feudel</persName>, 1988, S. 97), lernte er <persName ref="#p0237" type="bi">Adelbert von Chamisso</persName>
+                            kennen.</p><p xml:lang="fr"><persName ref="#p3131" type="bi">Eschscholtz</persName> était médecin de bord et naturaliste.
+                            Sur le Rurik lors de l'expédition sous la direction de <persName ref="#p1756" type="bi">Otto von Kotzebue</persName> (cf.
+                                <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, p. 97), il fait la connaissance de <persName
+                                ref="#p0237" type="bi">Adelbert von Chamisso</persName>.</p><p xml:lang="en"><persName ref="#p3131" type="bi">
+                                Eschscholtz</persName> was a ship's doctor and natural scientist. On the Rurik during the expedition under the
+                            direction of <persName ref="#p1756" type="bi">Otto von Kotzebue</persName> (cf. <persName ref="#p0408" type="bi"> Werner
+                                Feudel</persName>, 1988, p. 97), he got to know <persName ref="#p0237" type="bi">Adelbert von
+                        Chamisso</persName>.</p></note> was<lb/>sagst du dazu daß er zum zweiten Mal die Reise um die Welt<lb/>mit <persName
+                        ref="#p1756" type="bi">Kotzebue</persName> macht. <cit>
                         <quote>Meine <rs ref="#p3132" type="bi">Frau</rs>, schreibt er, ist herrisch gefaßt.<lb/>Sie weiß daß meine geschafte mir
                             verhaßt sind, wir wollen uns<lb/>eine bessere Zukunft bereiten.</quote>
                     </cit>
@@ -377,15 +434,19 @@
                         <abbr>Rh.</abbr>
                         <expan>Reichstaler</expan>
                     </choice> Einkommen. —<lb/>alle Stellen sind besetzt und ich glaube nicht daß <hi rend="latin"><persName ref="#p3147" type="bi"
-                            >Mertens</persName></hi> noch<lb/>ankommen wird.<note resp="#henrike.bobzien">Der Mediziner und Naturwissenschaftler
-                            <persName ref="#p3147" type="bi">Mertens</persName> hoffte, bei der zweiten Expedition von <persName ref="#p1756"
-                            type="bi">Kotzebue</persName> mitfahren zu können.</note> Der Brief giebt mir drei andere zu<lb/>schreiben auf. ich glaube
-                    nicht daß ich heute damit zu Stande<lb/>komme. Ich habe noch eine grosse Excursion und<lb/>Torfuntersuchung vor. — </p>
-                <closer>Ich erhalte eben deinen Brief, und küße ihn<lb/>an deiner statt. – <salute>lebe wohl mein Lieb,<lb/>grüße alle und jeden und
-                            <rs ref="#p3174" type="bi">Mulle</rs>. die<lb/>Zeit ist heute verstrichen – Sonnabend fange<lb/>ich zu beobachten an und
-                        werde mehr Sachen zu<lb/>schreiben haben – <foreign xml:lang="fr">dieu</foreign></salute></closer>
-                <pb facs="PPN739750399|PHYS_0004" n="4"/>
-                <p><address>
+                            >Mertens</persName></hi> noch<lb/>ankommen wird.<note resp="#henrike.bobzien"><p xml:lang="de">Der Mediziner und
+                            Naturwissenschaftler <persName ref="#p3147" type="bi">Mertens</persName> hoffte, bei der zweiten Expedition von <persName
+                                ref="#p1756" type="bi">Kotzebue</persName> mitfahren zu können.</p><p xml:lang="fr">Le médecin et naturaliste
+                                <persName ref="#p3147" type="bi"> Mertens </persName> espérait pouvoir rejoindre la deuxième expédition de <persName
+                                ref="#p1756" type="bi"> Kotzebue </persName>.</p><p xml:lang="en">The doctor and natural scientist <persName
+                                ref="#p3147" type="bi"> Mertens </persName> hoped to be able to join the second expedition of <persName ref="#p1756"
+                                type="bi"> Kotzebue </persName>.</p></note> Der Brief giebt mir drei andere zu<lb/>schreiben auf. ich glaube nicht daß
+                    ich heute damit zu Stande<lb/>komme. Ich habe noch eine grosse Excursion und<lb/>Torfuntersuchung vor. — </p>
+                <closer><salute>Ich erhalte eben deinen Brief, und küße ihn<lb/>an deiner statt. – </salute><salute>lebe wohl mein Lieb,<lb/>grüße
+                        alle und jeden und <rs ref="#p3174" type="bi">Mulle</rs>. die<lb/>Zeit ist heute verstrichen – Sonnabend fange<lb/>ich zu
+                        beobachten an und werde mehr Sachen zu<lb/>schreiben haben – <foreign xml:lang="fr">dieu</foreign></salute>
+                    <pb facs="PPN739750399|PHYS_0004" n="4"/>
+                    <address>
                         <addrLine>An <choice>
                                 <abbr>d.</abbr>
                                 <expan>die</expan>
@@ -395,10 +456,10 @@
                                         <expan>von</expan>
                                     </choice> Chamisso</hi></persName></addrLine>
                         <addrLine><abbr>hochwo</abbr><expan>hochwohlgeboren</expan></addrLine>
-                        <addrLine><street><hi rend="latin">Lindenstrasse N<hi rend="superscript">o.</hi> 30.</hi></street></addrLine>
+                        <addrLine><hi rend="latin">Lindenstrasse N<hi rend="superscript">o.</hi> 30.</hi></addrLine>
                         <addrLine><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName></addrLine>
-                    </address></p>
-                <p><stamp><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-06-18">18. Juni</date></stamp></p>
+                    </address>
+                    <stamp><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-06-18">18. Juni</date></stamp></closer>
             </div>
         </body>
     </text>

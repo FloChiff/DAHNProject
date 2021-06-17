@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -247,8 +254,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-25" who="#janine.katins">Encoding up to line 423.</change>
         </revisionDesc>
@@ -257,17 +265,19 @@
         <body>
             <div type="transcription">
                 <pb facs="PPN739750453|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">16</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">16</note>
                 <note hand="#pencil_2" place="bottom-right" type="foliation">47</note>
-                <note hand="#pencil_3" place="top-margin-left" type="foliation">4<unclear extent="1c" reason="illegible"/>a</note>
+                <note hand="#pencil_3" place="top-margin(left)" type="foliation">4<unclear extent="1c" reason="illegible"/>a</note>
                 <opener><dateline rend="align(left)">
                         <placeName ref="#l0248" type="bi">Greifswald. </placeName><date when-iso="1823-06-28">28 Juni 1823.</date></dateline></opener>
                 <p>Lieben ist Eins und verliebtsein ein Anderes. Ich liebe dich, ja, das ist<lb/>keine Frage, obich aber je in dich verliebt gewesen?
                     dürfte wohl eine Frage<lb/>sein, die ich jedoch bejahend beandworten würde, zugegeben nehmlich, daß<lb/>ich dich nicht
                     destoweniger früher und fortwährend geliebt als wäre ich nicht verliebt.<lb/>weißt du wohin ich kommen will.? die Trennung giebt
-                    meiner Liebe einen gewissen<lb/>Zug, <del rend="strikethrough">über <unclear extent="1w" reason="illegible"/> hat sie</del>
-                    <add place="above">der sie gleichsam</add> mit einfachstem Reitze des verliebt seins schmückt.<space extent="1w"
-                    />Mittlerweile<lb/>enteilt die Zeit.<space extent="2w" rend="–"/> noch 14 Tage hier. –</p>
+                    meiner Liebe einen gewissen<lb/>Zug, <subst>
+                        <del rend="strikethrough">über <unclear extent="1w" reason="illegible"/> hat sie</del>
+                        <add place="above">der sie gleichsam</add>
+                    </subst> mit einfachstem Reitze des verliebt seins schmückt.<space extent="1w"/>Mittlerweile<lb/>enteilt die Zeit.<space
+                        extent="2w" rend="–"/> noch 14 Tage hier. –</p>
                 <p> –Höre, <rs ref="#p1723" type="bi">mein gutes Kind</rs>, <persName ref="#p3126" type="bi"><hi rend="latin">Borjes</hi>
                         Mann</persName> und <rs ref="#p3127" type="bi">Frau</rs>, wollen mich nach <placeName ref="#l1038" type="bi"
                     >Rügen</placeName><lb/>geleiten, Sie haben die <hi rend="latin">Partie</hi> abgekartet und mir mitgetheilt, am 13<hi
@@ -304,22 +314,22 @@
                         <rs ref="#p3174" type="bi">Mulle</rs> und das <rs ref="#p3180" type="bi">Getante</rs>.</salute></closer>
                 <postscript>
                     <p>Könnte wohl <rs ref="#p3177" type="bi">Vater</rs> die <hi rend="latin large">Digitalis purpurea</hi><note
-                            resp="#henrike.bobzien">"Digitalis purpurea = D: Gewöhnlicher Roter Fingerhut, E: Foxglove, F: Digitale pourpre". Vgl.
-                                <persName ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 343.</note> im Logen<lb/>Garten oder in einem anderen
-                        für Geld und gute Worte<lb/>für Exemplare auftreiben (Die kleinsten sind die liebsten)<lb/>du würdest sie dann einlegen. - Sie
-                        blüht schon und es ist<lb/>ihr hier schwerlich bei zukommen.<space extent="1w"/>bei Kunst und Blumen<lb/>Gärtnern muß sie
-                        sein. – für die Kornblume rechne ich<lb/>auf Euch.</p>
+                            resp="#henrike.bobzien"><p xml:lang="de">"Digitalis purpurea = D: Gewöhnlicher Roter Fingerhut, E: Foxglove, F: Digitale
+                                pourpre". Vgl. <persName ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 343.</p><p xml:lang="en"/><p
+                                xml:lang="fr"/></note> im Logen<lb/>Garten oder in einem anderen für Geld und gute Worte<lb/>für Exemplare auftreiben
+                        (Die kleinsten sind die liebsten)<lb/>du würdest sie dann einlegen. - Sie blüht schon und es ist<lb/>ihr hier schwerlich bei
+                            zukommen.<space extent="1w"/>bei Kunst und Blumen<lb/>Gärtnern muß sie sein. – für die Kornblume rechne ich<lb/>auf
+                        Euch.</p>
                     <p><hi rend="latin"><rs ref="#p3141 #p3142" type="bi">Hornschuch</rs></hi> gehen von hier den 8 ab.<lb/>Gestern ist der <rs
                             ref="#" type="bi">Kronprinz</rs>
                         <!-- hier bin ich nicht sicher, um welchen Kronprinzen es sich handelt --> --&gt;hier durch gereist.<lb/>Meine <hi
                             rend="latin">Nivelierung</hi><space extent="1w"/>hat mit gutem Glücke statt gefunden </p>
                 </postscript>
                 <pb facs="PPN739750453|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">17</note>
-                <p/>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">17</note>
                 <pb facs="PPN739750453|PHYS_0004" n="4"/>
-                <p><stamp rend="align(right)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-6-28">28.
-                        Juni</date></stamp><address>
+                <closer><stamp rend="align(right)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-6-28">28.
+                            Juni</date></stamp><address>
                         <addrLine>Frau <choice>
                                 <abbr>Dr.<hi rend="superscript">in</hi></abbr>
                                 <expan>Doktorin</expan>
@@ -334,7 +344,7 @@
                                 <expan>Hochwohlgeboren</expan>
                             </choice></addrLine>
                         <addrLine><hi rend="latin">Linden Strasse 30.</hi></addrLine>
-                    </address></p>
+                    </address></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Chamisso's papers </collection>
@@ -224,8 +231,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-19" who="#janine.katins">First encoding up to line 356.</change>
         </revisionDesc>
@@ -234,8 +242,8 @@
         <body>
             <div type="transcription">
                 <pb facs="PPN739750437|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">15</note>
-                <note hand="#pencil_2" place="bottom-right" type="foliation">47</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">15</note>
+                <note hand="#pencil_2" place="bottom(right)" type="foliation">47</note>
                 <opener><note hand="#pencil_2"><hi rend="underline">5<hi rend="superscript underline">10</hi></hi></note>
                     <dateline rend="align(left)">
                         <placeName ref="#l0248" type="bi">Greifswald</placeName><space extent="1w"/><date when-iso="1823-06-25">25. Juni</date>. ½ 2.
@@ -244,10 +252,12 @@
                             >Rügner</placeName></hi><lb/>Reise haben könnte, daß ich <add place="above">wieder</add> zum ersten Mal durch deiner Augen
                     die See sehen<lb/>dürfte, vom Stubenkam̄er aus in die dir noch soweite weite Welt hinaus schauen,<lb/>Jung wieder werden in Dir,
                     nichts gesehen haben und wieder zum ersten Male<lb/>sehen. <space extent="1w" rend="—"/>wenns nicht anders ist, werde ich hübsch
-                    gelehrt nach meinem Barometer<lb/>sehen, und d<del rend="overwritten"><unclear extent="2c" reason="illegible"/></del><add
-                        place="across">as</add> Meer da drunten branden sehen – du würdest mir gewiß Lieder<lb/>gemacht haben. <space extent="1w"
-                        rend="—"/>Setze mir dein Journal fort, mein <rs ref="#p1723" type="bi">viel liebes Kind</rs>,<lb/>von hier aus laßt sich kein
-                    anderes eigentlich schreiben, als das Barometer Journal<lb/>und das ist doch nun nicht für dich. —</p>
+                    gelehrt nach meinem Barometer<lb/>sehen, und d<subst>
+                        <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                        <add place="across">as</add>
+                    </subst> Meer da drunten branden sehen – du würdest mir gewiß Lieder<lb/>gemacht haben. <space extent="1w" rend="—"/>Setze mir
+                    dein Journal fort, mein <rs ref="#p1723" type="bi">viel liebes Kind</rs>,<lb/>von hier aus laßt sich kein anderes eigentlich
+                    schreiben, als das Barometer Journal<lb/>und das ist doch nun nicht für dich. —</p>
                 <p>Das Wort <hi rend="underline">Trinkgelag</hi> hat dir wohl ein floh ins Ohr gesetzt: – <rs ref="#p1723" type="bi">mein<lb/>liebes
                         Kind</rs>, ich habe um 7, um 8, um 9 um 10 und um 12 so ausnehmend<lb/>genaue Beobachtung gemacht, daß man sie rühmen wird. –
                     darauf bin<lb/>ich zu bett gegangen. viel mehr läßt sich nicht davon sagen, wir<lb/>waren gute Kerls und guter <hi rend="latin"
@@ -261,38 +271,41 @@
                     mein <rs ref="#p1723" type="bi">Weib</rs> nicht da sei, müßte das ihre Sorge sein.<lb/>– Ich dachte du hattest es nicht anders
                     gemacht.</p>
                 <p>Ich hucke gewöhnlich zu hause, und mache eben nichts, weil ich auf die<lb/>Glocke horche, – ich observire alle Stunde, was mich
-                    gewöhnlich eine<lb/>Viertelstunde <del rend="none"><unclear extent="1w" reason="illegible"/></del><add place="above">kostet</add>.
-                    – in der Zwischen Zeit lege ich Pflanzen ein, oder<lb/>gehe im Garten herum, oder rauche eine Pfeife. – um 2 Uhr<lb/>gehe ich
-                    kneipen, komme dann wieder, und bin den Abend bei dem<lb/>Einen oder dem Anderen aus. <hi rend="latin"><persName ref="#p3141"
-                            type="bi">Hornschuch</persName></hi>, <hi rend="latin"><persName ref="#p3126" type="bi">Borjes</persName></hi>, <hi
-                        rend="latin"><persName ref="#p3165" type="bi">Sprengel</persName></hi>, (Sohn des Hallischen). So sind bereits 4 Tage
-                    vergangen. – am<lb/>Abend und am Sonntag (bei <hi rend="latin"><rs ref="#p3126 #p3127" type="bi">Borges</rs></hi>) beobachte ich
-                    nur alle 2 Stunden</p>
+                    gewöhnlich eine<lb/>Viertelstunde <subst>
+                        <del rend="none"><unclear extent="1w" reason="illegible"/></del>
+                        <add place="above">kostet</add>
+                    </subst>. – in der Zwischen Zeit lege ich Pflanzen ein, oder<lb/>gehe im Garten herum, oder rauche eine Pfeife. – um 2
+                    Uhr<lb/>gehe ich kneipen, komme dann wieder, und bin den Abend bei dem<lb/>Einen oder dem Anderen aus. <hi rend="latin"><persName
+                            ref="#p3141" type="bi">Hornschuch</persName></hi>, <hi rend="latin"><persName ref="#p3126" type="bi"
+                        >Borjes</persName></hi>, <hi rend="latin"><persName ref="#p3165" type="bi">Sprengel</persName></hi>, (Sohn des Hallischen). So
+                    sind bereits 4 Tage vergangen. – am<lb/>Abend und am Sonntag (bei <hi rend="latin"><rs ref="#p3126 #p3127" type="bi"
+                        >Borges</rs></hi>) beobachte ich nur alle 2 Stunden</p>
                 <pb facs="PPN739750437|PHYS_0002" n="2"/>
                 <p>was das gesetzmäßige ist. — Auch gehen am Vormittag <persName ref="#p3103" type="bi">Nenz</persName> und <persName ref="#p3151"
                         type="bi">Witt</persName><lb/>begierig bei mir aus und ein. — Morgen <del rend="strikethrough">unterne</del> mit Tagesanbruch
                     unternehme<lb/>ich mit einem Jungen Mann die <hi rend="latin">Nivellirung</hi> meines <hi rend="latin"><foreign xml:lang="la"
-                            >Observatorii</foreign></hi> mit dem Wasser<lb/>Spiegel der Riek<note resp="#henrike.bobzien">Hier irritiert die
-                        Schreibung: Gemeint ist der Fluß Ryck, der bei <placeName ref="#l0248" type="bi">Greifswald</placeName> in die Ostsee
-                        mündet.</note>, gleich dem des Meeres, eine Arbeit, die mir Sorge bis jetzt gemacht<lb/>hat die Professoren haben die
-                    Instrumente dazu gegeben. – Ich habe bei diesem<lb/>Geschäfte oft an Bruder <persName ref="#p3176" type="bi">Heinrich</persName>
-                    gedacht.</p>
+                            >Observatorii</foreign></hi> mit dem Wasser<lb/>Spiegel der Riek<note resp="#henrike.bobzien"><p xml:lang="de">Hier
+                            irritiert die Schreibung: Gemeint ist der Fluß Ryck, der bei <placeName ref="#l0248" type="bi">Greifswald</placeName> in
+                            die Ostsee mündet.</p><p xml:lang="fr">L'orthographe est ici irritante : il s'agit de la rivière Ryck, qui se jette dans
+                            la mer Baltique à <placeName ref="#l0248" type="bi"> Greifswald </placeName>.</p><p xml:lang="en">The spelling is
+                            irritating here: What is meant is the river Ryck, which flows into the Baltic Sea at <placeName ref="#l0248" type="bi">
+                                Greifswald </placeName>.</p></note>, gleich dem des Meeres, eine Arbeit, die mir Sorge bis jetzt gemacht<lb/>hat die
+                    Professoren haben die Instrumente dazu gegeben. – Ich habe bei diesem<lb/>Geschäfte oft an Bruder <persName ref="#p3176" type="bi"
+                        >Heinrich</persName> gedacht.</p>
                 <closer>So eben kom̄t der Briefträger auf den ich eigentlich den ganzen Mittag gepaßt habe: <salute>hab dank <rs ref="#p1723"
                             type="bi">mein gutes Kind</rs>! nimm heute so vorlieb. <space extent="3w" rend="–"/> ein anderes Mal mehr. —</salute>
-                </closer>
-                <p>
                     <address rend="align(vertical)">
                         <addrLine>Frau <hi rend="latin">Doktorin von <persName ref="#p1723" type="bi">Chamisso</persName></hi></addrLine>
                         <addrLine><abbr>hochwo</abbr><expan>hochwohlgeboren</expan></addrLine>
                         <lb/>
                         <addrLine><hi rend="latin">Lindenstrasse 30</hi>.</addrLine>
                         <addrLine><hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi></addrLine>
-                    </address></p>
-                <p><stamp rend="align(vertical)"><placeName ref="#l0248" type="bi"><choice>
+                    </address>
+                    <stamp rend="align(vertical)"><placeName ref="#l0248" type="bi"><choice>
                                 <abbr>Greifswa</abbr>
                                 <expan>Greifswald</expan>
                             </choice>
-                        </placeName><lb/><date when-iso="1823-06-25">25. Juni</date></stamp></p>
+                        </placeName><lb/><date when-iso="1823-06-25">25. Juni</date></stamp></closer>
             </div>
         </body>
     </text>

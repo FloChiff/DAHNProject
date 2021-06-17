@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Chamisso's papers</collection>
@@ -232,8 +239,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-27" who="#janine.katins">Encoding up to line 409.</change>
         </revisionDesc>
@@ -242,9 +250,9 @@
         <body>
             <div type="transcription">
                 <pb facs="PPN739750488|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">18</note>
-                <note hand="#pencil_2" place="bottom-margin-left" type="foliation">47</note>
-                <note hand="#pencil_3" place="top-margin-left" type="foliation">6</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">18</note>
+                <note hand="#pencil_2" place="bottom-margin(left)" type="foliation">47</note>
+                <note hand="#pencil_3" place="top-margin(left)" type="foliation">6</note>
                 <opener><dateline>
                         <placeName ref="#l0248" type="bi">Greifswald</placeName> den <date when-iso="1823-7-2">2<hi rend="superscript">ten</hi> Juli
                             1823</date>.</dateline>
@@ -271,9 +279,11 @@
                     <!-- hier war ich unachtsam, es muss sich hier um einen anderen Hoffmann handeln und nicht um E.T.A. Hoffmann, der zum Lektüregespräche wird -->und
                         <hi rend="latin"><persName ref="#p3169" type="bi">Poggendorf</persName></hi> auf das Motto "Hundsfott <del
                         rend="strikethrough">wer</del><lb/>wer lügt" Bruderschaft getrunken. – am vorerwähnten Tag<lb/>habe ich es mit <hi
-                        rend="latin"><persName ref="#p3126" type="bi">Bor<del rend="overwritten">g</del><add place="above">j</add>es</persName></hi>
-                    auf das Motto "Hundsfott wer alt wird."<lb/>freue Dich, <rs ref="#p1723" type="bi">mein Kind</rs>, daß Du einen Jungen Mann <del
-                        rend="strikethrough">habest</del></p>
+                        rend="latin"><persName ref="#p3126" type="bi">Bor<subst>
+                                <del rend="overwritten">g</del>
+                                <add place="above">j</add>
+                            </subst>es</persName></hi> auf das Motto "Hundsfott wer alt wird."<lb/>freue Dich, <rs ref="#p1723" type="bi">mein
+                        Kind</rs>, daß Du einen Jungen Mann <del rend="strikethrough">habest</del></p>
                 <pb facs="PPN739750488|PHYS_0002" n="2"/>
                 <p>hast, der immer jung bleiben wird, es haben es nicht alle<lb/>so gut. – </p>
                 <p>heute erhalte ich einen Briefen von dir bevor ich meinen abschicke<lb/>ich warte darauf.<space extent="1w" rend="—"/> einen
@@ -304,8 +314,8 @@
                 <p><hi rend="latin"><rs ref="#p0237" type="bi"><unclear>Scham̄e</unclear></rs></hi> g<supplied reason="damage">rüsst</supplied> seinen
                         <hi rend="latin"><rs ref="#p1754" type="bi">Cameraden</rs></hi>! </p>
                 <pb facs="PPN739750488|PHYS_0004" n="4"/>
-                <p><stamp rend="align(right)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-07-02">02.
-                        Juli</date></stamp><address>
+                <closer><stamp rend="align(right)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-07-02">02.
+                            Juli</date></stamp><address>
                         <addrLine>Frau <hi rend="latin"><persName ref="#p1723" type="bi"><choice>
                                         <abbr>Dr.<hi rend="superscript">in</hi></abbr>
                                         <expan>Doktorin</expan>
@@ -323,7 +333,7 @@
                                 <abbr>N:</abbr>
                                 <expan>Nummer</expan>
                             </choice> 30</addrLine>
-                    </address></p>
+                    </address></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -270,8 +277,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-06-17" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-06-01" who="#janine.katins">First encoding (up to line 200).</change>
             <change when-iso="2014-06-12" who="#janine.katins">Last corrections.</change>
@@ -282,11 +290,11 @@
             <div type="transcription">
                 <pb facs="PPN739750402|PHYS_0001" n="1"/>
                 <note hand="#pencil_1" place="top-margin-righ" type="foliation">13</note>
-                <note hand="#pencil_2" place="top-margin-left" type="foliation"><subst>
+                <note hand="#pencil_2" place="top-margin(left)" type="foliation"><subst>
                         <del seq="0">5</del>
                         <add seq="0">4</add>
                     </subst></note>
-                <note hand="#pencil_3" place="bottom-margin-left" type="foliation">47</note>
+                <note hand="#pencil_3" place="bottom-margin(left)" type="foliation">47</note>
                 <p>Ich rechne darauf daß der <hi rend="underline">Hollunder Strauch</hi> vom Jungen <hi rend="latin"><persName ref="#p3483" type="bi"
                             >Hoffmann</persName></hi>,<lb/>die <hi rend="underline">Blaue Kornblume</hi> von <rs ref="#p1754 #p3128 #p1723" type="bi"
                         >Euch</rs> eingelegt sein wird. ich<lb/>könnte wenn es versäumt wäre, es hier nachholen. – aber ich müßte es<lb/>wissen und
@@ -303,36 +311,71 @@
                     werde dir wohl alle<lb/>Post Tage schreiben, aber ich verspreche dir keines weges es zu thun:<lb/>Das ist also meine Art. <space
                         extent="1w"/> heute komme ich auch sehr spät dazu<lb/>an dich zu schreiben, und werde dir noch nur einen flüchtigen Gruß
                     zurufen.<lb/>Ich habe an <persName ref="#p0280" type="bi">Hippolyte</persName> schreiben müssen, der meine letzten <del
-                        rend="strikethrough">S</del> Briefschaften, die<lb/>der alberne <hi rend="latin">Krebs</hi><note resp="janine.katins"
-                        >Möglicherweise ist hier die Rede von <persName ref="#p1397" type="bi">Johann Philipp Krebs</persName>.</note> so sehr und
-                    schnell zu besorgen sich anheischig gemacht, nicht erhalten hat.<lb/><del rend="erasure"><unclear extent="1w" reason="illegible"
-                        /></del> Er macht mir sehr zärtliche und zarte Vorwürfe, – er erlebt sehr große freude an<lb/>seinen erwachsenen Kindern, und
-                    sonst ist in der Familie nichts neues.<lb/>Der andere Brief war von <hi rend="latin"><persName ref="#p0424" type="bi"
-                            >Choris</persName></hi> aus <hi rend="latin"><placeName ref="#l0042" type="bi">London</placeName></hi>. Stroh wie
-                    gewöhnlich – nur daß er<lb/>mir das Letzte aus seinen Versen geschickt hat, was binnen 14 Tag durch <hi rend="latin"><persName
-                            ref="#p0732" type="bi">Dümmler</persName></hi><note resp="#henrike.bobzien">Der Buchhändler und Verleger <persName
-                            ref="#p0732" type="bi">Ferdinand Dümmler</persName> kaufte die von <persName ref="#p0239" type="bi">Hitzig</persName>
-                        gegründete Buchhandlung in <placeName ref="#l1103" type="bi">Berlin</placeName>. 1824 verarbeitete <persName ref="#0237"
-                            type="bi">Chamisso</persName> seine botanischen Erkenntnisse aus der Greifswaldreise in eine "populäre Pflanzenkunde", die
-                        1827 bei <persName ref="#p0732" type="bi">Ferdinand Dümmler</persName> unter dem Titel <title ref="#">Übersicht der
-                            nutzbarsten und der schädlichsten Gewächse, welche wild oder angebaut in Norddeutschland vorkommen. Nebst Ansichten von
-                            der Pflanzenkunde und dem Pflanzenreiche</title> erschien. (Vgl. <persName ref="#p0408" type="bi">Werner
-                        Feudel</persName>, 1988, S. 132).</note><lb/>einlaufen wird. <space extent="2w" rend="—"/>
+                        rend="strikethrough">S</del> Briefschaften, die<lb/>der alberne <hi rend="latin">Krebs</hi><note resp="janine.katins"><p
+                            xml:lang="de">Möglicherweise ist hier die Rede von <persName ref="#p1397" type="bi">Johann Philipp Krebs</persName>.</p>
+                        <p xml:lang="fr">Il est possible qu'il s'agisse de <persName ref="#p1397" type="bi"> Johann Philipp Krebs </persName>.</p>
+                        <p xml:lang="en">It is possible that we are talking about <persName ref="#p1397" type="bi"> Johann Philipp Krebs
+                            </persName>.</p></note> so sehr und schnell zu besorgen sich anheischig gemacht, nicht erhalten hat.<lb/><del
+                        rend="erasure"><unclear extent="1w" reason="illegible"/></del> Er macht mir sehr zärtliche und zarte Vorwürfe, – er erlebt
+                    sehr große freude an<lb/>seinen erwachsenen Kindern, und sonst ist in der Familie nichts neues.<lb/>Der andere Brief war von <hi
+                        rend="latin"><persName ref="#p0424" type="bi">Choris</persName></hi> aus <hi rend="latin"><placeName ref="#l0042" type="bi"
+                            >London</placeName></hi>. Stroh wie gewöhnlich – nur daß er<lb/>mir das Letzte aus seinen Versen geschickt hat, was binnen
+                    14 Tag durch <hi rend="latin"><persName ref="#p0732" type="bi">Dümmler</persName></hi><note resp="#henrike.bobzien">
+                        <p xml:lang="de">Der Buchhändler und Verleger <persName ref="#p0732" type="bi">Ferdinand Dümmler</persName> kaufte die von
+                                <persName ref="#p0239" type="bi">Hitzig</persName> gegründete Buchhandlung in <placeName ref="#l1103" type="bi"
+                                >Berlin</placeName>. 1824 verarbeitete <persName ref="#0237" type="bi">Chamisso</persName> seine botanischen
+                            Erkenntnisse aus der Greifswaldreise in eine "populäre Pflanzenkunde", die 1827 bei <persName ref="#p0732" type="bi"
+                                >Ferdinand Dümmler</persName> unter dem Titel <title ref="#">Übersicht der nutzbarsten und der schädlichsten Gewächse,
+                                welche wild oder angebaut in Norddeutschland vorkommen. Nebst Ansichten von der Pflanzenkunde und dem
+                                Pflanzenreiche</title> erschien. (Vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 132).</p>
+                        <p xml:lang="fr">Le libraire et éditeur <persName ref="#p0732" type="bi"> Ferdinand Dümmler </persName> a acheté la librairie
+                            fondée par <persName ref="#p0239" type="bi"> Hitzig </persName> à <placeName ref="#l1103" type="bi"> Berlin </placeName>.
+                            En 1824, <persName ref="#0237" type="bi"> Chamisso </persName> a transformé ses connaissances botaniques du voyage de
+                            Greifswald en une "science botanique populaire", qui a été publiée en 1827 par <persName ref="#p0732 " type="bi">
+                                Ferdinand Dümmler </persName> sous le titre <title ref="#"> Aperçu des plantes les plus utilisables et les plus
+                                nuisibles qui poussent à l'état sauvage ou cultivées dans le nord de l'Allemagne. En plus des vues sur la botanique et
+                                le règne végétal </title> est apparu. (Cf. <persName ref="#p0408" type="bi"> Werner Feudel </persName>, 1988, p.
+                            132).</p>
+                        <p xml:lang="en">The bookseller and publisher <persName ref="#p0732" type="bi"> Ferdinand Dümmler </persName> bought the
+                            bookstore founded by <persName ref="#p0239" type="bi"> Hitzig </persName> in <placeName ref="#l1103" type="bi"> Berlin
+                            </placeName>. In 1824 <persName ref="#0237" type="bi"> Chamisso </persName> processed his botanical knowledge from the
+                            Greifswald trip into a "popular botanical science", which was published in 1827 by <persName ref="#p0732" type="bi">
+                                Ferdinand Dümmler </persName> under the title <title ref="#"> Overview of the most usable and harmful plants that
+                                occur wild or cultivated in northern Germany. In addition to views of botany and the plant kingdom </title> appeared.
+                            (Cf. <persName ref="#p0408" type="bi"> Werner Feudel </persName>, 1988, p. 132). </p>
+                    </note><lb/>einlaufen wird. <space extent="2w" rend="—"/>
                     <persName ref="#p1754" type="bi">Ernstes</persName> Neid ziehe dir nicht zu Herzen – jedes<lb/>Kind, jeder Pudel<note
-                        resp="#henrike.bobzien">Der Vergleich von Kind und Tier ist doppelt seltsam, da ein Pudel erwähnt wird. Es mag die Haltung
-                            <persName ref="#0237" type="bi">Chamisso</persName> gewesen sein, dass erst die Erziehung das Tierische in dem Menschen
-                        mindert (Siehe hierzu auch <persName ref="#p0068" type="bi">Rousseau</persName>). Vom Pudel im Brief bis hin zum schwarzen
-                        Pudel in <persName ref="#p0194" type="bi">Goethes</persName>
-                        <title ref="#w00378">Faust</title> scheint es nicht weit. Auch ist bekannt, dass <persName ref="#0237" type="bi"
-                            >Chamisso</persName>
-                        <persName ref="#p0194" type="bi">Goethe</persName> und <persName ref="#p0380" type="bi">Schiller</persName> achtete. (Vgl.
-                            <persName ref="#" type="bi">Michael Bienert</persName>, 2004, S. 59-60, <persName ref="#p0408" type="bi">Werner
-                            Feudel</persName>, 1988, S. 150.</note> ist so: (aergere dich nicht über diese Erläuterung) es liegt im<lb/>Thier und das
-                    Thier liegt im Menschen. Durch die Erziehung wird es am Ende<lb/>mehr überflügelt oder verdeckt als es <del rend="strikethrough"
-                            ><unclear cert="medium" extent="2c" reason="illegible">üb</unclear></del> ausgerottet wird. <space extent="1w" rend="–"/>
-                    nicht desto weniger<lb/>muß man dagegen thun was man kann: daß ist aber nicht viel. <rs ref="#p1754" type="bi">Er</rs> muß<lb/>und
-                    wird nach und nach, und so, wie er groß wird lernen, wie die Welt geht.<lb/>gegen Predichten verweise, Wortverschwendungen aller
-                    art, bin ich sehr. davon geht gar nichts<lb/>ein. Erfahrungen müsten es sein, eigene Erfahrungen eindringlicher Art. </p>
+                        resp="#henrike.bobzien">
+                        <p xml:lang="de">Der Vergleich von Kind und Tier ist doppelt seltsam, da ein Pudel erwähnt wird. Es mag die Haltung <persName
+                                ref="#p0237" type="bi">Chamisso</persName> gewesen sein, dass erst die Erziehung das Tierische in dem Menschen mindert
+                            (Siehe hierzu auch <persName ref="#p0068" type="bi">Rousseau</persName>). Vom Pudel im Brief bis hin zum schwarzen Pudel
+                            in <persName ref="#p0194" type="bi">Goethes</persName>
+                            <title ref="#w00378">Faust</title> scheint es nicht weit. Auch ist bekannt, dass <persName ref="#p0237" type="bi"
+                                >Chamisso</persName>
+                            <persName ref="#p0194" type="bi">Goethe</persName> und <persName ref="#p0380" type="bi">Schiller</persName> achtete. (Vgl.
+                                <persName ref="#" type="bi">Michael Bienert</persName>, 2004, S. 59-60, <persName ref="#p0408" type="bi">Werner
+                                Feudel</persName>, 1988, S. 150.</p>
+                        <p xml:lang="fr">La comparaison de l'enfant et de l'animal est doublement étrange puisqu'un caniche est mentionné. C'est
+                            peut-être l'attitude de <persName ref="#p0237" type="bi">Chamisso</persName> que seule l'éducation diminue l'animalité
+                            chez l'homme (voir aussi <persName ref="#p0068" type="bi"> Rousseau </persName>). Il ne semble pas loin du caniche dans la
+                            lettre au caniche noir dans <persName ref="#p0194" type="bi">Goethe</persName> chez <title ref="#w00378"> Faust </title>.
+                            On sait aussi que <persName ref="#p0237" type="bi"> Chamisso </persName> respectait <persName ref="#p0194" type="bi">
+                                Goethe </persName> et <persName ref="#p0380" type="bi"> Schiller </persName> (Cf. <persName ref="#" type="bi"> Michael
+                                Bienert </persName>, 2004, pp. 59-60, <persName ref="#p0408" type="bi"> Werner Feudel </persName>, 1988, p.150.</p>
+                        <p xml:lang="en">The comparison of child and animal is doubly strange since a poodle is mentioned. It may have been the
+                            attitude of <persName ref="#p0237" type="bi"> Chamisso </persName> that only the upbringing diminishes the animal in
+                            humans (see also <persName ref="#p0068" type="bi"> Rousseau </persName>). It doesn't seem far from the poodle in the
+                            letter to the black poodle in <persName ref="#p0194" type="bi"> Goethe's </persName>
+                            <title ref="#w00378"> Faust </title>. It is also known that <persName ref="#p0237" type="bi"> Chamisso </persName>
+                            respected <persName ref="#p0194" type="bi"> Goethe </persName> and <persName ref="#p0380" type="bi"> Schiller </persName>.
+                            (Cf. <persName ref="#" type="bi"> Michael Bienert </persName>, 2004, pp. 59-60, <persName ref="#p0408" type="bi"> Werner
+                                Feudel </persName>, 1988, p. 150.</p>
+                    </note> ist so: (aergere dich nicht über diese Erläuterung) es liegt im<lb/>Thier und das Thier liegt im Menschen. Durch die
+                    Erziehung wird es am Ende<lb/>mehr überflügelt oder verdeckt als es <del rend="strikethrough"><unclear cert="medium" extent="2c"
+                            reason="illegible">üb</unclear></del> ausgerottet wird. <space extent="1w" rend="–"/> nicht desto weniger<lb/>muß man
+                    dagegen thun was man kann: daß ist aber nicht viel. <rs ref="#p1754" type="bi">Er</rs> muß<lb/>und wird nach und nach, und so, wie
+                    er groß wird lernen, wie die Welt geht.<lb/>gegen Predichten verweise, Wortverschwendungen aller art, bin ich sehr. davon geht gar
+                    nichts<lb/>ein. Erfahrungen müsten es sein, eigene Erfahrungen eindringlicher Art. </p>
                 <pb facs="PPN739750402|PHYS_0002" n="2"/>
                 <p>weist du nicht, wie wir es leicht dahin gebracht, daß er bei<lb/><persName ref="#p" type="bi">Hermann</persName> Fall oder Stoß
                     geschriehen? <space extent="1w"/> keine Rücksicht auf dasjenige<lb/>an zu nehmen, was er unterlassen soll. wird er
@@ -364,7 +407,7 @@
                         rend="latin"><persName ref="#p3178" type="bi">Leopold</persName></hi>. laß mich zu rechter Zeit nachricht<lb/>von ihm
                     erhalten, ob und wie und wann er kommt, von meinen 3 </p>
                 <pb facs="PPN739750402|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">14</note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">14</note>
                 <p>Wochen kann ich zur Noth ein paar Tage abziehn, wie ich ihnen ein paar<lb/>Tage hinzugeben kann. (das letzte wohl ungern). — bei
                     einem Wetter wie heute,<lb/>wo man sich, wie selten im Jahr, seines Daseins freuen kann, würde eine<lb/>Wanderung nach <placeName
                         ref="#l1038" type="bi">Rügen</placeName> eine wahre Lust sein. <space extent="1w"/> im July geht von hieraus<lb/>zwei mal in
@@ -387,32 +430,31 @@
                         extent="2w" rend="–"/> Eine Untersuchung von einem in der Nähe belegenen<lb/>Torfmoor hat mir auch zu schreiben gegeben und
                     ich habe auch noch nicht<lb/>Hand angesetzt. <space extent="1w" rend="–"/>
                 </p>
-                <closer><salut>ade.</salut>
-                    <postscript>
-                        <p>Guten Tag, <rs ref="#p1754" type="bi">Camerad</rs>! wenn ich wiederkomme wollen wir uns<lb/>recht Lieb haben, und ein
-                            bischen drücken. – du sollst zu<lb/><hi rend="latin"><rs ref="#p0237" type="bi">Chamés</rs></hi>
-                            <!-- handelt es sich hier um einen Kosenamen Chamissos? --> Bett' kommen. </p>
-                        <p>Ein Trinkgelag <del rend="strikethrough">zu</del> de<del rend="strikthrough">m</del>n <del rend="strikethrough">mich</del>
-                            ein Professor mit and für mich veranstallet,<lb/>wird meinet wegen in den Botanischen Garten verlegt, und in dem<lb/><hi
-                                rend="latin">Auditorio</hi> der Botanik <del rend="erasure">abg</del> heute abend abgehalten <space extent="1w"
-                                rend="–"/> morgen soll<lb/>ich bei <hi rend="latin"><persName ref="#p3126 #p3127" type="bi">Borries</persName></hi>
-                            essen.</p>
-                    </postscript></closer>
+                <closer><salute>ade.</salute></closer>
+                <postscript>
+                    <p>Guten Tag, <rs ref="#p1754" type="bi">Camerad</rs>! wenn ich wiederkomme wollen wir uns<lb/>recht Lieb haben, und ein bischen
+                        drücken. – du sollst zu<lb/><hi rend="latin"><rs ref="#p0237" type="bi">Chamés</rs></hi>
+                        <!-- handelt es sich hier um einen Kosenamen Chamissos? --> Bett' kommen. </p>
+                    <p>Ein Trinkgelag <del rend="strikethrough">zu</del> de<del rend="strikthrough">m</del>n <del rend="strikethrough">mich</del> ein
+                        Professor mit and für mich veranstallet,<lb/>wird meinet wegen in den Botanischen Garten verlegt, und in dem<lb/><hi
+                            rend="latin">Auditorio</hi> der Botanik <del rend="erasure">abg</del> heute abend abgehalten <space extent="1w" rend="–"/>
+                        morgen soll<lb/>ich bei <hi rend="latin"><persName ref="#p3126 #p3127" type="bi">Borries</persName></hi> essen.</p>
+                </postscript>
                 <pb facs="PPN739750402|PHYS_0004" n="4"/>
-                <note hand="#pencil_2" place="margin-left-vertical">1823</note>
-                <p><address rend="align(vertical)">
+                <note hand="#pencil_2" place="margin(left)-vertical">1823</note>
+                <closer><address rend="align(vertical)">
                         <addrLine>An die</addrLine>
                         <addrLine><hi rend="latin">Frau <persName ref="#p1723" type="bi">Doctorin <choice>
                                         <abbr>v</abbr>
                                         <expan>von</expan>
                                     </choice> Chamisso</persName></hi></addrLine>
                         <addrLine><unclear extent="1w" reason="illegible"/></addrLine>
-                        <addrLine><street><hi rend="latin">Linden Strasse 30</hi></street></addrLine>
+                        <addrLine><hi rend="latin">Linden Strasse 30</hi></addrLine>
                         <space extent="2l"/>
                         <addrLine><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName></addrLine>
-                    </address></p>
-                <p><stamp rend="align(vertical-left)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-06-21">21.
-                            Juni</date></stamp><note hand="#pencil_3">1823</note></p>
+                    </address>
+                    <stamp rend="align(vertical-left)"><placeName ref="#l0248" type="bi">Greifswald</placeName><lb/><date when-iso="1823-06-21">21.
+                            Juni</date></stamp><note hand="#pencil_3">1823</note></closer>
             </div>
         </body>
     </text>
