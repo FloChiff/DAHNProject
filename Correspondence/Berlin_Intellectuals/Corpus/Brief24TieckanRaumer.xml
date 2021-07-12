@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -231,8 +238,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-17" who="#johanna.preusse">Added comment regarding "Polens Untergang". Added comment regarding the publishing of
                 Raumer's letter of resignation from the censor board.</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Minor correction of wording in a comment.</change>
@@ -251,28 +259,56 @@
         <body>
             <div type="transcription">
                 <pb facs="00000912.jpg" n="1" xml:id="Brief24TieckanRaumer_Blatt_257r"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">257</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">257</note>
                 <note resp="#johanna.preusse">
-                    <seg xml:lang="de">Zur Datierung: Die als Briefumschlag verwendete S.4 des Briefes (Blatt 258<hi rend="superscript">v</hi>) trägt,
+                    <p xml:lang="de">Zur Datierung: Die als Briefumschlag verwendete S.4 des Briefes (Blatt 258<hi rend="superscript">v</hi>) trägt,
                         abweichend zu dem auf S. 1 / Blatt 257r (wahrscheinlich Raumers Hand) und S. 3 / Blatt 258r (Tiecks Hand) angegebenen Datum,
                         dem 23. Juni 1832, einen Stempel vom 23. Januar 1832. Die Datierung auf Januar ist mit Blick auf den Inhalt des Briefes
-                        wahrscheinlich die richtige.</seg>
+                        wahrscheinlich die richtige.</p>
+                    <p xml:lang="en">Dating: The page 4 of the letter (sheet 258 <hi rend="superscript">v</hi>) used as an envelope bears, unlike the
+                        one on page 1 / sheet 257r (probably Raumer's hand) and page 3 / Blatt 258r (Tiecks hand) given the date, June 23, 1832, a
+                        stamp of January 23, 1832. The date January is probably correct in view of the contents of the letter.</p>
+                    <p xml:lang="fr">Datation : La page 4 de la lettre (feuille 258 <hi rend="superscript">v</hi>) utilisée comme enveloppe porte,
+                        contrairement à celle de la page 1 / feuille 257r (probablement la main de Raumer) et de la page 3 / Blatt 258r (main de
+                        Tieck) étant donné la date, 23 juin 1832, un cachet du 23 janvier 1832. La date janvier est probablement correcte au vu du
+                        contenu de la lettre.</p>
                 </note>
-                <note hand="#pencil_two" place="inline">Tieck an Raumer 23. Juni</note>
-                <opener>
+                <opener><dateline><note hand="#pencil_two">Tieck an Raumer <date when-iso="1832-06-23">23. Juni</date></note></dateline>
                     <salute rend="align(center)">Geliebter Freund,</salute>
                 </opener>
-                <p>Ich sende Ihnen auf Verlangen die kleine Vorrede<note resp="#johanna.preusse">Wahrscheinlich handelt es sich hierbei um den kurzen
-                        Zusatz im Vorwort zu Raumers Aufsatz „Polens Untergang“ (<date when-iso="1832">1832</date>). Der Text hatte für öffentliches
-                        Aufsehen gesorgt und Raumer Schwierigkeiten mit der preußischen Regierung bereitet. Er erschien zunächst im <rs ref="#w04644"
-                            type="bi">Historischen Taschenbuch</rs> und anschließend in einer <rs ref="#w04461" type="bi">selbstständigen Ausgabe</rs>
-                        (erweitert um ein Vorwort, datiert auf den <date when-iso="1831-10-24">24. Oktober 1831</date>). In der <rs ref="#w01166"
-                            type="bi">zweiten Auflage</rs> dieser Ausgabe setzte Raumer dem Vorwort noch einen auf den <date when-iso="1832-01-29">29.
-                            Januar 1832</date> datierten Satz hinzu, in dem er die fast unveränderte Gestalt der zweiten Auflage damit begründet, dass
-                        ihm (von staatlicher Seite) noch „keine neuen Quellen eröffnet und keine Berichtigungen zu Theil wurden“ (S. VI). <lb/>Vgl. zu
-                        „Polens Untergang“ auch den <ref target="Brief26TieckanRaumer.xml">Brief vom 7. oder 5. August 1832</ref> (S.3) sowie den <ref
-                            target="Brief03DorotheaTieckanUechtritz.xml">Brief von Dorothea Tieck an Uechtritz vom 31. Januar 1832</ref> (S. 6), hrsg.
-                        v. Sophia Zeil, in: Briefe und Texte aus dem intellektuellen Berlin um 1800.</note>
+                <p>Ich sende Ihnen auf Verlangen die kleine Vorrede<note resp="#johanna.preusse"><p xml:lang="de">Wahrscheinlich handelt es sich
+                            hierbei um den kurzen Zusatz im Vorwort zu Raumers Aufsatz „Polens Untergang“ (<date when-iso="1832">1832</date>). Der
+                            Text hatte für öffentliches Aufsehen gesorgt und Raumer Schwierigkeiten mit der preußischen Regierung bereitet. Er
+                            erschien zunächst im <rs ref="#w04644" type="bi">Historischen Taschenbuch</rs> und anschließend in einer <rs ref="#w04461"
+                                type="bi">selbstständigen Ausgabe</rs> (erweitert um ein Vorwort, datiert auf den <date when-iso="1831-10-24">24.
+                                Oktober 1831</date>). In der <rs ref="#w01166" type="bi">zweiten Auflage</rs> dieser Ausgabe setzte Raumer dem Vorwort
+                            noch einen auf den <date when-iso="1832-01-29">29. Januar 1832</date> datierten Satz hinzu, in dem er die fast
+                            unveränderte Gestalt der zweiten Auflage damit begründet, dass ihm (von staatlicher Seite) noch „keine neuen Quellen
+                            eröffnet und keine Berichtigungen zu Theil wurden“ (S. VI). <lb/>Vgl. zu „Polens Untergang“ auch den <ref
+                                target="Brief26TieckanRaumer.xml">Brief vom 7. oder 5. August 1832</ref> (S.3) sowie den <ref
+                                target="Brief03DorotheaTieckanUechtritz.xml">Brief von Dorothea Tieck an Uechtritz vom 31. Januar 1832</ref> (S. 6),
+                            hrsg. v. Sophia Zeil, in: Briefe und Texte aus dem intellektuellen Berlin um 1800.</p>
+                        <p xml:lang="en">This is probably the short addition in the preface to Raumer's essay “Poland's Fall” (<date when-iso="1832">
+                                1832</date>). The text caused a public sensation and caused problems for Raumer with the Prussian government. It first
+                            appeared in the <rs ref="#w04644" type="bi">historical paperback</rs> and then in a <rs ref="#w04461" type="bi">
+                                independent edition</rs> (extended a foreword, dated <date when-iso="1831-10-24">October 24, 1831</date>). In the <rs
+                                ref="#w01166" type="bi">second edition</rs> of this issue, Raumer added the preface to the <date when-iso="1832-01-29"
+                                > 29th. January 1832 </date> in which he justifies the almost unchanged form of the second edition with the fact that
+                            (from the state side) "no new sources have been opened and no corrections have been made" (p. VI). <lb/> Cf. on "Poland's
+                            downfall" also the <ref target="Brief26TieckanRaumer.xml"> letter of 7 or 5 August 1832 </ref> (p.3) and the <ref
+                                target="Brief03DorotheaTieckanUechtritz.xml">letter from Dorothea Tieck to Uechtritz from January 31, 1832</ref> (p.
+                            6), ed. v. Sophia Zeil, in: Letters and texts from intellectual Berlin around 1800.</p>
+                        <p xml:lang="fr">C'est probablement le court ajout dans l'avant-propos de l'essai de Raumer "La chute de la Pologne" (<date
+                                when-iso="1832">1832</date>). Le texte a provoqué un émoi public et a causé des problèmes à Raumer avec le
+                            gouvernement prussien. Il est d'abord paru dans le <rs ref="#w04644" type="bi">livre de poche historique</rs> puis dans
+                            une <rs ref="#w04461" type="bi">édition indépendante</rs> (étendu un avant-propos, daté du <date when-iso="1831-10-24">24
+                                octobre 1831</date>). Dans la <rs ref="#w01166" type="bi">deuxième édition</rs> de ce numéro, Raumer a ajouté la
+                            préface à la <date when-iso="1832-01-29">29 Janvier 1832</date> dans lequel il justifie la forme presque inchangée de la
+                            deuxième édition par le fait que (du côté de l'État) "aucune nouvelle source n'a été ouverte et aucune correction n'a été
+                            apportée" (p. VI). <lb/> Cf. sur "La chute de la Pologne" également la <ref target="Brief26TieckanRaumer.xml"> lettre du 7
+                                ou 5 août 1832</ref> (p.3) et la <ref target="Brief03DorotheaTieckanUechtritz.xml">lettre de Dorothea Tieck à
+                                Uechtritz du 31 janvier 1832</ref> (p. 6), éd. v. Sophia Zeil, in : Lettres et textes du Berlin intellectuel vers
+                            1800.</p></note>
                     <lb/> sogleich zurück, welche ich sehr passend finde,ob sie gleich<lb/> die Unvernünftigen von jenseit auch dem Verständniß
                         <unclear cert="high" extent="1w" reason="illegible">um</unclear><lb/> keinen Zoll näher bringen wird. Alles, darauf kom̄e
                     ich<lb/> immer zurück, ist epidemisch. Zuweilen selbst die Vernunft.<lb/> Gegen dicken Nebel und daraus erzeugten Schnupfen<lb/>
@@ -348,7 +384,7 @@
                         <expan>und</expan>
                     </choice> so sieht es, (Ihre Freunde abgerechnet) jenen wie<lb/>
                     <pb facs="00000914.jpg" n="3" xml:id="Brief24TieckanRaumer_Blatt_258r"/>
-                    <note hand="#pencil_one" place="margin-right" type="foliation">258</note><lb/> eine kecke Herausfoderung der <unclear cert="high"
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">258</note><lb/> eine kecke Herausfoderung der <unclear cert="high"
                         extent="1w" reason="illegible">Regirung</unclear> aus. Ich bitte, erhalten Sie<lb/> sich den frischen Muth, die schnelle
                     Antwortseligkeit, die ich Ihnen<lb/> immer beneidet habe: denn, glaubt man, Sie sind eingeschüchtert,<lb/> oder träge, oder
                     schweigsam aus tiefster Kränkung: so ist<lb/> Ihre Sache verlohren. Und darum würde ich sie auch unbedingt<lb/> verliehren. Ein
@@ -396,28 +432,28 @@
                     <dateline>
                         <hi rend="latin"><rs ref="#l0003" type="bi">Dr</rs></hi>, den <date when-iso="1832-06-23">23<hi rend="superscript">ten</hi>
                             <hi rend="latin">Juni</hi>, 32</date>. </dateline>
-                    <signed>Ihr <hi rend="latin">L. Tieck</hi></signed>. </closer>
-                <pb facs="00000915.jpg" n="4" xml:id="Brief24TieckanRaumer_Blatt_258v"/>
-                <stamp>Stempel: "26 N <unclear cert="medium" extent="1c" reason="illegible">1</unclear>
-                    <unclear cert="medium" extent="1c" reason="illegible">1</unclear>"</stamp>
-                <stamp>Stempel: "DRESDEN <date when-iso="1832-01-23">23 Jan 32</date>"</stamp>
-                <address rend="vertical">
-                    <addrLine rend="align(center)">Herrn Regirungs=Rath <gap extent="1-2c" reason="illegible"/></addrLine>
-                    <addrLine rend="align(center)"><choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> Professor <persName ref="#p0187" type="bi"><choice>
-                                <abbr>Fr.</abbr>
-                                <expan>Friedrich</expan>
-                            </choice>
-                            <hi rend="latin underline"><choice>
-                                    <abbr>v.</abbr>
-                                    <expan>von</expan>
-                                </choice> Raumer</hi></persName></addrLine>
-                    <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
-                    <milestone rend="horizontal-rule align(center)" unit="none"/>
-                    <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>.</addrLine>
-                </address>
+                    <signed>Ihr <hi rend="latin">L. Tieck</hi>.</signed>
+                    <pb facs="00000915.jpg" n="4" xml:id="Brief24TieckanRaumer_Blatt_258v"/>
+                    <stamp>Stempel: "26 N <unclear cert="medium" extent="1c" reason="illegible">1</unclear>
+                        <unclear cert="medium" extent="1c" reason="illegible">1</unclear>"</stamp>
+                    <stamp>Stempel: "DRESDEN <date when-iso="1832-01-23">23 Jan 32</date>"</stamp>
+                    <address rend="vertical">
+                        <addrLine rend="align(center)">Herrn Regirungs=Rath <gap extent="1-2c" reason="illegible"/></addrLine>
+                        <addrLine rend="align(center)"><choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> Professor <persName ref="#p0187" type="bi"><choice>
+                                    <abbr>Fr.</abbr>
+                                    <expan>Friedrich</expan>
+                                </choice>
+                                <hi rend="latin underline"><choice>
+                                        <abbr>v.</abbr>
+                                        <expan>von</expan>
+                                    </choice> Raumer</hi></persName></addrLine>
+                        <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
+                        <milestone rend="horizontal-rule align(center)" unit="none"/>
+                        <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>.</addrLine>
+                    </address></closer>
                 <note hand="#red_hand"><unclear cert="low" extent="3-4c" reason="illegible">32 C4</unclear></note>
             </div>
         </body>

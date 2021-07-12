@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -224,8 +233,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-09-06" who="#johanna.preusse">Added link for Ludwig I. Added note regarding the letter by Schenk.</change>
             <change when-iso="2015-08-05" who="#johanna.preusse">Added some more english and french translations of metadata. Added p.3 and 4. Changed
                 handNote "dark_red_hand" to "brown_hand".</change>
@@ -241,17 +251,29 @@
         <body>
             <div type="transcription">
                 <pb facs="00000888.jpg" n="1"/>
-                <note hand="#pencil" place="align-right" type="foliation">245</note>
+                <note hand="#pencil" place="align(right)" type="foliation">245</note>
                 <note hand="#red_hand" place="inline center">Tieck an Raumer</note>
-                <note hand="#brown_hand" place="inline align-right"><hi rend="underline"><date when-iso="1826-07-31">31 Juli 26</date></hi></note>
-                <p>Mein geliebter Freund,</p>
+                <opener><dateline rend="align(right)"><note hand="#brown_hand"><hi rend="underline"><date when-iso="1826-07-31">31 Juli
+                            26</date></hi></note></dateline>
+                    <salute>Mein geliebter Freund,</salute></opener>
                 <p>Nur etwas Eiliges auf Ihren eiligen Brief. —<lb/> Als ich hier ankam, fand ich hier einen offiziellen<lb/> Brief von <persName
                         ref="#p0855" type="bi">Schenk</persName>, der die Berufung im Namen des <rs ref="#p2445" type="bi">Königes</rs><lb/>
-                        enthielt,<note resp="#johanna.preusse">Der Brief <persName ref="#p0855" type="bi">Eduard von Schenks</persName> vom 7. Juli
-                        1826, in dem Tieck anlässlich der Verlegung der Ludwig-Maximilians-Universität von Landshut nach München eine Professur
-                        angetragen wird, ist gedruckt bei <title ref="#w05559">Holtei: Briefe an Tieck III</title>, S. 216ff. <lb/> Vgl. zum Kontext
-                        der Berufung und Tiecks Ablehnung des Postens <rs ref="#w05781" type="bi">Zeydel und Matenko 1930</rs>, S. 25ff. sowie den
-                        Brief von Tieck an Raumer vom <ref target="Brief19TieckanRaumer.xml">14. August 1826</ref> (S. 1).</note>
+                        enthielt,<note resp="#johanna.preusse"><p xml:lang="de">Der Brief <persName ref="#p0855" type="bi">Eduard von
+                                Schenks</persName> vom 7. Juli 1826, in dem Tieck anlässlich der Verlegung der Ludwig-Maximilians-Universität von
+                            Landshut nach München eine Professur angetragen wird, ist gedruckt bei <title ref="#w05559">Holtei: Briefe an Tieck
+                                III</title>, S. 216ff. <lb/> Vgl. zum Kontext der Berufung und Tiecks Ablehnung des Postens <rs ref="#w05781"
+                                type="bi">Zeydel und Matenko 1930</rs>, S. 25ff. sowie den Brief von Tieck an Raumer vom <ref
+                                target="Brief19TieckanRaumer.xml">14. August 1826</ref> (S. 1).</p>
+                        <p xml:lang="en">The letter <persName ref="#p0855" type="bi">Eduard von Schenks</persName> dated July 7, 1826, in which Tieck
+                            was offered a professorship on the occasion of the relocation of the Ludwig Maximilians University from Landshut to
+                            Munich, is printed by <title ref="#w05559">Holtei: Letters to Tieck III</title>, p. 216ff. <lb/> See the context of the
+                            appeal and Tieck's rejection of the post <rs ref="#w05781" type="bi">Zeydel and Matenko 1930</rs>, p. 25ff. as well as the
+                            letter from Tieck to Raumer dated <ref target="Brief19TieckanRaumer.xml">14. August 1826 </ref> (p. 1).</p>
+                        <p xml:lang="fr">La lettre <persName ref="#p0855" type="bi">Eduard von Schenks</persName> datée du 7 juillet 1826, dans
+                            laquelle Tieck se voit offrir une chaire à l'occasion du déménagement de l'université Ludwig Maximilians de Landshut à
+                            Munich, est imprimé par <title ref="#w05559">Holtei: Letters to Tieck III</title>, p. 216ff. <lb/> Voir le contexte du
+                            recours et le rejet du poste par Tieck <rs ref="#w05781" type="bi">Zeydel et Matenko 1930</rs>, p. 25ff. ainsi que la
+                            lettre de Tieck à Raumer datée du <ref target="Brief19TieckanRaumer.xml">14. Août 1826</ref> (p. 1).</p></note>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -304,24 +326,26 @@
                 <p>den 31ten Juli.</p>
                 <p>1826.</p>
                 <pb facs="00000890.jpg" n="3"/>
-                <note hand="#pencil" place="align-right" type="foliation">246</note>
+                <note hand="#pencil" place="align(right)" type="foliation">246</note>
                 <pb facs="00000891.jpg" n="4"/>
-                <note resp="#johanna.preusse" subtype="1">Auf dem Blatt finden sich diverse Postvermerke.</note>
-                <stamp rend="vertical align(center)">Stempel: "<supplied reason="incomplete">DRES</supplied>DEN 31. Juli 26"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)"><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgebohren </addrLine>
-                    <addrLine rend="vertical align(center)">des Herrn Regierungsrathes und </addrLine>
-                    <addrLine rend="vertical align(center)">Professors <hi rend="latin">von <hi rend="underline">Raumer</hi></hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
-                <hi rend="latin underline">cito!</hi>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Auf dem Blatt finden sich diverse Postvermerke.</p>
+                    <p xml:lang="en">There are various postage notes on the sheet.</p>
+                    <p xml:lang="fr">Il y a divers billets d'affranchissement sur la feuille.</p></note>
+                <closer><stamp rend="vertical align(center)">Stempel: "<supplied reason="incomplete">DRES</supplied>DEN 31. Juli 26"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)"><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgebohren </addrLine>
+                        <addrLine rend="vertical align(center)">des Herrn Regierungsrathes und </addrLine>
+                        <addrLine rend="vertical align(center)">Professors <hi rend="latin">von <hi rend="underline">Raumer</hi></hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address>
+                    <hi rend="latin underline">cito!</hi></closer>
             </div>
         </body>
     </text>

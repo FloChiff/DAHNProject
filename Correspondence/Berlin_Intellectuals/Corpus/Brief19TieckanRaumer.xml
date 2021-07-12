@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -219,8 +226,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-09-06" who="#johanna.preusse">Added a comment regarding Tieck's stays in Munich.</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Added a comment; minor technical corrections.</change>
             <change when-iso="2015-08-06" who="#johanna.preusse">Changed form of values for @extent.</change>
@@ -238,16 +246,22 @@
         <body>
             <div type="transcription">
                 <pb facs="00000892.jpg" n="1"/>
-                <note hand="#red_hand" place="inline center">Tieck an Raumer 14 Aug 26</note>
-                <note hand="#pencil" place="align-right" type="foliation">247</note>
-                <opener><salute><del hand="#red_hand">Mein geliebter Freund,</del></salute></opener>
+                <note hand="#pencil" place="align(right)" type="foliation">247</note>
+                <opener><dateline rend="align(center)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1826-08-14">14 Aug
+                        26</date></note></dateline>
+                    <salute><del hand="#red_hand">Mein geliebter Freund,</del></salute></opener>
                 <p> Ich hoffe sehr, daß wir uns bald sehn, um recht viel sprechen <lb/> zu können, indessen will ich Ihnen noch einmal auf Ihren
                     lieben <lb/> Brief antworten. Glauben Sie mir nur, Theurer, daß ich viel <lb/> lieber hier bleibe, als in meinem Alter eine ganz
                     neue Situation <lb/> in einem so fernen und rauhen Lande suche, eine Beschäftigung treibe, <lb/> die mir so ungewohnt ist, und
                     welche Gesundheit und Ordnung er<lb break="no"/>fordert, welche alle beide ich nicht eigentlich versprechen kann. <lb/> Geschieht
-                    also hier nur das Billige, so bleibe ich hier<note resp="#johanna.preusse">Tieck hatte die Aussicht auf eine Professur in München,
-                        wollte jedoch - unter verbesserten Bedingungen - lieber seine Stelle am Dresdener Theater behalten. Vgl. den <ref
-                            target="Brief18TieckanRaumer.xml">Brief vom 31. Juli 1826</ref>.</note>: <choice>
+                    also hier nur das Billige, so bleibe ich hier<note resp="#johanna.preusse"><p xml:lang="de">Tieck hatte die Aussicht auf eine
+                            Professur in München, wollte jedoch - unter verbesserten Bedingungen - lieber seine Stelle am Dresdener Theater behalten.
+                            Vgl. den <ref target="Brief18TieckanRaumer.xml">Brief vom 31. Juli 1826</ref>.</p>
+                        <p xml:lang="en">Tieck had the prospect of a professorship in Munich, but wanted - under better conditions - to keep his
+                            position at the Dresden theater. See the <ref target="Brief18TieckanRaumer.xml">letter of July 31, 1826</ref>.</p>
+                        <p xml:lang="fr">Tieck avait la perspective d'un poste de professeur à Munich, mais voulait - dans de meilleures conditions -
+                            conserver son poste au théâtre de Dresde. Voir la <ref target="Brief18TieckanRaumer.xml">lettre du 31 juillet 1826
+                            </ref>.</p></note>: <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> geschieht <lb/> es nicht — so bin ich fast entschlossen ( — doch dies bleibt na<lb break="no"/>türlich unter uns) das
@@ -257,10 +271,16 @@
                     </choice>
                     <lb/> hier wieder, wie vorher zu leben, da diese Geschichte, aus der <lb/> nie viel wird, mir die Zeit zu meinen Arbeiten raubt.
                     <lb/> Glauben Sie übrigens nicht, daß <placeName ref="#l0111" type="bi">München</placeName> ein wohlfeiler Ort <lb/> ist; ich habe
-                    zu lange dort gelebt, um nicht vom Gegentheil <lb/> überzeugt zu sein.<note resp="#johanna.preusse">Tieck lebte einige Zeit
-                        notgedrungen in <placeName ref="#l0111" type="bi">München</placeName>, da er durch Krankheit an der Weiterreise gehindert
-                        wurde: das erste Mal 1804 bis 1805, das zweite Mal 1808 bis 1810. (Vgl. <rs ref="#w0578" type="bi">Zeydel und Matenko
-                            1930</rs>, S. 25f.)</note> Holtz namentlich ist theuer! Die Wohnungen <lb/> nicht wohlfeil, <choice>
+                    zu lange dort gelebt, um nicht vom Gegentheil <lb/> überzeugt zu sein.<note resp="#johanna.preusse"><p xml:lang="de">Tieck lebte
+                            einige Zeit notgedrungen in <placeName ref="#l0111" type="bi">München</placeName>, da er durch Krankheit an der
+                            Weiterreise gehindert wurde: das erste Mal 1804 bis 1805, das zweite Mal 1808 bis 1810. (Vgl. <rs ref="#w0578" type="bi"
+                                >Zeydel und Matenko 1930</rs>, S. 25f.)</p>
+                        <p xml:lang="en">Tieck lived for some time in <placeName ref="#l0111" type="bi">Munich</placeName>, because illness prevented
+                            him from continuing his journey: the first time from 1804 to 1805, the second time from 1808 to 1810. (Cf. <rs
+                                ref="#w0578" type="bi">Zeydel and Matenko 1930</rs>, p. 25f.)</p>
+                        <p xml:lang="fr">Tieck a vécu quelque temps à <placeName ref="#l0111" type="bi">Munich</placeName>, car la maladie l'a empêché
+                            de continuer son voyage : la première fois de 1804 à 1805, la deuxième fois de 1808 à 1810 (Cf. <rs ref="#w0578" type="bi"
+                                >Zeydel et Matenko 1930 </rs>, p. 25f.)</p></note> Holtz namentlich ist theuer! Die Wohnungen <lb/> nicht wohlfeil, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> sehr häufig schlecht. Wenigstens gegen <placeName ref="#l0003" type="bi">Dresden</placeName>
@@ -296,35 +316,37 @@
                         rend="underline">bald</hi> , <lb/> heiter an. — d<gap extent="2c" reason="illegible"/>
                     <hi rend="latin"><gap extent="1c" reason="illegible"/><unclear cert="high" extent="5c" reason="illegible">ilder</unclear></hi>
                     habe ich vorgelesen: <hi rend="latin"><title ref="#w00350">Egmont</title> , <title ref="#w00351">Wie es euch gefällt</title></hi>
-                    , — und noch einiges; ich weiß nicht mehr was. <hi rend="latin">Alexander</hi> . <lb/> Ihr treuer Freund, </p>
-                <p>
-                    <hi rend="latin"><persName ref="#p0133" type="bi">L. Tieck.</persName></hi>
-                </p>
-                <p>
-                    <placeName ref="#l0003" type="bi">Dresden</placeName>
-                </p>
-                <p>den 14ten August.</p>
-                <p>
-                    <date when-iso="1826-08-14">1826</date>. </p>
-                <p>
-                    <hi rend="latin"><persName ref="#p0713" type="bi">Loebel</persName></hi> ist eben angekom̄en. <anchor xml:id="end"/>
-                </p>
+                    , — und noch einiges; ich weiß nicht mehr was. <hi rend="latin">Alexander</hi> . </p>
+                <closer><salute>Ihr treuer Freund, </salute>
+                    <signed>
+                        <hi rend="latin"><persName ref="#p0133" type="bi">L. Tieck.</persName></hi>
+                    </signed>
+                    <dateline>
+                        <placeName ref="#l0003" type="bi">Dresden</placeName> den <date when-iso="1826-08-14">14ten August. 1826</date>.
+                    </dateline></closer>
+                <postscript>
+                    <p>
+                        <hi rend="latin"><persName ref="#p0713" type="bi">Loebel</persName></hi> ist eben angekom̄en. </p>
+                </postscript>
+                <anchor xml:id="end"/>
                 <pb facs="00000894.jpg" n="3"/>
-                <note hand="#pencil" place="align-right" type="foliation">248</note>
+                <note hand="#pencil" place="align(right)" type="foliation">248</note>
                 <pb facs="00000895.jpg" n="4"/>
-                <note resp="#johanna.preusse" subtype="1">Auf dem Blatt finden sich diverse Postvermerke.</note>
-                <stamp rend="vertical align(center)">Stempel: "<supplied reason="incomplete">DR</supplied>ESDE<supplied reason="incomplete"
-                        >N</supplied>
-                    <gap extent="6-7c" reason="incomplete"/> 26"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)">Des Herrn </addrLine>
-                    <addrLine rend="vertical align(center)">Regierungs=Rathes und Professors </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgebohren </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Auf dem Blatt finden sich diverse Postvermerke.</p><p xml:lang="en">There
+                        are various postage notes on the sheet.</p><p xml:lang="fr">Il y a divers billets d'affranchissement sur la
+                    feuille.</p></note>
+                <closer><stamp rend="vertical align(center)">Stempel: "<supplied reason="incomplete">DR</supplied>ESDE<supplied reason="incomplete"
+                            >N</supplied>
+                        <gap extent="6-7c" reason="incomplete"/> 26"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)">Des Herrn </addrLine>
+                        <addrLine rend="vertical align(center)">Regierungs=Rathes und Professors </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgebohren </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

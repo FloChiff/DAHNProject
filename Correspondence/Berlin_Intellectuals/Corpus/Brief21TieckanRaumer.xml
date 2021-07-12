@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -230,8 +237,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Minor correction ("Verstockt"). Changed respStmt.</change>
             <change when-iso="2015-08-05" who="#johanna.preusse">Added some more english and french translations of metadata. Added information about
                 Raumer's edition of the letter.</change>
@@ -249,9 +257,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000900.jpg" n="1"/>
-                <note hand="#pencil" place="align-right" type="foliation">251</note>
-                <note hand="#red_hand" place="inline center">Tieck an Raumer <date when-iso="1828-10-06">6 Okt. 28</date></note>
-                <p>Geliebter Freund,</p>
+                <note hand="#pencil" place="align(right)" type="foliation">251</note>
+                <opener><dateline rend="align(center)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1828-10-06">6 Okt.
+                        28</date></note></dateline>
+                    <salute>Geliebter Freund,</salute></opener>
                 <p>So waren wir denn nun recht lange ge<lb break="no"/>trennt, auch war ich ziemlich weit von Ihnen ent<lb break="no"/>fernt. Heut
                     wird Ihr Bruder <persName ref="#p0859" type="bi">Carl</persName> hier ankom̄en, und<lb/> ich freue mich sehr darauf, ihn nach so
                     manchem Jahre<lb/> wieder zu sehn. Ich war zwei Tage in <placeName ref="#l0269" type="bi">Erlangen</placeName>,<lb/> und habe mich
@@ -319,25 +328,46 @@
                         ref="#p0194" type="bi"><hi rend="latin">Göthe</hi></persName> ein<lb break="no"/>geladen. In <placeName ref="#l0004" type="bi"
                             ><hi rend="latin">Leipzig</hi></placeName> werden mich Geschäfte noch<lb/> einige Tage aufhalten. Könnte ich Sie noch
                     sehn,<lb/> so wäre dadurch dieser genußreiche, fast wunderbare<lb/> Som̄er auf die schönste Weise beschlossen.<pb
-                        facs="00000902.jpg" n="3"/><note hand="#pencil" place="align-right" type="foliation">252</note> Den <hi rend="latin">Alten vom
-                        Berge</hi> werden Sie nun schon,<lb/> so wie er denn nur fertig gemacht ist, gelesen haben.<lb/> Der Ernst dieser Geschichte
-                    wird ihm nicht so viel Freude<lb/> schaffen, als sich der Gelehrte erworben hat. Haben<lb/> Sie schon den <title ref="#w00356"
-                        >Prolog, eine kleine Novelle, zum<lb/> Dichterleben</title> gelesen? 5 Bde meiner Schriften<lb/> sind ja nun auch heraus: Die
-                    ungeschickten Zei<lb break="no"/>len, die vor dem Ersten <choice>
+                        facs="00000902.jpg" n="3"/><note hand="#pencil" place="align(right)" type="foliation">252</note> Den <hi rend="latin">Alten
+                        vom Berge</hi> werden Sie nun schon,<lb/> so wie er denn nur fertig gemacht ist, gelesen haben.<lb/> Der Ernst dieser
+                    Geschichte wird ihm nicht so viel Freude<lb/> schaffen, als sich der Gelehrte erworben hat. Haben<lb/> Sie schon den <title
+                        ref="#w00356">Prolog, eine kleine Novelle, zum<lb/> Dichterleben</title> gelesen? 5 Bde meiner Schriften<lb/> sind ja nun auch
+                    heraus: Die ungeschickten Zei<lb break="no"/>len, die vor dem Ersten <choice>
                         <abbr>Bde</abbr>
                         <expan>Bande</expan>
-                    </choice> an Sie gerichtet sind<note resp="#johanna.preusse">Die entsprechende Widmung im Band 1 von Tiecks bei Reimer
-                        erschienenen Schriften lautet: "Dem Regierungsrathe und Professor Friedrich v. Raumer gewidmet. Geliebter Freund, In meiner
-                        Sammlung der Schauspiele des Lope finden sich einige Bände, in denen er jedes einzelne Stück einem Freunde oder Beschützer
-                        widmet. Hätte er diese Gewohnheit immer befolgt, so konnte seine Schauspielsammlung dreihundert Freunde namhaft machen. Diese
-                        Art und Weise hat mir so wohl gefallen, daß ich als Nachahmer jeden Band meiner Schriften einem Freunde oder Jemand, mit dem
-                        ich viel gelebt, der mehr oder minder Einfluß auf mich ausgeübt hat, zuschreiben will. Da fällt natürlich Ihr Name mir mit den
-                        ersten ein. Ihre treue Freundschaft, Ihr Wohlwollen, alles, was Sie mir mitgetheilt haben, zwingt mich zur Dankbarkeit. Ihnen,
-                        dem das mannichfaltige Bild der Geschichte sich so klar entwickelt hat, der Scherz und Ernst so gern verbindet, dem das
-                        Mittelalter und dessen poetische Töne nicht fremd sind, gefällt auch, wie ich weiß, diese bunte Dichtung des Octavian. Möge
-                        Ihnen dieses lebensfrohe Gemälde Freude und Heiterkeit gewähren, und Sie diese wenigen Worte mit Freundlichkeit aufnehmen, die
-                        nur an unsre vieljährige Freundschaft erinnern sollen. L. Tieck."</note>,<lb/> müssen Sie, Geliebter, ganz mit der Nachsicht
-                    eines<lb/> Freundes aufnehmen. Vor meiner Abreise war<lb/> ich sehr fleissig, den̄ die 5 nächsten <choice>
+                    </choice> an Sie gerichtet sind<note resp="#johanna.preusse"><p xml:lang="de">Die entsprechende Widmung im Band 1 von Tiecks bei
+                            Reimer erschienenen Schriften lautet: "Dem Regierungsrathe und Professor Friedrich v. Raumer gewidmet. Geliebter Freund,
+                            In meiner Sammlung der Schauspiele des Lope finden sich einige Bände, in denen er jedes einzelne Stück einem Freunde oder
+                            Beschützer widmet. Hätte er diese Gewohnheit immer befolgt, so konnte seine Schauspielsammlung dreihundert Freunde namhaft
+                            machen. Diese Art und Weise hat mir so wohl gefallen, daß ich als Nachahmer jeden Band meiner Schriften einem Freunde oder
+                            Jemand, mit dem ich viel gelebt, der mehr oder minder Einfluß auf mich ausgeübt hat, zuschreiben will. Da fällt natürlich
+                            Ihr Name mir mit den ersten ein. Ihre treue Freundschaft, Ihr Wohlwollen, alles, was Sie mir mitgetheilt haben, zwingt
+                            mich zur Dankbarkeit. Ihnen, dem das mannichfaltige Bild der Geschichte sich so klar entwickelt hat, der Scherz und Ernst
+                            so gern verbindet, dem das Mittelalter und dessen poetische Töne nicht fremd sind, gefällt auch, wie ich weiß, diese bunte
+                            Dichtung des Octavian. Möge Ihnen dieses lebensfrohe Gemälde Freude und Heiterkeit gewähren, und Sie diese wenigen Worte
+                            mit Freundlichkeit aufnehmen, die nur an unsre vieljährige Freundschaft erinnern sollen. L. Tieck."</p>
+                        <p xml:lang="en">The corresponding dedication in volume 1 of Tieck's writings published by Reimer reads: "Dedicated to the
+                            government councilor and Professor Friedrich v. Raumer. Beloved friend, In my collection of Lope's plays there are several
+                            volumes in which each individual piece is a friend or protector If he had always followed this habit, his collection of
+                            drama would have made three hundred friends known. I liked this manner so much that, as an imitator, I would like to copy
+                            every volume of my writings to a friend or to someone with whom I have lived a lot, who more or more Your name naturally
+                            comes to mind with the first. Your loyal friendship, your benevolence, everything that you have communicated to me, compel
+                            me to be grateful to you, to whom the varied picture of history emerges has developed so clearly, who likes to combine
+                            joke and seriousness, to whom the Middle Ages and its poetic tones are not alien, also likes as I know, this colorful seal
+                            by Octavian. May this vivacious painting bring you joy and serenity, and you receive these few words with kindness, which
+                            are only intended to remind us of our long-standing friendship. L. Tieck. "</p>
+                        <p xml:lang="fr">La dédicace correspondante dans le volume 1 des écrits de Tieck publiés par Reimer se lit comme suit : "Dédié
+                            au conseiller du gouvernement et au professeur Friedrich v. Raumer. Ami bien-aimé, Dans ma collection de pièces de Lope,
+                            il y a plusieurs volumes dans lesquels chaque pièce est un ami ou un protecteur S'il avait toujours suivi cette habitude,
+                            son recueil de pièces de théâtre aurait fait connaître trois cents amis. J'aimais tellement cette manière que, en tant
+                            qu'imitateur, je voudrais copier chaque volume de mes écrits à un ami ou à quelqu'un avec qui J'ai beaucoup vécu, qui plus
+                            ou plus Ton nom me vient naturellement à l'esprit avec le premier Ton amitié loyale, ta bienveillance, tout ce que tu m'as
+                            communiqué, m'obligent à te remercier, à qui le tableau varié de l'histoire émerge s'est développé si clairement, qui aime
+                            allier plaisanterie et sérieux, à qui le Moyen Âge et ses tonalités poétiques ne sont pas étrangers, aime aussi comme je
+                            le sais, ce sceau coloré par Octavian. Que cette peinture vivace vous apporte joie et sérénité, et vous recevez ces
+                            quelques mots avec bienveillance, qui ne sont destinés qu'à nous rappeler notre amitié de longue date. L. Tieck."</p>
+                    </note>,<lb/> müssen Sie, Geliebter, ganz mit der Nachsicht eines<lb/> Freundes aufnehmen. Vor meiner Abreise war<lb/> ich sehr
+                    fleissig, den̄ die 5 nächsten <choice>
                         <abbr>Bde</abbr>
                         <expan>Bände</expan>
                     </choice> sind schon<lb/> von mir alle durchgesehn, <choice>
@@ -408,14 +438,14 @@
                         <persName ref="#p0146" type="bi"><hi rend="latin">Sol<lb break="no"/>ger</hi></persName> einmal in der Zukunft stehn wird,
                     wen̄ die<lb/>
                     <persName ref="#p0622" type="bi">Hegelschen</persName> Sofistereien schon vergessen sind. —<lb/> Ich umarme Sie, Geliebter,
-                    grüssen Sie die<lb/> Ihrigen <choice>
-                        <abbr>u</abbr>
-                        <expan>und</expan>
-                    </choice> recht herzlich unsern <persName ref="#p0713" type="bi"><hi rend="latin">Löbell</hi></persName>.</p>
-                <p><hi rend="latin">Tieck</hi>.</p>
-                <p><placeName ref="#l0100" type="bi"><hi rend="latin">Jena</hi></placeName></p>
-                <p>den <date when-iso="1828-10-06">6t Octbr.</date></p>
-                <p>1828.</p>
+                    grüssen Sie die</p>
+                <closer><salute>Ihrigen <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> recht herzlich unsern <persName ref="#p0713" type="bi"><hi rend="latin">Löbell</hi></persName>.</salute>
+                    <signed><hi rend="latin">Tieck</hi>.</signed>
+                    <dateline><placeName ref="#l0100" type="bi"><hi rend="latin">Jena</hi></placeName> den <date when-iso="1828-10-06">6t Octbr.
+                            1828</date>.</dateline></closer>
             </div>
         </body>
     </text>

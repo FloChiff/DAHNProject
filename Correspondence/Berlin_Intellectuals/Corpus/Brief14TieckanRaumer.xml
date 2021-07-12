@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -232,8 +239,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-09-01" who="#johanna.preusse">Corrections of transcription and encoding. Added a comment.</change>
             <change when-iso="2015-08-11" who="#johanna.preusse">Added handNote "pencil_3".</change>
             <change when-iso="2015-08-04" who="#johanna.preusse">Added some more english and french translations of metadata. Added handNote pencil_2.
@@ -252,8 +260,9 @@
             <div type="transcription">
                 <pb facs="00000878.jpg" n="1"/>
                 <note hand="#pencil" place="right" type="foliation">237</note>
-                <note hand="#red_hand" place="inline right">Tieck an Raumer <date when-iso="1826-01-11">11 Jan. 26</date></note>
-                <opener><salute rend="align(center)"><del hand="#red_hand" rend="strikethrough">Theuerster Freund,</del></salute></opener>
+                <opener><dateline rend="align(right)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1826-01-11">11 Jan.
+                        26</date></note></dateline>
+                    <salute rend="align(center)"><del hand="#red_hand" rend="strikethrough">Theuerster Freund,</del></salute></opener>
                 <p>Wie sehr ich über die vielen Beweise Ihrer Freundschaft gerührt bin,<lb/> kann ich Ihnen nicht ausdrücken. Eine Zeitlang kam
                     täglich ein Brief von<lb/> Ihnen, und wie werth mir jedes Ihrer Blätter ist, kann ich Ihnen nicht ausdrücken, denn alle<lb/>
                     prägen so ganz Ihren Charakter aus, jedes Wort ist so geistreich, alles lädt zum Nachdenken<lb/> ein, <subst>
@@ -293,8 +302,11 @@
                         <hi rend="latin">Februar</hi></date>
                     <lb/> nicht sein kön̄en, sagen Sie es doch <hi rend="latin"><persName ref="#p0711" type="bi">Uechtritz</persName></hi>, damit er
                     nicht zu früh Anstalten<lb/> zur Reise trifft.</p>
-                <p>Sie haben doch die Musikalien von <hi rend="latin">Max</hi><note resp="#johanna.preusse">Vermutlich ist der Verleger und
-                        Buchhändler <persName ref="#p0852" type="bi">Joseph Max</persName> gemeint.</note>, und zur rechten Zeit<lb/> erhalten?</p>
+                <p>Sie haben doch die Musikalien von <hi rend="latin">Max</hi><note resp="#johanna.preusse"><p xml:lang="de">Vermutlich ist der
+                            Verleger und Buchhändler <persName ref="#p0852" type="bi">Joseph Max</persName> gemeint.</p>
+                        <p xml:lang="en">Presumably the publisher and bookseller <persName ref="# p0852" type="bi"> Joseph Max </persName>.</p>
+                        <p xml:lang="fr">Vraisemblablement l'éditeur et libraire <persName ref="# p0852" type="bi"> Joseph Max
+                    </persName>.</p></note>, und zur rechten Zeit<lb/> erhalten?</p>
                 <p>Mit Grüssen für die Familie <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -303,30 +315,28 @@
                         <expan>und</expan>
                     </choice><lb/> Bitten um Nachsicht</p>
                 <closer>
-                    <p>
-                        <salute rend="align(center)">Ihr <lb/> Sie ehrender liebender – </salute>
-                        <signed rend="align(right)"><hi rend="latin">L. Tieck.</hi></signed>
-                    </p>
-                    <p>
-                        <dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi><lb/>
-                            <date when-iso="1826-01-11">den 11<hi rend="superscript">ten</hi>
-                                <hi rend="latin">Januar</hi>. <hi rend="underline">1826.</hi></date></dateline>
-                    </p>
+                    <salute rend="align(center)">Ihr <lb/> Sie ehrender liebender – </salute>
+                    <signed rend="align(right)"><hi rend="latin">L. Tieck.</hi></signed>
+                    <dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi><lb/>
+                        <date when-iso="1826-01-11">den 11<hi rend="superscript">ten</hi>
+                            <hi rend="latin">Januar</hi>. <hi rend="underline">1826.</hi></date></dateline>
                 </closer>
                 <anchor xml:id="a1"/>
                 <pb facs="00000879.jpg" n="2"/>
                 <note hand="#pencil" type="foliation">238v</note>
-                <note hand="#pencil_2" place="align-right" type="foliation">238</note>
-                <note resp="#johanna.preusse" subtype="1">Auf dem Blatt finden sich diverse numerische Postvermerke.</note>
-                <stamp>Stempel: "DRESDEN <gap extent="1c" reason="incomplete"/>2. <gap extent="3-4c" reason="incomplete"/> 26"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)">An des </addrLine>
-                    <addrLine rend="vertical align(center)">Herrn Regierungsrathes u Professors </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgeb. </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
+                <note hand="#pencil_2" place="align(right)" type="foliation">238</note>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Auf dem Blatt finden sich diverse numerische Postvermerke.</p>
+                    <p xml:lang="en">Various numerical postage notes can be found on the sheet.</p>
+                    <p xml:lang="fr">Diverses notes d'affranchissement numériques peuvent être trouvées sur la feuille.</p></note>
+                <closer><stamp>Stempel: "DRESDEN <gap extent="1c" reason="incomplete"/>2. <gap extent="3-4c" reason="incomplete"/> 26"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)">An des </addrLine>
+                        <addrLine rend="vertical align(center)">Herrn Regierungsrathes u Professors </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="latin">von <hi rend="underline">Raumer</hi></hi> Hochwohlgeb. </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

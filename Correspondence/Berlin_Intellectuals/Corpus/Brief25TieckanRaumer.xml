@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -221,8 +228,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-06" who="#johanna.preusse">Added some more english and french translations of metadata. Changed form of values
                 for @extent.</change>
             <change when-iso="2015-04-23" who="#johanna.preusse">Corrected encoding and phrasing of handNote (Raumer).</change>
@@ -238,19 +246,25 @@
         <body>
             <div type="transcription">
                 <pb facs="00000916.jpg" n="1" xml:id="Brief25TieckanRaumer_Blatt_259r"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">259</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">259</note>
                 <note resp="#johanna.preusse">
-                    <seg xml:lang="de">Es ist unklar, ob der Brief vom 7. oder 27. Juli 1832 datiert. Raumer liest in Tiecks Datierung offenbar den
-                        27. Juli (vgl. Raumers Hand auf S. 1 / Bl. 259<hi rend="superscript">r</hi>). Tiecks flüchtige Schreibung lässt jedoch auch
-                        die Lesart "7<hi rend="superscript">ten</hi> Jul." zu (vgl. Tiecks Hand auf S. 2 / Bl. 259<hi rend="superscript"
-                        >v</hi>).</seg>
-                    <seg xml:lang="en">It is unclear whether the letter was written on July 7 or July 27 1832. Raumer reads July 27 (see Raumer's hand
+                    <p xml:lang="de">Es ist unklar, ob der Brief vom 7. oder 27. Juli 1832 datiert. Raumer liest in Tiecks Datierung offenbar den 27.
+                        Juli (vgl. Raumers Hand auf S. 1 / Bl. 259<hi rend="superscript">r</hi>). Tiecks flüchtige Schreibung lässt jedoch auch die
+                        Lesart "7<hi rend="superscript">ten</hi> Jul." zu (vgl. Tiecks Hand auf S. 2 / Bl. 259<hi rend="superscript">v</hi>).</p>
+                    <p xml:lang="en">It is unclear whether the letter was written on July 7 or July 27 1832. Raumer reads July 27 (see Raumer's hand
                         on p. 1 / folio 259<hi rend="superscript">r</hi>) but Tiecks hasty writing makes it possible to read July 7 as well as July
-                        27. (see Tieck's hand on p. 2 / folio 259<hi rend="superscript">v</hi>).</seg>
+                        27. (see Tieck's hand on p. 2 / folio 259<hi rend="superscript">v</hi>).</p>
+                    <p xml:lang="fr">On ne sait pas si la lettre a été écrite le 7 juillet ou le 27 juillet 1832. Raumer lit le 27 juillet (voir la
+                        main de Raumer à la p. 1 / folio 259<hi rend="superscript">r</hi>) mais l'écriture hâtive de Tieck fait qu'il est possible de
+                        lire le 7 juillet ainsi que le 27 juillet. (voir la main de Tieck p. 2 / folio 259<hi rend="superscript">v</hi>).</p>
                 </note>
-                <note hand="#pencil_two" place="inline align-right">27 Juli</note>
-                <note resp="#johanna.preusse">Der gesamte Brieftext ist einmal vertikal mit Bleistift durchgestrichen, vermutlich von Raumers Hand bei
-                    Durchsicht der Briefe für eine etwaige Veröffentlichung.</note>
+                <note hand="#pencil_two" place="inline align(right)">27 Juli</note>
+                <note resp="#johanna.preusse"><p xml:lang="de">Der gesamte Brieftext ist einmal vertikal mit Bleistift durchgestrichen, vermutlich von
+                        Raumers Hand bei Durchsicht der Briefe für eine etwaige Veröffentlichung.</p>
+                    <p xml:lang="en">The entire text of the letter has been crossed out vertically with pencil, presumably by Raumer's hand when
+                        looking through the letters for possible publication.</p>
+                    <p xml:lang="fr">Le texte entier de la lettre a été barré verticalement au crayon, vraisemblablement par la main de Raumer en
+                        parcourant les lettres pour une éventuelle publication.</p></note>
                 <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>
                 <opener><salute rend="align(center)">Geliebter Freund,</salute></opener>
                 <p>Dieses Blatt, welches keine Antwort auf<lb/> Ihre vielen erfreulichen Briefe sein kann,<lb/> erhalten Sie aus der Hand einer
@@ -269,8 +283,12 @@
                     </subst>ind wir, wie Sie<lb/> auch wissen, mit jungen Schauspielerinnen<lb/>
                     <anchor xml:id="a1"/>
                     <pb facs="00000917.jpg" n="2" xml:id="Brief25TieckanRaumer_Blatt_259v"/>
-                    <note resp="#johanna.preusse" subtype="1">Der gesamte Brieftext ist einmal vertikal mit Bleistift durchgestrichen, vermutlich von
-                        Raumers Hand bei Durchsicht der Briefe für eine etwaige Veröffentlichung.</note>
+                    <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Der gesamte Brieftext ist einmal vertikal mit Bleistift
+                            durchgestrichen, vermutlich von Raumers Hand bei Durchsicht der Briefe für eine etwaige Veröffentlichung.</p>
+                        <p xml:lang="en">The entire text of the letter has been crossed out vertically with pencil, presumably by Raumer's hand when
+                            looking through the letters for possible publication.</p>
+                        <p xml:lang="fr">Le texte entier de la lettre a été barré verticalement au crayon, vraisemblablement par la main de Raumer en
+                            parcourant les lettres pour une éventuelle publication.</p></note>
                     <delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a2"/> hier übersezt. Ich hoffe <choice>
                         <abbr>ud</abbr>
                         <expan>und</expan>
@@ -291,8 +309,8 @@
                     die<lb/> Fr. <hi rend="latin"><persName ref="#p2011" type="bi">Siccard</persName></hi> auch recht viel im Lustspiel und in<lb/>
                     Conversations=Stücken spielt, und einen<lb/> gewissen singenden Ton, der in <placeName ref="#l0032" type="bi">Wien</placeName>
                     üblich<lb/> ist, ganz abzulegen.</p>
-                <stamp rend="align(right)">[Stempel:] Staatsbibliothek Preußischer Kulturbesitz</stamp>
                 <closer>
+                    <stamp rend="align(right)">[Stempel:] Staatsbibliothek Preußischer Kulturbesitz</stamp>
                     <dateline><hi rend="latin"><placeName ref="#l0003" type="bi"><choice>
                                     <abbr>Dr.</abbr>
                                     <expan>Dresden</expan>
@@ -309,21 +327,21 @@
                 </closer>
                 <anchor xml:id="a2"/>
                 <pb facs="00000918.jpg" n="3"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">260</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">260</note>
                 <pb facs="00000919.jpg" n="4" xml:id="Brief25TieckanRaumer_Blatt_260v"/>
-                <address rend="vertical">
-                    <addrLine rend="align(center)">Dem Herrn Regirungs=rath</addrLine>
-                    <addrLine rend="align(center)">und Professor <hi rend="latin"><persName ref="#p0187" type="bi"><choice>
-                                    <abbr>Fr. v.</abbr>
-                                    <expan>Friedrich von</expan>
-                                </choice>
-                                <hi rend="underline">Raumer</hi></persName></hi></addrLine>
-                    <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
-                    <milestone rend="horizontal-rule align(center)" unit="none"/>
-                    <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" rend="latin" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                    <addrLine rend="align(center)">Spittel=Brücke.</addrLine>
-                </address>
+                <closer><address rend="vertical">
+                        <addrLine rend="align(center)">Dem Herrn Regirungs=rath</addrLine>
+                        <addrLine rend="align(center)">und Professor <hi rend="latin"><persName ref="#p0187" type="bi"><choice>
+                                        <abbr>Fr. v.</abbr>
+                                        <expan>Friedrich von</expan>
+                                    </choice>
+                                    <hi rend="underline">Raumer</hi></persName></hi></addrLine>
+                        <addrLine rend="align(center)">Hochwohlgebohren</addrLine>
+                        <milestone rend="horizontal-rule align(center)" unit="none"/>
+                        <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l1103" rend="latin" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                        <addrLine rend="align(center)">Spittel=Brücke.</addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

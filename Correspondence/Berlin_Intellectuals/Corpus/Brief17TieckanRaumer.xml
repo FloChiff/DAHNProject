@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -215,8 +222,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Correction of two words ("Critik" and "meines"); minor technical
                 corrections.</change>
             <change when-iso="2015-08-04" who="#johanna.preusse">Added some more english and french translations of metadata. Added encoding of
@@ -234,9 +242,10 @@
             <div type="transcription">
                 <pb facs="00000884.jpg" n="1"/>
                 <note hand="#red_hand" place="inline center">Tieck an Raumer</note>
-                <note hand="#pencil" place="align-right" type="foliation">243</note>
-                <p><hi rend="latin">Teplitz</hi>, den 22<hi rend="superscript">t</hi> Juni, 1826.</p>
-                <p>Mein geliebter Freund,</p>
+                <note hand="#pencil" place="align(right)" type="foliation">243</note>
+                <opener><dateline rend="align(right)"><hi rend="latin">Teplitz</hi>, den <date when-iso="1826-06-22">22<hi rend="superscript">t</hi>
+                            Juni, 1826</date>.</dateline>
+                    <salute>Mein geliebter Freund,</salute></opener>
                 <p> Es ist endlich Zeit, daß ich Ihnen einmal wieder ein Blatt von<lb/> meiner Hand, wenn auch keinen Brief sende, denn durch so
                     manche liebe<lb/> Schreiben haben Sie mich schon seit so lange beschämt, die ich in der Verwirrung<lb/>
                     <choice>
@@ -371,7 +380,7 @@
                     <persName ref="#p0195" type="bi">Krause</persName> auch wirklich, so viel ich ihn habe kennen lernen, diese<lb/> Dinge aus einem
                     grossen Gesichtspunkte ansah.</p>
                 <pb facs="00000886.jpg" n="3"/>
-                <note hand="#pencil" place="align-right" type="foliation">244</note>
+                <note hand="#pencil" place="align(right)" type="foliation">244</note>
                 <p>Ist <rs ref="#w[?]" type="bi">Ihr Buch</rs> noch nicht gedruckt, welches Sie mir vorlasen? Ich weiß<lb/> nicht, welchen Titel Sie
                     ihm gegeben haben. Aus diesem hoffe ich, wenn ich es<lb/> wieder lese, recht vieles zu lernen, so wie es mir auch damals sehr
                     lehrreich<lb/> war. Warum haben nicht alle Menschen dasselbe Vergnügen am Lernen,<lb/> wie ich es empfinde? Die allermeisten
@@ -411,8 +420,12 @@
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Kinder<note resp="#anne.baillot">Gemeint sind die zwei Töchter <persName ref="#p0217" type="bi">Dorothea</persName> und
-                            <persName ref="#p0218" type="bi">Agnes</persName>.</note> grüssen herzlich, <choice>
+                    </choice> Kinder<note resp="#anne.baillot"><p xml:lang="de">Gemeint sind die zwei Töchter <persName ref="#p0217" type="bi"
+                                >Dorothea</persName> und <persName ref="#p0218" type="bi">Agnes</persName>.</p>
+                        <p xml:lang="en">This is the two daughters <persName ref="#p0217" type="bi">Dorothea</persName> and <persName ref="#p0218"
+                                type="bi">Agnes</persName>.</p>
+                        <p xml:lang="fr">Il s'agit des deux filles <persName ref="#p0217" type="bi">Dorothea</persName> et <persName ref="#p0218"
+                                type="bi">Agnès</persName>.</p></note> grüssen herzlich, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> alles freut sich darauf,<lb/> Sie wieder bei uns zu sehn. Meine Grüsse an <rs ref="#p0201" type="bi">Ihre liebenswürdige
@@ -422,21 +435,23 @@
                 <p><persName ref="#p0133" type="bi">Lud. Tieck.</persName>
                 </p>
                 <pb facs="00000887.jpg" n="4"/>
-                <note resp="#johanna.preusse" subtype="1">Auf dem Blatt finden sich diverse Postvermerke.</note>
-                <stamp rend="vertical align(center)">Stempel: "Teplitz"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)"><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgebohren des </addrLine>
-                    <addrLine rend="vertical align(center)">Regierungsrathes und Professors </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="latin underline">von Raumer</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Auf dem Blatt finden sich diverse Postvermerke.</p>
+                    <p xml:lang="en">There are various postage notes on the sheet.</p><p xml:lang="fr">Il y a divers billets d'affranchissement sur la
+                        feuille.</p></note>
+                <closer><stamp rend="vertical align(center)">Stempel: "Teplitz"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)"><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgebohren des </addrLine>
+                        <addrLine rend="vertical align(center)">Regierungsrathes und Professors </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="latin underline">von Raumer</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

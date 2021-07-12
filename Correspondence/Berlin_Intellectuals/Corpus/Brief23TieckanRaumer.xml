@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -228,8 +235,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-19" who="#johanna.preusse">Modified comment regarding Barante's Histoire du Ducs. Added links for "Jacquerie",
                 "Clara Gazul" and "Miremet"(=Mérimée).</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Corrections: "Vitet" and "Heinrich III" (p.3); added references to the three works by
@@ -252,7 +260,7 @@
                 <pb facs="00000908.jpg" n="1"/>
                 <note hand="#pencil_one" rend="align(right)" type="foliation">255</note>
                 <note hand="#pencil_two" place="inline">Tieck an Raumer</note>
-                <p>Geliebtester Freund,</p>
+                <opener><salute>Geliebtester Freund,</salute></opener>
                 <p>Ihr kleiner Brief hat mir einen unglaublichen Schreck<lb/> verursacht. Ich war schon bekümmert, daß ich so lange nicht von<lb/>
                     Ihnen gehört hatte. Erin̄ern Sie sich, wie ich Ihnen in meinem lezten<lb/>
                     <ref target="Brief22TieckanRaumer.xml">Briefe</ref> vor Ihrer Abreise schrieb, ich hätte das traurige Gefühl, als<lb/> wenn wir
@@ -341,9 +349,15 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice>
-                    <hi rend="underline">aufmerksam</hi> gelesen,<note resp="#anne.baillot #johanna.preusse">Wohl im französischen Original. –
-                        Barantes <hi rend="latin">Histoire des Ducs de Bourgogne</hi> taucht 1849, als Tiecks Bibliothek versteigert wurde, im
-                        Auktionskatalog auf, vgl. <title ref="#w03592">Bibliotheca Tieckiana</title> (Position 4738).</note>
+                    <hi rend="underline">aufmerksam</hi> gelesen,<note resp="#anne.baillot #johanna.preusse"><p xml:lang="de">Wohl im französischen
+                            Original. – Barantes <hi rend="latin">Histoire des Ducs de Bourgogne</hi> taucht 1849, als Tiecks Bibliothek versteigert
+                            wurde, im Auktionskatalog auf, vgl. <title ref="#w03592">Bibliotheca Tieckiana</title> (Position 4738).</p>
+                        <p xml:lang="en">Probably in the French original. - Barantes <hi rend="latin">Histoire des Ducs de Bourgogne</hi> appears in
+                            the auction catalog in 1849 when Tieck's library was auctioned, see <title ref="#w03592">Bibliotheca Tieckiana</title> (
+                            Position 4738).</p>
+                        <p xml:lang="fr">Probablement dans l'original français. - Barantes <hi rend="latin">Histoire des Ducs de Bourgogne</hi>
+                            apparaît au catalogue de la vente aux enchères en 1849 lors de la vente aux enchères de la bibliothèque de Tieck, voir
+                                <title ref="#w03592">Bibliotheca Tieckiana</title> (Position 4738).</p></note>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -380,7 +394,7 @@
                         <abbr>dser</abbr>
                         <expan>dieser</expan>
                     </choice> Parenthese nicht, wen̄ ich in <persName ref="#p0883" type="bi"><hi rend="latin">Raupachs</hi></persName>
-                    <rs ref="" type="bi">Tragödie</rs> nur ein <hi rend="underline">Pasquill</hi><lb/> auf <hi rend="latin"><rs ref="#" type="bi"><choice>
+                    <rs ref="#" type="bi">Tragödie</rs> nur ein <hi rend="underline">Pasquill</hi><lb/> auf <hi rend="latin"><rs ref="#" type="bi"><choice>
                                 <abbr>Heinr.</abbr>
                                 <expan>Heinrich</expan>
                             </choice> VI.</rs></hi> finde: — als lebte er noch, <choice>
@@ -530,16 +544,16 @@
                     </choice>
                     <hi rend="latin"><persName ref="#p0217" type="bi">Dorothea</persName></hi> bleibt mit der <rs ref="#p0233" type="bi">Mutter</rs>
                     ganz zu Haus.</p>
-                <p>Der Him̄el erhalte Sie uns, und mir, <choice>
-                        <abbr>u</abbr>
-                        <expan>und</expan>
-                    </choice> der Welt,</p>
-                <p>Ihr</p>
-                <p><hi rend="latin">L. Tieck.</hi></p>
-                <p><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi></p>
-                <p>den 5<hi rend="superscript">ten</hi>
-                    <hi rend="latin">Juni</hi></p>
-                <p><date when-iso="1830-06-05">1830</date>.</p>
+                <closer><salute>Der Him̄el erhalte Sie uns, und mir, <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> der Welt,</salute>
+                    <signed>Ihr<lb/>
+                        <hi rend="latin">L. Tieck.</hi></signed>
+                    <dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi><lb/> den <date when-iso="1830-06-05">5<hi
+                                rend="superscript">ten</hi>
+                            <hi rend="latin">Juni</hi>
+                            <lb/> 1830</date>.</dateline></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -225,8 +232,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-11" who="#johanna.preusse">Added comments on Tiecks Lady Macbeth text and on the quote of Romeo and Juliet.
                 Corrections of transcription and encoding (p.1-2).</change>
             <change when-iso="2015-08-06" who="#johanna.preusse">Added some more english and french translations of metadata. Added comment. Changed
@@ -244,9 +252,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000875.jpg" n="1"/>
-                <note hand="#pencil" place="align-right" type="foliation">235</note>
-                <note hand="#red_hand" place="inline align-right">Tieck an Raumer <date when-iso="1825-12-10">10 Dec. 25</date></note>
-                <p><opener><salute>Mein theuerster Freund,</salute></opener></p>
+                <note hand="#pencil" place="align(right)" type="foliation">235</note>
+                <opener><dateline rend="align(right)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1825-12-10">10 Dec.
+                        25</date></note></dateline>
+                    <salute>Mein theuerster Freund,</salute></opener>
                 <p>Diesmal benutze oder mißbrauche ich Sie nur zu allerhand Be<lb break="no"/>stellungen. Vorerst beschwöre ich Sie, beikom̄ende Rolle
                         <hi rend="underline">sogleich</hi><lb/> an <hi rend="underline">Ihre</hi>
                     <persName ref="#p0708" type="bi">Rosalie <hi rend="latin">Wagner</hi></persName> zu befördern, damit das gute Kind in <hi
@@ -261,13 +270,22 @@
                             <abbr>Lad.</abbr>
                             <expan>Lady</expan>
                         </choice>
-                        <title ref="#w00224">Macbeth</title></hi> gesendet<lb/> habe?<note resp="#johanna.preusse">Im vorangehenden Brief hatte Tieck
-                        Raumer einige Anmerkungen zu Lady Macbeth für die Schauspielerin <persName ref="#p0712" type="bi">Auguste Stich</persName>
-                        mitgeschickt, ihn aber gebeten, diese nicht öffentlich werden zu lassen. Vgl. den <ref target="Brief12TieckanRaumer.xml">Brief
-                            vom 6. Dezember 1825</ref>, S.2f. sowie den Kommentar zu S.2. Raumer publizierte den Text 1861 in den <title ref="#w00222"
-                            >Lebenserinnerungen und Briefwechsel</title>, Bd. 2, S.191-196.</note> – Ich bitte Sie, die Briefe zu befördern; ich lege
-                    sie offen bei,<lb/> theils, des Couverts wegen, theils auch, damit Sie sie ansehn mögen, ob<lb/> Sie sie zweckmässig finden: dann
-                    haben Sie wohl die Güte, sie zusam̄en<lb/> zu legen, <subst>
+                        <title ref="#w00224">Macbeth</title></hi> gesendet<lb/> habe?<note resp="#johanna.preusse"><p xml:lang="de">Im vorangehenden
+                            Brief hatte Tieck Raumer einige Anmerkungen zu Lady Macbeth für die Schauspielerin <persName ref="#p0712" type="bi"
+                                >Auguste Stich</persName> mitgeschickt, ihn aber gebeten, diese nicht öffentlich werden zu lassen. Vgl. den <ref
+                                target="Brief12TieckanRaumer.xml">Brief vom 6. Dezember 1825</ref>, S.2f. sowie den Kommentar zu S.2. Raumer
+                            publizierte den Text 1861 in den <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. 2, S.191-196.</p>
+                        <p xml:lang="en">In the previous letter, Tieck Raumer had sent some comments on the actress of Lady Macbeth for <persName
+                                ref="#p0712" type="bi">Auguste Stich</persName>, but asked him not to let them become public. See the <ref
+                                target="Brief12TieckanRaumer.xml">letter of December 6, 1825</ref>, p.2f. as well as the comment on page 2. Raumer
+                            published the text in 1861 in <title ref="#w00222">Memoirs and Correspondence</title>, Vol. 2, pp.191-196.</p>
+                        <p xml:lang="fr">Dans la lettre précédente, Tieck Raumer avait envoyé quelques commentaires sur l'actrice de Lady Macbeth pour
+                                <persName ref="#p0712" type="bi">Auguste Stich</persName>, mais lui avait demandé de ne pas les laisser devenir
+                            publics. Voir la <ref target="Brief12TieckanRaumer.xml">lettre du 6 décembre 1825</ref>, p.2f. ainsi que le commentaire de
+                            la page 2. Raumer a publié le texte en 1861 dans <title ref="#w00222">Memoirs and Correspondence</title>, Vol. 2,
+                            pp.191-196.</p></note> – Ich bitte Sie, die Briefe zu befördern; ich lege sie offen bei,<lb/> theils, des Couverts wegen,
+                    theils auch, damit Sie sie ansehn mögen, ob<lb/> Sie sie zweckmässig finden: dann haben Sie wohl die Güte, sie zusam̄en<lb/> zu
+                    legen, <subst>
                         <del rend="overwritten">u</del>
                         <add place="across">z</add>
                     </subst>u versiegeln, <choice>
@@ -276,27 +294,42 @@
                     </choice> die Aufschriften zu machen, oder machen zu <lb/> lassen. <hi rend="latin"><persName ref="#p0830" type="bi"
                             >Hering</persName></hi> wird es bei dieser Empfindlichkeit und bei dem Bewußtsein <lb/> seines Talentes nicht weit
                         bringen.<lb rend="indent"/> Nur Bettler wissen ihres Guts Betrag. (<hi rend="latin">Julie</hi>)<note resp="#johanna.preusse"
-                        >Vgl. die sechste und letzte Szene des zweiten Aufzugs aus <hi rend="latin"><title ref="#w00250">Romeo und Julia</title></hi>
-                        in der Übersetzung August Wilhelm Schlegels (1797)<!-- Link nachtragen! -->. Der erste Band der von Tieck und <persName
-                            ref="#p0190" type="bi">Schlegel</persName> gemeinsam herausgegebenen Shakespeare-Ausgabe erschien 1825, also in dem Jahr,
-                        aus dem der Brief stammt. <hi rend="latin">Romeo und Julia</hi> erschien innerhalb dieser Ausgabe erneut 1833 im <rs
-                            ref="#w04526" type="bi">9. und letzten Band</rs>.</note><lb/> Er dauert mich, ich zweifle aber, daß ihm zu helfen steht. –
-                    Von allen<lb/> Seiten höre ich, daß <hi rend="latin"><persName ref="#p0714" type="bi">Holtei</persName></hi> öffentlich
-                    ausschreit, wie sehr ich den <hi rend="latin">Alexan<lb break="no"/>der</hi> lobe. Er kann unmöglich wissen und einsehn, wie ich
-                    es meine, und ich<lb/> finde es unbescheiden von ihm: nebenher, so wie die Menge nun einmal ist,<lb/> wird es dem jungen Dichter
-                    schaden, ja es kann dem glücklichen Erfolge der<lb/> Aufführung in den Weg treten. Es ist empfindlich, immer mit solchem<lb/>
-                    unnützen Geschrei zusammen zu treffen. – Haben Sie <hi rend="latin"><persName ref="#p3630" type="bi">Kalkreuth</persName></hi>
-                    gesehn, <lb/> der schon seit einigen Wochen in <hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi> ist? Der
-                    Beifall, den ich diesem <hi rend="latin">Alex<lb break="no"/>ander</hi> schenken muß, wird mehr als einen jungen Poeten
-                    beleidigen.<lb/> Was machen Sie? Jezt wird sehr bald <title ref="#w05696">der 2<hi rend="superscript">te</hi> Theil der
-                        dramaturgischen Blät<lb break="no"/>ter</title> erscheinen, der viel Neues, vielleicht Unnützes enthält. – Wie ich mir<lb/>
-                    oft dumm vorkomme, das wollen Sie nun einmal nicht glauben.</p>
+                            ><p xml:lang="de">Vgl. die sechste und letzte Szene des zweiten Aufzugs aus <hi rend="latin"><title ref="#w00250">Romeo
+                                    und Julia</title></hi> in der Übersetzung August Wilhelm Schlegels (1797)<!-- Link nachtragen! -->. Der erste Band
+                            der von Tieck und <persName ref="#p0190" type="bi">Schlegel</persName> gemeinsam herausgegebenen Shakespeare-Ausgabe
+                            erschien 1825, also in dem Jahr, aus dem der Brief stammt. <hi rend="latin">Romeo und Julia</hi> erschien innerhalb dieser
+                            Ausgabe erneut 1833 im <rs ref="#w04526" type="bi">9. und letzten Band</rs>.</p>
+                        <p xml:lang="en">Compare the sixth and last scene of the second act from <hi rend="latin">
+                                <title ref="#w00250">Romeo and Juliet</title>
+                            </hi> in the translation of August Wilhelm Schlegel (1797) <!-- add the link! -->. The first volume of the Shakespeare
+                            edition jointly edited by Tieck and <persName ref="#p0190" type="bi">Schlegel</persName> appeared in 1825, the year the
+                            letter was written. <hi rend="latin">Romeo and Juliet</hi> appeared again in this issue in 1833 in <rs ref="#w04526"
+                                type="bi">9. and last volume</rs>.</p>
+                        <p xml:lang="fr">Comparez la sixième et dernière scène du deuxième acte de <hi rend="latin">
+                                <title ref="#w00250">Roméo et Juliette</title>
+                            </hi> dans la traduction d'August Wilhelm Schlegel (1797) <!-- ajoutez le lien ! -->. Le premier volume de l'édition
+                            Shakespeare coédité par Tieck et <persName ref="#p0190" type="bi">Schlegel</persName> parut en 1825, année de rédaction de
+                            la lettre. <hi rend="latin">Roméo et Juliette</hi> réapparut dans ce numéro en 1833 dans <rs ref="#w04526" type="bi">9. et
+                                dernier tome</rs>.</p></note><lb/> Er dauert mich, ich zweifle aber, daß ihm zu helfen steht. – Von allen<lb/> Seiten
+                    höre ich, daß <hi rend="latin"><persName ref="#p0714" type="bi">Holtei</persName></hi> öffentlich ausschreit, wie sehr ich den <hi
+                        rend="latin">Alexan<lb break="no"/>der</hi> lobe. Er kann unmöglich wissen und einsehn, wie ich es meine, und ich<lb/> finde
+                    es unbescheiden von ihm: nebenher, so wie die Menge nun einmal ist,<lb/> wird es dem jungen Dichter schaden, ja es kann dem
+                    glücklichen Erfolge der<lb/> Aufführung in den Weg treten. Es ist empfindlich, immer mit solchem<lb/> unnützen Geschrei zusammen
+                    zu treffen. – Haben Sie <hi rend="latin"><persName ref="#p3630" type="bi">Kalkreuth</persName></hi> gesehn, <lb/> der schon seit
+                    einigen Wochen in <hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi> ist? Der Beifall, den ich diesem <hi
+                        rend="latin">Alex<lb break="no"/>ander</hi> schenken muß, wird mehr als einen jungen Poeten beleidigen.<lb/> Was machen Sie?
+                    Jezt wird sehr bald <title ref="#w05696">der 2<hi rend="superscript">te</hi> Theil der dramaturgischen Blät<lb break="no"
+                        />ter</title> erscheinen, der viel Neues, vielleicht Unnützes enthält. – Wie ich mir<lb/> oft dumm vorkomme, das wollen Sie
+                    nun einmal nicht glauben.</p>
                 <pb facs="00000876.jpg" n="2"/>
                 <p>Habe ich Ihnen schon gesagt, daß ich 21 Bogen von <title ref="#w00211"><hi rend="latin"><persName ref="#p0146" type="bi"
                                 >Solgers</persName></hi> Nach<lb break="no"/>laß</title> erhalten habe? Aber zu meinem Erstaunen stehn die kleinen
                         Auf<lb break="no"/>sätze und die Correspondenz im Ersten Bande. Die kurze <hi rend="latin"><rs ref="#w00217" type="bi">Ansicht
-                            der<lb/> Wahlverwandschaften</rs></hi><note resp="#anne.baillot">Vgl. <title ref="#w00211">Solgers Nachgelassene Schriften
-                            und Briefwechsel</title>, Bd. 1, S. 175-185.</note> ist mehr rein philosophisch, <subst>
+                            der<lb/> Wahlverwandschaften</rs></hi><note resp="#anne.baillot"><p xml:lang="de">Vgl. <title ref="#w00211">Solgers
+                                Nachgelassene Schriften und Briefwechsel</title>, Bd. 1, S. 175-185.</p>
+                        <p xml:lang="en">Cf. <title ref="#w00211">Solger's Nachged Schriften und Briefwechsel</title>, Vol. 1, pp. 175-185.</p>
+                        <p xml:lang="fr">Cf. <title ref="#w00211">Solger's Nachged Schriften und Briefwechsel</title>, Vol. 1, pp. 175-185.</p></note>
+                    ist mehr rein philosophisch, <subst>
                         <del rend="overwritten"><unclear cert="medium" extent="1w" reason="illegible">das</unclear></del>
                         <add place="across">als</add>
                     </subst> daß sie den Punkt<lb/> träfe, oder wegräumte, über den wir uns verständigt haben. Es wäre<lb/> auch gut gewesen, wen̄ die
@@ -337,18 +370,14 @@
                     </choice>
                     <rs ref="#p3508 #p2962" type="bi">Ihre Kinder</rs>.</p>
                 <closer>
-                    <p>
-                        <dateline><placeName ref="#l0003" type="bi"><hi rend="#latin">Dresden</hi></placeName><lb/>
-                            <date when-iso="1825-12-10">den 10<hi rend="superscript">ten</hi>
-                                <hi rend="latin"><choice>
-                                        <abbr>Decbr.</abbr>
-                                        <expan>December</expan>
-                                    </choice></hi> 1825.</date></dateline>
-                    </p>
-                    <p>
-                        <salute rend="align(center)">Ihr Freund</salute><lb/>
-                        <signed rend="align(center)"><hi rend="latin">Lud. Tieck.</hi></signed>
-                    </p>
+                    <dateline><placeName ref="#l0003" type="bi"><hi rend="#latin">Dresden</hi></placeName><lb/>
+                        <date when-iso="1825-12-10">den 10<hi rend="superscript">ten</hi>
+                            <hi rend="latin"><choice>
+                                    <abbr>Decbr.</abbr>
+                                    <expan>December</expan>
+                                </choice></hi> 1825.</date></dateline>
+                    <salute rend="align(center)">Ihr Freund</salute><lb/>
+                    <signed rend="align(center)"><hi rend="latin">Lud. Tieck.</hi></signed>
                 </closer>
             </div>
         </body>

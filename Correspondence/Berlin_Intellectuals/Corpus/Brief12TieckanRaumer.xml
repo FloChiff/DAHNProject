@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -228,8 +235,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Added comment on the letter's reference to one of Raumer's works.</change>
             <change when-iso="2015-08-11" who="#johanna.preusse">Added comment regarding the message to Auguste Stich. Changed accMat (message to
                 Auguste Stich).</change>
@@ -249,9 +257,10 @@
         <body>
             <div type="transcription">
                 <pb facs="00000871.jpg" n="1"/>
-                <note hand="#pencil" place="align-right" type="foliation">233</note>
-                <note hand="#red_hand" place="inline center">Tieck an Raumer. <date when-iso="1825-12-06">6 Dec. 25</date></note>
-                <p><opener><salute>Mein geliebter Freund,</salute></opener></p>
+                <note hand="#pencil" place="align(right)" type="foliation">233</note>
+                <opener><dateline rend="align(center)"><note hand="#red_hand">Tieck an Raumer. <date when-iso="1825-12-06">6 Dec.
+                        25</date></note></dateline>
+                    <salute>Mein geliebter Freund,</salute></opener>
                 <p>Durch <persName ref="#p0708" type="bi">Rosalie Wagner</persName>, die Ihnen ja theuer ist, erhalten Sie<lb/> dieses Blatt; sie wird
                     in <hi rend="latin"><choice>
                             <abbr><placeName ref="#l1103" type="bi">Berl.</placeName></abbr>
@@ -268,19 +277,25 @@
                             <expan><placeName ref="#l1103" type="bi">Berlin</placeName></expan>
                         </choice></hi> zu engagiren, und ich<lb/> wollte, daß es ihr unter vortheilhaften Bedingungen gelänge, weil<lb/> sie hier
                     durch eine neuaufgetretene noch jüngere Schauspielerinn <lb/>
-                    <del hand="#red_hand" rend="strikethrough">sehr</del> verdunkelt wird.<note resp="#anne.baillot #johanna.preusse">Möglicherweise
-                        handelt es sich bei der Konkurrentin um <persName ref="#p0710" type="bi">Julie Gley</persName>.</note>
+                    <del hand="#red_hand" rend="strikethrough">sehr</del> verdunkelt wird.<note resp="#anne.baillot #johanna.preusse"><p xml:lang="de"
+                            >Möglicherweise handelt es sich bei der Konkurrentin um <persName ref="#p0710" type="bi">Julie Gley</persName>.</p>
+                        <p xml:lang="en">The competitor may be <persName ref="#p0710" type="bi">Julie Gley</persName>.</p>
+                        <p xml:lang="fr">Le concurrent peut être <persName ref="#p0710" type="bi">Julie Gley</persName>.</p></note>
                     <stamp rend="align(center)">Stempel: "Staatsbibliothek Preußischer Kulturbesitz"</stamp></p>
                 <p>Gern hätte ich Ihnen längst schon geschrieben, wenn die Briefe<lb/> mich nicht bei meiner Schwerfälligkeit so viel Zeit kosteten. Die<lb/>
-                    <rs ref="#p0232" type="bi">Gräfinn</rs> wird ihnen<note resp="#johanna.preusse">[sic]</note> ein oder zweimal gesagt haben, wie
-                    begeistert<lb/> sie von Ihrem Werke<note resp="#johanna.preusse">Wahrscheinlich ist Raumers <title ref="#w00220">Geschichte der
-                            Hohenstaufen</title> gemeint, die erstmals von 1823 bis 1825 erschien.</note> ist; denn das ist mit das Herrliche dieses
-                    Buchs,<lb/> daß es auf alle bessere Gemüther neben der Belehrung zugleich als<lb/> Poesie wirkt. Ich bin jezt, kann ich wohl
-                    rühmen, innigst vertraut<lb/> mit dem Buch, ich muß mich aber wirklich hüthen, nur irgendwo auf<lb break="no"/>zuschlagen, weil
-                    ich sogleich dieselben Sachen, die ich schon oft gelesen,<lb/> gleich ununterbrochen stundenlang verfolge. Der Him̄el wird<lb/>
-                    mir die Musse geben, nun endlich zur Rezension <add place="above">zu</add> schreiten; aber<lb/> auch den gehörigen Verstand, denn
-                    die Aufgabe, wenn Sie irgend zu<lb/> Ihrer Zufriedenheit gelöst werden soll, ist eine der schwierigsten. So<lb/> wie <hi
-                        rend="latin"><persName ref="#p0452" type="bi">Böttiger</persName></hi>
+                    <rs ref="#p0232" type="bi">Gräfinn</rs> wird ihnen<note resp="#johanna.preusse"><p xml:lang="en">[sic]</p></note> ein oder zweimal
+                    gesagt haben, wie begeistert<lb/> sie von Ihrem Werke<note resp="#johanna.preusse"><p xml:lang="de">Wahrscheinlich ist Raumers
+                                <title ref="#w00220">Geschichte der Hohenstaufen</title> gemeint, die erstmals von 1823 bis 1825 erschien.</p>
+                        <p xml:lang="en">Probably Raumer's <title ref="#w00220">Geschichte der Hohenstaufen</title>, which was first published from
+                            1823 to 1825.</p>
+                        <p xml:lang="fr">Il s'agit probablement du <title ref="#w00220">Geschichte der Hohenstaufen</title> de Raumer, qui a été
+                            publié pour la première fois de 1823 à 1825.</p></note> ist; denn das ist mit das Herrliche dieses Buchs,<lb/> daß es auf
+                    alle bessere Gemüther neben der Belehrung zugleich als<lb/> Poesie wirkt. Ich bin jezt, kann ich wohl rühmen, innigst
+                    vertraut<lb/> mit dem Buch, ich muß mich aber wirklich hüthen, nur irgendwo auf<lb break="no"/>zuschlagen, weil ich sogleich
+                    dieselben Sachen, die ich schon oft gelesen,<lb/> gleich ununterbrochen stundenlang verfolge. Der Him̄el wird<lb/> mir die Musse
+                    geben, nun endlich zur Rezension <add place="above">zu</add> schreiten; aber<lb/> auch den gehörigen Verstand, denn die Aufgabe,
+                    wenn Sie irgend zu<lb/> Ihrer Zufriedenheit gelöst werden soll, ist eine der schwierigsten. So<lb/> wie <hi rend="latin"><persName
+                            ref="#p0452" type="bi">Böttiger</persName></hi>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -291,7 +306,7 @@
                     </choice>, schweige zu studiren, oder gar Andre nachzuschlagen,<lb/> und wieder zu erforschen, um das Verhältniß heraus zu finden.
                     Jezt ist<lb/> die <persName ref="#p0709" type="bi">Frau <hi rend="latin">von Lüttichau</hi></persName> auf kurze Zeit in <hi
                         rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>, und ich hoffe,<lb/> daß Sie sie sehn werden, denn sie
-                    ist ihre<note resp="#johanna.preusse">[sic]</note> wahre Freundinn, <choice>
+                    ist ihre<note resp="#johanna.preusse"><p xml:lang="en">[sic]</p></note> wahre Freundinn, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> be<lb break="no"/>wundert Sie (indem sie Sie wirklich versteht) so innigst und<lb/> aufrichtig, daß sie sich von dem
@@ -314,12 +329,22 @@
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> die Kleinigkeit unter Leute bringen, wo sie gar nicht hingehört.<note resp="#johanna.preusse">Raumer publizierte den
-                        Text schließlich selbst, allerdings erst 1861, also nach Tiecks Tod, unter dem Titel <hi rend="latin">Ueber Lady Macbeth von
-                            Tieck</hi> (vgl. <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. 2, S.191-196). Dass es sich dabei
-                        tatsächlich um die Ausführungen für Auguste Stich handelt, leitet sich nicht nur daraus ab, dass der Text sich offenbar an die
-                        Darstellerin der Lady Macbeth richtet, sondern auch, weil Raumer den Text in den entsprechenden Zeitraum einordnet, nämlich
-                        vor seinen Antwortbrief an Tieck vom 12. Dezember 1825.</note></p>
+                    </choice> die Kleinigkeit unter Leute bringen, wo sie gar nicht hingehört.<note resp="#johanna.preusse"><p xml:lang="de">Raumer
+                            publizierte den Text schließlich selbst, allerdings erst 1861, also nach Tiecks Tod, unter dem Titel <hi rend="latin"
+                                >Ueber Lady Macbeth von Tieck</hi> (vgl. <title ref="#w00222">Lebenserinnerungen und Briefwechsel</title>, Bd. 2,
+                            S.191-196). Dass es sich dabei tatsächlich um die Ausführungen für Auguste Stich handelt, leitet sich nicht nur daraus ab,
+                            dass der Text sich offenbar an die Darstellerin der Lady Macbeth richtet, sondern auch, weil Raumer den Text in den
+                            entsprechenden Zeitraum einordnet, nämlich vor seinen Antwortbrief an Tieck vom 12. Dezember 1825.</p>
+                        <p xml:lang="en">Raumer finally published the text himself, but not until 1861, after Tieck's death, under the title <hi
+                                rend="latin">About Lady Macbeth von Tieck</hi> (cf. <title ref="#w00222">Memoirs and Correspondence</title>, vol. 2,
+                            pp.191-196). The fact that this is actually the remarks for Auguste Stich is derived not only from the fact that the text
+                            is apparently aimed at the actress of Lady Macbeth, but also because Raumer classifies the text in the appropriate period,
+                            namely before his reply letter to Tieck on December 12, 1825.</p>
+                        <p xml:lang="fr">Raumer publia finalement le texte lui-même, mais pas avant 1861, après la mort de Tieck, sous le titre <hi
+                                rend="latin">About Lady Macbeth von Tieck</hi> (cf. <title ref="#w00222">Memoirs and Correspondance</title>, tome 2,
+                            pp.191-196). Le fait que ce soit en fait les propos d'Auguste Stich découle non seulement du fait que le texte s'adresse
+                            apparemment à l'actrice de Lady Macbeth, mais aussi parce que Raumer classe le texte dans la période appropriée, à savoir
+                            avant sa lettre de réponse à Tieck, le 12 décembre 1825.</p></note></p>
                 <p><delSpan hand="#red_hand" rend="strikethrough" spanTo="#a1"/>Grüssen Sie <hi rend="latin"><persName ref="#p0713" type="bi"
                             >Loebell</persName></hi> herzlich, nächstens ein Wort an ihn: <unclear cert="medium" reason="illegible">da</unclear> das
                         <hi rend="latin">Lexicon</hi><lb/> nicht das von der <hi rend="latin">Academie</hi> war, wie ich glaubte, so danke ich ihm,
@@ -351,150 +376,153 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Freund bleiben.</p>
-                <closer><p><salute rend="align(center)">Mit allen Herzensempfindungen <lb/> Ihr ganz eigner</salute><lb/>
-                        <signed rend="align(center)"><hi rend="latin">Ludwig T.</hi></signed></p>
-                    <p><dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi><lb/> den <date when-iso="1825-12-06">6<hi
-                                    rend="superscript">ten</hi>
-                                <hi rend="latin"><choice>
-                                        <abbr>Decbr.</abbr>
-                                        <expan>December</expan>
-                                    </choice></hi> 1825</date>.</dateline></p></closer>
+                <closer><salute rend="align(center)">Mit allen Herzensempfindungen <lb/> Ihr ganz eigner</salute><lb/>
+                    <signed rend="align(center)"><hi rend="latin">Ludwig T.</hi></signed>
+                    <dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi><lb/> den <date when-iso="1825-12-06">6<hi
+                                rend="superscript">ten</hi>
+                            <hi rend="latin"><choice>
+                                    <abbr>Decbr.</abbr>
+                                    <expan>December</expan>
+                                </choice></hi> 1825</date>.</dateline></closer>
                 <pb facs="00000873.jpg" n="3"/>
-                <note hand="#pencil" place="align-right" type="foliation">234</note>
-                <p><hi rend="underline latin">N.S.</hi> Welche Gewalt haben <hi rend="underline">Sie</hi> über mich: – Sie kön̄en der <persName
-                        ref="#p0712" type="bi">Stich</persName> doch<lb/> nun zeigen, wie viel Ihr Wort bei mir gilt: lesen Sie Ihr die Einlage<lb/>
-                    vor, oder machen Sie einen Com̄entar darüber, wie Sie wollen: – Sie<lb/> sehn, ich bin aus Liebe zu Ihnen <del hand="#red_hand"
-                        rend="strikethrough">(nicht der <persName ref="#p0712" type="bi">Stich</persName>)</del> bis in das Reich der Unmög<lb
-                        break="no"/>lichkeit gestiegen. Welche Gunst Sie nun dafür bei <rs ref="#p0712" type="bi">der reizenden Frau</rs><lb/>
-                    erwerben können, lasse ich dahin gestellt sein: sei es die lezte oder Erste<lb/> Gunst, die Sie dadurch erhalten, so weiß ich
-                    im̄er nicht, wie ich sie Ihnen in Rech<lb break="no"/>nung stellen soll: verschweigen Sie mir aber nicht, was Sie damit gewinnen.
-                    – </p>
-                <p>
-                    <delSpan hand="#red_hand" rend="strikethrough" spanTo="#a2"/>
-                    <list>
-                        <head>Sie erhalten aus der Auktion </head>
-                        <lb/>
-                        <item>Des Moores Gottesvertheidigung, 2. Bd. — 2. <choice>
-                                <abbr>Gl.</abbr>
-                                <expan>Groschen</expan>
-                            </choice></item>
-                        <lb/>
-                        <item><hi rend="latin">Memoires de Pompadour.</hi> — — 1. <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item>Plan von <hi rend="latin"><placeName ref="#l0029" type="bi">Braunschweig</placeName></hi>. — 1. <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item>
-                            <choice>
-                                <abbr>— —</abbr>
-                                <expan>Plan von</expan>
-                            </choice>
-                            <hi rend="latin"><placeName ref="#l0298" type="bi">Belgrad</placeName></hi> — 2 <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item>
-                            <choice>
-                                <abbr>— —</abbr>
-                                <expan>Plan von</expan>
-                            </choice>
-                            <hi rend="latin"><placeName ref="#l0088" type="bi">Lyon</placeName></hi> — 3 <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item>
-                            <choice>
-                                <abbr>—</abbr>
-                                <expan>Plan von</expan>
-                            </choice>
-                            <hi rend="latin"><placeName ref="#l0299" type="bi">Danzig</placeName>
-                                <choice>
-                                    <abbr>u</abbr>
-                                    <expan>und</expan>
+                <note hand="#pencil" place="align(right)" type="foliation">234</note>
+                <postscript>
+                    <p><hi rend="underline latin">N.S.</hi> Welche Gewalt haben <hi rend="underline">Sie</hi> über mich: – Sie kön̄en der <persName
+                            ref="#p0712" type="bi">Stich</persName> doch<lb/> nun zeigen, wie viel Ihr Wort bei mir gilt: lesen Sie Ihr die
+                        Einlage<lb/> vor, oder machen Sie einen Com̄entar darüber, wie Sie wollen: – Sie<lb/> sehn, ich bin aus Liebe zu Ihnen <del
+                            hand="#red_hand" rend="strikethrough">(nicht der <persName ref="#p0712" type="bi">Stich</persName>)</del> bis in das Reich
+                        der Unmög<lb break="no"/>lichkeit gestiegen. Welche Gunst Sie nun dafür bei <rs ref="#p0712" type="bi">der reizenden
+                        Frau</rs><lb/> erwerben können, lasse ich dahin gestellt sein: sei es die lezte oder Erste<lb/> Gunst, die Sie dadurch
+                        erhalten, so weiß ich im̄er nicht, wie ich sie Ihnen in Rech<lb break="no"/>nung stellen soll: verschweigen Sie mir aber
+                        nicht, was Sie damit gewinnen. – </p>
+
+                    <p>
+                        <delSpan hand="#red_hand" rend="strikethrough" spanTo="#a2"/>
+                        <list>
+                            <head>Sie erhalten aus der Auktion </head>
+                            <lb/>
+                            <item>Des Moores Gottesvertheidigung, 2. Bd. — 2. <choice>
+                                    <abbr>Gl.</abbr>
+                                    <expan>Groschen</expan>
+                                </choice></item>
+                            <lb/>
+                            <item><hi rend="latin">Memoires de Pompadour.</hi> — — 1. <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
                                 </choice>
-                                <placeName ref="#l0300" type="bi">Weichselmünde</placeName></hi> — <subst>
-                                <del rend="strikethrough">2.</del>
-                                <add place="inline">1.</add>
-                            </subst>
-                            <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item>
-                            <choice>
-                                <abbr>—</abbr>
-                                <expan>Plan von</expan>
-                            </choice>
-                            <hi rend="latin"><placeName ref="#l0301" type="bi">Hernhut</placeName></hi> — 1. <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item><hi rend="latin"><unclear cert="low" reason="illegible">March politi.</unclear> devoil. de la <placeName ref="#l0096"
-                                    type="bi">France</placeName></hi>. — 2 <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice>
-                        </item>
-                        <lb/>
-                        <item><hi rend="latin">Vie d'Elisabeth</hi>, 2. Bd. — 2 <choice>
-                                <abbr>—</abbr>
-                                <expan>Groschen</expan>
-                            </choice> 6 <choice>
-                                <abbr>d</abbr>
-                                <expan>Pfennig</expan>
-                            </choice></item>
-                        <lb/>
-                        <milestone rend="horizontal-rule" unit="section"/>
-                        <item rend="align(center)">15 Groschen 6. <choice>
-                                <abbr>d</abbr>
-                                <expan>Pfennig</expan>
-                            </choice></item>
-                        <lb/>
-                        <milestone rend="horizontal-rule" unit="section"/>
-                    </list>
-                    <list>
-                        <head><hi rend="underline">Für <hi rend="latin"><persName ref="#p0713" type="bi">Loebeln.</persName></hi></hi></head>
-                        <item><unclear cert="low" reason="illegible">Menegiara</unclear>. 2. <choice>
-                                <abbr>Thl</abbr>
-                                <expan>Thaler</expan>
-                            </choice> — 9. <choice>
-                                <abbr>Gl</abbr>
-                                <expan>Groschen</expan>
-                            </choice>. 6. <choice>
-                                <abbr>d</abbr>
-                                <expan>Pfennig</expan>
-                            </choice>.</item>
-                    </list>
-                    <anchor xml:id="a2"/>
-                </p>
+                            </item>
+                            <lb/>
+                            <item>Plan von <hi rend="latin"><placeName ref="#l0029" type="bi">Braunschweig</placeName></hi>. — 1. <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item>
+                                <choice>
+                                    <abbr>— —</abbr>
+                                    <expan>Plan von</expan>
+                                </choice>
+                                <hi rend="latin"><placeName ref="#l0298" type="bi">Belgrad</placeName></hi> — 2 <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item>
+                                <choice>
+                                    <abbr>— —</abbr>
+                                    <expan>Plan von</expan>
+                                </choice>
+                                <hi rend="latin"><placeName ref="#l0088" type="bi">Lyon</placeName></hi> — 3 <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item>
+                                <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Plan von</expan>
+                                </choice>
+                                <hi rend="latin"><placeName ref="#l0299" type="bi">Danzig</placeName>
+                                    <choice>
+                                        <abbr>u</abbr>
+                                        <expan>und</expan>
+                                    </choice>
+                                    <placeName ref="#l0300" type="bi">Weichselmünde</placeName></hi> — <subst>
+                                    <del rend="strikethrough">2.</del>
+                                    <add place="inline">1.</add>
+                                </subst>
+                                <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item>
+                                <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Plan von</expan>
+                                </choice>
+                                <hi rend="latin"><placeName ref="#l0301" type="bi">Hernhut</placeName></hi> — 1. <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item><hi rend="latin"><unclear cert="low" reason="illegible">March politi.</unclear> devoil. de la <placeName
+                                        ref="#l0096" type="bi">France</placeName></hi>. — 2 <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>
+                            </item>
+                            <lb/>
+                            <item><hi rend="latin">Vie d'Elisabeth</hi>, 2. Bd. — 2 <choice>
+                                    <abbr>—</abbr>
+                                    <expan>Groschen</expan>
+                                </choice> 6 <choice>
+                                    <abbr>d</abbr>
+                                    <expan>Pfennig</expan>
+                                </choice></item>
+                            <lb/>
+                            <milestone rend="horizontal-rule" unit="section"/>
+                            <item rend="align(center)">15 Groschen 6. <choice>
+                                    <abbr>d</abbr>
+                                    <expan>Pfennig</expan>
+                                </choice></item>
+                            <lb/>
+                            <milestone rend="horizontal-rule" unit="section"/>
+                        </list>
+                        <list>
+                            <head><hi rend="underline">Für <hi rend="latin"><persName ref="#p0713" type="bi">Loebeln.</persName></hi></hi></head>
+                            <item><unclear cert="low" reason="illegible">Menegiara</unclear>. 2. <choice>
+                                    <abbr>Thl</abbr>
+                                    <expan>Thaler</expan>
+                                </choice> — 9. <choice>
+                                    <abbr>Gl</abbr>
+                                    <expan>Groschen</expan>
+                                </choice>. 6. <choice>
+                                    <abbr>d</abbr>
+                                    <expan>Pfennig</expan>
+                                </choice>.</item>
+                        </list>
+                        <anchor xml:id="a2"/>
+                    </p>
+                </postscript>
                 <pb facs="00000874.jpg" n="4"/>
-                <address>
-                    <addrLine rend="vertical align(center)"><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgebohren </addrLine>
-                    <addrLine rend="vertical align(center)">des Herrn Regierungsrathes und </addrLine>
-                    <addrLine rend="vertical align(center)">Professors <hi rend="latin underline">von Raumer</hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
-                <unclear cert="medium" reason="illegible">d. <hi rend="underline">Freundschaft</hi></unclear>
+                <closer><address>
+                        <addrLine rend="vertical align(center)"><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgebohren </addrLine>
+                        <addrLine rend="vertical align(center)">des Herrn Regierungsrathes und </addrLine>
+                        <addrLine rend="vertical align(center)">Professors <hi rend="latin underline">von Raumer</hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address>
+                    <unclear cert="medium" reason="illegible">d. <hi rend="underline">Freundschaft</hi></unclear></closer>
             </div>
         </body>
     </text>

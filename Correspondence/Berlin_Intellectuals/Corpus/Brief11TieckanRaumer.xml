@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -73,8 +74,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -218,8 +225,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-03" who="#johanna.preusse">Minor corrections of encoding (p.1).</change>
             <change when-iso="2015-08-03" who="#johanna.preusse">Added some more english and french translations of metadata. Changed
                 respStmt.</change>
@@ -237,17 +245,19 @@
         <body>
             <div type="transcription">
                 <pb facs="00000870.jpg" n="1"/>
-                <note hand="#red_hand" place="inline center">Tieck an Raumer <date when-iso="1824-05-06"><add place="above">6 Mai</add> 182<subst>
-                            <del rend="overwritten">3</del>
-                            <add place="across">4</add>
-                        </subst></date></note>
-                <note hand="#pencil" place="align-right" type="foliation">232</note>
-                <opener><salute>Theuerster Freund,</salute></opener>
-                <p>Hier der Schluß der Curiosität. Ich wünsche, Sie<note resp="#johanna.preusse">[sic]</note> macht Ihnen einiges <lb/> Vergnügen, Sie
-                    lachen, Sie ergötzen sich. Mißfällt Ihnen das<lb/> kurze Wort über Friedrich nur nicht zu sehr. So geringfügig oft<lb/> die
-                    Gegenstände sind, die ich behandle, so muß ich leider doch fordern,<lb/> daß man jede meiner Geschichten wenigstens zweimal
-                    gelesen wird<note resp="#johanna.preusse">[sic]</note>, <lb/> damit mir nicht Unrecht geschehe. Die Masse gewöhnlicher Leser will
-                    <lb/> das nicht; aber schon schlimm genug, wenn dem ächten das erstemal<lb/> manches langweilig <choice>
+                <note hand="#pencil" place="align(right)" type="foliation">232</note>
+                <opener><dateline rend="align(center)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1824-05-06"><add place="above">6
+                                    Mai</add> 182<subst>
+                                    <del rend="overwritten">3</del>
+                                    <add place="across">4</add>
+                                </subst></date></note></dateline>
+                    <salute>Theuerster Freund,</salute></opener>
+                <p>Hier der Schluß der Curiosität. Ich wünsche, Sie<note resp="#johanna.preusse"><p xml:lang="en">[sic]</p></note> macht Ihnen einiges
+                    <lb/> Vergnügen, Sie lachen, Sie ergötzen sich. Mißfällt Ihnen das<lb/> kurze Wort über Friedrich nur nicht zu sehr. So
+                    geringfügig oft<lb/> die Gegenstände sind, die ich behandle, so muß ich leider doch fordern,<lb/> daß man jede meiner Geschichten
+                    wenigstens zweimal gelesen wird<note resp="#johanna.preusse"><p xml:lang="en">[sic]</p></note>, <lb/> damit mir nicht Unrecht
+                    geschehe. Die Masse gewöhnlicher Leser will <lb/> das nicht; aber schon schlimm genug, wenn dem ächten das erstemal<lb/> manches
+                    langweilig <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> überflüssig vorkommt, womit er sich<lb/> erst bei näherer Bekanntschaft versöhnen kann.</p>

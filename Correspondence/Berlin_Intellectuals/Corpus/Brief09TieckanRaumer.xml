@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -240,8 +247,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-05" who="#johanna.preusse">Correction of one link mistakenly referring to Solger's brother instead of Solger
                 himself.</change>
             <change when-iso="2015-08-03" who="#johanna.preusse">Added comment, changed respStmt.</change>
@@ -263,21 +271,31 @@
         <body>
             <div type="transcription">
                 <pb facs="00000863.jpg" n="1"/>
-                <note hand="#red_hand" place="inline align-right">Tieck an Raumer <date when-iso="1823-11-27">27 Nov 23</date></note>
-                <note hand="#pencil" place="align-right" type="foliation">228</note>
-                <opener><salute rend="align(center)">Theuerster Freund,</salute></opener>
+                <note hand="#pencil" place="align(right)" type="foliation">228</note>
+                <opener><dateline rend="align(right)"><note hand="#red_hand">Tieck an Raumer <date when-iso="1823-11-27">27 Nov
+                        23</date></note></dateline>
+                    <salute rend="align(center)">Theuerster Freund,</salute></opener>
                 <p>Unsre Briefe haben sich gekreuzt, Sie werden jezt den mei<lb break="no"/>nigen erhalten haben. Was Sie mit <persName ref="#p0146"
                         type="bi">Solgers</persName> Papieren <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Briefen <note resp="#anne.baillot #johanna.preusse">Tieck hatte Raumer eine Auswahl an Schriften und Briefen aus dem
-                        Solger-Nachlass zugeschickt (vgl. den <ref target="Brief07TieckanRaumer.xml">Brief vom 6. Oktober 1823</ref>, S.1 und <ref
-                            target="Brief08TieckanRaumer.xml">vom 10. Oktober 1823</ref>, S.1). 1826 erschienen die aus der gemeinsamen Arbeit
-                        entstandenen <title ref="#w00211">Nachgelassenen Schriften und Briefwechsel</title> Solgers, herausgegeben von Tieck und
-                        Raumer.</note><lb/> anordnen, wird im̄er das Richtige sein, was Sie weglassen wollen, <lb/> ist gewiß zu billigen, denn Sie
-                    erinnern sich, daß ich gleich erklärte, <lb/> ich hätte lieber zu viel, als zu wenig abschreiben lassen wollen, <lb/> weil
-                        mein<note resp="#johanna.preusse">[sic]</note> leichter wegstreichen, als das Vergessene wieder aufsuchen <lb/> könne. Auch
-                    mit <persName ref="#p0241" type="bi"><choice>
+                    </choice> Briefen <note resp="#anne.baillot #johanna.preusse"><p xml:lang="de">Tieck hatte Raumer eine Auswahl an Schriften und
+                            Briefen aus dem Solger-Nachlass zugeschickt (vgl. den <ref target="Brief07TieckanRaumer.xml">Brief vom 6. Oktober
+                                1823</ref>, S.1 und <ref target="Brief08TieckanRaumer.xml">vom 10. Oktober 1823</ref>, S.1). 1826 erschienen die aus
+                            der gemeinsamen Arbeit entstandenen <title ref="#w00211">Nachgelassenen Schriften und Briefwechsel</title> Solgers,
+                            herausgegeben von Tieck und Raumer.</p>
+                        <p xml:lang="en">Tieck had sent Raumer a selection of writings and letters from the Solger estate (see the <ref
+                                target="Brief07TieckanRaumer.xml">letter of October 6, 1823</ref>, p.1 and <ref target="Brief08TieckanRaumer.xml">
+                                October 10, 1823 </ref>, p.1). In 1826 the <title ref="#w00211">Post-legacy writings and correspondence</title>
+                            Solgers, edited by Tieck and Raumer, was published.</p>
+                        <p xml:lang="fr">Tieck avait envoyé à Raumer une sélection d'écrits et de lettres du domaine Solger (voir la <ref
+                                target="Brief07TieckanRaumer.xml">lettre du 6 octobre 1823</ref>, p.1 et <ref target="Brief08TieckanRaumer.xml"> 10
+                                octobre 1823 </ref>, p.1). En 1826, les <title ref="#w00211">Écrits et correspondance post-héritage</title> Solgers,
+                            édité par Tieck et Raumer, a été publié.</p></note><lb/> anordnen, wird im̄er das Richtige sein, was Sie weglassen wollen,
+                    <lb/> ist gewiß zu billigen, denn Sie erinnern sich, daß ich gleich erklärte, <lb/> ich hätte lieber zu viel, als zu wenig
+                    abschreiben lassen wollen, <lb/> weil mein<note resp="#johanna.preusse"><p xml:lang="de">[sic]</p><p xml:lang="en">[sic]</p><p
+                            xml:lang="fr">[sic]</p></note> leichter wegstreichen, als das Vergessene wieder aufsuchen <lb/> könne. Auch mit <persName
+                        ref="#p0241" type="bi"><choice>
                             <abbr>J.</abbr>
                             <expan>Jean</expan>
                         </choice> Paul</persName> haben Sie wohl Recht, und auch diese Stellen, <lb/> die durch das Mangelhafte anstössig werden
@@ -295,9 +313,14 @@
                         >Fichte</persName> schien mi<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">r</add>
-                    </subst> auch unerläßlich <note resp="#anne.baillot">Es handelt sich um den Brief Solgers an Raumer vom <date
-                            when-iso="1812-03-22">22. März 1812</date>; vgl. Solgers <title ref="#w00211">Nachgelassene Schriften und
-                            Briefwechsel</title>, Bd. 1, S. 223-229.</note>, man sieht <persName ref="#p0146" type="bi"><choice>
+                    </subst> auch unerläßlich <note resp="#anne.baillot"><p xml:lang="de">Es handelt sich um den Brief Solgers an Raumer vom <date
+                                when-iso="1812-03-22">22. März 1812</date>; vgl. Solgers <title ref="#w00211">Nachgelassene Schriften und
+                                Briefwechsel</title>, Bd. 1, S. 223-229.</p>
+                        <p xml:lang="en">This is Solger's letter to Raumer dated <date when-iso="1812-03-22">22 March 1812</date>; see Solger's <title
+                                ref="#w00211">Postponed Writings and Correspondence</title>, Vol. 1, pp. 223-229.</p>
+                        <p xml:lang="fr">Il s'agit de la lettre de Solger à Raumer datée du <date when-iso="1812-03-22">22 mars 1812</date> ; voir
+                                <title ref="#w00211">Reported Writings and Correspondence</title>, Tome 1, pp. 223-229 de Solger.</p></note>, man
+                    sieht <persName ref="#p0146" type="bi"><choice>
                             <abbr>S.</abbr>
                             <expan>Solgers</expan>
                         </choice></persName> Unpartheilichkeit <lb/> so am schönsten, und daß er sich niemals hat blenden, auch durch diese <lb/>
@@ -335,9 +358,9 @@
                     </subst>hnen nicht eine Faustvoll tüchtiger Meinungen ein für al<subst>
                         <del rend="overwritten">l</del>
                         <add place="across">l</add>
-                    </subst>emal ge<lb break="no"/>liefert haben, wodurch Sie<note resp="#johanna.preusse">[sic]</note> hätten entübrigt sein können,
-                    das lange <lb/>Buch zu lesen. Die jungen Mädchen werden Sie hoffentlich mehr an<lb break="no"/>treffen, <hi rend="latin"><persName
-                            ref="#p0217" type="bi">Dorothea</persName></hi>
+                    </subst>emal ge<lb break="no"/>liefert haben, wodurch Sie<note resp="#johanna.preusse"><p xml:lang="de">[sic]</p><p xml:lang="en"
+                            >[sic]</p><p xml:lang="fr">[sic]</p></note> hätten entübrigt sein können, das lange <lb/>Buch zu lesen. Die jungen Mädchen
+                    werden Sie hoffentlich mehr an<lb break="no"/>treffen, <hi rend="latin"><persName ref="#p0217" type="bi">Dorothea</persName></hi>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -379,15 +402,25 @@
                         <expan>und</expan>
                     </choice> Religion.</p>
                 <pb facs="00000865.jpg" n="3"/>
-                <note hand="#pencil" place="align-right" type="foliation">229</note>
-                <p>Sie erwähnen des <persName ref="#p0199" type="bi">Hagen</persName>schen Briefes nicht.<note resp="#anne.baillot">Der polemische
-                        Briefaustausch zwischen <persName ref="#p0146" type="bi">Solger</persName> und dem Solger, Tieck und Raumer gemeinsamen Freund
-                            <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName> befasste sich mit der Auffassung von
-                        Philologie und Mythologie. Er fand kurz vor Solgers Tod statt; vgl. <title ref="#w00211">Nachgelassene Schriften und
-                            Briefwechsel</title> Solgers, Bd. 1, S. 741-772.</note> Wollen Sie <lb/>manchmal über Theater <choice>
+                <note hand="#pencil" place="align(right)" type="foliation">229</note>
+                <p>Sie erwähnen des <persName ref="#p0199" type="bi">Hagen</persName>schen Briefes nicht.<note resp="#anne.baillot"><p xml:lang="de"
+                            >Der polemische Briefaustausch zwischen <persName ref="#p0146" type="bi">Solger</persName> und dem Solger, Tieck und
+                            Raumer gemeinsamen Freund <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName> befasste sich mit
+                            der Auffassung von Philologie und Mythologie. Er fand kurz vor Solgers Tod statt; vgl. <title ref="#w00211">Nachgelassene
+                                Schriften und Briefwechsel</title> Solgers, Bd. 1, S. 741-772.</p>
+                        <p xml:lang="en">The polemical exchange of letters between <persName ref="#p0146" type="bi">Solger</persName> and Solger,
+                            Tieck and Raumer's mutual friend <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName> dealt with
+                            the conception of philology and mythology. It took place shortly before Solger's death; cf. <title ref="#w00211">Postponed
+                                Writings and Correspondence</title> of Solger, vol. 1, pp. 741-772</p>
+                        <p xml:lang="fr">L'échange de lettres polémique entre <persName ref="#p0146" type="bi">Solger</persName> et l'ami commun de
+                            Solger, Tieck et Raumer <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName> traitait de la
+                            conception de la philologie et de la mythologie. Cela a eu lieu peu de temps avant la mort de Solger ; cf. <title
+                                ref="#w00211">Écritures et correspondance différées</title> de Solger, tome 1, pp. 741-772.</p></note> Wollen Sie
+                    <lb/>manchmal über Theater <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Musik mit Ihrem Namen schreiben,<lb/> so schicken Sie es mir es<note resp="#johanna.preusse">[sic]</note> nur, <choice>
+                    </choice> Musik mit Ihrem Namen schreiben,<lb/> so schicken Sie es mir es<note resp="#johanna.preusse"><p xml:lang="de"
+                            >[sic]</p><p xml:lang="en">[sic]</p><p xml:lang="fr">[sic]</p></note> nur, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> es soll gewiß in der <title ref="#w05172">Abendzeitung</title>
@@ -425,32 +458,45 @@
                                     <abbr>u</abbr>
                                     <expan>und</expan>
                                 </choice> Julie</title></hi>, – viel Gutes,<lb/> vieles so so, manches schlecht, wie im̄er. Ist doch <lb/>halt einmal
-                        gespielt worden. <note resp="johanna.preusse">Tieck schrieb zu dieser Inszenierung einen <hi rend="latin">Brief an Fr. von
-                                Raumer in Berlin</hi>, der zunächst in der Dresdener <hi rend="latin"><title ref="#w05172">Abend-Zeitung</title></hi>
-                            und später in den <hi rend="latin"><title ref="#w05695">Dramaturgischen Blättern</title></hi> erschien. Vgl. auch den <ref
-                                target="Brief10TieckanRaumer.xml">Brief vom 14. März 1824</ref>, Kommentar zu S.1.</note>
+                        gespielt worden. <note resp="johanna.preusse"><p xml:lang="de">Tieck schrieb zu dieser Inszenierung einen <hi rend="latin"
+                                    >Brief an Fr. von Raumer in Berlin</hi>, der zunächst in der Dresdener <hi rend="latin"><title ref="#w05172"
+                                        >Abend-Zeitung</title></hi> und später in den <hi rend="latin"><title ref="#w05695">Dramaturgischen
+                                        Blättern</title></hi> erschien. Vgl. auch den <ref target="Brief10TieckanRaumer.xml">Brief vom 14. März
+                                    1824</ref>, Kommentar zu S.1.</p>
+                            <p xml:lang="en">Tieck wrote a <hi rend="latin">letter to Ms. von Raumer in Berlin</hi> about this production, which was
+                                initially in the Dresden <hi rend="latin">
+                                    <title ref="#w05172">evening Newspaper</title>
+                                </hi> and later in the <hi rend="latin">
+                                    <title ref="#w05695">Dramaturgische Blätter</title>
+                                </hi>. See also the <ref target="Brief10TieckanRaumer.xml">letter of March 14, 1824</ref>, comment on p.1.</p>
+                            <p xml:lang="fr">Tieck a écrit une lettre <hi rend="latin">à Mme von Raumer à Berlin</hi> à propos de cette production,
+                                qui était initialement à Dresde <hi rend="latin">
+                                    <title ref="# w05172">Journal du soir</title>
+                                </hi> et plus tard dans le <hi rend="latin">
+                                    <title ref="# w05695">Dramaturgische Blätter</title>
+                                </hi>. Voir aussi la <ref target="Brief10TieckanRaumer.xml">lettre du 14 mars 1824</ref>, commentaire p.1.</p></note>
                     </p>
                 </postscript>
                 <pb facs="00000866.jpg" n="4"/>
-                <note hand="#dark_hand" place="inline vertical align-right"><unclear extent="2c" reason="illegible">56</unclear></note>
-                <stamp>Stempel: "<gap reason="incomplete"/> 27 Nov. <gap reason="incomplete"/>"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)"><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgebohren des</addrLine>
-                    <addrLine rend="vertical align(center)">Herrn Regierungsrathes und Professors</addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="latin"><choice>
-                                <abbr>Fried.</abbr>
-                                <expan>Friedrich</expan>
-                            </choice>
-                            <hi rend="underline">von Raumer</hi></hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
-                <hi rend="underline">frei</hi>
-                <note hand="#red_hand_2" place="inline">3</note>
+                <note hand="#dark_hand" place="inline vertical align(right)"><unclear extent="2c" reason="illegible">56</unclear></note>
+                <closer><stamp>Stempel: "<gap reason="incomplete"/> 27 Nov. <gap reason="incomplete"/>"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)"><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgebohren des</addrLine>
+                        <addrLine rend="vertical align(center)">Herrn Regierungsrathes und Professors</addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="latin"><choice>
+                                    <abbr>Fried.</abbr>
+                                    <expan>Friedrich</expan>
+                                </choice>
+                                <hi rend="underline">von Raumer</hi></hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address>
+                    <hi rend="underline">frei</hi>
+                    <note hand="#red_hand_2" place="inline">3</note></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -218,8 +225,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-19" who="#johanna.preusse">Added links and comments for "Prolusions" and "Holinshed".</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Encoded a stamp. Minor corrections.</change>
             <change when-iso="2015-08-05" who="#johanna.preusse">Added some more english and french translations of metadata. Added p.4.</change>
@@ -238,7 +246,7 @@
             <div type="transcription">
                 <pb facs="00000896.jpg" n="1"/>
                 <note hand="#red_hand" place="inline center">Tieck an Raumer</note>
-                <note hand="#pencil" place="align-right" type="foliation">249</note>
+                <note hand="#pencil" place="align(right)" type="foliation">249</note>
                 <opener>
                     <dateline><date when-iso="1828-03">Ma<subst hand="#red_hand">
                                 <del rend="overwritten">rz</del>
@@ -323,16 +331,22 @@
                     </choice> die dramatische Weise,<lb/> einen so wichtigen Gegenstand abzuhandeln, Ihren Beifall<lb/> haben wird.</p>
                 <p><delSpan hand="#red_hand" rend="strikethrough" spanTo="#NextPage"/>Können Sie mir nicht <hi rend="latin">Capell's <hi
                             rend="underline"><title ref="#w00428">Prolusions</title></hi></hi>, kl. 8.<lb/> (um <date when-iso="1760">1760</date>
-                    gedr. <placeName ref="#l0042" type="bi">London</placeName>) mitbringen,<note resp="#johanna.preusse">Tieck gelangte noch in den
-                        Besitz der <hi rend="latin">Prolusions</hi>, denn sie tauchen 1849, als Tiecks Bibliothek versteigert wurde, im
-                        Auktionskatalog auf, vgl. <title ref="#w03592">Bibliotheca Tieckiana</title> (Position 2054).</note> — <choice>
+                    gedr. <placeName ref="#l0042" type="bi">London</placeName>) mitbringen,<note resp="#johanna.preusse"><p xml:lang="de">Tieck
+                            gelangte noch in den Besitz der <hi rend="latin">Prolusions</hi>, denn sie tauchen 1849, als Tiecks Bibliothek versteigert
+                            wurde, im Auktionskatalog auf, vgl. <title ref="#w03592">Bibliotheca Tieckiana</title> (Position 2054).</p>
+                        <p xml:lang="en">Tieck still came into the possession of the <hi rend="latin">Prolusions</hi>, because they appeared in the
+                            auction catalog in 1849 when Tieck's library was auctioned, see <title ref="#w03592">Bibliotheca Tieckiana</title>
+                            (position 2054).</p>
+                        <p xml:lang="fr">Tieck est encore entré en possession des <hi rend="latin">Prolusions</hi>, car ils sont apparus dans le
+                            catalogue de vente aux enchères en 1849 lorsque la bibliothèque de Tieck a été vendue aux enchères, voir <title
+                                ref="#w03592">Bibliotheca Tieckiana</title> (position 2054).</p></note> — <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice>
                     <hi rend="underline"><hi rend="latin"><unclear>Euphals his</unclear><lb/>golden Legacy</hi></hi> von <hi rend="underline"><hi
                             rend="latin">Lodge</hi></hi>, beides ist auf <rs ref="#l1103" type="bi">Berl.</rs> Bibliothek, <pb facs="00000898.jpg"
                         n="3"/>
-                    <note hand="#pencil" place="align-right" type="foliation">250</note> eben so ein <hi rend="underline"><hi rend="latin"
+                    <note hand="#pencil" place="align(right)" type="foliation">250</note> eben so ein <hi rend="underline"><hi rend="latin"
                             >Garland</hi></hi>, oder <hi rend="latin">Parnassos</hi>, wie es heißt, auch<lb/> um 1610 — steht fast neben dem <hi
                         rend="latin">Euphues</hi>, <choice>
                         <abbr>u</abbr>
@@ -354,9 +368,13 @@
                     </choice> auf<lb/> hiesiger <choice>
                         <abbr>Bibl.</abbr>
                         <expan>Bibliothek</expan>
-                    </choice> ist er nicht.<anchor xml:id="NextPage"/><note resp="#johanna.preusse">1836 gelang es Tieck schließlich, Holinsheds <hi
-                            rend="latin">Chronicles</hi> zu kaufen, vgl. den <ref target="LT-an-FvR_1836-11-11.xml">Brief vom 11. November 1836</ref>,
-                        S. 3.</note></p>
+                    </choice> ist er nicht.<anchor xml:id="NextPage"/><note resp="#johanna.preusse"><p xml:lang="de">1836 gelang es Tieck schließlich,
+                            Holinsheds <hi rend="latin">Chronicles</hi> zu kaufen, vgl. den <ref target="LT-an-FvR_1836-11-11.xml">Brief vom 11.
+                                November 1836</ref>, S. 3.</p>
+                        <p xml:lang="en">In 1836, Tieck finally managed to buy Holinshed's <hi rend="latin">Chronicles</hi>, see the <ref
+                                target="LT-an-FvR_1836-11-11.xml">letter of November 11, 1836</ref>, p. 3.</p>
+                        <p xml:lang="fr">En 1836, Tieck réussit finalement à acheter les <hi rend="latin">Chroniques</hi> de Holinshed, voir la <ref
+                                target="LT-an-FvR_1836-11-11.xml">lettre du 11 novembre 1836</ref>, page 3.</p></note></p>
                 <p>Ueber alles dies wollen wir recht viel <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -381,21 +399,24 @@
                 <p>Ihrem</p>
                 <p><persName ref="#p0133" type="bi">L. Tieck.</persName><anchor xml:id="TheEnd"/></p>
                 <pb facs="00000899.jpg" n="4"/>
-                <note resp="#johanna.preusse" subtype="1">Auf dem Blatt finden sich diverse Postvermerke sowie ein schwarzes Siegel.</note>
-                <stamp rend="vertical align(center)">Stempel: "DRESDEN 22. <gap extent="6-7c" reason="incomplete"/> 26"</stamp>
-                <address>
-                    <addrLine rend="vertical align(center)"><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgebohren </addrLine>
-                    <addrLine rend="vertical align(center)">des Herrn Regierungs=Rathes und </addrLine>
-                    <addrLine rend="vertical align(center)">Professor <hi rend="latin underline">von Raumer</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
-                        >Berlin</placeName></hi></addrLine>
-                </address>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Auf dem Blatt finden sich diverse Postvermerke sowie ein schwarzes
+                        Siegel.</p><p xml:lang="en">Various postage notes and a black seal can be found on the sheet.</p><p xml:lang="fr">Diverses
+                        notes d'affranchissement et un sceau noir se trouvent sur la feuille.</p></note>
+                <closer>
+                    <stamp rend="vertical align(center)">Stempel: "DRESDEN 22. <gap extent="6-7c" reason="incomplete"/> 26"</stamp>
+                    <address>
+                        <addrLine rend="vertical align(center)"><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgebohren </addrLine>
+                        <addrLine rend="vertical align(center)">des Herrn Regierungs=Rathes und </addrLine>
+                        <addrLine rend="vertical align(center)">Professor <hi rend="latin underline">von Raumer</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline">in</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi"
+                            >Berlin</placeName></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

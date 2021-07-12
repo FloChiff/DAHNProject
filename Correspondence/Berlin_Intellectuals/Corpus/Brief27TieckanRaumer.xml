@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -60,8 +61,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -223,8 +230,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-04-25" who="#johanna.preusse">Added link to following letter.</change>
             <change when-iso="2015-08-06" who="#johanna.preusse">Added some more english and french translations of metadata. Changed form of values
                 for @extent.</change>
@@ -238,20 +246,28 @@
         <body>
             <div type="transcription">
                 <pb facs="00000924.jpg" n="1" xml:id="Brief26TieckanRaumer_Blatt_263r"/>
-                <note hand="#pencil_one" place="margin-right" type="foliation">263</note>
+                <note hand="#pencil_one" place="margin(right)" type="foliation">263</note>
                 <!-- Unter der Foliierung, ausradiert: "244" oder "243" - allerdings finden sich unter allen Foliierungen ausradierte Zahlen, die aber in den meisten Fällen nicht mehr lesbar sind. Also Kommentar überall oder nirgends -->
                 <p><note hand="#pencil_two" place="inline">Tieck an Raumer</note></p>
                 <p>Freilich, mein geliebtester Freund, hätte ich Ihnen schon <lb/> seit lange lange wieder einmal schreiben sollen, allein – <lb/>
-                    <hi rend="latin">naturam si expellas — &amp;c —</hi>. <note resp="#johanna.preusse">Vgl. <title ref="#w04333">Horaz:
-                            Episteln</title>, I, 10, 24f.: “naturam expellas furca, tamen usque recurret / et mala perrumpet furtim fastidia victrix.”
-                        In deutscher Übersetzung: “Du magst die Natur mit der Forke vertreiben, sie wird dennoch zurückkehren und heimlich deine
-                        häßliche Hoffart siegreich durchbrechen.“ (Quintus Horatius Flaccus: Epistulae/Briefe, Lateinisch/Deutsch, übersetzt und
-                        herausgegeben von Bernhard Kytzler, Stuttgart 1986, S.40 und 41.)</note> Man stirbt über das Auf<lb break="no"/>schieben so
-                    hin – und wie verdrüßlich wird man alsdann jen<lb break="no"/>seits sein. O verdrüßlich! Das ist das Schlimmste in unserm <lb/>
-                    Leben, Zorn, Gram, Schmerz, selbst Reue sind viel besser. <lb/> Und was kann man sich eigentlich sagen? Und doch erwartet <lb/>
-                    der Freund den Brief des Freundes, er freut sich, so wie er nur <lb/> die Züge der Hand wahrnimmt, es schmerzt ihn, wenn sie lange
-                    <lb/> ausbleiben. Und dennoch!! – Ja, Sie vergeben, ich weiß es, <lb/> aber ich mir selbst nicht, und dennoch! Wenn ich am meisten
-                    an <lb/> Sie denke, schreibe ich am wenigsten. Aber den dritten <choice>
+                    <hi rend="latin">naturam si expellas — &amp;c —</hi>. <note resp="#johanna.preusse"><p xml:lang="de">Vgl. <title ref="#w04333"
+                                >Horaz: Episteln</title>, I, 10, 24f.: “naturam expellas furca, tamen usque recurret / et mala perrumpet furtim
+                            fastidia victrix.” In deutscher Übersetzung: “Du magst die Natur mit der Forke vertreiben, sie wird dennoch zurückkehren
+                            und heimlich deine häßliche Hoffart siegreich durchbrechen.“ (Quintus Horatius Flaccus: Epistulae/Briefe,
+                            Lateinisch/Deutsch, übersetzt und herausgegeben von Bernhard Kytzler, Stuttgart 1986, S.40 und 41.)</p>
+                        <p xml:lang="en">Cf. <title ref="#w04333"> Horace: Episteln </title>, I, 10, 24f .: “naturam expellas furca, tamen usque
+                            recurret / et mala perrumpet furtim fastidia victrix.” In German translation: "You may drive out nature with the fork, but
+                            it will return and secretly break through your ugly pride victoriously." (Quintus Horatius Flaccus: Epistulae / Briefe,
+                            Latin / German, translated and edited by Bernhard Kytzler, Stuttgart 1986 Pp. 40 and 41.)</p>
+                        <p xml:lang="fr">Cf. <title ref="#w04333"> Horace : Episteln </title>, I, 10, 24f. : « naturam exellas furca, tamen usque
+                            recurret / et mala perrumpet furtim fastidia victrix. En traduction allemande : « Vous pouvez chasser la nature avec la
+                            fourche, mais elle reviendra et brisera secrètement votre vilaine fierté victorieusement. » (Quintus Horatius Flaccus :
+                            Epistulae / Briefe, latin / allemand, traduit et édité par Bernhard Kytzler, Stuttgart 1986 , p. 40 et 41.)</p></note> Man
+                    stirbt über das Auf<lb break="no"/>schieben so hin – und wie verdrüßlich wird man alsdann jen<lb break="no"/>seits sein. O
+                    verdrüßlich! Das ist das Schlimmste in unserm <lb/> Leben, Zorn, Gram, Schmerz, selbst Reue sind viel besser. <lb/> Und was kann
+                    man sich eigentlich sagen? Und doch erwartet <lb/> der Freund den Brief des Freundes, er freut sich, so wie er nur <lb/> die Züge
+                    der Hand wahrnimmt, es schmerzt ihn, wenn sie lange <lb/> ausbleiben. Und dennoch!! – Ja, Sie vergeben, ich weiß es, <lb/> aber
+                    ich mir selbst nicht, und dennoch! Wenn ich am meisten an <lb/> Sie denke, schreibe ich am wenigsten. Aber den dritten <choice>
                         <abbr>Bd</abbr>
                         <expan>Band</expan>
                     </choice>
@@ -279,13 +295,14 @@
                         </choice> 2. <choice>
                             <abbr>u</abbr>
                             <expan>und</expan>
-                        </choice> dessen Sohn</title>,“ <note resp="#johanna.preusse">„Kaiser Friedrich der Zweite. Zweiter Theil, oder: Friedrich und
-                        sein Sohn“ ist (der zehnte) Teil der auf Raumers "<title ref="#w00220">Geschichte der Hohenstaufen</title>" beruhenden
-                        Raupach’schen Dramenreihe „<title ref="#w05570">Die Hohenstaufen</title>“.</note> mit ungewöhnlichem <lb/> Beifall aufgeführt,
-                    und ich habe einem Herrn <hi rend="latin"><persName ref="#p3450" type="bi">Porth</persName></hi>, der <lb/> seit kurzem hier ist,
-                    die Rolle des Kaisers einstudirt, bin <lb/> bei den Proben gewesen und habe allenthalben Rath gegeben. <lb/> Ich darf sagen, daß
-                    ich unpartheiisch meine Mühe und Zeit an<lb break="no"/>wende, wenn ich nur Nutzen erwarten darf. <hi rend="latin"><persName
-                            ref="#p3450" type="bi">Porth</persName></hi> hat keine <lb/> Bruststimme, kein bestechendes Aeussern, <choice>
+                        </choice> dessen Sohn</title>,“ <note resp="#johanna.preusse"><p xml:lang="de">„Kaiser Friedrich der Zweite. Zweiter Theil,
+                            oder: Friedrich und sein Sohn“ ist (der zehnte) Teil der auf Raumers "<title ref="#w00220">Geschichte der
+                                Hohenstaufen</title>" beruhenden Raupach’schen Dramenreihe „<title ref="#w05570">Die Hohenstaufen</title>“.</p>
+                        <p xml:lang="en"/><p xml:lang="fr"/></note> mit ungewöhnlichem <lb/> Beifall aufgeführt, und ich habe einem Herrn <hi
+                        rend="latin"><persName ref="#p3450" type="bi">Porth</persName></hi>, der <lb/> seit kurzem hier ist, die Rolle des Kaisers
+                    einstudirt, bin <lb/> bei den Proben gewesen und habe allenthalben Rath gegeben. <lb/> Ich darf sagen, daß ich unpartheiisch meine
+                    Mühe und Zeit an<lb break="no"/>wende, wenn ich nur Nutzen erwarten darf. <hi rend="latin"><persName ref="#p3450" type="bi"
+                            >Porth</persName></hi> hat keine <lb/> Bruststimme, kein bestechendes Aeussern, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> er machte als <lb/> Kaiser mehr Effekt, als die andern sehr Beliebten ge<lb break="no"/>macht haben würden: weil er Rath
@@ -295,12 +312,20 @@
                                 <abbr>Friedr.</abbr>
                                 <expan>Friedrichs</expan>
                             </choice> Tod</title></hi>
-                    <note resp="#johanna.preusse">"Kaiser Friedrich der Zweite. Vierter Theil, oder: Friedrichs Tod" ist (der zwölfte) Teil der auf
-                        Raumers "<title ref="#w00220">Geschichte der Hohenstaufen</title>" beruhenden Raupach’schen Dramenreihe „<title ref="#w05570"
-                            >Die Hohenstaufen</title>“.</note> werden wir hier nicht <lb/> brauchen können, aber vielleicht <hi rend="latin"><title
-                            ref="#w05589">Cromwells Tod</title></hi>
-                    <note resp="#johanna.preusse">„Crommwell’s Ende“ ist der dritte Teil von Ernst Raupachs Dramentrilogie „<title ref="#w05586"
-                            >Crommwell</title>“.</note> , der eben <lb/> angekommen ist, und den ich so eben gelesen hat. <unclear cert="high"
+                    <note resp="#johanna.preusse"><p xml:lang="de">"Kaiser Friedrich der Zweite. Vierter Theil, oder: Friedrichs Tod" ist (der
+                            zwölfte) Teil der auf Raumers "<title ref="#w00220">Geschichte der Hohenstaufen</title>" beruhenden Raupach’schen
+                            Dramenreihe „<title ref="#w05570">Die Hohenstaufen</title>“.</p>
+                        <p xml:lang="en">"Emperor Friedrich the Second. Fourth Part, or: Friedrichs Tod" is (the twelfth) part of Raupach's drama
+                            series "<title ref="#w05570">The Hohenstaufen</title> “.</p>
+                        <p xml:lang="fr">"Empereur Frédéric II. Quatrième partie, ou : Friedrichs Tod" est (la douzième) partie de la série dramatique
+                            de Raupach "<title ref="#w05570">Les Hohenstaufen</title> ".</p></note> werden wir hier nicht <lb/> brauchen können, aber
+                    vielleicht <hi rend="latin"><title ref="#w05589">Cromwells Tod</title></hi>
+                    <note resp="#johanna.preusse"><p xml:lang="de">„Crommwell’s Ende“ ist der dritte Teil von Ernst Raupachs Dramentrilogie „<title
+                                ref="#w05586">Crommwell</title>“.</p>
+                        <p xml:lang="en">"Crommwell’s End" is the third part of Ernst Raupach's trilogy of drama "<title ref="#w05586"> Crommwell
+                            </title>".</p>
+                        <p xml:lang="fr">"Crommwell's End" est le troisième volet de la trilogie dramatique d'Ernst Raupach "<title ref="#w05586">
+                                Crommwell </title>".</p></note> , der eben <lb/> angekommen ist, und den ich so eben gelesen hat. <unclear cert="high"
                         reason="illegible">Jeder</unclear><lb/> dieser <hi rend="latin">Playwrights</hi> (denn Poet ist <persName ref="#p0883"
                         type="bi">Raupach</persName> gewiß nicht) macht <lb/> sich für die derzeitige Bühne <unclear cert="high" reason="illegible"
                         >seine</unclear> Manier; dann be<lb break="no"/>handelt er den auch widerstrebenden Stoff mit Sicherheit <lb/> eines geübten
@@ -309,7 +334,7 @@
                     <hi rend="latin"><persName ref="#p0883" type="bi">Raupach</persName></hi> durch sein unermüdetes Schreiben etwas gelernt <lb/>
                     hat. Er sezt anekdoten artig Charakterzüge geschickt ein, <lb/> braucht unerwartete Uebergänge, weiß durch den blossen <lb/>
                     Dialog schon zu spannen. Nur begreife ich nicht, wer dort <pb facs="00000926.jpg" n="3"/>
-                    <note hand="#pencil_one" place="margin-right" type="foliation">264</note> in <placeName ref="#l1103" type="bi">Berlin</placeName>
+                    <note hand="#pencil_one" place="margin(right)" type="foliation">264</note> in <placeName ref="#l1103" type="bi">Berlin</placeName>
                     diese Charaktere spielen kann, wie sie gespielt sein <lb/> müssen, um die beabsichtigte Wirkung hervor zu bringen, denn <lb/> die
                     emphatische Deklamation tödtet alles dies, was ich so <lb/> eben hier lobe. Und auch begreife ich nicht, wie <title ref="#w05590"
                             ><hi rend="latin">Tasso’s</hi> Tod</title>
@@ -337,66 +362,81 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Sie doch alsdann etwas hier <lb/> verweilten. – Ja, Briefwechsel! Wie viel Gutes, Triviales ist <lb/> in dem <hi
-                        rend="latin">Zelterschen</hi>.<note resp="#johanna.preusse">1833/34 erschien der von <persName ref="#p3552" type="bi"
-                            >Riemer</persName> in sechs Bänden herausgegebene <title ref="#w05591">Briefwechsel zwischen Goethe und Zelter</title>,
-                        die beide 1832 verstorben waren.</note> Haben Sie in <title ref="#w05593"><hi rend="latin">Bd II.</hi></title> die Stelle
-                    schon <lb/> gefunden, wo der alles am besten wissende <hi rend="latin"><persName ref="#p0579" type="bi">Zelter</persName></hi>
+                        rend="latin">Zelterschen</hi>.<note resp="#johanna.preusse"><p xml:lang="de">1833/34 erschien der von <persName ref="#p3552"
+                                type="bi">Riemer</persName> in sechs Bänden herausgegebene <title ref="#w05591">Briefwechsel zwischen Goethe und
+                                Zelter</title>, die beide 1832 verstorben waren.</p>
+                        <p xml:lang="en">In 1833/34 the <title ref="#w05591">correspondence between Goethe and Zelter</title>, edited in six volumes
+                            by <persName ref="#p3552" type="bi">Riemer</persName>, that died in 1832.</p>
+                        <p xml:lang="fr">En 1833/34 paraît la <title ref="#w05591">correspondance entre Goethe et Zelter</title>, éditée en six
+                            volumes par <persName ref="#p3552" type="bi">Riemer</persName>, mort en 1832.</p></note> Haben Sie in <title ref="#w05593"
+                            ><hi rend="latin">Bd II.</hi></title> die Stelle schon <lb/> gefunden, wo der alles am besten wissende <hi rend="latin"
+                            ><persName ref="#p0579" type="bi">Zelter</persName></hi>
                     <unclear cert="medium" reason="illegible">erfragt</unclear>, <lb/>
                     <hi n="2" rend="underline">was</hi>
                     <hi rend="underline latin"><placeName ref="#l0368" type="bi">Byzanz</placeName></hi> sei, – <hi rend="underline">wo</hi> es läge?
-                        <note resp="#johanna.preusse">An der besagten Stelle des Briefwechsels schreibt Zelter an Goethe: „Indem ich <rs ref="#w05599"
-                            type="bi">Dein Büchlein</rs> wieder und wieder lese, sitze ich immer fest bey der Stelle: <hi rend="latin">Nur Byzanz
-                            blieb noch ein fester Sitz für die Kirche und die mit ihr verbundene Kunst</hi>. Es fehlt mir hier an historischen
-                        Hülfsmitteln, die ich mir wohl zu Hause eher zu verschaffen und zu erfragen weiß: Was war Byzanz? Wo war es? – Kannst Du mir
-                        darüber nach Deiner und meiner Art in kurzen oder wenigen Worten Aufschluß geben; so laß Dich meine Unwissenheit nicht
-                        verdrießen und belehre mich.“ (Zelter an Goethe vom 1. August 1816, in: <title ref="#w05593">Briefwechsel zwischen Goethe und
-                            Zelter Bd. 2</title>, S. 294ff., hier S. 295). Goethe antwortet: „<hi rend="latin">Byzanz</hi> steht für <hi rend="latin"
-                            >Constantinopel</hi>, es ist der alte Name, paßt besser in den Styl und wird in Sachen der bildenden Kunst gewöhnlich
-                        gebraucht.“ (Ebd., Goethe an Zelter vom 9. August 1816, S. 297f., hier S. 198).</note> – Mir ist das Buche <lb/> aus der Hand
-                    gefallen. Gewisse, mehr als krasse Un<lb break="no"/>wissenheiten sind unverzeihlich: vollends einem Mann, <lb/> der aus Eitelkeit
-                    auf <persName ref="#p0194" type="bi">Göthes</persName> Freundschaft den Mund so voll <lb/> nimmt! Wie grob würde <hi rend="latin"
-                            ><persName ref="#p0579" type="bi">Zelter</persName></hi> den Layen, der über <lb/> Musik mitsprechen wollen, angelassen
-                    haben, wenn er ge<lb break="no"/>fragt, was <hi rend="latin"><persName ref="#p3476" type="bi">Mozart</persName>, <persName
-                            ref="#p0252" type="bi">Gluck</persName>, <persName ref="#p3514" type="bi">Bach</persName></hi> sei, oder welch ein
-                        Lands<lb break="no"/>mann der so viel fertigende <hi rend="latin">Volti subito</hi>
-                    <note resp="#johanna.preusse">Italienisch für: „schnell umblättern“. Die Anweisung fand sich auf Notenblättern am Ende einer
-                        Seite.</note> wäre. – Und <lb/> wahrlich, dies ist ärger, denn der Quintaner weiß das schon. <lb/> Ein solcher durfte auch
+                        <note resp="#johanna.preusse"><p xml:lang="de">An der besagten Stelle des Briefwechsels schreibt Zelter an Goethe: „Indem ich
+                                <rs ref="#w05599" type="bi">Dein Büchlein</rs> wieder und wieder lese, sitze ich immer fest bey der Stelle: <hi
+                                rend="latin">Nur Byzanz blieb noch ein fester Sitz für die Kirche und die mit ihr verbundene Kunst</hi>. Es fehlt mir
+                            hier an historischen Hülfsmitteln, die ich mir wohl zu Hause eher zu verschaffen und zu erfragen weiß: Was war Byzanz? Wo
+                            war es? – Kannst Du mir darüber nach Deiner und meiner Art in kurzen oder wenigen Worten Aufschluß geben; so laß Dich
+                            meine Unwissenheit nicht verdrießen und belehre mich.“ (Zelter an Goethe vom 1. August 1816, in: <title ref="#w05593"
+                                >Briefwechsel zwischen Goethe und Zelter Bd. 2</title>, S. 294ff., hier S. 295). Goethe antwortet: „<hi rend="latin"
+                                >Byzanz</hi> steht für <hi rend="latin">Constantinopel</hi>, es ist der alte Name, paßt besser in den Styl und wird in
+                            Sachen der bildenden Kunst gewöhnlich gebraucht.“ (Ebd., Goethe an Zelter vom 9. August 1816, S. 297f., hier S. 198).</p>
+                        <p xml:lang="en"/><p xml:lang="fr"/></note> – Mir ist das Buche <lb/> aus der Hand gefallen. Gewisse, mehr als krasse Un<lb
+                        break="no"/>wissenheiten sind unverzeihlich: vollends einem Mann, <lb/> der aus Eitelkeit auf <persName ref="#p0194" type="bi"
+                        >Göthes</persName> Freundschaft den Mund so voll <lb/> nimmt! Wie grob würde <hi rend="latin"><persName ref="#p0579" type="bi"
+                            >Zelter</persName></hi> den Layen, der über <lb/> Musik mitsprechen wollen, angelassen haben, wenn er ge<lb break="no"
+                    />fragt, was <hi rend="latin"><persName ref="#p3476" type="bi">Mozart</persName>, <persName ref="#p0252" type="bi"
+                            >Gluck</persName>, <persName ref="#p3514" type="bi">Bach</persName></hi> sei, oder welch ein Lands<lb break="no"/>mann der
+                    so viel fertigende <hi rend="latin">Volti subito</hi>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Italienisch für: „schnell umblättern“. Die Anweisung fand sich auf Notenblättern am
+                            Ende einer Seite.</p>
+                        <p xml:lang="en">Italian for: "turn the page quickly". The instruction was on sheet music at the end of a page.</p>
+                        <p xml:lang="fr">Italien pour : "tourner la page rapidement". L'instruction était sur la partition à la fin d'une
+                        page.</p></note> wäre. – Und <lb/> wahrlich, dies ist ärger, denn der Quintaner weiß das schon. <lb/> Ein solcher durfte auch
                     fragen, was <hi rend="latin"><placeName ref="#l0037" type="bi">Rom</placeName></hi> sei. – Und dabei <lb/> der Mann, der auch
-                    Baumeister sein wollte<note resp="#johanna.preusse">Zelter war nicht nur Musiker, sondern, dem Beruf seines Vaters folgend, auch
-                        Maurermeister.</note>: er muß nie ein <pb facs="00000927.jpg" n="4"/> Buch über Architektur aufgeschlagen haben. – Es wird
-                    <lb/> aber jezt Mode, sich der Unwissenheit nicht mehr zu schämen. <lb/> Noch vor 20 &amp; wohl 15 Jahren hätte <choice>
+                    Baumeister sein wollte<note resp="#johanna.preusse"><p xml:lang="de">Zelter war nicht nur Musiker, sondern, dem Beruf seines
+                            Vaters folgend, auch Maurermeister.</p>
+                        <p xml:lang="en">Zelter was not only a musician, but also, following his father's profession, a master mason.</p>
+                        <p xml:lang="fr">Zelter n'était pas seulement musicien, mais aussi, suivant la profession de son père, maître
+                        maçon.</p></note>: er muß nie ein <pb facs="00000927.jpg" n="4"/> Buch über Architektur aufgeschlagen haben. – Es wird <lb/>
+                    aber jezt Mode, sich der Unwissenheit nicht mehr zu schämen. <lb/> Noch vor 20 &amp; wohl 15 Jahren hätte <choice>
                         <abbr>dse</abbr>
                         <expan>diese</expan>
                     </choice> dum̄e Frage den ganzen <lb/>
                     <hi hand="#pencil_two" rend="mark">Briefwechsel ruinirt. – Was er über meinen <hi rend="latin"><title ref="#w00226"
                                 >Phantasus</title></hi> sagt,</hi>
-                    <lb/> hat eigentlich gar keinen Sinn. <note resp="#johanna.preusse">Im Rahmen des Briefwechsels berichtet Zelter Goethe von seiner
-                        Lektüre der ersten beiden Teile von Tiecks "Phantasus": <lb/> „Eben habe ich auch den ersten Theil des <hi rend="latin"
-                            >Phantasus</hi> gelesen. Nun ja Herr! ich glaube ihr seyd ein Poet! doch mit Gunst: – von der horizontalen Linie! Ich sage
-                        das nur (denn das Buch ist mir interessant genug gewesen) weil ich mich dabey erinnerte, daß der Kohl grün war ehe er gekocht
-                        wurde: denn der Verfasser äußerte sich letzthin sehr laut und bestimmt gegen den Schutz welchen Du dem Gelegenheits=Gedicht
-                        angedeihen lassen, und daß der Gehalt für die Poesie, in souverainen Staaten, von Oben her komme u. s. w. – Wenn es eine Kunst
-                        ist solche Geschichten aufzusieden und genießbar zu machen, um sich nach Jahrhunderten noch den Tod daran zu lesen; so ist es
-                        wenigstens eine sehr kleine Kunst, worüber die Societät der Irrlichter wohl lachen muß, sie mag wollen oder nicht. Denn das
-                        konnte wohl nur einem <hi rend="latin">Ziebinger</hi> einfallen sich den Leib mit solchem Ballast aufzudunsen, um ihn nachher
-                        auf solche Art haufenweis von sich zu geben. Aber es giebt Leute welche dies doppelte Concoct mit einem Appetite zu sich
-                        nehmen als ob's mit Sonnenstrahlen gekocht wäre.“ (Brief von Zelter an Goethe vom 12. Februar 1813, <title ref="#w05593"
-                            >Briefwechsel Band II (1833)</title>, S. 71f. <lb/> Und am 11. März 1813: <lb/> „Nun habe ich auch den zweyten Theil des
-                            <hi rend="latin">Phantasus</hi> gelesen, worin mir besonders <hi rend="latin">die verkehrte Welt</hi> vielen Spaß gemacht
-                        hat. Diese verkehrte Welt aber ist <hi rend="latin">Alle Welt</hi>, und es ist mir hier erst eingefallen daß die Welt so seyn
-                        muß, wenn man Freude soll daran und darin haben können. Schön bedanken würde ich mich vor einer unverkehrten Welt, worin für
-                        uns beyde kein Platz wäre. Uebrigens (spricht Hr. <hi rend="latin">Ernst</hi>) bist Du ein merkwürdiger Mann, dessen
-                        Bemühungen löblich sind, trotz Deiner Furcht vor dem Genialischen. Deine frühern Gedichte lassen sich genießen und haben
-                        gewirkt, doch solche Menschen wie der Mediceer – sind sehr selten. So spricht der Herr!“ (<rs ref="#w05593" type="bi"
-                            >Ebd.</rs>, S. 77). </note> Und warum that denn dieser <lb/> Mann, so oft wir uns wiedertrafen, <choice>
+                    <lb/> hat eigentlich gar keinen Sinn. <note resp="#johanna.preusse"><p xml:lang="de">Im Rahmen des Briefwechsels berichtet Zelter
+                            Goethe von seiner Lektüre der ersten beiden Teile von Tiecks "Phantasus": <lb/> „Eben habe ich auch den ersten Theil des
+                                <hi rend="latin">Phantasus</hi> gelesen. Nun ja Herr! ich glaube ihr seyd ein Poet! doch mit Gunst: – von der
+                            horizontalen Linie! Ich sage das nur (denn das Buch ist mir interessant genug gewesen) weil ich mich dabey erinnerte, daß
+                            der Kohl grün war ehe er gekocht wurde: denn der Verfasser äußerte sich letzthin sehr laut und bestimmt gegen den Schutz
+                            welchen Du dem Gelegenheits=Gedicht angedeihen lassen, und daß der Gehalt für die Poesie, in souverainen Staaten, von Oben
+                            her komme u. s. w. – Wenn es eine Kunst ist solche Geschichten aufzusieden und genießbar zu machen, um sich nach
+                            Jahrhunderten noch den Tod daran zu lesen; so ist es wenigstens eine sehr kleine Kunst, worüber die Societät der
+                            Irrlichter wohl lachen muß, sie mag wollen oder nicht. Denn das konnte wohl nur einem <hi rend="latin">Ziebinger</hi>
+                            einfallen sich den Leib mit solchem Ballast aufzudunsen, um ihn nachher auf solche Art haufenweis von sich zu geben. Aber
+                            es giebt Leute welche dies doppelte Concoct mit einem Appetite zu sich nehmen als ob's mit Sonnenstrahlen gekocht wäre.“
+                            (Brief von Zelter an Goethe vom 12. Februar 1813, <title ref="#w05593">Briefwechsel Band II (1833)</title>, S. 71f. <lb/>
+                            Und am 11. März 1813: <lb/> „Nun habe ich auch den zweyten Theil des <hi rend="latin">Phantasus</hi> gelesen, worin mir
+                            besonders <hi rend="latin">die verkehrte Welt</hi> vielen Spaß gemacht hat. Diese verkehrte Welt aber ist <hi rend="latin"
+                                >Alle Welt</hi>, und es ist mir hier erst eingefallen daß die Welt so seyn muß, wenn man Freude soll daran und darin
+                            haben können. Schön bedanken würde ich mich vor einer unverkehrten Welt, worin für uns beyde kein Platz wäre. Uebrigens
+                            (spricht Hr. <hi rend="latin">Ernst</hi>) bist Du ein merkwürdiger Mann, dessen Bemühungen löblich sind, trotz Deiner
+                            Furcht vor dem Genialischen. Deine frühern Gedichte lassen sich genießen und haben gewirkt, doch solche Menschen wie der
+                            Mediceer – sind sehr selten. So spricht der Herr!“ (<rs ref="#w05593" type="bi">Ebd.</rs>, S. 77). </p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> Und warum that denn dieser <lb/> Mann, so oft wir uns wiedertrafen, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> auch im Jahr <choice>
                         <unclear cert="medium" reason="illegible">17</unclear>
                         <unclear cert="medium" reason="illegible">12</unclear>
                     </choice>, so freund<lb break="no"/>schaftlich, ja ergeben und verehrend gegen mich? Zog mich zu <lb/> Rath, machte viel Wesens,
-                    daß ich die Akademie besuchen sollte? <note resp="#johanna.preusse">Zelter war seit 1809 Professor an der Akademie der Künste
-                        gewesen.</note>
+                    daß ich die Akademie besuchen sollte? <note resp="#johanna.preusse"><p xml:lang="de">Zelter war seit 1809 Professor an der
+                            Akademie der Künste gewesen.</p>
+                        <p xml:lang="en">Zelter had been a professor at the Academy of Arts since 1809.</p>
+                        <p xml:lang="fr">Zelter était professeur à l'Académie des Arts depuis 1809.</p></note>
                     <lb/> Es giebt, mein Freund, viel Hohlheit in der Welt; hier sehe <lb/> ich immer, unter der Maske der Treuherzigkeit
                     Liebedienerei, nach <lb/> dem Maule schwatzen. – Wie sonderbar; daß <persName ref="#p0194" type="bi">Göthe</persName> seinen <hi
                         rend="underline latin"><persName ref="#p0193" type="bi">Wer<lb break="no"/>ner</persName></hi> auch nicht mit Einem Worte in
@@ -405,10 +445,18 @@
                                     <abbr>Febr.</abbr>
                                     <expan>Februar</expan>
                                 </choice></title></hi> er damals in den Ausdrücken des höchsten</hi>
-                    <lb/> Lobes sprach: – <note resp="#johanna.preusse">Zacharias Werners Stück „Der vierundzwanzigste Februar“ wurde 1810 unter der
-                        Leitung Goethes am Weimarer Hoftheater zum ersten Mal öffentlich aufgeführt (nach einer privaten Uraufführung bei Madame de
-                        Staël 1809). <lb/> Zu Zelters und Goethes Austausch über Zacharias Werner vgl. <title ref="#w05592">Band I des Briefwechsels
-                            (1833)</title>. </note> Was ist das Alles für eine kuriose Freund<lb break="no"/>schaft <choice>
+                    <lb/> Lobes sprach: – <note resp="#johanna.preusse"><p xml:lang="de">Zacharias Werners Stück „Der vierundzwanzigste Februar“ wurde
+                            1810 unter der Leitung Goethes am Weimarer Hoftheater zum ersten Mal öffentlich aufgeführt (nach einer privaten
+                            Uraufführung bei Madame de Staël 1809). <lb/> Zu Zelters und Goethes Austausch über Zacharias Werner vgl. <title
+                                ref="#w05592">Band I des Briefwechsels (1833)</title>. </p>
+                        <p xml:lang="en">Zacharias Werner's play “The Twenty-Fourth February” was performed in public for the first time in 1810 under
+                            the direction of Goethe at the Weimar Court Theater (after a private premiere by Madame de Staël in 1809). <lb/> On
+                            Zelter's and Goethe's exchange about Zacharias Werner see <title ref="#w05592"> Volume I of the Correspondence (1833)
+                            </title>.</p>
+                        <p xml:lang="fr">La pièce de Zacharias Werner « Le vingt-quatrième février » est jouée pour la première fois en public en 1810
+                            sous la direction de Goethe au Théâtre de la Cour de Weimar (après une première privée de Madame de Staël en 1809). <lb/>
+                            Sur l'échange de Zelter et Goethe à propos de Zacharias Werner voir <title ref="#w05592"> Volume I de la Correspondance
+                                (1833) </title>.</p></note> Was ist das Alles für eine kuriose Freund<lb break="no"/>schaft <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Mittheilung! – <stamp>[Stempel:] Staatsbibliothek Preußischer Kulturbesitz</stamp>
@@ -432,8 +480,12 @@
                         <expan>und</expan>
                     </choice>
                     <hi rend="latin"><unclear cert="medium" reason="illegible">Hagen</unclear></hi>
-                    <note resp="#johanna.preusse">Möglicherweise ist <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName>
-                        gemeint, der wie Raumer Professor an der Berliner Universität war.</note>, <unclear cert="medium" reason="illegible"><choice>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Möglicherweise ist <persName ref="#p0199" type="bi">Friedrich Heinrich von der
+                                Hagen</persName> gemeint, der wie Raumer Professor an der Berliner Universität war.</p>
+                        <p xml:lang="en">Possibly <persName ref="#p0199" type="bi"> Friedrich Heinrich von der Hagen </persName>, who, like Raumer,
+                            was a professor at the Berlin University.</p>
+                        <p xml:lang="fr">Il s'agissait peut-être de <persName ref="#p0199" type="bi">Friedrich Heinrich von der Hagen</persName>, qui,
+                            comme Raumer, était professeur à l'Université de Berlin.</p></note>, <unclear cert="medium" reason="illegible"><choice>
                             <abbr>w</abbr>
                             <expan>wenn</expan>
                         </choice></unclear>

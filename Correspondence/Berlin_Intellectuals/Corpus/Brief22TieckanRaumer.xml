@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Friedrich von Raumer, Tieck, Ludwig</collection>
@@ -231,8 +238,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-05-19" who="#johanna.preusse">Changed link to other edition of Raumer's "Aristoteles" (because it appears in
                 Bibliotheca Tieckiana 1849).</change>
             <change when-iso="2016-02-05" who="#johanna.preusse">Corrections: "um nichts" (p.2), "Spanien" (p.3); minor technical corrections; added a
@@ -253,9 +261,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000904.jpg" n="1"/>
-                <note hand="#pencil_one" place="align-right" type="foliation">253</note>
-                <note hand="#pencil_two" place="inline">Tieck an Raumer, <date when-iso="1830-02-03">3 Febr 30</date></note>
-                <p>Mein sehr geliebter Freund,</p>
+                <note hand="#pencil_one" place="align(right)" type="foliation">253</note>
+                <opener><dateline><note hand="#pencil_two">Tieck an Raumer, <date when-iso="1830-02-03">3 Febr 30</date></note></dateline>
+                    <salute>Mein sehr geliebter Freund,</salute></opener>
                 <p>Indem ich die Erden umsetze, um eine zu alte Schuld abzulegen,<lb/> befällt mich eine unendlich wehmüthige Empfindung, und über<lb
                         break="no"/>haupt habe ich in diesem Winter mehr wie einmal das traurige Gefühl<lb/> gehabt, als wenn wir uns nicht wieder
                     sehen würden. Eine so weite<lb/> Reise, die uns jezt trennt. Sie unternehmen Sie mit ungeschwächtem<lb/> Muth, mit jugendlichen
@@ -302,7 +310,9 @@
                         dämmern<lb break="no"/>den Zerstreuung beginnt, <choice>
                         <abbr>ud</abbr>
                         <expan>und</expan>
-                    </choice> in der Arbeit selbst erst den Gegensucht<note resp="#johanna.preusse">[sic]. Gemeint ist "Gegenstand".</note> sucht,<lb/>
+                    </choice> in der Arbeit selbst erst den Gegensucht<note resp="#johanna.preusse"><p xml:lang="de">[sic]. Gemeint ist
+                            "Gegenstand".</p><p xml:lang="en">[sic]. What is meant is "object".</p><p xml:lang="fr">[sic]. Ce que l'on veut dire,
+                            c'est "objet".</p></note> sucht,<lb/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -327,7 +337,7 @@
                     einmal, (aus Haß gegen die Steife<lb/> der meisten deutschen Gelehrten) einmal den <hi rend="latin">Chevalier</hi> etwas
                     spielt,<lb/> — da verdam̄en wir ihn! <persName ref="#p0190" type="bi"><hi rend="latin">Schlegel</hi></persName> ist auf seine
                     Ringe um nichts eitler,<lb/> wie ich auf manche meiner Bücher. Der Mensch ist dabei so kindlich<pb facs="00000906.jpg" n="3"
-                        /><note hand="#pencil" place="align-right" type="foliation">254</note> und wohlwollend, daß ich dies <choice>
+                        /><note hand="#pencil" place="align(right)" type="foliation">254</note> und wohlwollend, daß ich dies <choice>
                         <abbr>ud</abbr>
                         <expan>und</expan>
                     </choice> Manches gern übersehe, wenn ich es<lb/> auch nicht loben kann. <persName ref="#p0713" type="bi"><hi rend="latin"
@@ -363,31 +373,30 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> mich in meiner Eitelkeit auf meine Bücher bestärkt,<lb/> mir aber auch wohl im Studieren forthilft.</p>
-                <p>Gruß, Kuß. — Alle Hausgenossen grüssen herzlichst. Adieu!</p>
-                <p>Ihr</p>
-                <p>L. Tieck.</p>
-                <p><placeName ref="#l0003" type="bi"><choice>
-                            <abbr>Dr.</abbr>
-                            <expan>Dresden</expan>
-                        </choice></placeName>
-                    <date when-iso="1830-02-03">den 3tn <choice>
-                            <abbr>Febr.</abbr>
-                            <expan>Februar</expan>
-                        </choice> 1830.</date>
-                </p>
-                <pb facs="00000907.jpg" n="4"/>
-                <address>
-                    <addrLine rend="vertical align(center)">Des Herrn </addrLine>
-                    <addrLine rend="vertical align(center)">Regierungsrathes <choice>
-                            <abbr>u</abbr>
-                            <expan>und</expan>
-                        </choice> Professors <hi rend="latin underline">von Raumer</hi>
-                    </addrLine>
-                    <addrLine rend="vertical align(center)">hochwohlgebohren </addrLine>
-                    <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>
-                    </addrLine>
-                    <addrLine rend="vertical"><hi rend="underline"><unclear cert="low" reason="illegible">d. H.</unclear></hi></addrLine>
-                </address>
+                <closer><salute>Gruß, Kuß. — Alle Hausgenossen grüssen herzlichst. Adieu!</salute>
+                    <signed>Ihr<lb/> L. Tieck.</signed>
+                    <dateline><placeName ref="#l0003" type="bi"><choice>
+                                <abbr>Dr.</abbr>
+                                <expan>Dresden</expan>
+                            </choice></placeName>
+                        <date when-iso="1830-02-03">den 3tn <choice>
+                                <abbr>Febr.</abbr>
+                                <expan>Februar</expan>
+                            </choice> 1830.</date>
+                    </dateline>
+                    <pb facs="00000907.jpg" n="4"/>
+                    <address>
+                        <addrLine rend="vertical align(center)">Des Herrn </addrLine>
+                        <addrLine rend="vertical align(center)">Regierungsrathes <choice>
+                                <abbr>u</abbr>
+                                <expan>und</expan>
+                            </choice> Professors <hi rend="latin underline">von Raumer</hi>
+                        </addrLine>
+                        <addrLine rend="vertical align(center)">hochwohlgebohren </addrLine>
+                        <addrLine rend="vertical align(center)"><hi rend="underline latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>
+                        </addrLine>
+                        <addrLine rend="vertical"><hi rend="underline"><unclear cert="low" reason="illegible">d. H.</unclear></hi></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>
