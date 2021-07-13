@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -243,8 +250,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Updated annotations.</change>
             <change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
             <change when-iso="2014-11-03" who="#sophia.zeil">Updated annotations.</change>
@@ -261,40 +269,42 @@
         <body>
             <div type="transcription">
                 <pb facs="P1030811.jpg" n="1"/>
-                <note hand="#pencil" place="top-margin-left inline">?</note>
+                <note hand="#pencil" place="top-margin(left) inline">?</note>
                 <note hand="#blue_ink" place="top-margin-center inline">19</note>
-                <p><opener rend="align(right)"><dateline><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="1836-07-10">10 <hi rend="latin">Juli</hi>.<lb/>1836</date>.</dateline></opener><lb/>Was müssen Sie von mir
-                    gedacht haben, mein theurer Freund<lb/>da ich Sie so lange ohne Nachricht gelassen? diese Frage habe<lb/>ich selbst wohl hundert
-                    mal an mich gethan. Sie müssen mir das<lb/>Zeugniß geben daß ich Ihre Briefe immer pünktlich beantwor<lb break="no"/>tet habe,
-                    gegen Sie ist dies kein Verdienst, denn mein<lb/>eignes Gemüth treibt mich dazu an, so wie der Wunsch bald<lb/>wieder etwas von
-                    Ihnen zu erfahren. Dies mal konnte ich<lb/>fast nicht schreiben weil ich von Woche zu Woche hoffte es<lb/>würde sich etwas über
-                    des <rs ref="#p0133" type="bi">Vaters</rs> Reise entscheiden,<lb/>worüber ich Ihnen gern gleich Nachricht geben wollte.
-                    Noch<lb/>immer ist nicht alles fest gesetzt: Es heißt sie wollen mor<lb break="no"/>gen über acht Tage reisen, das kann sich aber
-                    auch noch<lb/>ofte ändern, <rs ref="#p0133" type="bi">Vater</rs> ist wie immer in seinen Arbeiten<note resp="#sophia.zeil">Es
-                        handelt sich um die Novellen <title ref="#w05510">Wunderlichkeiten</title>, erschienen <date when-iso="1837">1837</date> in
-                        der <title ref="#w05511">Urania. Taschenbuch auf das Jahr 1837</title>, und <title ref="#w05512">Die Klausenburg</title>,
-                        abgedruckt <date when-iso="1837">1837</date> in der <title ref="#w05513">Helena. Taschenbuch für das Jahr
-                    1837</title>.</note><lb/>zurück und muß nun fast Tag und Nacht schreiben, ein<lb/>Besuch seines <rs ref="#p0858" type="bi"
-                        >Bruders</rs><note resp="#sophia.zeil">Der Bildhauer <persName ref="#p0858" type="bi">Friedrich Tieck</persName>.</note> aus
-                        <placeName ref="#l1103" type="bi">Berlin</placeName>, der einen ganzen Mo<lb break="no"/>nath bei uns war, hat ihn auch noch
-                    aufgehalten. Wie die<lb/>Reise seyn wird, wie lange dauern, darüber ist noch<lb/>nichts bestimmt, für's erste geht es nach
-                        <placeName ref="#l0152" type="bi">Baden</placeName>, <note hand="#pencil" place="inline">|</note> ob<lb/>sie aber das Bad
-                    brauchen wollen wissen sie noch nicht,<lb/>oder vielmehr sie sagen es nicht, ich glaube es, denn die<lb/><rs ref="#p0232"
-                        type="bi">Gräfinn</rs> bildet sich ein es ist für ihre Gesundheit noth<lb break="no"/>wendig, und da doch alles geschieht was
-                    sie will, so bin<lb/>ich überzeugt sie werden eine ganze Badezeit<note resp="#sophia.zeil">Die Badezeit umfasste in der Regel die
-                        Monate Mai bis September.</note> dort zu<lb/>bringen, obgleich die <rs ref="#p0232" type="bi">Gräfinn</rs> das ganze Jahr
-                        vollkom<lb break="no"/>men gesund gewesen ist. <note hand="#pencil" place="inline">|</note> Von dort wollen sie denn
-                        nach<lb/><placeName ref="#l0205" type="bi">Bonn</placeName> gehen, wo sie sich schon bei <persName ref="#p0190" type="bi"
-                        >Schlegel</persName> gemeldet<lb/>haben, und dann nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName>, wenn sie an
-                    alle diese<lb/>Orte hin kommen, wie lange dort bleiben, das kann<lb/>ich Ihnen alles nicht sagen. Daß die Reise lange dauern<pb
-                        facs="P1030812a.jpg" n="2"/>wird können Sie sich selbst berechnen, und daß er wahrschein<lb break="no"/>lich erst nach
-                        <placeName ref="#l0292" type="bi">Düsseldorf</placeName> kommt wenn Sie schon fort sind.<lb/>Wie leid Ihnen dies thun wird
-                    kann ich mir denken, und<lb/>doch werden Sie in Ihrer Reise<note resp="#sophia.zeil"><persName ref="#p0711" type="bi"
-                            >Uechtritz</persName> fuhr meist von <placeName ref="#l0003" type="bi">Dresden</placeName> aus nach <placeName ref="#0188"
-                            type="bi">Görlitz</placeName> und <placeName ref="#l0940" type="bi">Heidersdorf</placeName> und anschließend nach
-                            <placeName ref="#l1103" type="bi">Berlin</placeName>.</note> nichts ändern können, da<lb/>Ihr Urlaub nicht lang ist, und
-                        <rs ref="#p2412 #p2411" type="bi">Eltern</rs> und <rs ref="#p3188 #p3189 #p2303" type="bi">Geschwister</rs><lb/>Sie schon
+                <opener rend="align(right)"><dateline><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="1836-07-10">10 <hi rend="latin">Juli</hi>.<lb/>1836</date>.</dateline></opener>
+                <p>Was müssen Sie von mir gedacht haben, mein theurer Freund<lb/>da ich Sie so lange ohne Nachricht gelassen? diese Frage habe<lb/>ich
+                    selbst wohl hundert mal an mich gethan. Sie müssen mir das<lb/>Zeugniß geben daß ich Ihre Briefe immer pünktlich beantwor<lb
+                        break="no"/>tet habe, gegen Sie ist dies kein Verdienst, denn mein<lb/>eignes Gemüth treibt mich dazu an, so wie der Wunsch
+                    bald<lb/>wieder etwas von Ihnen zu erfahren. Dies mal konnte ich<lb/>fast nicht schreiben weil ich von Woche zu Woche hoffte
+                    es<lb/>würde sich etwas über des <rs ref="#p0133" type="bi">Vaters</rs> Reise entscheiden,<lb/>worüber ich Ihnen gern gleich
+                    Nachricht geben wollte. Noch<lb/>immer ist nicht alles fest gesetzt: Es heißt sie wollen mor<lb break="no"/>gen über acht Tage
+                    reisen, das kann sich aber auch noch<lb/>ofte ändern, <rs ref="#p0133" type="bi">Vater</rs> ist wie immer in seinen Arbeiten<note
+                        resp="#sophia.zeil">Es handelt sich um die Novellen <title ref="#w05510">Wunderlichkeiten</title>, erschienen <date
+                            when-iso="1837">1837</date> in der <title ref="#w05511">Urania. Taschenbuch auf das Jahr 1837</title>, und <title
+                            ref="#w05512">Die Klausenburg</title>, abgedruckt <date when-iso="1837">1837</date> in der <title ref="#w05513">Helena.
+                            Taschenbuch für das Jahr 1837</title>.</note><lb/>zurück und muß nun fast Tag und Nacht schreiben, ein<lb/>Besuch seines
+                        <rs ref="#p0858" type="bi">Bruders</rs><note resp="#sophia.zeil"><p xml:lang="de">Der Bildhauer <persName ref="#p0858"
+                                type="bi">Friedrich Tieck</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> aus <placeName ref="#l1103"
+                        type="bi">Berlin</placeName>, der einen ganzen Mo<lb break="no"/>nath bei uns war, hat ihn auch noch aufgehalten. Wie
+                    die<lb/>Reise seyn wird, wie lange dauern, darüber ist noch<lb/>nichts bestimmt, für's erste geht es nach <placeName ref="#l0152"
+                        type="bi">Baden</placeName>, <note hand="#pencil" place="inline">|</note> ob<lb/>sie aber das Bad brauchen wollen wissen sie
+                    noch nicht,<lb/>oder vielmehr sie sagen es nicht, ich glaube es, denn die<lb/><rs ref="#p0232" type="bi">Gräfinn</rs> bildet sich
+                    ein es ist für ihre Gesundheit noth<lb break="no"/>wendig, und da doch alles geschieht was sie will, so bin<lb/>ich überzeugt sie
+                    werden eine ganze Badezeit<note resp="#sophia.zeil"><p xml:lang="de">Die Badezeit umfasste in der Regel die Monate Mai bis
+                            September.</p><p xml:lang="en"/><p xml:lang="fr"/></note> dort zu<lb/>bringen, obgleich die <rs ref="#p0232" type="bi"
+                        >Gräfinn</rs> das ganze Jahr vollkom<lb break="no"/>men gesund gewesen ist. <note hand="#pencil" place="inline">|</note> Von
+                    dort wollen sie denn nach<lb/><placeName ref="#l0205" type="bi">Bonn</placeName> gehen, wo sie sich schon bei <persName
+                        ref="#p0190" type="bi">Schlegel</persName> gemeldet<lb/>haben, und dann nach <placeName ref="#l0292" type="bi"
+                        >Düsseldorf</placeName>, wenn sie an alle diese<lb/>Orte hin kommen, wie lange dort bleiben, das kann<lb/>ich Ihnen alles
+                    nicht sagen. Daß die Reise lange dauern<pb facs="P1030812a.jpg" n="2"/>wird können Sie sich selbst berechnen, und daß er
+                        wahrschein<lb break="no"/>lich erst nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName> kommt wenn Sie schon fort
+                    sind.<lb/>Wie leid Ihnen dies thun wird kann ich mir denken, und<lb/>doch werden Sie in Ihrer Reise<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> fuhr meist von <placeName ref="#l0003" type="bi"
+                                >Dresden</placeName> aus nach <placeName ref="#0188" type="bi">Görlitz</placeName> und <placeName ref="#l0940"
+                                type="bi">Heidersdorf</placeName> und anschließend nach <placeName ref="#l1103" type="bi">Berlin</placeName>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> nichts ändern können, da<lb/>Ihr Urlaub nicht lang ist, und <rs
+                        ref="#p2412 #p2411" type="bi">Eltern</rs> und <rs ref="#p3188 #p3189 #p2303" type="bi">Geschwister</rs><lb/>Sie schon
                     erwarten. Ich werde Ihnen auf jeden Fall, und<lb/>darauf können Sie sich verlassen, im <date when-iso="1836-08">August</date> noch
                     einmal<lb/>schreiben, ich denke wenn ich meinen Brief Mitte <date when-iso="1836-08">August</date><lb/>abschicke, trifft er Sie
                     noch? Vielleicht kann ich Ihnen<lb/>dann schon etwas genauer sagen, ob <rs ref="#p0133" type="bi">Vater</rs> Ende <date
@@ -319,47 +329,49 @@
                         so<pb facs="P1030812b.jpg" n="3"/>schwer wird. Doch Gottes Barmherzigkeit wird auch diesen<lb/>Zwiespalt ausgleichen und denen
                     endlich den Frieden geben<lb/>die eines guten Willens sind, bleibt auch die Ausführung<lb/>hinter dem Vorsatz zurück, und erliegt
                     auch oft die Kraft<lb/>unter der Schwäche.</p>
-                <p>Was Ihre jungen Maler<note resp="#sophia.zeil">Wer genau gemeint sein könnte, ist unklar. Es handelt sich im weitesten Sinne um
-                        Künstler der "<placeName ref="#l0292" type="bi">Düsseldorfer</placeName> Malerschule" unter der Leitung von <persName
-                            ref="#p0808" type="bi">Wilhelm von Schadow</persName> und <persName ref="#p0453" type="bi">Peter von
-                        Cornelius</persName>.</note> betrifft so suchen Sie sie nur zu<lb break="no"/>frieden zu stellen, die hübsche Aufmerksamkeit
-                    mit dem<lb/>Komödienzettel<note resp="#sophia.zeil"><persName ref="#p2304" type="bi">Immermann</persName> hatte zur von ihm
-                        inszenierten Uraufführung von <persName ref="#p0133" type="bi">Tiecks</persName>
-                        <title ref="#w05445">Ritter Blaubart</title> am <placeName ref="#l0292" type="bi">Düsseldorfer</placeName> Theater einen
-                        Komödienzettel bei dem Maler <persName ref="#p3492" type="bi">Adolph Schrödter</persName> in Auftrag gegeben.</note> hat <rs
-                        ref="#p0133" type="bi">Vater</rs> Freude gemacht, auch sind die<lb/>Verzierungen allerliebst, daß er keine Briefe schreibt
-                    ist<lb/>bekannt und diese Abneigung nim̄t immer noch zu, wenn<lb/>er nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName>
-                    kommt wird seine Liebenswürdigkeit<lb/>alles wieder ausgleichen.</p>
+                <p>Was Ihre jungen Maler<note resp="#sophia.zeil"><p xml:lang="de">Wer genau gemeint sein könnte, ist unklar. Es handelt sich im
+                            weitesten Sinne um Künstler der "<placeName ref="#l0292" type="bi">Düsseldorfer</placeName> Malerschule" unter der Leitung
+                            von <persName ref="#p0808" type="bi">Wilhelm von Schadow</persName> und <persName ref="#p0453" type="bi">Peter von
+                                Cornelius</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> betrifft so suchen Sie sie nur zu<lb break="no"
+                    />frieden zu stellen, die hübsche Aufmerksamkeit mit dem<lb/>Komödienzettel<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p2304" type="bi">Immermann</persName> hatte zur von ihm inszenierten Uraufführung von <persName ref="#p0133"
+                                type="bi">Tiecks</persName>
+                            <title ref="#w05445">Ritter Blaubart</title> am <placeName ref="#l0292" type="bi">Düsseldorfer</placeName> Theater einen
+                            Komödienzettel bei dem Maler <persName ref="#p3492" type="bi">Adolph Schrödter</persName> in Auftrag gegeben.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> hat <rs ref="#p0133" type="bi">Vater</rs> Freude gemacht, auch sind
+                    die<lb/>Verzierungen allerliebst, daß er keine Briefe schreibt ist<lb/>bekannt und diese Abneigung nim̄t immer noch zu,
+                    wenn<lb/>er nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName> kommt wird seine Liebenswürdigkeit<lb/>alles wieder
+                    ausgleichen.</p>
                 <p>Ueber die <title ref="#w05501">Epigonen</title> ließe sich viel sagen, ein ausgezeich<lb break="no"/>netes Werk ist es auf jeden
                     Fall, doch glaube ich nicht<lb/>daß ich es so bald wieder lese, denn der unangenehme<lb/>Eindruck den es zurück läßt ist zu
                     überwiegend ge<lb break="no"/>gen alles Schöne was darin ist, wenigstens bei mir.</p>
-                <p>Daß Sie nicht auf <persName ref="#p0713" type="bi">Löbellsche</persName> Grillen<note resp="#sophia.zeil"><persName ref="#p0713"
-                            type="bi">Loebell</persName> war durch <persName ref="#p0217" type="bi">Dorotheas</persName> zunehmend distanzierte
-                        Haltung ihm gegenüber wohl verstimmt; vgl. <ref target="Brief17DorotheaTieckanUechtritz.xml">Brief vom 27. Juli 1835</ref>,
-                        S. 4 (Bl. 2 verso).</note> gerathen, dafür<lb/>glaube ich bei Ihnen sicher zu seyn, viel eher könnte ich<lb/>mir so etwas von
-                    Ihnen einbilden, darum seyn Sie mir<lb/>nun auch nicht böse, Sie sehen es war keine Nachlässig<lb break="no"/>keit daß ich nicht
-                    schrieb. Ich freue mich unbeschreiblich dar<lb break="no"/>auf Sie wieder zu sehen, und das thun wir alle. Gott<lb/>gebe daß wir
-                    eine wenigstens sorgenfreie Zeit mit<lb break="no"/>einander verleben. Ich spaare mir alles worüber ich<lb/>Ihnen noch schreiben
-                    möchte bis dahin auf. <closer><salute>Tausend Grü<lb break="no"/>ße von den Meinigen.</salute> Sollte mein Brief, wenn ich
-                        ihn<lb/>Mitte <date when-iso="1836-08">August</date> von <rs ref="#l0003" type="bi">hier</rs> abschicke <add place="above"
-                            >Sie</add> nicht mehr treffen, so<lb/>müssen Sie es mir noch schreiben. Bis dahin leben Sie<lb/>wohl und <del
-                            rend="strikethrough"><gap reason="illegible"/></del> vergessen Sie nicht Ihre treue Freundin<lb/><signed
-                            rend="align(right)"><persName ref="#p0217" type="bi"><hi rend="latin">Dorothea</hi></persName>.</signed></closer></p>
-                <seal>Rotes Siegel</seal>
-                <pb facs="P1030813.jpg" n="4" xml:id="Brief22DorotheaTieckanUechtritz-Blatt2v"/>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
-                        when-iso="1836-07-10">10 <choice>
-                            <abbr>Jul</abbr>
-                            <expan>Juli</expan>
-                        </choice> 36</date></stamp>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0013" type="bi"><hi rend="majuscule">MAGDEBURG</hi></placeName><lb/><date
-                        when-iso="1836-07-12">12 / 7</date></stamp>
-                <stamp>Poststempel mit den Angaben: <date when-iso="1836-07-15">15 7</date><lb/><unclear reason="faded" rend="align(vertical)"
-                        >N</unclear>
-                    <unclear reason="faded" rend="align(vertical)">J</unclear></stamp>
-                <del hand="#dark_ink" rend="strikethrough"><note hand="#dark_ink" place="top-margin-center inline">91</note></del>
-                <note hand="#dark_ink" place="top-margin-center inline">3</note>
-                <p><address>
+                <p>Daß Sie nicht auf <persName ref="#p0713" type="bi">Löbellsche</persName> Grillen<note resp="#sophia.zeil"><p xml:lang="de"
+                                ><persName ref="#p0713" type="bi">Loebell</persName> war durch <persName ref="#p0217" type="bi">Dorotheas</persName>
+                            zunehmend distanzierte Haltung ihm gegenüber wohl verstimmt; vgl. <ref target="Brief17DorotheaTieckanUechtritz.xml">Brief
+                                vom 27. Juli 1835</ref>, S. 4 (Bl. 2 verso).</p><p xml:lang="en"/><p xml:lang="fr"/></note> gerathen, dafür<lb/>glaube
+                    ich bei Ihnen sicher zu seyn, viel eher könnte ich<lb/>mir so etwas von Ihnen einbilden, darum seyn Sie mir<lb/>nun auch nicht
+                    böse, Sie sehen es war keine Nachlässig<lb break="no"/>keit daß ich nicht schrieb. Ich freue mich unbeschreiblich dar<lb
+                        break="no"/>auf Sie wieder zu sehen, und das thun wir alle. Gott<lb/>gebe daß wir eine wenigstens sorgenfreie Zeit mit<lb
+                        break="no"/>einander verleben. Ich spaare mir alles worüber ich<lb/>Ihnen noch schreiben möchte bis dahin auf.</p>
+                <closer><salute>Tausend Grü<lb break="no"/>ße von den Meinigen.</salute> Sollte mein Brief, wenn ich ihn<lb/>Mitte <date
+                        when-iso="1836-08">August</date> von <rs ref="#l0003" type="bi">hier</rs> abschicke <add place="above">Sie</add> nicht mehr
+                    treffen, so<lb/>müssen Sie es mir noch schreiben. Bis dahin leben Sie<lb/>wohl und <del rend="strikethrough"><gap
+                            reason="illegible"/></del> vergessen Sie nicht Ihre treue Freundin<lb/><signed rend="align(right)"><persName ref="#p0217"
+                            type="bi"><hi rend="latin">Dorothea</hi></persName>.</signed>
+                    <pb facs="P1030813.jpg" n="4" xml:id="Brief22DorotheaTieckanUechtritz-Blatt2v"/>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
+                            when-iso="1836-07-10">10 <choice>
+                                <abbr>Jul</abbr>
+                                <expan>Juli</expan>
+                            </choice> 36</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0013" type="bi"><hi rend="majuscule">MAGDEBURG</hi></placeName><lb/><date
+                            when-iso="1836-07-12">12 / 7</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <date when-iso="1836-07-15">15 7</date><lb/><unclear reason="faded" rend="align(vertical)"
+                            >N</unclear>
+                        <unclear reason="faded" rend="align(vertical)">J</unclear></stamp>
+                    <del hand="#dark_ink" rend="strikethrough"><note hand="#dark_ink" place="top-margin-center inline">91</note></del>
+                    <note hand="#dark_ink" place="top-margin-center inline">3</note>
+                    <address>
                         <addrLine><choice>
                                 <abbr>Sr</abbr>
                                 <expan>Seiner</expan>
@@ -372,15 +384,15 @@
                         <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
                         <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l0292" type="bi">Düsseldorf</placeName></hi>.</addrLine>
                         <addrLine rend="align(center)">am <hi rend="underline">Rhein</hi>.</addrLine>
-                    </address></p>
-                <p><hi rend="underline">frei.</hi></p>
-                <note hand="#dark_ink" place="margin-right inline">&amp;</note>
-                <del hand="#red_ink" rend="strikethrough"><note hand="#red_ink2" place="center inline"><unclear reason="illegible">8
-                        2</unclear></note></del>
-                <lb/>
-                <del hand="#red_ink2" rend="strikethrough"><note hand="#red_pencil" place="center inline"><unclear reason="illegible">8
-                        u</unclear></note></del>
-                <note hand="#red_ink2" place="center inline">6u</note>
+                    </address>
+                    <note><hi rend="underline">frei.</hi></note>
+                    <note hand="#dark_ink" place="margin(right) inline">&amp;</note>
+                    <note hand="#red_ink2" place="center inline"><del hand="#red_ink" rend="strikethrough"><unclear reason="illegible">8
+                            2</unclear></del></note>
+                    <lb/>
+                    <note hand="#red_pencil" place="center inline"><del hand="#red_ink2" rend="strikethrough"><unclear reason="illegible">8
+                                u</unclear></del></note>
+                    <note hand="#red_ink2" place="center inline">6u</note></closer>
             </div>
         </body>
     </text>

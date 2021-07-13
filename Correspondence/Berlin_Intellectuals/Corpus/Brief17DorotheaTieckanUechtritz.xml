@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -223,8 +230,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Small updates.</change>
             <change when-iso="2014-11-22" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
@@ -244,32 +252,36 @@
         <body>
             <div type="transcription">
                 <pb facs="P1030795.jpg" n="1"/>
-                <note hand="#pencil" place="top-margin-left inline">10 – bleiben</note>
+                <note hand="#pencil" place="top-margin(left) inline">10 – bleiben</note>
                 <note hand="#blue_ink_2" place="top-margin-center inline">15</note>
-                <del hand="#blue_ink" rend="overwritten"><note hand="#blue_ink" place="top-margin-center inline">14</note></del>
-                <note hand="#blue_ink" place="top-magin-center inline">10</note>
-                <p><opener rend="align(right)"><dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
-                                when-iso="1835-07-27">27 <hi rend="latin">Juli</hi> 1835</date>.</dateline></opener><lb/>Indem ich Ihren Brief hervor
-                    suchte, um<lb/>ihn noch einmal zu lesen und dann zu be<lb break="no"/>antworten, erschrecke ich wirklich über sein<lb/>Alter; denn
-                    ich dachte nicht daß es schon so<lb/>lange her ist seit Sie mir schrieben, mein<lb/>theuerster Freund. Immer wollte ich
-                    Ihnen<lb/>schreiben, aber in dem schönen, einförmig<lb/>ruhigen Leben welches ich führe vergeht die<lb/>Zeit so schnell, daß ich
-                    nicht weiß wo der<lb/>Sommer geblieben ist. <note hand="#pencil" place="inline">(</note>Ich weiß nicht ob ich<lb/>es Ihnen schon
-                    schrieb daß wir einen Garten<lb/>gemiethet<note resp="#sophia.zeil">Vgl. Brief vom <ref
-                            target="Brief16DorotheaTieckanUechtritz.xml">10. April 1835, S. 1. (Bl. 1 recto)</ref>.</note> haben wo die <rs
-                        ref="#p0233" type="bi">Mutter</rs> sich bei schönem<lb/>Wetter den ganzen Tag aufhält und eine<lb/>von uns <rs
-                        ref="#p0217 #p0218" type="bi">beiden</rs><note resp="#sophia.zeil"><persName ref="#p0217" type="bi">Dorothea</persName> und
-                            <persName ref="#p0218" type="bi">Agnes Tieck</persName>.</note> immer mit ihr ist, das ist<lb/>ein sehr schönes, einsames
-                    Leben, und die<lb/>freie Luft und Ruhe thut der <rs ref="#p0233" type="bi">Mutter</rs> so<lb/>wohl daß sie täglich an Kräften
+                <note place="top-margin-center inline"><subst>
+                        <del hand="#blue_ink" rend="overwritten">14</del>
+                        <add hand="#blue_ink" place="across">10</add>
+                    </subst></note>
+                <opener rend="align(right)"><dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
+                            when-iso="1835-07-27">27 <hi rend="latin">Juli</hi> 1835</date>.</dateline></opener>
+                <p>Indem ich Ihren Brief hervor suchte, um<lb/>ihn noch einmal zu lesen und dann zu be<lb break="no"/>antworten, erschrecke ich
+                    wirklich über sein<lb/>Alter; denn ich dachte nicht daß es schon so<lb/>lange her ist seit Sie mir schrieben, mein<lb/>theuerster
+                    Freund. Immer wollte ich Ihnen<lb/>schreiben, aber in dem schönen, einförmig<lb/>ruhigen Leben welches ich führe vergeht
+                    die<lb/>Zeit so schnell, daß ich nicht weiß wo der<lb/>Sommer geblieben ist. <note hand="#pencil" place="inline">(</note>Ich weiß
+                    nicht ob ich<lb/>es Ihnen schon schrieb daß wir einen Garten<lb/>gemiethet<note resp="#sophia.zeil"><p xml:lang="de">Vgl. Brief
+                            vom <ref target="Brief16DorotheaTieckanUechtritz.xml">10. April 1835, S. 1. (Bl. 1 recto)</ref>.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> haben wo die <rs ref="#p0233" type="bi">Mutter</rs> sich bei schönem<lb/>Wetter den ganzen Tag
+                    aufhält und eine<lb/>von uns <rs ref="#p0217 #p0218" type="bi">beiden</rs><note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0217" type="bi">Dorothea</persName> und <persName ref="#p0218" type="bi">Agnes Tieck</persName>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> immer mit ihr ist, das ist<lb/>ein sehr schönes, einsames Leben, und
+                    die<lb/>freie Luft und Ruhe thut der <rs ref="#p0233" type="bi">Mutter</rs> so<lb/>wohl daß sie täglich an Kräften
                     zunimmt,<lb/>und das Uebel sich so bedeutend vermindert<lb/>daß wir die Hoffnung fassen können,<lb/>sie noch ganz wieder
                     hergestellt zu sehen.<lb/>Ich kann Ihnen nicht beschreiben mit welch eig<lb break="no"/>nem Gefühl von Dank und Rührung mich
                     diese<lb/>ganz besondre Gnade Gottes erfüllt, denn<lb/>sie war doch den Winter so elend, daß alle<lb/>Aerzte wie Nichtärzte ihre
                     Erhaltung und Her<lb break="no"/>stellung für unmöglich hielten. Wie viel<lb/>schwere Kämpfe hat es mir nicht gekostet<lb/>wenn
                     ich mir sagte <del rend="strikethrough"><gap reason="illegible"/></del> wie ich mich in<lb/>Gottes Willen ergeben müsse, und es
                         nicht<pb facs="P1030796a.jpg" n="2"/>konnte, und immer nur von neuem um<lb/>ihr Leben und ihre Genesung bath. Es muß<lb/>doch
-                    gar zu schrecklich seyn, die Elter<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
-                            ref="#w03300">Erinnerungen</title> (S. 194) steht "Eltern".</note> zu<lb/>verlieren, und ich kann mir nicht<!--[195]-->
-                    denken daß<lb/>den Eltern der Verlust der Kinder so viele<lb/>Schmerzen macht. Das Gefühl daß ich bei einem<lb/>solchen Unglück
-                    keine Ergebung haben werde<lb/>quält mich oft</p>
+                    gar zu schrecklich seyn, die Elter<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi"
+                            >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 194) steht "Eltern".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> zu<lb/>verlieren, und ich kann mir nicht<!--[195]--> denken daß<lb/>den Eltern der Verlust der
+                    Kinder so viele<lb/>Schmerzen macht. Das Gefühl daß ich bei einem<lb/>solchen Unglück keine Ergebung haben werde<lb/>quält mich
+                    oft</p>
                 <p>Mein <rs ref="#p0133" type="bi">Vater</rs> war bis jetzt immer wohl, hat<lb/>aber seit einigen Tagen viele Schmerzen,<lb/>es kommt
                     wohl von der plötzlichen Verände<lb break="no"/>rung des Wetters, denn es wurde recht kalt,<lb/>und ist erst heut wieder schön.
                     Ich glaube<lb/>nicht daß er etwas über die <title ref="#w04329">Rosamunde</title><lb/>schreiben wird, er entschließt sich gar
@@ -286,76 +298,82 @@
                     />lichen Zeit, und das ist keine Freude.<lb/>Lassen Sie sich nur dadurch nicht vom Ar<lb break="no"/>beiten abschrecken; <persName
                         ref="#p0194" type="bi">Goethe</persName> sagt: <cit>
                         <quote>Wenn<lb/>die Nachwelt mit genießen soll, so muß<lb/>des Künstlers Mitwelt sich vergessen;</quote>
-                    </cit><note resp="#sophia.zeil"><persName ref="#p0194" type="bi">Goethe</persName>: <title ref="#w00362">Torquato Tasso</title>,
-                        S. 19 (1. Akt, 2. Szene).</note> und<lb/>so muß auch der Künstler seine Mitwelt<lb/>bei der Arbeit vergessen, und auch
-                    ohne<lb/>zu schreiben und zu dichten finde ich muß<lb/>man das thun, um das Leben und sein<lb/>eignes Daseyn zu genießen. Es mag
-                        wohl<pb facs="P1030796b.jpg" n="3"/>nicht allen Menschen so gehen, aber mir<lb/>ist immer als wäre ich so in die
-                    jetzige<lb/>Zeit hineingerathen und paßte gar nicht<lb/>dazu, darum wird es mir immer mehr Be<lb break="no"/>dürfniß mich ganz
-                    zurück zu ziehen, und<lb/>dann ist mir so recht wohl und heimlich zu muthe</p>
-                <p>Was Sie mir über den <title ref="#w05445">Blaubart</title><note resp="#sophia.zeil"><persName ref="#p2304" type="bi"
-                            >Immermann</persName> hatte <persName ref="#p0133" type="bi">Tiecks</persName>
-                        <title ref="#w05445">Ritter Blaubart</title> am <date when-iso="1835-05-03">3. Mai 1835</date> in <placeName ref="#l0292"
-                            type="bi">Düsseldorf</placeName> inszeniert.</note> schreiben<lb/>ist mir sehr erfreulich, und ich erwartete<lb/>Nachricht
-                    von Ihnen, da ich mich doch auf <persName ref="#p2304" type="bi">Im<lb break="no"/>merman̄</persName>s Bericht, der meinem <rs
-                        ref="#p0133" type="bi">Vater</rs> gleich<lb/>geschrieben hatte,<note resp="#sophia.zeik">Der Brief von <persName ref="#p2304"
-                            type="bi">Immermann</persName> an <persName ref="#p0133" type="bi">Tieck</persName> datiert vom <date
-                            when-iso="1835-05-04">4. Mai 1835</date>; vgl. <persName ref="#p0714" type="bi">Holtei</persName>: <title ref="#w05377"
-                            >Briefe an Ludwig Tieck</title>, S. 79–82.</note> nicht so ganz verlassen<lb/>wollte, die beiden Briefe lauten aber
-                    fast<lb/>ganz gleich und man sollte schon aus die<lb break="no"/>ser Uebereinstim̄ung auf eine gegenseiti<lb break="no"/>ge
-                        Annäherung<note resp="#sophia.zeil">Zwischen <persName ref="#p2304" type="bi">Immermann</persName> und <persName ref="#p0711"
-                            type="bi">Uechtritz</persName> kam es erst Anfang <date when-iso="1836-01">1836</date> zu einer Versöhnung. Vgl. den Brief
-                        von <persName ref="#p0711" type="bi">Uechtritz</persName> an seine <rs ref="#p2411 #p2412" type="bi">Eltern</rs> vom <date
-                            when-iso="1836-02-25">25. Februar 1836</date>: "Es wird Euch interessieren zu hören, daß ich mit <persName ref="#p2304"
-                            type="bi">Immermann</persName> versöhnt bin. Er hat den ersten Schritt gethan und mich auf dem Neujahrsballe beim <rs
-                            ref="#p3471" type="bi">Prinzen</rs> angeredet. Ich bin ihm natürlich sehr freundlich entgegengekommen und unser Verhältniß
-                        ist jetzt besser, als es vielleicht jemals war." (<persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title>, S. 142.)</note> schließen; schreiben Sie mir<lb/>doch ob diese zu stande gekommen ist.<lb/>Wohl
-                    hätte mein <rs ref="#p0133" type="bi">Vater</rs> viel für die <placeName ref="#l0001" type="bi">deutsche</placeName><lb/>Bühne
-                    thun können, und er wäre gewiß<lb/>der einzige gewesen; doch mir ist es nicht<lb/>gegeben mich mit meinen Gedanken
-                    in<lb/>dergleichen Möglichkeiten zu vertiefen,<lb/>auch wenn man immer von <persName ref="#p0194" type="bi">Goethe</persName>
-                    sagt, er<lb/>würde<!--[196]--> viel mehr vollendet haben und grö<lb break="no"/>ßeres wäre er nicht Minister in <placeName
-                        ref="#l0664" type="bi">Weimar</placeName><lb/>gewesen. Jedes Leben hat doch seine Noth<lb break="no"/>wendigkeit und seine
-                    Bedingnisse in sich,<lb/>und das Schicksal hängt wieder so genau<lb/>mit dem Charakter zusammen. In dieser<lb/>irdischen Welt ist
-                    einmal dafür gesorgt<lb/>daß die Bäume nicht in den Himmel wachsen<lb/>und so sind jedem Genius seine Flügel<lb/>und auch<note
-                        resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 196)
-                        fehlt "auch".</note> seine Fesseln mit gegeben.</p>
+                    </cit><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0194" type="bi">Goethe</persName>: <title ref="#w00362">Torquato
+                                Tasso</title>, S. 19 (1. Akt, 2. Szene).</p><p xml:lang="en"/><p xml:lang="fr"/></note> und<lb/>so muß auch der
+                    Künstler seine Mitwelt<lb/>bei der Arbeit vergessen, und auch ohne<lb/>zu schreiben und zu dichten finde ich muß<lb/>man das thun,
+                    um das Leben und sein<lb/>eignes Daseyn zu genießen. Es mag wohl<pb facs="P1030796b.jpg" n="3"/>nicht allen Menschen so gehen,
+                    aber mir<lb/>ist immer als wäre ich so in die jetzige<lb/>Zeit hineingerathen und paßte gar nicht<lb/>dazu, darum wird es mir
+                    immer mehr Be<lb break="no"/>dürfniß mich ganz zurück zu ziehen, und<lb/>dann ist mir so recht wohl und heimlich zu muthe</p>
+                <p>Was Sie mir über den <title ref="#w05445">Blaubart</title><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p2304"
+                                type="bi">Immermann</persName> hatte <persName ref="#p0133" type="bi">Tiecks</persName>
+                            <title ref="#w05445">Ritter Blaubart</title> am <date when-iso="1835-05-03">3. Mai 1835</date> in <placeName ref="#l0292"
+                                type="bi">Düsseldorf</placeName> inszeniert.</p><p xml:lang="en"/><p xml:lang="fr"/></note> schreiben<lb/>ist mir sehr
+                    erfreulich, und ich erwartete<lb/>Nachricht von Ihnen, da ich mich doch auf <persName ref="#p2304" type="bi">Im<lb break="no"
+                        />merman̄</persName>s Bericht, der meinem <rs ref="#p0133" type="bi">Vater</rs> gleich<lb/>geschrieben hatte,<note
+                        resp="#sophia.zeik"><p xml:lang="de">Der Brief von <persName ref="#p2304" type="bi">Immermann</persName> an <persName
+                                ref="#p0133" type="bi">Tieck</persName> datiert vom <date when-iso="1835-05-04">4. Mai 1835</date>; vgl. <persName
+                                ref="#p0714" type="bi">Holtei</persName>: <title ref="#w05377">Briefe an Ludwig Tieck</title>, S. 79–82.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> nicht so ganz verlassen<lb/>wollte, die beiden Briefe lauten aber fast<lb/>ganz
+                    gleich und man sollte schon aus die<lb break="no"/>ser Uebereinstim̄ung auf eine gegenseiti<lb break="no"/>ge Annäherung<note
+                        resp="#sophia.zeil"><p xml:lang="de">Zwischen <persName ref="#p2304" type="bi">Immermann</persName> und <persName ref="#p0711"
+                                type="bi">Uechtritz</persName> kam es erst Anfang <date when-iso="1836-01">1836</date> zu einer Versöhnung. Vgl. den
+                            Brief von <persName ref="#p0711" type="bi">Uechtritz</persName> an seine <rs ref="#p2411 #p2412" type="bi">Eltern</rs> vom
+                                <date when-iso="1836-02-25">25. Februar 1836</date>: "Es wird Euch interessieren zu hören, daß ich mit <persName
+                                ref="#p2304" type="bi">Immermann</persName> versöhnt bin. Er hat den ersten Schritt gethan und mich auf dem
+                            Neujahrsballe beim <rs ref="#p3471" type="bi">Prinzen</rs> angeredet. Ich bin ihm natürlich sehr freundlich
+                            entgegengekommen und unser Verhältniß ist jetzt besser, als es vielleicht jemals war." (<persName ref="#p2151" type="bi"
+                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title>, S. 142.)</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    schließen; schreiben Sie mir<lb/>doch ob diese zu stande gekommen ist.<lb/>Wohl hätte mein <rs ref="#p0133" type="bi">Vater</rs>
+                    viel für die <placeName ref="#l0001" type="bi">deutsche</placeName><lb/>Bühne thun können, und er wäre gewiß<lb/>der einzige
+                    gewesen; doch mir ist es nicht<lb/>gegeben mich mit meinen Gedanken in<lb/>dergleichen Möglichkeiten zu vertiefen,<lb/>auch wenn
+                    man immer von <persName ref="#p0194" type="bi">Goethe</persName> sagt, er<lb/>würde<!--[196]--> viel mehr vollendet haben und
+                        grö<lb break="no"/>ßeres wäre er nicht Minister in <placeName ref="#l0664" type="bi">Weimar</placeName><lb/>gewesen. Jedes
+                    Leben hat doch seine Noth<lb break="no"/>wendigkeit und seine Bedingnisse in sich,<lb/>und das Schicksal hängt wieder so
+                    genau<lb/>mit dem Charakter zusammen. In dieser<lb/>irdischen Welt ist einmal dafür gesorgt<lb/>daß die Bäume nicht in den Himmel
+                    wachsen<lb/>und so sind jedem Genius seine Flügel<lb/>und auch<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
+                            >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 196) fehlt "auch".</note> seine Fesseln mit gegeben.</p>
                 <pb facs="P1030797.jpg" n="4"/>
-                <p><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 196)
-                        folgt eine unmarkierte Auslassung des folgenden Absatzes.</note><note hand="#pencil" place="inline">(</note>Daß auch Sie mir
-                    über <persName ref="#p0713" type="bi">Löbell</persName> schreiben<lb/>ist mir sehr unangenehm. Fast seit einem<lb/>Jahre höre ich
-                    nun von dieser unangeneh<lb break="no"/>men Sache und weiß weder was ich ihm ge<lb break="no"/>than habe, noch was er von mir
-                    will.<lb/>Ich habe ihn früher anders beurtheilt,<lb/>denn ich hielt ihn für theilnehmend und<lb/>bescheiden, er ist aber gar zu
-                    eitel, und<lb/>verlangt man soll sich nur mit ihm be<lb break="no"/>schäftigen, gegen eine solche Zudringlich<lb break="no"/>keit
-                    giebt es kein andres Mittel als<lb/>sich zurück zu ziehen. Wenn sie einmal<lb/>längere Zeit mit ihm leben müßten wür<lb break="no"
-                    />den Sie sich auch nicht vertragen.<note hand="#pencil" place="inline">)</note><note resp="#sophia.zeil">Vermutlich hatte
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> in seinem Brief Stellung für <persName ref="#p0713" type="bi"
-                            >Loebell</persName> bezogen, der in <placeName ref="#l0205" type="bi">Bonn</placeName> wohnte und den er gelegentlich sah.
-                        Bereits im Brief vom <ref target="Brief14DorotheaTieckanUechtritz.xml">21. November 1834</ref>, S. 6 (Bl. 3 verso) berichtete
-                            <persName ref="#p0217" type="bi">Dorothea</persName> von ihrer zunehmenden Abneigung <persName ref="#p0713" type="bi"
-                            >Loebell</persName> gegenüber sowie von ihrem Wunsch, so wenig wie möglich mit ihm zu tun haben zu wollen, was <persName
-                            ref="#p0713" type="bi">Loebell</persName> ihr möglicherweise übel genommen hatte.</note></p>
-                <p>Doch nun endlich zum Hauptpunkt<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
-                            ref="#w03300">Erinnerungen</title> (S. 196) steht "Hauptpunkte".</note> mei<lb break="no"/>nes Briefes: Wie ist es mit
-                    Ihrem Her<lb break="no"/>kommen in diesem Herbst?<note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName>
-                        unternahm <date when-iso="1835">1835</date> keine Reise nach <placeName ref="#l0003" type="bi">Dresden</placeName>.</note>
-                    Nach einem<lb/>früheren Briefe von Ihnen hoffte ich ganz<lb/>gewiß darauf, unser <persName ref="#p3450" type="bi"
-                    >Porth</persName>, der bei Ihnen<lb/>war meint aber Sie würden nicht kom̄en<lb/>und wie wird es dann mit Ihren <title
-                        ref="#w04347">Chaldä<lb break="no"/>ern</title>?<note resp="#sophia.zeil"><persName ref="#p0711" type="bi"
-                            >Uechtritz</persName> begann die <title ref="#w04347">Babylonier in Jerusalem</title> unter dem Titel "Die Chaldäer in
-                        Jerusalem". Vgl. <persName ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als
-                            dramatischer Dichter</title>, S. 90.</note> wenn Sie nicht kom̄en können schicken<lb/>Sie uns die doch wohl? Ich hoffe
-                    aber doch<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 196) fehlt "doch".</note><lb/>im̄er noch Sie kommen selbst. Sie fän<lb break="no"/>den uns doch
-                    ruhiger und heitrer als im<lb/>vorigen Jahre,<note resp="#sophia.zeil">Als <persName ref="#p0711" type="bi">Uechtritz</persName>
-                        Ende <date when-iso="1834-10">Oktober 1834</date> die Familie <persName ref="#p0133" type="bi">Tieck</persName> in <placeName
-                            ref="#l0003" type="bi">Dresden</placeName> besucht hatte, war <persName ref="#p0233" type="bi">Amalia Tieck</persName>
-                        bereits erkrankt.</note> und ich könnte die schöne<lb/>Zeit mit Ihnen mehr genießen. <note resp="#sophia.zeil">Bei <persName
-                            ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 196) folgt eine unmarkierte
-                        Auslassung bis zum Ende des Briefs.</note>Antwor<lb break="no"/>ten Sie mir recht bald darauf, mein theu<lb break="no"/>rer
-                    Freund, und seyn Sie nicht böse wegen<lb/>meiner Nachlässigkeit. <closer><salute>Tausend Grüße<lb/>von den <rs
-                                ref="#p0133 #p0233 #p0218" type="bi">Meinigen</rs>. Auch die <persName ref="#p2766" type="bi">Scholz</persName> läßt
-                                grü<lb break="no"/>ßen, obwohl sie böse ist.</salute><lb/><signed rend="align(center)">Ihre <persName ref="#p0217"
-                                type="bi"><hi rend="latin">Dorothea</hi></persName>.</signed></closer></p>
+                <p><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 196) folgt eine unmarkierte Auslassung des folgenden Absatzes.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note><note hand="#pencil" place="inline">(</note>Daß auch Sie mir über <persName ref="#p0713" type="bi"
+                        >Löbell</persName> schreiben<lb/>ist mir sehr unangenehm. Fast seit einem<lb/>Jahre höre ich nun von dieser unangeneh<lb
+                        break="no"/>men Sache und weiß weder was ich ihm ge<lb break="no"/>than habe, noch was er von mir will.<lb/>Ich habe ihn
+                    früher anders beurtheilt,<lb/>denn ich hielt ihn für theilnehmend und<lb/>bescheiden, er ist aber gar zu eitel, und<lb/>verlangt
+                    man soll sich nur mit ihm be<lb break="no"/>schäftigen, gegen eine solche Zudringlich<lb break="no"/>keit giebt es kein andres
+                    Mittel als<lb/>sich zurück zu ziehen. Wenn sie einmal<lb/>längere Zeit mit ihm leben müßten wür<lb break="no"/>den Sie sich auch
+                    nicht vertragen.<note hand="#pencil" place="inline">)</note><note resp="#sophia.zeil"><p xml:lang="de">Vermutlich hatte <persName
+                                ref="#p0711" type="bi">Uechtritz</persName> in seinem Brief Stellung für <persName ref="#p0713" type="bi"
+                                >Loebell</persName> bezogen, der in <placeName ref="#l0205" type="bi">Bonn</placeName> wohnte und den er gelegentlich
+                            sah. Bereits im Brief vom <ref target="Brief14DorotheaTieckanUechtritz.xml">21. November 1834</ref>, S. 6 (Bl. 3 verso)
+                            berichtete <persName ref="#p0217" type="bi">Dorothea</persName> von ihrer zunehmenden Abneigung <persName ref="#p0713"
+                                type="bi">Loebell</persName> gegenüber sowie von ihrem Wunsch, so wenig wie möglich mit ihm zu tun haben zu wollen,
+                            was <persName ref="#p0713" type="bi">Loebell</persName> ihr möglicherweise übel genommen hatte.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note></p>
+                <p>Doch nun endlich zum Hauptpunkt<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>:
+                                <title ref="#w03300">Erinnerungen</title> (S. 196) steht "Hauptpunkte".</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                        mei<lb break="no"/>nes Briefes: Wie ist es mit Ihrem Her<lb break="no"/>kommen in diesem Herbst?<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> unternahm <date when-iso="1835">1835</date> keine
+                            Reise nach <placeName ref="#l0003" type="bi">Dresden</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Nach
+                    einem<lb/>früheren Briefe von Ihnen hoffte ich ganz<lb/>gewiß darauf, unser <persName ref="#p3450" type="bi">Porth</persName>, der
+                    bei Ihnen<lb/>war meint aber Sie würden nicht kom̄en<lb/>und wie wird es dann mit Ihren <title ref="#w04347">Chaldä<lb break="no"
+                        />ern</title>?<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> begann die
+                                <title ref="#w04347">Babylonier in Jerusalem</title> unter dem Titel "Die Chaldäer in Jerusalem". Vgl. <persName
+                                ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als dramatischer
+                                Dichter</title>, S. 90.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wenn Sie nicht kom̄en können schicken<lb/>Sie
+                    uns die doch wohl? Ich hoffe aber doch<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi"
+                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 196) fehlt "doch".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note><lb/>im̄er noch Sie kommen selbst. Sie fän<lb break="no"/>den uns doch ruhiger und heitrer als
+                    im<lb/>vorigen Jahre,<note resp="#sophia.zeil"><p xml:lang="de">Als <persName ref="#p0711" type="bi">Uechtritz</persName> Ende
+                                <date when-iso="1834-10">Oktober 1834</date> die Familie <persName ref="#p0133" type="bi">Tieck</persName> in
+                                <placeName ref="#l0003" type="bi">Dresden</placeName> besucht hatte, war <persName ref="#p0233" type="bi">Amalia
+                                Tieck</persName> bereits erkrankt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und ich könnte die schöne<lb/>Zeit
+                    mit Ihnen mehr genießen. <note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
+                                ref="#w03300">Erinnerungen</title> (S. 196) folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note>Antwor<lb break="no"/>ten Sie mir recht bald darauf, mein theu<lb break="no"/>rer
+                    Freund, und seyn Sie nicht böse wegen<lb/>meiner Nachlässigkeit.</p>
+                <closer><salute>Tausend Grüße<lb/>von den <rs ref="#p0133 #p0233 #p0218" type="bi">Meinigen</rs>. Auch die <persName ref="#p2766"
+                            type="bi">Scholz</persName> läßt grü<lb break="no"/>ßen, obwohl sie böse ist.</salute><lb/><signed rend="align(center)"
+                        >Ihre <persName ref="#p0217" type="bi"><hi rend="latin">Dorothea</hi></persName>.</signed></closer>
             </div>
         </body>
     </text>

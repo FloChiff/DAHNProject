@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -213,8 +220,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-01-24" who="#sophia.zeil">Small corrections.</change>
             <change when-iso="2014-11-22" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
             <change when-iso="2014-10-29" who="#sophia.zeil">Small corrections.</change>
@@ -231,30 +239,35 @@
         <body>
             <div type="transcription">
                 <pb facs="P1030790.jpg" n="1"/>
-                <del hand="#blue_ink" rend="overwritten"><note hand="#blue_ink_2" place="top-margin-center inline">13</note></del>
-                <note hand="#blue_ink" place="top-margin-center inline">14</note>
-                <p><opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0004" type="bi">Dresden</placeName></hi> den <date
-                                when-iso="1835-04-10">10 <hi rend="latin">April</hi> 1835</date>.</dateline><lb/><note hand="#pencil" place="inline">—
-                            — — — — — —</note><lb/><lb/>Recht lange, theuerster Freund, haben Sie<lb/>uns diesmal auf Nachricht warten
-                        lassen;</opener><lb/>doch finde ich es sehr natürlich daß Sie während<lb/>Ihrer poetischen Arbeiten<note resp="#sophia.zeil"
-                            ><persName ref="#p0711" type="bi">Uechtritz</persName> arbeitete am Abschluss der <title ref="#w04347"
-                        >Babylonier</title>.</note> keine Lust zum<lb/>Briefe schreiben haben, nur kann man sich<lb/>nicht immer der Besorgniß
-                    erwehren ob<lb/>nicht Krankheit das Schweigen veranlasst.<lb/>Ich freue mich sehr daß es Ihnen wohl geht<lb/>und daß Sie fleißig
-                    sind. Auch bei uns geht<lb/>es ja, Gott sey Dank, mit der Besserung<note resp="#sophia.zeil"><persName ref="#p0217" type="bi"
-                            >Dorotheas</persName> Mutter, <persName ref="#p0233" type="bi">Amalia Tieck</persName>, litt seit gut einem Jahr an
-                        Unterleibsbeschwerden und Wasseransammlung in den Beinen.</note><lb/>vorwärts, obwohl sehr langsam. <persName ref="#p2447"
-                        type="bi">Carus</persName> ist<lb/>zufrieden und die Kräfte haben sich doch<lb/>auch seit Monathen sehr gebessert, wir<lb/>
-                    fahren und gehen nun schon an schönen<lb/>Tagen etwas aus und wenn es erst so<lb/>ist daß die <rs ref="#p0233" type="bi"
-                        >Mutter</rs> fast den ganzen Tag<lb/>im Freien seyn kann wird sie sich wohl<lb/>noch mehr erholen. Dazu haben wir ein so<lb
-                        break="no"/>genanntes Sommerplaisir<note resp="#sophia.zeil">Vermutlich ist die Geißblattlaube gemeint, von der <persName
-                            ref="#p0217" type="bi">Dorothea</persName> bereits im Brief vom <ref target="Brief12DorotheaTieckanUechtritz.xml">20. Juni
-                            1834</ref>, S. 3 f. (Bl. 2 recto f.) berichtete.</note> in einem<lb/>schönen großen Garten gemiethet, der<pb
+                <note place="top-margin-center inline"><subst>
+                        <del hand="#blue_ink_2" rend="overwritten">13</del>
+                        <add hand="#blue_ink" place="across">14</add>
+                    </subst></note>
+
+                <opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0004" type="bi">Dresden</placeName></hi> den <date
+                            when-iso="1835-04-10">10 <hi rend="latin">April</hi> 1835</date>.</dateline><lb/><note hand="#pencil" place="inline">— — —
+                        — — — —</note><lb/><lb/>Recht lange, theuerster Freund, haben Sie<lb/>uns diesmal auf Nachricht warten lassen;</opener>
+                <p>doch finde ich es sehr natürlich daß Sie während<lb/>Ihrer poetischen Arbeiten<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0711" type="bi">Uechtritz</persName> arbeitete am Abschluss der <title ref="#w04347">Babylonier</title>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> keine Lust zum<lb/>Briefe schreiben haben, nur kann man sich<lb/>nicht immer der
+                    Besorgniß erwehren ob<lb/>nicht Krankheit das Schweigen veranlasst.<lb/>Ich freue mich sehr daß es Ihnen wohl geht<lb/>und daß Sie
+                    fleißig sind. Auch bei uns geht<lb/>es ja, Gott sey Dank, mit der Besserung<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0217" type="bi">Dorotheas</persName> Mutter, <persName ref="#p0233" type="bi">Amalia Tieck</persName>, litt
+                            seit gut einem Jahr an Unterleibsbeschwerden und Wasseransammlung in den Beinen.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><lb/>vorwärts, obwohl sehr langsam. <persName ref="#p2447" type="bi">Carus</persName> ist<lb/>zufrieden und die
+                    Kräfte haben sich doch<lb/>auch seit Monathen sehr gebessert, wir<lb/> fahren und gehen nun schon an schönen<lb/>Tagen etwas aus
+                    und wenn es erst so<lb/>ist daß die <rs ref="#p0233" type="bi">Mutter</rs> fast den ganzen Tag<lb/>im Freien seyn kann wird sie
+                    sich wohl<lb/>noch mehr erholen. Dazu haben wir ein so<lb break="no"/>genanntes Sommerplaisir<note resp="#sophia.zeil"><p
+                            xml:lang="de">Vermutlich ist die Geißblattlaube gemeint, von der <persName ref="#p0217" type="bi">Dorothea</persName>
+                            bereits im Brief vom <ref target="Brief12DorotheaTieckanUechtritz.xml">20. Juni 1834</ref>, S. 3 f. (Bl. 2 recto f.)
+                            berichtete.</p><p xml:lang="en"/><p xml:lang="fr"/></note> in einem<lb/>schönen großen Garten gemiethet, der<pb
                         facs="P1030791a.jpg" n="2"/>auf das Feld hinaus geht, und wo die Luft<lb/>so frei und rein ist wie auf dem Lande.<lb/>Um dort
                     zu schlafen ist es nicht, das wäre<lb/>auch zu unbequem für die Wirthschaft,<lb/>es ist aber nicht weit von uns und so
                     kan̄<lb/>man leicht jeden Morgen hinaus gehen.</p>
-                <p>Daß Sie davon sprachen den Som̄er <rs ref="#l0003" type="bi">her</rs><lb/>zu kommen<note resp="#sophia.zeil"><persName ref="#p0711"
-                            type="bi">Uechtritz</persName> unternahm <date when-iso="1835">1835</date> keine Reise nach <placeName ref="#l0003"
-                            type="bi">Dresden</placeName>.</note> wie von einer ausgemachten<lb/>Sache be<subst>
+                <p>Daß Sie davon sprachen den Som̄er <rs ref="#l0003" type="bi">her</rs><lb/>zu kommen<note resp="#sophia.zeil"><p xml:lang="de"
+                                ><persName ref="#p0711" type="bi">Uechtritz</persName> unternahm <date when-iso="1835">1835</date> keine Reise nach
+                                <placeName ref="#l0003" type="bi">Dresden</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wie von einer
+                    ausgemachten<lb/>Sache be<subst>
                         <del rend="overwritten">k</del>
                         <add place="across">g</add>
                     </subst>lückt uns alle sehr, <subst>
@@ -278,32 +291,35 @@
                         ref="#w04324">Alexander</title> vor<pb break="no" facs="P1030792.jpg" n="4"/>gelesen, wir hören immer diese schönen<lb/><rs
                         ref="#w04329 #w04324" type="bi">Gedichte</rs> mit neuem Vergnügen und sie<lb/>verfehlen nie ihre Wirkung auch bei
                     den<lb/>verschiedenartigsten Zuhörern. Ich kan̄<lb/>nicht sagen wie begierig ich auf die <title ref="#w04347">Chal<lb break="no"
-                        />däer</title><note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName> begann die <title ref="#w04347"
-                            >Babylonier in Jerusalem</title> unter dem Titel "Die Chaldäer in Jerusalem". Vgl. <persName ref="#p2306" type="bi"
-                            >Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als dramatischer Dichter</title>, S. 90.</note> bin, die
-                    bringen sie doch auf jeden<lb/>Fall mit wenn Sie kommen.</p>
-                <p>Was Sie mir über <persName ref="#p3446" type="bi">Manzoni</persName> schreiben<note resp="#sophia.zeil">Vgl. <persName ref="#p0217"
-                            type="bi">Dorotheas</persName> Urteil über <persName ref="#p3446" type="bi">Manzoni</persName> im Brief vom <ref
-                            target="Brief15DorotheaTieckanUechtritz.xml">21. Januar 1835</ref>, S. 6 f. (Bl. 3 verso f.).</note>
-                    ist<lb/>außerordentlich schön und spricht ganz<lb/>mein Gefühl aus,<note resp="#sophia.zeil">In einem Brief an seinen <persName
-                            ref="#p2411" type="bi">Vater</persName> vom <date when-iso="1835-03-30">30. März 1835</date> schreibt <persName
-                            ref="#p0711" type="bi">Uechtritz</persName>: "[…] der Roman <title ref="#w05440">die Verlobten</title>, von <persName
-                            ref="#p3446" type="bi">Manzoni</persName>, […] ist eines der edelsten Bücher, die je geschrieben worden." (<persName
-                            ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title>, S. 140.)</note> daß dies <rs
-                        ref="#w05440" type="bi">Buch</rs> nicht<lb/>mehr Aufsehen gemacht reicht hin um uns<lb break="no"/>re Zeit nicht für eine
-                    erleuchtete zu<lb/>halten. Was sagen Sie zu dem <rs ref="#w05444" type="bi">Buch</rs><note resp="#sophia.zeil"><persName
-                            ref="#p1212" type="bi">Bettina von Arnims</persName> teilfiktiver und selbstinszenierender Briefroman <title ref="#w05444"
-                            >Goethes Briefwechsel mit einem Kinde</title> war <date when-iso="1835">1835</date> in 3 Bänden erschienen und hatte für
-                        allgemeines Aufsehen gesorgt.</note><lb/>von der verrückten <persName ref="#p1212" type="bi">Bettina
-                        Arnim</persName>?<lb/><persName ref="#p2323" type="bi">Baudissin</persName> hat uns neulich einen Abend<lb/>Bruchstücke daraus
-                    vorgelesen, und ich<lb/>glaube nicht daß je eine ähnliche Frech<lb break="no"/>heit da gewesen ist, denn aus der Un<lb break="no"
-                    />richtigkeit der Daten ergiebt sich daß<lb/>die meisten ihrer Briefe erst jetzt ge<lb break="no"/>schmieret sind, wenigstens in
-                    der Gestalt<lb/>wie wir sie sehen, und so klein und un<pb break="no" facs="P1030793.jpg" n="5"/>bedeutend die von <persName
-                        ref="#p0194" type="bi">Goethe</persName> auch sind so scheint<lb/>mir doch auch darin vieles verfälscht.<lb/>Meines <rs
-                        ref="#p0133" type="bi">Vaters</rs> Ausspruch darüber war sehr<lb/>einfach, denn erstlich meinte er in dem<lb/>Titel: <title
-                        ref="#w05444">Goethes Briefwechsel mit einem<lb/>Kinde</title>, solle man das K. in ein R. ver<lb break="no"/>wandeln, und am
-                    Schluß sagte er mit<lb/>einem tiefen Seufzer: Ja, man erlebt<lb/>doch mitunter etwas Viehisches! Dergleichen<lb/>Kraftausdrücke
-                    scheinen mir die beßte<lb/>Kritik, denn es ist eigentlich zu nichts<lb break="no"/>würdig um ernsthaft darüber zu sprechen</p>
+                        />däer</title><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> begann die
+                                <title ref="#w04347">Babylonier in Jerusalem</title> unter dem Titel "Die Chaldäer in Jerusalem". Vgl. <persName
+                                ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als dramatischer
+                                Dichter</title>, S. 90.</p><p xml:lang="en"/><p xml:lang="fr"/></note> bin, die bringen sie doch auf jeden<lb/>Fall
+                    mit wenn Sie kommen.</p>
+                <p>Was Sie mir über <persName ref="#p3446" type="bi">Manzoni</persName> schreiben<note resp="#sophia.zeil"><p xml:lang="de">Vgl.
+                                <persName ref="#p0217" type="bi">Dorotheas</persName> Urteil über <persName ref="#p3446" type="bi">Manzoni</persName>
+                            im Brief vom <ref target="Brief15DorotheaTieckanUechtritz.xml">21. Januar 1835</ref>, S. 6 f. (Bl. 3 verso f.).</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> ist<lb/>außerordentlich schön und spricht ganz<lb/>mein Gefühl aus,<note
+                        resp="#sophia.zeil"><p xml:lang="de">In einem Brief an seinen <persName ref="#p2411" type="bi">Vater</persName> vom <date
+                                when-iso="1835-03-30">30. März 1835</date> schreibt <persName ref="#p0711" type="bi">Uechtritz</persName>: "[…] der
+                            Roman <title ref="#w05440">die Verlobten</title>, von <persName ref="#p3446" type="bi">Manzoni</persName>, […] ist eines
+                            der edelsten Bücher, die je geschrieben worden." (<persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title>, S. 140.)</p><p xml:lang="en"/><p xml:lang="fr"/></note> daß dies <rs ref="#w05440" type="bi"
+                        >Buch</rs> nicht<lb/>mehr Aufsehen gemacht reicht hin um uns<lb break="no"/>re Zeit nicht für eine erleuchtete zu<lb/>halten.
+                    Was sagen Sie zu dem <rs ref="#w05444" type="bi">Buch</rs><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p1212"
+                                type="bi">Bettina von Arnims</persName> teilfiktiver und selbstinszenierender Briefroman <title ref="#w05444">Goethes
+                                Briefwechsel mit einem Kinde</title> war <date when-iso="1835">1835</date> in 3 Bänden erschienen und hatte für
+                            allgemeines Aufsehen gesorgt.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>von der verrückten <persName ref="#p1212"
+                        type="bi">Bettina Arnim</persName>?<lb/><persName ref="#p2323" type="bi">Baudissin</persName> hat uns neulich einen
+                    Abend<lb/>Bruchstücke daraus vorgelesen, und ich<lb/>glaube nicht daß je eine ähnliche Frech<lb break="no"/>heit da gewesen ist,
+                    denn aus der Un<lb break="no"/>richtigkeit der Daten ergiebt sich daß<lb/>die meisten ihrer Briefe erst jetzt ge<lb break="no"
+                    />schmieret sind, wenigstens in der Gestalt<lb/>wie wir sie sehen, und so klein und un<pb break="no" facs="P1030793.jpg" n="5"
+                    />bedeutend die von <persName ref="#p0194" type="bi">Goethe</persName> auch sind so scheint<lb/>mir doch auch darin vieles
+                    verfälscht.<lb/>Meines <rs ref="#p0133" type="bi">Vaters</rs> Ausspruch darüber war sehr<lb/>einfach, denn erstlich meinte er in
+                    dem<lb/>Titel: <title ref="#w05444">Goethes Briefwechsel mit einem<lb/>Kinde</title>, solle man das K. in ein R. ver<lb break="no"
+                    />wandeln, und am Schluß sagte er mit<lb/>einem tiefen Seufzer: Ja, man erlebt<lb/>doch mitunter etwas Viehisches!
+                    Dergleichen<lb/>Kraftausdrücke scheinen mir die beßte<lb/>Kritik, denn es ist eigentlich zu nichts<lb break="no"/>würdig um
+                    ernsthaft darüber zu sprechen</p>
                 <p>Ihre Grüße an die <persName ref="#p3445" type="bi">Buttlar</persName> und <persName ref="#p2766" type="bi">Scholz</persName>
                     habe<lb/>ich bestellt, letztere läßt Ihnen sagen:<lb/>Es gebe Freunde sehr verschiedner Art,<lb/>sie habe einen der sogar aus
                         <unclear reason="illegible"><placeName ref="#l0992" type="bi">Trir</placeName></unclear> schrie<lb break="no"/>be. Beide <rs
@@ -316,12 +332,12 @@
                         die Pflege der <rs ref="#p0233" type="bi">Mutter</rs> so wie mei<lb break="no"/>ne eigne Kränklichkeit hat mich sehr
                         an<lb/>das Haus gefesselt.</del></p>
                 <p><del hand="#pencil" rend="strikethrough">Ich muß schließen, mein theuerster<lb/>Freund, denn das Schreiben greift mich<lb/>zu sehr
-                        an. Verzeihen Sie meine Krähen<lb break="no"/>füße.</del>
-                    <closer><salute>Tausend Grüße von den <rs ref="#p0133 #p0233 #p0218" type="bi">Meinigen</rs></salute><lb/>und von Ihrer
-                                <signed><hi rend="latin"><persName ref="#p0217" type="bi">Dorothea <choice>
-                                        <abbr>T.</abbr>
-                                        <expan>Tieck</expan>
-                                    </choice></persName></hi></signed></closer></p>
+                        an. Verzeihen Sie meine Krähen<lb break="no"/>füße.</del></p>
+                <closer><salute>Tausend Grüße von den <rs ref="#p0133 #p0233 #p0218" type="bi">Meinigen</rs></salute><lb/>und von Ihrer <signed><hi
+                            rend="latin"><persName ref="#p0217" type="bi">Dorothea <choice>
+                                    <abbr>T.</abbr>
+                                    <expan>Tieck</expan>
+                                </choice></persName></hi></signed></closer>
             </div>
         </body>
     </text>

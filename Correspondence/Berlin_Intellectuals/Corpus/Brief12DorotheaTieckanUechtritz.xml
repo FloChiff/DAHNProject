@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,16 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
+
+
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -217,8 +226,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-26" who="#sophia.zeil">Small corrections.</change>
             <change when-iso="2014-11-24" who="#sophia.zeil">Small corrections.</change>
@@ -240,47 +250,53 @@
             <div type="transcription">
                 <pb facs="P1030768.jpg" n="1"/>
                 <note hand="#blue_ink" place="margin-top-center inline">10.</note>
-                <p><opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="1834-06-20">20 <hi rend="latin">Juni</hi><lb/>1834</date>.</dateline><lb/><salute>Mein theuerster
-                            Freund,</salute></opener> noch vor unsrer Ab<lb break="no"/>reise muß ich Ihnen schreiben, und Ihnen für<lb/>Ihren schönen
-                    Brief danken. Den <date when-iso="1834-06-24">24<hi rend="superscript underline">ten</hi></date>, gera<lb break="no"/>de am
-                    Johannistag treten wir nun<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 185) fehlt "nun".</note> unsre<lb/>Reise<note resp="#sophia.zeil"><persName ref="#p0217"
-                            type="bi">Dorothea</persName> begleitete <persName ref="#p0133" type="bi">Ludwig Tieck</persName> und die <persName
-                            ref="#p0232" type="bi">Gräfin Finckenstein</persName> nach <placeName ref="#l0152" type="bi"
-                        >Baden-Baden</placeName>.</note> an, und ich bitte Sie dringend, so wie<lb/>auch mein <rs ref="#p0133" type="bi">Vater</rs>
-                    Ihre Herbstreise<note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName> besuchte die Familie <persName
-                            ref="#p0233" type="bi">Tieck</persName> Ende <date when-iso="1834-10">Oktober 1834</date> in <placeName ref="#l0003"
-                            type="bi">Dresden</placeName>.</note> ganz nach<lb/>Ihrem ersten Plan zu machen, wir sind auf<lb/>jeden Fall zurück, da
-                    mein <rs ref="#p0133" type="bi">Vater</rs> dies mal<lb/>nur der Kur wegen reist, keine Umwege,<lb/>keinen Aufenthalt an ander<add
-                        place="inline">n</add> Orten machen<lb/>will, so kommen wir wahrscheinlich schon<note resp="#sophia.zeil">Bei <persName
-                            ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) fehlt "schon".</note>
-                        Mitte<lb/><date when-iso="1834-08">August</date> zurück; glauben Sie nicht daß er<lb/>so unbestim̄t ist, wenn es gilt und
-                    andre<lb/>sich darauf verlassen, er hat sich sogar<lb/>so genau ausgesprochen daß er sagt er<lb/>wolle gerade 50 Tage ausbleiben.
-                    Sie<lb/>können sich danach berechnen, daß wir auch<lb/>im schlim̄sten Fall einer Verzögerung durch<lb/>schlechtes Wetter, die doch
-                    im̄er nur einige<lb/>Tage währen kann, noch im <date when-iso="1834-08">August</date> wieder<lb/><rs ref="#l0003" type="bi"
-                        >hier</rs> sind.</p>
+                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="1834-06-20">20 <hi rend="latin">Juni</hi><lb/>1834</date>.</dateline><lb/><salute>Mein theuerster
+                        Freund,</salute></opener>
+                <p>noch vor unsrer Ab<lb break="no"/>reise muß ich Ihnen schreiben, und Ihnen für<lb/>Ihren schönen Brief danken. Den <date
+                        when-iso="1834-06-24">24<hi rend="superscript underline">ten</hi></date>, gera<lb break="no"/>de am Johannistag treten wir
+                        nun<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 185) fehlt "nun".</p><p xml:lang="en"/><p xml:lang="fr"/></note> unsre<lb/>Reise<note
+                        resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0217" type="bi">Dorothea</persName> begleitete <persName ref="#p0133"
+                                type="bi">Ludwig Tieck</persName> und die <persName ref="#p0232" type="bi">Gräfin Finckenstein</persName> nach
+                                <placeName ref="#l0152" type="bi">Baden-Baden</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> an, und ich
+                    bitte Sie dringend, so wie<lb/>auch mein <rs ref="#p0133" type="bi">Vater</rs> Ihre Herbstreise<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> besuchte die Familie <persName ref="#p0233" type="bi"
+                                >Tieck</persName> Ende <date when-iso="1834-10">Oktober 1834</date> in <placeName ref="#l0003" type="bi"
+                                >Dresden</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ganz nach<lb/>Ihrem ersten Plan zu machen, wir
+                    sind auf<lb/>jeden Fall zurück, da mein <rs ref="#p0133" type="bi">Vater</rs> dies mal<lb/>nur der Kur wegen reist, keine
+                    Umwege,<lb/>keinen Aufenthalt an ander<add place="inline">n</add> Orten machen<lb/>will, so kommen wir wahrscheinlich schon<note
+                        resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 185) fehlt "schon".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Mitte<lb/><date
+                        when-iso="1834-08">August</date> zurück; glauben Sie nicht daß er<lb/>so unbestim̄t ist, wenn es gilt und andre<lb/>sich
+                    darauf verlassen, er hat sich sogar<lb/>so genau ausgesprochen daß er sagt er<lb/>wolle gerade 50 Tage ausbleiben. Sie<lb/>können
+                    sich danach berechnen, daß wir auch<lb/>im schlim̄sten Fall einer Verzögerung durch<lb/>schlechtes Wetter, die doch im̄er nur
+                    einige<lb/>Tage währen kann, noch im <date when-iso="1834-08">August</date> wieder<lb/><rs ref="#l0003" type="bi">hier</rs>
+                    sind.</p>
                 <pb facs="P1030769a.jpg" n="2"/>
                 <p>Ich schreibe Ihnen heut mit schwerem Herzen,<lb/>und kann Ihnen nur erzählen wie viel Kum<lb break="no"/>mer und Sorge ich seit
-                    einigen Monathen<lb/>ausgestanden habe. Meine arme <rs ref="#p0233" type="bi">Mutter</rs><lb/><note resp="#sophia.zeil">Bei
-                            <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) fehlt die folgende
-                        Passage von "leidet schon" bis einschließlich "Drüsen, sie".</note><del hand="#pencil" rend="strikethrough">leidet schon seit
-                        längerer Zeit an Unter<lb break="no"/>leibsbeschwerden, der <rs ref="#p2447" type="bi">Arzt</rs><note resp="#sophia.zeil">Der
-                            Arzt und Universalgelehrte <persName ref="#p2447" type="bi">Carl Gustav Carus</persName>, der regelmäßiger Gast bei den
-                            Vorleseabenden im <persName ref="#p0133" type="bi">Tieck</persName>schen Hause war, behandelte <persName ref="#p0233"
-                                type="bi">Amalia Tieck</persName>.</note> sagt es seyen<lb/>Verhärtungen und Anschwellungen der Drü<lb break="no"
-                        />sen, sie</del> hat<note hand="#pencil" place="above inline"> schon seit längerer Zeit</note><note resp="#sophia.zeil">Bei
-                            <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) folgt der Einschub
-                        der oben gestrichenen Wortgruppe "schon seit längerer Zeit".</note> viel zu leiden, <note resp="#sophia.zeil">Bei <persName
-                            ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) fehlt "braucht schon seit 3
-                        Monathen".</note><del hand="#pencil" rend="strikethrough">braucht schon<lb/>seit 3 Monathen,</del> trinkt seit 4 Wochen
-                        hier<lb/><placeName ref="#l0563" type="bi">Karlsbad</placeName>,<note resp="#sophia.zeil">Gemeint ist die Heilquelle aus
-                            <placeName ref="#l0563" type="bi">Karlsbad</placeName>.</note> und <del hand="#pencil" rend="strikethrough"
-                        >alles</del><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 185) fehlt "alles".</note> bis jetzt ohne den<lb/>mindesten Erfolg. Ich kann nicht
-                    beschreiben<lb/>wie sehr ich mich geängstigt habe, und wie<lb/>schrecklich mir der Gedanke ist sie in diesem<lb/>Zustande zu
-                    verlassen. Ich habe unsern <rs ref="#p2447" type="bi">Arzt</rs><lb/>auf sein Gewissen gefragt, und er hat mir<lb/>versichert
-                    Gefahr könne nicht eintreten,<lb/>das Uebel sey hartnäckig, er hoffe aber<lb/>sie noch ganz davon <subst>
+                    einigen Monathen<lb/>ausgestanden habe. Meine arme <rs ref="#p0233" type="bi">Mutter</rs><lb/><note resp="#sophia.zeil"><p
+                            xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185)
+                            fehlt die folgende Passage von "leidet schon" bis einschließlich "Drüsen, sie".</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><del hand="#pencil" rend="strikethrough">leidet schon seit längerer Zeit an Unter<lb break="no"/>leibsbeschwerden,
+                        der <rs ref="#p2447" type="bi">Arzt</rs><note resp="#sophia.zeil"><p xml:lang="de">Der Arzt und Universalgelehrte <persName
+                                    ref="#p2447" type="bi">Carl Gustav Carus</persName>, der regelmäßiger Gast bei den Vorleseabenden im <persName
+                                    ref="#p0133" type="bi">Tieck</persName>schen Hause war, behandelte <persName ref="#p0233" type="bi">Amalia
+                                    Tieck</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> sagt es seyen<lb/>Verhärtungen und Anschwellungen
+                        der Drü<lb break="no"/>sen, sie</del> hat<note hand="#pencil" place="above inline"> schon seit längerer Zeit</note><note
+                        resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 185) folgt der Einschub der oben gestrichenen Wortgruppe "schon seit längerer Zeit".</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> viel zu leiden, <note resp="#sophia.zeil"><p xml:lang="de">Bei <persName
+                                ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) fehlt "braucht schon seit
+                            3 Monathen".</p><p xml:lang="en"/><p xml:lang="fr"/></note><del hand="#pencil" rend="strikethrough">braucht schon<lb/>seit
+                        3 Monathen,</del> trinkt seit 4 Wochen hier<lb/><placeName ref="#l0563" type="bi">Karlsbad</placeName>,<note
+                        resp="#sophia.zeil">Gemeint ist die Heilquelle aus <placeName ref="#l0563" type="bi">Karlsbad</placeName>.</note> und <del
+                        hand="#pencil" rend="strikethrough">alles</del><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi"
+                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185) fehlt "alles".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> bis jetzt ohne den<lb/>mindesten Erfolg. Ich kann nicht beschreiben<lb/>wie sehr ich mich
+                    geängstigt habe, und wie<lb/>schrecklich mir der Gedanke ist sie in diesem<lb/>Zustande zu verlassen. Ich habe unsern <rs
+                        ref="#p2447" type="bi">Arzt</rs><lb/>auf sein Gewissen gefragt, und er hat mir<lb/>versichert Gefahr könne nicht
+                    eintreten,<lb/>das Uebel sey hartnäckig, er hoffe aber<lb/>sie noch ganz davon <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">z</add>
                     </subst>u befreien, und<lb/><del rend="strikethrough">s</del> versichert daß <del rend="strikethrough">Di</del> die guten Folgen
@@ -300,74 +316,78 @@
                         resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 186)
                         folgt eine unmarkierte Auslassung bis zum Ende des nächsten Absatzes einschließlich "Rückkehr lesen".</note>Das Gehen wird ihr
                     sehr schwer,<lb/>und sie soll doch die Luft genießen, des<lb break="no"/>wegen haben wir in der Vorstadt wo
-                        die<lb/>Brunnenanstalt<note resp="#sophia.zeil">Gemeint ist die <persName ref="#p2444" type="bi">Struve</persName>sche
-                        Brunnen-Anstalt in der <placeName ref="#l0003" type="bi">Dresdner</placeName> Seevorstadt. <persName ref="#p2444" type="bi"
-                            >Struve</persName> gelang es erstmals, Mineralwasser künstlich herzustellen. <date when-iso="1818">1818</date> eröffnete
-                        er die erste Mineralwassertrinkanstalt in <placeName ref="#l0003" type="bi">Dresden</placeName>, mehrere Filialen, u.a. in
-                            <placeName ref="#l0004" type="bi">Leipzig</placeName>, <placeName ref="#l0113" type="bi">Berlin</placeName> und <placeName
-                            ref="#l0041" type="bi">Königsberg</placeName>, folgten. Er erhielt für seine Erfindung den königlichen
-                        Verdienstorden.</note> ist einen kleinen Garten<lb/>und einige Zimmer gemiethet, dort bringen<pb facs="P1030770.jpg" n="4"
-                    />wir den größten Theil des Tages ganz ruhig<lb/>und einsam zu, für mich ist es ein großer<lb/>Genuß im Freien sitzen und lesen
-                    oder ar<lb break="no"/>beiten zu können, der Garten ist zwar<lb/>nur klein, hat aber eine schöne Geisblat<lb/>Laube,<note
-                        resp="#sophia.zeil">Bezeichnung für eine mit rankenden Pflanzen, wie Geißblatt, bewachsene Gartenlaube.</note> und wir haben
-                    ihn ganz für uns</p>
+                        die<lb/>Brunnenanstalt<note resp="#sophia.zeil"><p xml:lang="de">Gemeint ist die <persName ref="#p2444" type="bi"
+                                >Struve</persName>sche Brunnen-Anstalt in der <placeName ref="#l0003" type="bi">Dresdner</placeName> Seevorstadt.
+                                <persName ref="#p2444" type="bi">Struve</persName> gelang es erstmals, Mineralwasser künstlich herzustellen. <date
+                                when-iso="1818">1818</date> eröffnete er die erste Mineralwassertrinkanstalt in <placeName ref="#l0003" type="bi"
+                                >Dresden</placeName>, mehrere Filialen, u.a. in <placeName ref="#l0004" type="bi">Leipzig</placeName>, <placeName
+                                ref="#l0113" type="bi">Berlin</placeName> und <placeName ref="#l0041" type="bi">Königsberg</placeName>, folgten. Er
+                            erhielt für seine Erfindung den königlichen Verdienstorden.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ist einen
+                    kleinen Garten<lb/>und einige Zimmer gemiethet, dort bringen<pb facs="P1030770.jpg" n="4"/>wir den größten Theil des Tages ganz
+                    ruhig<lb/>und einsam zu, für mich ist es ein großer<lb/>Genuß im Freien sitzen und lesen oder ar<lb break="no"/>beiten zu können,
+                    der Garten ist zwar<lb/>nur klein, hat aber eine schöne Geisblat<lb/>Laube,<note resp="#sophia.zeil"><p xml:lang="de">Bezeichnung
+                            für eine mit rankenden Pflanzen, wie Geißblatt, bewachsene Gartenlaube.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und
+                    wir haben ihn ganz für uns</p>
                 <p><rs ref="#p0133" type="bi">Vater</rs> schreibt jetzt den ganzen Tag, so<lb/>daß er es fast nicht mehr aushalten kan̄,<lb/>und nur
                     eben vor der Abreise fertig wird<lb/>die <rs ref="#w04843" type="bi">Novelle</rs> für <persName ref="#p0188" type="bi"
-                        >Brockhaus</persName> ist gedruckt<note resp="#sophia.zeil">Die <title ref="#w04842">Urania. Taschenbuch auf das Jahr
-                            1835</title> erschien entgegen der Angabe im Impressum (<date when-iso="1835">1835</date>) bereits <date when-iso="1834"
-                            >1834</date>; vgl. die Rezension in der <title ref="#w05246">Jenaischen Allgemeinen Literaturzeitung Nr. 217 (November
-                            1834)</title>, Sp. 300–302. Sie enthielt die Novelle <title ref="#w04843">Das alte Buch und die Reise ins Blaue
-                            hinein</title>.</note><lb/>und wir haben sie gelesen, die <rs ref="#w05248" type="bi">andre</rs> wird<lb/>so lang daß sie
-                    wieder den ganzen <title ref="#w05247">Novel<lb break="no"/>lenkranz</title> füllt,<note resp="#sophia.zeil"><title ref="#w05248"
-                            >Die Vogelscheuche</title> umfasst reichlich 400 Seiten. Bereits den <title ref="#w04374">Novellenkranz auf das Jahr
-                            1834</title> füllte eine einzige Novelle (<title ref="#w04377">Der Tod des Dichters</title>) aus.</note> und wir können
+                        >Brockhaus</persName> ist gedruckt<note resp="#sophia.zeil"><p xml:lang="de">Die <title ref="#w04842">Urania. Taschenbuch auf
+                                das Jahr 1835</title> erschien entgegen der Angabe im Impressum (<date when-iso="1835">1835</date>) bereits <date
+                                when-iso="1834">1834</date>; vgl. die Rezension in der <title ref="#w05246">Jenaischen Allgemeinen Literaturzeitung
+                                Nr. 217 (November 1834)</title>, Sp. 300–302. Sie enthielt die Novelle <title ref="#w04843">Das alte Buch und die
+                                Reise ins Blaue hinein</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>und wir haben sie gelesen, die <rs
+                        ref="#w05248" type="bi">andre</rs> wird<lb/>so lang daß sie wieder den ganzen <title ref="#w05247">Novel<lb break="no"
+                        />lenkranz</title> füllt,<note resp="#sophia.zeil"><p xml:lang="de"><title ref="#w05248">Die Vogelscheuche</title> umfasst
+                            reichlich 400 Seiten. Bereits den <title ref="#w04374">Novellenkranz auf das Jahr 1834</title> füllte eine einzige Novelle
+                                (<title ref="#w04377">Der Tod des Dichters</title>) aus.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und wir können
                     sie nun<lb/>erst nach unsrer Rückkehr lesen.</p>
                 <p>Daß mein <rs ref="#p0133" type="bi">Vater</rs> einen Orden vom <persName ref="#p2445" type="bi">König<lb/>von Baiern</persName>
                     bekommen, wissen Sie wohl<lb/>schon, die Art und Weise giebt dieser<lb/>Ertheilung einen Werth den sie sonst<lb/>nicht hat; der
                     Geschäftsträger kam am<lb/>Morgen seines <date when-iso="1834-05-31">Geburtstages</date>, und brachte<lb/>ihm das Kreuz und ein
-                    Schreiben vom<lb/><rs ref="#p2445" type="bi">König</rs> selbst.<note resp="#sophia.zeil">Am <date when-iso="1834-05-31">31. Mai
-                            1834</date> erhielt <persName ref="#p0133" type="bi">Tieck</persName> den Civilverdienstorden. Im Schreiben von <persName
-                            ref="#p2445" type="bi">Ludwig I. von Bayern</persName> heißt es: "Herr Hofrath Ludwig Dieck! Als Schöpfer der neuen
-                        romantischen Poesie haben Sie sich um die Deutsche Literatur ein ausgezeichnetes Verdienst erworben, welches mir Ihren
-                        bevorstehenden Geburtstag besonders merkwürdig macht. Ich bezeichne denselben mit der Verleihung des Ritterkreuzes des
-                        Civil-Verdienstordens Meiner Krone, und Sie werden hierin die Gesinnung der besondern Werthschätzung erkennen, womit ich Ihnen
-                        zugethan bin." Zitiert nach dem <title ref="#w05249">Intelligenzblatt der Allgemeinen Literatur-Zeitung Nr. 47 (Juli
-                            1834)</title>, Sp. 377.</note> Es hat mich besonders über<lb break="no"/>rascht, da der <rs ref="#p0133" type="bi"
-                        >Vater</rs> doch früher die vor<pb break="no" facs="P1030771.jpg" n="5"/>theilhafte Stelle<note resp="#sophia.zeil"><persName
-                            ref="#p0133" type="bi">Tieck</persName> hatte <date when-iso="1826">1826</date> eine Professur an der Universität
-                            <placeName ref="#l0111" type="bi">München</placeName> abgelehnt.</note> in <placeName ref="#l0111" type="bi"
-                        >München</placeName> ausgeschlagen<lb/>hatte, und ich dachte der <rs ref="#p2445" type="bi">König</rs> werde emp<lb break="no"
-                    />findlich seyn und nichts mehr von ihm wissen<lb/>wollen. <rs ref="#p0133" type="bi">Vater</rs> ist sehr wohl ich glaube
-                    aber<lb/>doch daß ihm die Reise wohl zu rathen<lb/>ist, da er nun <placeName ref="#l0003" type="bi">Dresden</placeName> seit 4
-                        Jahren<note resp="#sophia.zeil">Die letzte Badekur hatte <persName ref="#p0133" type="bi">Tieck</persName> im Sommer <date
-                            when-iso="1830">1830</date>, ebenfalls nach <placeName ref="#l0152" type="bi">Baden-Baden</placeName>,
-                    unternommen.</note><lb/>gar nicht verlassen hat, und auch geistig<lb/>erfrischt wird durch einen solchen Ausflug<lb/>Ich bin
-                    gesund aber sehr angegriffen<lb/>und alles wird mir auch deshalb doppelt<lb/>schwer zu tragen. Ich soll in <placeName ref="#l0152"
-                        type="bi">Baden</placeName><lb/>Selterbrunnen mit Milch trinken und<lb/>alle paar Tage baden. Verzeihen<lb/>Sie, theurer
-                    Freund, daß ich Ihnen<lb/>heut so viel vorklage, ich kann Ihnen<lb/>aber nicht anders schreiben als mir zu<lb/>Muthe ist. Ich habe
-                    auch Vertrauen zu Gott<lb/>daß Er mein Gebet erhören und alles<lb/>zum Guten wenden wird, meine über<lb break="no"/>triebne Angst
-                    und Schwermuth ist wohl<lb/>zum Theil körperlich und verliert sich<lb/>vielleicht auf der Reise, besonders wen̄<lb/>ich erst gute
+                    Schreiben vom<lb/><rs ref="#p2445" type="bi">König</rs> selbst.<note resp="#sophia.zeil"><p xml:lang="de">Am <date
+                                when-iso="1834-05-31">31. Mai 1834</date> erhielt <persName ref="#p0133" type="bi">Tieck</persName> den
+                            Civilverdienstorden. Im Schreiben von <persName ref="#p2445" type="bi">Ludwig I. von Bayern</persName> heißt es: "Herr
+                            Hofrath Ludwig Dieck! Als Schöpfer der neuen romantischen Poesie haben Sie sich um die Deutsche Literatur ein
+                            ausgezeichnetes Verdienst erworben, welches mir Ihren bevorstehenden Geburtstag besonders merkwürdig macht. Ich bezeichne
+                            denselben mit der Verleihung des Ritterkreuzes des Civil-Verdienstordens Meiner Krone, und Sie werden hierin die Gesinnung
+                            der besondern Werthschätzung erkennen, womit ich Ihnen zugethan bin." Zitiert nach dem <title ref="#w05249"
+                                >Intelligenzblatt der Allgemeinen Literatur-Zeitung Nr. 47 (Juli 1834)</title>, Sp. 377.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> Es hat mich besonders über<lb break="no"/>rascht, da der <rs ref="#p0133" type="bi">Vater</rs> doch
+                    früher die vor<pb break="no" facs="P1030771.jpg" n="5"/>theilhafte Stelle<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0133" type="bi">Tieck</persName> hatte <date when-iso="1826">1826</date> eine Professur an der Universität
+                                <placeName ref="#l0111" type="bi">München</placeName> abgelehnt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> in
+                        <placeName ref="#l0111" type="bi">München</placeName> ausgeschlagen<lb/>hatte, und ich dachte der <rs ref="#p2445" type="bi"
+                        >König</rs> werde emp<lb break="no"/>findlich seyn und nichts mehr von ihm wissen<lb/>wollen. <rs ref="#p0133" type="bi"
+                        >Vater</rs> ist sehr wohl ich glaube aber<lb/>doch daß ihm die Reise wohl zu rathen<lb/>ist, da er nun <placeName ref="#l0003"
+                        type="bi">Dresden</placeName> seit 4 Jahren<note resp="#sophia.zeil"><p xml:lang="de">Die letzte Badekur hatte <persName
+                                ref="#p0133" type="bi">Tieck</persName> im Sommer <date when-iso="1830">1830</date>, ebenfalls nach <placeName
+                                ref="#l0152" type="bi">Baden-Baden</placeName>, unternommen.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>gar
+                    nicht verlassen hat, und auch geistig<lb/>erfrischt wird durch einen solchen Ausflug<lb/>Ich bin gesund aber sehr
+                    angegriffen<lb/>und alles wird mir auch deshalb doppelt<lb/>schwer zu tragen. Ich soll in <placeName ref="#l0152" type="bi"
+                        >Baden</placeName><lb/>Selterbrunnen mit Milch trinken und<lb/>alle paar Tage baden. Verzeihen<lb/>Sie, theurer Freund, daß
+                    ich Ihnen<lb/>heut so viel vorklage, ich kann Ihnen<lb/>aber nicht anders schreiben als mir zu<lb/>Muthe ist. Ich habe auch
+                    Vertrauen zu Gott<lb/>daß Er mein Gebet erhören und alles<lb/>zum Guten wenden wird, meine über<lb break="no"/>triebne Angst und
+                    Schwermuth ist wohl<lb/>zum Theil körperlich und verliert sich<lb/>vielleicht auf der Reise, besonders wen̄<lb/>ich erst gute
                     Nachrichten von hier bekom̄e</p>
                 <pb facs="P1030772.jpg" n="6"/>
-                <note hand="#pencil" place="top-margin-left inline">X</note>
-                <p>Möchten wir uns doch im <date when-iso="1834-09">September</date><lb/>fröhlich wieder sehen.<note resp="#sophia.zeil"><persName
-                            ref="#p0711" type="bi">Uechtritz</persName> kam erst Ende <date when-iso="1834-10">Oktober 1834</date> nach <placeName
-                            ref="#l0003" type="bi">Dresden</placeName>.</note> Täglich wenn wir<lb/>beim Frühstück sitzen denke ich daran<lb/>wie
-                    schön es seyn wird<!--[187]--> wenn wir erst<lb/>wieder so vereinigt sind, und Sie in<lb/>unsrer Mitte; denn ich setze
-                    voraus<lb/>daß Sie die Wohnung oben in dem klei<lb break="no"/>nen Stübchen wieder freundlichst anneh<lb break="no"/>men,<note
-                        resp="#sophia.zeil">Die kleine Dachkammer im 4. Stock hatte <persName ref="#p0711" type="bi">Uechtritz</persName> bereits bei
-                        seinem Besuch im <date when-iso="1832">September 1832</date> bewohnt.</note> ist es auch der hohen Treppen wegen<lb/>etwas
-                    unbequem so sieht man sich doch<lb/>mehr als wenn Sie wo anders wohnen<lb/>wollten. <note hand="#pencil" place="inline"><hi
-                            rend="superscript">V</hi></note>
-                    <note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title>
-                        (S. 187) folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</note>Richten Sie sich nur so ein daß<lb/>Sie etwas länger
-                    bleiben können, zwar<lb/>kann ich nicht verlangen daß Sie die Zeit<lb/>Ihren <rs ref="#p2412 #p2411" type="bi">Eltern</rs>
-                    entziehen, aber Sie müssen<lb/>gleich die ganze Reise auf längere<lb/>Zeit einrichten. Ich wollte Ihnen würde<lb/>auch <placeName
-                        ref="#l0152" type="bi">Baden</placeName> verordnet und Sie wären<lb/>auch dort mit uns, das würde mir ein<lb/>großer Trost
-                    seyn. <closer>Leben Sie nun<lb/>wohl, mein theuerster Freund, <salute>viele<lb/>Grüße von Allen.</salute> Im <date
-                            when-iso="1834-08">August</date> hoffe<lb/>ich noch einen Brief und genaue Nachricht<lb/>über Ihre Ankunft zu
-                            erhalten.<lb/><signed rend="align(center)">Ihre <hi rend="latin"><persName ref="#p0217" type="bi"
-                            >Dorothea</persName></hi></signed></closer></p>
+                <note hand="#pencil" place="top-margin(left) inline">X</note>
+                <p>Möchten wir uns doch im <date when-iso="1834-09">September</date><lb/>fröhlich wieder sehen.<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> kam erst Ende <date when-iso="1834-10">Oktober
+                                1834</date> nach <placeName ref="#l0003" type="bi">Dresden</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    Täglich wenn wir<lb/>beim Frühstück sitzen denke ich daran<lb/>wie schön es seyn wird<!--[187]--> wenn wir erst<lb/>wieder so
+                    vereinigt sind, und Sie in<lb/>unsrer Mitte; denn ich setze voraus<lb/>daß Sie die Wohnung oben in dem klei<lb break="no"/>nen
+                    Stübchen wieder freundlichst anneh<lb break="no"/>men,<note resp="#sophia.zeil">Die kleine Dachkammer im 4. Stock hatte <persName
+                            ref="#p0711" type="bi">Uechtritz</persName> bereits bei seinem Besuch im <date when-iso="1832">September 1832</date>
+                        bewohnt.</note> ist es auch der hohen Treppen wegen<lb/>etwas unbequem so sieht man sich doch<lb/>mehr als wenn Sie wo anders
+                    wohnen<lb/>wollten. <note hand="#pencil" place="inline"><hi rend="superscript">V</hi></note>
+                    <note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 187) folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>Richten Sie sich nur so ein daß<lb/>Sie etwas länger bleiben können, zwar<lb/>kann ich nicht
+                    verlangen daß Sie die Zeit<lb/>Ihren <rs ref="#p2412 #p2411" type="bi">Eltern</rs> entziehen, aber Sie müssen<lb/>gleich die ganze
+                    Reise auf längere<lb/>Zeit einrichten. Ich wollte Ihnen würde<lb/>auch <placeName ref="#l0152" type="bi">Baden</placeName>
+                    verordnet und Sie wären<lb/>auch dort mit uns, das würde mir ein<lb/>großer Trost seyn.</p>
+                <closer>Leben Sie nun<lb/>wohl, mein theuerster Freund, <salute>viele<lb/>Grüße von Allen.</salute> Im <date when-iso="1834-08"
+                        >August</date> hoffe<lb/>ich noch einen Brief und genaue Nachricht<lb/>über Ihre Ankunft zu erhalten.<lb/><signed
+                        rend="align(center)">Ihre <hi rend="latin"><persName ref="#p0217" type="bi">Dorothea</persName></hi></signed></closer>
             </div>
         </body>
     </text>

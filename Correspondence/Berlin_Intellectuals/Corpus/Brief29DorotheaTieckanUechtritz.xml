@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -218,8 +225,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
@@ -238,49 +246,54 @@
         <body>
             <div type="transcription">
                 <pb facs="P1030840.jpg" n="1"/>
-                <p><opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
-                                when-iso="1837-11-10">10 <subst>
-                                    <del rend="strikethrough"><choice>
-                                            <abbr>Octob</abbr>
-                                            <expan>October</expan>
-                                        </choice></del>
-                                    <add place="above"><choice>
-                                            <abbr>Nov</abbr>
-                                            <expan>November</expan>
-                                        </choice></add>
-                                </subst> 1837</date>.</dateline></opener><lb/><note hand="#blue_ink" place="top-margin-center inline"
-                    >27.</note><lb/>Ihr Brief, mein theuerster Freund, hat mich<lb/>sehr erfreut, da er nur Gutes enthält, und<lb/>mir zeigt wie
-                    glücklich und zufrieden<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 215) fehlt "und zufrieden".</note> Sie sind.<lb/>In einer solchen Stimmung ist das Schreiben
-                    ein<lb/>Vergnügen, anders ist es mit mir, und ich<lb/>verschob es deshalb auch<note resp="#sophia.zeil">Bei <persName ref="#p2151"
-                            type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 215) fehlt "auch".</note> von Tage zu Tage
-                    Ihnen<lb/>zu antworten. Ich kann nicht sagen daß ich<lb/>unzufrieden bin, aber das Leben hat so alle<lb/>Farbe und allen Reiz für
-                    mich verloren,<lb/>daß es mir schwer wird mich mitzutheilen oder<lb/>etwas zu erzählen, ich habe mich selbst noch
-                    nicht<lb/>entschließen können etwas zu lesen, und bin<lb/>fast immer mit der trocknen, theilweise<lb/>langweiligen Arbeit an den
-                        <persName ref="#p3504" type="bi">Washingtonschen</persName><lb/>Briefen beschäftigt.<note resp="#sophia.zeil">Im Auftrag
-                            <persName ref="#p0187" type="bi">Friedrich von Raumers</persName> fertigte <persName ref="#p0217" type="bi">Dorothea
-                            Tieck</persName> eine auszugsweise <rs ref="#w05529" type="bi">Übersetzung</rs> der von <persName ref="#p3505" type="bi"
-                            >Jared Sparks</persName> verfassten 12-bändigen <persName ref="#p3504" type="bi">Washington</persName>-Biographie <title
-                            ref="#w05530">The Life and Writings of George Washington</title> an.</note> Es ist mir ein beruhigen<lb break="no"/>des
-                    Gefühl auf diese Weise doch etwas für<lb/>die Zukunft meiner <rs ref="#p0218" type="bi">Schwester</rs> thun zu können<lb/>denn für
-                    mich selbst dünkt es mich kaum der<lb/>Mühe werth.</p>
-                <p>Seit Ihrer Abreise<note resp="#sophia.zeil">Anlässlich seiner Hochzeit am <date when-iso="1837-05-18">18. Mai 1837</date> hatte
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> auch in <placeName ref="#l0003" type="bi">Dresden</placeName> einen
-                        Besuch abgestattet.</note> ist hier so Manches vorge<lb break="no"/>fallen, erstlich hat <rs ref="#p0133" type="bi">Vater</rs>
-                    zwei <rs ref="#w05532 #w05533" type="bi">Novellen</rs> ge<lb break="no"/>schrieben, von denen die <rs ref="#w05532" type="bi"
-                        >eine</rs>,<note resp="#sophia.zeil">Die kleinere der beiden <date when-iso="1837">1837</date> entstandenen Novellen ist
-                            <title ref="#w05532">Des Lebens Ueberfluss</title>, die andere <title ref="#w05533">Das Liebeswerben</title>.</note>
-                    kleinere mir<lb/>vorzüglich gefällt, beide sind sehr heiter, und<lb/>zeugen von einer Stimmung, die besser seyn<lb/>muß, als <subst>
+                <opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
+                            when-iso="1837-11-10">10 <subst>
+                                <del rend="strikethrough"><choice>
+                                        <abbr>Octob</abbr>
+                                        <expan>October</expan>
+                                    </choice></del>
+                                <add place="above"><choice>
+                                        <abbr>Nov</abbr>
+                                        <expan>November</expan>
+                                    </choice></add>
+                            </subst> 1837</date>.</dateline></opener>
+                <p><note hand="#blue_ink" place="top-margin-center inline">27.</note><lb/>Ihr Brief, mein theuerster Freund, hat mich<lb/>sehr
+                    erfreut, da er nur Gutes enthält, und<lb/>mir zeigt wie glücklich und zufrieden<note resp="#sophia.zeil"><p xml:lang="de">Bei
+                                <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 215) fehlt "und
+                            zufrieden".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Sie sind.<lb/>In einer solchen Stimmung ist das Schreiben
+                    ein<lb/>Vergnügen, anders ist es mit mir, und ich<lb/>verschob es deshalb auch<note resp="#sophia.zeil"><p xml:lang="de">Bei
+                                <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 215) fehlt
+                            "auch".</p><p xml:lang="en"/><p xml:lang="fr"/></note> von Tage zu Tage Ihnen<lb/>zu antworten. Ich kann nicht sagen daß
+                    ich<lb/>unzufrieden bin, aber das Leben hat so alle<lb/>Farbe und allen Reiz für mich verloren,<lb/>daß es mir schwer wird mich
+                    mitzutheilen oder<lb/>etwas zu erzählen, ich habe mich selbst noch nicht<lb/>entschließen können etwas zu lesen, und bin<lb/>fast
+                    immer mit der trocknen, theilweise<lb/>langweiligen Arbeit an den <persName ref="#p3504" type="bi"
+                    >Washingtonschen</persName><lb/>Briefen beschäftigt.<note resp="#sophia.zeil"><p xml:lang="de">Im Auftrag <persName ref="#p0187"
+                                type="bi">Friedrich von Raumers</persName> fertigte <persName ref="#p0217" type="bi">Dorothea Tieck</persName> eine
+                            auszugsweise <rs ref="#w05529" type="bi">Übersetzung</rs> der von <persName ref="#p3505" type="bi">Jared Sparks</persName>
+                            verfassten 12-bändigen <persName ref="#p3504" type="bi">Washington</persName>-Biographie <title ref="#w05530">The Life and
+                                Writings of George Washington</title> an.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Es ist mir ein beruhigen<lb
+                        break="no"/>des Gefühl auf diese Weise doch etwas für<lb/>die Zukunft meiner <rs ref="#p0218" type="bi">Schwester</rs> thun zu
+                    können<lb/>denn für mich selbst dünkt es mich kaum der<lb/>Mühe werth.</p>
+                <p>Seit Ihrer Abreise<note resp="#sophia.zeil"><p xml:lang="de">Anlässlich seiner Hochzeit am <date when-iso="1837-05-18">18. Mai
+                                1837</date> hatte <persName ref="#p0711" type="bi">Uechtritz</persName> auch in <placeName ref="#l0003" type="bi"
+                                >Dresden</placeName> einen Besuch abgestattet.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ist hier so Manches
+                        vorge<lb break="no"/>fallen, erstlich hat <rs ref="#p0133" type="bi">Vater</rs> zwei <rs ref="#w05532 #w05533" type="bi"
+                        >Novellen</rs> ge<lb break="no"/>schrieben, von denen die <rs ref="#w05532" type="bi">eine</rs>,<note resp="#sophia.zeil"><p
+                            xml:lang="de">Die kleinere der beiden <date when-iso="1837">1837</date> entstandenen Novellen ist <title ref="#w05532">Des
+                                Lebens Ueberfluss</title>, die andere <title ref="#w05533">Das Liebeswerben</title>.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> kleinere mir<lb/>vorzüglich gefällt, beide sind sehr heiter, und<lb/>zeugen von einer Stimmung, die
+                    besser seyn<lb/>muß, als <subst>
                         <del rend="overwritten">v</del>
                         <add place="across">m</add>
                     </subst>an es denken sollte, wenn man<lb/>ihn täglich sieht, er klagt aber nicht, und auch<lb/>seine Gesundheit ist erträglicher
                     als den Som̄er</p>
                 <pb facs="P1030841a.jpg" n="2"/>
                 <p>Es war mir sehr interessant Ihren Bruder <persName ref="#p2303" type="bi">Rudolf</persName><lb/>kennen zu lernen, er hat so viel
-                    Aehnlichkeit<lb/>mit Ihnen, und ist doch wieder so ganz anders.<lb/><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
-                            >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 215) folgt eine unmarkierte Auslassung des folgenden
-                        Satzes bis einschließlich "erwartet hatte".</note>Leider habe ich ihn wenig gesehen, denn den Mit<lb break="no"/>tag bei <rs
-                        ref="#p3443 #p3506" type="bi">Petschkens</rs> war nur <persName ref="#p0218" type="bi">Agnes</persName> eingeladen<subst>
+                    Aehnlichkeit<lb/>mit Ihnen, und ist doch wieder so ganz anders.<lb/><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName
+                                ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 215) folgt eine unmarkierte
+                            Auslassung des folgenden Satzes bis einschließlich "erwartet hatte".</p><p xml:lang="en"/><p xml:lang="fr"/></note>Leider
+                    habe ich ihn wenig gesehen, denn den Mit<lb break="no"/>tag bei <rs ref="#p3443 #p3506" type="bi">Petschkens</rs> war nur
+                        <persName ref="#p0218" type="bi">Agnes</persName> eingeladen<subst>
                         <del hand="#pencil" rend="overwritten">,</del>
                         <add hand="#pencil" place="across">;</add>
                     </subst><lb/><del hand="#pencil" rend="strikethrough">und den Abend bei uns blieben <rs ref="#p2303 #p3507" type="bi">sie</rs>
@@ -293,10 +306,11 @@
                     >Novellen</rs><lb/>zuerst vor, und sie machten <persName ref="#p0713" type="bi">Löbell</persName> große<lb/>Freude. Es ist recht
                     schade, daß die <rs ref="#w05532 #w05533" type="bi">Novellen</rs><lb/>zu spät fertig geworden sind, und nicht mehr<lb/>in der
                         <title ref="#w05535">Urania</title>, oder wozu sie sonst bestimmt<lb/>waren, aufgenommen werden konnten, nun<lb/>können sie
-                    erst künftigen Herbst gedruckt<lb/>werden.<note resp="#sophia.zeil">Beide <rs ref="#w05532 #w05533" type="bi">Novellen</rs>
-                        erschienen erst Anfang <date when-iso="1839">1839</date>. <title ref="#w05532">Des Lebens Ueberfluss</title> in der <title
-                            ref="#w05531">Urania. Taschenbuch auf das Jahr 1839</title> und <title ref="#w05533">Das Liebeswerben</title> in der
-                            <title ref="#w05534">Helena. Taschenbuch für das Jahr 1839</title>.</note></p>
+                    erst künftigen Herbst gedruckt<lb/>werden.<note resp="#sophia.zeil"><p xml:lang="de">Beide <rs ref="#w05532 #w05533" type="bi"
+                                >Novellen</rs> erschienen erst Anfang <date when-iso="1839">1839</date>. <title ref="#w05532">Des Lebens
+                                Ueberfluss</title> in der <title ref="#w05531">Urania. Taschenbuch auf das Jahr 1839</title> und <title ref="#w05533"
+                                >Das Liebeswerben</title> in der <title ref="#w05534">Helena. Taschenbuch für das Jahr 1839</title>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>Im vorigen <date when-iso="1837-10">Monath</date> waren <rs ref="#p0187 #p0201 #p3508" type="bi">Raumers</rs>, die uns<lb/>ganz
                     unerwartet und überraschend kamen,<lb/>eine Woche hier, es freute mich<!--[216]--> recht, die klei<lb break="no"/>ne <persName
                         ref="#p3508" type="bi">Agnes</persName>, die ich nur als Kind gesehen hatte,<lb/>kennen zu lernen, sie hat etwas sehr Origi<lb
@@ -308,43 +322,45 @@
                     und sich noch einige Wochen in <placeName ref="#l0032" type="bi">Wien</placeName> auf<lb break="no"/>gehalten, auch sie wußten
                     viel zu erzählen.</p>
                 <p>Ich habe es in der Zeit recht empfunden, wie ab<lb break="no"/>gestumpft ich bin, denn alle diese Erzählungen<lb/>interessirten
-                    mich gar nicht, ich wünsche weder<lb/>fremde Länder und Oerter<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
-                            >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 216) steht "Orte".</note> zu sehen, noch da<lb break="no"
-                    />von zu hören, und alle meine Wünsche beschränken<lb/>sich auf Stille und Einförmigkeit. In den Abend<lb break="no"/>stunden
-                    haben wir jetzt <persName ref="#p0310" type="bi">Steffens</persName> neuestes<lb/>Buch, <title ref="#w05536">die
-                        Revolution</title>, miteinander gelesen, und<lb/>ich finde es so unbeschreiblich schwach, und so gar<lb/>nichts daran zu
-                    loben, daß es mir förmlich<lb/>einen melancholischen Eindruck gemacht hat,<lb/>weil man glauben muß, nur ein Mensch
-                    dessen<lb/>Geisteskräfte schon sehr abgenommen haben<lb/>kann ein solches <rs ref="#w05536" type="bi">Buch</rs> schreiben.</p>
+                    mich gar nicht, ich wünsche weder<lb/>fremde Länder und Oerter<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName
+                                ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 216) steht "Orte".</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> zu sehen, noch da<lb break="no"/>von zu hören, und alle meine Wünsche
+                    beschränken<lb/>sich auf Stille und Einförmigkeit. In den Abend<lb break="no"/>stunden haben wir jetzt <persName ref="#p0310"
+                        type="bi">Steffens</persName> neuestes<lb/>Buch, <title ref="#w05536">die Revolution</title>, miteinander gelesen, und<lb/>ich
+                    finde es so unbeschreiblich schwach, und so gar<lb/>nichts daran zu loben, daß es mir förmlich<lb/>einen melancholischen Eindruck
+                    gemacht hat,<lb/>weil man glauben muß, nur ein Mensch dessen<lb/>Geisteskräfte schon sehr abgenommen haben<lb/>kann ein solches
+                        <rs ref="#w05536" type="bi">Buch</rs> schreiben.</p>
                 <p>Das Neueste und Wichtigste was in <placeName ref="#l0003" type="bi">Dresden</placeName><lb/>vorgefallen ist, daß <persName
                         ref="#p3469" type="bi">Bendemann</persName> wieder hier<lb/>war, und einen Auftrag vom <rs ref="#p2418" type="bi">König</rs>
                     bekom̄en<lb/>hat, der i<subst>
                         <del rend="overwritten">n</del>
                         <add place="across">h</add>
                     </subst>n wohl mehrere Jahre in <placeName ref="#l0003" type="bi">Dresden</placeName><lb/>fest halten wird, er soll einen großen
-                    Saal<lb/>im Schlosse ausmalen,<note resp="#sophia.zeil">Vor allem durch die Vermittlung von <persName ref="#p2447" type="bi">Carl
-                            Gustav Carus</persName>, wurde <persName ref="#p3469" type="bi">Bendemann</persName>
-                        <date when-iso="1838">1838</date> durch <persName ref="#p2418" type="bi">König Friedrich August II.</persName> nach <placeName
-                            ref="#l0003" type="bi">Dresden</placeName> berufen, um drei Säle im <placeName ref="#l0003" type="bi">Dresdner</placeName>
-                        Residenzschloss auszumalen; vgl. <ref target="Brief28DorotheaTieckanUechtritz.xml">Brief vom 6. April 1837</ref>, S. 3 (Bl. 2
-                        recto). Damit verbunden war auch eine Professur für Historienmalerei an der Akademie der Künste. Vgl. <persName ref="#p3509"
-                            type="bi">Scholl</persName>: <title ref="#w05537">Vor den Gemälden</title>, S. 87.</note> und ist so
-                    liebenswürdig<lb/>diese Arbeit zu übernehmen. Mich erfreut es<lb/>wahrhaft daß <placeName ref="#l0003" type="bi"
-                        >Dresden</placeName> so hoch geehrt wird,<lb/>an uns denke ich eigentlich dabei nicht, denn<lb/>ich glaube kaum daß wir
-                        <persName ref="#p3469" type="bi">Bendemann</persName> viel<lb/>sehen werden wenn er ganz hier lebt. Ich<lb/>weiß nicht wie es
-                    zugeht, aber unsre Häuslichkeit<lb/>wird immer stiller und trauriger, und wir<lb/>sitzen Abends oft allein, theils
-                    kommen<lb/>weniger Menschen zu uns, oft läßt auch<pb facs="P1030842.jpg" n="4"/><rs ref="#p0133" type="bi">Vater</rs> alles<note
-                        resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 216)
-                        steht "Alle".</note> abweisen, weil er sich doch ange<lb break="no"/>griffen fühlt. Die kurze Zeit, wo <persName ref="#p3469"
-                        type="bi">Bendemann</persName><lb/>jetzt hier war kam er oft zu uns, er aß auch<lb/>einen Mittag hier und war unbeschreiblich
-                        lie<lb break="no"/>benswürdig. In seiner milden einfachen Weise<lb/>hat er wirklich etwas von einem Engel.</p>
+                    Saal<lb/>im Schlosse ausmalen,<note resp="#sophia.zeil"><p xml:lang="de">Vor allem durch die Vermittlung von <persName
+                                ref="#p2447" type="bi">Carl Gustav Carus</persName>, wurde <persName ref="#p3469" type="bi">Bendemann</persName>
+                            <date when-iso="1838">1838</date> durch <persName ref="#p2418" type="bi">König Friedrich August II.</persName> nach
+                                <placeName ref="#l0003" type="bi">Dresden</placeName> berufen, um drei Säle im <placeName ref="#l0003" type="bi"
+                                >Dresdner</placeName> Residenzschloss auszumalen; vgl. <ref target="Brief28DorotheaTieckanUechtritz.xml">Brief vom
+                                6. April 1837</ref>, S. 3 (Bl. 2 recto). Damit verbunden war auch eine Professur für Historienmalerei an der Akademie
+                            der Künste. Vgl. <persName ref="#p3509" type="bi">Scholl</persName>: <title ref="#w05537">Vor den Gemälden</title>,
+                            S. 87.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und ist so liebenswürdig<lb/>diese Arbeit zu übernehmen. Mich
+                    erfreut es<lb/>wahrhaft daß <placeName ref="#l0003" type="bi">Dresden</placeName> so hoch geehrt wird,<lb/>an uns denke ich
+                    eigentlich dabei nicht, denn<lb/>ich glaube kaum daß wir <persName ref="#p3469" type="bi">Bendemann</persName> viel<lb/>sehen
+                    werden wenn er ganz hier lebt. Ich<lb/>weiß nicht wie es zugeht, aber unsre Häuslichkeit<lb/>wird immer stiller und trauriger, und
+                    wir<lb/>sitzen Abends oft allein, theils kommen<lb/>weniger Menschen zu uns, oft läßt auch<pb facs="P1030842.jpg" n="4"/><rs
+                        ref="#p0133" type="bi">Vater</rs> alles<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
+                            ref="#w03300">Erinnerungen</title> (S. 216) steht "Alle".</note> abweisen, weil er sich doch ange<lb break="no"/>griffen
+                    fühlt. Die kurze Zeit, wo <persName ref="#p3469" type="bi">Bendemann</persName><lb/>jetzt hier war kam er oft zu uns, er aß
+                    auch<lb/>einen Mittag hier und war unbeschreiblich lie<lb break="no"/>benswürdig. In seiner milden einfachen Weise<lb/>hat er
+                    wirklich etwas von einem Engel.</p>
                 <p>In der Singakademie ist der <title ref="#w05538">Paulus</title> von <persName ref="#p0510" type="bi">Men<lb break="no"
                         />delson</persName> einstudirt, und ich habe <date when-iso="1836-11-08">vorgestern</date> die<lb/>Hauptprobe gehört. Es
                     ist<!--[217]--> ein himmlisches Werk<lb/>und seit dem <title ref="#w05539">Messias</title> von <persName ref="#p3513" type="bi"
                         >Händel</persName> und der <persName ref="#p3514" type="bi">Bach</persName><lb break="no"/>schen <title ref="#w05540"
-                        >Passion</title> hat keine Musik mich so entzükt<lb/><date when-iso="1837-11-13">Montag</date><note resp="#sophia.zeil"
-                        >Montag, den <date when-iso="1837-11-13">13. November 1837</date>.</note> werde ich es in der Aufführung zum<lb/>zweiten Mal
-                    hören, es ging recht gut, beson<lb break="no"/>ders die Chöre, und <persName ref="#p0218" type="bi">Agnes</persName> hat die
-                    kleine<lb/>Solopartie sehr schön
+                        >Passion</title> hat keine Musik mich so entzükt<lb/><date when-iso="1837-11-13">Montag</date><note resp="#sophia.zeil"><p
+                            xml:lang="de">Montag, den <date when-iso="1837-11-13">13. November 1837</date>.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> werde ich es in der Aufführung zum<lb/>zweiten Mal hören, es ging recht gut, beson<lb break="no"/>ders die Chöre,
+                    und <persName ref="#p0218" type="bi">Agnes</persName> hat die kleine<lb/>Solopartie sehr schön
                     gesungen.<!--<note resp="#sophia.zeil">Infos zu
                         Agnes als Sängern? XXX</note>--></p>
                 <p>Die Zeit <add place="above">seit Sie bei uns waren</add> ist mir so schnell vergangen, daß<lb/>ich es kaum begreifen kann, wie ein
@@ -359,10 +375,11 @@
                     ihren schönen Brief<lb/>und wird nächstens <subst>
                         <del rend="overwritten">S</del>
                         <add place="across">s</add>
-                    </subst>chreiben. <closer>Leben Sie wohl und<lb/>glücklich<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
-                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 217) steht hier ein Ausrufezeichen.</note><lb/><hi
-                            rend="align(center)">Ihre <signed><persName ref="#p0217" type="bi"><hi rend="latin"
-                            >Dorothea</hi></persName></signed>.</hi></closer></p>
+                    </subst>chreiben.</p>
+                <closer><salute>Leben Sie wohl und<lb/>glücklich</salute><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151"
+                                type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 217) steht hier ein Ausrufezeichen.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><signed rend="align(center)">Ihre <persName ref="#p0217" type="bi"><hi
+                                rend="latin">Dorothea</hi></persName>.</signed></closer>
             </div>
         </body>
     </text>

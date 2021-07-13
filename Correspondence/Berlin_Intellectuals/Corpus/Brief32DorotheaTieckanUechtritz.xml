@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -207,8 +214,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-26" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Small changes.</change>
@@ -230,15 +238,16 @@
             <div type="transcription">
                 <pb facs="P1030846.jpg" n="1"/>
                 <note hand="#blue_ink" place="top-margin-center inline">29.</note>
-                <p><opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="1839-09-24">24. <hi rend="latin"><choice>
-                                        <abbr>Sept.</abbr>
-                                        <expan>September</expan>
-                                    </choice></hi></date></dateline><lb/>Theurer Freund,</opener><lb/><date when-iso="1839-09-23">Gestern</date>
-                    erhielten wir durch <persName ref="#p2876" type="bi">Frau von<lb/>Siebel</persName> Ihre Briefe,<note resp="#sophia.zeil">Neben
-                        dem an <persName ref="#p0217" type="bi">Dorothea</persName> gerichteten Brief, war auch ein Brief von <persName ref="#p3493"
-                            type="bi">Marie von Uechtritz</persName> an <persName ref="#p0218" type="bi">Agnes</persName> übermittelt worden, der
-                        heute verschollen ist.</note> und da sie bald<lb/>nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName> zurück kehrt,
+                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="1839-09-24">24. <hi rend="latin"><choice>
+                                    <abbr>Sept.</abbr>
+                                    <expan>September</expan>
+                                </choice></hi></date></dateline><lb/>Theurer Freund,</opener>
+                <p><date when-iso="1839-09-23">Gestern</date> erhielten wir durch <persName ref="#p2876" type="bi">Frau von<lb/>Siebel</persName> Ihre
+                        Briefe,<note resp="#sophia.zeil"><p xml:lang="de">Neben dem an <persName ref="#p0217" type="bi">Dorothea</persName>
+                            gerichteten Brief, war auch ein Brief von <persName ref="#p3493" type="bi">Marie von Uechtritz</persName> an <persName
+                                ref="#p0218" type="bi">Agnes</persName> übermittelt worden, der heute verschollen ist.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> und da sie bald<lb/>nach <placeName ref="#l0292" type="bi">Düsseldorf</placeName> zurück kehrt,
                     eile ich<lb/>zu schreiben, um ihr wenigstens einen<lb/>Dank und einige Nachrichten mitge<lb break="no"/>ben zu können. <date
                         when-iso="1839-09-23">Gestern</date> Abend wa<lb break="no"/>ren <rs ref="#p2875 #p2876" type="bi">Siebels</rs><note
                         resp="#sophia.zeil"><persName ref="#p2875" type="bi">Heinrich Philipp Ferdinand von Sybel</persName> und <persName
@@ -257,36 +266,39 @@
                 <p><note hand="#pencil" place="inline">(</note>Ich freue mich herzlich, daß Sie end<lb break="no"/>lich über den Zustand Ihrer
                         <persName ref="#p3493" type="bi">Frau</persName><pb facs="P1030847a.jpg" n="2"/>beruhigt seyn können. Ich habe mich
                     sehr<lb/>geängstigt, hoffe nun aber mit Zuver<lb break="no"/>sicht, daß alles sich zum Glück entwickelt<lb/>und ohne Gefahr
-                    vorüber gehen wird.<note resp="#sophia.zeil">Vermutlich war <persName ref="#p3493" type="bi">Marie von Uechtritz</persName> erneut
-                        schwanger. Die bereits im <date when-iso="1839-01">Januar 1839</date> angedeutete Schwangerschaft (vgl. <ref
-                            target="Brief31DorotheaTieckanUechtritz.xml">Brief vom 7. Januar 1839</ref>, S. 1 (Bl. 1 recto)) scheint nicht glücklich
-                        ausgegangen zu sein. Möglicherweise ergaben sich auch bei diesem Kind Komplikationen, denn das Paar blieb offiziell
-                        kinderlos.</note><lb/>Diese Zeit der Prüfung is ja nun<lb/>bald überstanden, und ich verlasse<lb/>mich darauf, daß Sie mir
-                    alsdann so<lb break="no"/>gleich Nachricht davon geben.<note hand="#pencil" place="inline">)</note></p>
-                <p>Ihr <rs ref="#w05544" type="bi">Buch</rs><note resp="#sophia.zeil">Der erste Band von <persName ref="#p0711" type="bi"
-                            >Uechtritz</persName>' Abhandlung <title ref="#w05544">Blicke in das Düsseldorfer Kunst- und Künstlerleben</title>.</note>
-                    habe ich sogleich gelesen. Vieles<lb/>hat mich sehr interessirt, und dennoch<lb/>wollte ich, Sie hätten es nicht geschrie<lb
-                        break="no"/>ben. Wie <persName ref="#p2876" type="bi">Frau von Siebel</persName> mir sagt,<lb/>ist Ihr Verhältniß mit den
-                    Malern,<lb/>das doch früher so angenehm für Sie<lb/>war, seitdem ganz zerstört.<note resp="#sophia.zeil">Der erste Band von
-                            <persName ref="#p0711" type="bi">Uechtritz</persName>
-                        <rs ref="#w05544" type="bi">Abhandlung</rs> (vor allem das Kapitel über <persName ref="#p3467" type="bi">Carl
-                            Lessing</persName>, welches im zweiten Band fortgesetzt werden sollte) hatte einige <placeName ref="#l0292" type="bi"
-                            >Düsseldorfer</placeName> Maler gekränkt, die sich in einem zu wenig positiven Licht dargestellt sahen – zu Unrecht, wie
-                        es in einer Rezension vom <date when-iso="1843-06-30">30. Juni 1843</date> zum <rs ref="#w05545" type="bi">zweiten Band</rs>
-                        heißt: "In <placeName ref="#l0001" type="bi">Deutschland</placeName> kann zwar der Gelobte außerordentlich viel ungehöriges
-                        Lob, und je mehr desto besser, vertragen, nur der Nichtgelobte das noch so kärglich gespendete, aber verdiente Lob nicht,
-                        welches einem Andern zu Theil wird. Wir können uns in die unerquickliche Lage, in welche sich <persName ref="#p0711" type="bi"
-                            >Hr. v. Üchtritz</persName> nach dem Erscheinen des <rs ref="#w05544" type="bi">ersten Bandes</rs> versetzt sah, recht gut
-                        hineindenken." (Beilage zu den <title ref="#w05485">Blättern für literarische Unterhaltung</title>, Bd. 1, S. 725.) <persName
-                            ref="#p0711" type="bi">Uechtritz</persName> selbst begründet im Vorwort zum <rs ref="#w05545" type="bi">zweiten Band</rs>,
-                        welcher erst <date when-iso="1840">1840</date> erschien, das Fehlen der Fortsetzung des Kapitels über <persName ref="#p3467"
-                            type="bi">Lessing</persName> folgendermaßen: "Bei dem unerfreulichen Aufsehen, welches das Erscheinen des <rs
-                            ref="#w05544" type="bi">ersten Bandes</rs> in einem Theile der hiesigen Künstlerwelt machte und wegen dessen ich auf den
-                        ebenerwähnten Aufsatz [über <persName ref="#p3467" type="bi">Lessing</persName>, S.Z.] verweise, kann es nicht befremden, daß
-                            <persName ref="#p3467" type="bi">Lessing</persName> den Wunsch gegen mich äußerte, diese Aufregung, wenigstens in
-                        Beziehung auf seine Persönlichkeit, nicht wiederholt zu sehen. Ebenso verstand es sich von selbst, daß ich dem Verlangen des
-                        Freundes nachkam." (S. 3.) </note> Schrei<lb break="no"/>ben Sie doch lieber etwas rein Poeti<lb break="no"/>sches, das würde
-                    mir mehr Freude<lb/>machen. Ich möchte Ihnen gern mehr<lb/>darüber sagen, weiß mich aber nicht<lb/>recht auszudrücken, mündlich
+                    vorüber gehen wird.<note resp="#sophia.zeil"><p xml:lang="de">Vermutlich war <persName ref="#p3493" type="bi">Marie von
+                                Uechtritz</persName> erneut schwanger. Die bereits im <date when-iso="1839-01">Januar 1839</date> angedeutete
+                            Schwangerschaft (vgl. <ref target="Brief31DorotheaTieckanUechtritz.xml">Brief vom 7. Januar 1839</ref>, S. 1 (Bl. 1
+                            recto)) scheint nicht glücklich ausgegangen zu sein. Möglicherweise ergaben sich auch bei diesem Kind Komplikationen, denn
+                            das Paar blieb offiziell kinderlos.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>Diese Zeit der Prüfung is ja
+                    nun<lb/>bald überstanden, und ich verlasse<lb/>mich darauf, daß Sie mir alsdann so<lb break="no"/>gleich Nachricht davon
+                        geben.<note hand="#pencil" place="inline">)</note></p>
+                <p>Ihr <rs ref="#w05544" type="bi">Buch</rs><note resp="#sophia.zeil"><p xml:lang="de">Der erste Band von <persName ref="#p0711"
+                                type="bi">Uechtritz</persName>' Abhandlung <title ref="#w05544">Blicke in das Düsseldorfer Kunst- und
+                                Künstlerleben</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> habe ich sogleich gelesen. Vieles<lb/>hat mich
+                    sehr interessirt, und dennoch<lb/>wollte ich, Sie hätten es nicht geschrie<lb break="no"/>ben. Wie <persName ref="#p2876"
+                        type="bi">Frau von Siebel</persName> mir sagt,<lb/>ist Ihr Verhältniß mit den Malern,<lb/>das doch früher so angenehm für
+                    Sie<lb/>war, seitdem ganz zerstört.<note resp="#sophia.zeil"><p xml:lang="de">Der erste Band von <persName ref="#p0711" type="bi"
+                                >Uechtritz</persName>
+                            <rs ref="#w05544" type="bi">Abhandlung</rs> (vor allem das Kapitel über <persName ref="#p3467" type="bi">Carl
+                                Lessing</persName>, welches im zweiten Band fortgesetzt werden sollte) hatte einige <placeName ref="#l0292" type="bi"
+                                >Düsseldorfer</placeName> Maler gekränkt, die sich in einem zu wenig positiven Licht dargestellt sahen – zu Unrecht,
+                            wie es in einer Rezension vom <date when-iso="1843-06-30">30. Juni 1843</date> zum <rs ref="#w05545" type="bi">zweiten
+                                Band</rs> heißt: "In <placeName ref="#l0001" type="bi">Deutschland</placeName> kann zwar der Gelobte außerordentlich
+                            viel ungehöriges Lob, und je mehr desto besser, vertragen, nur der Nichtgelobte das noch so kärglich gespendete, aber
+                            verdiente Lob nicht, welches einem Andern zu Theil wird. Wir können uns in die unerquickliche Lage, in welche sich
+                                <persName ref="#p0711" type="bi">Hr. v. Üchtritz</persName> nach dem Erscheinen des <rs ref="#w05544" type="bi">ersten
+                                Bandes</rs> versetzt sah, recht gut hineindenken." (Beilage zu den <title ref="#w05485">Blättern für literarische
+                                Unterhaltung</title>, Bd. 1, S. 725.) <persName ref="#p0711" type="bi">Uechtritz</persName> selbst begründet im
+                            Vorwort zum <rs ref="#w05545" type="bi">zweiten Band</rs>, welcher erst <date when-iso="1840">1840</date> erschien, das
+                            Fehlen der Fortsetzung des Kapitels über <persName ref="#p3467" type="bi">Lessing</persName> folgendermaßen: "Bei dem
+                            unerfreulichen Aufsehen, welches das Erscheinen des <rs ref="#w05544" type="bi">ersten Bandes</rs> in einem Theile der
+                            hiesigen Künstlerwelt machte und wegen dessen ich auf den ebenerwähnten Aufsatz [über <persName ref="#p3467" type="bi"
+                                >Lessing</persName>, S.Z.] verweise, kann es nicht befremden, daß <persName ref="#p3467" type="bi">Lessing</persName>
+                            den Wunsch gegen mich äußerte, diese Aufregung, wenigstens in Beziehung auf seine Persönlichkeit, nicht wiederholt zu
+                            sehen. Ebenso verstand es sich von selbst, daß ich dem Verlangen des Freundes nachkam." (S. 3.) </p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> Schrei<lb break="no"/>ben Sie doch lieber etwas rein Poeti<lb break="no"/>sches, das würde mir mehr
+                    Freude<lb/>machen. Ich möchte Ihnen gern mehr<lb/>darüber sagen, weiß mich aber nicht<lb/>recht auszudrücken, mündlich
                     würde<lb/>es besser gehen. Auch bin ich <date when-iso="1839-09-24">heut</date><lb/>sehr eilig und zerstreut.</p>
                 <pb facs="P1030847b.jpg" n="3"/>
                 <p>In Unruhe und Zerstreuung ist über<lb break="no"/>haupt der ganze Sommer hin gegangen<lb/>Im <date when-iso="1839-06">Juni</date>
@@ -310,22 +322,24 @@
                         type="bi">Agnes</persName> zu trennen, doch ihr macht die<lb/>Reise Vergnügen und so lasse ich mir<lb/>nichts merken, um sie
                     nicht zu stören.<lb/>Sobald sie zurück kommt, wird sie<lb/>den Brief Ihrer lieben <rs ref="#p3493" type="bi">Frau</rs> beant<lb
                         break="no"/>worten, und trägt mir indessen die<lb/>schönsten Grüße auf. Wie ich höre<lb/>wird <persName ref="#p2304" type="bi"
-                        >Immermann</persName> nach seiner Verhei<lb break="no"/>rathung<note resp="#sophia.zeil"><persName ref="#o2304" type="bi"
-                            >Immermann</persName> heiratete am <date when-iso="1839-10-02">2. Oktober 1839</date>
-                        <persName ref="#p3527" type="bi">Marianne Niemeyer</persName>.</note> mit der jungen <rs ref="#p3527" type="bi">Frau</rs>
-                    her<lb/>kommen. Ich freue mich ihn in diesem<lb/>glücklichen Zustande wieder zu sehen.<lb/>Ich habe mich sehr über die
-                    Heirath<lb/>gefreut, weil ich es weiß welch ein<lb/>Unglück jedes unnatürliche Verhält<lb break="no"/>niß ist, und wie es die
-                    schönsten Kräf<lb break="no"/>te zerstört.<note resp="#sophia.zeil"><persName ref="#p0217" type="bi">Dorothea</persName> spielt
-                        auf die lange und außereheliche Beziehung <persName ref="#p2304" type="bi">Immermanns</persName> zu <persName ref="#p2417"
-                            type="bi">Elisa von Lützow</persName> an und bringt diese indirekt in Verbindung mit der illegitimen Verbindung <persName
-                            ref="#p0133" type="bi">Ludwig Tiecks</persName> zu <persName ref="#p0232" type="bi">Henriette von Finckenstein</persName>;
-                        vgl. <ref target="Brief31DorotheaTieckanUechtritz.xml">Brief vom 7. Januar 1839</ref>, S. 3 (Bl. 2 recto).</note>
-                    <note hand="#pencil" place="inline">+</note>
-                    <closer>Heut muß ich schließen<lb/>nächstens schreibe ich mehr<lb/><hi rend="align(center)">Ihre <signed><persName ref="#p0217"
-                                    type="bi"><hi rend="latin">Dorothea <choice>
-                                            <abbr>T.</abbr>
-                                            <expan>Tieck</expan>
-                                        </choice></hi></persName></signed></hi></closer></p>
+                        >Immermann</persName> nach seiner Verhei<lb break="no"/>rathung<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#o2304" type="bi">Immermann</persName> heiratete am <date when-iso="1839-10-02">2. Oktober 1839</date>
+                            <persName ref="#p3527" type="bi">Marianne Niemeyer</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> mit der
+                    jungen <rs ref="#p3527" type="bi">Frau</rs> her<lb/>kommen. Ich freue mich ihn in diesem<lb/>glücklichen Zustande wieder zu
+                    sehen.<lb/>Ich habe mich sehr über die Heirath<lb/>gefreut, weil ich es weiß welch ein<lb/>Unglück jedes unnatürliche Verhält<lb
+                        break="no"/>niß ist, und wie es die schönsten Kräf<lb break="no"/>te zerstört.<note resp="#sophia.zeil"><p xml:lang="de"
+                                ><persName ref="#p0217" type="bi">Dorothea</persName> spielt auf die lange und außereheliche Beziehung <persName
+                                ref="#p2304" type="bi">Immermanns</persName> zu <persName ref="#p2417" type="bi">Elisa von Lützow</persName> an und
+                            bringt diese indirekt in Verbindung mit der illegitimen Verbindung <persName ref="#p0133" type="bi">Ludwig
+                                Tiecks</persName> zu <persName ref="#p0232" type="bi">Henriette von Finckenstein</persName>; vgl. <ref
+                                target="Brief31DorotheaTieckanUechtritz.xml">Brief vom 7. Januar 1839</ref>, S. 3 (Bl. 2 recto).</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note>
+                    <note hand="#pencil" place="inline">+</note></p>
+                <closer><salute>Heut muß ich schließen<lb/>nächstens schreibe ich mehr</salute><lb/><signed rend="align(center)">Ihre <persName
+                            ref="#p0217" type="bi"><hi rend="latin">Dorothea <choice>
+                                    <abbr>T.</abbr>
+                                    <expan>Tieck</expan>
+                                </choice></hi></persName></signed></closer>
             </div>
         </body>
     </text>

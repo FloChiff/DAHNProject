@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -237,8 +244,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-11-22" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
             <change when-iso="2014-10-03" who="#sophia.zeil">Small corrections.</change>
             <change when-iso="2014-10-01" who="#sophia.zeil">Updated annotations.</change>
@@ -265,72 +273,73 @@
                                 </choice></hi><lb/>1834</date>.</dateline></opener>
                 <lb/>
                 <p>Ich hätte Ihren Brief gern gleich beantwortet,<lb/>theurer Freund, ich erhielt ihn aber in den Ta<lb break="no"/>gen der größten
-                    Angst und Sorge um meine<lb/><rs ref="#p0233" type="bi">Mutter</rs>, die Krankheit<note resp="#sophia.zeil"><persName ref="#p0233"
-                            type="bi">Amalia Tieck</persName> litt seit einigen Monaten an Unterleibsbeschwerden und einer hinzugekommenen Schwellung
-                        der Beine; vgl. <ref target="Brief12DorotheaTieckanUechtritz.xml">Brief vom 20. Juni 1834</ref>, S. 2 (Bl. 1 verso).</note>
-                    war nämlich seit dem<lb/><date when-iso="1834-07">Juli</date> schon wieder so schlimm geworden, daß<lb/>eine zweite Operation
-                    nicht länger ver<lb break="no"/>schoben werden durfte: diese ist denn am<lb/>Sonnabend den <date when-iso="1834-09-27">27</date>
-                    vorgenommen worden,<lb/>und sehr gut, und besser als die erste gegan<lb break="no"/>gen. Wie es nun weiter wird das müssen<lb/>wir
-                    Gott empfehlen, noch kann man es gar<lb/>nicht beurtheilen; aber die <rs ref="#p0233" type="bi">Mutter</rs> ist kräf<lb break="no"
-                    />tiger als man es nach so langer Krankheit<lb/>erwarten durfte, und <date when-iso="1834-09-30">heute</date>, da sie zu<lb
-                        break="no"/>erst außer Bett ist, benutze ich den ersten<lb/>freien Augenblick Ihren Brief zu beant<lb break="no"/>worten. Was
-                    Ihr Herkommen betrifft so<lb/>wird es uns eine große Freude seyn,<lb/>wenn Sie es sich einige Zeit wollen bei uns<lb/>gefallen
-                    lassen. Sie kennen unsre häus<pb break="no" facs="P1030774a.jpg" n="2"/>liche Einrichtung, wissen wie wenig Umstände<lb/>wir mit
-                    so guten Freunden, wie Sie sind ma<lb break="no"/>chen, und können wohl denken daß Ihr Be<lb break="no"/>such uns nur erfreulich
-                    seyn kann und<lb/>nicht im mindesten störend.<note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName>
-                        bewohnte bei seinen Besuchen im Hause <persName ref="#p0133" type="bi">Tieck</persName> seit einiger Zeit stets eine kleine
-                        Kammer im Obergeschoss.</note> Meine <rs ref="#p0233" type="bi">Mutter</rs><lb/>hat gewiß schon <date when-iso="1834-10-08">in
-                        8 Tagen</date> ihre Kräfte<lb/>völlig wieder, und dann sehen wir fürs<lb/>erste einer guten Zeit entgegen. Wir<lb/>erwarten
-                    Sie also auf jeden Fall, den<lb/><date when-iso="1834-10-15">15<hi rend="superscript underline">ten</hi></date> oder <date
-                        when-iso="1834-10-16">16<hi rend="superscript underline">ten</hi></date>. Alles Uebrige verspare<note resp="#sophia.zeil">Bei
-                            <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 187) steht
-                        "erspare".</note><lb/> ich mir bis dahin, da ich heut nicht viel Zeit<lb/>habe.</p>
-                <closer><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title>
-                        (S. 187) folgt eine unmarkierte Auslassung bis zum Ende des Briefes.</note><salute>Meine <rs ref="#p0133 #p0233" type="bi"
-                            >Eltern</rs> und <persName ref="#p0218" type="bi">Agnes</persName> grüßen herz<lb break="no"/>lich</salute> und ich bin in
-                    der Hoffnung Sie bald<lb/>zu sehen, Ihre Freundinn<lb/><signed rend="align(center)"><hi rend="latin"><persName ref="#p0217"
-                                type="bi">Dorothea <choice>
+                    Angst und Sorge um meine<lb/><rs ref="#p0233" type="bi">Mutter</rs>, die Krankheit<note resp="#sophia.zeil"><p xml:lang="de"
+                                ><persName ref="#p0233" type="bi">Amalia Tieck</persName> litt seit einigen Monaten an Unterleibsbeschwerden und einer
+                            hinzugekommenen Schwellung der Beine; vgl. <ref target="Brief12DorotheaTieckanUechtritz.xml">Brief vom 20. Juni
+                            1834</ref>, S. 2 (Bl. 1 verso).</p><p xml:lang="en"/><p xml:lang="fr"/></note> war nämlich seit dem<lb/><date
+                        when-iso="1834-07">Juli</date> schon wieder so schlimm geworden, daß<lb/>eine zweite Operation nicht länger ver<lb break="no"
+                    />schoben werden durfte: diese ist denn am<lb/>Sonnabend den <date when-iso="1834-09-27">27</date> vorgenommen worden,<lb/>und
+                    sehr gut, und besser als die erste gegan<lb break="no"/>gen. Wie es nun weiter wird das müssen<lb/>wir Gott empfehlen, noch kann
+                    man es gar<lb/>nicht beurtheilen; aber die <rs ref="#p0233" type="bi">Mutter</rs> ist kräf<lb break="no"/>tiger als man es nach so
+                    langer Krankheit<lb/>erwarten durfte, und <date when-iso="1834-09-30">heute</date>, da sie zu<lb break="no"/>erst außer Bett ist,
+                    benutze ich den ersten<lb/>freien Augenblick Ihren Brief zu beant<lb break="no"/>worten. Was Ihr Herkommen betrifft so<lb/>wird es
+                    uns eine große Freude seyn,<lb/>wenn Sie es sich einige Zeit wollen bei uns<lb/>gefallen lassen. Sie kennen unsre häus<pb
+                        break="no" facs="P1030774a.jpg" n="2"/>liche Einrichtung, wissen wie wenig Umstände<lb/>wir mit so guten Freunden, wie Sie
+                    sind ma<lb break="no"/>chen, und können wohl denken daß Ihr Be<lb break="no"/>such uns nur erfreulich seyn kann und<lb/>nicht im
+                    mindesten störend.<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> bewohnte bei
+                            seinen Besuchen im Hause <persName ref="#p0133" type="bi">Tieck</persName> seit einiger Zeit stets eine kleine Kammer im
+                            Obergeschoss.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Meine <rs ref="#p0233" type="bi">Mutter</rs><lb/>hat gewiß
+                    schon <date when-iso="1834-10-08">in 8 Tagen</date> ihre Kräfte<lb/>völlig wieder, und dann sehen wir fürs<lb/>erste einer guten
+                    Zeit entgegen. Wir<lb/>erwarten Sie also auf jeden Fall, den<lb/><date when-iso="1834-10-15">15<hi rend="superscript underline"
+                            >ten</hi></date> oder <date when-iso="1834-10-16">16<hi rend="superscript underline">ten</hi></date>. Alles Uebrige
+                        verspare<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 187) steht "erspare".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> ich mir bis dahin,
+                    da ich heut nicht viel Zeit<lb/>habe.</p>
+                <closer><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 187) folgt eine unmarkierte Auslassung bis zum Ende des Briefes.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note><salute>Meine <rs ref="#p0133 #p0233" type="bi">Eltern</rs> und <persName ref="#p0218" type="bi"
+                            >Agnes</persName> grüßen herz<lb break="no"/>lich</salute> und ich bin in der Hoffnung Sie bald<lb/>zu sehen, Ihre
+                        Freundinn<lb/><signed rend="align(center)"><hi rend="latin"><persName ref="#p0217" type="bi">Dorothea <choice>
                                     <abbr>T.</abbr>
                                     <expan>Tieck</expan>
-                                </choice></persName></hi></signed></closer>
-                <p><pb facs="P1030774b.jpg" n="3"/>
-                    <note resp="#sophia.zeil">Vacat.</note></p>
-                <pb facs="P1030775.jpg" n="4" xml:id="Brief13DorotheaTieckanUechtritz-Blatt2v"/>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
-                        when-iso="1834-10-01">1 <choice>
-                            <abbr>Oct.</abbr>
-                            <expan>October</expan>
-                        </choice> 34</date></stamp>
-                <stamp>Poststempel mit den Angaben: N <date when-iso="1834-10-02">2<lb/>10</date></stamp>
-                <note hand="#black_ink" place="center inline"><unclear reason="illegible">NB</unclear></note>
-                <!-- Kürzel für rekommandierten Brief? XXX-->
-                <note hand="#black_ink_2" place="center inline"><gap reason="illegible"/></note>
-                <address>
-                    <addrLine>
-                        <choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice>
-                        <choice>
-                            <abbr>Hochwohlgeb.</abbr>
-                            <expan>Hochwohlgeboren</expan>
-                        </choice>
-                    </addrLine>
-                    <addrLine>Dem Oberlandgerichts-Rath</addrLine>
-                    <addrLine>Freiherrn <persName ref="#p0711" type="bi">Friedrich von <hi rend="underline">Uichtritz</hi></persName></addrLine>
-                    <lb/>
-                    <lb/>
-                    <addrLine>abzugeben bei dem</addrLine>
-                    <addrLine>Herrn Justizverweser</addrLine>
-                    <addrLine><hi rend="underline"><persName ref="#p2446" type="bi">Schmidt</persName></hi></addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l0188" type="bi">Görlitz</placeName></hi></addrLine>
-                </address>
-                <del hand="#red_ink" rend="strikethrough"><note hand="#red_pencil" place="center inline">2</note></del>
+                                </choice></persName></hi></signed>
+                    <pb facs="P1030774b.jpg" n="3"/>
+                    <note resp="#sophia.zeil"><p xml:lang="de">Vacat.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <pb facs="P1030775.jpg" n="4" xml:id="Brief13DorotheaTieckanUechtritz-Blatt2v"/>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
+                            when-iso="1834-10-01">1 <choice>
+                                <abbr>Oct.</abbr>
+                                <expan>October</expan>
+                            </choice> 34</date></stamp>
+                    <stamp>Poststempel mit den Angaben: N <date when-iso="1834-10-02">2<lb/>10</date></stamp>
+                    <note hand="#black_ink" place="center inline"><unclear reason="illegible">NB</unclear></note>
+                    <!-- Kürzel für rekommandierten Brief? XXX-->
+                    <note hand="#black_ink_2" place="center inline"><gap reason="illegible"/></note>
+                    <address>
+                        <addrLine>
+                            <choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice>
+                            <choice>
+                                <abbr>Hochwohlgeb.</abbr>
+                                <expan>Hochwohlgeboren</expan>
+                            </choice>
+                        </addrLine>
+                        <addrLine>Dem Oberlandgerichts-Rath</addrLine>
+                        <addrLine>Freiherrn <persName ref="#p0711" type="bi">Friedrich von <hi rend="underline">Uichtritz</hi></persName></addrLine>
+                        <lb/>
+                        <lb/>
+                        <addrLine>abzugeben bei dem</addrLine>
+                        <addrLine>Herrn Justizverweser</addrLine>
+                        <addrLine><hi rend="underline"><persName ref="#p2446" type="bi">Schmidt</persName></hi></addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l0188" type="bi">Görlitz</placeName></hi></addrLine>
+                    </address></closer>
+                <note hand="#red_pencil" place="center inline"><del hand="#red_ink" rend="strikethrough">2</del></note>
                 <note hand="#red_ink" place="center inline">3 <gap reason="illegible"/></note>
-                <note hand="#red_pencil" place="margin-right inline" rend="align(vertical)"><unclear reason="illegible">12u 60u</unclear></note>
+                <note hand="#red_pencil" place="margin(right) inline" rend="align(vertical)"><unclear reason="illegible">12u 60u</unclear></note>
                 <!-- Unzen? auflösen? XXX -->
-                <seal>Minimale Siegelrückstände</seal>
             </div>
         </body>
     </text>

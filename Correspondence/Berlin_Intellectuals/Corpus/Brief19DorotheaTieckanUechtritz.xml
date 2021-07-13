@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -61,7 +68,7 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="uuuu-12-30"/>
+                            <docDate when="1835-12-30"/>
                             <note resp="#sophia.zeil" type="keyword">Ludwig Tieck (Mentor)</note>
                             <note resp="#sophia.zeil" type="keyword">Krankheit</note>
                             <note resp="#sophia.zeil" type="keyword">Ludwig Tieck (Novellen)</note>
@@ -232,8 +239,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Small updates.</change>
             <change when-iso="2014-11-22" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
@@ -252,18 +260,19 @@
             <div type="transcription">
                 <pb facs="P1030821.jpg" n="1"/>
                 <note hand="#blue_ink" place="top-margin-center inline">23.</note>
-                <p><opener rend="align(right)"><dateline><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="1835-12-30">30 <hi rend="latin"><choice>
-                                        <abbr>Dec.</abbr>
-                                        <expan>December</expan>
-                                    </choice></hi></date></dateline></opener><lb/>Wir haben so lange nichts von Ihnen ge<lb break="no"/>hört, mein
-                    theuerster Freund, und es ver<lb break="no"/>langt mich so sehr wieder Nachricht von<lb/>Ihnen zu erhalten, daß ich es nicht
-                    länger<lb/>aufschieben kann zu schreiben. Ich fürchte<lb/>Sie warten immer noch auf einen Brief<lb/>von meinem <rs ref="#p0133"
-                        type="bi">Vater</rs>;<note resp="#sophia.zeil">Vgl. Brief vom <ref target="Brief18DorotheaTieckanUechtritz.xml">7. Oktober
-                            1835</ref>, S. 1 (Bl. 1 recto).</note> vielmehr, ich hoffe daß<lb/>nur dies, und nicht Krankheit oder sonst<lb/>ein Leiden
-                    Sie vom Schreiben abhielt.<lb/>Mein <rs ref="#p0133" type="bi">Vater</rs> wird so bald nicht dazu kom̄en<lb/>Ihnen zu schreiben:
-                    erst war er schon<lb/>seit dem <del rend="strikethrough">Winte</del> Herbst leidend, an be<lb break="no"/>ständigem Kathar und
-                    Husten, was<lb/>ihn immer sehr angreift, und jetzt, da<lb/>es ihm besser geht hat er eine
+                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="1835-12-30">30 <hi rend="latin"><choice>
+                                    <abbr>Dec.</abbr>
+                                    <expan>December</expan>
+                                </choice></hi></date></dateline></opener>
+                <p>Wir haben so lange nichts von Ihnen ge<lb break="no"/>hört, mein theuerster Freund, und es ver<lb break="no"/>langt mich so sehr
+                    wieder Nachricht von<lb/>Ihnen zu erhalten, daß ich es nicht länger<lb/>aufschieben kann zu schreiben. Ich fürchte<lb/>Sie warten
+                    immer noch auf einen Brief<lb/>von meinem <rs ref="#p0133" type="bi">Vater</rs>;<note resp="#sophia.zeil"><p xml:lang="de">Vgl.
+                            Brief vom <ref target="Brief18DorotheaTieckanUechtritz.xml">7. Oktober 1835</ref>, S. 1 (Bl. 1 recto).</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> vielmehr, ich hoffe daß<lb/>nur dies, und nicht Krankheit oder sonst<lb/>ein Leiden Sie vom
+                    Schreiben abhielt.<lb/>Mein <rs ref="#p0133" type="bi">Vater</rs> wird so bald nicht dazu kom̄en<lb/>Ihnen zu schreiben: erst war
+                    er schon<lb/>seit dem <del rend="strikethrough">Winte</del> Herbst leidend, an be<lb break="no"/>ständigem Kathar und Husten,
+                    was<lb/>ihn immer sehr angreift, und jetzt, da<lb/>es ihm besser geht hat er eine
                     Arbeit<lb/>angefangen,<!--<note resp="#sophia.zeil">Welche? "Eigensinn und Laune" oder "Übereilung"? XXX</note>--> und da
                     entschließt er sich<lb/>denn nicht leicht zu einer Unterbrechung<lb/>deshalb warten Sie nun nicht länger,<lb/>theuerster Freund,
                     und schreiben Sie mir<lb/>recht bald, glauben Sie nur daß Sie mich<pb facs="P1030822a.jpg" n="2"/>dadurch von einer Sorge
@@ -282,32 +291,35 @@
                     sich recht schwer. <persName ref="#p0218" type="bi">Agnes</persName> ist<lb/>immer gesund gewesen und hat uns<lb/>treu
                     gepflegt.</p>
                 <p>Ich könnte Ihnen noch viel erzählen,<lb/>von dem Geburtstag des <rs ref="#p2318" type="bi">Königs</rs>, der<lb/>den <date
-                        when-iso="1835-12-27">Sonntag</date> hier sehr glänzend ge<lb break="no"/>feiert ward,<note resp="#sophia.zeil"><persName
-                            ref="#p2318" type="bi">König Anton I. von Sachsen</persName> feierte am <date when-iso="1835-12-27">27. Dezember
-                            1835</date> seinen 80. Geburtstag, die Feierlichkeiten dauerten 3 Tage und umfassten bspw. die Errichtung eines
-                        Jubelobelisks auf dem Neumarkt, die festliche Ilumination und Dekoration zahlreicher Gebäude und einen Huldigungszug durch die
-                        Stadt, bestehend aus 9 Greisen im Alter von 80 bis 89 Jahren, 80 Landmädchen und 80 Bauernburschen in ländlicher Tracht. Es
-                        war die erste öffentliche Feier eines monarchischen Geburtsjubiläums in Sachsen. (Vgl. <persName ref="#p3547" type="bi"
-                            >Mergen</persName>: <title ref="#w05566">Monarchiejubiläen im 19. Jahrhundert</title>, S. 133–156.)</note> aber das
-                    Schreiben wird<lb/>mir schwer und ich schließe mit der<lb/>Bitte diesen unbedeutenden Zettel<lb/>zu vergeben und recht bald
-                    mit<lb/>einem Briefe zu erfreuen,<lb/><closer rend="align(center)">Ihre treue Freundin̄<lb/><signed><hi rend="latin"><persName
-                                    ref="#p0217" type="bi">Dorothea <choice>
-                                        <abbr>T.</abbr>
-                                        <expan>Tieck</expan>
-                                    </choice></persName></hi></signed></closer></p>
-                <pb facs="P1030823.jpg" n="4" xml:id="Brief19DorotheaTieckanUechtritz-Blatt2v"/>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
-                        when-iso="1835-12-31">31 <choice>
-                            <abbr>Dec</abbr>
-                            <expan>December</expan>
-                        </choice> 35</date></stamp>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0013" type="bi"><hi rend="majuscule">MAGDEBURG</hi></placeName><lb/><date
-                        when-iso="1836-01-02">2 / 1</date></stamp>
-                <stamp>Poststempel mit den Angaben: <date when-iso="1836-01-05">5 1</date><lb/><unclear reason="faded" rend="align(vertical)">N
-                        1</unclear></stamp>
-                <del hand="#brown_ink" rend="strikethrough"><note hand="#dark_ink" place="top-margin-center inline">G</note></del>
-                <note hand="#brown_ink" place="top-margin-center inline">W</note>
-                <p><address>
+                        when-iso="1835-12-27">Sonntag</date> hier sehr glänzend ge<lb break="no"/>feiert ward,<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p2318" type="bi">König Anton I. von Sachsen</persName> feierte am <date
+                                when-iso="1835-12-27">27. Dezember 1835</date> seinen 80. Geburtstag, die Feierlichkeiten dauerten 3 Tage und
+                            umfassten bspw. die Errichtung eines Jubelobelisks auf dem Neumarkt, die festliche Ilumination und Dekoration zahlreicher
+                            Gebäude und einen Huldigungszug durch die Stadt, bestehend aus 9 Greisen im Alter von 80 bis 89 Jahren, 80 Landmädchen und
+                            80 Bauernburschen in ländlicher Tracht. Es war die erste öffentliche Feier eines monarchischen Geburtsjubiläums in
+                            Sachsen. (Vgl. <persName ref="#p3547" type="bi">Mergen</persName>: <title ref="#w05566">Monarchiejubiläen im
+                                19. Jahrhundert</title>, S. 133–156.)</p><p xml:lang="en"/><p xml:lang="fr"/></note> aber das Schreiben wird<lb/>mir
+                    schwer und ich schließe mit der<lb/>Bitte diesen unbedeutenden Zettel<lb/>zu vergeben und recht bald mit<lb/>einem Briefe zu
+                    erfreuen,</p>
+                <closer rend="align(center)">Ihre treue Freundin̄<lb/><signed><hi rend="latin"><persName ref="#p0217" type="bi">Dorothea <choice>
+                                    <abbr>T.</abbr>
+                                    <expan>Tieck</expan>
+                                </choice></persName></hi></signed>
+                    <pb facs="P1030823.jpg" n="4" xml:id="Brief19DorotheaTieckanUechtritz-Blatt2v"/>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
+                            when-iso="1835-12-31">31 <choice>
+                                <abbr>Dec</abbr>
+                                <expan>December</expan>
+                            </choice> 35</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0013" type="bi"><hi rend="majuscule">MAGDEBURG</hi></placeName><lb/><date
+                            when-iso="1836-01-02">2 / 1</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <date when-iso="1836-01-05">5 1</date><lb/><unclear reason="faded" rend="align(vertical)">N
+                            1</unclear></stamp>
+                    <note place="top-margin-center inline"><subst>
+                            <del hand="#dark_ink" rend="strikethrough">G</del>
+                            <add hand="#brown_ink">W</add>
+                        </subst></note>
+                    <address>
                         <addrLine><choice>
                                 <abbr>Sr</abbr>
                                 <expan>Seiner</expan>
@@ -321,11 +333,8 @@
                         <addrLine rend="align(center)">in</addrLine>
                         <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l0292" type="bi">Düsseldorf</placeName></hi></addrLine>
                         <addrLine rend="align(center)">am <hi rend="underline">Rhein</hi>.</addrLine>
-                    </address></p>
-                <del hand="#red_ink2" rend="strikethrough"><note hand="#red_ink" place="inline"><gap reason="illegible"/></note></del>
-                <lb/>
-                <lb/>
-                <seal>Rotes Siegel</seal>
+                    </address>
+                    <note hand="#red_ink" place="inline"><del hand="#red_ink2" rend="strikethrough"><gap reason="illegible"/></del></note></closer>
             </div>
         </body>
     </text>

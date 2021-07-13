@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -236,8 +243,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small updates.</change>
             <change when-iso="2014-11-25" who="#sophia.zeil">Small updates.</change>
             <change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
@@ -255,42 +263,43 @@
         <body>
             <div type="transcription">
                 <pb facs="P1030814.jpg" n="1"/>
-                <note hand="#pencil" place="top-margin-left inline">?</note>
+                <note hand="#pencil" place="top-margin(left) inline">?</note>
                 <note hand="#blue_ink" place="top-margin-center inline">20.</note>
-                <p><opener rend="align(right)"><dateline><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="1836-08-16">16 <hi rend="latin"><choice>
-                                        <abbr>Aug.</abbr>
-                                        <expan>August</expan>
-                                    </choice></hi> 1836</date>.</dateline></opener><lb/>Mit unsern Briefen trifft es sich recht unangenehm,<lb/>mein
-                    theurer Freund, <date when-iso="1836-08-14">vorgestern</date> schon schikte ich meinen<note resp="#sophia.zeil">Der Brief ist
-                        verschollen.</note><lb/>aus großer Vorsicht ab, und <date when-iso="1836-08-15">gestern</date> erhalte ich den<lb/>Ihrigen,
-                    der auch länger unterwegs geblieben ist.<lb/>Um jedem Mißverstand vorzubeugen muß ich nun<lb/>noch ein paar Worte schreiben, und
-                    Ihnen sagen wie<lb/>Sie uns auch Anfang <date when-iso="1836-09">September</date> willkommen seyn<lb/>werden, und ich Sie nur
-                    bitte uns den Tag Ihrer An<lb break="no"/>kunft noch zu melden, damit wir Ihr Zimmer ein<lb break="no"/>richten können, Sie müssen
-                    sich denn wahrscheinlich mit<lb/><rs ref="#p0217 #p0218 #p0233" type="bi">uns</rs><note resp="#sophia.zeil"><persName ref="#p0217"
-                            type="bi">Dorothea</persName>, <persName ref="#p0218" type="bi">Agnes</persName> und <persName ref="#p0233" type="bi"
-                            >Amalia Tieck</persName>.</note> allein behelfen, es kann aber auch seyn <rs ref="#p0133" type="bi">Vater</rs><lb/>kommt
-                    um dieselbe Zeit zurück.<note resp="#sophia.zeil"><persName ref="#p0133" type="bi">Tieck</persName>, in Begleitung der <persName
-                            ref="#p0232" type="bi">Gräfin Finckenstein</persName>, kehrte von seinem Kuraufenthalt in <placeName ref="#l0152"
-                            type="bi">Baden-Baden</placeName> erst nach <persName ref="#p0711" type="bi">Uechtritz</persName>' Abreise Mitte/Ende
-                            <date when-iso="1836-09">September 1836</date> zurück.</note> Mit der <rs ref="#p0233" type="bi">Mutter</rs><lb/>geht es
-                    jetzt leidlich. Alles andre mündlich.<lb/><closer rend="align(right)"><signed>Ihre <hi rend="latin"><persName ref="#p0217"
-                                    type="bi">Dorothea</persName></hi>.</signed></closer></p>
-                <pb facs="P1030815.jpg" n="2" xml:id="Brief23DorotheaTieckanUechtritz-Blatt1v"/>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
-                        when-iso="1836-08-16">16 <choice>
-                            <abbr>Aug</abbr>
-                            <expan>August</expan>
-                        </choice> 36</date></stamp>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0060" type="bi"><hi rend="majuscule">HALLE</hi></placeName><lb/><date
-                        when-iso="1836-08-18">18. <hi rend="majuscule"><choice>
-                                <abbr>AUG</abbr>
-                                <expan>AUGUST</expan>
-                            </choice></hi></date></stamp>
-                <stamp>Poststempel mit den Angaben: <date when-iso="1836-08-21">21 8</date><lb/><hi rend="align(vertical)">N 1</hi></stamp>
-                <del hand="#dark_ink" rend="strikethrough"><note hand="#dark_ink" place="top-margin-center inline">8</note></del>
-                <note hand="#dark_ink" place="top-margin-center inline"><gap reason="illegible"/></note>
-                <p><address>
+                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="1836-08-16">16 <hi rend="latin"><choice>
+                                    <abbr>Aug.</abbr>
+                                    <expan>August</expan>
+                                </choice></hi> 1836</date>.</dateline></opener>
+                <p>Mit unsern Briefen trifft es sich recht unangenehm,<lb/>mein theurer Freund, <date when-iso="1836-08-14">vorgestern</date> schon
+                    schikte ich meinen<note resp="#sophia.zeil"><p xml:lang="de">Der Brief ist verschollen.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><lb/>aus großer Vorsicht ab, und <date when-iso="1836-08-15">gestern</date> erhalte ich den<lb/>Ihrigen, der auch
+                    länger unterwegs geblieben ist.<lb/>Um jedem Mißverstand vorzubeugen muß ich nun<lb/>noch ein paar Worte schreiben, und Ihnen
+                    sagen wie<lb/>Sie uns auch Anfang <date when-iso="1836-09">September</date> willkommen seyn<lb/>werden, und ich Sie nur bitte uns
+                    den Tag Ihrer An<lb break="no"/>kunft noch zu melden, damit wir Ihr Zimmer ein<lb break="no"/>richten können, Sie müssen sich denn
+                    wahrscheinlich mit<lb/><rs ref="#p0217 #p0218 #p0233" type="bi">uns</rs><note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0217" type="bi">Dorothea</persName>, <persName ref="#p0218" type="bi">Agnes</persName> und <persName
+                                ref="#p0233" type="bi">Amalia Tieck</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> allein behelfen, es
+                    kann aber auch seyn <rs ref="#p0133" type="bi">Vater</rs><lb/>kommt um dieselbe Zeit zurück.<note resp="#sophia.zeil"><persName
+                            ref="#p0133" type="bi">Tieck</persName>, in Begleitung der <persName ref="#p0232" type="bi">Gräfin
+                        Finckenstein</persName>, kehrte von seinem Kuraufenthalt in <placeName ref="#l0152" type="bi">Baden-Baden</placeName> erst
+                        nach <persName ref="#p0711" type="bi">Uechtritz</persName>' Abreise Mitte/Ende <date when-iso="1836-09">September 1836</date>
+                        zurück.</note> Mit der <rs ref="#p0233" type="bi">Mutter</rs><lb/>geht es jetzt leidlich. Alles andre mündlich.</p>
+                <closer rend="align(right)"><signed>Ihre <hi rend="latin"><persName ref="#p0217" type="bi">Dorothea</persName></hi>.</signed>
+                    <pb facs="P1030815.jpg" n="2" xml:id="Brief23DorotheaTieckanUechtritz-Blatt1v"/>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
+                            when-iso="1836-08-16">16 <choice>
+                                <abbr>Aug</abbr>
+                                <expan>August</expan>
+                            </choice> 36</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <placeName ref="#l0060" type="bi"><hi rend="majuscule">HALLE</hi></placeName><lb/><date
+                            when-iso="1836-08-18">18. <hi rend="majuscule"><choice>
+                                    <abbr>AUG</abbr>
+                                    <expan>AUGUST</expan>
+                                </choice></hi></date></stamp>
+                    <stamp>Poststempel mit den Angaben: <date when-iso="1836-08-21">21 8</date><lb/><hi rend="align(vertical)">N 1</hi></stamp>
+                    <note hand="#dark_ink" place="top-margin-center inline"><del rend="strikethrough">8</del></note>
+                    <note hand="#dark_ink" place="top-margin-center inline"><gap reason="illegible"/></note>
+                    <address>
                         <addrLine><choice>
                                 <abbr>Sr</abbr>
                                 <expan>Seiner</expan>
@@ -304,14 +313,13 @@
                         <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
                         <addrLine rend="align(center)"><hi rend="underline"><placeName ref="#l0292" type="bi">Düsseldorf</placeName></hi></addrLine>
                         <addrLine rend="align(center)">am <hi rend="underline">Rhein</hi>.</addrLine>
-                    </address></p>
-                <p><hi rend="underline">frei.</hi></p>
-                <del hand="#red_ink2" rend="strikethrough"><note hand="#red_pencil" place="center inline">8</note></del>
-                <note hand="#dark_ink" place="center inline"><gap reason="illegible"/></note>
-                <note hand="#red_ink" place="center inline"><unclear reason="illegible">8 8</unclear></note>
-                <note hand="#red_ink2" place="center inline"><gap reason="illegible"/></note>
-                <note hand="#dark_ink" place="margin-right inline"><gap reason="illegible"/></note>
-                <seal>Rotes Siegel</seal>
+                    </address>
+                    <note><hi rend="underline">frei.</hi></note>
+                    <del hand="#red_ink2" rend="strikethrough"><note hand="#red_pencil" place="center inline">8</note></del>
+                    <note hand="#dark_ink" place="center inline"><gap reason="illegible"/></note>
+                    <note hand="#red_ink" place="center inline"><unclear reason="illegible">8 8</unclear></note>
+                    <note hand="#red_ink2" place="center inline"><gap reason="illegible"/></note>
+                    <note hand="#dark_ink" place="margin(right) inline"><gap reason="illegible"/></note></closer>
             </div>
         </body>
     </text>

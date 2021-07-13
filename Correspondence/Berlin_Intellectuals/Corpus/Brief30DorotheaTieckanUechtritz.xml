@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -217,8 +224,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
@@ -238,47 +246,49 @@
             <div type="transcription">
                 <pb facs="P1030843.jpg" n="1"/>
                 <note hand="#blue_ink" place="top-margin-center inline">28</note>
-                <p><opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
-                                when-iso="--09-25">25<hi rend="underline superscript">tn</hi>
-                                <hi rend="latin"><choice>
-                                        <abbr>Sept.</abbr>
-                                        <expan>September</expan>
-                                    </choice></hi></date></dateline></opener><lb/>Endlich, mein theuerster Freund, habe<lb/>ich die Exemplare des
-                        <title ref="#w05514">Persiles</title> erhalten,<lb/>und schicke Ihnen hier eins davon, Sie<lb/>müssen aber auch Ihr
-                    Versprechen halten<lb/>und es lesen. Ich hätte Ihnen schon zu Ihrem<lb/><date when-iso="1837-09-12">Geburtstag</date><note
-                        resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName> war am <date when-iso="1837-09-12">12. September
-                            1837</date> 37 Jahre alt geworden.</note> geschrieben, ich dachte aber<lb/>immer es könne ein Brief von Ihnen<lb/>sich mit
-                    dem meinigen kreuzen. Von<lb/>Ihrer lieben <rs ref="#p3493" type="bi">Frau</rs> wissen wir,<note resp="#sophia.zeil"><persName
-                            ref="#p3493" type="bi">Marie von Uechtritz</persName> und <persName ref="#p0218" type="bi">Agnes Tieck</persName>
-                        unterhielten einen freundschaftlichen Briefverkehr; vgl. <ref target="Brief25DorotheaTieckanUechtritz.xml">Brief vom
-                            1. November 1836</ref>, S. 1 (Bl. 1 recto).</note> daß Sie<lb/>glücklich angekommen<note resp="#sophia.zeil">Anlässlich
-                        seiner Hochzeit am <date when-iso="1837-05-18">18. Mai 1837</date> hatte <persName ref="#p0711" type="bi">Uechtritz</persName>
-                        auch in <placeName ref="#l0003" type="bi">Dresden</placeName> einen Besuch abgestattet.</note> und die erste<lb/>Zeit beide
-                    wohl gewesen sind.</p>
+                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+                            when-iso="--09-25">25<hi rend="underline superscript">tn</hi>
+                            <hi rend="latin"><choice>
+                                    <abbr>Sept.</abbr>
+                                    <expan>September</expan>
+                                </choice></hi></date></dateline></opener>
+                <p>Endlich, mein theuerster Freund, habe<lb/>ich die Exemplare des <title ref="#w05514">Persiles</title> erhalten,<lb/>und schicke
+                    Ihnen hier eins davon, Sie<lb/>müssen aber auch Ihr Versprechen halten<lb/>und es lesen. Ich hätte Ihnen schon zu Ihrem<lb/><date
+                        when-iso="1837-09-12">Geburtstag</date><note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName> war am
+                            <date when-iso="1837-09-12">12. September 1837</date> 37 Jahre alt geworden.</note> geschrieben, ich dachte aber<lb/>immer
+                    es könne ein Brief von Ihnen<lb/>sich mit dem meinigen kreuzen. Von<lb/>Ihrer lieben <rs ref="#p3493" type="bi">Frau</rs> wissen
+                        wir,<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName> und <persName
+                                ref="#p0218" type="bi">Agnes Tieck</persName> unterhielten einen freundschaftlichen Briefverkehr; vgl. <ref
+                                target="Brief25DorotheaTieckanUechtritz.xml">Brief vom 1. November 1836</ref>, S. 1 (Bl. 1 recto).</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> daß Sie<lb/>glücklich angekommen<note resp="#sophia.zeil"><p xml:lang="de">Anlässlich seiner
+                            Hochzeit am <date when-iso="1837-05-18">18. Mai 1837</date> hatte <persName ref="#p0711" type="bi">Uechtritz</persName>
+                            auch in <placeName ref="#l0003" type="bi">Dresden</placeName> einen Besuch abgestattet.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> und die erste<lb/>Zeit beide wohl gewesen sind.</p>
                 <p>Ich hoffte <persName ref="#p0713" type="bi">Loebell</persName> der <date when-iso="1837-09-27">übermorgen</date><lb/>wieder abreist
-                    sollte das <rs ref="#w05514" type="bi">Buch</rs> mitneh<lb break="no"/>men,<note resp="#sophia.zeil"><persName ref="#p0713"
-                            type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für Geschichte in <placeName
-                            ref="#l0205" type="bi">Bonn</placeName>.</note> er hat aber keinen Platz, nun<lb/>muß ich es mit einer
-                    Gelegenheit<lb/>schicken wo ich es nicht versiegeln darf,<lb/>und kann also nicht viel schreiben. Von<lb/>uns läßt sich auch wenig
-                        erzählen,<lb/><rs ref="#p0133" type="bi">Vater</rs> ist munter und <persName ref="#p0713" type="bi">Loebells</persName>
-                    Besuch<lb/>hat ihn auch aufgeheitert. Bei mir<lb/>ist alles beim Alten. Ich kann mich<lb/>so gar nicht im Leben zurecht
-                    finden,<lb/>daß ich oft denke, es dauert vielleicht<lb/>nicht mehr lange, denn ohne krank<lb/>zu seyn fühle ich mich oft eben
-                    so<lb/>kraft als machtlos. Ich nehme an Al<pb break="no" facs="P1030844a.jpg" n="2"/>lem Theil, doch ohne die geringste in<lb
-                        break="no"/>nere Theilnahme. Ich bin wirklich schwach<lb/>und elend, und wenn die Menschen in<lb/>mein Inneres sehen könnten,
-                    würden<lb/>sie mich sehr verachten. Es rührt mich<lb/>dann immer recht, wie unendlich viel Ge<lb break="no"/>duld Gott mit
-                    Menschen meiner Art<lb/>hat, die Er so ganz trägt, die nichts<lb/>aus sich selbst wollen und thun.</p>
+                    sollte das <rs ref="#w05514" type="bi">Buch</rs> mitneh<lb break="no"/>men,<note resp="#sophia.zeil"><p xml:lang="de"><persName
+                                ref="#p0713" type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für Geschichte in
+                                <placeName ref="#l0205" type="bi">Bonn</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> er hat aber keinen
+                    Platz, nun<lb/>muß ich es mit einer Gelegenheit<lb/>schicken wo ich es nicht versiegeln darf,<lb/>und kann also nicht viel
+                    schreiben. Von<lb/>uns läßt sich auch wenig erzählen,<lb/><rs ref="#p0133" type="bi">Vater</rs> ist munter und <persName
+                        ref="#p0713" type="bi">Loebells</persName> Besuch<lb/>hat ihn auch aufgeheitert. Bei mir<lb/>ist alles beim Alten. Ich kann
+                    mich<lb/>so gar nicht im Leben zurecht finden,<lb/>daß ich oft denke, es dauert vielleicht<lb/>nicht mehr lange, denn ohne
+                    krank<lb/>zu seyn fühle ich mich oft eben so<lb/>kraft als machtlos. Ich nehme an Al<pb break="no" facs="P1030844a.jpg" n="2"/>lem
+                    Theil, doch ohne die geringste in<lb break="no"/>nere Theilnahme. Ich bin wirklich schwach<lb/>und elend, und wenn die Menschen
+                    in<lb/>mein Inneres sehen könnten, würden<lb/>sie mich sehr verachten. Es rührt mich<lb/>dann immer recht, wie unendlich viel
+                        Ge<lb break="no"/>duld Gott mit Menschen meiner Art<lb/>hat, die Er so ganz trägt, die nichts<lb/>aus sich selbst wollen und
+                    thun.</p>
                 <p>Wenn Sie Zeit haben lassen Sie ein<lb break="no"/>mal wieder etwas von sich hören,<lb/>dann schreibe ich auch
                         ausführlicher.<lb/><date when-iso="1837-09-25">Heute</date> kann ich nicht, denn ich bin<lb/>recht unwohl<subst>
                         <del rend="overwritten">.</del>
                         <add place="across">,</add>
-                    </subst> so daß mir die Hand<lb/>zittert, auch muß das Paket gleich<lb/>fort. <closer><salute>Grüßen Sie <persName ref="#p3493"
-                                type="bi">Marie</persName> herzlich</salute> und<lb/>vergessen Sie nicht ganz Ihre alte<lb/>Freundinn<lb/><persName
-                            ref="#p0217" type="bi"><hi rend="latin align(center)">Dorothea</hi></persName></closer></p>
+                    </subst> so daß mir die Hand<lb/>zittert, auch muß das Paket gleich<lb/>fort.</p>
+                <closer><salute>Grüßen Sie <persName ref="#p3493" type="bi">Marie</persName> herzlich und<lb/>vergessen Sie nicht ganz Ihre
+                        alte<lb/>Freundinn</salute><signed rend="latin align(center)"><persName ref="#p0217" type="bi"
+                    >Dorothea</persName></signed></closer>
                 <pb facs="P1030844b.jpg" n="3"/>
-                <p><note resp="#sophia.zeil">Vacat.</note></p>
+                <note resp="#sophia.zeil"><p xml:lang="de">Vacat.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <pb facs="P1030845.jpg" n="4" xml:id="Brief30DorotheaTieckanUechtritz-Blatt2v"/>
-                <p><note resp="#sophia.zeil">Vacat.</note></p>
-                <seal>Rotes Siegel</seal>
+                <note resp="#sophia.zeil"><p xml:lang="de">Vacat.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
             </div>
         </body>
     </text>

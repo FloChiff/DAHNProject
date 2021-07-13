@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -213,8 +220,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
             <change when-iso="2014-11-24" who="#sophia.zeil">Small corrections.</change>
             <change when-iso="2014-11-22" who="#sophia.zeil">Small corrections.</change>
@@ -238,52 +246,55 @@
             <div type="transcription">
                 <pb facs="P1030760.jpg" n="1"/>
                 <note hand="#pencil" place="top-margin-center inline">9</note>
-                <opener rend="align(right)"><dateline><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
+                <opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
                             when-iso="1833-10-30">30 <hi rend="latin">Octobre</hi><lb/>1833</date>.</dateline></opener>
-                <p>Ich habe es diesmal recht lange versäumt<lb/>Ihren schönen Brief zu beantworten, mein<note resp="#sophia.zeil">Bei <persName
-                            ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 182) fehlt
-                    "mein".</note><lb/>theuerster Freund; doch ist es<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>:
-                            <title ref="#w03300">Erinnerungen</title> steht "es ist".</note> für mich selbst<lb/>am schlimmsten, da ich nun auch um
-                    so<lb/>später wieder<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 182) fehlt "wieder".</note> Nachricht von Ihnen bekom<lb break="no"/>me. Seit wir wieder allein
-                    sind hatte ich<lb/>viel zu thun, denn ich mußte meine gan<lb break="no"/>ze Win<subst>
+                <p>Ich habe es diesmal recht lange versäumt<lb/>Ihren schönen Brief zu beantworten, mein<note resp="#sophia.zeil"><p xml:lang="de">Bei
+                                <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 182) fehlt
+                            "mein".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>theuerster Freund; doch ist es<note resp="#sophia.zeil"><p
+                            xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> steht "es
+                            ist".</p><p xml:lang="en"/><p xml:lang="fr"/></note> für mich selbst<lb/>am schlimmsten, da ich nun auch um so<lb/>später
+                        wieder<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 182) fehlt "wieder".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Nachricht von Ihnen
+                        bekom<lb break="no"/>me. Seit wir wieder allein sind hatte ich<lb/>viel zu thun, denn ich mußte meine gan<lb break="no"/>ze Win<subst>
                         <del rend="overwritten">d</del>
                         <add place="across">t</add>
                     </subst>ergarderobe in Ordnung bringen<lb/>und so habe ich immerfort genäht: ich<lb/>bin<!--[183]--> aber sehr vergnügt dabei
                     gewesen;<lb/>denn ich mache alle diese Handarbeiten<lb/>sehr gern.</p>
-                <p>Wir freuen uns Alle darüber daß<lb/>Sie wieder an den <title ref="#w04347">Chaldäern</title><note resp="#sophia.zeil"><persName
-                            ref="#p0711" type="bi">Uechtritz</persName> begann die <title ref="#w04347">Babylonier in Jerusalem</title> unter dem
-                        Titel "Die Chaldäer in Jerusalem". Vgl. <persName ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von
-                            Uechtritz als dramatischer Dichter</title>, S. 90.</note> arbei<lb break="no"/>ten, möchte Ihnen doch die Stimmung
-                    und<lb/>Lust daran bleiben, und Sie es bald<lb/>beendigen. <title ref="#w04377">Der Tod des Dichters</title> ist<lb/>nun ganz
-                    gedruckt und ich habe es<lb/>schon öfter gelesen. Es gehört zu den<lb/>größten Dichtungen meines <rs ref="#p0133" type="bi"
-                        >Vaters</rs>;<pb facs="P1030761a.jpg" n="2"/>denn es ist aus einer reinen Begeiste<lb break="no"/>rung hervor gegangen.
-                    Dadurch daß<lb/>es so frei von aller Bitterkeit und<lb/>Uebertreibung ist wird es so unbeschreib<lb break="no"/>lich rührend: Wir
-                    blicken in die Tiefe<lb/>des Lebens wie es wirklich ist. Nur die<lb/>Zerstreuungen der Welt und unser eit<lb break="no"/>ler Sinn
-                    macht es uns immer wieder<lb/>vergessen, daß eine so edle Resigna<lb break="no"/>tion, und ein gänzliches Aufgehen
-                    unsrer<lb/>Seele in Religion, Poesie und Kunst das<lb/>einzige ist was uns beglücken kann.<lb/>Dabei ist die ganze Zeit, die
-                        Landes<lb break="no"/>art, der Kriegszug, der Ruhm und<lb/>Fall von <placeName ref="#l0812" type="bi">Portugall</placeName>
-                    vortrefflich ge<lb break="no"/>schildert. Wenn mich etwas stört so<lb/>ist es der <persName ref="#p1119" type="bi"
-                        >luther</persName>ische Cathechismus;<lb/>denn ein so kleiner Kindercathe<lb break="no"/>chismus mit Fragen und
-                    Antworten<lb/>kann wohl keinen Menschen trösten<lb/>und erbauen; dann glaube ich auch<lb/>nicht daß die Jesuiten richtig auf<pb
-                        break="no" facs="P1030761b.jpg" n="3"/>gefaßt sind, in jener, ihrer schönsten<lb/>Zeit, haben sie viel für Poesie
-                    und<lb/>Wissenschaft gethan, und waren nichts<lb/>weniger als beschränkt und bigott.<lb/>Ich kann die <rs ref="#w04377" type="bi"
-                        >Novelle</rs> nicht oft lesen<lb/>so wehmüthig stimmt sie mich, ich kom̄e<lb/>mehrere Tage nicht aus den Thränen<lb/>und
-                    obgleich diese Wehmuth höchst lieblich<lb/>ist, so bin ich doch dann unfähig etwas<lb/>anderes zu thun, und mit den Men<lb
-                        break="no"/>schen fortzuleben auf die gewöhnliche<lb/>Weise.</p>
-                <p><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 183)
-                        folgt eine unmarkierte Auslassung der nächsten zwei Absätze bis einschließlich "immer etwas Dunkles".</note>Ich habe Ihren
-                        <title ref="#w04381">Geheimerath</title> nun auch gele<lb break="no"/>sen und es thut mir leid daß ich mich so<lb/>hart
-                    darüber ausgedrückt habe, doch<lb/>es geschah in Auftrag meines <rs ref="#p0133" type="bi">Vaters</rs>.<note resp="#sophia.zeil"
-                        >Im <ref target="Brief10DorotheaTieckanUechtritz.xml">Brief vom 12. September 1833</ref> übermittelte <persName ref="#p0217"
-                            type="bi">Dorothea Tieck</persName>
-                        <persName ref="#p0711" type="bi">Uechtritz</persName> die Kritik ihres <rs ref="#p0133" type="bi">Vaters</rs> am <title
-                            ref="#w04381">Geheimerath</title>.</note><lb/>Der Charakter des Geheimeraths <del rend="strikethrough"
-                    >ist</del><lb/>gefällt mir eigentlich sehr, nur scheint<lb/>mir sein seltsamer Wahnsinn nicht ge<lb break="no"/>nug motivirt, auch
-                    glaube ich das Ganze<lb/>passte mehr zu einer Novelle. So wie<lb/>es hier ist verletzt der tragische Schluß<pb facs="P1030762.jpg"
-                        n="4"/><note resp="#sophia.zeil">Der folgende Zusatz "Frau von … oft" steht kopfüber am oberen Rand der Seiten 1 (Bl. 1 recto)
-                        und 4 (Bl. 2 verso).</note><add hand="#major_hand" place="top-margin" rend="align(upside-down)">Frau von <del
-                            rend="strikethrough">Schl</del>
+                <p>Wir freuen uns Alle darüber daß<lb/>Sie wieder an den <title ref="#w04347">Chaldäern</title><note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0711" type="bi">Uechtritz</persName> begann die <title ref="#w04347">Babylonier in
+                                Jerusalem</title> unter dem Titel "Die Chaldäer in Jerusalem". Vgl. <persName ref="#p2306" type="bi"
+                            >Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als dramatischer Dichter</title>, S. 90.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> arbei<lb break="no"/>ten, möchte Ihnen doch die Stimmung und<lb/>Lust daran
+                    bleiben, und Sie es bald<lb/>beendigen. <title ref="#w04377">Der Tod des Dichters</title> ist<lb/>nun ganz gedruckt und ich habe
+                    es<lb/>schon öfter gelesen. Es gehört zu den<lb/>größten Dichtungen meines <rs ref="#p0133" type="bi">Vaters</rs>;<pb
+                        facs="P1030761a.jpg" n="2"/>denn es ist aus einer reinen Begeiste<lb break="no"/>rung hervor gegangen. Dadurch daß<lb/>es so
+                    frei von aller Bitterkeit und<lb/>Uebertreibung ist wird es so unbeschreib<lb break="no"/>lich rührend: Wir blicken in die
+                    Tiefe<lb/>des Lebens wie es wirklich ist. Nur die<lb/>Zerstreuungen der Welt und unser eit<lb break="no"/>ler Sinn macht es uns
+                    immer wieder<lb/>vergessen, daß eine so edle Resigna<lb break="no"/>tion, und ein gänzliches Aufgehen unsrer<lb/>Seele in
+                    Religion, Poesie und Kunst das<lb/>einzige ist was uns beglücken kann.<lb/>Dabei ist die ganze Zeit, die Landes<lb break="no"
+                    />art, der Kriegszug, der Ruhm und<lb/>Fall von <placeName ref="#l0812" type="bi">Portugall</placeName> vortrefflich ge<lb
+                        break="no"/>schildert. Wenn mich etwas stört so<lb/>ist es der <persName ref="#p1119" type="bi">luther</persName>ische
+                    Cathechismus;<lb/>denn ein so kleiner Kindercathe<lb break="no"/>chismus mit Fragen und Antworten<lb/>kann wohl keinen Menschen
+                    trösten<lb/>und erbauen; dann glaube ich auch<lb/>nicht daß die Jesuiten richtig auf<pb break="no" facs="P1030761b.jpg" n="3"
+                    />gefaßt sind, in jener, ihrer schönsten<lb/>Zeit, haben sie viel für Poesie und<lb/>Wissenschaft gethan, und waren
+                    nichts<lb/>weniger als beschränkt und bigott.<lb/>Ich kann die <rs ref="#w04377" type="bi">Novelle</rs> nicht oft lesen<lb/>so
+                    wehmüthig stimmt sie mich, ich kom̄e<lb/>mehrere Tage nicht aus den Thränen<lb/>und obgleich diese Wehmuth höchst
+                    lieblich<lb/>ist, so bin ich doch dann unfähig etwas<lb/>anderes zu thun, und mit den Men<lb break="no"/>schen fortzuleben auf die
+                    gewöhnliche<lb/>Weise.</p>
+                <p><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 183) folgt eine unmarkierte Auslassung der nächsten zwei Absätze bis einschließlich "immer
+                            etwas Dunkles".</p><p xml:lang="en"/><p xml:lang="fr"/></note>Ich habe Ihren <title ref="#w04381">Geheimerath</title> nun
+                    auch gele<lb break="no"/>sen und es thut mir leid daß ich mich so<lb/>hart darüber ausgedrückt habe, doch<lb/>es geschah in
+                    Auftrag meines <rs ref="#p0133" type="bi">Vaters</rs>.<note resp="#sophia.zeil"><p xml:lang="de">Im <ref
+                                target="Brief10DorotheaTieckanUechtritz.xml">Brief vom 12. September 1833</ref> übermittelte <persName ref="#p0217"
+                                type="bi">Dorothea Tieck</persName>
+                            <persName ref="#p0711" type="bi">Uechtritz</persName> die Kritik ihres <rs ref="#p0133" type="bi">Vaters</rs> am <title
+                                ref="#w04381">Geheimerath</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>Der Charakter des Geheimeraths
+                        <del rend="strikethrough">ist</del><lb/>gefällt mir eigentlich sehr, nur scheint<lb/>mir sein seltsamer Wahnsinn nicht ge<lb
+                        break="no"/>nug motivirt, auch glaube ich das Ganze<lb/>passte mehr zu einer Novelle. So wie<lb/>es hier ist verletzt der
+                    tragische Schluß<pb facs="P1030762.jpg" n="4"/><note resp="#sophia.zeil"><p xml:lang="de">Der folgende Zusatz "Frau von … oft"
+                            steht kopfüber am oberen Rand der Seiten 1 (Bl. 1 recto) und 4 (Bl. 2 verso).</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><add hand="#major_hand" place="top-margin" rend="align(upside-down)">Frau von <del rend="strikethrough">Schl</del>
                         <persName ref="#p2766" type="bi">Scholz</persName> und ihre <rs ref="#p3205" type="bi">Tochter</rs> blei<lb break="no"/>ben
                         diesen Winter <rs ref="#l0003" type="bi">hier</rs>, und wir sehen sie oft</add><lb/><lb/>und erscheint wie eine Art Grausam<lb
                         break="no"/>keit, da man ihn wirklich nicht erwartet<lb/>und alles sich zu einem glücklichen Aus<lb break="no"/>gang
@@ -294,116 +305,123 @@
                     diesen Schlüssel be<lb break="no"/>hält die Geschichte immer etwas
                     Dunkles<!--<note resp="#sophia.zeil">Etwas herauszufinden
                         darüber?XXX</note>--></p>
-                <p>Wenn Ihnen mein Wohl nur<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 183) fehlt "nur".</note> irgend am<lb/>Herzen liegt, liebster Freund, so wün<lb break="no"
-                    />schen Sie es nicht daß wir <add place="above">für im̄er</add> nach <placeName ref="#l1103" type="bi"
-                    >Berlin</placeName><lb/>kommen, mich macht der Gedanke an die<lb/>Möglichkeit schon unglücklich. Ich habe mich<lb/><rs
-                        ref="#l0003" type="bi">hier</rs> in ein so stilles, klösterliches Leben<lb/>hinein gelebt, und mich so viel es sich
-                    nur<lb/>irgend thun läßt von allem Umgang<lb/>zurück gezogen, nur darin kann ich Frieden<pb facs="P1030763.jpg" n="5"/>und
-                    Heiterkeit finden, außer dem Hause<lb/>ist die Kirche und die herrliche Gegend mir<lb/>ein unbeschreiblicher Genuß;
-                    denke<!--[184]--> ich<lb/>mich nun in jene <del rend="strikethrough">G </del>Mauern eingeschlossen<lb/>ohne alle Natur, in tausend
-                    gesellige Ver<lb break="no"/>hältnisse verwickelt, die wir <rs ref="#l1103" type="bi">dort</rs> nicht<lb/>vermeiden könnten, es
-                    ist mir als wäre<lb/>es mein Tod. Könnte ich mich überzeugen<lb/>daß mein <rs ref="#p0133" type="bi">Vater</rs> dort glücklicher
-                    leben<lb/>würde, so müßte ich mich selbst darüber<lb/>vergessen; aber ich glaube gerade das<lb/>Gegentheil. Wir könnten es nicht
-                        vermei<lb break="no"/>den die stolzen <rs ref="#p3236 #p3237 #p3238 #p3239 #p3240" type="bi">Verwandten</rs><note
-                        resp="#sophia.zeil">Gemeint sind vermutlich die Geschwister <persName ref="#p0232" type="bi">Henriette von
-                            Finckensteins</persName>: <persName ref="#p3236" type="bi">Alexander Heinrich Ludwig</persName>, <persName ref="#p3237"
-                            type="bi">Heinrich Friedrich Leopold</persName>, <persName ref="#p3238" type="bi">Karoline Albertine Juliane</persName>,
-                            <persName ref="#p3239" type="bi">Wilhelm Maximilian Emil</persName> und <persName ref="#p3240" type="bi">Albertine Ulrike
-                            Luise von Finckenstein</persName>.</note> unsrer <rs ref="#p0232" type="bi">Grä<lb break="no"/>finn</rs> zu sehen, und wir
-                    selbst haben<lb/>dort zu viel und verschieden artige<lb/>Verwandte;<note resp="#sophia.zeil"><persName ref="#p0133" type="bi"
-                            >Ludwig Tieck</persName>s Bruder <persName ref="#p0858" type="bi">Friedrich Tieck</persName> war <date when-iso="1819"
-                            >1819</date> nach <placeName ref="#l1103" type="bi">Berlin</placeName> zurückgekehrt.</note> in allen diesen
-                    Verhältnissen<lb/>würde <rs ref="#p0133" type="bi">er</rs> sich nicht wohl fühlen, überhaupt<lb/>ist <placeName ref="#l1103"
-                        type="bi">Berlin</placeName> gewiß kein Ort für ihn.<lb/>Sie tadeln mich vielleicht hart wegen<lb/>meiner Aeußerungen; ich
-                    kann es<lb/>aber nicht ändern daß ich so bin, obgleich<lb/>ich es gewiß nicht loben werde. Kan̄<pb facs="P1030764a.jpg" n="6"
-                    />doch auch<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 184) fehlt "auch".</note> kein Mensch seiner Länge etwas<lb/>zusetzen, und so hat jeder sein
-                    eignes<lb/>Element in dem er nur leben und<lb/>athmen kann: Einsamkeit und stille<lb/>Thätigkeit ist das einzige worin
-                    mein<lb/>schwacher Geist sich zurechte findet.</p>
-                <p><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 184)
-                        folgt eine unmarkierte Auslassung des folgenden Absatzes bis einschließlich "miteinander stehen".</note><persName ref="#p2304"
-                        type="bi">Immermann</persName> war einige Zeit hier und<lb/>wir sahen ihn täglich. Es ist doch schade<lb/>daß Sie ganz mit ihm
-                    zerfallen sind,<note resp="#sophia.zeil">Über die Ursache des Zerwürnisses ist nichts bekannt. <persName ref="#p2306" type="bi"
-                            >Steitz</persName> vermutet, dass "Immermanns Schroffheit und überaus große Reizbarkeit" zum Bruch geführt haben mögen;
-                            vgl. <persName ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als dramatischer
-                            Dichter</title>, S. 21. <date when-iso="1836">1836</date> kam es allerdings wieder zu einer Annäherung zwischen <persName
-                            ref="#p0711" type="bi">Uechtritz</persName> und <persName ref="#p2304" type="bi"
-                        >Immermann</persName>.<!-- vgl. Brief XXX --></note><note hand="#pencil" place="inline"><supplied reason="illegible"
-                            >?</supplied></note><lb/>denn er hat doch viel Verstand und alle<lb/>seine Aeußerungen sind nichts nachge<lb break="no"
-                    />formtes, sondern <add place="above">ganz</add> eigenthümlich. Hier<lb/>war er liebenswürdig weil er sich mei<lb break="no"/>nem
-                        <rs ref="#p0133" type="bi">Vater</rs> unbedingt unter ordnet<lb/>doch kann ich mir denken wie er seyn<lb/>muß wenn er sich für
-                    den Ersten hält,<lb/>und wie es dann nicht mit ihm auszu<lb break="no"/>halten ist. Obgleich er mir gewisserma<lb break="no"/>ßen
-                    gefällt könnte ich doch nie Ver<lb break="no"/>trauen zu ihm fassen. Sein Verstand<lb/>ist zu überwiegend über sein
-                    Gemüth,<lb/>das fühlt man im Leben, wie in allen<pb facs="P1030764b.jpg" n="7"/>seinen Dichtungen. Sein <title ref="#w04382"
-                        >Tyroler Trau<lb break="no"/>erspiel</title>, das ganz verändert ist,<note resp="#sophia.zeil"><persName ref="#p2304"
-                            type="bi">Immermann</persName> überarbeitete <date when-iso="1833">1833</date>, 5 Jahre nach Erscheinen, sein <title
-                            ref="#w04382">Trauerspiel in Tyrol</title>, angeregt durch die wiederholte Kritik, es sei zu lang. Unter dem Titel <title
-                            ref="#w04384">Andreas Hofer</title> nahm er die veränderte Fassung <date when-iso="1835">1835</date> in seine <title
-                            ref="#w04383">gesammelten Schriften</title> auf.</note> las<lb/>er uns vor, Vieles darin finde ich sehr<lb/>schön, wie
-                    viel schöner würde aber<lb/>das Ganze seyn wenn, statt der Nichts<lb break="no"/>würdigkeit der Diplomatik, das tra<lb break="no"
-                    />gische Schicksal <del rend="strikethrough">Deut</del> des <persName ref="#p1371" type="bi">Kaisers</persName> und<lb/>der Sturz
-                        <placeName ref="#l0001" type="bi">Deutschlands</placeName><note resp="#sophia.zeil">Am <date when-iso="1806-08-06">6. August
-                            1806</date> legte <persName ref="#p1371" type="bi">Kaiser Franz II.</persName> die Krone des Heiligen Römischen Reichs
-                        Deutscher Nationen nieder.</note> den Hinter<lb break="no"/>grund bildete. Die Begeistrung reicht<lb/>bei ihm nicht aus, und
-                    der kalte Ver<lb break="no"/>stand thut zu viel in seinen Dichtun<lb break="no"/>gen. Schon dieser Gegensatz, den<lb/>man immer
-                    durchfühlt, und der bei<lb/>dem wahren Dichter gar nicht existirt,<lb/>wird ihn nie das Höchste erreichen<lb/>lassen. Nichts
-                    gefällt mir so ganz<lb/>wie sein <title ref="#w04373">Tulifäntchen</title>, es scheint mir<lb/><del rend="strikethrough">s</del>
-                    in dieser Art etwas Vollendetes.<lb/>Von Ihnen habe ich gar nicht mit ihm<lb/>gesprochen, weil ich zu wenig davon<lb/>weiß, wie
-                    Sie miteinander stehen.</p>
+                <p>Wenn Ihnen mein Wohl nur<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
+                                ref="#w03300">Erinnerungen</title> (S. 183) fehlt "nur".</p><p xml:lang="en"/><p xml:lang="fr"/></note> irgend
+                    am<lb/>Herzen liegt, liebster Freund, so wün<lb break="no"/>schen Sie es nicht daß wir <add place="above">für im̄er</add> nach
+                        <placeName ref="#l1103" type="bi">Berlin</placeName><lb/>kommen, mich macht der Gedanke an die<lb/>Möglichkeit schon
+                    unglücklich. Ich habe mich<lb/><rs ref="#l0003" type="bi">hier</rs> in ein so stilles, klösterliches Leben<lb/>hinein gelebt, und
+                    mich so viel es sich nur<lb/>irgend thun läßt von allem Umgang<lb/>zurück gezogen, nur darin kann ich Frieden<pb
+                        facs="P1030763.jpg" n="5"/>und Heiterkeit finden, außer dem Hause<lb/>ist die Kirche und die herrliche Gegend mir<lb/>ein
+                    unbeschreiblicher Genuß; denke<!--[184]--> ich<lb/>mich nun in jene <del rend="strikethrough">G </del>Mauern
+                    eingeschlossen<lb/>ohne alle Natur, in tausend gesellige Ver<lb break="no"/>hältnisse verwickelt, die wir <rs ref="#l1103"
+                        type="bi">dort</rs> nicht<lb/>vermeiden könnten, es ist mir als wäre<lb/>es mein Tod. Könnte ich mich überzeugen<lb/>daß mein
+                        <rs ref="#p0133" type="bi">Vater</rs> dort glücklicher leben<lb/>würde, so müßte ich mich selbst darüber<lb/>vergessen; aber
+                    ich glaube gerade das<lb/>Gegentheil. Wir könnten es nicht vermei<lb break="no"/>den die stolzen <rs
+                        ref="#p3236 #p3237 #p3238 #p3239 #p3240" type="bi">Verwandten</rs><note resp="#sophia.zeil">Gemeint sind vermutlich die
+                        Geschwister <persName ref="#p0232" type="bi">Henriette von Finckensteins</persName>: <persName ref="#p3236" type="bi"
+                            >Alexander Heinrich Ludwig</persName>, <persName ref="#p3237" type="bi">Heinrich Friedrich Leopold</persName>, <persName
+                            ref="#p3238" type="bi">Karoline Albertine Juliane</persName>, <persName ref="#p3239" type="bi">Wilhelm Maximilian
+                            Emil</persName> und <persName ref="#p3240" type="bi">Albertine Ulrike Luise von Finckenstein</persName>.</note> unsrer <rs
+                        ref="#p0232" type="bi">Grä<lb break="no"/>finn</rs> zu sehen, und wir selbst haben<lb/>dort zu viel und verschieden
+                        artige<lb/>Verwandte;<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0133" type="bi">Ludwig Tieck</persName>s
+                            Bruder <persName ref="#p0858" type="bi">Friedrich Tieck</persName> war <date when-iso="1819">1819</date> nach <placeName
+                                ref="#l1103" type="bi">Berlin</placeName> zurückgekehrt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> in allen
+                    diesen Verhältnissen<lb/>würde <rs ref="#p0133" type="bi">er</rs> sich nicht wohl fühlen, überhaupt<lb/>ist <placeName
+                        ref="#l1103" type="bi">Berlin</placeName> gewiß kein Ort für ihn.<lb/>Sie tadeln mich vielleicht hart wegen<lb/>meiner
+                    Aeußerungen; ich kann es<lb/>aber nicht ändern daß ich so bin, obgleich<lb/>ich es gewiß nicht loben werde. Kan̄<pb
+                        facs="P1030764a.jpg" n="6"/>doch auch<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi"
+                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 184) fehlt "auch".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> kein Mensch seiner Länge etwas<lb/>zusetzen, und so hat jeder sein eignes<lb/>Element in dem er nur
+                    leben und<lb/>athmen kann: Einsamkeit und stille<lb/>Thätigkeit ist das einzige worin mein<lb/>schwacher Geist sich zurechte
+                    findet.</p>
+                <p><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 184) folgt eine unmarkierte Auslassung des folgenden Absatzes bis einschließlich
+                            "miteinander stehen".</p><p xml:lang="en"/><p xml:lang="fr"/></note><persName ref="#p2304" type="bi">Immermann</persName>
+                    war einige Zeit hier und<lb/>wir sahen ihn täglich. Es ist doch schade<lb/>daß Sie ganz mit ihm zerfallen sind,<note
+                        resp="#sophia.zeil"><p xml:lang="de">Über die Ursache des Zerwürnisses ist nichts bekannt. <persName ref="#p2306" type="bi"
+                                >Steitz</persName> vermutet, dass "Immermanns Schroffheit und überaus große Reizbarkeit" zum Bruch geführt haben
+                            mögen; vgl. <persName ref="#p2306" type="bi">Steitz</persName>: <title ref="#w04348">Friedrich von Uechtritz als
+                                dramatischer Dichter</title>, S. 21. <date when-iso="1836">1836</date> kam es allerdings wieder zu einer Annäherung
+                            zwischen <persName ref="#p0711" type="bi">Uechtritz</persName> und <persName ref="#p2304" type="bi"
+                            >Immermann</persName>.<!-- vgl. Brief XXX --></p><p xml:lang="en"/><p xml:lang="fr"/></note><note hand="#pencil"
+                        place="inline"><supplied reason="illegible">?</supplied></note><lb/>denn er hat doch viel Verstand und alle<lb/>seine
+                    Aeußerungen sind nichts nachge<lb break="no"/>formtes, sondern <add place="above">ganz</add> eigenthümlich. Hier<lb/>war er
+                    liebenswürdig weil er sich mei<lb break="no"/>nem <rs ref="#p0133" type="bi">Vater</rs> unbedingt unter ordnet<lb/>doch kann ich
+                    mir denken wie er seyn<lb/>muß wenn er sich für den Ersten hält,<lb/>und wie es dann nicht mit ihm auszu<lb break="no"/>halten
+                    ist. Obgleich er mir gewisserma<lb break="no"/>ßen gefällt könnte ich doch nie Ver<lb break="no"/>trauen zu ihm fassen. Sein
+                    Verstand<lb/>ist zu überwiegend über sein Gemüth,<lb/>das fühlt man im Leben, wie in allen<pb facs="P1030764b.jpg" n="7"/>seinen
+                    Dichtungen. Sein <title ref="#w04382">Tyroler Trau<lb break="no"/>erspiel</title>, das ganz verändert ist,<note
+                        resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p2304" type="bi">Immermann</persName> überarbeitete <date when-iso="1833"
+                                >1833</date>, 5 Jahre nach Erscheinen, sein <title ref="#w04382">Trauerspiel in Tyrol</title>, angeregt durch die
+                            wiederholte Kritik, es sei zu lang. Unter dem Titel <title ref="#w04384">Andreas Hofer</title> nahm er die veränderte
+                            Fassung <date when-iso="1835">1835</date> in seine <title ref="#w04383">gesammelten Schriften</title> auf.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> las<lb/>er uns vor, Vieles darin finde ich sehr<lb/>schön, wie viel schöner würde
+                    aber<lb/>das Ganze seyn wenn, statt der Nichts<lb break="no"/>würdigkeit der Diplomatik, das tra<lb break="no"/>gische Schicksal
+                        <del rend="strikethrough">Deut</del> des <persName ref="#p1371" type="bi">Kaisers</persName> und<lb/>der Sturz <placeName
+                        ref="#l0001" type="bi">Deutschlands</placeName><note resp="#sophia.zeil"><p xml:lang="de">Am <date when-iso="1806-08-06"
+                                >6. August 1806</date> legte <persName ref="#p1371" type="bi">Kaiser Franz II.</persName> die Krone des Heiligen
+                            Römischen Reichs Deutscher Nationen nieder.</p><p xml:lang="en"/><p xml:lang="fr"/></note> den Hinter<lb break="no"/>grund
+                    bildete. Die Begeistrung reicht<lb/>bei ihm nicht aus, und der kalte Ver<lb break="no"/>stand thut zu viel in seinen Dichtun<lb
+                        break="no"/>gen. Schon dieser Gegensatz, den<lb/>man immer durchfühlt, und der bei<lb/>dem wahren Dichter gar nicht
+                    existirt,<lb/>wird ihn nie das Höchste erreichen<lb/>lassen. Nichts gefällt mir so ganz<lb/>wie sein <title ref="#w04373"
+                        >Tulifäntchen</title>, es scheint mir<lb/><del rend="strikethrough">s</del> in dieser Art etwas Vollendetes.<lb/>Von Ihnen
+                    habe ich gar nicht mit ihm<lb/>gesprochen, weil ich zu wenig davon<lb/>weiß, wie Sie miteinander stehen.</p>
                 <p><rs ref="#p0133" type="bi">Vater</rs> hat einige Zeit sehr an Zahn<pb break="no" facs="P1030765.jpg" n="8"/>schmerzen gelitten,
                     jetzt geht es ihm<lb/>wieder besser und er schreibt die letz<lb break="no"/>ten Noten zum <hi rend="latin"><persName ref="#p0206"
-                            type="bi">Shakspear</persName></hi>.<note resp="#sophia.zeil">Die Anmerkungen erschienen <date when-iso="1833">1833</date>
-                        im <rs ref="#w04526" type="bi">9. Band</rs> von <title ref="#w04645">Shakspeare's dramatischen Werken</title>.</note>
+                            type="bi">Shakspear</persName></hi>.<note resp="#sophia.zeil"><p xml:lang="de">Die Anmerkungen erschienen <date
+                                when-iso="1833">1833</date> im <rs ref="#w04526" type="bi">9. Band</rs> von <title ref="#w04645">Shakspeare's
+                                dramatischen Werken</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <persName ref="#p0187" type="bi">Raumer</persName><lb/>war auf seiner Rückreise von <placeName ref="#l0032" type="bi"
                         >Wien</placeName><lb/>einige Tage bei uns; er ist sehr mun<lb break="no"/>ter und freut sich seines neu gekauf<lb break="no"
                     />ten und eingerichteten Hause.<!--<note resp="#sophia.zeil">Bezug in Raumer-Briefen? XXX</note>--> Ich habe<lb/>angefangen den
                         <rs ref="#w01240" type="bi">ersten Theil</rs> seiner<lb/>neuern Geschichte zu lesen. Mit gro<lb break="no"/>ßem Vergnügen lese
                     ich den ganzen<lb/><persName ref="#p2307" type="bi">Calderon</persName> durch. In den unübersetzen<lb/>Lustspielen liegen noch
-                    große Schätze<lb/>von Poesie und Erfindung verborgen<note resp="#sophia.zeil"><persName ref="#p2307" type="bi">Calderón de la
-                            Barca</persName> schrieb mehr als 120 Dramen (die sog. Comedias, die allerdings keine Lustspiele im engeren Sinne
-                        darstellen), von denen u.a. <persName ref="#p0185" type="bi">E.T.A. Hoffmann</persName>, <persName ref="#p3252" type="bi"
-                            >Johann Diederich Gries</persName> und <persName ref="#p0190" type="bi">A.W. Schlegel</persName> einige übersetzten. Die
-                        Comedias werden unterschieden in Mantel-und-Degen-Stücke, Ehrendramen, Dramen aus der spanischen Geschichte, religiöse Dramen,
-                        philosophische Dramen und mythologische Dramen. <persName ref="#p0133" type="bi">Ludwig Tieck</persName> hatte <date
-                            when-iso="1826">1826</date> bereits <persName ref="#p2307" type="bi">Calderóns</persName>
-                        <title ref="#w04841">Dame Kobold</title> in der <persName ref="#p3252" type="bi">Gries</persName>schen Übersetzung am
-                            <placeName ref="#l0003" type="bi">Dresdner</placeName> Hoftheater inszeniert. Das Stück fiel beim Publikum jedoch
-                        durch.</note><lb/>Fände sich doch jemand der sie mit<lb/>Geschick für das Theater bearbeiten<lb/>könnte. Die Schriften des
-                        <persName ref="#p2441" type="bi">heiligen<lb/>Bernhard</persName> habe ich auch gelesen, <persName ref="#p2442" type="bi"
-                            >Sil<lb break="no"/>bert</persName> hat <rs ref="#w04385" type="bi">zwei Bände</rs> heraus gege<lb break="no"/>ben, die
-                    auch recht gut übersetzt<lb/>sind. Es sind herrliche Gedanken<lb/>darin, er ist gewiß der lieblichste<lb/>von allen Kirchenvätern,
-                    und ich fühle<pb facs="P1030766.jpg" n="9"/>wohl weshalb <persName ref="#p1508" type="bi">Dante</persName> sich von diesem<lb/><rs
-                        ref="#p2441" type="bi">Sänger der Liebe</rs> in den Höchsten Him<lb break="no"/>mel einführen läßt, nachdem <persName
-                        ref="#p2443" type="bi">Beatri<lb break="no"/>ce</persName> ihn verlassen hat.</p>
-                <p>Es freut mich daß Sie <persName ref="#p0713" type="bi">Löbell</persName> wieder<lb/>gesehn haben.<note resp="#sophia.zeil"
-                            ><persName ref="#p0713" type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für Geschichte
-                        in <placeName ref="#l0205" type="bi">Bonn</placeName>.</note> Er bat mich ihm zuwei<lb break="no"/>len zu schreiben, und ich
-                    konnte es<lb/>ihm nicht abschlagen, da er sonst kei<lb break="no"/>ne Nachricht von uns bekäme.<note resp="#sophia.zeil">Die
-                        Briefe von <persName ref="#p0217" type="bi">Dorothea Tieck</persName> an <persName ref="#p0713" type="bi">Johann Wilhelm
-                            Loebell</persName> sind vermutlich verschollen.</note> Seine<lb/><!--[185]-->Briefe sind sehr schön, und die Beant<lb
+                    große Schätze<lb/>von Poesie und Erfindung verborgen<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p2307" type="bi"
+                                >Calderón de la Barca</persName> schrieb mehr als 120 Dramen (die sog. Comedias, die allerdings keine Lustspiele im
+                            engeren Sinne darstellen), von denen u.a. <persName ref="#p0185" type="bi">E.T.A. Hoffmann</persName>, <persName
+                                ref="#p3252" type="bi">Johann Diederich Gries</persName> und <persName ref="#p0190" type="bi">A.W. Schlegel</persName>
+                            einige übersetzten. Die Comedias werden unterschieden in Mantel-und-Degen-Stücke, Ehrendramen, Dramen aus der spanischen
+                            Geschichte, religiöse Dramen, philosophische Dramen und mythologische Dramen. <persName ref="#p0133" type="bi">Ludwig
+                                Tieck</persName> hatte <date when-iso="1826">1826</date> bereits <persName ref="#p2307" type="bi">Calderóns</persName>
+                            <title ref="#w04841">Dame Kobold</title> in der <persName ref="#p3252" type="bi">Gries</persName>schen Übersetzung am
+                                <placeName ref="#l0003" type="bi">Dresdner</placeName> Hoftheater inszeniert. Das Stück fiel beim Publikum jedoch
+                            durch.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>Fände sich doch jemand der sie mit<lb/>Geschick für das Theater
+                    bearbeiten<lb/>könnte. Die Schriften des <persName ref="#p2441" type="bi">heiligen<lb/>Bernhard</persName> habe ich auch gelesen,
+                        <persName ref="#p2442" type="bi">Sil<lb break="no"/>bert</persName> hat <rs ref="#w04385" type="bi">zwei Bände</rs> heraus
+                        gege<lb break="no"/>ben, die auch recht gut übersetzt<lb/>sind. Es sind herrliche Gedanken<lb/>darin, er ist gewiß der
+                    lieblichste<lb/>von allen Kirchenvätern, und ich fühle<pb facs="P1030766.jpg" n="9"/>wohl weshalb <persName ref="#p1508" type="bi"
+                        >Dante</persName> sich von diesem<lb/><rs ref="#p2441" type="bi">Sänger der Liebe</rs> in den Höchsten Him<lb break="no"/>mel
+                    einführen läßt, nachdem <persName ref="#p2443" type="bi">Beatri<lb break="no"/>ce</persName> ihn verlassen hat.</p>
+                <p>Es freut mich daß Sie <persName ref="#p0713" type="bi">Löbell</persName> wieder<lb/>gesehn haben.<note resp="#sophia.zeil"><p
+                            xml:lang="de"><persName ref="#p0713" type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für
+                            Geschichte in <placeName ref="#l0205" type="bi">Bonn</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Er bat
+                    mich ihm zuwei<lb break="no"/>len zu schreiben, und ich konnte es<lb/>ihm nicht abschlagen, da er sonst kei<lb break="no"/>ne
+                    Nachricht von uns bekäme.<note resp="#sophia.zeil"><p xml:lang="de">Die Briefe von <persName ref="#p0217" type="bi">Dorothea
+                                Tieck</persName> an <persName ref="#p0713" type="bi">Johann Wilhelm Loebell</persName> sind vermutlich
+                            verschollen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Seine<lb/><!--[185]-->Briefe sind sehr schön, und die Beant<lb
                         break="no"/>wortung macht mir immer etwas<lb/>Angst: was man schöne Briefe nen̄t<lb/>kann ich nicht schreiben, und wo ich
                     nicht<lb/>so ganz frei und offen seyn kann<lb/>wie gegen Sie, ist es mir immer et<lb break="no"/>was peinliches <note
                         hand="#pencil" place="inline">/</note></p>
-                <p><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 185)
-                        folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</note>Von <persName ref="#p2341" type="bi">Sternberg</persName>
-                    habe ich Ihnen lange<lb/>nichts erzählt, er ist recht wohl, und wir<lb/>haben wieder erfahren was er doch<lb/>für ein
-                    vortrefflicher Mann ist. <persName ref="#p1717" type="bi">Sta<lb break="no"/>kelberg</persName><note resp="#sophia.zeil"><persName
-                            ref="#p1717" type="bi">Otto Magnus von Stackelberg</persName> und <persName ref="#p2341" type="bi">Alexander von
-                            Ungern-Sternberg</persName> verband eine tiefe Freundschaft. Gemeinsam waren sie <date when-iso="1831">1831</date> durch
-                            <placeName ref="#l0001" type="bi">Süddeutschland</placeName> gereist. <persName ref="#p2341" type="bi"
-                            >Sternberg</persName> widmete dem Freund seine <date when-iso="1832">1832</date> erschienene Novelle <title ref="#w05565"
-                            >Die Zerrissenen</title>.</note> lebte seit einigen Jahren in<lb/><placeName ref="#l0334" type="bi">Mannheim</placeName>,
-                    den Sommer wurde er sehr<pb facs="P1030767.jpg" n="10"/>krank und wir erfuhren daß er durch<lb/>wiederholten Schlagfluß<note
-                        resp="#sophia.zeil">Veraltet für ,Schlaganfall‘.</note> fast ganz sei<lb break="no"/>ner Sinne beraubt und in dem trau<lb
-                        break="no"/>rigsten Zustand sey. Sogleich setzte<lb/>der gute <persName ref="#p2341" type="bi">Sternberg</persName>, der
-                    selbst leide<supplied reason="damage">nd</supplied><lb/>war sich auf die Eilpost, machte dor<supplied reason="damage"
-                    >t</supplied><lb/>den <rs ref="#p1717" type="bi">Kranken</rs> mit vieler Mühe und Ver<lb break="no"/>druß von gewissenlosen
-                    Aerzten und<lb/>Pflegern los und brachte ihn mit her<lb/>hat ihn nun bei sich und pflegt ihn wie<lb/>ein Vater nur sein Kind
-                    pflegen kan̄.<lb/>Es geht etwas besser und vielleicht<lb/>wird der Arme noch wieder herge<lb break="no"/>stellt.<note
-                        resp="#sophia.zeil"><persName ref="#p1717" type="bi">Stackelberg</persName> erholte sich nur sehr langsam und erlitt im <date
-                            when-iso="1834-04">April 1834</date> einen erneuten Schlaganfall; er starb <date when-iso="1837">1837</date>.</note> Eine
-                    solche aufopfer<subst>
+                <p><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> (S. 185) folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>Von <persName ref="#p2341" type="bi">Sternberg</persName> habe ich Ihnen lange<lb/>nichts erzählt,
+                    er ist recht wohl, und wir<lb/>haben wieder erfahren was er doch<lb/>für ein vortrefflicher Mann ist. <persName ref="#p1717"
+                        type="bi">Sta<lb break="no"/>kelberg</persName><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p1717" type="bi"
+                                >Otto Magnus von Stackelberg</persName> und <persName ref="#p2341" type="bi">Alexander von Ungern-Sternberg</persName>
+                            verband eine tiefe Freundschaft. Gemeinsam waren sie <date when-iso="1831">1831</date> durch <placeName ref="#l0001"
+                                type="bi">Süddeutschland</placeName> gereist. <persName ref="#p2341" type="bi">Sternberg</persName> widmete dem Freund
+                            seine <date when-iso="1832">1832</date> erschienene Novelle <title ref="#w05565">Die Zerrissenen</title>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> lebte seit einigen Jahren in<lb/><placeName ref="#l0334" type="bi"
+                        >Mannheim</placeName>, den Sommer wurde er sehr<pb facs="P1030767.jpg" n="10"/>krank und wir erfuhren daß er
+                    durch<lb/>wiederholten Schlagfluß<note resp="#sophia.zeil">Veraltet für ,Schlaganfall‘.</note> fast ganz sei<lb break="no"/>ner
+                    Sinne beraubt und in dem trau<lb break="no"/>rigsten Zustand sey. Sogleich setzte<lb/>der gute <persName ref="#p2341" type="bi"
+                        >Sternberg</persName>, der selbst leide<supplied reason="damage">nd</supplied><lb/>war sich auf die Eilpost, machte
+                        dor<supplied reason="damage">t</supplied><lb/>den <rs ref="#p1717" type="bi">Kranken</rs> mit vieler Mühe und Ver<lb
+                        break="no"/>druß von gewissenlosen Aerzten und<lb/>Pflegern los und brachte ihn mit her<lb/>hat ihn nun bei sich und pflegt
+                    ihn wie<lb/>ein Vater nur sein Kind pflegen kan̄.<lb/>Es geht etwas besser und vielleicht<lb/>wird der Arme noch wieder herge<lb
+                        break="no"/>stellt.<note resp="#sophia.zeil"><persName ref="#p1717" type="bi">Stackelberg</persName> erholte sich nur sehr
+                        langsam und erlitt im <date when-iso="1834-04">April 1834</date> einen erneuten Schlaganfall; er starb <date when-iso="1837"
+                            >1837</date>.</note> Eine solche aufopfer<subst>
                         <del rend="overwritten">d</del>
                         <add place="across">n</add>
                     </subst>de Freund<lb break="no"/>schaft hat etwas sehr Ehrwürdiges,<lb/>und ich habe mir vorgenommen ihn nie<lb/>mehr schmutzig

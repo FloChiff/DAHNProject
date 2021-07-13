@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Görlitz</settlement>
+                        <location>
+                            <address>
+                                <street>Handwerk 2</street>
+                                <postCode>02826</postCode>
+                                <settlement>Görlitz</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Uechtritz</collection>
@@ -240,8 +247,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2018-08-25" who="#sabine.seifert">Changed ID for Hirschberg from l0958 to l0395 (was double entry in index of
                 places).</change>
             <change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
@@ -266,20 +274,22 @@
             <div type="transcription">
                 <pb facs="P1030749.jpg" n="1"/>
                 <note hand="#pencil" place="top-margin-center inline">8</note>
-                <p><opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
-                                when-iso="1833-09-12">12 <hi rend="latin"><choice>
-                                        <abbr>Sept</abbr>
-                                        <expan>September</expan>
-                                    </choice></hi><lb/>1833</date></dateline><lb/><note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
-                                >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 181) folgt eine angezeigte Auslassung der Anrede und
-                            der folgenden zwei Absätze bis einschließlich "noch einmal machen kann".</note><salute>Theuerster
-                        Freund,</salute></opener><lb/>
+                <opener><dateline rend="align(right)"><hi rend="latin"><placeName ref="#l0003" type="bi">Dresden</placeName></hi> den <date
+                            when-iso="1833-09-12">12 <hi rend="latin"><choice>
+                                    <abbr>Sept</abbr>
+                                    <expan>September</expan>
+                                </choice></hi><lb/>1833</date></dateline><lb/><note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151"
+                                type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> (S. 181) folgt eine angezeigte Auslassung der
+                            Anrede und der folgenden zwei Absätze bis einschließlich "noch einmal machen kann".</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><salute>Theuerster Freund,</salute></opener>
+                <p>
                     <note hand="#pencil" place="inline">(</note>Ich hatte mir vorgenommen so zu schreiben daß an Ihrem <date when-iso="1833-09-12"
-                            >Geburts<lb break="no"/>tage</date><note resp="#sophia.zeil">Am <date when-iso="1833-09-12">12. September 1833</date> war
-                            <persName ref="#p0711" type="bi">Uechtritz</persName>' 33. Geburtstag.</note> mein Brief und die besten Wünsche von uns
-                    Allen schon<lb/>bei Ihnen wären; doch die Unruhe in der wir jetzt leben<lb/>machte es mir unmöglich. Ich rufe Ihnen heut in
-                    Gedanken<lb/>meinen schönsten Glückwunsch zu: Möchten Sie doch so wohl und<lb/>glücklich seyn wie wir alle es Ihnen wünschen, und
-                    wären Sie<lb/>doch heut wieder bei uns, so wie voriges Jahr!</p>
+                            >Geburts<lb break="no"/>tage</date><note resp="#sophia.zeil"><p xml:lang="de">Am <date when-iso="1833-09-12">12. September
+                                1833</date> war <persName ref="#p0711" type="bi">Uechtritz</persName>' 33. Geburtstag.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> mein Brief und die besten Wünsche von uns Allen schon<lb/>bei Ihnen wären; doch die Unruhe in der
+                    wir jetzt leben<lb/>machte es mir unmöglich. Ich rufe Ihnen heut in Gedanken<lb/>meinen schönsten Glückwunsch zu: Möchten Sie doch
+                    so wohl und<lb/>glücklich seyn wie wir alle es Ihnen wünschen, und wären Sie<lb/>doch heut wieder bei uns, so wie voriges
+                    Jahr!</p>
                 <p><note hand="#blue_ink" place="inline">(</note>Ich hatte einen Schreck als man mir nach <placeName ref="#l0017" type="bi"
                         >Schlesien</placeName> schrieb<lb/>es sey ein Brief von Ihnen an mich gekommen, weil ich<lb/>dachte der<add place="inline"
                         >,</add>
@@ -289,14 +299,15 @@
                     erfahren weil ich die<lb/>Abschrift aus der <title ref="#w04329">Rosamunde</title>, welche Sie haben wollten, ein<lb break="no"
                     />gelegt hatte; sollte dieser Brief dennoch nicht zu Ihnen<lb/>gelangt seyn, so schreiben Sie es mir doch, damit ich Ihnen<lb/>die
                     Abschrift noch einmal machen kann.<note hand="#pencil" place="inline">)</note></p>
-                <p>Ihre Frage wegen des <rs ref="#w04381" type="bi">Lustspiels</rs><note resp="#sophia.zeil">Die Tragikomödie <title ref="#w04381">Der
-                            Geheimerath</title>.</note> was Sie meinem <rs ref="#p0133" type="bi">Vater</rs><lb/>geschickt haben, will ich ganz
-                    einfach und ohne Vorrede oder<lb/>Umschweif beantworten: Es hat ihm nicht gefallen und er<lb/>räth Ihnen, oder vielmehr, er bittet
-                    Sie dringend es nicht<lb/>drucken zu lassen, da er meint es würde Ihrem Rufe<pb facs="P1030750a.jpg" n="2"/>schaden, denn weder
-                    Plan noch Ausführung sey Ihres Talen<lb break="no"/>tes und dessen was man von Ihnen erwartet würdig.<lb/>Da ich selbst das <rs
-                        ref="#w04381" type="bi">Stück</rs><note resp="#sophia.zeil"><title ref="#w04381">Der Geheimerath</title> blieb
-                        ungedruckt.</note> noch nicht habe lesen können hat er<lb/>mir sein Urtheil auch nicht ausführlicher sagen können,<lb/>und ich
-                    hätte nicht einmal Gelegenheit gehabt mehr mit<lb/>ihm zu sprechen, da wir Besuch bei uns haben. Vielleicht<lb/>hätte ich diese
+                <p>Ihre Frage wegen des <rs ref="#w04381" type="bi">Lustspiels</rs><note resp="#sophia.zeil"><p xml:lang="de">Die Tragikomödie <title
+                                ref="#w04381">Der Geheimerath</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> was Sie meinem <rs ref="#p0133"
+                        type="bi">Vater</rs><lb/>geschickt haben, will ich ganz einfach und ohne Vorrede oder<lb/>Umschweif beantworten: Es hat ihm
+                    nicht gefallen und er<lb/>räth Ihnen, oder vielmehr, er bittet Sie dringend es nicht<lb/>drucken zu lassen, da er meint es würde
+                    Ihrem Rufe<pb facs="P1030750a.jpg" n="2"/>schaden, denn weder Plan noch Ausführung sey Ihres Talen<lb break="no"/>tes und dessen
+                    was man von Ihnen erwartet würdig.<lb/>Da ich selbst das <rs ref="#w04381" type="bi">Stück</rs><note resp="#sophia.zeil"><p
+                            xml:lang="de"><title ref="#w04381">Der Geheimerath</title> blieb ungedruckt.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> noch nicht habe lesen können hat er<lb/>mir sein Urtheil auch nicht ausführlicher sagen können,<lb/>und ich hätte
+                    nicht einmal Gelegenheit gehabt mehr mit<lb/>ihm zu sprechen, da wir Besuch bei uns haben. Vielleicht<lb/>hätte ich diese
                     Mittheilung, die Ihnen natürlich nicht ange<lb break="no"/>nehm seyn kann, mit schönen Worten umgeben sollen,<lb/>aber unter
                     Freunden halte ich die ungeschminkte Wahr<lb break="no"/>heit für die erste Pflicht, und die Sache bleibt ja doch<lb/>dieselbe.
                     Ich kann mir wohl denken daß Ihre tragische<lb/>Muse sich ungern zu leichten Spielen herab läßt, und<lb/>warum wollten Sie sie
@@ -314,15 +325,16 @@
                     um<lb/>so lieber, und keiner Ihrer Freunde, der Sie kennt und<pb facs="P1030750b.jpg" n="3"/>verehrt wie ich, würde Sie anders
                     haben wollen. <note hand="#pencil" place="inline"><hi rend="superscript">X</hi></note>
                     <del hand="#pencil" rend="strikethrough">Es<lb/>kommt mir eigentlich sonderbar vor, daß ich Ihnen dies<lb/>alles sage, und ich
-                        habe mich auch wohl ser<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                                >Erinnerungen</title> (S. 182) steht "sehr" statt "ser".</note> ungeschickt<lb/>ausgedrückt, doch ich habe das
-                        Vertrauen zu Ihnen, daß<lb/>Sie meine herzliche Freundschaft nicht verkennen.</del><note hand="#pencil" place="inline"><hi
-                            rend="superscript">X</hi></note></p>
-                <p>Doch nun muß ich Ihnen von unsrer Reise erzählen: Wir<note resp="#sophia.zeil"><persName ref="#p0233" type="bi">Amalia</persName>,
-                            <persName ref="#p0218" type="bi">Agnes</persName> und <persName ref="#p0217" type="bi">Dorothea
-                    Tieck</persName>.</note><lb/>gingen von hier durch <placeName ref="#l0101" type="bi">Böhmen</placeName> nach <placeName
-                        ref="#l0017" type="bi">Schlesien</placeName>. <note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>:
-                            <title ref="#w03300">Erinnerungen</title> fehlt der folgende Satz.</note><subst>
+                        habe mich auch wohl ser<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>:
+                                    <title ref="#w03300">Erinnerungen</title> (S. 182) steht "sehr" statt "ser".</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note> ungeschickt<lb/>ausgedrückt, doch ich habe das Vertrauen zu Ihnen, daß<lb/>Sie meine herzliche Freundschaft
+                        nicht verkennen.</del><note hand="#pencil" place="inline"><hi rend="superscript">X</hi></note></p>
+                <p>Doch nun muß ich Ihnen von unsrer Reise erzählen: Wir<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0233" type="bi"
+                                >Amalia</persName>, <persName ref="#p0218" type="bi">Agnes</persName> und <persName ref="#p0217" type="bi">Dorothea
+                                Tieck</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>gingen von hier durch <placeName ref="#l0101"
+                        type="bi">Böhmen</placeName> nach <placeName ref="#l0017" type="bi">Schlesien</placeName>. <note resp="#sophia.zeil"><p
+                            xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Erinnerungen</title> fehlt der
+                            folgende Satz.</p><p xml:lang="en"/><p xml:lang="fr"/></note><subst>
                         <del hand="#blue_ink" rend="overwritten"><note hand="#pencil" place="inline">(</note></del>
                         <add hand="#blue_ink" place="across">(</add>
                     </subst><del hand="#pencil" rend="strikethrough">In <placeName ref="#l0074" type="bi">Teplitz</placeName><lb/>blieben wir einen
@@ -335,25 +347,27 @@
                     eine alte, katholische Stadt ist doch etwas wunder<lb break="no"/>volles, und es kann mich ein wahres Heimweh ergrei<lb break="no"
                     />fen wenn ich daran zurück denke. Das Wetter war<lb/>sehr schön, wir bestiegen den Ratschin einige mal und<lb/>machten
                     Spatzirgänge, besuchten viele Kirchen und auch<lb/>zwei Frauenklöster, die Elisabethinerinnen und Car<lb break="no"
-                        />melitinnen.<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> steht "Carmeliterinnen" statt "Carmelitinnen".</note> In einer solchen Stille und Zurückgezogen<lb
-                        break="no"/>heit zu leben, ist doch gewiß das größte Glück, wem<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi"
-                            >Sybel</persName>: <title ref="#w03300">Erinnerungen</title> steht "dem" statt "wem".</note><lb/>es Gott vergönnt hat, wie
-                    viel schneller muß man doch<lb/>zur Ruhe gelangen und wie wird dort jeder Kampf er<lb break="no"/>leichtert. Verbindet sich ein
-                    solcher Beruf noch mit einer<lb/>so thätigen und aufopfernden Nächstenliebe wie bei den Elisabethinerinnen, so ist es etwas ganz
-                        herrliches.<note resp="#sophia.zeil">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
-                            >Erinnerungen</title> (S. 182) folgt eine markierte Auslassung bis zum Ende des Briefs.</note><lb/>Von <placeName
-                        ref="#l0312" type="bi">Prag</placeName> reisten wir über <rs ref="#l0944" type="bi">Alt-</rs> und <placeName ref="#l0945"
-                        type="bi">Jung-Bunzlau</placeName>,<pb facs="P1030751.jpg" n="4"/><placeName ref="#l0946" type="bi">Gitschin</placeName> und
-                        <placeName ref="#l0947" type="bi">Trautenau</placeName> nach <placeName ref="#l0017" type="bi">Schlesien</placeName>, es ist
-                    ein recht schö<lb break="no"/>ner Weg, in <placeName ref="#l0923" type="bi">Waldenburg</placeName> blieben wir 18 Tage und wohn<lb
-                        break="no"/>ten bei dem ältesten <rs ref="#p2430" type="bi">Bruder</rs> meiner <rs ref="#p0233" type="bi">Mutter</rs>, der
-                    dort<lb/>eine große Handlung und Garnfabrik<note resp="#sophia.zeil">Mit seinem Bruder <persName ref="#p2431" type="bi"
-                            >Friedrich</persName> besaß <persName ref="#p2430" type="bi">Johann Gustav Wilhelm Alberti</persName> die
-                        Maschinenspinnerei Gebr. Alberti. Es handelte sich hierbei um die erste mechanische Flachsspinnerei auf dem europäischen
-                        Festland. Die Fabrik beschäftigte zeitweilig fast 500 Mitarbeiter. (Vgl. <persName ref="#p2435" type="bi">Toni
-                            Pierenkemper</persName>: <title ref="#w04379">Die Industrialisierung europäischer Montanregionen im 19.
-                            Jahrhundert</title>, S. 181.)</note> hat, mit seinen<lb/>drei Söhnen zusammen, <subst>
+                        />melitinnen.<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
+                                ref="#w03300">Erinnerungen</title> steht "Carmeliterinnen" statt "Carmelitinnen".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> In einer solchen Stille und Zurückgezogen<lb break="no"/>heit zu leben, ist doch gewiß das größte
+                    Glück, wem<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300"
+                                >Erinnerungen</title> steht "dem" statt "wem".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>es Gott vergönnt
+                    hat, wie viel schneller muß man doch<lb/>zur Ruhe gelangen und wie wird dort jeder Kampf er<lb break="no"/>leichtert. Verbindet
+                    sich ein solcher Beruf noch mit einer<lb/>so thätigen und aufopfernden Nächstenliebe wie bei den Elisabethinerinnen, so ist es
+                    etwas ganz herrliches.<note resp="#sophia.zeil"><p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title
+                                ref="#w03300">Erinnerungen</title> (S. 182) folgt eine markierte Auslassung bis zum Ende des Briefs.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/>Von <placeName ref="#l0312" type="bi">Prag</placeName> reisten wir über <rs
+                        ref="#l0944" type="bi">Alt-</rs> und <placeName ref="#l0945" type="bi">Jung-Bunzlau</placeName>,<pb facs="P1030751.jpg" n="4"
+                        /><placeName ref="#l0946" type="bi">Gitschin</placeName> und <placeName ref="#l0947" type="bi">Trautenau</placeName> nach
+                        <placeName ref="#l0017" type="bi">Schlesien</placeName>, es ist ein recht schö<lb break="no"/>ner Weg, in <placeName
+                        ref="#l0923" type="bi">Waldenburg</placeName> blieben wir 18 Tage und wohn<lb break="no"/>ten bei dem ältesten <rs
+                        ref="#p2430" type="bi">Bruder</rs> meiner <rs ref="#p0233" type="bi">Mutter</rs>, der dort<lb/>eine große Handlung und
+                        Garnfabrik<note resp="#sophia.zeil"><p xml:lang="de">Mit seinem Bruder <persName ref="#p2431" type="bi">Friedrich</persName>
+                            besaß <persName ref="#p2430" type="bi">Johann Gustav Wilhelm Alberti</persName> die Maschinenspinnerei Gebr. Alberti. Es
+                            handelte sich hierbei um die erste mechanische Flachsspinnerei auf dem europäischen Festland. Die Fabrik beschäftigte
+                            zeitweilig fast 500 Mitarbeiter. (Vgl. <persName ref="#p2435" type="bi">Toni Pierenkemper</persName>: <title ref="#w04379"
+                                >Die Industrialisierung europäischer Montanregionen im 19. Jahrhundert</title>, S. 181.)</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> hat, mit seinen<lb/>drei Söhnen zusammen, <subst>
                         <del hand="#blue_ink" rend="overwritten">
                             <note hand="#pencil" place="inline">(</note></del>
                         <add hand="#blue_ink" place="across">(</add>
@@ -414,20 +428,21 @@
                         <add place="across">s</add>
                     </subst> mußten<lb/>wir nun alles aufgeben, und kamen, nachdem wir<lb/>noch viel Verdruß mit unserm Kutscher gehabt
                     hatten<lb/>erst den Abend um 10 nach <placeName ref="#l0188" type="bi">Görlitz</placeName>; so konnte ich auch<lb/>Ihre <rs
-                        ref="#p3188" type="bi">Schwester</rs><note resp="#sophia.zeil"><persName ref="#p3188" type="bi">Asta (geb.) von
-                            Uechtritz</persName>.</note> nicht aufsuchen was ich mir doch fest vor<lb break="no"/>genommen hatte, es that mir recht
-                    leid. Den andern<lb/>Morgen ganz früh ließen wir uns den Dom<note resp="#sophia.zeil">Die als kleine Schwester vom <placeName
-                            ref="#l0006" type="bi">Kölner</placeName> Dom bekannte Peterskirche.</note> aufschlie<lb break="no"/>ßen und besuchten
-                    dann das heilige Grab.<note resp="#sophia.zeil">Das Heilige Grab, ein Nachbau des Grabes <persName ref="#p0030" type="bi"
-                            >Jesu</persName>, wurde <date when-iso="1481">1481</date> als Teil einer mittelalterlichen Pilgerstätte erbaut. Eine heute
-                        wiederbelebte Pilgerroute führt von der Peterskirche zum Heiligen Grab.</note> Die Lage<lb/>von <placeName ref="#l0188"
-                        type="bi">Görlitz</placeName> hat mir sehr gefallen, die Stadt ist recht<lb/>ansehnlich und der herrliche Dom gehört gewiß zu
-                    den<lb/>schönsten Gebäuden. <note hand="#pencil" place="inline">(</note><del hand="#pencil">Um 8 reisten wir ab und k<supplied
-                            reason="damage">am</supplied>en<pb facs="P1030753a.jpg" n="6"/>so früh nach <placeName ref="#l0360" type="bi"
-                            >Bautzen</placeName> daß wir auch die Stadt und Umge<lb break="no"/>bung noch besehen konnten.</del><note hand="#pencil"
-                        place="inline">)</note> Den <date when-iso="1833-08-30">30 August</date> an meiner<lb/><rs ref="#p0233" type="bi">Mutter</rs>
-                    Geburtstag kamen wir hier wieder an, und fei<lb break="no"/>erten den Abend noch zusammen. Es war übrigens<lb/>die höchste Zeit
-                    daß wir zurück kehrten, denn wir fan<lb break="no"/>den Gäste im Hause. <subst>
+                        ref="#p3188" type="bi">Schwester</rs><note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p3188" type="bi">Asta (geb.)
+                                von Uechtritz</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> nicht aufsuchen was ich mir doch fest vor<lb
+                        break="no"/>genommen hatte, es that mir recht leid. Den andern<lb/>Morgen ganz früh ließen wir uns den Dom<note
+                        resp="#sophia.zeil"><p xml:lang="de">Die als kleine Schwester vom <placeName ref="#l0006" type="bi">Kölner</placeName> Dom
+                            bekannte Peterskirche.</p><p xml:lang="en"/><p xml:lang="fr"/></note> aufschlie<lb break="no"/>ßen und besuchten dann das
+                    heilige Grab.<note resp="#sophia.zeil"><p xml:lang="de">Das Heilige Grab, ein Nachbau des Grabes <persName ref="#p0030" type="bi"
+                                >Jesu</persName>, wurde <date when-iso="1481">1481</date> als Teil einer mittelalterlichen Pilgerstätte erbaut. Eine
+                            heute wiederbelebte Pilgerroute führt von der Peterskirche zum Heiligen Grab.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> Die Lage<lb/>von <placeName ref="#l0188" type="bi">Görlitz</placeName> hat mir sehr gefallen, die Stadt ist
+                    recht<lb/>ansehnlich und der herrliche Dom gehört gewiß zu den<lb/>schönsten Gebäuden. <note hand="#pencil" place="inline"
+                        >(</note><del hand="#pencil">Um 8 reisten wir ab und k<supplied reason="damage">am</supplied>en<pb facs="P1030753a.jpg" n="6"
+                        />so früh nach <placeName ref="#l0360" type="bi">Bautzen</placeName> daß wir auch die Stadt und Umge<lb break="no"/>bung noch
+                        besehen konnten.</del><note hand="#pencil" place="inline">)</note> Den <date when-iso="1833-08-30">30 August</date> an
+                        meiner<lb/><rs ref="#p0233" type="bi">Mutter</rs> Geburtstag kamen wir hier wieder an, und fei<lb break="no"/>erten den Abend
+                    noch zusammen. Es war übrigens<lb/>die höchste Zeit daß wir zurück kehrten, denn wir fan<lb break="no"/>den Gäste im Hause. <subst>
                         <del hand="#blue_ink" rend="overwritten">
                             <note hand="#pencil" place="inline">(</note></del>
                         <add hand="#blue_ink" place="across">(</add>
@@ -435,10 +450,10 @@
                             ref="#p2436" type="bi">Gräfinn Haßlingen</persName> mit ihrem kleinen <rs ref="#p2439" type="bi">Kinde</rs><note
                             resp="#sophia.zeil"><persName ref="#p2436" type="bi">Caroline Johanna Barnime von Haßlingen</persName> und deren Tochter
                                 <persName ref="#p2439" type="bi">Clara Barnime</persName>.</note> und noch<lb/>einer unverheiratheten <rs ref="#p3190"
-                            type="bi">Cousine</rs> wohnten oben in Ihrer<lb/>Stube,<note resp="#sophia.zeil">Die Dachstube, die <persName ref="#p0711"
-                                type="bi">Uechtritz</persName> bei seinen Besuchen in <placeName ref="#l0003" type="bi">Dresden</placeName> stets
-                            bewohnte.</note> den Tag darauf kam auch der Graf <rs ref="#p2438" type="bi">Haßlingen</rs><lb/>und den <date
-                            when-iso="1833-09-01">1 <hi rend="latin"><choice>
+                            type="bi">Cousine</rs> wohnten oben in Ihrer<lb/>Stube,<note resp="#sophia.zeil"><p xml:lang="de">Die Dachstube, die
+                                    <persName ref="#p0711" type="bi">Uechtritz</persName> bei seinen Besuchen in <placeName ref="#l0003" type="bi"
+                                    >Dresden</placeName> stets bewohnte.</p><p xml:lang="en"/><p xml:lang="fr"/></note> den Tag darauf kam auch der
+                        Graf <rs ref="#p2438" type="bi">Haßlingen</rs><lb/>und den <date when-iso="1833-09-01">1 <hi rend="latin"><choice>
                                     <abbr>Sept</abbr>
                                     <expan>Septembre</expan>
                                 </choice></hi></date> die Tante <rs ref="#p3191" type="bi">Alberti</rs> aus <placeName ref="#l1103" type="bi"
@@ -459,49 +474,48 @@
                         liebster Freund<lb/>und recht ausführlich. Ich fürchte nur ich bin es zu<lb/>sehr und schwatze Ihnen dummes Zeug
                         vor.</del><note hand="#pencil" place="inline">)</note></p>
                 <p><date when-iso="1833-09-11">Gestern</date> habe ich die <persName ref="#p0710" type="bi">Gley</persName>,<note resp="#sophia.zeil"
-                            ><persName ref="#p0710" type="bi">Julie Rettich (geb. Gley)</persName> hatte <date when-iso="1825">1825</date> am
-                            <placeName ref="#l0003" type="bi">Dresdner</placeName> Hoftheater debütiert. <date when-iso="1830">1830</date> ging sie an
-                        das <placeName ref="#l0032" type="bi">Wiener</placeName> Burgtheater, kehrte jedoch <date when-iso="1833">1833</date> wieder
-                        nach <placeName ref="#l0003" type="bi">Dresden</placeName> zurück. <date when-iso="1835">1835</date> siedelte sie schließlich
-                        endgültig nach <placeName ref="#l0032" type="bi">Wien</placeName> über.</note> jetzt <persName ref="#p0710" type="bi"
-                        >Rettich</persName>, zuerst<lb/>spielen sehen, nebst ihrem <rs ref="#p2410" type="bi">Manne</rs>, im <title ref="#w04380"
-                        >Balboa</title><lb/>von <persName ref="#p2440" type="bi">Collin</persName> was hier zuerst gegeben ward und<lb/>gar nicht
-                        gefiel.<note resp="#sophia.zeil">Nach der Premiere am <date when-iso="1833-09-11">11. September 1833</date> wurde das <rs
-                            ref="#w04380" type="bi">Stück</rs> nur noch ein Mal gegeben.</note> Das Spiel der <persName ref="#p0710" type="bi"
-                        >Gley</persName>, besonders die<lb/>Sprache finde ich noch schöner als sonst, ihr <rs ref="#p2410" type="bi">Mann</rs><lb/>hat
-                    mir aber gar nicht gefallen.</p>
-                <p><closer>Leben Sie nun wohl, mein bester Freund, <salute>Alle<lb/>grüßen Sie herzlich.</salute> Vergessen Sie mich nicht,
-                        denken<lb/>Sie aber nicht im Zorn, sondern in Güte an mich.<lb/><signed rend="align(center)">Ihre <hi rend="latin"><persName
-                                    ref="#p0217" type="bi">Dorothea</persName></hi>.</signed></closer></p>
+                            ><p xml:lang="de"><persName ref="#p0710" type="bi">Julie Rettich (geb. Gley)</persName> hatte <date when-iso="1825"
+                                >1825</date> am <placeName ref="#l0003" type="bi">Dresdner</placeName> Hoftheater debütiert. <date when-iso="1830"
+                                >1830</date> ging sie an das <placeName ref="#l0032" type="bi">Wiener</placeName> Burgtheater, kehrte jedoch <date
+                                when-iso="1833">1833</date> wieder nach <placeName ref="#l0003" type="bi">Dresden</placeName> zurück. <date
+                                when-iso="1835">1835</date> siedelte sie schließlich endgültig nach <placeName ref="#l0032" type="bi">Wien</placeName>
+                            über.</p><p xml:lang="en"/><p xml:lang="fr"/></note> jetzt <persName ref="#p0710" type="bi">Rettich</persName>,
+                    zuerst<lb/>spielen sehen, nebst ihrem <rs ref="#p2410" type="bi">Manne</rs>, im <title ref="#w04380">Balboa</title><lb/>von
+                        <persName ref="#p2440" type="bi">Collin</persName> was hier zuerst gegeben ward und<lb/>gar nicht gefiel.<note
+                        resp="#sophia.zeil"><p xml:lang="de">Nach der Premiere am <date when-iso="1833-09-11">11. September 1833</date> wurde das <rs
+                                ref="#w04380" type="bi">Stück</rs> nur noch ein Mal gegeben.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Das Spiel
+                    der <persName ref="#p0710" type="bi">Gley</persName>, besonders die<lb/>Sprache finde ich noch schöner als sonst, ihr <rs
+                        ref="#p2410" type="bi">Mann</rs><lb/>hat mir aber gar nicht gefallen.</p>
+                <closer>Leben Sie nun wohl, mein bester Freund, <salute>Alle<lb/>grüßen Sie herzlich.</salute> Vergessen Sie mich nicht,
+                    denken<lb/>Sie aber nicht im Zorn, sondern in Güte an mich.<lb/><signed rend="align(center)">Ihre <hi rend="latin"><persName
+                                ref="#p0217" type="bi">Dorothea</persName></hi>.</signed></closer>
                 <pb facs="P1030754.jpg" n="8" xml:id="Brief10DorotheaTieckanUechtritz-Blatt4v"/>
                 <note hand="#black_ink" place="top-margin-center inline"><del rend="strikethrough"><gap reason="illegible"/></del> 7</note>
-                <stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
-                        when-iso="09-12">12 <choice>
-                            <abbr>Sept.</abbr>
-                            <expan>September</expan>
-                        </choice></date></stamp>
-                <stamp>Poststempel mit den Angaben: <hi rend="majuscule"><placeName ref="#l0013" type="bi">MAGDEBURG</placeName> 10-11</hi><lb/><date
-                        when-iso="09-14">14 9</date></stamp>
-                <stamp>Poststempel mit den Angaben: <date when-iso="09-17">17 : 9</date></stamp>
-                <address>
-                    <addrLine><choice>
-                            <abbr>Sr.</abbr>
-                            <expan>Seiner</expan>
-                        </choice> Hochwohlgeboren</addrLine>
-                    <addrLine>Dem Landgerichts-Rath</addrLine>
-                    <addrLine>Freiherrn <persName ref="#p0711" type="bi">von <hi rend="underline">U<add place="above">e</add>i<add place="inline"
-                                    >c</add>htritz</hi></persName></addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline latin"><placeName ref="#l0292" type="bi"
-                        >Düsseldorf</placeName></hi>.</addrLine>
-                    <addrLine rend="align(center)"><hi rend="underline">am Rhein</hi></addrLine>
-                </address>
-                <p><hi rend="underline">frei.</hi></p>
-                <note hand="#red_ink" place="inline">7h</note>
-                <lb/>
-                <note hand="#red_ink" place="inline">6u</note>
-                <lb/>
-                <seal>Reste von drei roten Siegeln</seal>
+                <closer><stamp>Poststempel mit den Angaben: <placeName ref="#l0003" type="bi"><hi rend="majuscule">DRESDEN</hi></placeName><lb/><date
+                            when-iso="09-12">12 <choice>
+                                <abbr>Sept.</abbr>
+                                <expan>September</expan>
+                            </choice></date></stamp>
+                    <stamp>Poststempel mit den Angaben: <hi rend="majuscule"><placeName ref="#l0013" type="bi">MAGDEBURG</placeName>
+                            10-11</hi><lb/><date when-iso="09-14">14 9</date></stamp>
+                    <stamp>Poststempel mit den Angaben: <date when-iso="09-17">17 : 9</date></stamp>
+                    <address>
+                        <addrLine><choice>
+                                <abbr>Sr.</abbr>
+                                <expan>Seiner</expan>
+                            </choice> Hochwohlgeboren</addrLine>
+                        <addrLine>Dem Landgerichts-Rath</addrLine>
+                        <addrLine>Freiherrn <persName ref="#p0711" type="bi">von <hi rend="underline">U<add place="above">e</add>i<add place="inline"
+                                        >c</add>htritz</hi></persName></addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline">in</hi></addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline latin"><placeName ref="#l0292" type="bi"
+                            >Düsseldorf</placeName></hi>.</addrLine>
+                        <addrLine rend="align(center)"><hi rend="underline">am Rhein</hi></addrLine>
+                    </address>
+                    <note><hi rend="underline">frei.</hi></note>
+                    <note hand="#red_ink" place="inline">7h</note>
+                    <lb/>
+                    <note hand="#red_ink" place="inline">6u</note></closer>
             </div>
         </body>
     </text>
