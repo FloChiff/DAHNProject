@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="PL">Poland</country>
-                        <settlement>Krakow</settlement>
+                        <location>
+                            <address>
+                                <street/>
+                                <postCode/>
+                                <settlement/>
+                                <country/>
+                            </address>
+                        </location>
                         <institution>Biblioteka Jagiellońska</institution>
                         <repository>Oddział Rękopisów</repository>
                         <collection>Sammlung Varnhagen</collection>
@@ -227,8 +234,9 @@
                 <language ident="de" usage="100"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -236,19 +244,19 @@
             <div type="transcription">
                 <pb facs="0007.jpg" n="1"/>
                 <head rend="align(left)"> Nachschrift zum Briefe der Günderode.</head>
-                <stamp rend="align(center)">Roter Stempel der Preußischen Staatsbibliothek, heute Staatsbibliothek zu Berlin: PR. ST. BIBLIOTHEK
-                    BERLIN</stamp>
-                <lb/>
+                <fw><stamp rend="align(center)">Roter Stempel der Preußischen Staatsbibliothek, heute Staatsbibliothek zu Berlin: PR. ST. BIBLIOTHEK
+                        BERLIN</stamp></fw>
                 <p><date when-iso="1844-06-04/1844-06-07">Zwischen <choice>
                             <abbr>d</abbr>
                             <expan>dem</expan>
                         </choice> 4 -7 Junius</date>, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> während in <placeName ref="#l0017" type="bi">Schlesien</placeName> Bluth<lb/> floß,<note resp="#selma.jahnke">Der
-                        Weberaufstand 1844 in Schlesien erregte großes mediales Interesse und inspirierte diverse poetische Erzeugnisse, die der
-                        politischen Lyrik des Vormärz' zugerechnet werden.</note> wurde der Brief geschrieben, den Sie gedruckt in einem<lb/> Ihnen
-                    zugeeingneten Werke bekom̄en hätten, doch <persName ref="#p1896" type="bi"><choice>
+                    </choice> während in <placeName ref="#l0017" type="bi">Schlesien</placeName> Bluth<lb/> floß,<note resp="#selma.jahnke"><p
+                            xml:lang="de">Der Weberaufstand 1844 in Schlesien erregte großes mediales Interesse und inspirierte diverse poetische
+                            Erzeugnisse, die der politischen Lyrik des Vormärz' zugerechnet werden.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    wurde der Brief geschrieben, den Sie gedruckt in einem<lb/> Ihnen zugeeingneten Werke bekom̄en hätten, doch <persName ref="#p1896"
+                        type="bi"><choice>
                             <abbr>H.</abbr>
                             <expan>Herr</expan>
                         </choice>
@@ -268,22 +276,23 @@
                     <choice>
                         <abbr>u. s. w.</abbr>
                         <expan>und so weiter</expan>
-                    </choice><note resp="#selma.jahnke"><persName ref="#p1212" type="bi">Bettina von Arnim</persName> ließ im Mai 1844 in mehreren
-                        großen Zeitungen für ihr sogenanntes <title ref="#w00046">Armenbuch</title>-Projekt einen Aufruf schalten, <cit>
-                            <quote>"an Alle, welche über den Zustand des Armenwesens in Gemeinden, Kreisen, Bezirken, Provinzen <choice>
-                                    <abbr>u.s.w.</abbr>
-                                    <expan>und so weiter</expan>
-                                </choice> des gesammten deutschen Vaterlandes genaue Auskunft zu geben vermögen, [...] der Frau von Arnim getreue
-                                Berichte darüber zukommen zu lassen. Besonders wünschenswerth würde es auch seyn, wenn in diesen Berichten angeführt
-                                würde, was bis jetzt zur Abhelfung des Uebels [...] geschehen ist und welche Mittel sich wohl zur Verminderung des
-                                Noth als wirksam erweisen dürften."</quote>
-                        </cit> Der Aufruf erschien am <date when-iso="1844-15-05">15.5.1844</date> in Nr. 113 der <orgName ref="#w02168" type="bi"
-                            >Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">18.5.1844</date> in der <orgName ref="#w02169" type="bi"
-                            >Kölnischen Zeitung</orgName>, <date when-iso="1844-23-05">23.5.1844</date> in Nr. 144 der <orgName ref="#w02170"
-                            type="bi">Augsburger Allgemeinen Zeitung</orgName>, S. 1151 </note> Der Titel heißt: <hi rend="underline">Dies Buch gehört
-                        Bettinen.</hi><note resp="#selma.jahnke">Die drei Kapitel, die von diesem Buchprojekt verwirklicht wurden, sind in der
-                        vorliegenden Online-Edition unter dem Titel "Bettinen gehört dies Buch! Die Günderode an Bettina (Buchprojekt)"
-                    ediert.</note></p>
+                    </choice><note resp="#selma.jahnke"><p xml:lang="de"><persName ref="#p1212" type="bi">Bettina von Arnim</persName> ließ im Mai
+                            1844 in mehreren großen Zeitungen für ihr sogenanntes <title ref="#w00046">Armenbuch</title>-Projekt einen Aufruf
+                            schalten, <cit>
+                                <quote>"an Alle, welche über den Zustand des Armenwesens in Gemeinden, Kreisen, Bezirken, Provinzen <choice>
+                                        <abbr>u.s.w.</abbr>
+                                        <expan>und so weiter</expan>
+                                    </choice> des gesammten deutschen Vaterlandes genaue Auskunft zu geben vermögen, [...] der Frau von Arnim getreue
+                                    Berichte darüber zukommen zu lassen. Besonders wünschenswerth würde es auch seyn, wenn in diesen Berichten
+                                    angeführt würde, was bis jetzt zur Abhelfung des Uebels [...] geschehen ist und welche Mittel sich wohl zur
+                                    Verminderung des Noth als wirksam erweisen dürften."</quote>
+                            </cit> Der Aufruf erschien am <date when-iso="1844-15-05">15.5.1844</date> in Nr. 113 der <orgName ref="#w02168" type="bi"
+                                >Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">18.5.1844</date> in der <orgName ref="#w02169" type="bi"
+                                >Kölnischen Zeitung</orgName>, <date when-iso="1844-23-05">23.5.1844</date> in Nr. 144 der <orgName ref="#w02170"
+                                type="bi">Augsburger Allgemeinen Zeitung</orgName>, S. 1151 </p><p xml:lang="en"/><p xml:lang="fr"/></note> Der Titel
+                    heißt: <hi rend="underline">Dies Buch gehört Bettinen.</hi><note resp="#selma.jahnke"><p xml:lang="de">Die drei Kapitel, die von
+                            diesem Buchprojekt verwirklicht wurden, sind in der vorliegenden Online-Edition unter dem Titel "Bettinen gehört dies
+                            Buch! Die Günderode an Bettina (Buchprojekt)" ediert.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>Wie ahnungsvoll ist der Brief der Günderode!<lb/> Wie durchweht von den letzten Seufzern der Opfer<lb/> in <placeName ref="#l0017"
                         type="bi">Schlesien</placeName>! Liebes gutes <placeName ref="#l0017" type="bi">Schlesien</placeName>! Meiner<lb/>
                     <persName ref="#p0075" type="bi">Großmutter</persName> und <persName ref="#p0258" type="bi">Mutter</persName> Heimath!<note
@@ -310,32 +319,33 @@
                     </choice><lb/> schnell besorgen. Meine Lebenstage<lb/> sind gezählt, meine Lebensstunden<lb/> gehören der guten Sache. Wie schwer<lb/><choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> bitter der Kampf habe ich bei den<lb/> Lazaretten<note resp="#selma.jahnke"><date when-iso="1813/1816">1813 bis
-                            1816</date> engagierte sich <persName ref="#p0247" type="bi">Chézy</persName> in Hospitälern für die während der
-                        Befreiungskriege verwundeten Soldaten. Als sie auf verschiedenen Wegen auf die Missstände dort hinwies, wurde sie im
-                            <placeName ref="#l0053" type="bi">Rheinland</placeName> wegen Verleumdung angeklagt und verurteilt. Sie floh nach
-                            <placeName type="bi">Berlin</placeName>, wo sie in einem neu angesetzten Prozeß nach dem alten preußischen Gesetz
-                        freigesprochen wurde.</note>
+                    </choice> bitter der Kampf habe ich bei den<lb/> Lazaretten<note resp="#selma.jahnke"><p xml:lang="de"><date when-iso="1813/1816"
+                                >1813 bis 1816</date> engagierte sich <persName ref="#p0247" type="bi">Chézy</persName> in Hospitälern für die während
+                            der Befreiungskriege verwundeten Soldaten. Als sie auf verschiedenen Wegen auf die Missstände dort hinwies, wurde sie im
+                                <placeName ref="#l0053" type="bi">Rheinland</placeName> wegen Verleumdung angeklagt und verurteilt. Sie floh nach
+                                <placeName type="bi">Berlin</placeName>, wo sie in einem neu angesetzten Prozeß nach dem alten preußischen Gesetz
+                            freigesprochen wurde.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> in <placeName ref="#l0241" type="bi">Oestreich ob der Enns</placeName>,<note resp="#selma.jahnke"><date when-iso="1826"
-                            >1826</date> unternahm <persName ref="#p0247" type="bi">Chézy</persName> eine Reise mit ihren Kindern <persName
-                            ref="#p0264" type="bi">Wilhelm</persName> und <persName ref="#p0265" type="bi">Max</persName> zur Luftkur und zum Wandern
-                        in <placeName rend="#l0241" type="bi">Oberösterreich</placeName>. Während und nach dieser Reise setzte sie sich durch
-                        Petitionen für die Salinenarbeiter, Weber und verarmten Bergbbewohner ein und veröffentlichte <date when-iso="1829"
-                            >1829</date>
-                        <title ref="#w00397">Jugendschicksale, Leben und Ansichten eines papierenen Kragens</title> und <date when-iso="1833"
-                            >1833</date> den Reiseführer <title rend="#w01156">Norika</title>, die beide sozialkritische Töne anschlugen. Nur ihre
-                        Kontakte zum kaiserlichen Hof konnten Chézy vor einem Prozeß bewahren. Norika wurde von der Zensur verboten.</note><lb/> zum
-                    Theil auch schon hier erfahren,<lb/> denn wies <hi rend="latin"><persName ref="#p1865" type="bi">Welcker</persName></hi> in den <choice>
+                    </choice> in <placeName ref="#l0241" type="bi">Oestreich ob der Enns</placeName>,<note resp="#selma.jahnke"><p xml:lang="de"><date
+                                when-iso="1826">1826</date> unternahm <persName ref="#p0247" type="bi">Chézy</persName> eine Reise mit ihren Kindern
+                                <persName ref="#p0264" type="bi">Wilhelm</persName> und <persName ref="#p0265" type="bi">Max</persName> zur Luftkur
+                            und zum Wandern in <placeName rend="#l0241" type="bi">Oberösterreich</placeName>. Während und nach dieser Reise setzte sie
+                            sich durch Petitionen für die Salinenarbeiter, Weber und verarmten Bergbbewohner ein und veröffentlichte <date
+                                when-iso="1829">1829</date>
+                            <title ref="#w00397">Jugendschicksale, Leben und Ansichten eines papierenen Kragens</title> und <date when-iso="1833"
+                                >1833</date> den Reiseführer <title rend="#w01156">Norika</title>, die beide sozialkritische Töne anschlugen. Nur ihre
+                            Kontakte zum kaiserlichen Hof konnten Chézy vor einem Prozeß bewahren. Norika wurde von der Zensur verboten.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/> zum Theil auch schon hier erfahren,<lb/> denn wies <hi rend="latin"
+                            ><persName ref="#p1865" type="bi">Welcker</persName></hi> in den <choice>
                         <abbr>Ständeverhandl.</abbr>
                         <expan>Ständeverhandlung</expan>
                     </choice><lb/> vortrug — ich glaube in der 72. oder sonst einer<lb/> 70sten Sitzung, werden Sie kennen, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice><lb/> die versteckte Quelle dieser Behandlung<lb/> war die dauernde Verfolgung, die ich <lb/>mir erweckt<add
-                        hand="#unknown_hand" place="margin-left"> erweckt</add>.<space extent="one word"/> Wie Sie habe ich stets<lb/> mit Vertrauen <choice>
+                        hand="#unknown_hand" place="margin(left)"> erweckt</add>.<space extent="one word"/> Wie Sie habe ich stets<lb/> mit Vertrauen <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Liebe am Thron Hülfe<lb/> gesucht, <choice>
@@ -372,16 +382,18 @@
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Aristokratie in allerhöchster Potenz — die<lb/> zweite Bourbon Rückkehr<note resp="#selma.jahnke">Gemeint sind <persName
-                            ref="#p1890" type="bi">Ludwig XVIII.</persName> und <persName ref="#p1891" type="bi">Karl X.</persName>, die <date
-                            when-iso="1814/1830">von 1814 bis 1830</date> einer Restauration der Bourbonen-Dynastie vorstanden.</note>
+                    </choice> Aristokratie in allerhöchster Potenz — die<lb/> zweite Bourbon Rückkehr<note resp="#selma.jahnke"><p xml:lang="de"
+                            >Gemeint sind <persName ref="#p1890" type="bi">Ludwig XVIII.</persName> und <persName ref="#p1891" type="bi">Karl
+                                X.</persName>, die <date when-iso="1814/1830">von 1814 bis 1830</date> einer Restauration der Bourbonen-Dynastie
+                            vorstanden.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <choice>
                         <abbr>u.s.w.</abbr>
                         <expan>und so weiter</expan>
                     </choice>
                     <hi rend="underline">jetzt</hi><lb/> stehn rund um <placeName ref="#l0044" type="bi">Paris</placeName> her die furchtbarsten<lb/>
-                    Bastillen in Menge statt der am <date when-iso="1791-07-14">14 Juli<lb/> 1791</date><note resp="#selma.jahnke">Gemeint ist der
-                        Sturm auf die Bastille <date when-iso="1789">1789</date>.</note> niedergerissenen — <choice>
+                    Bastillen in Menge statt der am <date when-iso="1791-07-14">14 Juli<lb/> 1791</date><note resp="#selma.jahnke"><p xml:lang="de"
+                            >Gemeint ist der Sturm auf die Bastille <date when-iso="1789">1789</date>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    niedergerissenen — <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> die kampfmüde Masse,<lb/> die ganz Fleisch geworden, fügt sich Allem,<lb/>
@@ -389,12 +401,13 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> vergißt der über sie gebrachten Schmach<lb/> des Hochverraths an <placeName ref="#l0046" type="bi"
-                        >Polen</placeName>,<note resp="#selma.jahnke">Nachdem der sogenannte Novemberaufstand <date when-iso="1830/1831"
-                            >1830/1831</date> in <placeName ref="#l0046" type="bi">Polen</placeName> von der russischen Armee niedergeschlagen worden
-                        war, verlor das Königreich Polen seine Verfassung. Es folgte eine große Emigrationsbewegung, die viele Polen nach Westeuropa
-                        brachte, wo sie im Zuge der Begeisterung für nationale Bewegungen mit viel Sympathie und Anteilnahme aufgenommen
-                        wurden.</note> Allem<lb/> was die Welt <date when-iso="1830">1830</date> von ihr verlangt.<lb/> Unheilbar wund ist <placeName
-                        ref="#l0050" type="bi">Europa</placeName>, wir können<lb/> alle, die wir’s redlich meinen, nur<lb/> Balsam, nur Kühlung <choice>
+                        >Polen</placeName>,<note resp="#selma.jahnke"><p xml:lang="de">Nachdem der sogenannte Novemberaufstand <date
+                                when-iso="1830/1831">1830/1831</date> in <placeName ref="#l0046" type="bi">Polen</placeName> von der russischen Armee
+                            niedergeschlagen worden war, verlor das Königreich Polen seine Verfassung. Es folgte eine große Emigrationsbewegung, die
+                            viele Polen nach Westeuropa brachte, wo sie im Zuge der Begeisterung für nationale Bewegungen mit viel Sympathie und
+                            Anteilnahme aufgenommen wurden.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Allem<lb/> was die Welt <date
+                        when-iso="1830">1830</date> von ihr verlangt.<lb/> Unheilbar wund ist <placeName ref="#l0050" type="bi">Europa</placeName>,
+                    wir können<lb/> alle, die wir’s redlich meinen, nur<lb/> Balsam, nur Kühlung <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Linderung<lb/> vermitteln, <choice>
@@ -426,15 +439,15 @@
                     </choice> fröhlich soll es seyn!<lb/> O, wer es dahin bringen könnte, wo <lb/>es <persName ref="#p1873" type="bi">Heinrich
                         IV</persName> haben wollte — <cit>
                         <quote>"<add place="above">der Bauer</add> alle<lb rend='after:"'/>Sonntag sein Huhn im Topf!“</quote>
-                        <note resp="#selma.jahnke">Als geflügeltes Wort überliefertes Zitat von Heinrich dem IV., das er im Gespräch mit <persName
-                                ref="#p1892" type="bi">Karl Emanuel I. von Savoyen</persName> geäußert haben soll: "Si Dieu me donne encore de la vie,
-                            je feray qu’il n’y aura point de laboureur en mon Royaume qui n’ait moyens d’avoir une poule dans son pot!". Erstmals
-                            gedruckt in der <title ref="#w00398">Histoire du roy Henry Le Grand composée par Messire Hardouin de Perefixe, Paris
-                                1662</title>, S. 549.</note>
+                        <note resp="#selma.jahnke"><p xml:lang="de">Als geflügeltes Wort überliefertes Zitat von Heinrich dem IV., das er im Gespräch
+                                mit <persName ref="#p1892" type="bi">Karl Emanuel I. von Savoyen</persName> geäußert haben soll: "Si Dieu me donne
+                                encore de la vie, je feray qu’il n’y aura point de laboureur en mon Royaume qui n’ait moyens d’avoir une poule dans
+                                son pot!". Erstmals gedruckt in der <title ref="#w00398">Histoire du roy Henry Le Grand composée par Messire Hardouin
+                                    de Perefixe, Paris 1662</title>, S. 549.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     </cit><lb/> aber <hi rend="underline"><persName ref="#p1874" type="bi">Ravaillac</persName></hi> senkt den Dolch in<lb/> das wahre
-                    Königsherz, das für<lb/> sein Volk schlug.<note resp="#selma.jahnke"><persName ref="#p1874" type="bi">François
-                            Ravaillac</persName> ermordete <persName ref="#p1873" type="bi">Heinrich IV. von Frankreich</persName> am <date
-                            when-iso="1610-05-14">14. Mai 1610</date>.</note><lb/></p>
+                    Königsherz, das für<lb/> sein Volk schlug.<note resp="#selma.jahnke"><p xml:lang="de"><persName ref="#p1874" type="bi">François
+                                Ravaillac</persName> ermordete <persName ref="#p1873" type="bi">Heinrich IV. von Frankreich</persName> am <date
+                                when-iso="1610-05-14">14. Mai 1610</date>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/></p>
                 <p>Anworten Sie mir <persName ref="#p1212" type="bi">Bettina</persName>! Ich<lb/> habe Sie in Ihrem schönen Wollen<lb/>
                     <choice>
                         <abbr>u</abbr>
@@ -487,27 +500,28 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Werkthätigkeit<lb/> in <hi rend="underline">dem</hi> Sinn, in welchem Sie schon durch<lb/> den Brief aus dem
-                        Voigtland<note resp="#selma.jahnke">Den Anhang zu Bettina von Arnims <title ref="#w00376">Königsbuch</title> bilden die
-                        "Erfahrungen eines jungen Schweizers im Vogtlande": Der Schweizer Pädagoge <persName ref="#p1893" type="bi">Heinrich
-                            Grunholzer</persName> dokumentiert im Armenviertel im Norden Berlins vor dem Hamburger Tor, dem sogenannten Voigtland, das
-                        soziale Elend, indem er minutiös aufführt, wieviele Personen jeweils in einem Zimmer wohnen, wieviel Geld sie monatlich in
-                        welchem Beruf verdienen und nach Abzug der Miete zur Verfügung haben und wieviele Angehörige sie damit versorgen
-                        müssen.</note> gehandelt, <choice>
+                        Voigtland<note resp="#selma.jahnke"><p xml:lang="de">Den Anhang zu Bettina von Arnims <title ref="#w00376">Königsbuch</title>
+                            bilden die "Erfahrungen eines jungen Schweizers im Vogtlande": Der Schweizer Pädagoge <persName ref="#p1893" type="bi"
+                                >Heinrich Grunholzer</persName> dokumentiert im Armenviertel im Norden Berlins vor dem Hamburger Tor, dem sogenannten
+                            Voigtland, das soziale Elend, indem er minutiös aufführt, wieviele Personen jeweils in einem Zimmer wohnen, wieviel Geld
+                            sie monatlich in welchem Beruf verdienen und nach Abzug der Miete zur Verfügung haben und wieviele Angehörige sie damit
+                            versorgen müssen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> gehandelt, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice><lb/> in noch viel ausgedehnteren <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> umfassendern,<lb/> dazu könnte ich Ihnen Wege, die Sie nicht<lb/> ahnen, zeigen, doch mit Briefen geht<lb/> das zu
-                    langsam, kom̄en Sie! <closer><salute>Wenn<lb/> Sie aber keines Gefährten bedürfen, oder<lb/> wenn der Gedanke daran Sie gar
-                            stören<lb/> sollte, so nehmen Sie doch den Seegen<lb/> meiner Liebesthränen, meiner Muttersorge<lb/>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> Zärtlichkeit auf Ihre Bahn mit,<lb/> Gott wird ihn hören!</salute><lb/>
-                        <signed rend="align(right)"><persName ref="#p0247" type="bi">Helmina v Chezy</persName></signed>
-                        <dateline><placeName ref="#l0065" type="bi">Heidelberg</placeName>
-                            <date when-iso="1844-07-29">29 Julius 1844</date></dateline></closer></p>
+                    langsam, kom̄en Sie!</p>
+                <closer><salute>Wenn<lb/> Sie aber keines Gefährten bedürfen, oder<lb/> wenn der Gedanke daran Sie gar stören<lb/> sollte, so nehmen
+                        Sie doch den Seegen<lb/> meiner Liebesthränen, meiner Muttersorge<lb/>
+                        <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> Zärtlichkeit auf Ihre Bahn mit,<lb/> Gott wird ihn hören!</salute>
+                    <signed rend="align(right)"><persName ref="#p0247" type="bi">Helmina v Chezy</persName></signed>
+                    <dateline><placeName ref="#l0065" type="bi">Heidelberg</placeName>
+                        <date when-iso="1844-07-29">29 Julius 1844</date></dateline></closer>
             </div>
         </body>
     </text>

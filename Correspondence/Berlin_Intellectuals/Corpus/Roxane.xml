@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -69,8 +70,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Ludwig Tieck</collection>
@@ -289,10 +296,11 @@
                 <language ident="de" usage="100"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-30" who="#johanna.preusse">Changed values for @extent. Added french versions of handNotes.</change>
-            <change when-iso="2015-03-27" who="#johanna.preusse">Minor corrections of encoding and transcription; added @place="inline margin-right"
+            <change when-iso="2015-03-27" who="#johanna.preusse">Minor corrections of encoding and transcription; added @place="inline margin(right)"
                 to Wackenroder's notes so they appear on the margin of the text instead of below; Slightly changed phrasing of some of my own
                 footnotes.</change>
             <change when-iso="2014-08-23" who="#johanna.preusse">Removed all @rend="align(center)"s within the elements stage and speaker because of
@@ -336,9 +344,9 @@
             <div type="transcription">
                 <pb facs="00000002.tif" n="1"/>
                 <note hand="#Rudolf_Köpke" type="signature">19</note>
-                <note resp="#johanna.preusse" subtype="1">Die Signatur "19" verweist auf ein von <persName ref="#p0135" type="bi">Rudolf
-                        Köpke</persName> erstelltes Nachlassverzeichnis, vgl. Handschriftenabteilung der Staatsbibliothek zu Berlin - Preußischer
-                    Kulturbesitz, NL Tieck 8, Mappe 5</note>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Die Signatur "19" verweist auf ein von <persName ref="#p0135" type="bi"
+                            >Rudolf Köpke</persName> erstelltes Nachlassverzeichnis, vgl. Handschriftenabteilung der Staatsbibliothek zu Berlin -
+                        Preußischer Kulturbesitz, NL Tieck 8, Mappe 5</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <note hand="#Unbekannte_Hand_1" rend="align(right)" type="foliation"><subst>
                         <del hand="#Unbekannte_Hand_2" rend="erasure">1*</del>
                         <add hand="Unbekannte_Hand_2" place="across">I</add>
@@ -355,14 +363,15 @@
                 <pb facs="00000003.tif" n="2"/>
                 <pb facs="00000004.tif" n="3"/>
                 <note resp="#johanna.preusse">
-                    <seg xml:lang="de">Die ersten Blätter des Manuskripts sind nicht erhalten. Der überlieferte Dramentext setzt in der drittletzten
-                        Szene des ersten Akts ein.</seg>
-                    <seg xml:lang="en">The first folios of the manuscript are missing. The existing text starts with the third last scene of the first
-                        act.</seg>
+                    <p xml:lang="de">Die ersten Blätter des Manuskripts sind nicht erhalten. Der überlieferte Dramentext setzt in der drittletzten
+                        Szene des ersten Akts ein.</p>
+                    <p xml:lang="en">The first folios of the manuscript are missing. The existing text starts with the third last scene of the first
+                        act.</p>
+                    <p xml:lang="fr"/>
                 </note>
-                <note resp="#johanna.preusse" subtype="1">Die Signatur "19" verweist auf ein von <persName ref="#p0135" type="bi">Rudolf
-                        Köpke</persName> erstelltes Nachlassverzeichnis, vgl. Handschriftenabteilung der Staatsbibliothek zu Berlin - Preußischer
-                    Kulturbesitz, NL Tieck 8, Mappe 5</note>
+                <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Die Signatur "19" verweist auf ein von <persName ref="#p0135" type="bi"
+                            >Rudolf Köpke</persName> erstelltes Nachlassverzeichnis, vgl. Handschriftenabteilung der Staatsbibliothek zu Berlin -
+                        Preußischer Kulturbesitz, NL Tieck 8, Mappe 5</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <note hand="#Rudolf_Köpke" type="signature">19</note>
                 <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">1</note>
                 <div n="1" type="act">
@@ -395,7 +404,7 @@
                             <l>Wenn ich der Allmacht gleich<lb rend="indent"/> mit einem Winck </l>
                             <l>Aus dürr<hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">en</hi> Steppen Paradie<lb break="no" rend="indent"
                                 />se rufe, </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">– oder: In dürre <choice>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">– oder: In dürre <choice>
                                     <abbr>St. P. r.</abbr>
                                     <expan>Steppen Paradiese rufe</expan>
                                 </choice></note>
@@ -415,15 +424,18 @@
                             <l>Vor mir der Stolz im Stau<lb break="no" rend="indent"/>be krümmt; es ist</l>
                             <l>Beschlossen! – Ja, er<lb rend="indent"/> sterbe!</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Dieser Monolog ist sehr gut, ich vermiße <lb/> ungern
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Dieser Monolog ist sehr gut, ich vermiße <lb/> ungern
                                 <unclear cert="low" extent="1w" reason="illegible">Winke</unclear> über die <hi rend="latin"
                                 >Declamation</hi><lb/><unclear cert="medium" reason="illegible">mancher</unclear> Stellen, die nur durch sie
                             gehoben<lb/>und ins Licht gestellt werden.<lb/></note>
                     </div>
                     <div n="?" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">1. AKT, VORLETZTE SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Achmet.</hi>
-                            <hi rend="underline">Roxane.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">1. AKT, VORLETZTE SZENE</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Achmet.</hi>
+                            <hi rend="underline">Roxane.</hi>
+                        </stage>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane.</hi></speaker>
                             <p>Nun du Vollführer meiner<lb/> Plane, gedenke unsrer<lb/> Abrede.<lb/></p>
@@ -443,7 +455,8 @@
                         <stage type="exit">(<hi rend="underline">sie geht ab.</hi>)</stage>
                     </div>
                     <div n="?" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">1. AKT, LETZTE SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">1. AKT, LETZTE SZENE</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note></head>
                         <sp who="#Achmet">
                             <speaker><hi rend="underline">Achmet.</hi></speaker>
                             <p>Geh, thörigtes Weib! – <lb/> Noch bin ich dein Sklave, <lb/> weil an deine<del rend="strikethrough">n</del> Wün<pb
@@ -453,8 +466,8 @@
                                 schon von mir eingenom<lb break="no"/>men siehst, den du be<lb break="no"/>steigen willst. – O<lb/>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">der Thoorheit! Ein Bö<lb break="no"/>sewicht vertraut dem<lb/>
                                     andern!</hi>
-                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">So von sich selbst?<lb/></note>
-                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">In diesem Akt ist alles gut ausein<lb
+                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">So von sich selbst?<lb/></note>
+                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">In diesem Akt ist alles gut ausein<lb
                                         break="no" type="sh"/>ander gesezt nur wünscht man mehr von<lb/>dem Auftrag der <choice>
                                         <abbr hand="#Wilhelm_Heinrich_Wackenroder">Rox.</abbr>
                                         <expan resp="#johanna.preusse">Roxane</expan>
@@ -472,12 +485,13 @@
                 <div n="2" type="act">
                     <head><hi rend="underline">Zweiter Aufzug.</hi></head>
                     <div n="1" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 1. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 1. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="location">(<hi rend="underline">Garten des Raschid.</hi>)</stage>
-                        <note hand="#Unbekannte_Hand_4" place="inline margin-right"><gap extent="1l" reason="illegible"/></note>
+                        <note hand="#Unbekannte_Hand_4" place="inline margin(right)"><gap extent="1l" reason="illegible"/></note>
                         <sp who="#Schahriar">
-                            <speaker><hi rend="underline">Schahriar</hi> (<stage type="entrance"><hi rend="underline">klettert <lb/> über die Mauer
-                                        des Gartens.)</hi></stage></speaker>
+                            <speaker><hi rend="underline">Schahriar</hi></speaker>
+                            <stage type="entrance"><hi rend="underline">(klettert <lb/> über die Mauer des Gartens.)</hi></stage>
                             <lb/>
                             <l>Werd` ich denn hier nun end<lb break="no" rend="indent"/>lich etwas finden? – </l>
                             <l>Verderben dem, der sich mir<lb rend="indent"/> widersezt! –</l>
@@ -494,7 +508,8 @@
                         </sp>
                     </div>
                     <div n="2" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 2. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 2. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="setting"><hi rend="underline">Schahriar.</hi>
                             <hi rend="underline">Raschid</hi>.</stage>
                         <sp who="#Raschid">
@@ -509,7 +524,7 @@
                             <l>Laß mich, ich wage heut für<lb rend="indent"/> einen <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">dürren
                                     Zweig</hi>
                             </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Der Hungrige für einen dürren Zweig? –</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Der Hungrige für einen dürren Zweig? –</note>
                             <l>Mein Leben! Zurück, beim<lb rend="indent"/> Barte des Propheten</l>
                             <pb facs="00000012.tif" n="11"/>
                             <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">5</note>
@@ -528,7 +543,8 @@
                         </sp>
                     </div>
                     <div n="3" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 3. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 3. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <sp who="#Raschid">
                             <speaker><hi rend="underline">Raschid</hi>.</speaker>
                             <l> Sein Vater? – O, der jam<lb break="no" rend="indent"/>mervollen Zeit!</l>
@@ -563,9 +579,12 @@
                         </sp>
                     </div>
                     <div n="4" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 4. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Raschid.</hi>
-                            <hi rend="underline">Schahriar.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 4. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Raschid.</hi>
+                            <hi rend="underline">Schahriar.</hi>
+                        </stage>
                         <stage type="entrance">(<hi rend="underline">Schahriar kömmt über<lb/> die Mauer zurück.)</hi><lb/></stage>
                         <sp who="#Raschid">
                             <speaker><hi rend="underline">Raschid.</hi></speaker>
@@ -585,7 +604,8 @@
                             <l part="M" rend="indent">dein<lb rend="indent"/> Vater?</l>
                         </sp>
                         <sp who="#Schahriar">
-                            <speaker><hi rend="underline">Schahriar</hi><stage type="delivery"> (<hi rend="underline">weinend</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Schahriar</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">weinend</hi>)</stage>
                             <l part="F" rend="indent">Ha! Er war schon tod.</l>
                             <l>Was wiegt das Leben ei<lb break="no" rend="indent"/>nes Menschen einem Sultan? </l>
                             <l>Was liegt dem Herrscher an<lb rend="indent"/> den Einzigen ? – </l>
@@ -644,14 +664,18 @@
                         </sp>
                     </div>
                     <div n="5" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 5. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Raschid,</hi>
-                            <hi rend="underline">Schahriar.</hi><lb/>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 5. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Raschid,</hi>
+                            <hi rend="underline">Schahriar.</hi>
+                            <lb/>
                             <hi rend="underline">Abubeker.</hi>
                             <subst>
                                 <del rend="strikethrough"><hi rend="underline">Omru.</hi></del>
                                 <add place="above"><hi rend="underline">Omar.</hi></add>
-                            </subst></stage>
+                            </subst>
+                        </stage>
                         <lb/>
                         <sp who="#Raschid">
                             <speaker><hi rend="underline">Raschid.</hi></speaker>
@@ -699,7 +723,7 @@
                             <l>Welch ander Schicksal kann<lb rend="indent"/> dann jeder andre hoffen? – </l>
                             <l>Wezt euer Eisen, nur ein<lb rend="indent"/> Mensch ist Euer Herrscher, </l>
                             <l>Er ist der Gottheit falscher<lb rend="indent"/> Stempel, er vergißt </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Er trägt den falschen Stempel <lb/>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Er trägt den falschen Stempel <lb/>
                                 <choice>
                                     <abbr>d. G.</abbr>
                                     <expan>der Gottheit</expan>
@@ -721,7 +745,7 @@
                             <l>Zerriß zuerst den göttlichen <lb rend="indent"/> Vertrag</l>
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Vom</hi> Blute seines Volckes un<lb break="no" rend="indent"
                                 />terschrieben; – </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"> – Mit dem </note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"> – Mit dem </note>
                             <l>Jezt steht das heilge Recht auf<lb rend="indent"/> unsrer Seite, </l>
                             <l>Laßt nicht “Empörung“ unser <lb rend="indent"/> Bündnis schelten, </l>
                             <l>Das ganze Volk denkt so wie <lb rend="indent"/> wir, wir stehen da </l>
@@ -741,11 +765,14 @@
                         <stage type="exit">(<hi rend="underline">sie gehn ab.</hi>)</stage>
                     </div>
                     <div n="6" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 6. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 6. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="location">(<hi rend="underline">Pallast.</hi>)</stage>
                         <lb/>
-                        <stage type="setting"><hi rend="underline">Roxane.</hi>
-                            <hi rend="underline">Achmet.</hi></stage>
+                        <stage type="setting">
+                            <hi rend="underline">Roxane.</hi>
+                            <hi rend="underline">Achmet.</hi>
+                        </stage>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane.</hi></speaker>
                             <l>…Nichts mehr! – Es kann, es<lb rend="indent"/> wird, es soll so sein!</l>
@@ -770,10 +797,10 @@
                             <l>Ein Freund <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">zu sein</hi>, <hi
                                     hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">der</hi><lb rend="indent"/>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Königinn,</hi> ein Freund </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">falsche Inversion</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">falsche Inversion</note>
                             <pb facs="00000025.tif" n="24"/>
                             <l>Dem sie vertrauet die ge<lb break="no" rend="indent"/>heimsten Plane, </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Eben so.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Eben so.</note>
                             <l>O willst du einen Priester<lb rend="indent"/> fangen, knüpfe nur</l>
                             <l>Ein Netz aus Geld und Stolz.<lb rend="indent"/> – Ist dieser Plan vollbracht</l>
                             <l>Dann jauchze laut, dann wol<lb break="no" rend="indent"/>len wir uns freuen wie </l>
@@ -789,19 +816,22 @@
                             </l>
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Zur Sonne</hi>, mich mit ihrem <lb rend="indent"/> Glanz zu
                                 krönen:</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">ein ubergroßes Bild.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">ein ubergroßes Bild.</note>
                             <l>Dann sollst du neben mir<lb rend="indent"/> in höchster Würde prangen,</l>
                             <l>Wenn Solimann in kühler<lb rend="indent"/> Erde ruht – – </l>
                             <l>Gedenke deines Schwurs! – <lb rend="indent"/> Er kömmt!</l>
                         </sp>
                     </div>
                     <div n="7" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 7. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 7. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
                             <hi rend="underline">Solimann.</hi>
                             <lb/>
                             <hi rend="underline">Mustapha.</hi>
-                            <hi rend="underline">Sadi.</hi></stage>
+                            <hi rend="underline">Sadi.</hi>
+                        </stage>
                         <lb/>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
@@ -819,7 +849,8 @@
                     </div>
                     <div n="8" type="scene">
                         <head>
-                            <note resp="#johanna.preusse" type="structure">2. AKT, 8. SZENE</note></head>
+                            <note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 8. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="setting"><hi rend="underline">Solimann</hi>. <hi rend="underline">Roxane</hi>. <lb/>
                             <hi rend="underline">Mustapha.</hi></stage>
                         <sp who="#Solimann">
@@ -827,12 +858,12 @@
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Der heutge Tag, in Freu<lb break="no" rend="indent"/>den sei er
                                     hin gebracht,</hi>
                             </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Gezwungne Wendung</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Gezwungne Wendung</note>
                             <l>Ein prächtig Gastmahl wer<lb break="no" rend="indent"/>de zubereitet!</l>
                         </sp>
                         <stage type="mixed">(<hi rend="underline">er <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">klatscht</hi>, eine
                                 Menge Skla<lb break="no"/>ven erscheinen</hi>.)</stage>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Ist das persische National<lb break="no" type="sh"
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Ist das persische National<lb break="no" type="sh"
                             />Sitte?</note>
                         <pb facs="00000028.tif" n="27"/>
                         <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">13</note>
@@ -914,7 +945,7 @@
                                 <l>So seine schöne Gattinn.</l>
                                 <l>Sie schlingt sich um den Starken </l>
                                 <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Wie Rosen um die Eiche</hi>, </l>
-                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Ein nicht nationales Bild.</note>
+                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Ein nicht nationales Bild.</note>
                                 <l>Ihr schönes Auge gleichet</l>
                                 <l>Der Luft Azurgewölbe,</l>
                                 <l>Ihr Antlitz gleicht den Lilien</l>
@@ -926,7 +957,7 @@
                                 <l>Ins Herz des Sultans schiessen; </l>
                                 <l>Die <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Einfassung der Reize</hi>
                                 </l>
-                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Der Rahmen zum Portrait?</note>
+                                <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Der Rahmen zum Portrait?</note>
                                 <l>Ist holde Engelsanmuth. – </l>
                                 <l>Dein Pallast Sultan gleichet</l>
                                 <pb facs="00000032.tif" n="31"/>
@@ -934,12 +965,13 @@
                                 <l>Der Pracht des Morgenhimmels.</l>
                             </lg>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Dieser Gesang müste in Rücksicht<lb/>auf die Ideen und
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Dieser Gesang müste in Rücksicht<lb/>auf die Ideen und
                             ihren Gang <lb/> weit mehr nationales haben, und<lb/>dabey doch nicht ohne Bezug auf <lb/> die jetzigen Umstände
                             seyn.</note>
                         <stage type="business">(<hi rend="underline">ein Geräusch aus der Ferne.</hi>)</stage>
                         <sp>
-                            <speaker><hi rend="underline">Mustapha.</hi><stage type="delivery"> (<hi rend="underline">vor sich</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Mustapha.</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">vor sich</hi>)</stage>
                             <l>Welch ein Getöse gleich den<lb rend="indent"/> fernen Meereswogen.</l>
                         </sp>
                         <sp who="#Musikerinnen">
@@ -953,8 +985,8 @@
                             </lg>
                         </sp>
                         <sp who="#Raschid #Schahriar #Abubeker #Omar #Tartare">
-                            <speaker>(<hi rend="underline">Stimmen</hi><stage type="delivery"> (<hi rend="underline">von
-                                aussen.</hi>)</stage></speaker>
+                            <speaker>(<hi rend="underline">Stimmen</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">von aussen.</hi>)</stage>
                             <l part="F" rend="indent">Nieder! Solimann! Roxane!</l>
                         </sp>
                         <sp who="#Solimann">
@@ -983,7 +1015,8 @@
                         <stage type="exit">(<hi rend="underline">die Sklavinnen und<lb/> Sklaven entfliehn.</hi>)</stage>
                     </div>
                     <div n="9" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 9. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 9. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="entrance">(<hi rend="underline">Man hört einige Thüren zer<lb break="no"/>brechen; dann stürzen herein</hi>:)<lb/>
                             <hi rend="underline">Raschid</hi>, <hi rend="underline">Schahriar</hi>, <hi rend="underline">Abu<lb break="no"
                             />beker</hi>, <hi rend="underline">Omar</hi>, <hi rend="underline">andre Tartarn.</hi></stage>
@@ -1000,7 +1033,7 @@
                                     <add place="above"> es so</add>
                                 </subst> in den Pallast<lb rend="indent"/> zu dringen?</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Wozu die Frage, da sie dasind.</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Wozu die Frage, da sie dasind.</note>
                         <pb facs="00000034.tif" n="33"/>
                         <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">16</note>
                         <sp who="#Schahriar">
@@ -1118,8 +1151,8 @@
                             <l>Und Eurer selbst – izt<lb rend="indent"/> geht.</l>
                         </sp>
                         <stage type="exit">(<hi rend="underline">sie gehn ab, Mustapha folgt<lb/> ihnen.</hi>)</stage>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"> Diese Scene veranlaßt folgende<lb/> Fragen: Was spielt
-                                <hi rend="latin">Soliman̄</hi> für eine<lb/> unwürdge Rolle? Was sollen Mu<lb break="no" type="none"/>staphas
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"> Diese Scene veranlaßt folgende<lb/> Fragen: Was
+                            spielt <hi rend="latin">Soliman̄</hi> für eine<lb/> unwürdge Rolle? Was sollen Mu<lb break="no" type="none"/>staphas
                             Rodomontaden? Warum<lb/> droht der muthige mit der Strafe <lb/> der Goetter? Die muß er in seinem <lb/>
                             <unclear cert="medium" reason="illegible">Arme</unclear> fühlen. Eine <choice>
                                 <unclear cert="high" reason="illegible">schoenre</unclear>
@@ -1130,9 +1163,12 @@
                             davon?</note>
                     </div>
                     <div n="10" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 10. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Solimann.</hi>
-                            <hi rend="underline">Roxane.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 10. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Solimann.</hi>
+                            <hi rend="underline">Roxane.</hi>
+                        </stage>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l>Bei Gott! mit solchem Feu<lb break="no" rend="indent"/>er sah‘ ich ihn</l>
@@ -1170,7 +1206,7 @@
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Schwäche,</hi></l>
                             <l>Nicht <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">so an, daß ich Mustapha</hi>
                                 <lb rend="indent"/> einst <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">hassen</hi>, </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">dunkel.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">dunkel.</note>
                             <l>Beim Himmel, ja, ich liebe<lb rend="indent"/> dich so sehr</l>
                             <l>Daß du mich alles glauben machen<lb rend="indent"/> könntest,</l>
                             <pb facs="00000043.tif" n="42"/>
@@ -1178,10 +1214,12 @@
                         </sp>
                     </div>
                     <div n="11" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 11. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 11. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="setting">
                             <hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Mustapha.</hi></stage>
+                            <hi rend="underline">Mustapha.</hi>
+                        </stage>
                         <sp who="#Mustapha">
                             <speaker><hi rend="underline">Mustapha.</hi></speaker>
                             <l>Die ganze Stadt ist nun <lb rend="indent"/> beruhigt, alle</l>
@@ -1189,9 +1227,12 @@
                         </sp>
                     </div>
                     <div n="12" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 12. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Sadi.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 12. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
+                            <hi rend="underline">Sadi.</hi>
+                        </stage>
                         <sp who="#Mustapha">
                             <speaker><hi rend="underline">Mustapha.</hi></speaker>
                             <l>Nun hat der Feind den<lb rend="indent"/> Frieden angenommen?</l>
@@ -1208,17 +1249,18 @@
                                     >morgen</hi></l>
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Die Sonne sich erhebt</hi>, be<lb break="no" rend="indent"
                                 />strafen</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"><hi rend="latin">Idem per idem</hi>.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"><hi rend="latin">Idem per idem</hi>.</note>
                             <l>Den Hohn: – und wenn ich<lb rend="indent"/>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">sterbe will</hi></l>
                             <l>Ich <del rend="strikethrough">wenigstens</del>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">rühmlich ster</hi><lb break="no" rend="indent"/>ben.</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">ist Nichts gesagt.</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">ist Nichts gesagt.</note>
                         <stage type="exit">(<hi rend="underline">sie gehn ab.</hi>)</stage>
                     </div>
                     <div n="13" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 13. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 13. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <note rend="align(right)" resp="#johanna.preusse" subtype="1">Am Blattrand befindet sich eine rötliche Markierung, vermutlich
                             von <persName ref="#p0180" type="bi">A. Hauffen</persName>, der Teile des folgenden Monologs transkribiert hat, vgl.
                                 <title ref="#w00210">Hauffen 1887</title>, S. 319f. </note>
@@ -1228,9 +1270,10 @@
                                     <add place="across">n</add>
                                 </subst> Sturm<lb/> brausen.</hi>)</stage>
                         <sp who="#Ali">
-                            <speaker><hi rend="underline">Ali,</hi><stage type="modifier">
-                                    <hi rend="underline">ein Greis von<lb/> neunzig Jahren, sizt in seiner<lb/>
-                                        <pb facs="00000045.tif" n="44"/> Höle, sein Bart reicht<lb/> fast bis auf die Knie.</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Ali,</hi></speaker>
+                            <stage type="modifier">
+                                <hi rend="underline">ein Greis von<lb/> neunzig Jahren, sizt in seiner<lb/>
+                                    <pb facs="00000045.tif" n="44"/> Höle, sein Bart reicht<lb/> fast bis auf die Knie.</hi>)</stage>
                             <l>Wie furchtbar saußt der<lb rend="indent"/> Sturmwind durch den Wald,</l>
                             <l>Ein Donner rollt ihm nach,<lb rend="indent"/> als wollt er ihn ereilen. – </l>
                             <l><del rend="strikethrough">Heut</del> Die Zeit schließt heute<lb rend="indent"/> schon mein neunzigstes</l>
@@ -1273,7 +1316,7 @@
                                     <add hand="#Wilhelm_Heinrich_Wackenroder" place="above">die</add>
                                 </subst>
                                 <lb rend="indent"/> Zeit verspielt, </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Was heist das?</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Was heist das?</note>
                             <l>Empfänd’ ich heut zum lezten<lb break="no" rend="indent"/>mahle den</l>
                             <l>Gedanken, daß ich bin? – <lb rend="indent"/> Wozu der hohen Kräfte</l>
                             <pb facs="00000048.tif" n="47"/>
@@ -1283,7 +1326,7 @@
                             <l>Nur unserm Geiste so viel <lb rend="indent"/> Feuerkraft</l>
                             <l>Die Räthsel <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">zu bemerken</hi> die<lb rend="indent"/> er <del
                                     rend="strikethrough">nicht</del> mit allmächtgem Finger</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"><del rend="strikethrough">und zu lösen.</del> Hat
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"><del rend="strikethrough">und zu lösen.</del> Hat
                                 den̄ der Derwisch <lb/> nicht die <unclear cert="high" reason="illegible">Cunst</unclear> sie zu loesen? <lb/> Warum
                                 schikt man̄ den zu ihm.</note>
                             <l>In seine Werke schrieb? Wa<lb break="no" rend="indent"/>rum nicht auch die Macht</l>
@@ -1307,7 +1350,7 @@
                                     <del rend="strikethrough">grosse</del>
                                     <add place="above">mächtge</add>
                                 </subst> Schwung<lb break="no" rend="indent"/>kraft, die gewaltig der</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Sehr abstrakt im <lb/> Bilde.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Sehr abstrakt im <lb/> Bilde.</note>
                             <l>Natur verborgne Kräfte<lb rend="indent"/> durcheinander treibt,</l>
                             <pb facs="00000050.tif" n="49"/>
                             <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">24</note>
@@ -1340,7 +1383,7 @@
                             <l>Die Seiten meiner Höle<lb rend="indent"/> rasselt, wie der Sturm</l>
                             <l>Am Felsen murrt, mit fürch<lb break="no" rend="indent"/>terlichem Pfeifen </l>
                             <l>Den Fittig ausgespannt zum <lb rend="indent"/> Walde rennt – </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Dieser ganze <hi rend="latin">Monolog</hi> hat
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Dieser ganze <hi rend="latin">Monolog</hi> hat
                                 viele <lb/> einzeln schoene Stellen, nur fehlt <lb/> ihm eine nothwendige Eigenschaft, <hi rend="underline">die <lb/>
                                     Zweckmäßigkeit</hi>. Wozu alle die <lb/> Philosoph<gap extent="8c" reason="illegible"/> über Leben, Todt <lb/> und <choice>
                                     <unclear cert="high" reason="illegible">Fortdauer</unclear>
@@ -1352,7 +1395,7 @@
                             <l>Was pocht so grausig in <lb rend="indent"/> der schwarzen Stunde </l>
                             <pb facs="00000052.tif" n="51"/>
                             <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">25</note>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">der dem Hunger zu entfliehen hier<lb/> her sich
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">der dem Hunger zu entfliehen hier<lb/> her sich
                                 rettete und der dem Der<lb break="no" type="none"/>wisch durch seine Erzählung Un<lb break="no" type="none"/>heil
                                 sagte. Die Ideen uber den<lb/> Todt <choice>
                                     <unclear cert="high" reason="illegible">haetten</unclear>
@@ -1363,10 +1406,10 @@
                             <stage type="business">(es pocht)</stage>
                             <l part="F" rend="indent"><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Vielleicht<lb rend="indent"/> der
                                     Todesengel!</hi></l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Sehr gut</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Sehr gut</note>
                             <l>Der mit dem <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">diamantnen</hi><lb rend="indent"/> Schwerdt das
                                 Band</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"><choice>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"><choice>
                                     <abbr>S. ob.</abbr>
                                     <expan>Siehe oben</expan>
                                 </choice></note>
@@ -1379,9 +1422,12 @@
                     </div>
                     <pb facs="00000053.tif" n="52"/>
                     <div n="14" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">2. AKT, 14. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Ali.</hi>
-                            <hi rend="underline">Achmet.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">2. AKT, 14. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Ali.</hi>
+                            <hi rend="underline">Achmet.</hi>
+                        </stage>
                         <sp who="#Ali">
                             <speaker><hi rend="underline">Ali.</hi></speaker>
                             <l part="I">Du bist ein Sterblicher?</l>
@@ -1409,7 +1455,7 @@
                                     <add place="across">n</add>
                                 </subst> , stür<lb break="no" rend="indent"/>misch ist die Nacht,</l>
                             <l>Wie ich sie nicht in dreissig<lb rend="indent"/> Jahren sah,</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Eine sehr gute Schilderung, ist die <lb/> aber am
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Eine sehr gute Schilderung, ist die <lb/> aber am
                                 rechten Orte? Achmet <lb/> hat das ja alles besser gefuhlt <lb/> als er es ihm sagen kan̄.</note>
                             <l>Der Himmel donnert und<lb rend="indent"/> die Erde bebt,</l>
                             <l>Im Kampfe scheinen alle Ele<lb break="no" rend="indent"/>mente,</l>
@@ -1456,7 +1502,7 @@
                             <l part="F" rend="indent"> Du bist der weisteste,</l>
                             <l>So spricht das ganze Land, die <lb rend="indent"/> Zukunft die vor jedem </l>
                             <l>Wie schwarze Mitternacht in<lb rend="indent"/> tiefer Ferne liegt, </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Umgekehrt, wie weite Ferne <lb/> in schwarzer
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Umgekehrt, wie weite Ferne <lb/> in schwarzer
                                 Mitternacht</note>
                             <l>Steht vor dir da, ein nahge<lb break="no" rend="indent"/>legner Hügel</l>
                             <l>Vom Strahl der Mittagssonne<lb rend="indent"/> hell. Du kannst</l>
@@ -1490,7 +1536,7 @@
                             <l>Daß ich, der viel zu wissen glaubte,<lb rend="indent"/>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">gahr nichts</hi> wisse.</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Zu bescheiden.</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Zu bescheiden.</note>
                         <sp who="#Achmet">
                             <speaker><hi rend="underline">Achmet.</hi></speaker>
                             <l>So spricht aus deinem Munde<lb rend="indent"/> die Bescheidenheit.</l>
@@ -1506,7 +1552,7 @@
                         <sp who="#Achmet">
                             <speaker><hi rend="underline">Achmet.</hi></speaker>
                             <l>Du weist das Ziel von mei<lb break="no" rend="indent"/>ner Reise,</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Ein zu rascher Uebergang.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Ein zu rascher Uebergang.</note>
                             <l>Die Königinn, die schöne<lb rend="indent"/> Sultaninn</l>
                             <l>Roxane sendet <add place="above">dir</add> durch mich hier<lb rend="indent"/> tausend</l>
                             <l part="I">Zechinen – </l>
@@ -1550,7 +1596,7 @@
                             <l>Ja denn Roxane hat ge<lb break="no" rend="indent"/>schworen bei</l>
                             <l>Dem <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Grabe</hi> des Propheten,<lb rend="indent"/> daß Zeangir
                                 nur</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">besser als beym <hi rend="underline"
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">besser als beym <hi rend="underline"
                                 >Bart.</hi></note>
                             <l>Ihr eigner Sohn den Thron<lb rend="indent"/> besteigen soll;</l>
                             <l>Er wird dies nimmer dulden<lb rend="indent"/> dieser stolze</l>
@@ -1653,7 +1699,7 @@
                         <sp who="#Ali">
                             <speaker><hi rend="underline">Ali.</hi></speaker>
                             <l part="F" rend="indent"> Ich bin ein Mensch,<lb rend="indent"/> der bist du nicht.</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Sehr schön, wenn die folgenden <lb/> Zeilen
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Sehr schön, wenn die folgenden <lb/> Zeilen
                                 gestrichen werden.</note>
                             <pb facs="00000067.tif" n="66"/>
                             <l>
@@ -1673,8 +1719,8 @@
                             <l part="M" rend="indent"> Ha! ich muß!</l>
                         </sp>
                         <sp who="#Achmet">
-                            <speaker><hi rend="underline">Achmet</hi>
-                                <stage type="business">(<hi rend="underline">zieht einen<lb/> Dolch hervor</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Achmet</hi></speaker>
+                            <stage type="business">(<hi rend="underline">zieht einen<lb/> Dolch hervor</hi>)</stage>
                             <l part="F" rend="indent">Greis! Zittre!</l>
                         </sp>
                         <sp who="#Ali">
@@ -1689,8 +1735,8 @@
                             <l>Beim Hoffen meiner See<lb break="no" rend="indent"/>ligkeit ich muß hindurch!</l>
                         </sp>
                         <sp who="#Achmet">
-                            <speaker><hi rend="underline">Achmet</hi>
-                                <stage type="delivery">(<hi rend="underline">in wilder Wuth</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Achmet</hi></speaker>
+                            <stage type="delivery">(<hi rend="underline">in wilder Wuth</hi>)</stage>
                             <l>Ist hier ein andrer Weg? – <lb rend="indent"/> Wo ist er? – </l>
                             <l>Er sterbe, dieser Leben<subst>
                                     <del rend="overwritten">s</del>
@@ -1702,9 +1748,10 @@
                                     </subst>hn</hi>)</stage>
                         </sp>
                         <sp who="#Ali">
-                            <speaker><hi rend="underline">Ali,</hi><stage type="business"> (<hi rend="underline">fällt</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Ali,</hi></speaker>
+                            <stage type="business"> (<hi rend="underline">fällt</hi>)</stage>
                             <l>Ich muß zu Mustapha! </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Jezt noch? E<subst>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Jezt noch? E<subst>
                                     <del rend="overwritten"><gap extent="2c" reason="illegible"/></del>
                                     <add place="across">t</add>
                                 </subst>wa als Geist? </note>
@@ -1714,7 +1761,7 @@
                             <speaker><hi rend="underline">Achmet.</hi></speaker>
                             <l>Welch ein Gefühl schwellt<lb rend="indent"/> auf <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">zu</hi>
                                 meinem Herzen?</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">in.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">in.</note>
                             <pb facs="00000069.tif" n="68"/>
                             <l>Wie? Ist dies Reue? – <lb rend="indent"/> Welche blutge That</l>
                             <l>Hab ich begangen? – Wie<lb rend="indent"/> er daliegt! – </l>
@@ -1742,17 +1789,18 @@
                 <div n="3" type="act">
                     <head><hi n="2" rend="underline">D r i t t e r A u f z u g.</hi></head>
                     <div n="1" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 1. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 1. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="location">(<hi rend="underline">Platz</hi>
                             <del rend="strikethrough">vor dem <del n="3" rend="strikethrough">P</del></del><lb/>
                             <hi rend="underline">in der Stadt.</hi>)</stage>
                         <sp who="#Schahriar">
-                            <speaker><hi rend="underline">Schahriar</hi>
-                                <stage type="delivery">(<hi rend="underline">geht auf<lb/> und ab.</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Schahriar</hi></speaker>
+                            <stage type="delivery">(<hi rend="underline">geht auf<lb/> und ab.</hi>)</stage>
                             <l>Die träge Sonne kömmt <lb rend="indent"/> noch nicht hervor!</l>
                             <l>Reiß sie herauf du <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">stürme<lb break="no" rend="indent"
                                     />rischer</hi> Ostwind!</l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Ein neues <hi rend="latin">Adjectiv</hi>.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Ein neues <hi rend="latin">Adjectiv</hi>.</note>
                             <l>O könnt’ ich doch den Stunden<lb rend="indent"/> Flügel leihn!</l>
                             <l>Wie schleicht die Zeit, wenn<lb rend="indent"/> man auf etwas hofft</l>
                             <l>Das man sich wünscht, wie<lb rend="indent"/> stürzet sie vorüber</l>
@@ -1773,12 +1821,15 @@
                             <l>Führ uns zur Schlacht! im Blut<lb rend="indent"/> der Feinde will</l>
                             <l>Ich mich berauschen, meines Va<lb break="no" rend="indent"/>ters Tod vergessen.</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">vergeßen?</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">vergeßen?</note>
                     </div>
                     <div n="2" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 2. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Schahriar.</hi>
-                            <hi rend="underline">Raschid.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 2. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Schahriar.</hi>
+                            <hi rend="underline">Raschid.</hi>
+                        </stage>
                         <sp who="#Raschid">
                             <speaker><hi rend="underline">Raschid.</hi></speaker>
                             <l>Ich treffe schon den wilden<lb rend="indent"/> Schahriar?</l>
@@ -1802,11 +1853,14 @@
                         </sp>
                     </div>
                     <div n="3" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 3. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 3. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
                             <hi rend="underline">Omar.</hi>
                             <hi rend="underline">Abube<lb break="no"/>ker.</hi>
-                            <hi rend="underline">Viele andre Tartarn.</hi></stage>
+                            <hi rend="underline">Viele andre Tartarn.</hi>
+                        </stage>
                         <pb facs="00000074.tif" n="73"/>
                         <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">36</note>
                         <sp who="#Abubeker">
@@ -1824,9 +1878,12 @@
                         </sp>
                     </div>
                     <div n="4" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 4. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Mustapha.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 4. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
+                            <hi rend="underline">Mustapha.</hi>
+                        </stage>
                         <sp who="#Mustapha">
                             <speaker><hi rend="underline">Mustapha.</hi></speaker>
                             <l>Seid ihr schon hier Gefährten?<lb rend="indent"/> – Seid ihr alle</l>
@@ -1845,7 +1902,7 @@
                                     <unclear cert="medium" reason="illegible">zieh<del rend="strikethrough">e</del>t</unclear>
                                 </choice>
                                 <del rend="strikethrough">die</del><lb rend="indent"/> Verzweiflung. – </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Gut, wozu aber dann die Ermah<lb break="no"
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Gut, wozu aber dann die Ermah<lb break="no"
                                     type="sh"/>nung zum Mut?</note>
                             <l>Bestehet muthig diesen Kampf<lb rend="indent"/> wer fällt</l>
                             <l>Der stirbt den Tod fürs Va<lb break="no" rend="indent"/>terland, er fällt</l>
@@ -1868,8 +1925,10 @@
                         </sp>
                     </div>
                     <div n="5" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 5. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 5. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
                             <hi rend="underline">Sadi.</hi>
                         </stage>
                         <pb facs="00000077.tif" n="76"/>
@@ -1922,12 +1981,15 @@
                         <stage type="exit">(<hi rend="underline">Sie gehn ab.</hi>)</stage>
                     </div>
                     <div n="6" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 6. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 6. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="location">(<hi rend="underline">Saal im Pallast mit gros<lb break="no"/>sen Flügelthüren, die auf<lb/> das Meer
                                 hinausgehn, von<lb/> wo man die ganze um lie<lb break="no"/>gende Gegend übersehen kann.</hi>)</stage>
                         <lb/>
-                        <stage type="setting"><hi rend="underline">Roxane.</hi>
-                            <hi rend="underline">Zeangir.</hi></stage>
+                        <stage type="setting">
+                            <hi rend="underline">Roxane.</hi>
+                            <hi rend="underline">Zeangir.</hi>
+                        </stage>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane.</hi></speaker>
                             <l>O bleibe! bleibe Sohn! Laß<lb rend="indent"/> dich von deiner Mutter</l>
@@ -1990,7 +2052,8 @@
                         </sp>
                     </div>
                     <div n="7" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 7. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 7. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane.</hi></speaker>
                             <l>Unglüklicher! – Du eilst hin<lb break="no" rend="indent"/>weg! In wenig Augenblikken</l>
@@ -2016,13 +2079,16 @@
                             <l>Wie hallet durch die Lüfte hin<lb rend="indent"/> das Schmettern</l>
                             <l part="I">Der Kriegstrommeln! – </l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Roxane wird so <hi rend="underline">reden</hi>, nicht
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Roxane wird so <hi rend="underline">reden</hi>, nicht
                             <lb/> einen erfahrnen tapfern Freund <lb/> Zeangirn zum Schutz nachschicken?</note>
                     </div>
                     <div n="8" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 8. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Roxane.</hi>
-                            <hi rend="underline">Solimann.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 8. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Roxane.</hi>
+                            <hi rend="underline">Solimann.</hi>
+                        </stage>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l part="F" rend="indent"> Ha! Die Schlacht beginnt!</l>
@@ -2032,11 +2098,14 @@
                             <pb facs="00000085.tif" n="84"/>
                             <l>Dann sollst Du Theil an<lb rend="indent"/> meiner Freude nehmen.</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Warum soll sie gehn?</note>
-                        <stage type="exit"><add place="inline">(<hi rend="underline">Roxane geht ab.</hi>)</add></stage>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Warum soll sie gehn?</note>
+                        <stage type="exit">
+                            <add place="inline">(<hi rend="underline">Roxane geht ab.</hi>)</add>
+                        </stage>
                     </div>
                     <div n="9" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 9. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 9. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l>Dort tob<add place="above">e</add>t nun <subst>
@@ -2092,9 +2161,12 @@
                         </sp>
                     </div>
                     <div n="10" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 10. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Solimann.</hi>
-                            <hi rend="underline">Zeangir.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 10. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Solimann.</hi>
+                            <hi rend="underline">Zeangir.</hi>
+                        </stage>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l>Ha, du mein Sohn? – Was<lb rend="indent"/> bringst du mir für Bothschaft?</l>
@@ -2102,8 +2174,8 @@
                         <pb facs="00000088.tif" n="87"/>
                         <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">43</note>
                         <sp who="#Zeangir">
-                            <speaker><hi rend="underline">Zeangir</hi><stage type="delivery"> (<hi rend="underline">ausser
-                                Athem.</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Zeangir</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">ausser Athem.</hi>)</stage>
                             <l>Verlohren! – Alles – ach verlohren!<lb rend="indent"/> – Mustapha </l>
                             <l part="I">Gefangen – alle fliehen – </l>
                         </sp>
@@ -2157,15 +2229,18 @@
                         <lb/>
                     </div>
                     <div n="11" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 11. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 11. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="business">(<hi rend="underline">Er will abgehn und Musta<lb break="no"/>pha tritt ihm entgegen.</hi>)</stage>
                         <lb/>
                         <stage type="setting">
                             <hi rend="underline">Vorige.</hi>
                             <hi rend="underline">Mustapha.</hi>
-                            <hi rend="underline">Raschid.</hi><lb/>
+                            <hi rend="underline">Raschid.</hi>
+                            <lb/>
                             <hi rend="underline">Omar.</hi>
-                            <hi rend="underline">Sadi.</hi></stage>
+                            <hi rend="underline">Sadi.</hi>
+                        </stage>
                         <pb facs="00000091.tif" n="90"/>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
@@ -2193,9 +2268,12 @@
                     </div>
                     <div n="12" type="scene">
                         <head>
-                            <note resp="#johanna.preusse" type="structure">3. AKT, 12. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Roxane.</hi></stage>
+                            <note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 12. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
+                            <hi rend="underline">Roxane.</hi>
+                        </stage>
                         <sp who="#Mustapha">
                             <speaker><hi rend="underline">Mustapha.</hi></speaker>
                             <l>Auch dir Zeangir, dank’ ich<lb rend="indent"/> izt; du rettetest</l>
@@ -2212,7 +2290,7 @@
                             <l part="I"><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Den Lauf gelassen, Achmet<lb rend="indent"/>
                                 komm!)</hi></l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Unzweckmäßig. </note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Unzweckmäßig. </note>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l part="F" rend="indent"> Heut werde</l>
@@ -2221,7 +2299,7 @@
                             <!-- hier eigentlich: "Tautol"+Ligatur!... Wiedergeben? -->
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Bis aus dem Meere sich die<lb rend="indent"/> Sonne wieder
                                     hebt,</hi></l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right"><choice>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)"><choice>
                                     <abbr><hi rend="latin">Tautol</hi>.</abbr>
                                     <expan>Tautologie</expan>
                                 </choice>
@@ -2278,10 +2356,12 @@
                         </sp>
                     </div>
                     <div n="13" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 13. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 13. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="setting">
                             <hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Achmet.</hi></stage>
+                            <hi rend="underline">Achmet.</hi>
+                        </stage>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane.</hi></speaker>
                             <l>(Es naht das schadenfrohe<lb rend="indent"/> Nachtgespenst,</l>
@@ -2349,12 +2429,12 @@
                                             um<lb break="no" rend="indent"/>armend</hi>)</stage> dich, mein Mustapha!</l>
                         </sp>
                         <sp who="#Mustapha">
-                            <speaker><hi rend="underline">Mustapha,</hi><stage type="delivery"> (<hi rend="underline">erstaunt, faßt<lb/> sich aber
-                                        gleich</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Mustapha,</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">erstaunt, faßt<lb/> sich aber gleich</hi>)</stage>
                             <l part="I"><add place="above">Wie?</add> Mich? – <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Und weiter
                                     nichts?</hi></l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Nur mich?</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Nur mich?</note>
                         <stage type="business">(<hi rend="underline">Alle stehn erstarrt, Ro<lb break="no"/>xane sucht ihre Freude zu<lb/>
                                 verbergen.</hi>)</stage>
                         <sp who="#Achmet">
@@ -2367,8 +2447,8 @@
                             <l>Dein Land wird glüklich sein.</l>
                         </sp>
                         <sp who="#Solimann">
-                            <speaker><hi rend="underline">Solimann</hi><stage type="delivery"> (<hi rend="underline">umarmt ihn<lb/>
-                                    heftig</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Solimann</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">umarmt ihn<lb/> heftig</hi>)</stage>
                             <l>Nein! – Das kann das Schick<lb break="no" rend="indent"/>sal nicht verlangen!</l>
                             <pb facs="00000099.tif" n="98"/>
                             <l>Reiß ihn aus meinen Armen<lb rend="indent"/> wer es kann!</l>
@@ -2378,7 +2458,7 @@
                             <l>Zu trennen welche Sohn und <lb rend="indent"/> Vater binden?</l>
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Wer wagt es in die allge<lb break="no" rend="indent"/>waltgen Arme
                                     der</hi></l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">falscher Ausdruck</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">falscher Ausdruck</note>
                             <l>Natur zu fallen? – Mag<lb rend="indent"/> nun doch um mich her</l>
                             <l>Mein Volck aus sterben,<lb rend="indent"/> ach, ich finde unter ihnen </l>
                             <l>Ja keinen Sohn – zu lange hat<lb rend="indent"/> die Vaterliebe </l>
@@ -2426,7 +2506,7 @@
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Verbreitend, dann zu sinken<lb rend="indent"/> so wie sie</hi></l>
                             <l><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="mark">Und Thau <del rend="strikethrough">noch</del> der Fruchtbar<lb
                                         break="no" rend="indent"/>keit noch auf die Flur</hi></l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Gut.</note>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Gut.</note>
                             <l>Zu streuen, der Gedanke trieb<lb rend="indent"/> mich in die Schaar</l>
                             <pb facs="00000102.tif" n="101"/>
                             <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">50</note>
@@ -2447,7 +2527,7 @@
                                 <add place="inline">Beschluß des Schicksals!</add><lb/>
                                 <del rend="strikethrough">Beschluß des Schicksals?</del></l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Sollte <choice>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Sollte <choice>
                                 <abbr>Must.</abbr>
                                 <expan>Mustaphas</expan>
                             </choice> Mut und Entschlos<lb break="no" type="none"/>senheit den <hi rend="latin">Soliman̄</hi> nicht vielmehr <lb/>
@@ -2462,7 +2542,7 @@
                         </sp>
                         <stage type="business">(<hi rend="underline">Er wendet sich, der Geist</hi><lb/>
                             <hi rend="underline">des Ali steht hinter ihm</hi>)</stage>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">den hab’ ich erwartet.</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">den hab’ ich erwartet.</note>
                         <note rend="align(right)" resp="#johanna.preusse" subtype="1">Vgl. S. 67 / Bl. 33<hi rend="superscript">r</hi>.</note>
                         <sp who="#Ali">
                             <speaker><hi rend="underline">Ali.</hi></speaker>
@@ -2473,7 +2553,7 @@
                             <speaker><hi rend="underline">Achmet.</hi></speaker>
                             <l part="I">Ha! Schauder! Schauder und<lb rend="indent"/> Entsetzen!</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Wer ihn fühlt sagt es ge<lb break="no" type="sh"
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Wer ihn fühlt sagt es ge<lb break="no" type="sh"
                             />woehnlich nicht.</note>
                         <sp who="#Mustapha">
                             <speaker><hi rend="underline">Mustapha.</hi></speaker>
@@ -2499,8 +2579,8 @@
                             <l part="M" rend="indent">Wie? Eine Lüge?</l>
                         </sp>
                         <sp who="#Roxane">
-                            <speaker><hi rend="underline">Roxane.</hi><stage type="delivery"> (<hi rend="underline">stürzt mit<lb/> einem Dolch auf
-                                        Achmet</hi>) </stage></speaker>
+                            <speaker><hi rend="underline">Roxane.</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">stürzt mit<lb/> einem Dolch auf Achmet</hi>) </stage>
                             <l part="F" rend="indent"> Rasender! – – </l>
                             <l>Wozu verleitete mich mei<lb break="no" rend="indent"/>ne rasche Wuth?</l>
                             <stage type="delivery">(<hi rend="underline">ihr entsinkt der Dolch</hi>)</stage>
@@ -2518,7 +2598,7 @@
                                     </choice>
                                     <lb rend="indent"/> von meiner Seite nicht? – </add></l>
                             <l><add>Du zeigst auf deine Wun<lb break="no" rend="indent"/>den? – fort von hier!</add></l>
-                            <add><stage type="exit">(<hi rend="underline">er stürzt hinaus</hi>)</stage></add>
+                            <stage type="exit">(<hi rend="underline">er stürzt hinaus</hi>)</stage>
                         </sp>
                         <sp who="#Solimann">
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
@@ -2539,7 +2619,7 @@
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline"><unclear cert="high" reason="illegible">nein</unclear></hi>
                                 <lb rend="indent"/>
                                 <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Ich liebte</hi> dich! – </l>
-                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Lieber nicht gethan als so schnell <lb/>
+                            <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Lieber nicht gethan als so schnell <lb/>
                                 bereut.</note>
                             <l>Wie? Hat in einer Weiber<lb break="no" rend="indent"/>seele so </l>
                             <l>Viel Bosheit <hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">Platz</hi>
@@ -2554,10 +2634,13 @@
                     </div>
                     <pb facs="00000106.tif" n="105"/>
                     <div n="14" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 14. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 14. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <note hand="#Rudolf_Köpke" rend="align(right)" type="foliation">52</note>
-                        <stage type="setting"><hi rend="underline">Mustapha.</hi>
-                            <hi rend="underline">Roxane.</hi></stage>
+                        <stage type="setting">
+                            <hi rend="underline">Mustapha.</hi>
+                            <hi rend="underline">Roxane.</hi>
+                        </stage>
                         <lb/>
                         <stage type="modifier">
                             <hi rend="underline">Mustapha</hi> (<hi rend="underline">steht und<lb/> überlegt.</hi>)</stage>
@@ -2600,7 +2683,8 @@
                         </sp>
                     </div>
                     <div n="15" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 15. SZENE</note></head>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 15. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
                         <stage type="setting">
                             <hi rend="underline">Vorige</hi>. <hi rend="underline">Solimann</hi>. Ze<hi rend="underline"><lb break="no"/>angir</hi>.
                                 <hi rend="underline">Raschid</hi>.</stage>
@@ -2616,7 +2700,7 @@
                             <speaker><hi rend="underline">Solimann.</hi></speaker>
                             <l part="I"><hi hand="#Wilhelm_Heinrich_Wackenroder" rend="underline">So laß sie sterben</hi>!</l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Zu platt.</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Zu platt.</note>
                         <sp who="#Roxane">
                             <speaker><hi rend="underline">Roxane</hi>.</speaker>
                             <l part="F" rend="indent"> Ach! Ver<lb break="no" rend="indent"/>zeihung! Solimann! <stage type="business">(<hi
@@ -2629,15 +2713,18 @@
                         </sp>
                     </div>
                     <div n="16" type="scene">
-                        <head><note resp="#johanna.preusse" type="structure">3. AKT, 16. SZENE</note></head>
-                        <stage type="setting"><hi rend="underline">Vorige.</hi>
-                            <hi rend="underline">Omar.</hi></stage>
+                        <head><note resp="#johanna.preusse" type="structure"><p xml:lang="de">3. AKT, 16. SZENE</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></head>
+                        <stage type="setting">
+                            <hi rend="underline">Vorige.</hi>
+                            <hi rend="underline">Omar.</hi>
+                        </stage>
                         <sp who="#Omar">
                             <speaker><hi rend="underline">Omar</hi>.</speaker>
                             <l>Es hat sich Achmet von<lb rend="indent"/> des Felsens höchster Spitze</l>
                             <l part="I">Gestürzt! – </l>
                         </sp>
-                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin-right">Warum bringt Omar die <lb/> Nachricht?</note>
+                        <note hand="#Wilhelm_Heinrich_Wackenroder" place="inline margin(right)">Warum bringt Omar die <lb/> Nachricht?</note>
                         <sp who="#Raschid">
                             <speaker><hi rend="underline">Raschid.</hi></speaker>
                             <l part="F" rend="indent"> Ihn jagte das Bewußt<lb break="no" rend="indent"/>sein<del rend="strikethrough">er</del> seiner That.<lb/>
@@ -2655,13 +2742,13 @@
                             <l>Nun bist du ewig mein, o<lb rend="indent"/> lieber Sohn!</l>
                         </sp>
                         <sp who="#Zeangir">
-                            <speaker><hi rend="underline">Zeangir</hi><stage type="delivery"> (<hi rend="underline">reicht dem<lb/> Mustapha die
-                                        Hand</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Zeangir</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">reicht dem<lb/> Mustapha die Hand</hi>)</stage>
                             <l part="I">Wir wollen Freunde sein!</l>
                         </sp>
                         <sp who="#Mustapha">
-                            <speaker><hi rend="underline">Mustapha</hi><stage type="delivery"> (<hi rend="underline"
-                                >einschlagend</hi>)</stage></speaker>
+                            <speaker><hi rend="underline">Mustapha</hi></speaker>
+                            <stage type="delivery"> (<hi rend="underline">einschlagend</hi>)</stage>
                             <l part="F" rend="indent">
                                 <del rend="strikethrough">Wir wollen</del> Brüder<add place="inline">!</add>
                                 <del rend="strikethrough">sein!</del></l>
@@ -2689,12 +2776,8 @@
                         <add hand="Unbekannte_Hand_2" place="across">II</add>
                     </subst></note>
                 <pb facs="00000121.tif" n="120"/>
-                <head hand="#Unbekannte_Hand_5" rend="align(center)">
-                    <del hand="#Unbekannte_Hand_6" rend="strikethrough">Tieck.</del></head>
-                <lb/>
-                <head hand="#Unbekannte_Hand_5" rend="align(center) upsidedown">
-                    <del hand="#Unbekannte_Hand_6" rend="strikethrough">über das Erhabene</del>
-                </head>
+                <note hand="#Unbekannte_Hand_5" rend="align(center)">
+                    <del hand="#Unbekannte_Hand_6" rend="strikethrough">Tieck. <lb/>über das Erhabene</del></note>
             </div>
         </body>
         <back>

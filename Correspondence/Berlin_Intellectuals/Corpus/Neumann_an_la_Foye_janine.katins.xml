@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Frankfurt am Main</settlement>
+                        <location>
+                            <address>
+                                <street>Großer Hirschgraben 23-25</street>
+                                <postCode>60311 </postCode>
+                                <settlement>Frankfurt am Main</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution>Freies Deutsches Hochstift</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Handschrift 19257</collection>
@@ -207,8 +214,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -219,42 +227,49 @@
                         Foye</note></salute></opener>
                 <p> mit recht inniger Wehmut hat mich dein Brief erfüllt, und ich kenne das peinigende Gefühl das des Menschen<lb/>innerstes Gemüth
                     angreift und daran zehrd, wenn er seine schönsten Kräfte mit der ermüdendsten<lb/>Anstrengung an ein ihm fremdes Nichts vergeuden
-                    muß, und er gezwungen ist die Blüthe<lb/>seiner Tage auf kalte Rechnungen und leere Federzüge mit einer <del rend="strikethrough"
-                        >lä</del>
-                    <add place="inline">ernsthaften</add> Aufmerk<lb break="no" type="dh"/>samkeit zu verwenden, aus Erfahrung so wohl, daß ich es
-                    doppelt mit dir fühle, <rs ref="#p0248" type="bi">mein Armer,<lb/>Lieber</rs>, wenn ich dich so schmerzlich lange Tage in deinem
-                    Büreau angefeßelt denken muß,<lb/>während dein Geist sich unter freiem Himmel, zu den Freunden, zu uns wünscht, die wir<lb/>so
-                    gern unsere Gefühle unsere Gedanken, Arbeiten, Wünsche alles, alles mit dir theilen<lb/>und an unserem innersten heiligsten Leben
-                    dich Theil nehmen lassen möchten.<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso. Fragments inédits</title> fehlt der gesamte Text von "und ich kenne das peinigende Gefühl" bis "Und
-                        dennoch".</note><lb/>Und dennoch wiederum muß ich dich beneiden um diese Festigkeit um diese reine, durch<lb/>dein Glück keine
-                    liebevolle durch nichts zu trübende und zu verändernde<lb/>Heiligkeit der Gesinnung, mit der du so standhaft dich und deine
-                    schönste Zeit für<lb/>Das Wohl deiner geliebten Familie aufopferst.<note resp="#janine.katins">De La Foye erhielt im Frühling 1804
-                        Nachricht vom Tode seines Vaters, woraufhin er im Juni 1804 Berlin verließ und in seine Heimat Frankreich zurückkehrte, um
-                        seine Mutter bei der Erziehung seiner beiden noch kleinen Brüder zu unterstützen.</note> Warlich, dessen Glück ist ewig
-                    und<lb/>innerlich begründet, den kein äußeres <del rend="strikethrough">G</del>
-                    <add place="inline">Glück</add> und Freude versprechendes Dasein,<lb/>ja, kein höheres geistigeres bedeutungsvolleres in den Armen
-                    der<lb/>liebsten und treusten Freunde hin wegziehen kann von dem einmal betretene<lb/>rauhen Pfade, den er für den echten hält.
-                        <note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>
-                        fehlt der gesamte Text von "warlich" bis "hält".</note> In dieser ruhigen unerschütter<lb break="no" type="dh"/>lichen
-                    Festigkeit des sittlichen Gefühls zeigt es sich ganz deutlich, daß du von<lb/>der Natur bestimmt bist (: und freilich eigentlich
-                    eines jeden Mannes Bestim<lb break="no" type="dh"/>mung ist, obgleich es bei den wenigsten so sichtbar hervortritt :) das <del
-                        rend="strikethrough">Gefe</del>
-                    <add place="inline">Glück</add><lb/>einer Familie, eines ganzen Kreises von theuren Personen, die ihre ganze<lb/>Existenz dir
-                    allein zuschreiben und verdanken, zu gründen und zu stützen.<lb/>Und auch du selbst, (so wie ich dich zu kennen glaube, darf ich
-                    daran nicht zweifeln)<lb/>auch du selbst würdest das höchste Glück deines Lebens in dem <subst>
+                    muß, und er gezwungen ist die Blüthe<lb/>seiner Tage auf kalte Rechnungen und leere Federzüge mit einer <subst>
+                        <del rend="strikethrough">lä</del>
+                        <add place="inline">ernsthaften</add>
+                    </subst> Aufmerk<lb break="no" type="dh"/>samkeit zu verwenden, aus Erfahrung so wohl, daß ich es doppelt mit dir fühle, <rs
+                        ref="#p0248" type="bi">mein Armer,<lb/>Lieber</rs>, wenn ich dich so schmerzlich lange Tage in deinem Büreau angefeßelt denken
+                    muß,<lb/>während dein Geist sich unter freiem Himmel, zu den Freunden, zu uns wünscht, die wir<lb/>so gern unsere Gefühle unsere
+                    Gedanken, Arbeiten, Wünsche alles, alles mit dir theilen<lb/>und an unserem innersten heiligsten Leben dich Theil nehmen lassen
+                        möchten.<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                Fragments inédits</title> fehlt der gesamte Text von "und ich kenne das peinigende Gefühl" bis "Und dennoch".</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/>Und dennoch wiederum muß ich dich beneiden um diese Festigkeit um diese
+                    reine, durch<lb/>dein Glück keine liebevolle durch nichts zu trübende und zu verändernde<lb/>Heiligkeit der Gesinnung, mit der du
+                    so standhaft dich und deine schönste Zeit für<lb/>Das Wohl deiner geliebten Familie aufopferst.<note resp="#janine.katins"><p
+                            xml:lang="de">De La Foye erhielt im Frühling 1804 Nachricht vom Tode seines Vaters, woraufhin er im Juni 1804 Berlin
+                            verließ und in seine Heimat Frankreich zurückkehrte, um seine Mutter bei der Erziehung seiner beiden noch kleinen Brüder
+                            zu unterstützen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Warlich, dessen Glück ist ewig und<lb/>innerlich
+                    begründet, den kein äußeres <subst>
+                        <del rend="strikethrough">G</del>
+                        <add place="inline">Glück</add>
+                    </subst> und Freude versprechendes Dasein,<lb/>ja, kein höheres geistigeres bedeutungsvolleres in den Armen der<lb/>liebsten und
+                    treusten Freunde hin wegziehen kann von dem einmal betretene<lb/>rauhen Pfade, den er für den echten hält. <note
+                        resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt
+                        der gesamte Text von "warlich" bis "hält".</note> In dieser ruhigen unerschütter<lb break="no" type="dh"/>lichen Festigkeit
+                    des sittlichen Gefühls zeigt es sich ganz deutlich, daß du von<lb/>der Natur bestimmt bist (: und freilich eigentlich eines jeden
+                    Mannes Bestim<lb break="no" type="dh"/>mung ist, obgleich es bei den wenigsten so sichtbar hervortritt :) das <subst>
+                        <del rend="strikethrough">Gefe</del>
+                        <add place="inline">Glück</add>
+                    </subst><lb/>einer Familie, eines ganzen Kreises von theuren Personen, die ihre ganze<lb/>Existenz dir allein zuschreiben und
+                    verdanken, zu gründen und zu stützen.<lb/>Und auch du selbst, (so wie ich dich zu kennen glaube, darf ich daran nicht
+                    zweifeln)<lb/>auch du selbst würdest das höchste Glück deines Lebens in dem <subst>
                         <del rend="overwritten">a</del>
                         <add place="across">A</add>
                     </subst>rmen<lb/>einer liebenden Gattin und lieblicher Kinder finden, und wenn deine<lb/>gegenwärtige anstrengende und mühselige
                     Arbeit die Stufe zu einem<lb/>solchen Glücke werden kann, so will ich gern die Kraft segnen, mit der<lb/>du den Entschluß faßtest,
                     sie zu übernehmen, denn nur auf diese Weise<lb/>und einzig auf diese kann sie hinlänglich belohnt werden. Ich bitte dich,<lb/><rs
-                        ref="#p0248" type="bi">mein Lieber</rs>, auf <del rend="strikethrough">so</del>
-                    <add place="inline">dieses</add> Gemälde auf solche Hoffnungen richte deine<lb/>Augen, während du Armer die Lasten deiner
-                    Geschäfte abarbeitest, und<lb/>du wirst neue Kraft gewinnen, nicht zu erliegen. Wenn wir uns dann<lb/>einmal wieder sehen, was
-                    gewiß geschieht, wenn meine Studien zu einem<lb/>gewißen Punkt gestiegen sind (denn von einem Ende derselben kann<lb/>ja nie die
-                    Rede sein) dann wird alle Last und aller Kampf<lb/>vergessen sein, und wir werden mit Freude zurücksehn auf die </p>
+                        ref="#p0248" type="bi">mein Lieber</rs>, auf <subst>
+                        <del rend="strikethrough">so</del>
+                        <add place="inline">dieses</add>
+                    </subst> Gemälde auf solche Hoffnungen richte deine<lb/>Augen, während du Armer die Lasten deiner Geschäfte abarbeitest,
+                    und<lb/>du wirst neue Kraft gewinnen, nicht zu erliegen. Wenn wir uns dann<lb/>einmal wieder sehen, was gewiß geschieht, wenn
+                    meine Studien zu einem<lb/>gewißen Punkt gestiegen sind (denn von einem Ende derselben kann<lb/>ja nie die Rede sein) dann wird
+                    alle Last und aller Kampf<lb/>vergessen sein, und wir werden mit Freude zurücksehn auf die </p>
                 <pb n="2"/>
-                <note hand="#pencil" place="top-margin-left-vertical" type="foliation">Foliierung des Archivars auf dem Manuskript, Blatt 84</note>
+                <note hand="#pencil" place="top-margin(left)-vertical" type="foliation">Foliierung des Archivars auf dem Manuskript, Blatt 84</note>
                 <p>mühsam durchlaufne Bahn, die herrliche Gegenwart mit doppelt hoher Lust<lb/>genießend. So nur, <rs ref="#p0248" type="bi">mein
                         lieber Freund</rs>, mag man auch den unseligen<lb/>mechanischen Geschäften eine pontische und fröhliche Seite
                     abgewinnen<lb/>und wahr bleibt das sich immer, daß der Genuß des mühsam er<lb break="no" type="dh"/>rungenen das höchste Glück
@@ -277,7 +292,7 @@
                     kräftiger Wirksamkeit. </p>
                 <closer><salute>Lebe wohl, <rs ref="#p0248" type="bi">Herzensbruder</rs>, und gedenke meiner, ich wende<lb/>nim̄er den Blick von dir,
                         wo ich auch sein, und wie ich leben<lb/>mag, deß sei gewiß!</salute>
-                    <signed place="margin-right-bottom">Dein Freund <choice>
+                    <signed rend="margin(right)-bottom">Dein Freund <choice>
                             <abbr>u.</abbr>
                             <expan>und</expan>
                         </choice> Bruder<lb/><persName ref="#p0262" type="bi">W Neumann</persName><lb/><foreign xml:lang="grc"><hi rend="greek"><choice>

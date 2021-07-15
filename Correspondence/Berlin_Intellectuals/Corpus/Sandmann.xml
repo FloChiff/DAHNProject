@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Poststraße 13-14</street>
+                                <postCode>10178 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution>Stiftung Stadtmuseum Berlin</institution>
                         <repository>Literatursammlung</repository>
                         <collection>Hitzig Nachlass</collection>
@@ -286,8 +293,9 @@
                 <language ident="de" usage="100"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-09-01" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2013-05-11" who="#alexander.meyer">added origPlace and origDate in history</change>
@@ -326,14 +334,11 @@
             <div>
                 <pb facs="XV_532_0002.TIF" n="1"/>
                 <pb facs="XV_532_0003.TIF" n="2"/>
-                <note hand="#archivist" place="margin-left" type="signature">XV 532</note>
-                <stamp rend="align(center)">Hier findet sich der braune Stempel des Märkischen Museums.</stamp>
+                <note hand="#archivist" place="margin(left)" type="signature">XV 532</note>
+                <fw><stamp rend="align(center)">Hier findet sich der braune Stempel des Märkischen Museums.</stamp></fw>
                 <pb facs="XV_532_0004.TIF" n="3"/>
-                <head>Nachtstücke.</head>
-                <lb/>
-                <head>Herausgegeb<lb/>vom Verfaßer dr Fantasiestücke in<lb/>Callotts Manir</head>
-                <lb/>
-                <head>Der Sandma<add hand="grey_hand" place="inline">n</add><add hand="grey_hand" place="inline">n</add></head>
+                <head>Nachtstücke.<lb/> Herausgegeb<lb/>vom Verfaßer dr Fantasiestücke in<lb/>Callotts Manir<lb/> Der Sandma<add hand="grey_hand"
+                        place="inline">n</add><add hand="grey_hand" place="inline">n</add></head>
                 <lb/>
                 <dateline>d. <date>16 Novbr: 1815</date>
                     <subst hand="#grey_hand">
@@ -341,28 +346,25 @@
                         <add place="across">N</add>
                     </subst>chts 1 Uhr</dateline>
                 <lb/>
-            </div>
-            <pb facs="XV_532_0005.TIF" n="4"/>
-            <div>
-                <stamp rend="align(center)">Märkisches Museum</stamp>
-            </div>
-            <pb facs="XV_532_0006.TIF" n="5"/>
-            <div>
+                <pb facs="XV_532_0005.TIF" n="4"/>
+                <fw>
+                    <stamp rend="align(center)">Märkisches Museum</stamp></fw>
+                <pb facs="XV_532_0006.TIF" n="5"/>
                 <p>Der Mutter Antwort befriedigte mich nicht, ja in meinem kindischen Gemüthe<lb/> entfaltete sich deutlich der Gedanke, daß die
                     Mutter den Sandmann nur<lb/> verlaügne, damit wir uns nicht <add place="above">vor ihm</add> fü<subst>
                         <del rend="overwritten">h</del>
                         <add place="across">r</add>
                     </subst>chten sollten; ich hörte ihn ja im̄er die Treppe<lb/> heraufkom̄en. Voll Neugierde über diesen Sandmann und seine
                     Beziehung<lb/> auf uns Kinder zu erfahren frug ich endlich die alte Frau, die meine jüngste<lb/> Schwester wartete, was denn das
-                    für ein Mann sey, der Sandmann. "Ey, Tha<lb break="no"/>nelchen, erwiederte diese, <add place="margin-right">weißt du das
+                    für ein Mann sey, der Sandmann. "Ey, Tha<lb break="no"/>nelchen, erwiederte diese, <add place="margin(right)">weißt du das
                         noch<lb/> nicht?</add> das ist ein böser Mann; der komt zu den<lb/> Kindern, wenn sie nicht zu Bett' gehen wollen und wirft
                     ihnen Händevoll<lb/> Sand in die Augen, daß sie zum Kopfe blutig heraus<subst>
                         <del rend="none">s</del>
                         <del rend="strikethrough">charren</del>
                         <add place="inline">springen</add>
                     </subst>, <del rend="strikethrough">und</del>
-                    <add place="margin-right">die</add><lb/>
-                    <add place="margin-left">nimt er</add> dann wirft <subst>
+                    <add place="margin(right)">die</add><lb/>
+                    <add place="margin(left)">nimt er</add> dann wirft <subst>
                         <del rend="strikethrough">er die Auge</del>
                         <del rend="none">n</del>
                         <add place="above">sie</add>
@@ -439,7 +441,7 @@
                     <del rend="strikethrough">schn</del> er<lb/> bemerkte mich nicht, schnell war ich hinein und hinter der Gardiene, die<lb/>
                     <subst>
                         <del rend="strikethrough">nebe</del>
-                        <add place="above-margin-left">einem</add>
+                        <add place="above-margin(left)">einem</add>
                     </subst> gleich <choice>
                         <abbr>nebn</abbr>
                         <expan>neben</expan>
@@ -449,7 +451,7 @@
                     </choice> Vaters<lb/> Kleider hingen vorgezogen <del rend="strikethrough">hin</del> war. Näher und näher dröhnten die Tritte –
                     <lb/> es hustete und scharrte und brumte draußen – das Herz bebte mir vor Angst<lb/> und Erwartung – Heftig wurde die Thüre
                     aufgerißen, mich mit Gewalt er<lb break="no"/>
-                    <pb facs="XV_532_0008.TIF" n="7"/>mannend <note place="margin-right-vertical">(Eigenschaft als Advokat)</note> kukte ich behutsam
+                    <pb facs="XV_532_0008.TIF" n="7"/>mannend <note place="margin(right)-vertical">(Eigenschaft als Advokat)</note> kukte ich behutsam
                     hervor, der Sandmann stand mitten in <lb/> der Stube vor meinem Vater – <del rend="strikethrough">es war der</del>
                     <del rend="strikethrough">mir</del>
                     <del rend="strikethrough">wohlbek</del>
@@ -499,7 +501,7 @@
                             </choice></add>
                     </subst> verschoßener Harbeutel starrte von dem Nacken weg<lb/> so daß man die <del rend="none">S</del><del rend="strikethrough"
                         >teinschnalle</del> silberne Schnalle sah, die die gefaltelte Halsbinde<lb/> schloß. <del rend="strikethrough" seq="3"><add
-                            place="margin-right-vertical" seq="1"><subst seq="2">
+                            place="margin(right)-vertical" seq="1"><subst seq="2">
                                 <del rend="overwritten">Im</del>
                                 <add place="across">Zur</add>
                             </subst> Winterszeit pflegte er ganz weiß zu gehen – selbst Hut, Rock<lb/> und Uhrband waren von weißer Farbe – Ich
@@ -624,7 +626,7 @@
                         rend="strikethrough">er</del><lb/>
                     <subst>
                         <del rend="strikethrough">entsetzlicher</del>
-                        <add place="margin-left">dröhnender</add>
+                        <add place="margin(left)">dröhnender</add>
                     </subst> Stim̄e: Augen her – Augen her! – <del rend="strikethrough">Da vergingen mir die Sinne</del> Ich kreischte auf von wildem
                     Entsetzen gepeckt, und stürzte heraus auf <choice>
                         <abbr>dn</abbr>
@@ -653,7 +655,7 @@
                         <abbr>dr</abbr>
                         <expan>der</expan>
                     </choice> Hände und Füße recht observiren – Und damit<lb/>
-                    <note place="margin-right">(Unbekante Sprache)</note> faßte er mich gewaltig, und schrob mir die Aerme ab und die Füße, und
+                    <note place="margin(right)">(Unbekante Sprache)</note> faßte er mich gewaltig, und schrob mir die Aerme ab und die Füße, und
                     sezte<lb/> sie bald hier – bald dort wieder ein – <add place="inline">'s</add>'steht doch überall nicht fein – 's gut<lb/> so wie
                     es war – Der Alte hat's verstanden – So zischte und lispelte Coppelius<lb/> aber Alles wurde schwarz und finster – ein jäher
                     Krampf durchzukte Nerv<lb/>
@@ -717,7 +719,7 @@
                                 <abbr>mi.</abbr>
                                 <expan>meiner</expan>
                             </choice></add>
-                        <add place="above">Jugendjahre</add> heraus <note place="margin-right">es hieß er habe <choice>
+                        <add place="above">Jugendjahre</add> heraus <note place="margin(right)">es hieß er habe <choice>
                                 <abbr>de</abbr>
                                 <expan>die</expan>
                             </choice><lb/> Stat,</note><lb/>
@@ -918,7 +920,7 @@
                             <abbr>deselbe</abbr>
                             <expan>dieselbe</expan>
                         </choice></add> Ahnung in<lb/>
-                    <add place="margin-left">in̄r trage</add> ihr wohne. – <del rend="strikethrough">Ein J</del> Es hieß, <subst>
+                    <add place="margin(left)">in̄r trage</add> ihr wohne. – <del rend="strikethrough">Ein J</del> Es hieß, <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">C</add>
                     </subst>oppelius habe die Stadt <choice>
@@ -950,7 +952,7 @@
                         <abbr>heitr</abbr>
                         <expan>heiter</expan>
                     </choice> und erzählte viel<lb/>
-                    <note place="margin-left">Es muß n so <choice>
+                    <note place="margin(left)">Es muß n so <choice>
                             <abbr>sy</abbr>
                             <expan>seyn</expan>
                         </choice>)</note> ergötzliches <choice>
@@ -1107,7 +1109,7 @@
                             >versichern</del></add>, <add place="dots" seq="2"><del rend="strikethrough" seq="1">daß</del></add>
                     <del rend="strikethrough" seq="2"><add place="above" seq="1">sagen wie</add></del> deines Briefes Anfang <del rend="strikethrough"
                         >mein Inneres</del>
-                    <add place="margin-left">mich</add><lb/>
+                    <add place="margin(left)">mich</add><lb/>
                     <del rend="strikethrough">so aufregte, daß ich mich gar nicht entsinne</del> tief erschütterte. – Ich konte kaum<lb/> athmen – es
                     flim̄erte mir vor den Augen – Ach mein lieber – <del rend="strikethrough">lieber</del>herzlieber<lb/> Nathanael was konte so
                     entsetzlich in dein Leben getreten seyn – Trennung<lb/> von dir – Niemahls <del rend="overwritten">i</del><add place="across"
@@ -1133,7 +1135,7 @@
                     Sinns bin̄ wie im̄er. – Gerade heraus will ich es dir nur sagen,<lb/> daß Alles Schreckliche und Entsetzliche wovon du sprichst
                     nur in deinem Innern<lb/> vorging, die Außenwelt aber daran wohl wenig Theil hatte. – Widerwärtig<lb/> genug mag der alte
                     Coppelius gewesen seyn, aber daß er Kinder haßte,<lb/>
-                    <del rend="strikethrough">und</del> das machte ihn Euch Kindern unerträglich. <add place="margin-left" seq="1"><choice>
+                    <del rend="strikethrough">und</del> das machte ihn Euch Kindern unerträglich. <add place="margin(left)" seq="1"><choice>
                             <abbr>Natürlichr</abbr>
                             <expan>Natürlicher</expan>
                         </choice>
@@ -1173,7 +1175,7 @@
                     <del rend="strikethrough">Schwesterchen litt ja, wie mir nur noch neulich Mutter erzählte von</del><lb/>
                     <del rend="none">k</del><del rend="strikethrough">lein auf an bösen Augen und starb an der Abzehr Auszehrung,</del> der Vater<lb/>
                     hat wohl <del rend="none">a</del><del rend="strikethrough">ber</del> gewiß <add place="above"><gap extent="1w"/></add> eigene<del
-                        rend="strikethrough">r</del> Unvorsichtigkeit seinen Tod herbeygeführt. <add place="margin-right"><choice>
+                        rend="strikethrough">r</del> Unvorsichtigkeit seinen Tod herbeygeführt. <add place="margin(right)"><choice>
                             <abbr>ud</abbr>
                             <expan>und</expan>
                         </choice>
@@ -1215,16 +1217,16 @@
                     <pb facs="XV_532_0015.TIF" n="14"/> lachst mich aus, nicht we<subst>
                         <del rend="overwritten">n</del>
                         <add place="across">il</add>
-                    </subst> ich was dummes meine, sondern weil ich mich so unge<lb break="no" type="none"/>schickt anstelle. <add place="margin-left"
-                        >es zu <choice>
+                    </subst> ich was dummes meine, sondern weil ich mich so unge<lb break="no" type="none"/>schickt anstelle. <add
+                        place="margin(left)">es zu <choice>
                             <abbr>sagn</abbr>
                             <expan>sagen</expan>
                         </choice>.</add> – <del rend="strikethrough">Mag</del>
                     <add place="above">Giebt</add> es eine Dunkle Macht <del rend="strikethrough">geben</del>, die so recht feindlich und<lb/>
                     verrätherisch einen Faden in unseres legt, woran̄ sie dann uns <del rend="strikethrough">festhält und</del>
-                    <del rend="strikethrough">regirt</del><lb/> festpackt und fortzieht auf einem <add place="margin-left">gefahrvollen<lb/>
+                    <del rend="strikethrough">regirt</del><lb/> festpackt und fortzieht auf einem <add place="margin(left)">gefahrvollen<lb/>
                         verderblichen</add>
-                    <del rend="strikethrough">solchen</del> Wege, den wir sonst nicht betreten <add place="margin-right">haben würden.</add><lb/>
+                    <del rend="strikethrough">solchen</del> Wege, den wir sonst nicht betreten <add place="margin(right)">haben würden.</add><lb/>
                     <del rend="strikethrough">hätten.</del> giebt es <choice>
                         <abbr>ein</abbr>
                         <expan>eine</expan>
@@ -1296,10 +1298,10 @@
                             break="no"/></del><del rend="strikethrough">gens ist es wohl gewiß, daß der Wetterglashä</del> In der That sollte man
                     gar<lb/> nicht glauben, daß der Geist, der aus so hellen hold lächelnden <add place="above">Kindes</add>Augen, oft wie ein<lb/>
                     liebliche süßer Traum <del rend="strikethrough">hervor</del> herausleuchtet so gar verständig, so magistermäßig<lb/> distinguiren
-                    könne. – Sie beruft sich auf dich; Ihr habt über mich gesprochen. Du <add place="margin-right">giebst ihr wohl</add><lb/>
+                    könne. – Sie beruft sich auf dich; Ihr habt über mich gesprochen. Du <add place="margin(right)">giebst ihr wohl</add><lb/>
                     <del rend="strikethrough">liesest ihr wohl <hi rend="latin">Collegia</hi></del>
                     <del rend="strikethrough"><add place="above">philosophisch Unterricht <gap extent="1c" reason="illegible"/></add></del>
-                    <add place="margin-right" seq="1"><gap extent="1c" reason="illegible"/> logischen Unterricht<lb/> damit sie alles fein<lb/>
+                    <add place="margin(right)" seq="1"><gap extent="1c" reason="illegible"/> logischen Unterricht<lb/> damit sie alles fein<lb/>
                         <add place="above" seq="2">sachhaft</add> sondern lerne?</add>? – Laß das bleiben. – Uebrigens ist es wohl gewiß<lb/> daß der
                     Wetterglashändler <hi rend="latin">Giuseppe Coppola</hi> keinesweges der alte Advo<lb break="no"/>kat <hi rend="latin"
                         >Coppelius</hi> ist. Ich höre bey dem neu<del rend="strikethrough">ge</del>kom̄enen überaus geschickten<lb/> Profeßor der
@@ -1331,7 +1333,7 @@
                     <del rend="strikethrough">dir</del>
                     <add place="above">jeder</add> beschreibung siehst du ihn, wenn du den Cagliostro <add hand="#black_hand" place="above">wie er von
                     </add>Chodowiecki <del rend="strikethrough">gezeichnet</del>
-                    <add place="margin-right">in irgend einem</add><lb/> in <del hand="#black_hand" rend="strikethrough">irgend ei</del> berlinischen <choice>
+                    <add place="margin(right)">in irgend einem</add><lb/> in <del hand="#black_hand" rend="strikethrough">irgend ei</del> berlinischen <choice>
                         <abbr>Taschenkalenr</abbr>
                         <expan>Taschenkalender</expan>
                     </choice> steht anschaust. – So sieht Spalanzani aus. –<lb/> Neulich <subst>
@@ -1376,7 +1378,7 @@
                         <del rend="overwritten">e</del>
                         <add place="across">t</add>
                     </subst>, so daß durchaus kein Mensch in ihre Nähe kommen<lb/>
-                    <add place="margin-left">darf</add>
+                    <add place="margin(left)">darf</add>
                     <del rend="strikethrough">dürfe</del>. – Am Ende hat es eine Bewandtniß mit ihr, sie ist vielleicht blödsinnig<lb/> oder sonst –
                     Weshalb schreibe ich dir aber das alles? – beßer <del rend="strikethrough">und <choice>
                             <abbr>kurzr</abbr>
@@ -1402,7 +1404,7 @@
             <milestone rend="horizontal-rule" unit="none"/>
             <div>
                 <p>Seltsamer und wunderlicher kan nichts erfunden werden, als dasjenige ist<lb/> was sich mit meinem armen <del rend="strikethrough"
-                        >unglückliche</del><del rend="none">n</del> Freunde <add place="margin-left" seq="1">dem <del rend="strikethrough" seq="2"
+                        >unglückliche</del><del rend="none">n</del> Freunde <add place="margin(left)" seq="1">dem <del rend="strikethrough" seq="2"
                             >Studenten</del><lb/> jungen Studenten</add> Nathanael <del rend="strikethrough">begeben</del> zugetragen<lb/> und was ich
                     dir, günstiger Leser! zu erzählen, unternom̄en. Hast du, <del rend="none">g</del><del rend="strikethrough">ünstiger</del><add
                         place="margin"><subst>
@@ -1428,7 +1430,7 @@
                         rend="strikethrough">faße er</del> wolle<lb/> er Gestalten <choice>
                         <abbr>keine</abbr>
                         <expan>keinem</expan>
-                    </choice> andern Auge sichtbar <add place="margin-left">im <choice>
+                    </choice> andern Auge sichtbar <add place="margin(left)">im <choice>
                             <abbr>leern</abbr>
                             <expan>leeren</expan>
                         </choice> Raum</add>, erfaßen, <del rend="strikethrough">und</del><add place="above"><choice>
@@ -1452,11 +1454,11 @@
                         <abbr>nu</abbr>
                         <expan>nur</expan>
                     </choice> anzufangen; <del rend="strikethrough">denn</del><lb/>
-                    <add place="margin-left"><choice>
+                    <add place="margin(left)"><choice>
                             <abbr>abr</abbr>
                             <expan>aber</expan>
                         </choice></add> es war dir als müßest du nun gleich im ersten Wort, alles Wunderbare, Herrliche,<lb/> Entsetzliche, Lustige,
-                    grauenhafte, das sich zugetragen, recht zusam̄engreifen, so <add place="margin-right">daß es</add><lb/> daß <del
+                    grauenhafte, das sich zugetragen, recht zusam̄engreifen, so <add place="margin(right)">daß es</add><lb/> daß <del
                         rend="strikethrough">sich</del><del rend="strikethrough">das Erstaunen</del>
                     <del rend="none">d</del><del rend="strikethrough">ein Gef</del><del rend="none">ühl</del>
                     <del rend="strikethrough">sich</del> wie im elektrischen Schlage alle ergreife <pb facs="XV_532_0018.TIF" n="17"/>
@@ -1525,7 +1527,7 @@
                         <abbr>mannigfaher</abbr>
                         <expan>mannigfacher</expan>
                     </choice><lb/> Gestalten riß die Freunde fort und sie sahen wie du, sich <add place="above">selbst</add> mitten im Bilde das aus
-                        <add place="margin-right"><choice>
+                        <add place="margin(right)"><choice>
                             <abbr>dim</abbr>
                             <expan>deinem</expan>
                         </choice> Gemüth</add><lb/>
@@ -1536,7 +1538,7 @@
                     <choice>
                         <abbr>Lesr</abbr>
                         <expan>Leser</expan>
-                    </choice>! gestehen<lb/> muß, <add hand="#new_hand" place="margin-right">eigentlich niemand</add><add place="above"><choice>
+                    </choice>! gestehen<lb/> muß, <add hand="#new_hand" place="margin(right)">eigentlich niemand</add><add place="above"><choice>
                             <abbr>nimd</abbr>
                             <expan>niemand</expan>
                         </choice></add> nach der Geschichte des jungen Nathanael gefragt, du weißt es wohl <choice>
@@ -1576,7 +1578,7 @@
                     <del rend="strikethrough"><add place="above">weil sei</add></del>
                     <add place="above" seq="1"><del rend="strikethrough" seq="2">denn</del> ich</add>
                     <del rend="strikethrough">mein Inne</del><del rend="none">r</del><del rend="strikethrough">es</del><del rend="strikethrough"><add
-                            place="margin-right">war eben</add></del>
+                            place="margin(right)">war eben</add></del>
                     <add place="above">das mich</add><lb/> ganz <del rend="strikethrough">davon</del> erfüllt <del rend="strikethrough">war</del>,
                         <del rend="strikethrough">und mich so, daß</del>
                     <del rend="strikethrough">und</del><add place="above">so daß</add> keines der auf die seltsamste Weise zu<lb break="no"
@@ -1596,7 +1598,7 @@
                     <choice>
                         <abbr>Zusam̄nfügug</abbr>
                         <expan>Zusam̄enfügung</expan>
-                    </choice> der<lb/> Bilder <del rend="strikethrough">) und</del> mein ich) und weil ich <add place="margin-right">dich o mein
+                    </choice> der<lb/> Bilder <del rend="strikethrough">) und</del> mein ich) und weil ich <add place="margin(right)">dich o mein
                         <lb/>Leser!</add> gleich geneigt <choice>
                         <abbr>machn</abbr>
                         <expan>machen</expan>
@@ -1617,7 +1619,7 @@
                             <expan>weiß</expan>
                         </choice></add> nichts geringes ist, mühte und quälte ich mich ab Nathanaels Geschichte<lb/> – bedeutend – originell –
                     ergreifend, <del rend="none">p</del><del rend="strikethrough">ackend</del> anzufangen; ich wollte dich, wirklich, wie<lb/>
-                    <note hand="#new_hand" place="margin-right">packend <choice>
+                    <note hand="#new_hand" place="margin(right)">packend <choice>
                             <abbr>sagn</abbr>
                             <expan>sagen</expan>
                         </choice><lb/>
@@ -1645,7 +1647,7 @@
                         <expan>der</expan>
                     </choice> Student Nathanael als der Wetterglashändler<lb/>
                     <hi rend="latin">Giuseppe Coppola</hi> – das hatte ich in der That schon aufgeschrieben, als ich<lb/>
-                    <note place="margin-right">das <choice>
+                    <note place="margin(right)">das <choice>
                             <abbr>dn</abbr>
                             <expan>den</expan>
                         </choice> Ernst <choice>
@@ -1666,7 +1668,7 @@
                         <gap extent="1-2c" reason="illegible"/></note>in dem wilden Blick des Studenten Nathanael <choice>
                         <abbr>etws</abbr>
                         <expan>etwas</expan>
-                    </choice> poßierliches zu verspüren<lb/><note place="margin-right">die <choice>
+                    </choice> poßierliches zu verspüren<lb/><note place="margin(right)">die <choice>
                             <abbr>Geschiht</abbr>
                             <expan>Geschichte</expan>
                         </choice> ist <choice>
@@ -1757,7 +1759,7 @@
                         <add place="across">s</add>
                     </subst> wirkliche leben, und<lb/>
                     <del rend="none">da</del><del hand="#black_hand" rend="strikethrough">ß die Fabe</del><del rend="none">l</del><add
-                        place="margin-left">daß <choice>
+                        place="margin(left)">daß <choice>
                             <abbr>dr</abbr>
                             <expan>der</expan>
                         </choice> Dichter</add>
@@ -1769,13 +1771,13 @@
                         <del rend="overwritten">r</del>
                         <add place="across">m</add>
                     </subst>
-                    <del rend="strikethrough">An</del><add place="margin-right">Reflex</add><lb/>
+                    <del rend="strikethrough">An</del><add place="margin(right)">Reflex</add><lb/>
                     <del hand="#black_hand" rend="strikethrough">deutung</del> auffaßen <del rend="strikethrough">und reflektire</del><del rend="none"
                         >n</del> könne.<lb/>
                 </p>
                 <p>
-                    <note hand="#new_hand" place="margin-right-vertical">Nebler u</note> Damit klarer alles <add place="above">werde</add>, was gleich
-                    Anfangs zu wißen nöthig <add place="above">w</add>, <del rend="strikethrough">aufgehe</del>, darf<lb/> ich dem, was du <choice>
+                    <note hand="#new_hand" place="margin(right)-vertical">Nebler u</note> Damit klarer alles <add place="above">werde</add>, was
+                    gleich Anfangs zu wißen nöthig <add place="above">w</add>, <del rend="strikethrough">aufgehe</del>, darf<lb/> ich dem, was du <choice>
                         <abbr><subst>
                                 <del rend="overwritten">l</del>
                                 <add place="across">g</add>
@@ -1822,14 +1824,14 @@
                         <abbr>Erzehlug</abbr>
                         <expan>Erzehlung</expan>
                     </choice> fortfehren, aber <handShift new="#new_hand"/> in dem Augenblick steht<lb/>
-                    <note hand="#new_hand" place="margin-left">Clara</note> Clara's Bild so lebendig mir vor Augen, daß ich nicht wegschauen kan<subst>
+                    <note hand="#new_hand" place="margin(left)">Clara</note> Clara's Bild so lebendig mir vor Augen, daß ich nicht wegschauen kan<subst>
                         <del rend="overwritten">!</del>
                         <add place="across">,</add>
                     </subst> so wie es <choice>
                         <abbr>im̄r</abbr>
                         <expan>im̄er</expan>
                     </choice><lb/> geschah, wenn sie mich holdlächelnd anblickte. – Für schön konte Clara keinesweges<lb/>
-                    <note place="margin-left-vertical"><choice>
+                    <note place="margin(left)-vertical"><choice>
                             <abbr>ud</abbr>
                             <expan>und</expan>
                         </choice> Clara</note> gelten<subst>
@@ -1857,9 +1859,9 @@
                             <add place="across">m</add>
                         </subst></del><add place="above"><del rend="none">d</del><del rend="strikethrough">ei<gap extent="2c" reason="illegible"
                             /></del></add><lb/>
-                    <add place="margin-left">einem See <del rend="strikethrough">von</del></add><del rend="strikethrough">Landscha</del><del
+                    <add place="margin(left)">einem See <del rend="strikethrough">von</del></add><del rend="strikethrough">Landscha</del><del
                         rend="none">ft</del> von Ruisdael in dem sich des wolkenlosen Him̄els reines Azur –<lb/>
-                    <add place="margin-left">Wald</add>
+                    <add place="margin(left)">Wald</add>
                     <del rend="none">G</del><del rend="strikethrough">ebüsch</del> und Blumen<add place="above">flor</add> – das <add place="above"
                         >ganze</add>
                     <subst>
@@ -1899,7 +1901,7 @@
                         <abbr>abr</abbr>
                         <expan>aber</expan>
                     </choice>
-                    <add place="margin-left" seq="1">ein <del rend="strikethrough" seq="3"><subst seq="2">
+                    <add place="margin(left)" seq="1">ein <del rend="strikethrough" seq="3"><subst seq="2">
                                 <del rend="overwritten">t</del>
                                 <add place="across">z</add>
                             </subst>artes</del> tiefes<lb/> weiblich zartes Gemüth<lb/>
@@ -1917,7 +1919,7 @@
                     ironische Lächeln: Lieber Freunde! wie möget ihr mir denn zumuthen, daß<lb/>
                     <subst>
                         <del hand="#black_hand" rend="strikethrough">ich</del>
-                        <add place="margin-left">mi<add hand="#black_hand" place="inline">r</add></add>
+                        <add place="margin(left)">mi<add hand="#black_hand" place="inline">r</add></add>
                     </subst> Eure verfließenden Schattengebilde <subst>
                         <del rend="strikethrough">für</del>
                         <add place="above">wie</add>
@@ -1975,7 +1977,7 @@
                         <add place="across">d</add>
                     </subst>es widerwärtigen Wetterglashändlers <hi rend="latin">Coppola</hi> recht feindlich in sein Leben ge<lb break="no"/>treten
                     sey; Alle fühlten das bald, da Nathanael <add type="multiple-anchors"><ptr target="#a123"/></add> gleich in den ersten Tagen <add
-                        place="margin-right" seq="1" type="multiple-anchors" xml:id="a123">sich bald <del rend="strikethrough" seq="2">ga</del><add
+                        place="margin(right)" seq="1" type="multiple-anchors" xml:id="a123">sich bald <del rend="strikethrough" seq="2">ga</del><add
                             place="above" seq="3">in</add>
                         <choice>
                             <abbr>sein</abbr>
@@ -1989,7 +1991,7 @@
                             <expan>verändert</expan>
                         </choice> zeigte</add>
                     <del rend="strikethrough">nicht</del><lb/>
-                    <add place="margin-left">Er <choice>
+                    <add place="margin(left)">Er <choice>
                             <abbr>vrsank</abbr>
                             <expan>versank</expan>
                         </choice> nicht</add> nur in düstre Traümereien <del rend="strikethrough">versank</del>, sondern <del rend="strikethrough"
@@ -2005,12 +2007,12 @@
                         es</del>
                     <del rend="strikethrough"><add place="above">man</add></del> vergeblich <del rend="none">s</del><del rend="strikethrough">ey sich
                             da<lb break="no"/></del><add place="above" seq="1"><del rend="strikethrough" seq="2">es</del> lehne</add>
-                    <add place="margin-left">man sich da</add>gegen auf<del rend="strikethrough">zulehnen</del>
+                    <add place="margin(left)">man sich da</add>gegen auf<del rend="strikethrough">zulehnen</del>
                     <add place="above"><del rend="none">n</del><del rend="strikethrough">oh <choice>
                                 <abbr>mhr</abbr>
                                 <expan>mehr</expan>
                             </choice></del></add>
-                    <add place="margin-right" seq="1">man müße doch<lb/>
+                    <add place="margin(right)" seq="1">man müße doch<lb/>
                         <del rend="strikethrough" seq="2">sich</del>
                         <subst seq="3">
                             <del rend="none">d</del>
@@ -2032,7 +2034,7 @@
                         <add place="above">denn</add>
                     </subst> die<lb/> Begeisterung, in der man nur schaffe<del rend="strikethrough">n könne</del>, komme nicht aus dem <del
                         rend="strikethrough">Innern</del>
-                    <add place="margin-right">eignen Innern</add><lb/> sondern sey das Einwirken irgend eines außer uns selbst liegenden höheren<lb/>
+                    <add place="margin(right)">eignen Innern</add><lb/> sondern sey das Einwirken irgend eines außer uns selbst liegenden höheren<lb/>
                     Prinzips. Der verständigen Clara war diese mystische Schwärmerey im höchsten<lb/> Grade zuwider, doch schien es <choice>
                         <abbr>vrgebens</abbr>
                         <expan>vergebens</expan>
@@ -2073,9 +2075,9 @@
                     </subst>hen. Am frühen Morgen,<lb/> wenn Clara das Frühstück bereiten half, stand er bey ihr und la<subst>
                         <del rend="overwritten">ß</del>
                         <add place="across">s</add>
-                    </subst> ihr aus<lb/> allerley mystischen Büchern vor, daß Clara bat: Aber lieber Nathanael, wenn <add place="margin-right"
+                    </subst> ihr aus<lb/> allerley mystischen Büchern vor, daß Clara bat: Aber lieber Nathanael, wenn <add place="margin(right)"
                         >ich</add><lb/>
-                    <add place="margin-left">dich</add>
+                    <add place="margin(left)">dich</add>
                     <del rend="strikethrough">du</del> nun das böse Prinzip <del rend="none">w</del><del rend="strikethrough">ärst</del>, <add
                         place="above">halten</add> wollte, der feindlich auf meinen Kaffee wirkt?<lb/> Denn wenn ich, wie du es willst, alles stehen
                     und liegen laßen und di<subst>
@@ -2130,7 +2132,7 @@
                     Coppelius und berührte Clara's holde Augen,<lb/> die sprangen <del rend="none">w</del><del rend="strikethrough">ie blutige
                         Funken</del>
                     <del rend="strikethrough">heraus</del>
-                    <add place="margin-right">in Nathanaels Brust<lb/>wie blutige <choice>
+                    <add place="margin(right)">in Nathanaels Brust<lb/>wie blutige <choice>
                             <abbr>Funkn</abbr>
                             <expan>Funken</expan>
                         </choice><lb/>sengend und<lb/>brennend</add>
@@ -2167,7 +2169,7 @@
                     Entsetzen und er schrie auf: Wer hat das geschrieben? – <del hand="#black_hand" rend="strikethrough">Aber Clara</del><lb/>
                     <del rend="none">soll</del><del rend="strikethrough"> es hören – muß es hören</del>! – Bald schien ihm das Ganze doch <del
                         hand="#black_hand" rend="strikethrough">aber</del> wieder<lb/>
-                    <add place="margin-left">nichts</add>
+                    <add place="margin(left)">nichts</add>
                     <del rend="strikethrough">nur</del>
                     <add place="above">als</add> eine sehr gelungene Dichtung, und es war ihm, als müße das Clara's<lb/> kaltes Gemüth entzünden,
                     wiewohl er sich nicht deutlich Bewußt war,<lb/> wozu denn Clara's Gem<subst>
@@ -2410,7 +2412,7 @@
                         <del rend="strikethrough">gespenstischen</del>
                         <add place="above">Sandmanns</add>
                     </subst>
-                    <hi rend="latin">Coppelius</hi> Claren so heilig versprochen, schämte er sich <add place="margin-right">aber</add><lb/> selbst seine<subst>
+                    <hi rend="latin">Coppelius</hi> Claren so heilig versprochen, schämte er sich <add place="margin(right)">aber</add><lb/> selbst seine<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">r</add>
                     </subst> kindischen Gespensterfurcht, nahm sich mit aller Gewalt zusam̄en und<lb/> sprach so sanft und gelaßen als möglich: Ich
@@ -2478,7 +2480,7 @@
                         <del rend="none">t</del>
                         <add place="above">faßte</add>
                     </subst>, <del rend="strikethrough">bey</del><add place="above">um</add><lb/>
-                    <add place="margin-left">noch</add> mehr Brillen herauszubringen, unerachtet schon hunderte <del rend="strikethrough">auf dem
+                    <add place="margin(left)">noch</add> mehr Brillen herauszubringen, unerachtet schon hunderte <del rend="strikethrough">auf dem
                         Tis</del><del rend="none">che,</del><add place="above">da lagen</add> beym Arm<lb/> festgepakt. Coppola machte sich mit
                     heiserem widrigen Lachen <del rend="strikethrough">lod</del> sanft los, und<lb/> mit den Worten: Ah! – nix für Sie – nix für sie –
                     aber hier – hier sköne Glas! – sköne<lb/> Glas, hatte er alle Brillen zusam̄engerafft, weggepakt und aus der Seitentasche<lb/> des
@@ -2490,7 +2492,7 @@
                     ruhig, und an Clara denkend sah er wohl ein, daß der entsetzliche Spuck nur<lb/> aus seinem Innern hervorgegangen, so wie daß
                     Coppola ein höchst ehrlicher Mecha<lb break="no"/>nicus und Opticus, keineswegs aber <hi rend="latin">Coppelii</hi> verfluchter
                     Doppeltgänger und<lb/>
-                    <note place="margin-right">u</note> Revenant seyn könne. Zudem <subst>
+                    <note place="margin(right)">u</note> Revenant seyn könne. Zudem <subst>
                         <del rend="strikethrough">lag waren</del>
                         <add place="above">hatten</add>
                     </subst> alle Gläser, die <hi rend="latin">Coppola</hi> nun auf den<lb/> Tisch gelegt <add place="inline">,</add>
@@ -2498,7 +2500,7 @@
                         rend="strikethrough">um</del> alles wieder gut zu machen beschloß Nathanael <del rend="strikethrough">nun wirk</del><del
                         rend="none">li</del>
                     <add place="above">dem <hi rend="latin">Coppola</hi></add><lb/>
-                    <add place="margin-left">jezt</add>
+                    <add place="margin(left)">jezt</add>
                     <del rend="strikethrough">nun</del> wirklich etwas abzukaufen. Er ergriff ein kleines sehr saubres TaschenPer<lb break="no"
                     />spektiv und sah, um es zu prüfen, durch das Fenster. Noch im Leben war ihm kein<lb/> Glas <del rend="none">v</del><del
                         rend="strikethrough">on der Reinheit Stärke und Deutlichkeit</del> vorgekom̄en, das die Gegenstande<lb/> so rein, scharf und
@@ -2650,7 +2652,7 @@
                     wurde er in Spalanzanis<lb/> Hause ein geraüschvolles Treiben gewahr. Die Thüren standen offen, man trug<lb/> allerley Geräthe
                     hinein, die Fenster des ersten Stocks waren ausgehoben, <del rend="strikethrough">und</del> geschäffti<lb break="no"/>ge Mägde
                     kehrten und staübten mit großen Haarbeesen und <del rend="strikethrough">aus dem Innern</del>
-                    <add place="margin-right">sezten</add><lb/>
+                    <add place="margin(right)">sezten</add><lb/>
                     <del rend="strikethrough">schallte</del>
                     <del rend="strikethrough"><subst>
                             <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
@@ -2694,7 +2696,7 @@
                         <add place="above">schimmerten</add>
                     </subst> zum Profeßor. Die Gesellschaft war zahlreich und glänzend; Olimpia<lb/>
                     <add place="inline">er</add>schien sehr reich und geschmackvoll gekleidet – Man mußte ihr schön geformtes<lb/> Gesicht, ihren
-                    hohen majestätischen Wuchs bewundern, <add place="margin-right-vertical"><del rend="strikethrough">wiewo</del><del rend="none"
+                    hohen majestätischen Wuchs bewundern, <add place="margin(right)-vertical"><del rend="strikethrough">wiewo</del><del rend="none"
                             >hl</del> der ganz <choice>
                             <abbr>sondrbar</abbr>
                             <expan>sonderbar</expan>
@@ -2716,11 +2718,14 @@
                     <del rend="strikethrough">aufl</del> in der <add place="above">sie</add> sich frey zu bewegen noch nicht <choice>
                         <abbr>vrmochte</abbr>
                         <expan>vermochte</expan>
-                    </choice>, zuschrieb. <add place="margin-right">Das Conzert</add><lb/>
-                    <add place="margin-left">began</add>
+                    </choice>, zuschrieb. <add place="margin(right)">Das Conzert</add><lb/>
+                    <add place="margin(left)">began</add>
                     <subst>
                         <del rend="strikethrough">Sie</del>
-                        <add place="above"><choice/><abbr>Ompa</abbr><expan>Olimpia</expan></add>
+                        <add place="above"><choice>
+                                <abbr>Ompa</abbr>
+                                <expan>Olimpia</expan>
+                            </choice></add>
                     </subst> spielte <del rend="strikethrough">den Flügel mit ungla</del> den Flügel mit großer Fertigkeit und trug<lb/>
                     <choice>
                         <abbr>ebn</abbr>
@@ -2766,9 +2771,9 @@
                         <del rend="none">d</del>
                         <del rend="overwritten">en</del>
                         <add place="across">ie</add>
-                    </subst> schöne Olimpia und durchflog mit ihr die Reihen. – Er glaubte <add place="margin-right">sonst</add><lb/> recht tacktmäßig
-                    getanzt zu haben, aber an der ganz eignen rythmischen<lb/> Festigkeit, womit Olimpia tanzte, und die ihn oft ordentlicher Weise
-                    aus <choice>
+                    </subst> schöne Olimpia und durchflog mit ihr die Reihen. – Er glaubte <add place="margin(right)">sonst</add><lb/> recht
+                    tacktmäßig getanzt zu haben, aber an der ganz eignen rythmischen<lb/> Festigkeit, womit Olimpia tanzte, und die ihn oft
+                    ordentlicher Weise aus <choice>
                         <abbr>dr</abbr>
                         <expan>der</expan>
                     </choice> Haltung<lb/> brachte, merkte er bald, wie sehr ihm sonst der Takt gemangelt. – <del rend="strikethrough">Durch
@@ -2782,7 +2787,7 @@
                     <add place="above">er</add>
                     <del rend="strikethrough">gewahr</del><lb/>
                     <del rend="strikethrough">daß</del>
-                    <add place="above-margin-left">blieb</add>
+                    <add place="above-margin(left)">blieb</add>
                     <del rend="strikethrough">sie</del>
                     <add place="above"><choice>
                             <abbr>Olmpa</abbr>
@@ -2834,11 +2839,11 @@
                         </choice></add>
                     <del rend="strikethrough">Begeisteru</del><del rend="none">ng</del>
                     <del rend="strikethrough">eine</del>
-                    <del rend="strikethrough"><add place="margin-right">in Worten</add></del>
-                    <add place="above-margin-right">in Worten</add><lb/>
+                    <del rend="strikethrough"><add place="margin(right)">in Worten</add></del>
+                    <add place="above-margin(right)">in Worten</add><lb/>
                     <del rend="none">S</del><del rend="strikethrough">prache</del>, die keiner verstand, weder er noch Olimpia. Doch diese vielleicht,
                     den̄<lb/> sie sah ihm unverrückt ins Auge, und seufzte ein mahl über das andere:<lb/> Ach! – Ach! – worauf denn Nathanael sprach:
-                    O du herrliche him̄lische<del rend="strikethrough">r Stern</del> – <add place="margin-right">Frau!</add><lb/> Du Strahl aus dem
+                    O du herrliche him̄lische<del rend="strikethrough">r Stern</del> – <add place="margin(right)">Frau!</add><lb/> Du Strahl aus dem
                     verheißenen Jenseits der Liebe – du tiefes Gemüth<lb/> in dem sich mein ganzes Seyn spiegelt, und noch mehr dergleichen,
                     worauf<lb/> denn Olimpia immer wieder seufzte: Ach! Ach! – Der Profeßor Spalanzani<lb/> ging einige mahl bey den glücklichen
                     vorüber, und lächelte sie ganz seltsam<lb/> zufrieden an. <add place="above">Dem</add> Nathanael schien es, unerachtet er sich in
@@ -2852,8 +2857,8 @@
                         <abbr>vrzweifelt</abbr>
                         <expan>verzweifelt</expan>
                     </choice>, er küßte Olimpias Hand – er neigte sich zu ihrem Munde – eiskalte<lb/> Lippen begegneten der <add place="above">Gluth
-                        der</add> seinigen Gluth –<add place="margin-right">So wie, als<lb/> er Olimpias<lb/> kalte Hand<lb/> berührte, fühlte<lb/> er
-                        sich wie von<lb/> inerm Grausem<lb/> erfaßt – die<lb/> Legende von<lb/>
+                        der</add> seinigen Gluth –<add place="margin(right)">So wie, als<lb/> er Olimpias<lb/> kalte Hand<lb/> berührte, fühlte<lb/>
+                        er sich wie von<lb/> inerm Grausem<lb/> erfaßt – die<lb/> Legende von<lb/>
                         <choice>
                             <abbr>dr</abbr>
                             <expan>der</expan>
@@ -2942,8 +2947,8 @@
                     lohnen diesen Burschen zu beweisen, daß eben ihr <add place="above">eigner</add> Stumpfsinn<lb/> es ist, der <del
                         rend="strikethrough">ihnen</del>
                     <add place="above">sie</add> Olimpias tiefes herrliches Gemüth <del rend="strikethrough">zu</del> erkennen, hindert? – <lb/> "Thu
-                    mir den Gefallen Bruder! sprach eines Tages Siegfried: thu mir den<lb/> Gefallen und sage mir, wie es dir <add place="margin-left"
-                        >gescheuten<lb/> muntren Kerl</add> möglich war dich in das <subst>
+                    mir den Gefallen Bruder! sprach eines Tages Siegfried: thu mir den<lb/> Gefallen und sage mir, wie es dir <add
+                        place="margin(left)">gescheuten<lb/> muntren Kerl</add> möglich war dich in das <subst>
                         <del rend="strikethrough">steinerne</del>
                         <add place="above" seq="1">Wa<subst seq="2">
                                 <del rend="overwritten">t</del>
@@ -2995,7 +3000,7 @@
                         <del rend="overwritten">–</del>
                         <add place="across">i</add>
                     </subst>st so sonderbar abgemeßen, <del rend="strikethrough">als wie durch den Gang</del> das Gehen<lb/>
-                    <note hand="#major_hand" place="margin-left">jede <choice>
+                    <note hand="#major_hand" place="margin(left)">jede <choice>
                             <abbr>Bewegug</abbr>
                             <expan>Bewegung</expan>
                         </choice><lb/> scheint <add place="above" seq="2">vom</add>
@@ -3056,7 +3061,7 @@
                                 <del rend="overwritten">h</del>
                                 <add place="across">l</add>
                             </subst>ohrne</expan>
-                    </choice> Worte. "Behüte dich Gott Herr Bruder<lb/> sagte Siegfried: <add hand="#new_hand" place="margin-right" seq="1"><del
+                    </choice> Worte. "Behüte dich Gott Herr Bruder<lb/> sagte Siegfried: <add hand="#new_hand" place="margin(right)" seq="1"><del
                             rend="strikethrough" seq="2">leise und</del>
                         <add place="above" seq="3">sehr sanft, beinahe</add><lb/> wehmütig</add>
                     <choice>
@@ -3077,7 +3082,7 @@
                         <add place="above">treu</add>
                     </subst> mit ihm,<lb/> er schüttelte daher die ihm dargebotene Hand recht herzlich <milestone rend="horizontal-rule" unit="none"/>
                 </p>
-                <note hand="#new_hand" place="margin-right">(neuer Abschnitt</note>
+                <note hand="#new_hand" place="margin(right)">(neuer Abschnitt</note>
                 <p>
                     <handShift medium="#new_hand"/>Nathanael hatte rein vergeßen, daß es eine Clara in der Welt gäbe die er<lb/> sonst geliebt – die
                     Mutter – Lothar – Alle waren aus seinem Gedächtniß ver<lb break="no"/>schwunden er lebte nur für Olimpia, bey der er Täglich
@@ -3098,8 +3103,9 @@
                         <expan>hintereinander</expan>
                     </choice> ohne<lb/> zu ermüden. Aber auch nie hatt' er eine solche <del rend="strikethrough">herrliche</del> Zuhörerin gehahbt.
                     Sie stickte<lb/> und strikte nicht, sie sah nicht durch's Fenster, sie fütterte keinen Vogel, sie spielte mit<lb/> keinem
-                    Schooßhündchen <del rend="none">o</del><del rend="strikethrough">der</del> mit kein Lieblingskatze – <add place="margin-right">sie
-                        drehte keine<lb/> Papierschnitzchen<lb/> oder sonst was in<lb/> der Hand</add> sie durfte kein Gähnen durch<lb/> ein leises <choice>
+                    Schooßhündchen <del rend="none">o</del><del rend="strikethrough">der</del> mit kein Lieblingskatze – <add place="margin(right)"
+                        >sie drehte keine<lb/> Papierschnitzchen<lb/> oder sonst was in<lb/> der Hand</add> sie durfte kein Gähnen durch<lb/> ein
+                    leises <choice>
                         <abbr>erzwungns</abbr>
                         <expan>erzwungnes</expan>
                     </choice> Husten bezwingen – kurz stundenlang sah sie mit starrem Blick un<lb break="no"/><choice>
@@ -3156,7 +3162,7 @@
                         <add place="across">n</add>
                     </subst><gap extent="1c" reason="illegible"/> Augenblike z.B. <del rend="none">g</del><del rend="strikethrough">lei</del> des<lb/>
                     Morgens gleich nach dem Erwachen, auch wirklich an Olimpias gänzliche Paßivität und<lb/>
-                    <note place="margin-right-vertical"><hi rend="underline">Die Arie!</hi></note> Wortkargheit, so sprach er doch: Was sind Worte –
+                    <note place="margin(right)-vertical"><hi rend="underline">Die Arie!</hi></note> Wortkargheit, so sprach er doch: Was sind Worte –
                     Worte – <subst>
                         <del rend="overwritten">Ihr</del>
                         <add place="across">de</add>
@@ -3185,7 +3191,7 @@
                             <abbr>deine</abbr>
                             <expan>deiner</expan>
                         </choice> Liebe noch was wenigs Verstand ein! – O ihr<lb/>
-                        <add place="margin-left"><choice>
+                        <add place="margin(left)"><choice>
                                 <abbr>erbärmlichn</abbr>
                                 <expan>erbärmlichen</expan>
                             </choice></add> Thoren! dachte Nathanael bey sich selbst, sagte es aber nicht <add place="above">laut</add>, <choice>
@@ -3226,7 +3232,7 @@
                         <add place="across">d</add>
                     </subst> rannte herüber zu Olimpia.<lb/></p>
                 <p>Schon auf der Treppe, auf dem Flur, vernahm er ein wunderliches Getöse, <del rend="strikethrough">das</del><lb/>
-                    <add place="margin-left">es schien</add> aus Spalanzanis StudirZim̄er herauszuschallen – ein Stampfen – ein Klirren –<lb/> ein
+                    <add place="margin(left)">es schien</add> aus Spalanzanis StudirZim̄er herauszuschallen – ein Stampfen – ein Klirren –<lb/> ein
                     Schlagen gegen die Thüre – dazwischen Flüche und <choice>
                         <abbr>Vrwünschungen</abbr>
                         <expan>Verwünschungen</expan>
@@ -3252,7 +3258,7 @@
                     <choice>
                         <abbr>duheinandr</abbr>
                         <expan>durcheinander</expan>
-                    </choice> schwirrten <add place="margin-left"><choice>
+                    </choice> schwirrten <add place="margin(left)"><choice>
                             <abbr>ud</abbr>
                             <expan>und</expan>
                         </choice> tobten</add> – Hinein stürzte von nahmenloser Angst ergriffen Nathanael.<lb/> Der Profeßor hatte eine weibliche
@@ -3373,7 +3379,7 @@
                     </choice> Boden gewurzelt stand Nathanael – nur zu<lb/> deutlich hatte er gesehen, Olimpias Wachsgesicht hatte <choice>
                         <abbr>kein</abbr>
                         <expan>keine</expan>
-                    </choice> Augen <add place="margin-right" seq="1">statt ihrer <del rend="strikethrough" seq="2">graßl</del><lb/> schwarze todte
+                    </choice> Augen <add place="margin(right)" seq="1">statt ihrer <del rend="strikethrough" seq="2">graßl</del><lb/> schwarze todte
                         Höhlen</add> – sie war eine<lb/> leblose Puppe – Spalanzani <del rend="strikethrough">lag</del> wälzte sich <subst>
                         <del rend="strikethrough">im Blute</del>
                         <add place="above">auf <choice>
@@ -3426,12 +3432,12 @@
                     </choice> Olimpia – da <subst>
                         <del rend="overwritten">h</del>
                         <add place="across">d</add>
-                    </subst>a hast du die Augen – Nun sah Nathanael, wie ein Paar <add place="margin-right">blutige</add><lb/> Augen auf dem Boden
+                    </subst>a hast du die Augen – Nun sah Nathanael, wie ein Paar <add place="margin(right)">blutige</add><lb/> Augen auf dem Boden
                     liegend ihn <choice>
                         <abbr>anstarrtn</abbr>
                         <expan>anstarrten</expan>
                     </choice>, die faßte Spalanzani, <del rend="strikethrough">un</del><del rend="none">d</del>
-                    <add place="above-margin-right">mit <choice>
+                    <add place="above-margin(right)">mit <choice>
                             <abbr>dr</abbr>
                             <expan>der</expan>
                         </choice>
@@ -3459,7 +3465,7 @@
                     verbunden wurde. <subst>
                         <del rend="overwritten">A</del>
                         <add place="across">S</add>
-                    </subst>iegfried, <del rend="strikethrough">so</del> so stark er war, vermochte <add place="margin-right">nicht</add><lb/> den
+                    </subst>iegfried, <del rend="strikethrough">so</del> so stark er war, vermochte <add place="margin(right)">nicht</add><lb/> den
                     Nathanael <del rend="strikethrough"><choice>
                             <abbr>dn</abbr>
                             <expan>den</expan>
@@ -3473,7 +3479,7 @@
                     </choice> Stim̄e <choice>
                         <abbr>im̄rfort</abbr>
                         <expan>im̄erfort</expan>
-                    </choice>: Holspüppchen<lb/> dreh' dich – und schlug um sich mit geballten Faüsten. <add place="margin-right">Endlich gelang
+                    </choice>: Holspüppchen<lb/> dreh' dich – und schlug um sich mit geballten Faüsten. <add place="margin(right)">Endlich gelang
                         es<lb/> mehreren ihn zu <lb/> überwältigen, <choice>
                             <abbr>ind</abbr>
                             <expan>indem</expan>
@@ -3684,7 +3690,7 @@
                         <abbr>abr</abbr>
                         <expan>aber</expan>
                     </choice> himlisch<lb/>
-                    <add hand="#new_hand" place="margin-left" seq="1"><choice>
+                    <add hand="#new_hand" place="margin(left)" seq="1"><choice>
                             <abbr>Wärme</abbr>
                             <expan>Wärme</expan>
                         </choice>
@@ -3804,7 +3810,7 @@
                         <abbr>hinin</abbr>
                         <expan>hinein</expan>
                     </choice> in <add place="above">die</add>
-                    <add place="margin-right">duftigen</add><lb/>
+                    <add place="margin(right)">duftigen</add><lb/>
                     <del rend="strikethrough"><choice>
                             <abbr>frn</abbr>
                             <expan>fern</expan>
@@ -4043,7 +4049,7 @@
                         <del rend="none">S</del>
                         <del rend="strikethrough">chweste</del>
                         <del rend="none">r</del>
-                        <add place="margin-left">Clara</add>
+                        <add place="margin(left)">Clara</add>
                     </subst> in <choice>
                         <abbr>dn</abbr>
                         <expan>den</expan>
@@ -4152,7 +4158,7 @@
                         <abbr>dr</abbr>
                         <expan>der</expan>
                     </choice> im Innern zerrißene<lb/> Nathanael niemahls gewähren kon̄te. <g type="unknown"/></p>
-                <stamp rend="align(right)">Hier findet sich der braune Stempel der Märkischen Museums.</stamp>
+                <fw><stamp rend="align(right)">Hier findet sich der braune Stempel der Märkischen Museums.</stamp></fw>
                 <pb facs="XV_532_0038.TIF" n="37"/>
                 <pb facs="XV_532_0039.TIF" n="38"/>
             </div>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass Tieck, therein Kryptonachlass Adelheid Reinbold</collection>
@@ -213,8 +220,9 @@
                 <language ident="de" usage="100"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-09-17" who="#johanna.preusse">Changed respStmt according to new rules; Added genre "Briefe"</change>
             <change when-iso="2013-08" who="#johanna.preusse">Checked transcription and encoding.</change>
             <change when-iso="2013-07-16/2013-07-18" who="#johanna.preusse">Checked the header.</change>
@@ -226,13 +234,13 @@
             <div type="transcription">
                 <pb facs="00000122.tif" n="1"/>
                 <note hand="#pencil" rend="align(right)" type="foliation">1</note>
-                <lb/>
-                <note resp="#janin.afken">Der vorliegende Text wurde von <title ref="#w00209">Lothar Busch</title> als „literarischer Brief“ (S. 116)
-                    bezeichnet. Dieser Gattungseinordnung ist eindeutig zuzustimmen, erinnert der Text doch an die von Gotthold Ephraim Lessing
-                    veröffentlichten Texte in Nicolais Zeitschrift <title ref="#w00039">„Briefe, die neueste Literatur betreffend“</title>. Zwar wird
-                        <persName ref="#p0133" type="bi">Ludwig Tieck</persName> auf dem Titelblatt des Manuskriptes adressiert, doch ist der
-                    briefähnliche Text nicht versendet worden, zumindest weist das Dokument keine entsprechenden Spuren (wie Stempel oder Faltungen)
-                    auf. Es ist leider nicht zu rekonstruieren, ob Adelheid Reinbold Ludwig Tieck den Literaturbrief zu Lebzeiten übergeben hat. </note>
+                <note resp="#janin.afken"><p xml:lang="de">Der vorliegende Text wurde von <title ref="#w00209">Lothar Busch</title> als „literarischer
+                        Brief“ (S. 116) bezeichnet. Dieser Gattungseinordnung ist eindeutig zuzustimmen, erinnert der Text doch an die von Gotthold
+                        Ephraim Lessing veröffentlichten Texte in Nicolais Zeitschrift <title ref="#w00039">„Briefe, die neueste Literatur
+                            betreffend“</title>. Zwar wird <persName ref="#p0133" type="bi">Ludwig Tieck</persName> auf dem Titelblatt des
+                        Manuskriptes adressiert, doch ist der briefähnliche Text nicht versendet worden, zumindest weist das Dokument keine
+                        entsprechenden Spuren (wie Stempel oder Faltungen) auf. Es ist leider nicht zu rekonstruieren, ob Adelheid Reinbold Ludwig
+                        Tieck den Literaturbrief zu Lebzeiten übergeben hat. </p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <lb/>
                 <head rend="align(center)">Seiner Hochwohlgeboren<lb/> Herrn Ludwig Tieck</head>
                 <lb/>
@@ -256,12 +264,13 @@
                     ich vielleicht mich darüber rechtfertigen<lb/> kan̄, daß ich sagte, ich ahne den Mittelpunkt Ihrer<lb/> Poësie. Wie gerne möchte
                     ich aus den von allen<lb/> Seiten zusam̄enstim̄enden Tönen eine Ouvertüre<lb/> komponieren! Aber das ist nun nicht zu ändern,<lb/>
                     <persName ref="#p0241" type="bi">J. P.</persName> sagt einmal, das Talent müsse eine Rich<lb break="no"/>tung nach dem Schwerpunkt
-                    haben; ich bin selbst<lb/> im Schwerpunkt,<note resp="#janin.afken" xml:lang="de">In <persName ref="#p0241" type="bi">Jean
-                            Pauls</persName>
-                        <title ref="#w00322">Titan</title> heißt es: "Sie fühlen alles Schöne und Große gewaltig und wollen es aus sich wieder
-                        erschaffen, aber es gelingt ihnen nur schwach; sie haben nicht wie das Genie eine Richtung nach dem Schwerpunkt, sondern
-                        stehen selber im Schwerpunkt, so daß die Richtungen einander aufheben." (Band 4, 27. Jobelperiode, 105. Zykel).</note> das ist
-                    meine einzige Entschul<lb break="no"/>digung. Erlauben Sie, daß ich, wie ein<lb/> Knabe, der aus der Schule komt <choice>
+                    haben; ich bin selbst<lb/> im Schwerpunkt,<note resp="#janin.afken" xml:lang="de"><p xml:lang="de">In <persName ref="#p0241"
+                                type="bi">Jean Pauls</persName>
+                            <title ref="#w00322">Titan</title> heißt es: "Sie fühlen alles Schöne und Große gewaltig und wollen es aus sich wieder
+                            erschaffen, aber es gelingt ihnen nur schwach; sie haben nicht wie das Genie eine Richtung nach dem Schwerpunkt, sondern
+                            stehen selber im Schwerpunkt, so daß die Richtungen einander aufheben." (Band 4, 27. Jobelperiode, 105. Zykel).</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> das ist meine einzige Entschul<lb break="no"/>digung. Erlauben Sie, daß ich, wie
+                    ein<lb/> Knabe, der aus der Schule komt <choice>
                         <abbr>u.</abbr>
                         <expan>und</expan>
                     </choice> nicht<lb/>
@@ -293,10 +302,11 @@
                     nothwendigen Gegensaz zurückgeführt<lb/> werden, die die historischen Perioden, wie<lb/> Jahreszeiten, kurz Alles organisch
                     betrachtet.<lb/> Ist nicht die <title ref="#w00323">Morgenröthe</title> dieses magischen<lb/> Tages <persName ref="#p0377"
                         type="bi">Jakob Böhme</persName>
-                    <note resp="#janin.afken">Die Engführung von „Morgenröthe“ und „Jakob Böhme“ lässt auf die von <persName ref="#p0377" type="bi"
-                            >Jakob Böhme</persName> verfasste philosophische Schrift <title ref="#w00323">"Aurora, das ist: Morgenröthe im Aufgang und
-                            Mutter der Philosophiae"</title> schließen. Jedoch bedient sich Adelheid Reinbold hier dem literarischen Gestus des Spiels
-                        mit Mehrdeutigkeiten, wonach die „Morgenröthe“ auch als Metapher für den Anfang gelesen werden kann.</note><choice>
+                    <note resp="#janin.afken"><p xml:lang="de">Die Engführung von „Morgenröthe“ und „Jakob Böhme“ lässt auf die von <persName
+                                ref="#p0377" type="bi">Jakob Böhme</persName> verfasste philosophische Schrift <title ref="#w00323">"Aurora, das ist:
+                                Morgenröthe im Aufgang und Mutter der Philosophiae"</title> schließen. Jedoch bedient sich Adelheid Reinbold hier dem
+                            literarischen Gestus des Spiels mit Mehrdeutigkeiten, wonach die „Morgenröthe“ auch als Metapher für den Anfang gelesen
+                            werden kann.</p><p xml:lang="en"/><p xml:lang="fr"/></note><choice>
                         <abbr>u.</abbr>
                         <expan>und</expan>
                     </choice> die Mittagsson̄e<lb/> der wiedergeborene <persName ref="#p0206" type="bi">Shakespeare</persName>? jener das<lb/>
@@ -393,8 +403,10 @@
                     ich ein Professor<lb/> der Psychologie, so würd' ich etwa docieren<lb/>
                     <persName ref="#p0194" type="bi">Göthe</persName> habe das menschliche Wollen, <rs ref="#p0133" type="bi">Sie</rs><lb/> die
                     eigentliche Vernunft oder Fantasie<lb/> bearbeitet, <persName ref="#p0194" type="bi">Göthe</persName> sei <hi rend="latin">a
-                        posteriorisch</hi>,<lb/> Sie <hi rend="latin">a pri<del rend="overwritten">o</del><add place="across">o</add>risch</hi>
-                    verfahren. – <lb/></p>
+                        posteriorisch</hi>,<lb/> Sie <hi rend="latin">a pri<subst>
+                            <del rend="overwritten">o</del>
+                            <add place="across">o</add>
+                        </subst>risch</hi> verfahren. – <lb/></p>
                 <p>Wie ferner Sie die Geschichte des mensch<lb break="no"/>lichen Geistes zur Geschichte der Poësie<lb/> erhoben, das Leben in Kunst
                         verwan<lb break="no"/>delt haben, so haben die Filosofen die<lb/> Geschichte der Natur zur Geschichte der<lb/> Menschheit
                     gemacht, so daß auch die<lb/> äußere Natur ein c<add place="inline">r</add>ystallisiertes<lb/> Drama ist. Charakterisiert sich
@@ -412,7 +424,7 @@
                         <expan>und</expan>
                     </choice>
                     <add place="above" type="add-mark">+</add>
-                    <add place="margin-right"><add type="add-mark">+</add>
+                    <add place="margin(right)"><add type="add-mark">+</add>
                         <choice>
                             <abbr>natürl.</abbr>
                             <expan>natürlich</expan>
@@ -477,10 +489,11 @@
                     <lb/>
                     <persName ref="#p0241" type="bi">Jean Pauls</persName> geistlichen Vater nen̄en. We<lb break="no"/>nigstens kan̄ ich nur auf diese
                     Weise ver<lb break="no"/>stehen, was <persName ref="#p0146" type="bi">Solger</persName> von dem erdgebornen <lb/> Ringen <persName
-                        ref="#p0241" type="bi">Jean Pauls</persName> sagt <note resp="#janin.afken" xml:lang="de">In <title ref="#w00211">Solgers
-                            Nachgelassene Schriften und Briefwechsel</title> heißt es: "Es giebt irdische Naturen, die sich mit aller Gewalt nach dem
-                        Höhern abquälen und das Schönste und Beste ihrer Welt auf einander häufen, um darauf in die andere zu steigen, aber natürlich
-                        vergebens. Dahin gehört auch der erdgeborne Jean Paul." (Bd. 1, S. 93: in "Kleine Aufsätze vom Jahre 1803")</note>
+                        ref="#p0241" type="bi">Jean Pauls</persName> sagt <note resp="#janin.afken"><p xml:lang="de">In <title ref="#w00211">Solgers
+                                Nachgelassene Schriften und Briefwechsel</title> heißt es: "Es giebt irdische Naturen, die sich mit aller Gewalt nach
+                            dem Höhern abquälen und das Schönste und Beste ihrer Welt auf einander häufen, um darauf in die andere zu steigen, aber
+                            natürlich vergebens. Dahin gehört auch der erdgeborne Jean Paul." (Bd. 1, S. 93: in "Kleine Aufsätze vom Jahre
+                            1803")</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <choice>
                         <abbr>u.</abbr>
                         <expan>und</expan>
@@ -496,11 +509,13 @@
                         break="no"/>ler geworden, weil er im̄erzu <choice>
                         <sic>sichsagte</sic>
                         <corr resp="#janin.afken">sich sagte</corr>
-                    </choice>: <lb/> Ich! So wird er im̄er "das Faktotum <lb/> der Welt“<note resp="#janin.afken" xml:lang="de">Zitat aus <persName
-                            resp="#p0241" type="bi">Jean Pauls</persName>
-                        <title ref="#w00322">Titan</title>. (Band 4, 31. Jobelperiode, 122. Zykel)</note>, wie Schoppe <note resp="#janin.afken"
-                        xml:lang="de">Schoppe ist einer von fünf Protagonisten in <persName ref="#p0241" type="bi">Jean Pauls</persName>
-                        <title ref="#w00322">Titan</title>.</note> von sich beken̄t, <lb/> ja er ist der Geplagte selbst <choice>
+                    </choice>: <lb/> Ich! So wird er im̄er "das Faktotum <lb/> der Welt“<note resp="#janin.afken" xml:lang="de"><p xml:lang="de">Zitat
+                            aus <persName resp="#p0241" type="bi">Jean Pauls</persName>
+                            <title ref="#w00322">Titan</title>. (Band 4, 31. Jobelperiode, 122. Zykel)</p><p xml:lang="en"/><p xml:lang="fr"/></note>,
+                    wie Schoppe <note resp="#janin.afken"><p xml:lang="de">Schoppe ist einer von fünf Protagonisten in <persName ref="#p0241"
+                                type="bi">Jean Pauls</persName>
+                            <title ref="#w00322">Titan</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> von sich beken̄t, <lb/> ja er ist der
+                    Geplagte selbst <choice>
                         <abbr>u.</abbr>
                         <expan>und</expan>
                     </choice> mich <lb/> wundert, daß man nicht auf <persName ref="#p0241" type="bi">Jean <lb/> Pauls</persName> Grabstein die Worte
@@ -529,9 +544,9 @@
                     <hi rend="underline">Str<subst>
                             <del rend="overwritten"><gap extent="one char" reason="illegible"/></del>
                             <add>a</add>
-                        </subst>hl, wohnst wieder im Feuer!“</hi><note resp="#janin.afken" xml:lang="de">vgl. die Stelle aus <persName resp="#p0241"
-                            type="bi">Jean Pauls</persName>
-                        <title ref="#w00322">Titan</title>. (Band 4, 34. Jobelperiode, 139. Zykel)</note>
+                        </subst>hl, wohnst wieder im Feuer!“</hi><note resp="#janin.afken"><p xml:lang="de">vgl. die Stelle aus <persName
+                                resp="#p0241" type="bi">Jean Pauls</persName>
+                            <title ref="#w00322">Titan</title>. (Band 4, 34. Jobelperiode, 139. Zykel)</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <lb/> Je mehr <choice>
                         <sic>ichin</sic>
                         <corr resp="#janin.afken">ich in</corr>
@@ -599,7 +614,7 @@
                         <expan>und</expan>
                     </choice> daß ich klar erken̄e, wie mein ganzes <lb/> Leben bis auf diesen Augenblick kein an<lb break="no"/>deres werden kon̄te,
                     als es <del rend="stain">g</del> geworden ist. <lb/> War es ja doch gerade mein Leben, das <lb/> mir jene hohe Offenbarungen der
-                    Poësie <add place="margin-right"><choice>
+                    Poësie <add place="margin(right)"><choice>
                             <abbr>überh.</abbr>
                             <expan>überhaupt</expan>
                         </choice> verstehen lehrte <choice>
@@ -618,8 +633,8 @@
                         <expan>und</expan>
                     </choice> den Regenbogen der Fantasie <lb/>
                     <pb facs="00000137.tif" n="16"/> zum Bogen ihrer Hand gebrauchen woll<lb break="no"/>ten, ohne je eine Sehne darüberziehen <lb/>
-                    zu kön̄en." <note resp="#janin.afken" xml:lang="de">Zitat aus <persName ref="#p0241" type="bi">Jean Pauls</persName>
-                        <title ref="#w00322">Titan</title> (Band 4, 35. Jobelperiode, 145. Zykel).</note>
+                    zu kön̄en." <note resp="#janin.afken"><p xml:lang="de">Zitat aus <persName ref="#p0241" type="bi">Jean Pauls</persName>
+                            <title ref="#w00322">Titan</title> (Band 4, 35. Jobelperiode, 145. Zykel).</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <choice>
                         <sic>Ichw erde</sic>
                         <corr resp="#janin.afken">Ich werde</corr>
@@ -630,8 +645,9 @@
                     gefallen, <lb/> daß ich, nachdem ich die todte Form <lb/> zerschlagen, mein Leben dem Studi<lb break="no"/>um der höheren
                     Gottesgelahrtheit wid<lb break="no"/>men darf! <lb/></p>
                 <milestone rend="horizontal-rule" unit="none"/>
-                <note resp="#janin.afken">Ab hier folgt im Manuskript eine Abschrift des vorangegangenen Textes, wahrscheinlich von der Hand <persName
-                        ref="#p1824" type="bi">Karl Hellmuth Dammas</persName>' (vgl. <title ref="#w00209">Busch 1999</title>, S.116)</note>
+                <note resp="#janin.afken"><p xml:lang="de">Ab hier folgt im Manuskript eine Abschrift des vorangegangenen Textes, wahrscheinlich von
+                        der Hand <persName ref="#p1824" type="bi">Karl Hellmuth Dammas</persName>' (vgl. <title ref="#w00209">Busch 1999</title>,
+                        S.116)</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <!-- vgl. tif 138: Abschrift des gleichen Briefs nochmal, aber Foliierung geht weiter. -->
             </div>
         </body>
