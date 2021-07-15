@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Chamisso's papers</collection>
@@ -75,10 +82,17 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="1823-06-10/12"/>
-                            <note resp="#janine.katins">Der Brief umfasst drei Tage und beinhaltet neben den Schilderungen des täglichen Lebens, die
-                                einen Opernbesuch, einen Besuch bei Hitzig und das Zusammensein mit der Familie umfassen, auch viele treue
-                                Liebesbekundungen Antonies sowie eine Gedichtstrophe von ihr.</note>
+                            <docDate when="1823-06-10"/>
+                            <docDate when="1823-06-12"/>
+                            <note resp="#janine.katins"><p xml:lang="de">Der Brief umfasst drei Tage und beinhaltet neben den Schilderungen des
+                                    täglichen Lebens, die einen Opernbesuch, einen Besuch bei Hitzig und das Zusammensein mit der Familie umfassen,
+                                    auch viele treue Liebesbekundungen Antonies sowie eine Gedichtstrophe von ihr.</p>
+                                <p xml:lang="en">The letter lasts three days and, in addition to descriptions of daily life, which includes a visit to
+                                    the opera, a visit to Hitzig and being with the family, also contains many expressions of faithful love by Antonie
+                                    and a verse of her poetry.</p>
+                                <p xml:lang="fr">La lettre a duré trois jours et, en plus des descriptions de la vie quotidienne, qui comprenait une
+                                    visite à l'opéra, une visite à Hitzig et être avec la famille, aussi de nombreuses déclarations d'amour fidèle
+                                    pour Antonie et un poème d'elle.</p></note>
                             <note resp="#janine.katins" type="keyword">Expedition nach Greifswald</note>
                             <note resp="#janine.katins" type="keyword">Sehnsucht</note>
                             <note resp="#janine.katins" type="keyword">Familie Piaste</note>
@@ -229,8 +243,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-06-01" who="#janine.katins">First encoding, TEI header.</change>
             <change when-iso="2014-06-07" who="#janine.katins">Endcoding up to line 479.</change>
@@ -240,149 +255,224 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="PPN739757253|PHYS_0001" n="1"/>
-                <!-- wenn bekannt, bitte die JPG-Nummern einfügen -->
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">1</note>
-                <note hand="#pencil_2" place="bottom">34. 1823</note>
-                <p><del n="2" rend="strikethrough">2</del></p>
-                <opener> 1<space extent="3w"/><dateline>
-                        <date rend="align(right)">Dienstag Abend 10 Uhr </date></dateline>
-                    <salute rend="align(left)">Mein Geliebter</salute></opener>
-                <p>Wo magst Du wohl jetzt sein, ob Du schläfst oder<lb/><del extent="1c" rend="strikthrough">W</del>wanderst? Wenn es Dir doch auch so
-                    gut ergangen<lb/>sein mögte, am ersten Tage, als mir. <del extent="2w" rend="strikethrough">Denke<lb/>nur</del>, was wirst Du
-                    sagen, daß ich denke, Dir schon <hi rend="underline">heute</hi>,<lb/>einen ganz heiteren Brief zu schreiben, mißdeuten<lb/>thust
-                    Du es nicht daß weiß ich, ich habe gewiß jeden<lb/>Augenblick an Dich mit Liebe gedacht und so ist mir<lb/>der Tag sehr schnell
-                    vergangen; Eine Stunde hat es wohl<lb/>gedauert eh ich meine Thränen trocknen konnte, dann<lb/>bin ich eingeschlafen habe bis 9
-                    Uhr geschlafen beständig<lb/><hi n="2" rend="underline">von Dir</hi> und Deiner abreise geträumt; <del rend="strikethrough"
-                        >als</del> eh ich mal<lb/>Kaffee getrunken hatte, kam <rs ref="#p3174" type="bi">Mulle</rs> und die <hi rend="underline"
-                        >allerschönste</hi><lb/><persName ref="#p3099" type="bi"><choice>
-                            <unclear cert="medium">Jana</unclear>
-                            <unclear cert="low" reason="illegible">Lene</unclear>
-                        </choice></persName> und <rs ref="#p3175" type="bi">Mutter</rs> kam auch sehr bald, <rs ref="#p3175" type="bi">Mutter</rs> und
-                        <rs ref="#p3174" type="bi">Mulle</rs><lb/>haben bei mir gegessen, <rs ref="#p3174" type="bi">M<del rend="overwritten"
-                            >l</del><add place="across">u</add>lle</rs> sprach zu<del rend="overwritten">f</del><add place="across">v</add>ällig
-                    davon<lb/>daß sie h<add>e</add>ute hätten wollen in den Dom Turm gehen<lb/>weil aber <rs ref="#p3180" type="bi">Tante</rs> unwohl
-                    wäre ginge es nicht, mir<lb/>kam dabei eine so große Lust an, s<del rend="overwritten"><unclear extent="1c" reason="illegible"
-                        /></del><add place="across">o</add> sind wir viere<lb/>die ich schon genannt habe in d<del rend="overwritten">ie</del><add
-                        place="across">er</add> O<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">p</add>er
-                    gewesen, haben auch alle wie wi<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">r</add>
-                    da waren, Eroberungen gemacht, zwei<lb/>junge Herrn sind <add place="above">uns</add>
-                    <del rend="overwritten">nach</del>
-                    <add place="across">auf</add> dem Fuß gefolgt, haben sich als dann<lb/>bei unseren <add place="above">beiden</add> Mädchen (die
-                        <rs ref="#p3174" type="bi">Mullen</rs> und die <rs ref="#p3099" type="bi">Schönste</rs> nach hause<lb/>brachten) nach uns
-                    erkundigt, <persName ref="p3145" type="bi"><unclear cert="medium" reason="illegible">Mine</unclear></persName> hat uns für
-                    Minister Töchter<lb/>ausgegeben.</p>
-                <pb facs="PPN739757253|PHYS_0002" n="2"/>
-                <p>Freitag wird dieser Brief zwar erst abgehen, aber es thut nichts<lb/>kann ich noch desto ö<del rend="overwritten">s</del><add
-                        place="across">f</add>ter mit Dir mich unterhalten Du weißt<lb/>ja wie sehr es mir <del rend="strikethrough">be</del>
-                    Bedürfniß ist, möchtest Du das Bedürf<lb break="no"/>niß auch fühlen und mir recht bald <del rend="overwritten">n</del><add
-                        place="across">N</add>achricht geben wie<lb/>Dir Deine Reise bekommt ganz ohne Besorgniß bin ich<lb/>nicht, wenn das Gewitter
-                    Dich auf freiem Felde betroffen<lb/>hätte und Du so durchnäßt noch mehrere Meilen hättest<lb/>wandern müssen, ich mag mir die
-                    Folgen die es haben<lb/>könnte gar nicht ausmahlen. Der liebe Gott wird Dich schon schützen.<lb/>Die <rs ref="#p1754 #p3128"
-                        type="bi">Kinder</rs> sind wohl <persName ref="#p1754" type="bi">Ernst</persName> sagt wenn man ihn nach<lb/><rs ref="#p0237"
-                        type="bi">Vater</rs> fragt, <hi rend="underline">er ist <choice>
-                            <unclear cert="high" extent="1w" reason="illegible">
-                                <del rend="overwritten">V</del><add place="across">v</add>erreist</unclear>
-                            <unclear cert="medium" extent="1w" reason="illegible"><del rend="overwritten">V</del><add place="across"
-                                >v</add>ermißt</unclear>
-                        </choice></hi>
-                    <!-- Henrike las hier vermißt; problematisch ist, dass das S aussieht wie ein ß, beides würde Sinn machen. --> kom̄t er bald
-                    wieder? <hi rend="underline">nein</hi><lb/>so schmerzlich zu empfinden scheint e<del rend="overwritten">s</del><add place="across"
-                        >r</add> es nicht als ich<lb/><del rend="strikthrough">Meine Trauer kom̄t</del> mir <add place="above">wird</add> ganz
-                    wehmüthig bei dem Gedanken<lb/><add place="above">daß</add> die Zeit <del rend="strikethrough">kom̄t</del>
-                    <add place="above">des zu bett gehens</add> im̄er näher kom̄t, unsere Schlafstube ist mir<lb/>so groß und weit Dein Bett steht da
-                    so öde und lehr,</p>
-                <closer>Ich sage <add place="above">Dir</add> eine herzliche gute Nacht, ich bin schneller<lb/>müde geworden als ich glaubte, ich habe
-                    Dir auch von<lb/>heute nichts weiter zu erzählen, als: da<del rend="overwritten">s</del><add place="across">ß</add> ich Dich so
-                    von<lb/>herzen liebe gewiß noch mehr als wären wir beisam̄en<lb/>geblieben ich gehe jetzt zu bett sonst schlafe ich ein
-                        und<lb/><del rend="overwritten">I</del><add place="across">i</add>ch weiß wie wenig Du daß liebst, Du siehst ich
-                    bin<lb/>gewissenhaft. Kön̄te ich Dir nur einen einszigen Kuß<lb/>geben.</closer>
-                <opener><dateline><date>Mittwoch ½ 11 Uhr Abends</date></dateline></opener>. <p>Ich werde nicht durch lesen was ich gestern
-                    geschrieben.<lb/>nicht wahr? eine Kritic wirst Du nicht darüber machen<lb/>überhaupt brauche ich mich vor Dir gar nicht zu
-                    scheuen,<lb/>Du bist so güttig und so unbeschreiblich nach<del rend="overwritten"><unclear reason="illegible"/></del><add
-                        place="across">si</add>chtig mit<lb/>mir. Du wirst aber Wort halten es niemand<lb/>zeigen es ist nur für Dich. Auch nicht <rs
-                        ref="#p0239" type="bi">Ede</rs>. </p>
-                <pb facs="PPN739757253|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">2</note>
-                <p>Ich glaube wirklich Dich recht zärtlich zu lieben, denn<lb/>so ohne alles Bedenken kann ich, auch für keinen<lb/>Menschen in der
-                    Welt schreiben, als ich es für Dich thue<lb/>Ausserdem weist Du ja daß ich keine Schrifftstellerin<lb/>bin, öfter hast Du mir
-                    schon gesagt es wäre auch nicht<lb/>Dein Wunsch, aber ich gestehe wohl der <add place="above">Wunsch</add> ist sehr leb<lb
-                        break="no"/>haft in mir, daß <del rend="strikethrough">Du</del>
-                    <del rend="strikethrough">finden kön̄test</del> ich einen<lb/>ordentlichen Brief schreiben könnte, nicht um damit zu<lb/>glänzen,
-                    nein gewiß nicht, nur für <hi rend="underline">Dich</hi>, wie überhaupt<lb/>Alles nur für <hi rend="underline">Dich</hi>! Ach!
-                    könnteich Di<del rend="overwritten">ch</del><add place="across">r</add> doch Alles sein,<lb/>Alles? wohl ein Wunsch, wenn ich Dir
-                    nur etwas bin,<lb/>bin ich dann nicht <del rend="overwritten">G</del><add place="across">g</add>lücklich, es soll ja kein
-                    Zweifel<lb/>sein, wofür Du es halten könntest, ich bin so sehr<lb/>glücklich in Deinem Besitzt, wenn ich Dich nur erst<lb/>wieder
-                    habe will ich auch Dich nicht mehr mißverstehn und<lb/>falsch auslegen Ja gewiß ich freue mich auf Zeit<lb/>des <del
-                        rend="overwritten">w</del><add place="across">W</add>iedersehen´s so unaussprechlich mein eizig lieber<lb/><del
-                        rend="strikethrough">Teuerer</del>
-                    <rs ref="#p0237" type="bi">teurer Mann</rs>. Bericht über den heutigen Tag<lb/>zu Mittag haben wir bei <rs ref="#p3175" type="bi"
-                        >Mutter</rs> gesessen, <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                    >N</add>achmittag<lb/>sind wir <rs ref="#p3177" type="bi">Vater</rs>
-                    <rs ref="#p3175" type="bi"><del rend="overwritten">m</del><add place="across">M</add>utter</rs> und ich und unsere <rs
-                        ref="#p1754 #p3128" type="bi">Kinder</rs> zu<lb/><persName ref="#p0239" type="bi">Hitzig</persName><note
-                        resp="#henrike.bobzien"><persName ref="#p0237" type="bi">Chamissos</persName> Frau, <persName ref="#p1723" type="bi"
-                            >Antonie</persName>, geb. Piaste, war eine Pflegetochter seines engen Freundes <persName ref="#p0239" type="bi"
-                            >Hitzig</persName> (vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 118), von der Familie und ihm
-                        offenbar <rs ref="#p0239" type="bi">Ede</rs> genannt. Somit war <persName ref="#p0239" type="bi">Hitzig</persName> nicht nur
-                        Freund und erster Biograph <persName ref="#p0237" type="bi">Chamissos</persName>, sondern gleichzeitig dessen Schwiegervater,
-                        der nur ca. 10 Monate älter war als der Ehemann seiner Pflegetochter.</note> gegangen und haben uns alle über da<del
-                        rend="overwritten">ß</del><add place="across">s</add> schöne<lb/>kühle Wetter, Deinetwegen, gefreut und so lange,<lb/>habe
-                    mich gleich zum schreiben niedergesetzt ohne<lb/>etwas <del rend="overwritten">w</del><add place="across">W</add>ichtiges zu
-                    haben<!-- Henrike las hier "holen". Ich lese "haben", was m.E. mehr Sinne machte. -->. <persName ref="#p3176" type="bi"
-                        >Heinrich</persName> hat heute <del rend="overwritten">s</del><add place="across">g</add>eschrieben<lb/>und zwar sehr
-                    unglücklich daß e<del rend="overwritten">s</del><add place="across">r</add> seit vier Wochen keine<lb/>Nachricht von hause hatte,
-                    einen wirklich recht hübschen<lb/>und zärtlichen Brief. Heute früh kam beiligender Brief<lb/> von <persName ref="#p0615" type="bi"
-                            >Rudol<del rend="overwritten">f</del><add place="across">ph</add>i</persName>.<note resp="#henrike.bobzien">Ab 1812
-                        studierte <persName ref="#p0237" type="bi">Chamisso</persName> Medizin an der Berlinischen Universität, wobei er u.a. an
-                        Vorlesungen über Physiologie von <persName ref="#p0615" type="bi">Rudolphi</persName> teilnahm (vgl. <persName ref="#p0408"
-                            type="bi">Werner Feudel</persName>, 1988, S. 66). Beiträge von <rs ref="#p0615" type="bi">ihm</rs>, <persName ref="#p0237"
-                            type="bi">Chamisso</persName> und anderen Naturwissenschaftlern, <quote>"darunter <persName ref="#p3167" type="bi"
-                                >Schlechtendal</persName>, <persName ref="#p0623" type="bi">Heinrich Friedrich Link</persName>, [...] <persName
-                                ref="#p3150" type="bi">Christoph Friedrich Otto</persName> und <persName ref="#p0735" type="bi">Christian Gottfried
-                                Ehrenberg</persName> […]"</quote> sind nachzulesen in der <quote>"1820 von <persName ref="#p3129" type="bi">Nees von
-                                Esenbeck</persName> herausgegebene[n] Sammelpublikation <titel ref="#w">Horae physicae Berolinensis</titel>"</quote>
-                        (zitiert nach <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 123).</note></p>
-                <pb facs="PPN739757253|PHYS_0004" n="4"/>
-                <p>Ich möchte Dir noch so viel Liebes und süsses sagen</p>
-                <lg>
-                    <l>Wenn ich nur so Dichten könnte</l>
-                    <l>Sollte schon mein Lied hübsch sein</l>
-                    <l>Sänge nur wie ich Dich liebe.</l>
-                    <l>Sänge nur ganz <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del><add place="across">b</add>in ich <hi
-                            rend="underline">Dein</hi>.</l>
-                </lg><note resp="#henrike.bobzien">Vierhebig alternierender Trochäus in der Form abcb. Vgl. auch den Eintrag zum spanischen Trochäus
-                    bei <persName ref="#" type="bi">Kühnel</persName> / <persName ref="#" type="bi">Moennighoff</persName>: <title ref="#w"
-                        >Trochäus</title>, 2007, S. 784.</note>
-                <p>Lächle nicht über mich, es ist so sehr aus meinem<lb/>Herzen, daß ich es wohl hier sagen kann.</p>
-                <p>Sieh nur bin ich nicht ganz verwandelt möchte gar nicht<lb/>auf hören zu schreiben, ich fürchte nur es möchte Dir<lb/>zu lang
-                    werden, daß Du es aus mangel an Zeit<lb/>oder Müdigkeit nicht wirst lesen können, wenn ich nur<lb/>erst von Dir einige Zeilen
-                    erhalten hatte, daß wird<lb/>die Trennung sehr verschönen.</p>
-                <closer>Schlafe recht wohl auf<lb/>Deinem einsamen Lager und träume von Deiner Dich<lb/>innig und treu liebenden <persName
-                        ref="#p1723" type="bi">Antonie</persName>.</closer>
-                <postscript>
-                    <persName ref="#p1754" type="bi">Ernst</persName> hat heute etwas sehr niedliches gesagt, als <persName ref="#p3173" type="bi"
-                        >Elise</persName><lb/>und <persName ref="#p3128" type="bi">Max</persName> aus <persName ref="#p0239" type="bi"
-                        >Hitzig</persName> Garten nach hause gehn sollten,<lb/>Sagte <persName ref="#p1754" type="bi">Ernst</persName>: Adieu <rs
-                        ref="#" type="bi">Lischen</rs> vergiß mein nicht, vergiß mein nicht. </postscript>
-                <opener><dateline><date when-iso="1823-06-02">Donnerstag Mittag den 12<hi n="2" rend="superscript underline">ten</hi>
-                        Juni</date></dateline></opener>
-                <p>Ich fange bloß an um zu schließen, den der Brief muß<lb/>heute auf die Post wenn er morgen <del rend="overwritten">auch</del><add
-                        place="across">früh</add> abgeht. Heute<lb/>Nachmittag bin ich mit <rs ref="#p3175" type="bi">Mutter</rs>, bei Ihrer Freundinn
-                    der Madam<lb/><persName ref="#p3106" type="bi">Men<del rend="overwritten">s</del><add place="across">z</add>el</persName>.
-                    Herzliches Mit<del rend="overwritten">g</del><add place="across">l</add>eid habe ich mi<del rend="overwritten"><unclear
-                            extent="1c" reason="illegible"/></del><add place="across">t</add> Dir <rs ref="#p0237" type="bi">mein<lb/>Geliebter</rs>,
-                    den heute ist eine gewaltige Hitze, ich hoffe Du<lb/>wirst zu <del rend="strikethrough"><unclear extent="few letters"
-                            reason="illegible"/></del> jetziger Zeit nicht wandern. Sie denken Alle,<lb/>Alle mit größter Liebe an Dich, daß ich es am
-                    meisten thue<lb/>habe ich nicht nöthig zu versichern, <persName ref="#p3178" type="bi">Leopold</persName> ist schon seid vor<lb
-                        break="no"/>gestern frei.</p>
-                <p><closer><salute>Ich kann nicht ein Wort mehr schreiben, weil<lb/>die <rs ref="#p1754" type="bi">Kinder</rs> mir gewaltig in die
+                <div type="letter">
+                    <pb facs="PPN739757253|PHYS_0001" n="1"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">1</note>
+                    <note hand="#pencil_2" place="bottom">34. 1823</note>
+                    <note><del n="2" rend="strikethrough">2</del></note>
+                    <opener> 1<space extent="3w"/><dateline>
+                            <date rend="align(right)">Dienstag Abend 10 Uhr </date></dateline>
+                        <salute rend="align(left)">Mein Geliebter</salute></opener>
+                    <p>Wo magst Du wohl jetzt sein, ob Du schläfst oder<lb/><del extent="1c" rend="strikthrough">W</del>wanderst? Wenn es Dir doch
+                        auch so gut ergangen<lb/>sein mögte, am ersten Tage, als mir. <del extent="2w" rend="strikethrough">Denke<lb/>nur</del>, was
+                        wirst Du sagen, daß ich denke, Dir schon <hi rend="underline">heute</hi>,<lb/>einen ganz heiteren Brief zu schreiben,
+                        mißdeuten<lb/>thust Du es nicht daß weiß ich, ich habe gewiß jeden<lb/>Augenblick an Dich mit Liebe gedacht und so ist
+                        mir<lb/>der Tag sehr schnell vergangen; Eine Stunde hat es wohl<lb/>gedauert eh ich meine Thränen trocknen konnte,
+                        dann<lb/>bin ich eingeschlafen habe bis 9 Uhr geschlafen beständig<lb/><hi n="2" rend="underline">von Dir</hi> und Deiner
+                        abreise geträumt; <del rend="strikethrough">als</del> eh ich mal<lb/>Kaffee getrunken hatte, kam <rs ref="#p3174" type="bi"
+                            >Mulle</rs> und die <hi rend="underline">allerschönste</hi><lb/><persName ref="#p3099" type="bi"><choice>
+                                <unclear cert="medium">Jana</unclear>
+                                <unclear cert="low" reason="illegible">Lene</unclear>
+                            </choice></persName> und <rs ref="#p3175" type="bi">Mutter</rs> kam auch sehr bald, <rs ref="#p3175" type="bi">Mutter</rs>
+                        und <rs ref="#p3174" type="bi">Mulle</rs><lb/>haben bei mir gegessen, <rs ref="#p3174" type="bi">M<subst>
+                                <del rend="overwritten">l</del>
+                                <add place="across">u</add>
+                            </subst>lle</rs> sprach zu<subst>
+                            <del rend="overwritten">f</del>
+                            <add place="across">v</add>
+                        </subst>ällig davon<lb/>daß sie h<add>e</add>ute hätten wollen in den Dom Turm gehen<lb/>weil aber <rs ref="#p3180" type="bi"
+                            >Tante</rs> unwohl wäre ginge es nicht, mir<lb/>kam dabei eine so große Lust an, s<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">o</add>
+                        </subst> sind wir viere<lb/>die ich schon genannt habe in d<subst>
+                            <del rend="overwritten">ie</del>
+                            <add place="across">er</add>
+                        </subst> O<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">p</add>
+                        </subst>er gewesen, haben auch alle wie wi<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">r</add>
+                        </subst> da waren, Eroberungen gemacht, zwei<lb/>junge Herrn sind <add place="above">uns</add>
+                        <subst>
+                            <del rend="overwritten">nach</del>
+                            <add place="across">auf</add>
+                        </subst> dem Fuß gefolgt, haben sich als dann<lb/>bei unseren <add place="above">beiden</add> Mädchen (die <rs ref="#p3174"
+                            type="bi">Mullen</rs> und die <rs ref="#p3099" type="bi">Schönste</rs> nach hause<lb/>brachten) nach uns erkundigt,
+                            <persName ref="p3145" type="bi"><unclear cert="medium" reason="illegible">Mine</unclear></persName> hat uns für Minister
+                        Töchter<lb/>ausgegeben.</p>
+                    <pb facs="PPN739757253|PHYS_0002" n="2"/>
+                    <p>Freitag wird dieser Brief zwar erst abgehen, aber es thut nichts<lb/>kann ich noch desto ö<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">f</add>
+                        </subst>ter mit Dir mich unterhalten Du weißt<lb/>ja wie sehr es mir <del rend="strikethrough">be</del> Bedürfniß ist,
+                        möchtest Du das Bedürf<lb break="no"/>niß auch fühlen und mir recht bald <subst>
+                            <del rend="overwritten">n</del>
+                            <add place="across">N</add>
+                        </subst>achricht geben wie<lb/>Dir Deine Reise bekommt ganz ohne Besorgniß bin ich<lb/>nicht, wenn das Gewitter Dich auf
+                        freiem Felde betroffen<lb/>hätte und Du so durchnäßt noch mehrere Meilen hättest<lb/>wandern müssen, ich mag mir die Folgen
+                        die es haben<lb/>könnte gar nicht ausmahlen. Der liebe Gott wird Dich schon schützen.<lb/>Die <rs ref="#p1754 #p3128"
+                            type="bi">Kinder</rs> sind wohl <persName ref="#p1754" type="bi">Ernst</persName> sagt wenn man ihn nach<lb/><rs
+                            ref="#p0237" type="bi">Vater</rs> fragt, <hi rend="underline">er ist <choice>
+                                <unclear cert="high" extent="1w" reason="illegible">
+                                    <subst>
+                                        <del rend="overwritten">V</del>
+                                        <add place="across">v</add>
+                                    </subst>erreist</unclear>
+                                <unclear cert="medium" extent="1w" reason="illegible"><subst>
+                                        <del rend="overwritten">V</del>
+                                        <add place="across">v</add>
+                                    </subst>ermißt</unclear>
+                            </choice></hi>
+                        <!-- Henrike las hier vermißt; problematisch ist, dass das S aussieht wie ein ß, beides würde Sinn machen. --> kom̄t er bald
+                        wieder? <hi rend="underline">nein</hi><lb/>so schmerzlich zu empfinden scheint e<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">r</add>
+                        </subst> es nicht als ich<lb/><del rend="strikthrough">Meine Trauer kom̄t</del> mir <add place="above">wird</add> ganz
+                        wehmüthig bei dem Gedanken<lb/><add place="above">daß</add> die Zeit <subst>
+                            <del rend="strikethrough">kom̄t</del>
+                            <add place="above">des zu bett gehens</add>
+                        </subst> im̄er näher kom̄t, unsere Schlafstube ist mir<lb/>so groß und weit Dein Bett steht da so öde und lehr,</p>
+                    <closer>Ich sage <add place="above">Dir</add> eine herzliche gute Nacht, ich bin schneller<lb/>müde geworden als ich glaubte, ich
+                        habe Dir auch von<lb/>heute nichts weiter zu erzählen, als: da<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">ß</add>
+                        </subst> ich Dich so von<lb/>herzen liebe gewiß noch mehr als wären wir beisam̄en<lb/>geblieben ich gehe jetzt zu bett sonst
+                        schlafe ich ein und<lb/><subst>
+                            <del rend="overwritten">I</del>
+                            <add place="across">i</add>
+                        </subst>ch weiß wie wenig Du daß liebst, Du siehst ich bin<lb/>gewissenhaft. Kön̄te ich Dir nur einen einszigen
+                        Kuß<lb/>geben.</closer>
+                </div>
+                <div type="letter">
+                    <opener><dateline><date>Mittwoch ½ 11 Uhr Abends</date>.</dateline></opener>
+                    <p>Ich werde nicht durch lesen was ich gestern geschrieben.<lb/>nicht wahr? eine Kritic wirst Du nicht darüber
+                        machen<lb/>überhaupt brauche ich mich vor Dir gar nicht zu scheuen,<lb/>Du bist so güttig und so unbeschreiblich nach<subst>
+                            <del rend="overwritten"><unclear reason="illegible"/></del>
+                            <add place="across">si</add>
+                        </subst>chtig mit<lb/>mir. Du wirst aber Wort halten es niemand<lb/>zeigen es ist nur für Dich. Auch nicht <rs ref="#p0239"
+                            type="bi">Ede</rs>. </p>
+                    <pb facs="PPN739757253|PHYS_0003" n="3"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">2</note>
+                    <p>Ich glaube wirklich Dich recht zärtlich zu lieben, denn<lb/>so ohne alles Bedenken kann ich, auch für keinen<lb/>Menschen in
+                        der Welt schreiben, als ich es für Dich thue<lb/>Ausserdem weist Du ja daß ich keine Schrifftstellerin<lb/>bin, öfter hast Du
+                        mir schon gesagt es wäre auch nicht<lb/>Dein Wunsch, aber ich gestehe wohl der <add place="above">Wunsch</add> ist sehr leb<lb
+                            break="no"/>haft in mir, daß <del rend="strikethrough">Du</del>
+                        <del rend="strikethrough">finden kön̄test</del> ich einen<lb/>ordentlichen Brief schreiben könnte, nicht um damit
+                        zu<lb/>glänzen, nein gewiß nicht, nur für <hi rend="underline">Dich</hi>, wie überhaupt<lb/>Alles nur für <hi rend="underline"
+                            >Dich</hi>! Ach! könnteich Di<subst>
+                            <del rend="overwritten">ch</del>
+                            <add place="across">r</add>
+                        </subst> doch Alles sein,<lb/>Alles? wohl ein Wunsch, wenn ich Dir nur etwas bin,<lb/>bin ich dann nicht <subst>
+                            <del rend="overwritten">G</del>
+                            <add place="across">g</add>
+                        </subst>lücklich, es soll ja kein Zweifel<lb/>sein, wofür Du es halten könntest, ich bin so sehr<lb/>glücklich in Deinem
+                        Besitzt, wenn ich Dich nur erst<lb/>wieder habe will ich auch Dich nicht mehr mißverstehn und<lb/>falsch auslegen Ja gewiß ich
+                        freue mich auf Zeit<lb/>des <subst>
+                            <del rend="overwritten">w</del>
+                            <add place="across">W</add>
+                        </subst>iedersehen´s so unaussprechlich mein eizig lieber<lb/><del rend="strikethrough">Teuerer</del>
+                        <rs ref="#p0237" type="bi">teurer Mann</rs>. Bericht über den heutigen Tag<lb/>zu Mittag haben wir bei <rs ref="#p3175"
+                            type="bi">Mutter</rs> gesessen, <subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">N</add>
+                        </subst>achmittag<lb/>sind wir <rs ref="#p3177" type="bi">Vater</rs>
+                        <rs ref="#p3175" type="bi"><subst>
+                                <del rend="overwritten">m</del>
+                                <add place="across">M</add>
+                            </subst>utter</rs> und ich und unsere <rs ref="#p1754 #p3128" type="bi">Kinder</rs> zu<lb/><persName ref="#p0239"
+                            type="bi">Hitzig</persName><note resp="#henrike.bobzien"><p xml:lang="de"><persName ref="#p0237" type="bi"
+                                    >Chamissos</persName> Frau, <persName ref="#p1723" type="bi">Antonie</persName>, geb. Piaste, war eine
+                                Pflegetochter seines engen Freundes <persName ref="#p0239" type="bi">Hitzig</persName> (vgl. <persName ref="#p0408"
+                                    type="bi">Werner Feudel</persName>, 1988, S. 118), von der Familie und ihm offenbar <rs ref="#p0239" type="bi"
+                                    >Ede</rs> genannt. Somit war <persName ref="#p0239" type="bi">Hitzig</persName> nicht nur Freund und erster
+                                Biograph <persName ref="#p0237" type="bi">Chamissos</persName>, sondern gleichzeitig dessen Schwiegervater, der nur
+                                ca. 10 Monate älter war als der Ehemann seiner Pflegetochter.</p><p xml:lang="en"/><p xml:lang="fr"/></note> gegangen
+                        und haben uns alle über da<subst>
+                            <del rend="overwritten">ß</del>
+                            <add place="across">s</add>
+                        </subst> schöne<lb/>kühle Wetter, Deinetwegen, gefreut und so lange,<lb/>habe mich gleich zum schreiben niedergesetzt
+                        ohne<lb/>etwas <subst>
+                            <del rend="overwritten">w</del>
+                            <add place="across">W</add>
+                        </subst>ichtiges zu haben<!-- Henrike las hier "holen". Ich lese "haben", was m.E. mehr Sinne machte. -->. <persName
+                            ref="#p3176" type="bi">Heinrich</persName> hat heute <subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">g</add>
+                        </subst>eschrieben<lb/>und zwar sehr unglücklich daß e<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">r</add>
+                        </subst> seit vier Wochen keine<lb/>Nachricht von hause hatte, einen wirklich recht hübschen<lb/>und zärtlichen Brief. Heute
+                        früh kam beiligender Brief<lb/> von <persName ref="#p0615" type="bi">Rudol<subst>
+                                <del rend="overwritten">f</del>
+                                <add place="across">ph</add>
+                            </subst>i</persName>.<note resp="#henrike.bobzien"><p xml:lang="de">Ab 1812 studierte <persName ref="#p0237" type="bi"
+                                    >Chamisso</persName> Medizin an der Berlinischen Universität, wobei er u.a. an Vorlesungen über Physiologie von
+                                    <persName ref="#p0615" type="bi">Rudolphi</persName> teilnahm (vgl. <persName ref="#p0408" type="bi">Werner
+                                    Feudel</persName>, 1988, S. 66). Beiträge von <rs ref="#p0615" type="bi">ihm</rs>, <persName ref="#p0237"
+                                    type="bi">Chamisso</persName> und anderen Naturwissenschaftlern, <quote>"darunter <persName ref="#p3167" type="bi"
+                                        >Schlechtendal</persName>, <persName ref="#p0623" type="bi">Heinrich Friedrich Link</persName>, [...]
+                                        <persName ref="#p3150" type="bi">Christoph Friedrich Otto</persName> und <persName ref="#p0735" type="bi"
+                                        >Christian Gottfried Ehrenberg</persName> […]"</quote> sind nachzulesen in der <quote>"1820 von <persName
+                                        ref="#p3129" type="bi">Nees von Esenbeck</persName> herausgegebene[n] Sammelpublikation <title ref="#w">Horae
+                                        physicae Berolinensis</title>"</quote> (zitiert nach <persName ref="#p0408" type="bi">Werner
+                                Feudel</persName>, 1988, S. 123).</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
+                    <pb facs="PPN739757253|PHYS_0004" n="4"/>
+                    <p>Ich möchte Dir noch so viel Liebes und süsses sagen</p>
+                    <lg>
+                        <l>Wenn ich nur so Dichten könnte</l>
+                        <l>Sollte schon mein Lied hübsch sein</l>
+                        <l>Sänge nur wie ich Dich liebe.</l>
+                        <l>Sänge nur ganz <subst>
+                                <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del>
+                                <add place="across">b</add>
+                            </subst>in ich <hi rend="underline">Dein</hi>.</l>
+                    </lg>
+                    <note resp="#henrike.bobzien"><p xml:lang="de">Vierhebig alternierender Trochäus in der Form abcb. Vgl. auch den Eintrag zum
+                            spanischen Trochäus bei <persName ref="#" type="bi">Kühnel</persName> / <persName ref="#" type="bi"
+                            >Moennighoff</persName>: <title ref="#w">Trochäus</title>, 2007, S. 784.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <p>Lächle nicht über mich, es ist so sehr aus meinem<lb/>Herzen, daß ich es wohl hier sagen kann.</p>
+                    <p>Sieh nur bin ich nicht ganz verwandelt möchte gar nicht<lb/>auf hören zu schreiben, ich fürchte nur es möchte Dir<lb/>zu lang
+                        werden, daß Du es aus mangel an Zeit<lb/>oder Müdigkeit nicht wirst lesen können, wenn ich nur<lb/>erst von Dir einige Zeilen
+                        erhalten hatte, daß wird<lb/>die Trennung sehr verschönen.</p>
+                    <closer>Schlafe recht wohl auf<lb/>Deinem einsamen Lager und träume von Deiner Dich<lb/>innig und treu liebenden <persName
+                            ref="#p1723" type="bi">Antonie</persName>.</closer>
+                    <postscript>
+                        <p><persName ref="#p1754" type="bi">Ernst</persName> hat heute etwas sehr niedliches gesagt, als <persName ref="#p3173"
+                                type="bi">Elise</persName><lb/>und <persName ref="#p3128" type="bi">Max</persName> aus <persName ref="#p0239"
+                                type="bi">Hitzig</persName> Garten nach hause gehn sollten,<lb/>Sagte <persName ref="#p1754" type="bi"
+                                >Ernst</persName>: Adieu <rs ref="#" type="bi">Lischen</rs> vergiß mein nicht, vergiß mein nicht. </p>
+                    </postscript>
+                </div>
+                <div type="letter">
+                    <opener><dateline><date when-iso="1823-06-02">Donnerstag Mittag den 12<hi n="2" rend="superscript underline">ten</hi>
+                            Juni</date></dateline></opener>
+                    <p>Ich fange bloß an um zu schließen, den der Brief muß<lb/>heute auf die Post wenn er morgen <subst>
+                            <del rend="overwritten">auch</del>
+                            <add place="across">früh</add>
+                        </subst> abgeht. Heute<lb/>Nachmittag bin ich mit <rs ref="#p3175" type="bi">Mutter</rs>, bei Ihrer Freundinn der
+                            Madam<lb/><persName ref="#p3106" type="bi">Men<subst>
+                                <del rend="overwritten">s</del>
+                                <add place="across">z</add>
+                            </subst>el</persName>. Herzliches Mit<subst>
+                            <del rend="overwritten">g</del>
+                            <add place="across">l</add>
+                        </subst>eid habe ich mi<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">t</add>
+                        </subst> Dir <rs ref="#p0237" type="bi">mein<lb/>Geliebter</rs>, den heute ist eine gewaltige Hitze, ich hoffe Du<lb/>wirst zu
+                            <del rend="strikethrough"><unclear extent="few letters" reason="illegible"/></del> jetziger Zeit nicht wandern. Sie denken
+                        Alle,<lb/>Alle mit größter Liebe an Dich, daß ich es am meisten thue<lb/>habe ich nicht nöthig zu versichern, <persName
+                            ref="#p3178" type="bi">Leopold</persName> ist schon seid vor<lb break="no"/>gestern frei.</p>
+                    <closer><salute>Ich kann nicht ein Wort mehr schreiben, weil<lb/>die <rs ref="#p1754" type="bi">Kinder</rs> mir gewaltig in die
                             Ohren schreien. Vielleicht köm̄t<lb/>der doch noch eher als an, empfiehl mich der Schönen <persName ref="#p3142" type="bi"
-                                >Therese</persName>, werde<lb/>mir nur ihretwegen ja nicht untreu. Behalte mich ein wenig lieb.</salute></closer></p>
-                <p><postscript place="top-margin-right-vertical"> Ich möchte gern<lb/>noch recht viel,<lb/>viel Liebes und Gutes sagen.<lb/>Du siehst
-                        wie nah<lb/>sich meine Liebe<lb/>von gestern und<lb/>von heute steht:<lb/>heute Abend werde<lb/>ich bei <persName ref="#p0239"
-                            type="bi">Hitzig</persName>
-                        <persName ref="#p3156" type="bi">Schirmer</persName><lb/>sehn wie Du weist. </postscript></p>
+                                >Therese</persName>, werde<lb/>mir nur ihretwegen ja nicht untreu. Behalte mich ein wenig lieb.</salute></closer>
+                    <postscript rend="top-margin(right)-vertical">
+                        <p> Ich möchte gern<lb/>noch recht viel,<lb/>viel Liebes und Gutes sagen.<lb/>Du siehst wie nah<lb/>sich meine Liebe<lb/>von
+                            gestern und<lb/>von heute steht:<lb/>heute Abend werde<lb/>ich bei <persName ref="#p0239" type="bi">Hitzig</persName>
+                            <persName ref="#p3156" type="bi">Schirmer</persName><lb/>sehn wie Du weist. </p>
+                    </postscript>
+                </div>
             </div>
         </body>
     </text>

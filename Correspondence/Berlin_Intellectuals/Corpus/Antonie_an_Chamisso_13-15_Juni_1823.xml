@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -75,10 +82,17 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="1823-06-13/15"/>
-                            <note resp="#janine.katins">Der Brief umfasst drei Tage und beinhaltet neben den Schilderungen des täglichen Lebens, auch
-                                einen Brief von Wilhelm Piaste, dem Vater Antonies, bezüglich der Besorgung eines Dictamnus Albus, kurz Diptam, zu
-                                deutsch auch Brennender Busch.</note>
+                            <docDate when="1823-06-13"/>
+                            <docDate when="1823-06-15"/>
+                            <note resp="#janine.katins"><p xml:lang="de">Der Brief umfasst drei Tage und beinhaltet neben den Schilderungen des
+                                    täglichen Lebens, auch einen Brief von Wilhelm Piaste, dem Vater Antonies, bezüglich der Besorgung eines Dictamnus
+                                    Albus, kurz Diptam, zu deutsch auch Brennender Busch.</p>
+                                <p xml:lang="en">The letter lasts three days and, in addition to descriptions of daily life, also contains a letter
+                                    from Wilhelm Piaste, Antonie's father, regarding the acquisition of a Dictamnus Albus, or Diptam for short, in
+                                    German also Burning Bush.</p>
+                                <p xml:lang="fr">La lettre dure trois jours et, en plus des descriptions de la vie quotidienne, contient également une
+                                    lettre de Wilhelm Piaste, le père d'Antonie, concernant l'acquisition d'un Dictamnus Albus, ou Diptam pour faire
+                                    court, en allemand également Burning Bush.</p></note>
                             <note resp="#janine.katins" type="keyword">Expedition nach Greifswald</note>
                             <note resp="#janine.katins" type="keyword">Sehnsucht</note>
                             <note resp="#janine.katins" type="keyword">Familie Piaste</note>
@@ -241,8 +255,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-06-07" who="#janine.katins">Encoding (up to line 510).</change>
             <change when-iso="2014-09-03" who="#janine.katins">Last corrections.</change>
@@ -251,160 +266,227 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="PPN739757261|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">3</note>
-                <note hand="#pencil_2" place="bottom">34. 1823</note>
-                <p>3.</p>
-                <opener> 2<space extent="2w"/><dateline rend="align(right)"><date>Freitag den 13<hi n="2" rend="superscript underline">ten</hi>
-                            Juni</date> 11 Uhr <choice>
-                            <abbr>Ab.</abbr>
-                            <expan>Abends</expan>
-                        </choice></dateline>
-                    <salute>Gott sei mit Dir.</salute></opener>
-                <p>Mein armer lieber Mann, ich habe es wohl gewußt<lb/>und geandet, daß es nicht so erfreulich sein würde,<lb/>als Du es Dir dachtes,
-                    doch eh ich etwas anderes schreibe,<lb/>meinen innigsten Dank für Deinen lieben Zeilen<lb/>Ach! und das Ende rührt mich bis zu
-                    thränen so oft<lb/>ich es <add place="above">auch</add> lese. <add place="above"><unclear extent="1w" reason="illegible"/></add>
-                    Also auch Du weißt wie scheiden thut,<lb/>eigentlich freut mich daß gar sehr. Die Vögel<note resp="janine.katins"><persName
-                            ref="#p1723" type="bi">Antonie</persName> bezieht sich hier auf das Gedicht, das <persName ref="#p0237" type="bi"
-                            >Chamisso</persName> am Ende seines ersten Briefes notierte (Brief vom <date when-iso="1823-06-11">11. Juni 1823</date>,
-                            <ref target="Brief01AdelbertanAntonie.xml">Blatt 7v</ref>).</note> haben<lb/>es auch wirklich, wenigstens besser, ich
-                    denke in Deiner<lb/>Abwesenheit mehr an sie. <persName ref="#p1754" type="bi">Ernst</persName> hat auf seine
-                    Bestellung<lb/>geantwortet: ich bin ja artig. Schade daß <add place="above">Du</add> nicht einmal<lb/>botanisiren kanst, denn ich
-                    habe mich auf diese Unter<lb break="no"/>haltung <del rend="strikethrough">fur</del> für Dich gefreut.</p>
-                <p><rs ref="#p0262 #p0417" type="bi">Neumanns</rs>, <persName ref="#p3130" type="bi">Con<del rend="overwritten">p</del><add
-                            place="across">t</add>essa</persName>,<note resp="#henrike.bobzien">Der <hi rend="quoted">Serapionsbruder</hi>
-                        <persName ref="#p3130" type="bi">Contessa</persName> beschloss am <date when-iso="1815-01-13">13. Januar 1815</date> zusammen
-                        mit <persName ref="#p0237" type="bi">Chamisso</persName>, <persName ref="#p0240" type="bi">Fouqué</persName> und <persName
-                            ref="#p0185" type="bi">Hoffmann</persName> gemeinsam das Projekt, den <title ref="#w">Roman des Freiherrn von
-                            Vieren</title> zu schreiben. Das Werk blieb unvollendet, die Erzählung <title ref="#w">Das Bild der Mutter</title> von
-                            <persName ref="#p3130" type="bi">Contessa</persName> jedoch ist durch ein Kapitel aus dem Gemeinschaftswerk inspiriert
-                        worden. (vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 94).</note>
-                    <persName ref="#p3156" type="bi">Schirmer</persName>, und ich, haben bei <persName ref="#p0239" type="bi"
-                    >Hitzig</persName><lb/>gestern Abend einen sehr hübschen Abend gehabt.<lb/><del rend="overwritten">h</del><add place="across"
-                        >H</add>eute nach Tisch bekam ich <hi rend="underline">Deinen</hi> und die beiden <del rend="overwirtten"><unclear extent="1c"
-                            reason="illegible"/></del><add place="across">B</add>riefe<lb/>vom <rs ref="#p3176" type="bi">Bruder</rs> und <persName
-                        ref="#p0424" type="bi">Coris</persName><note resp="#henrike.bobzien">Auf der Weltreise mit der "Rurik", wo er <persName
-                            ref="#p0237" type="bi">Adelbert von Chamisso</persName> kennenlernte, ist <persName ref="#p0424" type="bi"
-                            >Choris</persName>
-                        <quote>"der Jüngste der Besatzung […]. Sein Pflegevater, ein deutschstämmiger Kunstlehrer an der Universität von Charkov,
-                            förderte seine künstlerische Begabung und ließ ihn sorgfältig ausbilden."</quote> (vgl. <persName ref="#p3101" type="bi"
-                            >Beatrix Langner</persName>, 2008, S. 170). Im Jahre 1821 gab er in Paris die <title ref="#w">Voyage pittoresque autour du
-                            monde (Malerische Reise um die Welt)</title>, in der auch eine Publikation <persName ref="#p0237" type="bi"
-                            >Chamissos</persName> erschien, heraus. (vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S.
-                        131).</note>, wenn ich nicht irre. Nachmittag ging<lb/>ich mit den <rs ref="#p1754 #p3128" type="bi">Kindern</rs> zu <rs
-                        ref="# # " type="bi">Pohls</rs>, die <rs ref="#p3180" type="bi">Tante</rs> nim̄t den<lb/><del rend="overwritten">G</del><add
-                        place="across">g</add>rößten Antheil an Dir und hat so unendlich oft, ihr<lb/>Mit<del rend="overwritten">h</del><add
-                        place="across">l</add>eid mit Dir ausgesprochen, sie konnte sich über<lb/>Dein zu Fuß gehen, in der Hitze, gar nicht
-                    trösten.</p>
-                <p>Zu <persName ref="#p0239" type="bi">Hitzig</persName> ging ich erst spät, fand da die ganze Familie,<lb/><persName ref="#p2432"
-                        type="bi">Hehring</persName>, <persName ref="#p3135" type="bi">Forstner</persName>, und <persName ref="#p3166" type="bi"
-                        >Sander</persName>. <persName ref="#p0239" type="bi">Hitzig</persName> grüßt Dich <del rend="overwritten"><unclear
-                            cert="medium">g</unclear></del><add place="across">h</add>erzlich.<lb/><persName ref="#p0301" type="bi">Erman</persName>
-                    <!-- ich bin nicht sicher, ob es sich hier um Paul Erman handelt -->, <persName ref="#p0413" type="bi">Lichtenstein</persName> und
-                    Andere sagen Du hattest nicht <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                    >n</add>öthig<lb/>gehabt zu Fuß zu gehn. daher hoff ich Du wirst auf der <del rend="overwritten"><unclear extent="1c"
-                            reason="illegible"/></del><add place="across">R</add>ück<lb break="no"/>reise, (an der ich mit so unaussprechlicher Freude
-                    denke), von<lb/>hause aus fahren, es würde mich sehr beruhigen und trösten,<lb/>Dich nicht einer so großen Anstrenung ausgesetzt
-                    zu wissen. </p>
-                <pb facs="PPN739757261|PHYS_0002" n="2"/>
-                <p><persName ref="#p3134" type="bi">O´etzel</persName> ist gestern Mittag abgereist, <hi rend="underline">Sie</hi> hat mir
-                    davon<lb/>gesprochen, wie Du zum letzten mal da warst,<lb/>wäre es ihr vorgekom̄en, als <del rend="overwritten">wäre</del><add
-                        place="across">ob</add> es Di<del rend="overwritten">r</del><add place="across">ch</add> auch ein wenig<lb/>Bange machte, von
-                    uns zu gehn.</p>
-                <closer>Mich überfällt mit einemal eine solche Müdigkeit.<lb/><salute>Gute nacht, gute nacht, <rs ref="#p0237" type="bi">mein
-                            Lieb</rs>, la<add place="above">n</add>ge <add place="above">noch</add> muß ich Dich<lb/><del rend="strikethrough"
-                                ><unclear cert="medium" reason="illegible">la</unclear></del> müssen<note resp="#henrike.bobzien">Semantisch korrekt
-                            wäre hier 'missen' statt müssen.</note>.</salute>
-                </closer>
-                <opener><dateline>Sonnabend Abend gegen 10 Uhr.</dateline></opener>
-                <p>Heute weiß ich warlich noch nicht, wo ich anfangen <add place="above">soll</add>, <rs ref="#0237" type="bi">mein<lb/>eiziges
-                        Herz</rs>, mir ist, als würde ich heute recht kon<lb break="no"/>fus schreiben, denn ich bin noch zu keinem
-                    klaren<lb/>Gedanken gekom̄en, doch in Go<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                        >t</add>tes nahmen, Du weißt<lb/>ja, daß ich keine geübte Schreiberin bin, also wir<del rend="overwritten"><unclear
-                            extent="1c" reason="illegible"/></del><add place="across">st</add><lb/>Du es wohl, überhaupt, so genau nicht nehmen. —</p>
-                <p><rs ref="#p0237" type="bi">Mein armer müder Mann</rs>, heute wirst Du Deinem Ziehle, <del rend="overwritten">H</del><add
-                        place="across">h</add>offentlich schon sehr nahe sein, ich werde Gott recht von Herzen danken, wenn ich weiß, daß Du es gesund
-                    und glücklich überstanden hast. Nach Dir die <unclear extent="1w" reason="illegible">Sonn</unclear> sich sehnt, da<del
-                        rend="overwritten">s</del><add place="across">ß</add> muß eigentlich gesungen w<del rend="overwritten"><unclear extent="1c"
-                            reason="illegible"/></del><add place="across">e</add>rden.</p>
-                <p>Bist Du denn <del rend="strikethrough">übe</del> im ganzen mit mir zufrieden,<lb/>ich meine nicht mit dem schreiben, nicht, wie,
-                    ich schreibe,<lb/> denn da<del rend="overwritten">s</del><add place="across">ß</add> weiß ich wohl, <hi rend="underline"
-                        >schlecht</hi>, aber wann und<lb/>wie oft und wie viel? wenn es Dir nur<lb/>nicht zu viel ist, daß es Dich langweilt, wie
-                    Deine Reise,<lb/>denn eigentlich kann es wohl interessieren?<lb/>heute fr<del rend="overwritten"><unclear extent="2c"
-                            reason="illegible"/></del><add place="across">ü</add>h habe<del rend="strikethrough">n</del> ich den zweiten Theil von
-                        <persName ref="#p0185" type="bi">Hoffman</persName><lb/>angel<del rend="strikethrough">s</del><add place="inline"
-                        >e</add>sen,<note resp="#henrike.bobzien">Gemeint ist wohl ein Buch von <persName ref="#p0185" type="bi">E.T.A
-                            Hoffmann</persName>. Um welches Werk es sich handelt, bleibt vorerst unklar, da Indizien zur Identifikation des Titels
-                        fehlen.</note> Nachmittag <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del><add place="across">war</add>
-                    die <persName ref="#p3138" type="bi">Horkel</persName><note resp="#henrike.bobzien">Die Frau von <persName ref="#p3140" type="bi"
-                            >Johann Adam Horkel</persName>
-                        <!-- in eurer Datenbank und bei der Deutschen Biographie habe ich nur Johannes Horkel gefunden. Verweisen Johann Adam und Johannes Horkel auf die gleiche Person?  -->,
-                        bei dem <persName ref="#p0237" type="bi">Chamisso</persName> ein naturwissenschaftliches Kolleg (vgl. <persName ref="#p0408"
-                            type="bi">Werner Feudel</persName>, 1988, S. 93) in <placeName ref="#l1103" type="bi">Berlin</placeName> hörte, war
-                        befreundet mit <persName ref="#p1723" type="bi">Antonie von Chamisso</persName>, ihr Name ist unbekannt.</note> bei mir,</p>
-                <pb facs="PPN739757261|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">4</note>
-                <p>wir haben recht hübsch vertraulich geplaudert<lb/>auch von D<del rend="overwritten"><unclear extent="2c" reason="illegible"
-                        /></del><add place="across">ir</add>. Am Abend kam <rs ref="#p3174" type="bi">Mulle</rs> auf ein<lb/>Augenblick, um einen
-                    recht hübschen Brief von <persName ref="#p3146" type="bi">Löst</persName> mir<lb/>mitzutheilen. <rs ref="#p3177" type="bi"
-                        >Vater</rs> und <rs ref="#p3175" type="bi">Mutter</rs> waren au<del rend="overwritten">f</del><add place="across">ch</add> bei
-                    mir.<lb/>Noch etwas von gestern, Da hat Dich unsre Wirthin<lb/>sehr gelobt, weil Du immer die Thüre, so sa<del rend="overwritten"
-                        >t</del><add place="across">n</add>ft<lb/>zu machtest, der arme Mann ist nehmlich, (weil die<lb/>ü<del rend="overwritten"
-                            ><unclear extent="2c" reason="illegible"/></del><add place="across">bri</add>gen Bewohner die Thüre so sehr <del
-                        rend="strikethrough">z</del>werfen) denn<note resp="janine.katins">Semantisch korrekt wäre hier 'den' statt
-                        'denn'</note><lb/><add place="above">ganzen</add> Tag im Garten, um es nicht zu hören, deshalb lieben<lb/>sie Dich sehr, sie
-                        mei<del rend="overwritten">t</del><add place="across">n</add>t Dir wäre es erlaubt, denn<lb/>ein Gelehrter, hätte andere Dinge
-                    im Kopf, der kön̄e<lb/>daran nicht denken.</p>
-                <p>Es <add place="above">sind</add> nun zwar schon 5 Tage vergangen, aber die<lb/>Zeit der Trennung ist doch noch gar zu lang;
-                    bemerkst<lb/>Du auch das Siegel,<note resp="#henrike.bobzien">Leider haben sich nur wenige Siegel in dem Nachlass erhalten. Allein
-                        auf den Briefen von <persName ref="#p1723" type="bi">Antonie</persName> finden sich lediglich drei Exemplare auf den <ref
-                            target="BriefAntonieanAdelbert">Bl. 13v</ref>, <ref target="BriefAntonieanAdelbert">16/17</ref> und <ref
-                            target="BriefAntonieanAdelbert">18/19</ref>, <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> die von ihr
-                        selbst versiegelt scheinen. Alle anderen Briefe haben kein Siegel und sind vermutlich mit weitern Beilagen in Umschlägen
-                        verschickt worden. Leider sind die Vorhandenen so stark beschädigt, dass eine Rekonstruktion von möglicherweise abgedruckten
-                        Worten nicht realisierbar ist. Auch scheinen nicht alle drei aufgeführten Beispiele von einem Ring zu stammen. Dafür käme m.E.
-                        lediglich der Abdruck auf <ref target="BriefAntonieanAdelbert">Bl. 13v</ref>
-                        <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> in Frage. Die Form ist leicht oval und hat ungefähr die Maße
-                        1,4 cm in der Breite sowie 1,8 cm in der Höhe. <persName ref="#p0237" type="bi">Chamissos</persName> Siegel mit dem
-                        Familienwappen hingegen ist aufzufinden auf <ref target="">Bl. 26, K. 17, M. 4</ref>
-                        <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> (Vgl. Abb. bei <persName ref="#p0408" type="bi">Werner
-                            Feudel</persName>, 1988, S. 6).</note> ich liebe den Ring jetzt sehr<lb/>weil er so die Wahrheit spricht, ich fühle seine
-                    Worte<lb/>so tief, daß es mir v<del rend="overwritten"><unclear extent="2c" reason="illegible">er</unclear></del><add
-                        place="across">or</add>köm̄t, als würden wir, nach Deiner<lb/>Rückkunft, ein weit anderes und glücklicheres Leben<lb/>führen,
-                    wenigstens in meinem Gemüth, bringt es<lb/>ein Gefühl der Dankbarkeit, und eine anerken-<lb/>nung meines Glücks, hervor, daß ich
-                    wohl wünsche<lb/>diesen Eindruck unverwischt zu behalten.</p>
-                <closer>
-                    <salute>Es grüßt Dich alles herzlich auch <persName ref="#p2917" type="bi">Eugenie</persName>.<lb/>Gute nacht,</salute></closer>
-                <opener><dateline> Sonntag Mittag an Vaters Puld.</dateline></opener>
-                <p>Wo magst Du wohl den ersten Sonntag ohne uns zu<lb break="no"/>bringen?: Gott sei mit Dir. Ich und die <rs ref="#p1754 #p3128"
-                        type="bi">Kinder</rs>, die sich sehr wohl befinden sind bei <rs ref="#p3175" type="bi">Mutter</rs>
-                    <del rend="overwritten"><unclear cert="medium" extent="2c" reason="illegible">ve</unclear></del><add place="across">für</add>
-                        den<lb/><del rend="overwritten">G</del><add place="across">g</add>anzen Tag; Ich weiß nicht, daß Schreiben will<lb/>am Tage
-                    gar nicht so gut gehen, als am Abend,<lb/>daß muß die <del rend="overwritten">g</del><add place="across">G</add>ewohnheit, mit
-                        <add place="above">Dir</add> zusam̄en zu sein, machen.</p>
-                <closer><salute>Alles grüß Dich lebe wohl.</salute>
-                    <signed>Deine treue.</signed></closer>
-                <pb facs="PPN739757261|PHYS_0004" n="4"/>
-                <handshift new="#minor_hand"/>
-                <!-- Hier beginnt der Brief Wilhelm Piastes; ich war nicht sicher, ob diese Seite mittels Handshift kodiert werden muss. -->
-                <opener><dateline rend="align(center)"><date when-iso="1823-06-15">Den 15.<hi rend="superscript">n</hi> Juny
-                        1823.</date></dateline><lb/><signed rend="align(right)">Dein treuer <choice>
-                            <abbr>S.</abbr>
-                            <expan>Schwieger</expan>
-                        </choice> Vater<lb/><hi rend="latin"><persName ref="#p3177" type="bi">Piaste</persName></hi>.</signed><lb/><salute
-                        rend="align(left)">Theuerster <hi rend="latin"><persName ref="#p0237" type="bi">Chamisso</persName></hi>.</salute>
-                </opener>
-                <p>So sehr ich mir Hoffnung gemacht hatte, Dir von<lb/>dem <foreign xml:lang="la"><hi rend="latin">Dictamnus albus</hi></foreign><note
-                        resp="#henrike.bobzien">Dictamnus albus = D: Gewöhnlicher Diptam, E: Burning Bush, F: Herbe aux éclairs. Vgl.: <persName
-                            ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 342.</note> mehrere Exemplare<lb/>zu besorgen; so wird mir dies
-                    doch, den<lb/>Ansichten nach, nicht möglich. Ich habe nur<lb/>ein Exemplar vorgefunden. Das zweite<lb/>war schon weg. Die übrigen
-                    Pflanzen,<lb/>die ich anfänglich dafür hielt, sind nicht<lb/>
-                    <foreign xml:lang="la"><hi rend="latin">Dictamnus albus</hi></foreign>. – Ich wünsche, daß Du<lb/>Deine Reise mit Kraft und Glück
-                    vollendet<lb/>haben mögest. Denn die Hitze wird Dir<lb/>wohl sehr lästig gewesen seyn. In<lb/>unserm Familienkreise ist alles
-                        ge<lb break="no" type="dh"/>sund. <persName ref="#p3176" type="bi">Heinrich</persName> scheint das Heimweh<lb/>zu bekommen. Er
-                    schrieb sehr hypo<lb break="no" type="dh"/>s<lb/>chondrisch. <persName ref="#p3146" type="bi">Loest</persName> hat auch
-                    geschrieben.<lb/>Er läßt herzlich grüßen. — Schreibe<lb/>uns bald Deine glückliche Ankunft.<lb/>Dies ist der heiße Wunsch von uns
-                    allen.</p>
+                <div type="letter">
+                    <pb facs="PPN739757261|PHYS_0001" n="1"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">3</note>
+                    <note hand="#pencil_2" place="bottom">34. 1823</note>
+                    <note>3.</note>
+                    <opener> 2<space extent="2w"/><dateline rend="align(right)"><date>Freitag den 13<hi n="2" rend="superscript underline">ten</hi>
+                                Juni</date> 11 Uhr <choice>
+                                <abbr>Ab.</abbr>
+                                <expan>Abends</expan>
+                            </choice></dateline>
+                        <salute>Gott sei mit Dir.</salute></opener>
+                    <p>Mein armer lieber Mann, ich habe es wohl gewußt<lb/>und geandet, daß es nicht so erfreulich sein würde,<lb/>als Du es Dir
+                        dachtes, doch eh ich etwas anderes schreibe,<lb/>meinen innigsten Dank für Deinen lieben Zeilen<lb/>Ach! und das Ende rührt
+                        mich bis zu thränen so oft<lb/>ich es <add place="above">auch</add> lese. <add place="above"><unclear extent="1w"
+                                reason="illegible"/></add> Also auch Du weißt wie scheiden thut,<lb/>eigentlich freut mich daß gar sehr. Die
+                            Vögel<note resp="janine.katins"><persName ref="#p1723" type="bi">Antonie</persName> bezieht sich hier auf das Gedicht, das
+                                <persName ref="#p0237" type="bi">Chamisso</persName> am Ende seines ersten Briefes notierte (Brief vom <date
+                                when-iso="1823-06-11">11. Juni 1823</date>, <ref target="Brief01AdelbertanAntonie.xml">Blatt 7v</ref>).</note>
+                        haben<lb/>es auch wirklich, wenigstens besser, ich denke in Deiner<lb/>Abwesenheit mehr an sie. <persName ref="#p1754"
+                            type="bi">Ernst</persName> hat auf seine Bestellung<lb/>geantwortet: ich bin ja artig. Schade daß <add place="above"
+                            >Du</add> nicht einmal<lb/>botanisiren kanst, denn ich habe mich auf diese Unter<lb break="no"/>haltung <del
+                            rend="strikethrough">fur</del> für Dich gefreut.</p>
+                    <p><rs ref="#p0262 #p0417" type="bi">Neumanns</rs>, <persName ref="#p3130" type="bi">Con<subst>
+                                <del rend="overwritten">p</del>
+                                <add place="across">t</add>
+                            </subst>essa</persName>,<note resp="#henrike.bobzien"><p xml:lang="de">Der <hi rend="quoted">Serapionsbruder</hi>
+                                <persName ref="#p3130" type="bi">Contessa</persName> beschloss am <date when-iso="1815-01-13">13. Januar 1815</date>
+                                zusammen mit <persName ref="#p0237" type="bi">Chamisso</persName>, <persName ref="#p0240" type="bi">Fouqué</persName>
+                                und <persName ref="#p0185" type="bi">Hoffmann</persName> gemeinsam das Projekt, den <title ref="#w">Roman des
+                                    Freiherrn von Vieren</title> zu schreiben. Das Werk blieb unvollendet, die Erzählung <title ref="#w">Das Bild der
+                                    Mutter</title> von <persName ref="#p3130" type="bi">Contessa</persName> jedoch ist durch ein Kapitel aus dem
+                                Gemeinschaftswerk inspiriert worden. (vgl. <persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S.
+                                94).</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                        <persName ref="#p3156" type="bi">Schirmer</persName>, und ich, haben bei <persName ref="#p0239" type="bi"
+                        >Hitzig</persName><lb/>gestern Abend einen sehr hübschen Abend gehabt.<lb/><subst>
+                            <del rend="overwritten">h</del>
+                            <add place="across">H</add>
+                        </subst>eute nach Tisch bekam ich <hi rend="underline">Deinen</hi> und die beiden <subst>
+                            <del rend="overwirtten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">B</add>
+                        </subst>riefe<lb/>vom <rs ref="#p3176" type="bi">Bruder</rs> und <persName ref="#p0424" type="bi">Coris</persName><note
+                            resp="#henrike.bobzien">Auf der Weltreise mit der "Rurik", wo er <persName ref="#p0237" type="bi">Adelbert von
+                                Chamisso</persName> kennenlernte, ist <persName ref="#p0424" type="bi">Choris</persName>
+                            <quote>"der Jüngste der Besatzung […]. Sein Pflegevater, ein deutschstämmiger Kunstlehrer an der Universität von Charkov,
+                                förderte seine künstlerische Begabung und ließ ihn sorgfältig ausbilden."</quote> (vgl. <persName ref="#p3101"
+                                type="bi">Beatrix Langner</persName>, 2008, S. 170). Im Jahre 1821 gab er in Paris die <title ref="#w">Voyage
+                                pittoresque autour du monde (Malerische Reise um die Welt)</title>, in der auch eine Publikation <persName
+                                ref="#p0237" type="bi">Chamissos</persName> erschien, heraus. (vgl. <persName ref="#p0408" type="bi">Werner
+                                Feudel</persName>, 1988, S. 131).</note>, wenn ich nicht irre. Nachmittag ging<lb/>ich mit den <rs ref="#p1754 #p3128"
+                            type="bi">Kindern</rs> zu <rs ref="# # " type="bi">Pohls</rs>, die <rs ref="#p3180" type="bi">Tante</rs> nim̄t den<lb/><subst>
+                            <del rend="overwritten">G</del>
+                            <add place="across">g</add>
+                        </subst>rößten Antheil an Dir und hat so unendlich oft, ihr<lb/>Mit<subst>
+                            <del rend="overwritten">h</del>
+                            <add place="across">l</add>
+                        </subst>eid mit Dir ausgesprochen, sie konnte sich über<lb/>Dein zu Fuß gehen, in der Hitze, gar nicht trösten.</p>
+                    <p>Zu <persName ref="#p0239" type="bi">Hitzig</persName> ging ich erst spät, fand da die ganze Familie,<lb/><persName ref="#p2432"
+                            type="bi">Hehring</persName>, <persName ref="#p3135" type="bi">Forstner</persName>, und <persName ref="#p3166" type="bi"
+                            >Sander</persName>. <persName ref="#p0239" type="bi">Hitzig</persName> grüßt Dich <subst>
+                            <del rend="overwritten"><unclear cert="medium">g</unclear></del>
+                            <add place="across">h</add>
+                        </subst>erzlich.<lb/><persName ref="#p0301" type="bi">Erman</persName>
+                        <!-- ich bin nicht sicher, ob es sich hier um Paul Erman handelt -->, <persName ref="#p0413" type="bi">Lichtenstein</persName>
+                        und Andere sagen Du hattest nicht <subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">n</add>
+                        </subst>öthig<lb/>gehabt zu Fuß zu gehn. daher hoff ich Du wirst auf der <subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">R</add>
+                        </subst>ück<lb break="no"/>reise, (an der ich mit so unaussprechlicher Freude denke), von<lb/>hause aus fahren, es würde mich
+                        sehr beruhigen und trösten,<lb/>Dich nicht einer so großen Anstrenung ausgesetzt zu wissen. </p>
+                    <pb facs="PPN739757261|PHYS_0002" n="2"/>
+                    <p><persName ref="#p3134" type="bi">O´etzel</persName> ist gestern Mittag abgereist, <hi rend="underline">Sie</hi> hat mir
+                        davon<lb/>gesprochen, wie Du zum letzten mal da warst,<lb/>wäre es ihr vorgekom̄en, als <subst>
+                            <del rend="overwritten">wäre</del>
+                            <add place="across">ob</add>
+                        </subst> es Di<subst>
+                            <del rend="overwritten">r</del>
+                            <add place="across">ch</add>
+                        </subst> auch ein wenig<lb/>Bange machte, von uns zu gehn.</p>
+                    <closer>Mich überfällt mit einemal eine solche Müdigkeit.<lb/><salute>Gute nacht, gute nacht, <rs ref="#p0237" type="bi">mein
+                                Lieb</rs>, la<add place="above">n</add>ge <add place="above">noch</add> muß ich Dich<lb/><del rend="strikethrough"
+                                    ><unclear cert="medium" reason="illegible">la</unclear></del> müssen<note resp="#henrike.bobzien"><p xml:lang="de"
+                                    >Semantisch korrekt wäre hier 'missen' statt müssen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>.</salute>
+                    </closer>
+                </div>
+                <div type="letter">
+                    <opener><dateline>Sonnabend Abend gegen 10 Uhr.</dateline></opener>
+                    <p>Heute weiß ich warlich noch nicht, wo ich anfangen <add place="above">soll</add>, <rs ref="#0237" type="bi">mein<lb/>eiziges
+                            Herz</rs>, mir ist, als würde ich heute recht kon<lb break="no"/>fus schreiben, denn ich bin noch zu keinem
+                        klaren<lb/>Gedanken gekom̄en, doch in Go<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">t</add>
+                        </subst>tes nahmen, Du weißt<lb/>ja, daß ich keine geübte Schreiberin bin, also wir<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">st</add>
+                        </subst><lb/>Du es wohl, überhaupt, so genau nicht nehmen. —</p>
+                    <p><rs ref="#p0237" type="bi">Mein armer müder Mann</rs>, heute wirst Du Deinem Ziehle, <subst>
+                            <del rend="overwritten">H</del>
+                            <add place="across">h</add>
+                        </subst>offentlich schon sehr nahe sein, ich werde Gott recht von Herzen danken, wenn ich weiß, daß Du es gesund und glücklich
+                        überstanden hast. Nach Dir die <unclear extent="1w" reason="illegible">Sonn</unclear> sich sehnt, da<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">ß</add>
+                        </subst> muß eigentlich gesungen w<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">e</add>
+                        </subst>rden.</p>
+                    <p>Bist Du denn <del rend="strikethrough">übe</del> im ganzen mit mir zufrieden,<lb/>ich meine nicht mit dem schreiben, nicht,
+                        wie, ich schreibe,<lb/> denn da<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">ß</add>
+                        </subst> weiß ich wohl, <hi rend="underline">schlecht</hi>, aber wann und<lb/>wie oft und wie viel? wenn es Dir nur<lb/>nicht
+                        zu viel ist, daß es Dich langweilt, wie Deine Reise,<lb/>denn eigentlich kann es wohl interessieren?<lb/>heute fr<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">ü</add>
+                        </subst>h habe<del rend="strikethrough">n</del> ich den zweiten Theil von <persName ref="#p0185" type="bi">Hoffman</persName><lb/>angel<subst>
+                            <del rend="strikethrough">s</del>
+                            <add place="inline">e</add>
+                        </subst>sen,<note resp="#henrike.bobzien"><p xml:lang="de">Gemeint ist wohl ein Buch von <persName ref="#p0185" type="bi"
+                                    >E.T.A Hoffmann</persName>. Um welches Werk es sich handelt, bleibt vorerst unklar, da Indizien zur Identifikation
+                                des Titels fehlen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Nachmittag <subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">war</add>
+                        </subst> die <persName ref="#p3138" type="bi">Horkel</persName><note resp="#henrike.bobzien"><p xml:lang="de">Die Frau von
+                                    <persName ref="#p3140" type="bi">Johann Adam Horkel</persName>
+                                <!-- in eurer Datenbank und bei der Deutschen Biographie habe ich nur Johannes Horkel gefunden. Verweisen Johann Adam und 
+                            Johannes Horkel auf die gleiche Person?  -->,
+                                bei dem <persName ref="#p0237" type="bi">Chamisso</persName> ein naturwissenschaftliches Kolleg (vgl. <persName
+                                    ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 93) in <placeName ref="#l1103" type="bi"
+                                    >Berlin</placeName> hörte, war befreundet mit <persName ref="#p1723" type="bi">Antonie von Chamisso</persName>,
+                                ihr Name ist unbekannt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> bei mir,</p>
+                    <pb facs="PPN739757261|PHYS_0003" n="3"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">4</note>
+                    <p>wir haben recht hübsch vertraulich geplaudert<lb/>auch von D<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">ir</add>
+                        </subst>. Am Abend kam <rs ref="#p3174" type="bi">Mulle</rs> auf ein<lb/>Augenblick, um einen recht hübschen Brief von
+                            <persName ref="#p3146" type="bi">Löst</persName> mir<lb/>mitzutheilen. <rs ref="#p3177" type="bi">Vater</rs> und <rs
+                            ref="#p3175" type="bi">Mutter</rs> waren au<subst>
+                            <del rend="overwritten">f</del>
+                            <add place="across">ch</add>
+                        </subst> bei mir.<lb/>Noch etwas von gestern, Da hat Dich unsre Wirthin<lb/>sehr gelobt, weil Du immer die Thüre, so sa<subst>
+                            <del rend="overwritten">t</del>
+                            <add place="across">n</add>
+                        </subst>ft<lb/>zu machtest, der arme Mann ist nehmlich, (weil die<lb/>ü<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">bri</add>
+                        </subst>gen Bewohner die Thüre so sehr <del rend="strikethrough">z</del>werfen) denn<note resp="janine.katins"><p
+                                xml:lang="de">Semantisch korrekt wäre hier 'den' statt 'denn'</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/><add
+                            place="above">ganzen</add> Tag im Garten, um es nicht zu hören, deshalb lieben<lb/>sie Dich sehr, sie mei<subst>
+                            <del rend="overwritten">t</del>
+                            <add place="across">n</add>
+                        </subst>t Dir wäre es erlaubt, denn<lb/>ein Gelehrter, hätte andere Dinge im Kopf, der kön̄e<lb/>daran nicht denken.</p>
+                    <p>Es <add place="above">sind</add> nun zwar schon 5 Tage vergangen, aber die<lb/>Zeit der Trennung ist doch noch gar zu lang;
+                        bemerkst<lb/>Du auch das Siegel,<note resp="#henrike.bobzien"><p xml:lang="de">Leider haben sich nur wenige Siegel in dem
+                                Nachlass erhalten. Allein auf den Briefen von <persName ref="#p1723" type="bi">Antonie</persName> finden sich
+                                lediglich drei Exemplare auf den <ref target="BriefAntonieanAdelbert">Bl. 13v</ref>, <ref
+                                    target="BriefAntonieanAdelbert">16/17</ref> und <ref target="BriefAntonieanAdelbert">18/19</ref>,
+                                <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> die von ihr selbst versiegelt scheinen. Alle anderen
+                                Briefe haben kein Siegel und sind vermutlich mit weitern Beilagen in Umschlägen verschickt worden. Leider sind die
+                                Vorhandenen so stark beschädigt, dass eine Rekonstruktion von möglicherweise abgedruckten Worten nicht realisierbar
+                                ist. Auch scheinen nicht alle drei aufgeführten Beispiele von einem Ring zu stammen. Dafür käme m.E. lediglich der
+                                Abdruck auf <ref target="BriefAntonieanAdelbert">Bl. 13v</ref>
+                                <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> in Frage. Die Form ist leicht oval und hat ungefähr
+                                die Maße 1,4 cm in der Breite sowie 1,8 cm in der Höhe. <persName ref="#p0237" type="bi">Chamissos</persName> Siegel
+                                mit dem Familienwappen hingegen ist aufzufinden auf <ref>Bl. 26, K. 17, M. 4</ref>
+                                <!-- Wenn korrekt benannt, bitte die Verknüpfungen einfügen --> (Vgl. Abb. bei <persName ref="#p0408" type="bi">Werner
+                                    Feudel</persName>, 1988, S. 6).</p><p xml:lang="en"/><p xml:lang="fr"/></note> ich liebe den Ring jetzt
+                        sehr<lb/>weil er so die Wahrheit spricht, ich fühle seine Worte<lb/>so tief, daß es mir v<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible">er</unclear></del>
+                            <add place="across">or</add>
+                        </subst>köm̄t, als würden wir, nach Deiner<lb/>Rückkunft, ein weit anderes und glücklicheres Leben<lb/>führen, wenigstens in
+                        meinem Gemüth, bringt es<lb/>ein Gefühl der Dankbarkeit, und eine anerken-<lb/>nung meines Glücks, hervor, daß ich wohl
+                        wünsche<lb/>diesen Eindruck unverwischt zu behalten.</p>
+                    <closer>
+                        <salute>Es grüßt Dich alles herzlich auch <persName ref="#p2917" type="bi">Eugenie</persName>.<lb/>Gute
+                        nacht,</salute></closer>
+                </div>
+                <div type="letter">
+                    <opener><dateline> Sonntag Mittag an Vaters Puld.</dateline></opener>
+                    <p>Wo magst Du wohl den ersten Sonntag ohne uns zu<lb break="no"/>bringen?: Gott sei mit Dir. Ich und die <rs ref="#p1754 #p3128"
+                            type="bi">Kinder</rs>, die sich sehr wohl befinden sind bei <rs ref="#p3175" type="bi">Mutter</rs>
+                        <subst>
+                            <del rend="overwritten"><unclear cert="medium" extent="2c" reason="illegible">ve</unclear></del>
+                            <add place="across">für</add>
+                        </subst> den<lb/><subst>
+                            <del rend="overwritten">G</del>
+                            <add place="across">g</add>
+                        </subst>anzen Tag; Ich weiß nicht, daß Schreiben will<lb/>am Tage gar nicht so gut gehen, als am Abend,<lb/>daß muß die <subst>
+                            <del rend="overwritten">g</del>
+                            <add place="across">G</add>
+                        </subst>ewohnheit, mit <add place="above">Dir</add> zusam̄en zu sein, machen.</p>
+                    <closer><salute>Alles grüß Dich lebe wohl.</salute>
+                        <signed>Deine treue.</signed></closer>
+                </div>
+                <div type="letter">
+                    <pb facs="PPN739757261|PHYS_0004" n="4"/>
+                    <!-- Hier beginnt der Brief Wilhelm Piastes; ich war nicht sicher, ob diese Seite mittels Handshift kodiert werden muss. -->
+                    <opener>
+                        <handShift new="#minor_hand"/>
+                        <dateline rend="align(center)"><date when-iso="1823-06-15">Den 15.<hi rend="superscript">n</hi> Juny 1823.</date></dateline>
+                        <signed rend="align(right)">Dein treuer <choice>
+                                <abbr>S.</abbr>
+                                <expan>Schwieger</expan>
+                            </choice> Vater<lb/><hi rend="latin"><persName ref="#p3177" type="bi">Piaste</persName></hi>.</signed>
+                        <salute rend="align(left)">Theuerster <hi rend="latin"><persName ref="#p0237" type="bi">Chamisso</persName></hi>.</salute>
+                    </opener>
+                    <p>So sehr ich mir Hoffnung gemacht hatte, Dir von<lb/>dem <foreign xml:lang="la"><hi rend="latin">Dictamnus
+                            albus</hi></foreign><note resp="#henrike.bobzien"><p xml:lang="de">Dictamnus albus = D: Gewöhnlicher Diptam, E: Burning
+                                Bush, F: Herbe aux éclairs. Vgl.: <persName ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 342.</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note> mehrere Exemplare<lb/>zu besorgen; so wird mir dies doch, den<lb/>Ansichten
+                        nach, nicht möglich. Ich habe nur<lb/>ein Exemplar vorgefunden. Das zweite<lb/>war schon weg. Die übrigen Pflanzen,<lb/>die
+                        ich anfänglich dafür hielt, sind nicht<lb/>
+                        <foreign xml:lang="la"><hi rend="latin">Dictamnus albus</hi></foreign>. – Ich wünsche, daß Du<lb/>Deine Reise mit Kraft und
+                        Glück vollendet<lb/>haben mögest. Denn die Hitze wird Dir<lb/>wohl sehr lästig gewesen seyn. In<lb/>unserm Familienkreise ist
+                        alles ge<lb break="no" type="dh"/>sund. <persName ref="#p3176" type="bi">Heinrich</persName> scheint das Heimweh<lb/>zu
+                        bekommen. Er schrieb sehr hypo<lb break="no" type="dh"/>s<lb/>chondrisch. <persName ref="#p3146" type="bi">Loest</persName>
+                        hat auch geschrieben.<lb/>Er läßt herzlich grüßen. — Schreibe<lb/>uns bald Deine glückliche Ankunft.<lb/>Dies ist der heiße
+                        Wunsch von uns allen.</p>
+                </div>
             </div>
         </body>
     </text>

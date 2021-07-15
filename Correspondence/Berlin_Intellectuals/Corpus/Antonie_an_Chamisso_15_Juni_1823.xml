@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -76,11 +83,21 @@
                     <msContents>
                         <msItem>
                             <docDate when="1823-06-15"/>
-                            <note resp="#janine.katins">Antonie berichtet ihrem Mann von einem seltsamen Traum, in dem Karl August Varnhagen eine
-                                tragende Rolle spielt. Sie kündigt außerdem einen Auflug zur Pfaueninsel mit Julius Eduard Hitzig, von dem sie im
-                                Brief ausführlich berichten wird <ref target="">Brief Antonies an Adelbert vom 16.-19. Juni 1823, Blatt 7r</ref>.
-                                <!-- bitte korrekt eintragen, sobald die benennung erfolgt--> Darüber hinaus enthält ihr Brief Einzelheiten aus dem
-                                Familienleben und von den Kindern.</note>
+                            <note resp="#janine.katins"><p xml:lang="de">Antonie berichtet ihrem Mann von einem seltsamen Traum, in dem Karl August
+                                    Varnhagen eine tragende Rolle spielt. Sie kündigt außerdem einen Auflug zur Pfaueninsel mit Julius Eduard Hitzig,
+                                    von dem sie im Brief ausführlich berichten wird <ref>Brief Antonies an Adelbert vom 16.-19. Juni 1823, Blatt
+                                        7r</ref>. <!-- bitte korrekt eintragen, sobald die benennung erfolgt--> Darüber hinaus enthält ihr Brief
+                                    Einzelheiten aus dem Familienleben und von den Kindern.</p>
+                                <p xml:lang="en">Antonie tells her husband about a strange dream in which Karl August Varnhagen plays a leading role.
+                                    She also announces a trip to Pfaueninsel with Julius Eduard Hitzig, of whom she will report in detail in the
+                                    letter <ref> Antonie's letter to Adelbert from 16.-19. June 1823, sheet 7r </ref>.
+                                    <!-- please fill in correctly as soon as you name it --> Your letter also contains details from family life and
+                                    the children.</p>
+                                <p xml:lang="fr">Antonie raconte à son mari un rêve étrange dans lequel Karl August Varnhagen joue un rôle de premier
+                                    plan. Elle annonce également un voyage à Pfaueninsel avec Julius Eduard Hitzig, dont elle rendra compte en détail
+                                    dans la lettre <ref> la lettre d'Antonie à Adelbert du 16.-19. Juin 1823, feuille 7r </ref>.
+                                    <!-- veuillez remplir correctement dès que vous le nommez --> Votre lettre contient également des détails sur la
+                                    vie de famille et les enfants.</p></note>
                             <note resp="#janine.katins" type="keyword">Expedition nach Greifswald</note>
                             <note resp="#janine.katins" type="keyword">Sehnsucht</note>
                             <note resp="#janine.katins" type="keyword">Familie Piaste</note>
@@ -233,8 +250,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-09" who="#janine.katins">Encoding (up to line 390).</change>
             <change when-iso="2014-09-03" who="#janine.katins">Last corrections</change>
@@ -244,24 +262,41 @@
         <body>
             <div type="transcription">
                 <pb facs="PPN73975727X|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">5</note>
-                <note hand="#pencil_2" place="top-margin-left">34.1823</note>
-                <p><unclear cert="medium" reason="illegible"><del rend="strikethrough">1</del></unclear></p>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">5</note>
+                <note hand="#pencil_2" place="top-margin(left)">34.1823</note>
+                <note><unclear cert="medium" reason="illegible"><del rend="strikethrough">1</del></unclear></note>
                 <opener> 3<space extent="3w"/><dateline rend="align(right)">Sonntag Abend 10 Uhr</dateline>
                     <salute>Mein lieber eiziger <hi rend="latin"><persName ref="#p0237" type="bi">Chamisso</persName></hi>, </salute></opener>
-                <p rend="nolb">so nenn ich Dich <del rend="overwritten">in</del><add place="across">ja</add> in<lb/>der <del rend="overwritten"
-                        >r</del><add place="across">R</add>egel, d<del rend="overwritten">a</del><add place="across">r</add>um will <del
-                        rend="overwritten"><unclear extent="1w" reason="illegible"/></del><add place="across">ich</add> es auch jetzt thun. Es
-                    ist<lb/>mir, als könnte ich nicht zu Bett, gehn, ohne Dir eine<lb/>schöne <del rend="overwritten"><unclear extent="1c"
-                            reason="illegible"/></del><add place="across">g</add>ute Nacht zu wünschen, und daß Du eben so<lb/>schön schlafen möchtest
-                    als ich, ob<del rend="overwritten">b</del><add place="across">g</add>leich ich diese<lb/>Nacht einen ungenehmen und doch zugleich
-                        angenehmen<lb/>T<del rend="overwritten"><unclear extent="2c" reason="illegible"/></del><add place="across">raum</add> gehabt
-                    haben, ich habe nehmlich auf <persName ref="#p0249" type="bi">Varn<lb/>harens</persName> Schoß gesessen, und <add place="above"
-                        >er</add> hat mich zu meinem größ<lb break="no"/>ten Aerger geliebkost; <add place="above">und in Deiner Gegenwart</add> Dann
-                    aber habe ich Dich um<lb break="no"/>arm — und wir waren recht froh als er uns verlassen<lb/>hatte.</p>
+                <p rend="nolb">so nenn ich Dich <subst>
+                        <del rend="overwritten">in</del>
+                        <add place="across">ja</add>
+                    </subst> in<lb/>der <subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">R</add>
+                    </subst>egel, d<subst>
+                        <del rend="overwritten">a</del>
+                        <add place="across">r</add>
+                    </subst>um will <subst>
+                        <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del>
+                        <add place="across">ich</add>
+                    </subst> es auch jetzt thun. Es ist<lb/>mir, als könnte ich nicht zu Bett, gehn, ohne Dir eine<lb/>schöne <subst>
+                        <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                        <add place="across">g</add>
+                    </subst>ute Nacht zu wünschen, und daß Du eben so<lb/>schön schlafen möchtest als ich, ob<subst>
+                        <del rend="overwritten">b</del>
+                        <add place="across">g</add>
+                    </subst>leich ich diese<lb/>Nacht einen ungenehmen und doch zugleich angenehmen<lb/>T<subst>
+                        <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                        <add place="across">raum</add>
+                    </subst> gehabt haben, ich habe nehmlich auf <persName ref="#p0249" type="bi">Varn<lb/>harens</persName> Schoß gesessen, und <add
+                        place="above">er</add> hat mich zu meinem größ<lb break="no"/>ten Aerger geliebkost; <add place="above">und in Deiner
+                        Gegenwart</add> Dann aber habe ich Dich um<lb break="no"/>arm — und wir waren recht froh als er uns verlassen<lb/>hatte.</p>
                 <p rend="nolb">Heute, oder diesmal beköm̄st Du viel zu<lb/>lesen, welchen Du wohl wirst zu erst vernehmen, <rs ref="#p3174" type="bi"
-                        >Mullen</rs> habe<del rend="strikethrough">n</del> ich, <del rend="overwritten">s</del><add place="across">w</add>eil <add
-                        place="above">ich</add> es <del rend="strikethrough">ha</del> vor Neugier nicht habe aushalten<lb/>können, lesen müssen.</p>
+                        >Mullen</rs> habe<del rend="strikethrough">n</del> ich, <subst>
+                        <del rend="overwritten">s</del>
+                        <add place="across">w</add>
+                    </subst>eil <add place="above">ich</add> es <del rend="strikethrough">ha</del> vor Neugier nicht habe aushalten<lb/>können, lesen
+                    müssen.</p>
                 <p>Wenn ich nur erst wieder<lb/>Nachricht hatte, ob, wann, und wie Du angekomen bist.<lb/><rs ref="#p3174" type="bi">Mullens</rs>
                     Brief sieht viel hübscher aus, als meiner<lb/>ist auch sehr zärtlich, ich werde am Ende ganz neidisch<lb/>werden auf sie.</p>
                 <p><persName ref="#p1754" type="bi">Ernst</persName> hat mir gestern recht Kum̄er gemacht, er sehr neidisch<lb/>und häßlich gegen den
@@ -269,29 +304,38 @@
                     Karakters her <hi rend="subscript">zu</hi><lb/>kom̄en, der mich sehr betrübt, den ich fürchte er wird<lb/>schwer aus zu rotten
                     sein. <space extent="1w"/>
                     <persName ref="#p3128" type="bi">Max</persName> macht uns hingegen allen<lb/>recht viel Freude.</p>
-                <p> Dienstag werde ich mit <rs ref="#p0239" type="bi">Ede</rs> und Umschweif<note resp="#henrike.bobzien">Diese Aussage bezieht sich
-                        auf die später durchgeführte und beschriebene Reise zur Pfaueninsel. <persName ref="#p0239" type="bi">Julius Eduard
-                            Hitzig</persName> und <persName ref="#p3130" type="bi">Carl Wilhelm Salice Contessa</persName> begleiteten <persName
-                            ref="#p3174" type="bi">Emilie Piaste</persName> und <persName ref="#p3099" type="bi">Jana</persName>, <rs ref="#p3180"
-                            type="bi">Tante Lotte</rs>, <persName ref="#p2917" type="bi">Emma</persName>, <persName ref="#p2916" type="bi"
-                            >Clärchen</persName> und <persName ref="#p1723" type="bi">Antonie</persName> auf diesem Ausflug. Vgl. den Brief <persName
-                            ref="#p1723" type="bi">Antonies</persName> an <persName ref="#p0237" type="bi">Adelbert</persName> vom 16.-19. Juni 1823
-                            <ref target="">Bl. 7r</ref>, Z. 71-72.<!-- noch einfügen --> Die Formulierung <quote><rs ref="#p0239" type="bi">Ede</rs>
-                            und Umschweif und <persName ref="#p3130" type="bi">Contessa</persName></quote> könnte man übertragen in: <rs ref="#p0239"
-                            type="bi">Ede</rs> mit dem Familienkreis und <persName ref="#p3130" type="bi">Contessa</persName>. […]“ Im <ref
-                            target="http://woerterbuchnetz.de/BMZ/?sigle=BMZ&amp;mode=Vernetzung&amp;lemid=BS07764">Mittelhochdeutschen Wörterbuch von
-                            Benecke-Müller-Zarncke</ref> [Zugriff 10.07.2014] wird für den Begriff "Umbesweif" unter Nr. 4 auch die Bedeutung "Kreis"
-                        oder "Umkreis" angegeben. Den Hinweis für den Gebrauch von "Umschweif" in diesem Zusammenhang verdanke ich Prof. Dr. Roland
-                        Berbig.</note> und <persName ref="#p3130" type="bi">Contessa</persName><lb/><del rend="overwritten">d</del><add place="across"
-                        >n</add>ach der <placeName ref="#l1037" type="bi"><del rend="overwritten">s</del><add place="across">F</add>auenin<del
-                            rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">s</add>el</placeName><note
-                        resp="#henrike.bobzien">Zur Pfaueninsel s. <persName ref="#p3143" type="bi">Carl Christian Horvath</persName>, 1802; ebenso
-                            <title ref="#">Wegweiser auf der Pfauen-Insel</title>, [1837] oder <title ref="#">Luise</title>, 2010.</note> worauf ich
-                    mich sehr <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">f</add>reue, ich<lb/>weiß
-                    aber noch nicht davon, <rs ref="#p0239" type="bi">Ede</rs> will es mir erst mor<lb break="no"/>gen sagen.</p>
-                <closer>Nun lebe wohl und froh, im̄er bleibe s mit uns<lb/>so</closer>
-                <pb facs="PPN73975727X|PHYS_0002" n="2"/>
-                <p/>
+                <p> Dienstag werde ich mit <rs ref="#p0239" type="bi">Ede</rs> und Umschweif<note resp="#henrike.bobzien"><p xml:lang="de">Diese
+                            Aussage bezieht sich auf die später durchgeführte und beschriebene Reise zur Pfaueninsel. <persName ref="#p0239" type="bi"
+                                >Julius Eduard Hitzig</persName> und <persName ref="#p3130" type="bi">Carl Wilhelm Salice Contessa</persName>
+                            begleiteten <persName ref="#p3174" type="bi">Emilie Piaste</persName> und <persName ref="#p3099" type="bi"
+                            >Jana</persName>, <rs ref="#p3180" type="bi">Tante Lotte</rs>, <persName ref="#p2917" type="bi">Emma</persName>, <persName
+                                ref="#p2916" type="bi">Clärchen</persName> und <persName ref="#p1723" type="bi">Antonie</persName> auf diesem Ausflug.
+                            Vgl. den Brief <persName ref="#p1723" type="bi">Antonies</persName> an <persName ref="#p0237" type="bi"
+                                >Adelbert</persName> vom 16.-19. Juni 1823 <ref>Bl. 7r</ref>, Z. 71-72.<!-- noch einfügen --> Die Formulierung
+                                    <quote><rs ref="#p0239" type="bi">Ede</rs> und Umschweif und <persName ref="#p3130" type="bi"
+                                >Contessa</persName></quote> könnte man übertragen in: <rs ref="#p0239" type="bi">Ede</rs> mit dem Familienkreis und
+                                <persName ref="#p3130" type="bi">Contessa</persName>. […]“ Im <ref
+                                target="http://woerterbuchnetz.de/BMZ/?sigle=BMZ&amp;mode=Vernetzung&amp;lemid=BS07764">Mittelhochdeutschen Wörterbuch
+                                von Benecke-Müller-Zarncke</ref> [Zugriff 10.07.2014] wird für den Begriff "Umbesweif" unter Nr. 4 auch die Bedeutung
+                            "Kreis" oder "Umkreis" angegeben. Den Hinweis für den Gebrauch von "Umschweif" in diesem Zusammenhang verdanke ich Prof.
+                            Dr. Roland Berbig.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und <persName ref="#p3130" type="bi">Contessa</persName><lb/><subst>
+                        <del rend="overwritten">d</del>
+                        <add place="across">n</add>
+                    </subst>ach der <placeName ref="#l1037" type="bi"><subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">F</add>
+                        </subst>auenin<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">s</add>
+                        </subst>el</placeName><note resp="#henrike.bobzien"><p xml:lang="de">Zur Pfaueninsel s. <persName ref="#p3143" type="bi">Carl
+                                Christian Horvath</persName>, 1802; ebenso <title ref="#">Wegweiser auf der Pfauen-Insel</title>, [1837] oder <title
+                                ref="#">Luise</title>, 2010.</p><p xml:lang="en"/><p xml:lang="fr"/></note> worauf ich mich sehr <subst>
+                        <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                        <add place="across">f</add>
+                    </subst>reue, ich<lb/>weiß aber noch nicht davon, <rs ref="#p0239" type="bi">Ede</rs> will es mir erst mor<lb break="no"/>gen
+                    sagen.</p>
+                <closer><salute>Nun lebe wohl und froh, im̄er bleibe s mit uns<lb/>so <pb facs="PPN73975727X|PHYS_0002" n="2"/>
+                    </salute></closer>
             </div>
         </body>
     </text>

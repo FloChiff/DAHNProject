@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -76,8 +83,11 @@
                     <msContents>
                         <msItem>
                             <docDate when="1823-06-11"/>
-                            <note resp="#janine.katins">Bericht Chamissos an seine Frau Antonie von seiner Wanderung nach Greifswald und dem
-                                Aufenthalt bei Familie von Wülknitz auf dem Gut Lanke.</note>
+                            <note resp="#janine.katins"><p xml:lang="de">Bericht Chamissos an seine Frau Antonie von seiner Wanderung nach Greifswald
+                                    und dem Aufenthalt bei Familie von Wülknitz auf dem Gut Lanke.</p><p xml:lang="en">Chamissos report to his wife
+                                    Antonie on his hike to Greifswald and the stay with the von Wülknitz family at Gut Lanke.</p><p xml:lang="fr"
+                                    >Chamissos rend compte à sa femme Antonie de sa randonnée à Greifswald et du séjour chez la famille von Wülknitz à
+                                    Gut Lanke.</p></note>
                             <note resp="#janine.katins" type="keyword">Botanik</note>
                             <note resp="#janine.katins" type="keyword">Reisebericht</note>
                             <note resp="#janine.katins" type="keyword">Henriette Herz</note>
@@ -280,8 +290,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-06-01" who="#janine.katins">First encoding (up to line 200).</change>
             <change when-iso="2014-06-12" who="#janine.katins">Encoding up to line 419. Element ListBibl has to be completed. JPG-codes must be
@@ -293,87 +304,95 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="PPN73975033X|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-left" type="foliation">1.</note>
-                <note hand="#pencil_2" place="top-margin-right" type="foliation">7</note>
-                <note hand="#pencil_3" place="bottom" type="foliation">47</note>
-                <opener><dateline rend="align(center)"><placeName ref="#l0210" type="bi">Prenzlau</placeName>. den <date when-iso="1823-06-11">11<hi
-                                rend="superscript">ten</hi></date> Mittwoch</dateline><note hand="#pencil_1" place="below">Juni 1823.</note>
-                    <salute rend="nolb">Gott grüße <rs ref="#p1723" type="bi">dich mein liebes Kind</rs>!</salute></opener>
-                <p>Ich habe mein Barometer<lb/>so weit wohlbehalten gebracht, aber langweilig, langweilig<lb/>und aber mals langweilig ist eine solche
-                    reise. <space extent="1w" rend="–"/></p>
-                <p>Ich bin am<lb/><note hand="#black_ink" place="margin-left-horizontal"><hi rend="latin"><persName ref="#p3136" type="bi"><choice>
-                                    <abbr>Henr</abbr>
-                                    <expan>Henriette</expan>
-                                </choice> Hertz</persName></hi> S. 234</note> Dienstag nur bis <placeName ref="#l1035" type="bi">Lanke</placeName>
-                    gekommen (4 Meilen) – daselbst habe ich<lb/>die Hofrathin besucht und bin von der <persName ref="#p3163" type="bi">Frau von <hi
-                            rend="latin">Wilknitz</hi></persName><note resp="#henrike.bobzien">Der Wanderer <persName ref="#p0237" type="bi"
-                            >Chamisso</persName>verbrachte eine Nacht bei der Familie von Wülknitz, die aufgrund seiner äußeren Erscheinung anfangs
-                        skeptisch und verhalten reagiert haben soll, <persName ref="#p3136" type="bi">Henriette Herz</persName> dagegen, eine
-                        anscheinend weltoffene, interessierte Frau übernahm die Vermittlung zwischen der Etikette und dem Unkonventionellen. Wie
-                            <persName ref="#p3101" type="bi">Beatrix Langner</persName> weiß, kannten sich die beiden seitdem <persName ref="#p0237"
-                            type="bi">Chamisso</persName> ungefähr Anfang zwanzig gewesen sei, weiterhin schreibt sie: <quote>"Madame Herz spricht
-                            mehrere Sprachen und hat die Bücher des Afrikareisenden <persName ref="#" type="bi">Mungo Park</persName> […] ins Deutsche
-                            übersetzt."</quote> (vgl. <persName ref="#p3101" type="bi">Beatrix Langner</persName>, 2008, S. 57). Bei <persName
-                            ref="#p0408" type="bi">Feudel</persName> ist nachzulesen: <quote>"Die Reise nach <placeName ref="#l0248" type="bi"
-                                >Greifswald</placeName> hatte <persName ref="#p0237" type="bi">Chamisso</persName> zu Fuß unternommen. Als er das bei
-                                <placeName ref="#l1032" type="bi">Bernau</placeName> liegende Gut Lanke
-                            <!-- Eigentlich handelt es sich um ein Gut, sondern um das Schloss Lanke im Landkreis Bernau, das in der Vergangenheit jedoch oft als Gut bezeichnet wurde. Dieses war wohl ab 1783 im Besitz derer von Wülknitz. Chamisso müsste dort Heinrich Otto von Wülknitz, Sohn Hans Heinrich Otto von Wülknitz' und dessen Frau Henriette Sophie Rosalie aus dem Hause derer von Kraut begegnet sein. Der Sohn entschloss sich wohl 1824 das Schloss wieder zu verkaufen.   -->passierte,
-                            ließ er sich bei der dort zu Besuch weilenden <persName ref="#p3136" type="bi">Henriette Herz</persName> als <hi
-                                rend="quoted">Wilder von den Sandwich-Inseln</hi> melden."</quote> (vgl. <persName ref="#p0408" type="bi">Werner
-                            Feudel</persName>, 1988, S. 131f.). Diese berichtet darüber: <cit>
-                            <quote>Ich trat sehr gespannt in das Vorzimmer. Ein Mann mit lang herabhängendem Haar, unrasiert, in einem schlechten
-                                grünen Kalmuck-Flausch, die Botanisiertrommel über die eine Schulter, über die andere einen Kasten gehängt, werlcher,
-                                wie ich später erfuhr, ein Teleskop enthielt, stand vor mir. Es war <persName ref="#p0237" type="bi"
-                                    >Chamisso</persName>.</quote>
-                        </cit> (<persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 131f.; vgl. <persName ref="#p3161" type="bi"
-                            >Rainer Schmitz</persName>, 1984, S. 142f.)</note><lb/>zum bleiben eingeladen worden. es war mir ganz recht. Ich<lb/>hatte
-                    von der Hitze gelitten, mein Pack war mir sehr<lb/>fatal, mein Ueberock, meine Stiefel dazu, die zu weit<lb/>sind und sich
-                    schlecht ein treten. –</p>
-                <p rend="nolb"> Ich ward aufs sorgsamste<lb/>bewirthet, und heute früh um punkt drei Uhr, brachte dem<lb/><rs ref="#p3162" type="bi"
-                        >gnaedigen Herrn</rs> ein Herr Lakai den Caffee und setzte sich ihm<lb/>zur Disposition.</p>
-                <p rend="nolb">ich brach auf und nach gemachten zwei<lb/>Meilen erreichte ich eine Bauern fuhre, die mein Pack<lb/>trug und mich
-                    selbst, als es Sand gab, wovon gottlob es selten<lb/>gebrach –</p>
-                <p rend="nolb"><del rend="strikethrough">hin
-                            <!-- Henrike liest hier "hin", ich hingegen glaube, es heißt 'ein', siehe bspw. die Ähnlichkeit zu dem Wort zwei Zeilen darunter: Ein ekelhafteres --><unclear
-                            cert="low" extent="1w" reason="illegible">infameres</unclear></del> So bin ich bis hierher getragen worden, und eine
-                    andere, ähnliche Gelegenheit bietet sich<lb/>für morgen dar. —</p>
-                <p> Ein ekelhafteres Land<lb/>giebt es wohl auf der Erde nicht wieder, Kein Pflänzlein in dieser</p>
-                <pb facs="PPN73975033X|PHYS_0002" n="2"/>
-                <p>grauen Wüstenei, die einen Botaniker erfreuen könnte –</p>
-                <closer><salute rend="nolb">Gott grüß dich, <rs ref="#p1723" type="bi">mein liebes Kind</rs>, – sage meinem<lb/><rs ref="#p1754"
-                            type="bi">Cameraden</rs>, <rs ref="#p0237" type="bi">Väterchen</rs> schreibt, er solle recht artig sein –<lb/>Ich bin müde
-                        und gehe in meine <hi rend="latin">Boba</hi> Gott grüß <rs ref="#p1723" type="bi">dich, mein liebes
-                    Kind</rs>.</salute></closer>
-                <milestone unit="none"/>
-                <lg type="poem">
-                    <l>Wohl wandert ich aus in trauriger Stund´</l>
-                    <l>Es weinte die Liebe so sehr</l>
-                    <l>Der Fuß ist mir Lahm, die Schulter mir wund</l>
-                    <l>Das Herz, das ist mir so schwer.</l>
-                </lg> – <lg>
-                    <l>Was singt ihr, ihr Vögel im Morgen licht</l>
-                    <l>Ihr wißt nicht wie scheiden thut.</l>
-                    <l>Es drücken euch Sorgen und Schuhe nicht</l>
-                    <l>Ihr Vögel, ihr habet es gut!</l>
-                </lg>
-                <note resp="#henrike.bobzien">Das Gedicht ist unter anderem nachzulesen bei <persName ref="#p3144" type="bi">Max Koch</persName>,
-                    [1883], S. 101 und bei <persName ref="#p0396" type="bi">Hermann Tardel</persName>, 1907, S. 63f.
-                    <!-- bei Tardel fehlt leider die Bandangabe. Henrike listet in ihrer Arbeit beide Bände auf. -->Chamisso benutzt einen drei- und
-                    vierhebigen Jambus in der Form abab und cdcd.</note> — <pb facs="PPN73975033X|PHYS_0003" n="3"/>
-                <p/>
-                <pb facs="PPN73975033X|PHYS_0004" n="4"/>
-                <p><address rend="align(vertical)">
-                        <addrLine><hi rend="latin"><persName ref="#p1723" type="bi">Frau Doctorin <choice>
-                                        <abbr>v</abbr>
-                                        <expan>von</expan>
-                                    </choice> Chamisso</persName></hi></addrLine>
-                        <addrLine><abbr>hochwo</abbr><expan>hochwohlgeboren</expan></addrLine>
-                        <addrLine><street><hi rend="latin">Lindenstrasse N<hi rend="superscript">o.</hi> 30</hi></street></addrLine>
-                        <addrLine><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName></addrLine>
-                    </address></p>
-                <p><stamp rend="align(vertical)"><placeName ref="#l0210" type="bi">Prenzlow</placeName><date when-iso="1823-06-19">19.
-                        Juni</date></stamp></p>
+                <div type="letter">
+                    <pb facs="PPN73975033X|PHYS_0001" n="1"/>
+                    <note hand="#pencil_1" place="top-margin(left)" type="foliation">1.</note>
+                    <note hand="#pencil_2" place="top-margin(right)" type="foliation">7</note>
+                    <note hand="#pencil_3" place="bottom" type="foliation">47</note>
+                    <opener><dateline rend="align(center)"><placeName ref="#l0210" type="bi">Prenzlau</placeName>. den <date when-iso="1823-06-11"
+                                    >11<hi rend="superscript">ten</hi></date> Mittwoch</dateline><note hand="#pencil_1" place="below">Juni
+                            1823.</note>
+                        <salute rend="nolb">Gott grüße <rs ref="#p1723" type="bi">dich mein liebes Kind</rs>!</salute></opener>
+                    <p>Ich habe mein Barometer<lb/>so weit wohlbehalten gebracht, aber langweilig, langweilig<lb/>und aber mals langweilig ist eine
+                        solche reise. <space extent="1w" rend="–"/></p>
+                    <p>Ich bin am<lb/><note hand="#black_ink" place="margin(left)-horizontal"><hi rend="latin"><persName ref="#p3136" type="bi"><choice>
+                                        <abbr>Henr</abbr>
+                                        <expan>Henriette</expan>
+                                    </choice> Hertz</persName></hi> S. 234</note> Dienstag nur bis <placeName ref="#l1035" type="bi">Lanke</placeName>
+                        gekommen (4 Meilen) – daselbst habe ich<lb/>die Hofrathin besucht und bin von der <persName ref="#p3163" type="bi">Frau von
+                                <hi rend="latin">Wilknitz</hi></persName><note resp="#henrike.bobzien"><p xml:lang="de">Der Wanderer <persName
+                                    ref="#p0237" type="bi">Chamisso</persName>verbrachte eine Nacht bei der Familie von Wülknitz, die aufgrund seiner
+                                äußeren Erscheinung anfangs skeptisch und verhalten reagiert haben soll, <persName ref="#p3136" type="bi">Henriette
+                                    Herz</persName> dagegen, eine anscheinend weltoffene, interessierte Frau übernahm die Vermittlung zwischen der
+                                Etikette und dem Unkonventionellen. Wie <persName ref="#p3101" type="bi">Beatrix Langner</persName> weiß, kannten sich
+                                die beiden seitdem <persName ref="#p0237" type="bi">Chamisso</persName> ungefähr Anfang zwanzig gewesen sei, weiterhin
+                                schreibt sie: <quote>"Madame Herz spricht mehrere Sprachen und hat die Bücher des Afrikareisenden <persName ref="#"
+                                        type="bi">Mungo Park</persName> […] ins Deutsche übersetzt."</quote> (vgl. <persName ref="#p3101" type="bi"
+                                    >Beatrix Langner</persName>, 2008, S. 57). Bei <persName ref="#p0408" type="bi">Feudel</persName> ist nachzulesen:
+                                    <quote>"Die Reise nach <placeName ref="#l0248" type="bi">Greifswald</placeName> hatte <persName ref="#p0237"
+                                        type="bi">Chamisso</persName> zu Fuß unternommen. Als er das bei <placeName ref="#l1032" type="bi"
+                                        >Bernau</placeName> liegende Gut Lanke
+                                    <!-- Eigentlich handelt es sich um ein Gut, sondern um das Schloss Lanke im Landkreis Bernau, das in der Vergangenheit jedoch oft als Gut bezeichnet wurde. Dieses war wohl ab 1783 im Besitz derer von Wülknitz. Chamisso müsste dort Heinrich Otto von Wülknitz, Sohn Hans Heinrich Otto von Wülknitz' und dessen Frau Henriette Sophie Rosalie aus dem Hause derer von Kraut begegnet sein. Der Sohn entschloss sich wohl 1824 das Schloss wieder zu verkaufen.   -->passierte,
+                                    ließ er sich bei der dort zu Besuch weilenden <persName ref="#p3136" type="bi">Henriette Herz</persName> als <hi
+                                        rend="quoted">Wilder von den Sandwich-Inseln</hi> melden."</quote> (vgl. <persName ref="#p0408" type="bi"
+                                    >Werner Feudel</persName>, 1988, S. 131f.). Diese berichtet darüber: <cit>
+                                    <quote>Ich trat sehr gespannt in das Vorzimmer. Ein Mann mit lang herabhängendem Haar, unrasiert, in einem
+                                        schlechten grünen Kalmuck-Flausch, die Botanisiertrommel über die eine Schulter, über die andere einen Kasten
+                                        gehängt, werlcher, wie ich später erfuhr, ein Teleskop enthielt, stand vor mir. Es war <persName ref="#p0237"
+                                            type="bi">Chamisso</persName>.</quote>
+                                </cit> (<persName ref="#p0408" type="bi">Werner Feudel</persName>, 1988, S. 131f.; vgl. <persName ref="#p3161"
+                                    type="bi">Rainer Schmitz</persName>, 1984, S. 142f.)</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>zum
+                        bleiben eingeladen worden. es war mir ganz recht. Ich<lb/>hatte von der Hitze gelitten, mein Pack war mir sehr<lb/>fatal, mein
+                        Ueberock, meine Stiefel dazu, die zu weit<lb/>sind und sich schlecht ein treten. –</p>
+                    <p rend="nolb"> Ich ward aufs sorgsamste<lb/>bewirthet, und heute früh um punkt drei Uhr, brachte dem<lb/><rs ref="#p3162"
+                            type="bi">gnaedigen Herrn</rs> ein Herr Lakai den Caffee und setzte sich ihm<lb/>zur Disposition.</p>
+                    <p rend="nolb">ich brach auf und nach gemachten zwei<lb/>Meilen erreichte ich eine Bauern fuhre, die mein Pack<lb/>trug und mich
+                        selbst, als es Sand gab, wovon gottlob es selten<lb/>gebrach –</p>
+                    <p rend="nolb"><del rend="strikethrough">hin
+                                <!-- Henrike liest hier "hin", ich hingegen glaube, es heißt 'ein', siehe bspw. die Ähnlichkeit zu dem Wort zwei Zeilen darunter: Ein ekelhafteres --><unclear
+                                cert="low" extent="1w" reason="illegible">infameres</unclear></del> So bin ich bis hierher getragen worden, und eine
+                        andere, ähnliche Gelegenheit bietet sich<lb/>für morgen dar. —</p>
+                    <p> Ein ekelhafteres Land<lb/>giebt es wohl auf der Erde nicht wieder, Kein Pflänzlein in dieser</p>
+                    <pb facs="PPN73975033X|PHYS_0002" n="2"/>
+                    <p>grauen Wüstenei, die einen Botaniker erfreuen könnte –</p>
+                    <closer><salute rend="nolb">Gott grüß dich, <rs ref="#p1723" type="bi">mein liebes Kind</rs>, – sage meinem<lb/><rs ref="#p1754"
+                                type="bi">Cameraden</rs>, <rs ref="#p0237" type="bi">Väterchen</rs> schreibt, er solle recht artig sein –<lb/>Ich bin
+                            müde und gehe in meine <hi rend="latin">Boba</hi> Gott grüß <rs ref="#p1723" type="bi">dich, mein liebes
+                            Kind</rs>.</salute></closer>
+                    <milestone unit="none"/>
+                    <postscript>
+                        <lg type="poem">
+                            <l>Wohl wandert ich aus in trauriger Stund´</l>
+                            <l>Es weinte die Liebe so sehr</l>
+                            <l>Der Fuß ist mir Lahm, die Schulter mir wund</l>
+                            <l>Das Herz, das ist mir so schwer. -</l>
+                        </lg>
+                        <lg>
+                            <l>Was singt ihr, ihr Vögel im Morgen licht</l>
+                            <l>Ihr wißt nicht wie scheiden thut.</l>
+                            <l>Es drücken euch Sorgen und Schuhe nicht</l>
+                            <l>Ihr Vögel, ihr habet es gut! -</l>
+                        </lg>
+                    </postscript>
+                    <note resp="#henrike.bobzien"><p xml:lang="de">Das Gedicht ist unter anderem nachzulesen bei <persName ref="#p3144" type="bi">Max
+                                Koch</persName>, [1883], S. 101 und bei <persName ref="#p0396" type="bi">Hermann Tardel</persName>, 1907, S. 63f.
+                            <!-- bei Tardel fehlt leider die Bandangabe. Henrike listet in ihrer Arbeit beide Bände auf. -->Chamisso benutzt einen
+                            drei- und vierhebigen Jambus in der Form abab und cdcd.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <pb facs="PPN73975033X|PHYS_0003" n="3"/>
+                    <pb facs="PPN73975033X|PHYS_0004" n="4"/>
+                    <closer><address rend="align(vertical)">
+                            <addrLine><hi rend="latin"><persName ref="#p1723" type="bi">Frau Doctorin <choice>
+                                            <abbr>v</abbr>
+                                            <expan>von</expan>
+                                        </choice> Chamisso</persName></hi></addrLine>
+                            <addrLine><abbr>hochwo</abbr><expan>hochwohlgeboren</expan></addrLine>
+                            <addrLine><hi rend="latin">Lindenstrasse N<hi rend="superscript">o.</hi> 30</hi></addrLine>
+                            <addrLine><placeName ref="#l1103" type="bi"><hi rend="latin">Berlin</hi></placeName></addrLine>
+                        </address>
+                        <stamp rend="align(vertical)"><placeName ref="#l0210" type="bi">Prenzlow</placeName><date when-iso="1823-06-19">19.
+                                Juni</date></stamp>
+                    </closer>
+                </div>
             </div>
         </body>
     </text>

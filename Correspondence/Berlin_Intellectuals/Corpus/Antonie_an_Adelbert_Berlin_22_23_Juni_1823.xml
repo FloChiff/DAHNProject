@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -75,10 +82,16 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="1823-06-22/23"/>
-                            <note resp="#janine.katins">Der Brief Antonies erstreckt sich über zwei Tage und berichtet im ersten Teil in aller Kürze
-                                von ihrem Tag und dem Gang zum Friedhof. Der zweite Teil des Briefes thematisiert die Reisepläne Hitzigs und Leopolds
-                                nach Rügen.</note>
+                            <docDate when="1823-06-22"/>
+                            <docDate when="1823-06-23"/>
+                            <note resp="#janine.katins"><p xml:lang="de">Der Brief Antonies erstreckt sich über zwei Tage und berichtet im ersten Teil
+                                    in aller Kürze von ihrem Tag und dem Gang zum Friedhof. Der zweite Teil des Briefes thematisiert die Reisepläne
+                                    Hitzigs und Leopolds nach Rügen.</p>
+                                <p xml:lang="en">Antonie's letter extends over two days and in the first part gives a brief account of her day and the
+                                    walk to the cemetery. The second part of the letter deals with Hitzig and Leopold's travel plans to Rügen.</p>
+                                <p xml:lang="fr">La lettre d'Antonie s'étend sur deux jours et dans la première partie raconte brièvement sa journée
+                                    et la marche jusqu'au cimetière. La deuxième partie de la lettre traite des projets de voyage d'Hitzig et Léopold
+                                    à Rügen.</p></note>
                             <note resp="#janine.katins" type="keyword">Expedition nach Greifswald</note>
                             <note resp="#janine.katins" type="keyword">Sehnsucht</note>
                             <note resp="#janine.katins" type="keyword">Familie von Chamisso</note>
@@ -207,8 +220,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-16" who="#janine.katins">First Encoding up to line 309.</change>
         </revisionDesc>
@@ -216,37 +230,54 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="PPN739757334|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">10</note>
-                <note hand="#pencil_2" place="bottom-margin-left">34.1823</note>
-                <opener>
-                    <dateline><space extent="2w"/>8<space extent="2w"/>Sonntag Abend</dateline>
-                    <salute>Lieber bester <hi rend="underline"><persName ref="#p0237" type="bi">Adelbert</persName></hi>,</salute></opener>
-                <p>schon der zweite<lb/>Sontag ohne Dich war vergangen.</p>
-                <p>Heute morgen war ich mit <persName ref="#p3157" type="bi">Rosalie</persName> und die<lb/><rs ref="#p3128 #1754" type="bi"
-                        >Kinder</rs>, auf den Kir<del rend="strikethrough">h</del><add place="inline">ch</add>hof <del rend="strikethrough">und</del>
-                    wo <persName ref="#p3089" type="bi">Adolph</persName><lb/>schläft.<space extent="1w" rend="–"/> Nachmittag bin ich in<lb/>d<del
-                        rend="overwritten">er</del><add place="across">ie</add> Ki<del rend="overwritten"><unclear extent="1c" reason="illegible"
-                        /></del><add place="across">r</add>che zu Nikolai gegangen und die übri<lb break="no"/>ge Zeit des Tages bin ich bei <rs
-                        ref="#p3175" type="bi">Mutter</rs><lb/>gewesen, <rs ref="#p3177" type="bi">Vater</rs> hat das Stiftungsfest<lb/>gefeiert
-                        de<del rend="overwritten">r</del><add place="across">s</add>
-                    <orgName ref="#g0147" type="bi">Gartenverein</orgName>, mit einem<lb/>Mittagsmal im Tiehrgarten.</p>
-                <closer><salute>Ich umarme und küsse Dich zärtlich. Alles<lb/>grüßt Dich herzlich. Nun kan̄ ich nicht mehr.<lb/>Schlafe wohl ich bin
-                        und bleibe</salute>
-                    <signed>Deine treue<lb/><rs ref="#p1723" type="bi">Gattin</rs>.</signed></closer>
+                <div type="letter">
+                    <pb facs="PPN739757334|PHYS_0001" n="1"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">10</note>
+                    <note hand="#pencil_2" place="bottom-margin(left)">34.1823</note>
+                    <opener>
+                        <dateline><space extent="2w"/>8<space extent="2w"/>Sonntag Abend</dateline>
+                        <salute>Lieber bester <hi rend="underline"><persName ref="#p0237" type="bi">Adelbert</persName></hi>,</salute></opener>
+                    <p>schon der zweite<lb/>Sontag ohne Dich war vergangen.</p>
+                    <p>Heute morgen war ich mit <persName ref="#p3157" type="bi">Rosalie</persName> und die<lb/><rs ref="#p3128 #1754" type="bi"
+                            >Kinder</rs>, auf den Kir<subst>
+                            <del rend="strikethrough">h</del>
+                            <add place="inline">ch</add>
+                        </subst>hof <del rend="strikethrough">und</del> wo <persName ref="#p3089" type="bi">Adolph</persName><lb/>schläft.<space
+                            extent="1w" rend="–"/> Nachmittag bin ich in<lb/>d<subst>
+                            <del rend="overwritten">er</del>
+                            <add place="across">ie</add>
+                        </subst> Ki<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">r</add>
+                        </subst>che zu Nikolai gegangen und die übri<lb break="no"/>ge Zeit des Tages bin ich bei <rs ref="#p3175" type="bi"
+                            >Mutter</rs><lb/>gewesen, <rs ref="#p3177" type="bi">Vater</rs> hat das Stiftungsfest<lb/>gefeiert de<subst>
+                            <del rend="overwritten">r</del>
+                            <add place="across">s</add>
+                        </subst>
+                        <orgName ref="#g0147" type="bi">Gartenverein</orgName>, mit einem<lb/>Mittagsmal im Tiehrgarten.</p>
+                    <closer><salute>Ich umarme und küsse Dich zärtlich. Alles<lb/>grüßt Dich herzlich. Nun kan̄ ich nicht mehr.<lb/>Schlafe wohl ich
+                            bin und bleibe</salute>
+                        <signed>Deine treue<lb/><rs ref="#p1723" type="bi">Gattin</rs>.</signed></closer>
+                </div>
                 <pb facs="PPN739757334|PHYS_0002" n="2"/>
-                <opener><dateline>Montag</dateline></opener>
-                <p>So eben e<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">r</add>halte ich Deinen Brief,
-                    worin<lb/>schon viele Beantwortung, meiner, in diesen<lb/>Brief stehenden Fragen sind. Herzlichen<lb/>Dank daß Du meine Erwartung
-                    nicht<lb/>getauscht hast, einen Brief heute zu bekom̄en.</p>
-                <p>Die beiden Pflanzen haben wir nicht<lb/>vergessen. <add place="above">es ist noch zeit</add>
-                    <persName ref="#p3178" type="bi">Leopold</persName> hat noch nichts über seine<lb/>Reise <del rend="overwritten">A</del><add
-                        place="across">a</add>ngesprochen, <rs ref="#p0239" type="bi">Ede</rs> auch nicht, die soll, so<lb/>viel ich weiß, auch erst
-                    in Herbst geschehen.<lb/>Weil wir hier bei <rs ref="#p3175" type="bi">Mutter</rs> schneidern drum<lb/>kann ich nicht mehr
-                    schreiben als: wie sehr<lb/>ich mich über Deinen Brief gefreut habe<lb/>und tausend Grüße von Alle und der <rs ref="#p3099"
-                        type="bi"><hi rend="underline">Schönen</hi></rs>,<lb/>
-                    <persName ref="#p1754" type="bi">Ernst</persName> sagt <hi rend="underline">ja</hi>.</p>
-                <closer><signed>Deine <persName ref="#p1723" type="bi">Antonie</persName>.</signed></closer>
+                <div type="letter">
+                    <opener><dateline>Montag</dateline></opener>
+                    <p>So eben e<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">r</add>
+                        </subst>halte ich Deinen Brief, worin<lb/>schon viele Beantwortung, meiner, in diesen<lb/>Brief stehenden Fragen sind.
+                        Herzlichen<lb/>Dank daß Du meine Erwartung nicht<lb/>getauscht hast, einen Brief heute zu bekom̄en.</p>
+                    <p>Die beiden Pflanzen haben wir nicht<lb/>vergessen. <add place="above">es ist noch zeit</add>
+                        <persName ref="#p3178" type="bi">Leopold</persName> hat noch nichts über seine<lb/>Reise <subst>
+                            <del rend="overwritten">A</del>
+                            <add place="across">a</add>
+                        </subst>ngesprochen, <rs ref="#p0239" type="bi">Ede</rs> auch nicht, die soll, so<lb/>viel ich weiß, auch erst in Herbst
+                        geschehen.<lb/>Weil wir hier bei <rs ref="#p3175" type="bi">Mutter</rs> schneidern drum<lb/>kann ich nicht mehr schreiben als:
+                        wie sehr<lb/>ich mich über Deinen Brief gefreut habe<lb/>und tausend Grüße von Alle und der <rs ref="#p3099" type="bi"><hi
+                                rend="underline">Schönen</hi></rs>,<lb/>
+                        <persName ref="#p1754" type="bi">Ernst</persName> sagt <hi rend="underline">ja</hi>.</p>
+                    <closer><signed>Deine <persName ref="#p1723" type="bi">Antonie</persName>.</signed></closer>
+                </div>
             </div>
         </body>
     </text>

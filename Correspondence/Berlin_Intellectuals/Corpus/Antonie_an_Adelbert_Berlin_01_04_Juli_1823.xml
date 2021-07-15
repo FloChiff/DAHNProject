@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -66,8 +67,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection> Chamisso's papers </collection>
@@ -75,10 +82,15 @@
                     </msIdentifier>
                     <msContents>
                         <msItem>
-                            <docDate when="1823-07-01/04"/>
-                            <note resp="#janine.katins">Antonie berichtet Adelbert von den Erkältungen der Kinder und von den Neuerungen in der
-                                Familie. Jüngste Ereignisse in der Nachbarschaft nimmt sie zum Anlass, noch einmal die Vorzüge der eigenen Ehe zu
-                                reflektieren.</note>
+                            <docDate when="1823-07-01"/>
+                            <docDate when="1823-07-04"/>
+                            <note resp="#janine.katins"><p xml:lang="de">Antonie berichtet Adelbert von den Erkältungen der Kinder und von den
+                                    Neuerungen in der Familie. Jüngste Ereignisse in der Nachbarschaft nimmt sie zum Anlass, noch einmal die Vorzüge
+                                    der eigenen Ehe zu reflektieren.</p><p xml:lang="en">Antonie reports to Adelbert about the children's colds and
+                                    the changes in the family. She takes recent events in the neighborhood as an opportunity to reflect once more on
+                                    the merits of her own marriage.</p><p xml:lang="fr">Antonie rapporte à Adelbert les rhumes des enfants et les
+                                    changements dans la famille. Elle profite des récents événements du quartier pour réfléchir une fois de plus sur
+                                    les mérites de son propre mariage.</p></note>
                             <!-- ergänzen -->
                             <note resp="#janine.katins" type="keyword">Expedition nach Greifswald</note>
                             <note resp="#janine.katins" type="keyword">Sehnsucht</note>
@@ -236,8 +248,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2014-07-25" who="#janine.katins">First Encoding up to line 428.</change>
         </revisionDesc>
@@ -245,101 +258,134 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="PPN739757385|PHYS_0001" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">16</note>
-                <note hand="#pencil_2" place="bottom-left" type="foliation">34.1823</note>
-                <opener><dateline><space extent="2w"/>12<space extent="3w"/>Dienstag Abend</dateline>
-                    <salute>Mein lieber bester,</salute></opener>
-                <p>obgleich es <del rend="overwritten">S</del><add place="across">s</add>chon sehr spät ist<lb/>kann ich doch unmöglich zu bett gehen
-                    ohne Dich an mich<lb/>zu erinnern, gestern bin zum ersten mal zu Bett gegangen<lb/>ohne mich mit Dir zu besprechen, weil <persName
-                        ref="#p1754" type="bi">Ernst</persName> unwohl war<lb/>und spät auf blieb und sich gleich in mein Bett legte sehr<lb/>bat ihm
-                    gleich nach zu kom̄en und nicht eher einschlief als<lb/>bis ich wirklich drin lag, ich konnte aber lange nicht ein<lb break="no"
-                    />schlafen vor Unruhe, es war mir im̄er als ob ich was<lb/>vergessen hätte, als ich auf den Grund kam, fand ich es.<lb/>sei nichts
-                    andere, als: die Unterhaltung <add place="above">mit Dir</add> fehlte mir.<lb/>
-                    <rs ref="#p0239" type="bi">Ede</rs> war gestern und heute auf einen Augenblick hier.<lb/><rs ref="#p3177" type="bi">Vater</rs>
-                    <rs ref="#p3174" type="bi">Mulle</rs>
-                    <persName ref="#p3157" type="bi">Rosalie</persName> auch auf kurze<del rend="strikethrough">n</del>
-                    <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">Z</add>eit. <persName ref="#p3095"
-                        type="bi">Hanchen</persName><lb/>Schläft diese Nacht in Dein Bett.<space extent="2w"/></p>
-                <opener><dateline rend="align(right)">Donnerstag <choice>
-                            <abbr>Ab.</abbr>
-                            <expan>Abend</expan>
-                        </choice></dateline></opener>
-                <p>Ich bin vorgestern, auf eine besondere Weise vom schrei<lb break="no"/>ben gestört worden, nehmlich: Der Mann hier im Hause<lb/>der
-                    Deinen Koffer nach der Post gebracht hat, hat sich den<lb/>Abend wieder betrunken und seine Frau so geschlagen<lb/>daß der
-                    Schwager hat müssen die Wache hohlen, so<lb/>haben sie den Mann die Treppe herunter ge<del rend="overwritten">s</del><add
-                        place="across">w</add>orfen,<lb/>(denn gehen konnte er nicht mehr,) mit solchen Gereusch, daß<lb/>ich nicht mehr schreiben
-                    konnte, meine Betrachtungen<lb/>darüber kanst Du dir wohl denken, wie es mir<lb/>so viel, viel besser geht als der; den bis jetzt
-                    hast<lb/>Du Dich noch nicht betrunken noch weniger mich geschlagen.<lb/>Dafür will ich Dich auch recht drücken und küssen
-                    wenn<lb/>Du erst hier bist. Ich habe Dir heute mancherlei zu<lb/>sagen wenn ich nur nichts vergesse, ich will drum anfangen</p>
-                <pb facs="PPN739757385|PHYS_0002" n="2"/>
-                <p><rs ref="#p3177" type="bi">Vater</rs> läßt Dir sagen, daß die <hi rend="latin large">Digitalis purpurea</hi><note
-                        resp="#henrike.bobzien">"Digitalis purpurea = D: Gewöhnlicher Roter Fingerhut, E: Foxglove, F: Digitale pourpre". Vgl.
-                            <persName ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 343.</note><lb/>nirgend zu haben wäre weil sie überall
-                        erf<del rend="overwritten"><unclear extent="2c" reason="illegible"/></del><add place="across">roh</add>ren wäre<lb/>höchsten
-                    nur einmal im Topf und da würde sie denn<lb/>viel zu teuer sein, Du <add place="above">müßtest</add> also wo Du sie auftreiben
-                        könn<lb break="no"/>test, sie ja nehmen.</p>
-                <p><persName ref="#p3178" type="bi">Leopold</persName> läßt sagen, er bekäme keinen Uhrlaub.<lb/>heute ist <persName ref="#p3100"
-                        type="bi">Jettchen</persName> bei <rs ref="#p3175" type="bi">Mutter</rs> eingezogen, hinten in <choice>
-                        <unclear cert="medium">Heis</unclear>
-                        <unclear cert="medium">Haus</unclear>
-                    </choice><lb break="no"/>Stu<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across">be</add>.
-                    Morgen bekom̄st Du von Vater <rs ref="#p0239" type="bi">Ede</rs> ein <choice>
-                        <abbr>Pak.</abbr>
-                        <expan>Paket</expan>
-                    </choice></p>
-                <p><rs ref="#p3174" type="bi">Mulle</rs> wird noch bis zu <persName ref="#p3100" type="bi">Jettens</persName> Operation bei <rs
-                        ref="#p0239" type="bi">Ede</rs> bleiben.<lb/>Ich schlafe jetzt des Nachts ziehmlich schlecht weil <persName ref="#p1754"
-                        type="bi">Ernst</persName> sehr<lb/>hustet und <persName ref="#p3128" type="bi">Max</persName> ein wenig, deßhalb bin ich nach
-                    tisch so müde<lb/>daß ich Mittagsruh halten muß, da habe ich heute auf<lb/>den gra<del rend="overwritten"><unclear extent="1c"
-                            reason="illegible"/></del><add place="across">ue</add>n Sopha so schön von Dir geträum Du wärst<lb/>hier, aber warst so
-                    sehr mager geworden daß deine<lb/>A<del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                        >r</add>me ganz weich und dünn waren.</p>
-                <p><persName ref="#p3167" type="bi">Schlechtendal</persName> hat diesen Brief gesch<del rend="overwritten"><unclear extent="2c"
-                            reason="illegible"/></del><add place="across">ic</add>kt, ich werde ihn aus<lb/>dem Umschlag heraus nehmen <del
-                        rend="strikethrough">aber ohn</del> weil e<del rend="overwritten">s</del><add place="across">r</add> sehr<lb/>groß und dick
-                    ist, aber ohne ihn zu lesen.</p>
-                <p>Wie schön ist es daß die Zeit so recht vergeht, es ist nun<lb/>schon über die Hälfte Zeit hingegangen, ob gleich ich mich<lb/>so
-                    in̄ig freue, bin ich doch betrübt daß ich Dir mit dem<lb/>nächsten mal, zum letzten mal schreiben mu<del rend="overwritten"
-                        >ss</del><add place="across">ß</add>, weil<lb/>die Post die <del rend="strikethrough">Nächsten</del>
-                    <add place="above">künftigen</add> Freitag abgeht Dich <add place="above">nicht</add> mehr trifft<lb/>besonders wenn Du am morgen
-                    weggehst.</p>
-                <closer><salute>Grüße die <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del><add place="across">Freunde</add>,
-                            <rs ref="#p3141 #p3142" type="bi">Hornschuchs</rs> werden mich doch besuchen.</salute></closer>
+                <div type="letter">
+                    <pb facs="PPN739757385|PHYS_0001" n="1"/>
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">16</note>
+                    <note hand="#pencil_2" place="bottom-left" type="foliation">34.1823</note>
+                    <opener><dateline><space extent="2w"/>12<space extent="3w"/>Dienstag Abend</dateline>
+                        <salute>Mein lieber bester,</salute></opener>
+                    <p>obgleich es <subst>
+                            <del rend="overwritten">S</del>
+                            <add place="across">s</add>
+                        </subst>chon sehr spät ist<lb/>kann ich doch unmöglich zu bett gehen ohne Dich an mich<lb/>zu erinnern, gestern bin zum ersten
+                        mal zu Bett gegangen<lb/>ohne mich mit Dir zu besprechen, weil <persName ref="#p1754" type="bi">Ernst</persName> unwohl
+                        war<lb/>und spät auf blieb und sich gleich in mein Bett legte sehr<lb/>bat ihm gleich nach zu kom̄en und nicht eher einschlief
+                        als<lb/>bis ich wirklich drin lag, ich konnte aber lange nicht ein<lb break="no"/>schlafen vor Unruhe, es war mir im̄er als ob
+                        ich was<lb/>vergessen hätte, als ich auf den Grund kam, fand ich es.<lb/>sei nichts andere, als: die Unterhaltung <add
+                            place="above">mit Dir</add> fehlte mir.<lb/>
+                        <rs ref="#p0239" type="bi">Ede</rs> war gestern und heute auf einen Augenblick hier.<lb/><rs ref="#p3177" type="bi">Vater</rs>
+                        <rs ref="#p3174" type="bi">Mulle</rs>
+                        <persName ref="#p3157" type="bi">Rosalie</persName> auch auf kurze<del rend="strikethrough">n</del>
+                        <subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">Z</add>
+                        </subst>eit. <persName ref="#p3095" type="bi">Hanchen</persName><lb/>Schläft diese Nacht in Dein Bett.<space extent="2w"/></p>
+                </div>
+                <div type="letter">
+                    <opener><dateline rend="align(right)">Donnerstag <choice>
+                                <abbr>Ab.</abbr>
+                                <expan>Abend</expan>
+                            </choice></dateline></opener>
+                    <p>Ich bin vorgestern, auf eine besondere Weise vom schrei<lb break="no"/>ben gestört worden, nehmlich: Der Mann hier im
+                        Hause<lb/>der Deinen Koffer nach der Post gebracht hat, hat sich den<lb/>Abend wieder betrunken und seine Frau so
+                        geschlagen<lb/>daß der Schwager hat müssen die Wache hohlen, so<lb/>haben sie den Mann die Treppe herunter ge<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">w</add>
+                        </subst>orfen,<lb/>(denn gehen konnte er nicht mehr,) mit solchen Gereusch, daß<lb/>ich nicht mehr schreiben konnte, meine
+                        Betrachtungen<lb/>darüber kanst Du dir wohl denken, wie es mir<lb/>so viel, viel besser geht als der; den bis jetzt
+                        hast<lb/>Du Dich noch nicht betrunken noch weniger mich geschlagen.<lb/>Dafür will ich Dich auch recht drücken und küssen
+                        wenn<lb/>Du erst hier bist. Ich habe Dir heute mancherlei zu<lb/>sagen wenn ich nur nichts vergesse, ich will drum
+                        anfangen</p>
+                    <pb facs="PPN739757385|PHYS_0002" n="2"/>
+                    <p><rs ref="#p3177" type="bi">Vater</rs> läßt Dir sagen, daß die <hi rend="latin large">Digitalis purpurea</hi><note
+                            resp="#henrike.bobzien">"Digitalis purpurea = D: Gewöhnlicher Roter Fingerhut, E: Foxglove, F: Digitale pourpre". Vgl.
+                                <persName ref="#" type="bi">Erhardt Zander</persName>, 2008, S. 343.</note><lb/>nirgend zu haben wäre weil sie überall erf<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">roh</add>
+                        </subst>ren wäre<lb/>höchsten nur einmal im Topf und da würde sie denn<lb/>viel zu teuer sein, Du <add place="above"
+                            >müßtest</add> also wo Du sie auftreiben könn<lb break="no"/>test, sie ja nehmen.</p>
+                    <p><persName ref="#p3178" type="bi">Leopold</persName> läßt sagen, er bekäme keinen Uhrlaub.<lb/>heute ist <persName ref="#p3100"
+                            type="bi">Jettchen</persName> bei <rs ref="#p3175" type="bi">Mutter</rs> eingezogen, hinten in <choice>
+                            <unclear cert="medium">Heis</unclear>
+                            <unclear cert="medium">Haus</unclear>
+                        </choice><lb break="no"/>Stu<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">be</add>
+                        </subst>. Morgen bekom̄st Du von Vater <rs ref="#p0239" type="bi">Ede</rs> ein <choice>
+                            <abbr>Pak.</abbr>
+                            <expan>Paket</expan>
+                        </choice></p>
+                    <p><rs ref="#p3174" type="bi">Mulle</rs> wird noch bis zu <persName ref="#p3100" type="bi">Jettens</persName> Operation bei <rs
+                            ref="#p0239" type="bi">Ede</rs> bleiben.<lb/>Ich schlafe jetzt des Nachts ziehmlich schlecht weil <persName ref="#p1754"
+                            type="bi">Ernst</persName> sehr<lb/>hustet und <persName ref="#p3128" type="bi">Max</persName> ein wenig, deßhalb bin ich
+                        nach tisch so müde<lb/>daß ich Mittagsruh halten muß, da habe ich heute auf<lb/>den gra<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">ue</add>
+                        </subst>n Sopha so schön von Dir geträum Du wärst<lb/>hier, aber warst so sehr mager geworden daß deine<lb/>A<subst>
+                            <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                            <add place="across">r</add>
+                        </subst>me ganz weich und dünn waren.</p>
+                    <p><persName ref="#p3167" type="bi">Schlechtendal</persName> hat diesen Brief gesch<subst>
+                            <del rend="overwritten"><unclear extent="2c" reason="illegible"/></del>
+                            <add place="across">ic</add>
+                        </subst>kt, ich werde ihn aus<lb/>dem Umschlag heraus nehmen <del rend="strikethrough">aber ohn</del> weil e<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">r</add>
+                        </subst> sehr<lb/>groß und dick ist, aber ohne ihn zu lesen.</p>
+                    <p>Wie schön ist es daß die Zeit so recht vergeht, es ist nun<lb/>schon über die Hälfte Zeit hingegangen, ob gleich ich
+                        mich<lb/>so in̄ig freue, bin ich doch betrübt daß ich Dir mit dem<lb/>nächsten mal, zum letzten mal schreiben mu<subst>
+                            <del rend="overwritten">ss</del>
+                            <add place="across">ß</add>
+                        </subst>, weil<lb/>die Post die <subst>
+                            <del rend="strikethrough">Nächsten</del>
+                            <add place="above">künftigen</add>
+                        </subst> Freitag abgeht Dich <add place="above">nicht</add> mehr trifft<lb/>besonders wenn Du am morgen weggehst.</p>
+                    <closer><salute>Grüße die <subst>
+                                <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del>
+                                <add place="across">Freunde</add>
+                            </subst>, <rs ref="#p3141 #p3142" type="bi">Hornschuchs</rs> werden mich doch besuchen.</salute></closer>
+                </div>
                 <pb facs="PPN739757385|PHYS_0003" n="3"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">17</note>
-                <opener><dateline rend="align(right)">Freitag Mittag.</dateline> Nimm nur die Klächse nicht übel. <salute> Lieber <persName
-                            ref="#p0237" type="bi"><del rend="overwritten"><unclear extent="1c" reason="illegible"/></del><add place="across"
-                            >A</add>delbert</persName></salute></opener>
-                <p>kön̄te ich Dich nur erst wieder umarmen<lb/>fern ist es nun nicht mehr.<space extent="1w"/>Seid zwei Tagen <del rend="overwritten"
-                            ><unclear extent="1w" reason="illegible"/></del><add place="across">ist</add> es<lb/>wieder erträglicheres Wetter.<space
-                        extent="1w"/><persName ref="#p3128" type="bi">Max</persName> hat sich jetzt zum<lb/>Kriechen bequemt, aber zum gehen macht er
-                    noch nicht<lb/> mehr anstalt als Du es gesehen hast. <rs ref="#p3175" type="bi">Mutter</rs> wird<lb/>mich heute mit ihren
-                    Töchtern, zu denen <persName ref="#p3100" type="bi">Jette</persName> jetzt<lb/>auch gehört, zum Kaffee besuchen.</p>
-                <p>Es grüßt Dich alles herzlich. <persName ref="#p1754" type="bi">Ernst</persName> schickt <rs ref="#p0237" type="bi">Vater<lb
-                            break="no"/>chen</rs> ein schön Küßchen, den er mir für Dich gegeben<lb/>hat. Ich erwarte mit großer Sehnsucht den
-                        Brief<lb break="no"/>träger, Du kannst wohl noch länger schreiben als ich.<lb/>Unser neu Mädchen sieht gut aber dün̄ aus.</p>
-                <closer><salute>Lebe recht wohl Gott sei mit Dir auch auf der See.</salute>
-                    <signed>Deine <persName ref="#p1723" type="bi">Antonie</persName>.</signed></closer>
-                <pb facs="PPN739757385|PHYS_0004" n="4"/>
-                <p><stamp rend="align(right)"><placeName ref="#l1103" type="bi">Berlin</placeName><lb/><date when-iso="1823-7-4">04.
-                        Juli</date></stamp><address>
-                        <addrLine>Dem</addrLine>
-                        <addrLine>Herrn <choice>
-                                <abbr>Dr.</abbr>
-                                <expan>Doktor</expan>
-                            </choice>
-                            <persName ref="#p0237" type="bi">Adelbert von <hi rend="latin">Chamisso</hi></persName></addrLine>
-                        <addrLine><choice>
-                                <abbr>Hochwohge.</abbr>
-                                <expan>Hochwohlgeboren</expan>
-                            </choice></addrLine>
-                        <addrLine>zu</addrLine>
-                        <addrLine><placeName ref="#l0248" type="bi">Greifswald</placeName></addrLine>
-                        <addrLine>abzugeben beim</addrLine>
-                        <addrLine>Herrn Professor</addrLine>
-                        <addrLine><persName ref="#p3141" type="bi">Hornschuch</persName></addrLine>
-                    </address></p>
+                <div type="letter">
+                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">17</note>
+                    <opener><dateline rend="align(right)">Freitag Mittag.</dateline> Nimm nur die Klächse nicht übel. <salute> Lieber <persName
+                                ref="#p0237" type="bi"><subst>
+                                    <del rend="overwritten"><unclear extent="1c" reason="illegible"/></del>
+                                    <add place="across">A</add>
+                                </subst>delbert</persName></salute></opener>
+                    <p>kön̄te ich Dich nur erst wieder umarmen<lb/>fern ist es nun nicht mehr.<space extent="1w"/>Seid zwei Tagen <subst>
+                            <del rend="overwritten"><unclear extent="1w" reason="illegible"/></del>
+                            <add place="across">ist</add>
+                        </subst> es<lb/>wieder erträglicheres Wetter.<space extent="1w"/><persName ref="#p3128" type="bi">Max</persName> hat sich
+                        jetzt zum<lb/>Kriechen bequemt, aber zum gehen macht er noch nicht<lb/> mehr anstalt als Du es gesehen hast. <rs ref="#p3175"
+                            type="bi">Mutter</rs> wird<lb/>mich heute mit ihren Töchtern, zu denen <persName ref="#p3100" type="bi">Jette</persName>
+                        jetzt<lb/>auch gehört, zum Kaffee besuchen.</p>
+                    <p>Es grüßt Dich alles herzlich. <persName ref="#p1754" type="bi">Ernst</persName> schickt <rs ref="#p0237" type="bi">Vater<lb
+                                break="no"/>chen</rs> ein schön Küßchen, den er mir für Dich gegeben<lb/>hat. Ich erwarte mit großer Sehnsucht den
+                            Brief<lb break="no"/>träger, Du kannst wohl noch länger schreiben als ich.<lb/>Unser neu Mädchen sieht gut aber dün̄
+                        aus.</p>
+                    <closer><salute>Lebe recht wohl Gott sei mit Dir auch auf der See.</salute>
+                        <signed>Deine <persName ref="#p1723" type="bi">Antonie</persName>.</signed>
+                        <pb facs="PPN739757385|PHYS_0004" n="4"/>
+                        <stamp rend="align(right)"><placeName ref="#l1103" type="bi">Berlin</placeName><lb/><date when-iso="1823-7-4">04.
+                            Juli</date></stamp><address>
+                            <addrLine>Dem</addrLine>
+                            <addrLine>Herrn <choice>
+                                    <abbr>Dr.</abbr>
+                                    <expan>Doktor</expan>
+                                </choice>
+                                <persName ref="#p0237" type="bi">Adelbert von <hi rend="latin">Chamisso</hi></persName></addrLine>
+                            <addrLine><choice>
+                                    <abbr>Hochwohge.</abbr>
+                                    <expan>Hochwohlgeboren</expan>
+                                </choice></addrLine>
+                            <addrLine>zu</addrLine>
+                            <addrLine><placeName ref="#l0248" type="bi">Greifswald</placeName></addrLine>
+                            <addrLine>abzugeben beim</addrLine>
+                            <addrLine>Herrn Professor</addrLine>
+                            <addrLine><persName ref="#p3141" type="bi">Hornschuch</persName></addrLine>
+                        </address></closer>
+                </div>
             </div>
         </body>
     </text>

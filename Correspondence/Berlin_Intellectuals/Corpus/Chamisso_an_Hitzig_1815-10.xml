@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -64,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Frankfurt am Main</settlement>
+                        <location>
+                            <address>
+                                <street>Großer Hirschgraben 23-25</street>
+                                <postCode>60311</postCode>
+                                <settlement>Frankfurt am Main</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#freies.deutsches.hochstift">Freies Deutsches Hochstift</institution>
                         <repository>Manuscripts collection</repository>
                         <collection>Handschrift Nr. 3323</collection>
@@ -75,17 +81,19 @@
                     <msContents>
                         <msItem>
                             <docDate>
-                                <note xml:lang="de">Der Brief trägt unterschiedliche Daten vom 22. September bis 27. Oktober 1815, die aber meist Tage
-                                    bezeichnen, die zum Zeitpunkt des Verfassens bereits vergangen waren. Offenbar wurde der Brief in mehreren Etappen
-                                    im Laufe des Oktobers 1815 verfasst. Der Briefumschlag trägt die Daten 1. Oktober 1815 (handschriftlich) und 3.
-                                    Oktober (Poststempel) und scheint demnach ursprünglich zu einem vorhergehenden Brief gehört zu haben.</note>
-                                <note xml:lang="en">The letter bares various dates from 22 September to 27 October 1815, referring to days that had
-                                    recently passed at the time of writing. The envelope bares the date 1 October 1815 (handwriting) and 3 October
-                                    1815 (postmark) so it seems to have belonged to another, earlier letter originally.</note>
-                                <note xml:lang="fr">La lettre porte plusieurs dates, entre le 22 septembre et le 27 octobre 1815, faisant référence à
-                                    des jours récemment passés au moment de l'écriture. L'enveloppe porte la date du 1er octobre 1815 (à la main) et
-                                    du 3 octobre 1815 (cachet de la poste) donc il semble qu'elle appartenait à une autre lettre, plus
-                                    ancienne.</note>
+                                <date when="1815-10"/>
+                                <note><p xml:lang="de">Der Brief trägt unterschiedliche Daten vom 22. September bis 27. Oktober 1815, die aber meist
+                                        Tage bezeichnen, die zum Zeitpunkt des Verfassens bereits vergangen waren. Offenbar wurde der Brief in
+                                        mehreren Etappen im Laufe des Oktobers 1815 verfasst. Der Briefumschlag trägt die Daten 1. Oktober 1815
+                                        (handschriftlich) und 3. Oktober (Poststempel) und scheint demnach ursprünglich zu einem vorhergehenden Brief
+                                        gehört zu haben.</p>
+                                    <p xml:lang="en">The letter bares various dates from 22 September to 27 October 1815, referring to days that had
+                                        recently passed at the time of writing. The envelope bares the date 1 October 1815 (handwriting) and 3 October
+                                        1815 (postmark) so it seems to have belonged to another, earlier letter originally.</p>
+                                    <p xml:lang="fr">La lettre porte plusieurs dates, entre le 22 septembre et le 27 octobre 1815, faisant référence à
+                                        des jours récemment passés au moment de l'écriture. L'enveloppe porte la date du 1er octobre 1815 (à la main)
+                                        et du 3 octobre 1815 (cachet de la poste) donc il semble qu'elle appartenait à une autre lettre, plus
+                                        ancienne.</p></note>
                                 <!-- [Englischer Text erscheint zusätzlich zu deutschem in deutschen Metadaten. Änderung des Stylesheets erforderlich?] -->
                             </docDate>
                         </msItem>
@@ -223,7 +231,8 @@
             </correspDesc>
         </profileDesc>
         <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+            <change when-iso="2021-07-15" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2017-03-01" who="#johanna.preusse">Added links to index of persons, locations and works.</change>
             <change when-iso="2017-02-24" who="#johanna.preusse">Finished encoding of body.</change>
             <change when-iso="2017-02-15" who="#johanna.preusse">Encoding of header / metadata.</change>
@@ -233,25 +242,27 @@
         <body>
             <div type="transcription">
                 <pb facs="Hs-3323_1.jpg" n="1"/>
-                <note hand="#pencil_one" place="margin-left" type="foliation">16.</note>
-                <note hand="#pencil_one">p 24-28<note resp="#johanna.preusse" subtype="1">Die Seitenangabe "p 24-28" bezieht sich auf den Druck des
-                        Briefes innerhalb der von Hitzig herausgegebenen Biographie "Leben und Briefe von Adelbert von Chamisso" (1839), Bd. II, S.
-                        24-28.</note></note>
+                <note hand="#pencil_one" place="margin(left)" type="foliation">16.</note>
+                <note hand="#pencil_one">p 24-28<note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Die Seitenangabe "p 24-28" bezieht sich auf
+                            den Druck des Briefes innerhalb der von Hitzig herausgegebenen Biographie "Leben und Briefe von Adelbert von Chamisso"
+                            (1839), Bd. II, S. 24-28.</p><p xml:lang="en"/><p xml:lang="fr"/></note></note>
                 <p><delSpan hand="#pencil_two" rend="strikethrough" spanTo="#a1"/>
-                    <note resp="#johanna.preusse">Der im Originalbrief vertikal am linken Blattrand stehende Text wird hier als Postskriptum
-                        aufgefasst und (wie auch in <rs ref="#w00277" type="bi">Hitzigs Edition</rs>) am Ende des Briefes (<ref
-                            target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben, da er von Chamisso nachträglich hinzugefügt
-                        wurde und trotz der inhaltlichen Verbindung zum Briefanfang (Plymouth) keinen festen Ort im Brieftext hat.</note> Wir
-                    verliessen <placeName ref="#l0208" type="bi">Plymouth</placeName> den <date when-iso="1815-09-22">22. <choice>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Der im Originalbrief vertikal am linken Blattrand stehende Text wird hier als
+                            Postskriptum aufgefasst und (wie auch in <rs ref="#w00277" type="bi">Hitzigs Edition</rs>) am Ende des Briefes (<ref
+                                target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben, da er von Chamisso nachträglich hinzugefügt
+                            wurde und trotz der inhaltlichen Verbindung zum Briefanfang (Plymouth) keinen festen Ort im Brieftext hat.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> Wir verliessen <placeName ref="#l0208" type="bi">Plymouth</placeName> den <date
+                        when-iso="1815-09-22">22. <choice>
                             <abbr>7<hi rend="superscript">ber</hi></abbr>
                             <expan>September</expan>
                         </choice></date> / <date when-iso="1815-10-04">4. <choice>
                             <abbr>8<hi rend="superscript">ber</hi></abbr>
                             <expan>October</expan>
                         </choice> 1815.</date>
-                    <note resp="#johanna.preusse">Zur Datierung: Chamisso konnte die Daten offenbar nicht mehr mit Sicherheit rekonstruieren und gibt
-                        jeweils zwei mögliche Daten (bzw. eine Datumsspanne) im Abstand von meist 12, vereinzelt 11 Tagen, an.</note> gegen 10 Uhr des
-                    Morgens, der Wind blies günstig, die <lb/> See war von den vergangenen Stürmen der Nachtgleichen noch stark bewegt, <subst>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Zur Datierung: Chamisso konnte die Daten offenbar nicht mehr mit Sicherheit
+                            rekonstruieren und gibt jeweils zwei mögliche Daten (bzw. eine Datumsspanne) im Abstand von meist 12, vereinzelt 11 Tagen,
+                            an.</p><p xml:lang="en"/><p xml:lang="fr"/></note> gegen 10 Uhr des Morgens, der Wind blies günstig, die <lb/> See war von
+                    den vergangenen Stürmen der Nachtgleichen noch stark bewegt, <subst>
                         <del rend="overwritten">w</del>
                         <add place="across">W</add>
                     </subst>ir nahmen unsern <lb/> Curs Westlich und behielten den Tag über das Land in Ansicht; wie ich am andern <lb/> Morgen auf
@@ -357,20 +368,21 @@
                         <del rend="overwritten">Mir ist</del>
                         <add place="across">Ich bin</add>
                     </subst> so wohlig, so heiter, und, als ich wieder mit dem Gedanken und dem Worte, wie <lb/> stehts mit dem Herzen, bei dir bin,
-                    mein treuer Bruder, so frommer Rührung voll,<note resp="#johanna.preusse">Der Rest dieses Absatzes sowie die folgenden drei
-                        Absätze (bis einschließlich "le meilleur fils du monde.") wird in Hitzigs Edition des Briefs innerhalb seiner <rs
-                            ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart.</note> daß <lb/> ich ungern, wie ich es doch vorbeugend muß,
-                    ein unangenehmes Wort anzuheben mich <lb/> anschicke: ich bin in meiner gegebenen Lage, mit <hi rend="latin">Chef</hi> und
-                    Genossen<!-- hier seltsames Zeichen über dem G, sieht aus wie lat. "c" --> vollkom̄en zufrieden, <lb/> nur mit dem Einen bin ich
-                    es nicht, nur mit dem nicht, den ich mir, wie ein Bruder gewünscht <lb/> hatte, und dem, ich kann es sagen, ich als ein solcher
-                    mit offenen Armen entgegen gegangen <lb/> war – ob ich aber Grund habe mit ihm zufrieden zu sein, richte <hi rend="underline">die
-                        Welt</hi>. </p>
+                    mein treuer Bruder, so frommer Rührung voll,<note resp="#johanna.preusse"><p xml:lang="de">Der Rest dieses Absatzes sowie die
+                            folgenden drei Absätze (bis einschließlich "le meilleur fils du monde.") wird in Hitzigs Edition des Briefs innerhalb
+                            seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart.</p><p xml:lang="en"/><p xml:lang="fr"/></note> daß
+                    <lb/> ich ungern, wie ich es doch vorbeugend muß, ein unangenehmes Wort anzuheben mich <lb/> anschicke: ich bin in meiner
+                    gegebenen Lage, mit <hi rend="latin">Chef</hi> und Genossen<!-- hier seltsames Zeichen über dem G, sieht aus wie lat. "c" -->
+                    vollkom̄en zufrieden, <lb/> nur mit dem Einen bin ich es nicht, nur mit dem nicht, den ich mir, wie ein Bruder gewünscht <lb/>
+                    hatte, und dem, ich kann es sagen, ich als ein solcher mit offenen Armen entgegen gegangen <lb/> war – ob ich aber Grund habe mit
+                    ihm zufrieden zu sein, richte <hi rend="underline">die Welt</hi>. </p>
                 <p> am <date when-iso="1815-10-04">4</date>/<date when-iso="1815-10-16">16</date> hatte <rs ref="#p1756" type="bi">der <hi
                             rend="latin"><choice>
                                 <abbr>Capt</abbr>
                                 <expan>Capitain</expan>
-                            </choice></hi></rs> bei Windstille die <hi rend="latin">Chaloupe</hi><note resp="#johanna.preusse">Gemeint ist ein
-                        Beiboot</note> aussetzen lassen und <hi rend="latin"><persName ref="#p3658" type="bi">Wormsk<subst>
+                            </choice></hi></rs> bei Windstille die <hi rend="latin">Chaloupe</hi><note resp="#johanna.preusse"><p xml:lang="de"
+                            >Gemeint ist ein Beiboot</p><p xml:lang="en"/><p xml:lang="fr"/></note> aussetzen lassen und <hi rend="latin"><persName
+                            ref="#p3658" type="bi">Wormsk<subst>
                                 <del rend="overwritten"><unclear reason="overwritten">uld</unclear></del>
                                 <add place="across">iold</add>
                             </subst></persName></hi>
@@ -424,19 +436,20 @@
                 </p>
                 <!-- Hier unbekanntes Zeichen/Markierung im Brieftext, vlt. nur durchgestrichene ä-Pünktchen? -->
                 <p>
-                    <note resp="#johanna.preusse" subtype="1">Am linken Blattrand befindet sich neben dem folgenden Satz eine Bleistiftmarkierung.
-                        Hitzig verwendete den markierten Satz in seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs> (Bd. II, S. 25), während
-                        die umliegenden Sätze dort nicht abgedruckt wurden. Daher ist wahrscheinlich, dass die Markierung entweder von Hitzig selbst
-                        oder von einem Archivar stammt, um den Ort des Drucks damit kenntlich zu machen.</note> Ich habe auf dieser überfahrt, die
-                    Zeit meiner See Krankheit wenigstens <lb/> dazu angewandt Denisch zu lernen und ich lese es schon ziemlich vertig: <note
-                        resp="#johanna.preusse">Die folgenden zwei Sätze werden in Hitzigs Edition des Briefs ausgespart.</note><hi rend="latin"
-                            ><persName ref="#p3658" type="bi">Martin <lb/> petrowitsch</persName></hi>, hat <del rend="strikethrough"><gap
-                            extent="1-2w" reason="strikethrough"/></del> mit mir einen <hi rend="latin">Act</hi> und 4 Seiten eines Zweiten gelesen. <lb/>
+                    <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Am linken Blattrand befindet sich neben dem folgenden Satz eine
+                            Bleistiftmarkierung. Hitzig verwendete den markierten Satz in seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs>
+                            (Bd. II, S. 25), während die umliegenden Sätze dort nicht abgedruckt wurden. Daher ist wahrscheinlich, dass die Markierung
+                            entweder von Hitzig selbst oder von einem Archivar stammt, um den Ort des Drucks damit kenntlich zu machen.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> Ich habe auf dieser überfahrt, die Zeit meiner See Krankheit wenigstens <lb/>
+                    dazu angewandt Denisch zu lernen und ich lese es schon ziemlich vertig: <note resp="#johanna.preusse">Die folgenden zwei Sätze
+                        werden in Hitzigs Edition des Briefs ausgespart.</note><hi rend="latin"><persName ref="#p3658" type="bi">Martin <lb/>
+                            petrowitsch</persName></hi>, hat <del rend="strikethrough"><gap extent="1-2w" reason="strikethrough"/></del> mit mir einen
+                        <hi rend="latin">Act</hi> und 4 Seiten eines Zweiten gelesen. <lb/>
                     <pb facs="Hs-3323_2.jpg" n="3"/>
-                    <note resp="#johanna.preusse">Der im Originalbrief am Rand dieser Seite stehende Nachtrag wird hier am Ende des Briefes (<ref
-                            target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben.</note> Was mehr ist, ist mein. an <hi
-                        rend="latin"><persName ref="#p3659" type="bi">Ingemann</persName></hi>, wenigstens an seinem <hi rend="latin"><title
-                            ref="#w05730">Massaniello</title></hi>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Der im Originalbrief am Rand dieser Seite stehende Nachtrag wird hier am Ende des
+                            Briefes (<ref target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> Was mehr ist, ist mein. an <hi rend="latin"><persName ref="#p3659" type="bi"
+                        >Ingemann</persName></hi>, wenigstens an seinem <hi rend="latin"><title ref="#w05730">Massaniello</title></hi>
                     <lb/> ist sehr wenig: aber ich bleibe dabei: <hi rend="latin"><persName ref="#p2294" type="bi">Oelenschlager</persName></hi> ist
                     nicht nur ein Dichter sondern <lb/> ein grosser: und ich habe wieder bei seinem <hi rend="latin"><title ref="#w05731">Core<subst>
                                 <del rend="overwritten">d</del>
@@ -455,10 +468,11 @@
                     ungekannten Luft zu Athmen sich hingiebt, wohl russisch lernen? – <lb/>
                 </p>
                 <p>
-                    <note resp="#johanna.preusse" subtype="1">Vor dem folgenden Satz befindet sich eine Bleistiftmarkierung wahrscheinlich von Hitzigs
-                        Hand, die offenbar die Einrückung der Zeile, und damit den Absatz verdeutlichen soll. Vgl. den Druck der Stelle in Hitzigs <rs
-                            ref="#w00277" type="bi">Chamisso-Biographie</rs>, Bd. II, S. 25.</note> Du schwitzest wohl schon bei dem Worte <rs
-                        ref="#l0225" type="bi">Affricanischer</rs> Himmel, und denkst Dir <del rend="strikethrough">wohl</del>
+                    <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Vor dem folgenden Satz befindet sich eine Bleistiftmarkierung
+                            wahrscheinlich von Hitzigs Hand, die offenbar die Einrückung der Zeile, und damit den Absatz verdeutlichen soll. Vgl. den
+                            Druck der Stelle in Hitzigs <rs ref="#w00277" type="bi">Chamisso-Biographie</rs>, Bd. II, S. 25.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> Du schwitzest wohl schon bei dem Worte <rs ref="#l0225" type="bi">Affricanischer</rs> Himmel, und
+                    denkst Dir <del rend="strikethrough">wohl</del>
                     <lb/> nichts anders als <del rend="strikethrough">schmelzen</del> als daß du an meiner Stelle Schmelzen würdest und <lb/> die
                     überfahrt nicht anders wagen dürftest als in Töpfen: dem ist aber nicht also <lb/> mein guter <hi rend="latin">Eduard</hi>, die
                     kühlende See erhält überall eine gleichmässige <hi rend="latin">temperatur</hi>, <lb/> hier mild und Lau, wie wir sie vor wenigen <subst>
@@ -493,17 +507,18 @@
                     <lb/> schon unter einem sehr <subst>
                         <del rend="overwritten">hohen</del>
                         <add place="across">grossen</add>
-                    </subst> Winkel<note resp="#johanna.preusse">Der folgende Satzteil wird in Hitzigs Edition des Briefs innerhalb seiner <rs
-                            ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart.</note> – wir hatten <add place="above">vor</add>gestern <del
-                        rend="strikethrough">schon</del> die <placeName ref="#l1127" type="bi"><unclear reason="illegible"><hi rend="latin"
-                                >Insole</hi></unclear>
+                    </subst> Winkel<note resp="#johanna.preusse"><p xml:lang="de">Der folgende Satzteil wird in Hitzigs Edition des Briefs innerhalb
+                            seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart.</p><p xml:lang="en"/><p xml:lang="fr"/></note> –
+                    wir hatten <add place="above">vor</add>gestern <del rend="strikethrough">schon</del> die <placeName ref="#l1127" type="bi"
+                            ><unclear reason="illegible"><hi rend="latin">Insole</hi></unclear>
                         <lb/>
                         <hi rend="latin">Salvagie</hi></placeName> gesehen und gestern in deren Nähe gekreuzt. – Die Hitze wird <lb/> bei Mangel an
                     Wind beschwärlicher. Dieses verweilen ohne vorzukom–en <lb/> langweilig, obgleich das stillere Meer mehrere Gegenstände der
-                    Beobachtung <lb/> darbietet<note resp="#johanna.preusse">Der folgende Satzteil sowie der darauf folgende Teil über Wormskiold (bis
-                        einschließlich "an den Hals geworfen – – !") wird in Hitzigs Edition des Briefs ausgespart.</note> – ein Hier verunglückter
-                    Heuschrecken-zug (<hi rend="latin">Gryllus tattaricus</hi>?) <lb/> deren Leichen uns 3 tage lang bei den <hi rend="latin"
-                            ><placeName ref="#l1127" type="bi">Salvage inseln</placeName></hi> umgaben, <lb/>
+                    Beobachtung <lb/> darbietet<note resp="#johanna.preusse"><p xml:lang="de">Der folgende Satzteil sowie der darauf folgende Teil
+                            über Wormskiold (bis einschließlich "an den Hals geworfen – – !") wird in Hitzigs Edition des Briefs ausgespart.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> – ein Hier verunglückter Heuschrecken-zug (<hi rend="latin">Gryllus
+                        tattaricus</hi>?) <lb/> deren Leichen uns 3 tage lang bei den <hi rend="latin"><placeName ref="#l1127" type="bi">Salvage
+                            inseln</placeName></hi> umgaben, <lb/>
                     <hi rend="latin">Salpa maxima, pterotrachea pulmonata, Glaucus athlanticus Blau:</hi>
                     <lb/>
                     <hi rend="latin"><choice>
@@ -519,8 +534,9 @@
                     </subst>en wird und er mit frechgieriger und gewaltsam̄er <lb/> Faust an sich zu reissen gelegenheit <del rend="strikethrough"
                         >findet</del> wahrnim̄t, verwahrt er vor <lb/>
                     <pb facs="Hs-3323_3.jpg" n="4"/>
-                    <note resp="#johanna.preusse">Der im Originalbrief am Rand dieser Seite stehende Nachtrag wird hier am Ende des Briefes (<ref
-                            target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben.</note> mir verschlossen, und <subst>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Der im Originalbrief am Rand dieser Seite stehende Nachtrag wird hier am Ende des
+                            Briefes (<ref target="#Chamisso_an_Hitzig_1815-10_Blatt-17v">S. 6</ref>) wiedergegeben.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> mir verschlossen, und <subst>
                         <del rend="overwritten"><unclear reason="overwritten">ließe</unclear></del>
                         <add place="across">läßt</add>
                     </subst> es lieber untergehen als es nur dem Auge <lb/>
@@ -553,9 +569,9 @@
                         <unclear>das</unclear>
                         <unclear>des</unclear>
                     </choice> Aufenthalt auf dem Lande ergeben. <lb/>
-                    <note resp="#johanna.preusse">Der folgende Teil wird in Hitzigs Edition des Briefs innerhalb seiner <rs ref="#w00277" type="bi"
-                            >Chamisso-Biographie</rs> ausgespart, die erst wieder mit dem Eintrag vom 16. bzw. 28. Oktober einsetzt.</note> – gegen
-                        <hi rend="underline">alles</hi> Sam̄eln hat vom <subst>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Der folgende Teil wird in Hitzigs Edition des Briefs innerhalb seiner <rs
+                                ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart, die erst wieder mit dem Eintrag vom 16. bzw. 28. Oktober
+                            einsetzt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – gegen <hi rend="underline">alles</hi> Sam̄eln hat vom <subst>
                         <del rend="overwritten">a</del>
                         <add place="across">A</add>
                     </subst>nfange an <rs ref="#p1756" type="bi">der <hi rend="latin"><choice>
@@ -591,7 +607,7 @@
                         <del rend="strikethrough">worin</del>
                         <add place="above">in dessen Grund</add>
                     </subst> die Bücher zu sehen sind,) zu <subst>
-                        <gap extent="2c" reason="overwritten"/>
+                        <del rend="overwritten"><gap extent="2c" reason="overwritten"/></del>
                         <add place="across">2/3</add>
                     </subst> bedeckt. Die thür auf diese <lb/> Seite, <subst>
                         <del rend="strikethrough">geht</del>
@@ -600,8 +616,8 @@
                     Bett ist das des <hi rend="latin"><rs ref="#p3131" type="bi">Doctors</rs></hi> gegen über sind in gleicher <lb/> Ordnung die der
                         <rs ref="#p3660 #p3661" type="bi">2 <hi rend="latin">Officier</hi></rs>. – Als Hintergrund zu <unclear reason="illegible"
                         >dem</unclear> anderen <lb/> Soll noch der <hi rend="latin"><placeName ref="#l1126" type="bi">Pic</placeName></hi> von der
-                        Rede<note resp="#johanna.preusse">"Rede" meint hier Reede, also einen Liegeplatz für Schiffe.</note> zu <hi rend="latin"
-                            ><placeName ref="#l1120" type="bi"><choice>
+                        Rede<note resp="#johanna.preusse"><p xml:lang="de">"Rede" meint hier Reede, also einen Liegeplatz für Schiffe.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> zu <hi rend="latin"><placeName ref="#l1120" type="bi"><choice>
                                 <abbr>Sta</abbr>
                                 <expan>Santa</expan>
                             </choice> Cruz</placeName></hi> hinzukom̄en. <lb/>
@@ -617,9 +633,9 @@
                             type="bi">Schmidt</persName></hi> sind gegenwärtig auf <hi rend="latin"><placeName ref="#l1130" type="bi"
                             >Canarie</placeName></hi>
                     <add place="above">andere meinen eine anderen Insel, andere sagen nach <hi rend="latin"><placeName ref="#l0050" type="bi"
-                                >Europa</placeName></hi> zurückgekehrt</add> und nicht hier. <note resp="#johanna.preusse">Der folgende Teil bis
-                        einschließlich "Gott gebe das Bessere" wird in Hitzigs Edition dieses Briefs innerhalb seiner <rs ref="#w00277" type="bi"
-                            >Chamisso-Biographie</rs> ausgespart.</note>Der <lb/>
+                                >Europa</placeName></hi> zurückgekehrt</add> und nicht hier. <note resp="#johanna.preusse"><p xml:lang="de">Der
+                            folgende Teil bis einschließlich "Gott gebe das Bessere" wird in Hitzigs Edition dieses Briefs innerhalb seiner <rs
+                                ref="#w00277" type="bi">Chamisso-Biographie</rs> ausgespart.</p><p xml:lang="en"/><p xml:lang="fr"/></note>Der <lb/>
                     <hi rend="latin"><rs ref="#p1756" type="bi"><choice>
                                 <abbr>Capt.</abbr>
                                 <expan>Capitain</expan>
@@ -643,11 +659,11 @@
                         <del rend="overwritten">ra</del>
                         <add place="across">sü</add>
                     </subst>dlich <lb/> rasch gesprochenen <hi rend="latin">Spani</hi>schen. – Das Land scheint auch <rs ref="#p3658" type="bi"
-                        >ihn</rs> milder gemacht zu haben,<note resp="#johanna.preusse">Auch dieser kurze Bezug auf Wormskiold wird in der
-                        Briefedition innerhalb der <rs ref="#w00277" type="bi">Chamisso-Biographie</rs> nicht wiedergegeben.</note> ich gehe Morgen
-                    mit dem <hi rend="latin"><rs ref="#p3131" type="bi">Doctor</rs></hi> allein und einem Führer nach <hi rend="latin"><placeName
-                            ref="#l1119" type="bi">Orotava</placeName></hi>. – ich habe die Stadt <lb/> schon gesehen, Garten die wie unsere
-                    Glaßheuser ansa<subst>
+                        >ihn</rs> milder gemacht zu haben,<note resp="#johanna.preusse"><p xml:lang="de">Auch dieser kurze Bezug auf Wormskiold wird
+                            in der Briefedition innerhalb der <rs ref="#w00277" type="bi">Chamisso-Biographie</rs> nicht wiedergegeben.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> ich gehe Morgen mit dem <hi rend="latin"><rs ref="#p3131" type="bi"
+                        >Doctor</rs></hi> allein und einem Führer nach <hi rend="latin"><placeName ref="#l1119" type="bi">Orotava</placeName></hi>. –
+                    ich habe die Stadt <lb/> schon gesehen, Garten die wie unsere Glaßheuser ansa<subst>
                         <del rend="overwritten">z</del>
                         <add place="across">h</add>
                     </subst>en<subst>
@@ -657,7 +673,7 @@
                     der von <hi rend="latin"><placeName ref="#l0021" type="bi">Spanien</placeName></hi> aus ausgeschikt war diese Inseln zu
                     untersuchen, und wegen der <hi rend="latin">Revolutionen</hi><del rend="strikethrough">,</del><lb/>
                     <pb facs="Hs-3323_3.jpg" n="5"/>
-                    <note hand="#pencil_one" place="margin-left" type="foliation">17.</note> die im MutterLande hinter ihm ausbrachen, sich hier als
+                    <note hand="#pencil_one" place="margin(left)" type="foliation">17.</note> die im MutterLande hinter ihm ausbrachen, sich hier als
                     Kaufmann Angesiedelt <lb/> Schone <hi rend="latin">Geognos</hi>tische Sam̄lungen der verschiedenen <subst>
                         <del rend="overwritten">i</del>
                         <add place="across">I</add>
@@ -674,11 +690,12 @@
                     <persName ref="#p0321" type="bi">Buch</persName> mit <hi rend="latin"><persName ref="#p3662" type="bi">Schmidt</persName></hi>
                     mehrere <hi rend="latin">Monathe</hi>, ich will nichts hier als eben <lb/> in den Bezauberten Thalen der Seeligen Inseln bei <hi
                         rend="latin"><placeName ref="#l1119" type="bi">Orotava</placeName></hi>, mein <lb/> Leben geniessen, Morgen <hi rend="latin"
-                        xml:lang="la">V. S. L. M.</hi><note resp="#johanna.preusse">Die Abkürzung steht für die lateinische Inschriften-Formel "Votum
-                        Solvit Libens Merito".</note> eine Pfeife unter Palmen <lb/> Bäume zu rauchen – vielleicht vermuthlig gar, kehr ich von hier
-                    aus <lb/> noch einmal zu dir zurücke, ich will indeß dir <del rend="strikethrough">noch</del> berauscht um <lb/> den Halse fallen,
-                    und den Brief zuschliessen damit er nicht <lb/> ja nicht vergessen werde – lebe wohl mein <hi rend="latin">Ede</hi>, und wenn
-                    <lb/> ich dir von der hohen See düßteres Zeug zusamen geschwäzt habe, <lb/> so sehe mich nun am Fuße der Palmen mit dem Rauche der <lb/>
+                        xml:lang="la">V. S. L. M.</hi><note resp="#johanna.preusse"><p xml:lang="de">Die Abkürzung steht für die lateinische
+                            Inschriften-Formel "Votum Solvit Libens Merito".</p><p xml:lang="en"/><p xml:lang="fr"/></note> eine Pfeife unter Palmen
+                    <lb/> Bäume zu rauchen – vielleicht vermuthlig gar, kehr ich von hier aus <lb/> noch einmal zu dir zurücke, ich will indeß dir
+                        <del rend="strikethrough">noch</del> berauscht um <lb/> den Halse fallen, und den Brief zuschliessen damit er nicht <lb/> ja
+                    nicht vergessen werde – lebe wohl mein <hi rend="latin">Ede</hi>, und wenn <lb/> ich dir von der hohen See düßteres Zeug zusamen
+                    geschwäzt habe, <lb/> so sehe mich nun am Fuße der Palmen mit dem Rauche der <lb/>
                     <subst>
                         <del rend="overwritten">E</del>
                         <add place="across">e</add>
@@ -688,9 +705,9 @@
                     </subst>orgen unter <rs ref="#l0225" type="bi"><hi rend="latin">africani</hi>schem</rs> Schönem <lb/> Him̄el aushauchend – Lebe
                     wohl mein <hi rend="latin">Ede</hi>, und lasse wie <lb/> ich der liebe Gott einen ehrlichen Mann sein. – umarme für <lb/> mich <hi
                         rend="latin">the little peple</hi>, und schenke ihnen zu meinem Angedenken <lb/> ein Glaß des verbothenen Brandweines es
-                        ein<note resp="#johanna.preusse">Dieser Satzteil ("und schenke ihnen ... Brandweines ein"), sowie der folgende kurze Satz zur
-                        "Freundin in Leipzig" wird in Hitzigs Edition des Briefs innerhalb seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs>
-                        nicht wiedergegeben.</note> – ich trin<subst>
+                        ein<note resp="#johanna.preusse"><p xml:lang="de">Dieser Satzteil ("und schenke ihnen ... Brandweines ein"), sowie der
+                            folgende kurze Satz zur "Freundin in Leipzig" wird in Hitzigs Edition des Briefs innerhalb seiner <rs ref="#w00277"
+                                type="bi">Chamisso-Biographie</rs> nicht wiedergegeben.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – ich trin<subst>
                         <del rend="overwritten">h</del>
                         <add place="across">k</add>
                     </subst>e <lb/> Wein – und esse Bananen! <lb/>
@@ -723,10 +740,10 @@
                     </subst> – noch einmal Gott mit dir – mein lieber – herzlicher <lb/> Bruder. – <lb/>
                 </p>
                 <p>
-                    <note resp="#johanna.preusse">Die folgende Übersicht über die unterwegs geschriebenen Briefe fehlt in Hitzigs Edition des Briefs
-                        innerhalb seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs>. Die hier genannten Briefe selbst, bzw. Auszüge daraus,
-                        sind bei Hitzig nachzulesen.</note> geschrieben habich dir aus <placeName ref="#l0084" type="bi">Hamburg</placeName> 1 <lb
-                        rend="indent"/>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Die folgende Übersicht über die unterwegs geschriebenen Briefe fehlt in Hitzigs
+                            Edition des Briefs innerhalb seiner <rs ref="#w00277" type="bi">Chamisso-Biographie</rs>. Die hier genannten Briefe
+                            selbst, bzw. Auszüge daraus, sind bei Hitzig nachzulesen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> geschrieben
+                    habich dir aus <placeName ref="#l0084" type="bi">Hamburg</placeName> 1 <lb rend="indent"/>
                     <placeName ref="#l0165" type="bi">Kopenhagen</placeName> 2 <lb rend="indent"/>
                     <hi rend="latin"><placeName ref="#l0208" type="bi">Plymouth</placeName></hi> 3 und 4 <lb rend="indent"/>
                     <hi rend="latin"><placeName ref="#l1120" type="bi"><choice>
@@ -743,67 +760,73 @@
                                 <expan>Capitain</expan>
                             </choice></hi></rs> meinte Briefe dahin müßten gegen Neujahr von <lb/> euch abgeschickt werden. <lb/>
                 </p>
-                <stamp place="margin-right">[Stempel:] FG</stamp>
-                <note hand="#pencil_one" place="margin-right">3323<note resp="#johanna.preusse" subtype="1">Bei der Ziffer "3323" handelt es sich um
-                        die Signatur der Handschrift.</note></note>
+                <closer><stamp rend="margin(right)">[Stempel:] FG</stamp></closer>
+                <note hand="#pencil_one" place="margin(right)">3323<note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Bei der Ziffer "3323"
+                            handelt es sich um die Signatur der Handschrift.</p><p xml:lang="en"/><p xml:lang="fr"/></note></note>
                 <postscript>
-                    <note resp="#johanna.preusse">Die folgenden Absätze stehen im Originalbrief über 3 Seiten verteilt jeweils vertikal am Rand und
-                        wurden von Chamisso nachträglich hinzugefügt. Auch Hitzig stellt sie in seiner Edition ans Ende des Briefs (vgl. <title
-                            ref="#w00277">Leben und Briefe II</title>, S. 28). Mindestens die beiden ersten Absätze sind zusammengehörig, da sie den
-                        Aufenthalt in bzw. den Abschied von Plymouth beschreiben, mit welchem der überlieferte Brief auf S. 1 einsetzt. Auch die
-                        Überschrift "Abgang und Versorgung" verdeutlicht diesen Zusammenhang ("Abgang" von Plymouth im ersten Absatz, "Versorgung" in
-                        Plymouth im zweiten Absatz).</note>
-                    <note place="margin-left-vertical"><p>Abgang und Versorgung – <hi rend="latin">Mischka</hi><note resp="#johanna.preusse">Mischka
-                                war eine von zwei Katzen, die mit an Bord waren, wie Chamisso in einem der vorhergehenden Briefe an Hitzig erzählt
-                                (vgl. <title ref="#w00277">Chamisso Leben und Briefe II</title>, S.19).</note> ertrank im <del rend="strikethrough"
-                                >Hafen</del> Sund zu <subst>
-                                <del><gap extent="3-4c" reason="overwritten"/></del>
-                                <add place="across"><hi rend="latin"><placeName ref="#l0208" type="bi">Plymouth</placeName></hi></add>
-                            </subst> in dem sie <del rend="strikethrough">ans Land</del> auf dem Bothe unserm <hi rend="latin">Lootsmanne</hi>
-                            <lb/> ans Land zurück geschickt werden sollte und aus diesem Bothe mit einem gewagten Sprung der schon der grossen Katze
-                            geglückt <lb/> war auf das Schiff zurück zu kehren versuchte. <hi rend="latin">John Bull</hi> (der Hund) ward auf
-                            verlaümderischer Beschuldigung der Wuth ertränkt.</p></note>
-                    <note place="margin-left-vertical"><p>Ich habe zu <hi rend="latin"><placeName ref="#l0208" type="bi">P<subst>
-                                        <del rend="overwritten"><gap extent="2c" reason="overwritten"/></del>
-                                        <add place="across">ly</add>
-                                    </subst>mouth</placeName></hi> bei <hi rend="latin"><persName ref="#p3665" type="bi">Hawker</persName></hi> den
-                                <hi rend="latin" xml:lang="en">Goosberrywin</hi> gekostet um dessen Willen das Haus des Guten <hi rend="latin"><title
-                                    ref="#w00141"><subst>
-                                        <del rend="overwritten">V</del>
-                                        <add place="across">W</add>
-                                    </subst>ikar of Wakefield</title></hi> zu seiner <lb/> Zeit berühmt ward – ich hätte es bei dem lieber getrunken,
-                            an und für sich ist es aber ein kostliches Getränk! Zuckerreicher als <lb/> der <hi rend="latin">Champagner</hi> dem es
-                            gleicht und wofür ich es getrunken: – es ist kein Handlungs Artikel. – </p></note>
-                    <note place="margin-left-vertical"><p>thue mir die Liebe <hi rend="latin"><persName ref="#p0392" type="bi">Cotta</persName></hi>
-                            wissen zu lassen: daß ein Liebhaber der <hi rend="latin">Litteratur</hi> ihm von <hi rend="latin"><placeName ref="#l1128"
-                                    type="bi">teneriffa</placeName></hi> aus, vorwürfe machen <lb/> leßt, daß er so lange die <hi rend="latin"
-                                >Deutschen Manuscripte</hi> von <persName ref="#p2294" type="bi">Oehlenschläger</persName>, die er seit einigen Jahren
-                            schon liegen hat, der <lb/> gelehrten Welt vorenthält. – </p></note>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Die folgenden Absätze stehen im Originalbrief über 3 Seiten verteilt jeweils
+                            vertikal am Rand und wurden von Chamisso nachträglich hinzugefügt. Auch Hitzig stellt sie in seiner Edition ans Ende des
+                            Briefs (vgl. <title ref="#w00277">Leben und Briefe II</title>, S. 28). Mindestens die beiden ersten Absätze sind
+                            zusammengehörig, da sie den Aufenthalt in bzw. den Abschied von Plymouth beschreiben, mit welchem der überlieferte Brief
+                            auf S. 1 einsetzt. Auch die Überschrift "Abgang und Versorgung" verdeutlicht diesen Zusammenhang ("Abgang" von Plymouth im
+                            ersten Absatz, "Versorgung" in Plymouth im zweiten Absatz).</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <p rend="margin(left)-vertical">Abgang und Versorgung – <hi rend="latin">Mischka</hi><note resp="#johanna.preusse"><p
+                                xml:lang="de">Mischka war eine von zwei Katzen, die mit an Bord waren, wie Chamisso in einem der vorhergehenden Briefe
+                                an Hitzig erzählt (vgl. <title ref="#w00277">Chamisso Leben und Briefe II</title>, S.19).</p><p xml:lang="en"/><p
+                                xml:lang="fr"/></note> ertrank im <del rend="strikethrough">Hafen</del> Sund zu <subst>
+                            <del><gap extent="3-4c" reason="overwritten"/></del>
+                            <add place="across"><hi rend="latin"><placeName ref="#l0208" type="bi">Plymouth</placeName></hi></add>
+                        </subst> in dem sie <del rend="strikethrough">ans Land</del> auf dem Bothe unserm <hi rend="latin">Lootsmanne</hi>
+                        <lb/> ans Land zurück geschickt werden sollte und aus diesem Bothe mit einem gewagten Sprung der schon der grossen Katze
+                        geglückt <lb/> war auf das Schiff zurück zu kehren versuchte. <hi rend="latin">John Bull</hi> (der Hund) ward auf
+                        verlaümderischer Beschuldigung der Wuth ertränkt.</p>
+                    <p rend="margin(left)-vertical">Ich habe zu <hi rend="latin"><placeName ref="#l0208" type="bi">P<subst>
+                                    <del rend="overwritten"><gap extent="2c" reason="overwritten"/></del>
+                                    <add place="across">ly</add>
+                                </subst>mouth</placeName></hi> bei <hi rend="latin"><persName ref="#p3665" type="bi">Hawker</persName></hi> den <hi
+                            rend="latin" xml:lang="en">Goosberrywin</hi> gekostet um dessen Willen das Haus des Guten <hi rend="latin"><title
+                                ref="#w00141"><subst>
+                                    <del rend="overwritten">V</del>
+                                    <add place="across">W</add>
+                                </subst>ikar of Wakefield</title></hi> zu seiner <lb/> Zeit berühmt ward – ich hätte es bei dem lieber getrunken, an
+                        und für sich ist es aber ein kostliches Getränk! Zuckerreicher als <lb/> der <hi rend="latin">Champagner</hi> dem es gleicht
+                        und wofür ich es getrunken: – es ist kein Handlungs Artikel. – </p>
+                    <p rend="margin(left)-vertical">thue mir die Liebe <hi rend="latin"><persName ref="#p0392" type="bi">Cotta</persName></hi> wissen
+                        zu lassen: daß ein Liebhaber der <hi rend="latin">Litteratur</hi> ihm von <hi rend="latin"><placeName ref="#l1128" type="bi"
+                                >teneriffa</placeName></hi> aus, vorwürfe machen <lb/> leßt, daß er so lange die <hi rend="latin">Deutschen
+                            Manuscripte</hi> von <persName ref="#p2294" type="bi">Oehlenschläger</persName>, die er seit einigen Jahren schon liegen
+                        hat, der <lb/> gelehrten Welt vorenthält. – </p>
                 </postscript>
                 <pb facs="Hs-3323_5.jpg" n="7"/>
-                <address rend="latin" xml:lang="fr">
-                    <addrLine rend="align(center)"><unclear reason="illegible">1</unclear> Monsieur</addrLine>
-                    <addrLine rend="align(center)">Monsieur J. E. Hitzig.</addrLine>
-                    <addrLine rend="align(center)">Conseiler au Criminel &amp;c.</addrLine>
-                    <addrLine rend="align(center) underline">à <placeName ref="#l1103" type="bi">Berlin</placeName>.</addrLine>
-                    <addrLine rend="align(center)"><placeName ref="#l0092" type="bi">Prusse</placeName>.</addrLine>
-                </address>
-                <stamp>[Stempel:] C <lb/>
-                    <gap extent="4-5c"/>
-                    <lb/><date when-iso="1815-10-03">OC 3 <lb/> 1815</date></stamp>
-                <note resp="#johanna.preusse" subtype="1">Zusätzlich zum Poststempel trägt der Briefumschlag mehrere handschriftliche numerische
-                    Postvermerke.</note>
-                <pb facs="Hs-3323_7.jpg" n="8"/>
-                <note resp="#johanna.preusse">Der hier wiedergegebene Text befindet sich im Original auf der Rückseite des Briefumschlags.</note>
-                <p><hi rend="latin" xml:lang="fr"><placeName ref="#l0208" type="bi">Plymouth</placeName> le <date when-iso="1815-10-01">1 Octre
+                <closer><address rend="latin" xml:lang="fr">
+                        <addrLine rend="align(center)"><unclear reason="illegible">1</unclear> Monsieur</addrLine>
+                        <addrLine rend="align(center)">Monsieur J. E. Hitzig.</addrLine>
+                        <addrLine rend="align(center)">Conseiler au Criminel &amp;c.</addrLine>
+                        <addrLine rend="align(center) underline">à <placeName ref="#l1103" type="bi">Berlin</placeName>.</addrLine>
+                        <addrLine rend="align(center)"><placeName ref="#l0092" type="bi">Prusse</placeName>.</addrLine>
+                    </address>
+                    <stamp>[Stempel:] C <lb/>
+                        <gap extent="4-5c"/>
+                        <lb/><date when-iso="1815-10-03">OC 3 <lb/> 1815</date></stamp>
+                    <note resp="#johanna.preusse" subtype="1"><p xml:lang="de">Zusätzlich zum Poststempel trägt der Briefumschlag mehrere
+                            handschriftliche numerische Postvermerke.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <pb facs="Hs-3323_7.jpg" n="8"/>
+                    <note resp="#johanna.preusse"><p xml:lang="de">Der hier wiedergegebene Text befindet sich im Original auf der Rückseite des
+                            Briefumschlags.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <dateline rend="latin" xml:lang="fr"><placeName ref="#l0208" type="bi">Plymouth</placeName> le <date when-iso="1815-10-01">1 Octre
                             1815</date>
                         <lb/> Acheminé par <lb/> Voi <unclear reason="foreign illegible">très</unclear>
                         <gap extent="2-3w" reason="foreign illegible"/>
-                        <gap extent="1-2c" reason="foreign illegible"/><persName ref="#p3665" type="bi">Hawker</persName> &amp; fils.</hi></p>
+                        <gap extent="1-2c" reason="foreign illegible"/><persName ref="#p3665" type="bi">Hawker</persName> &amp;
+                    fils.</dateline></closer>
                 <pb facs="Hs-3323_8" n="9"/>
-                <note resp="#johanna.preusse">Der hier wiedergegebene Text befindet sich im Original auf der Innenseite des Briefumschlags.</note>
-                <p>Du hast also zu erwarten daß <lb/> meine Tausend Thaler dir zurücke <lb/> kom̄en, oder dir darnach erkundigen <lb/> zu lassen – ich
-                    hoffe sie werden <lb/> dir durch die vielen Reisen klüger wieder <lb/> kom̄en. <hi rend="latin indent" xml:lang="la">vale</hi></p>
+                <note resp="#johanna.preusse"><p xml:lang="de">Der hier wiedergegebene Text befindet sich im Original auf der Innenseite des
+                        Briefumschlags.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                <postscript>
+                    <p>Du hast also zu erwarten daß <lb/> meine Tausend Thaler dir zurücke <lb/> kom̄en, oder dir darnach erkundigen <lb/> zu lassen –
+                        ich hoffe sie werden <lb/> dir durch die vielen Reisen klüger wieder <lb/> kom̄en. <hi rend="latin indent" xml:lang="la"
+                            >vale</hi></p>
+                </postscript>
             </div>
         </body>
     </text>
