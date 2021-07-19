@@ -1885,20 +1885,23 @@
             <div>
                 <head>List of the modules used on my TEI files</head>
                 <schemaSpec ident="myTEI" docLang="en" prefix="tei_" xml:lang="en">
-                    <moduleRef key="core" except="email gloss headItem headLabel meeting postBox said stage"/>
+                    <moduleRef key="core" except="email gloss headItem headLabel meeting postBox said"/>
                     <moduleRef key="tei" except=""/>
                     <moduleRef key="header"
-                        except="appInfo application cRefPattern catDesc category classCode classDecl conversion interpretation listChange listPrefixDef samplingDecl scriptNote styleDefDecl tagUsage tagsDecl taxonomy unitDecl unitDef"/>
+                        except="appInfo application cRefPattern catDesc category classCode classDecl conversion listChange listPrefixDef samplingDecl scriptNote styleDefDecl tagUsage tagsDecl taxonomy unitDecl unitDef"/>
                     <moduleRef key="textstructure"
-                        except="back div1 div2 div3 div4 div5 div6 div7 docAuthor docEdition docImprint docTitle front group imprimatur titlePage titlePart"/>
+                        except="div1 div2 div3 div4 div5 div6 div7 docAuthor docEdition docImprint docTitle group imprimatur titlePage titlePart"/>
                     <moduleRef key="namesdates" except=""/>
                     <moduleRef key="transcr"
                         except="am damage damageSpan ex line listTranspose mod path redo restore retrace secl sourceDoc substJoin surfaceGrp surplus undo"/>
                     <moduleRef key="msdescription"
-                        except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msName msPart musicNotation recordHist rubric scriptDesc secFol signatures surrogates typeDesc typeNote"/>
-                    <moduleRef key="linking" include="ab link linkGrp seg"/>
+                        except="adminInfo colophon custEvent custodialHist depth dim filiation finalRubric heraldry incipit locus locusGrp msFrag msPart musicNotation recordHist rubric scriptDesc secFol signatures surrogates typeDesc typeNote"/>
+                    <moduleRef key="linking" include="ab anchor link linkGrp seg"/>
                     <moduleRef key="figures" except="formula notatedMusic"/>
                     <moduleRef key="spoken" include="kinesic vocal"/>
+                    <moduleRef key="drama" include="castItem castList role roleDesc"/>
+                    <moduleRef key="gaiji" include="g"/>
+                    <moduleRef key="analysis" include="pc"/>
                     <elementSpec ident="msIdentifier" mode="change">
                         <content>
                             <sequence>
