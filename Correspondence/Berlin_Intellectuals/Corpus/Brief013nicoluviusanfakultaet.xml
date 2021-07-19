@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -78,9 +85,13 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-09-21"/>
-                            <note resp="#eva.schneider">Kultusminister Nicoluvius leht den Antrag der Philosophischen Fakultät ab, Immanuel Hermann
-                                Fichte zum Erhalt seiner Doktorwürde zu gestatten, statt der öffentlichen Disputation eine lateinische Rede zu
-                                halten.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Kultusminister Nicoluvius leht den Antrag der Philosophischen Fakultät ab,
+                                    Immanuel Hermann Fichte zum Erhalt seiner Doktorwürde zu gestatten, statt der öffentlichen Disputation eine
+                                    lateinische Rede zu halten.</p><p xml:lang="en">Minister of Education Nicoluvius rejects the application of the
+                                    Philosophical Faculty to allow Immanuel Hermann Fichte to give a Latin speech instead of the public disputation in
+                                    order to obtain his doctorate.</p><p xml:lang="fr">Le ministre de l'Éducation Nicoluvius rejette la demande de la
+                                    Faculté de philosophie de permettre à Immanuel Hermann Fichte de prononcer un discours en latin au lieu de la
+                                    disputatio publique afin d'obtenir son doctorat.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                         </msItem>
                     </msContents>
@@ -235,8 +246,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-10" who="#eva.schneider">I begin encoding. I finish the header.</change>
             <change when-iso="2015-08-11" who="#eva.schneider">I begin with the body. Encode the foliation, closer, abbreviations, latin
                 words.</change>
@@ -270,27 +282,23 @@
                     <persName ref="#p0662" type="bi"><hi rend="latin">Fichte</hi></persName> nicht Statt, und muß ihm überlassen werden, sich<lb/>
                     Opponenten zu verschaffen, um statutenmäßig sich zu habiliti<lb break="no"/>ren, da in diesem Fall die nachgesuchte Dispensation
                     von der<lb/> öffentlichen Disputation nicht zulässig erachtet wird.</p>
-                <closer rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>
-                    <date when-iso="1818-09-21">den 21<hi rend="superscript">ten</hi> September 1818</date>.<lb/>
-                    <orgName ref="#g0064" type="bi">Ministerium der Geistlichen<pc>=</pc> Unterrichts<pc>=</pc> und Medicinal<pc>=</pc>
-                        Angelegenheiten<lb/> Unterrichts<pc>=</pc> Abtheilung</orgName><lb/>
-                    <hi rend="latin"><persName ref="#p0682" type="bi">Nicolovius</persName></hi></closer>
-                <p><handShift new="#minor_hand_1"/><signed rend="latin align(right)">Vidi <persName ref="#p0413" type="bi"
-                        >Lichtenstein</persName></signed><lb/>
+                <closer><dateline rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>
+                        <date when-iso="1818-09-21">den 21<hi rend="superscript">ten</hi> September 1818</date>.</dateline>
+                    <signed rend="align(center)"><orgName ref="#g0064" type="bi">Ministerium der Geistlichen<pc>=</pc> Unterrichts<pc>=</pc> und
+                                Medicinal<pc>=</pc> Angelegenheiten<lb/> Unterrichts<pc>=</pc> Abtheilung</orgName>
+                        <hi rend="latin"><persName ref="#p0682" type="bi">Nicolovius</persName></hi></signed>
+                    <handShift new="#minor_hand_1"/><signed rend="latin align(right)">Vidi <persName ref="#p0413" type="bi"
+                        >Lichtenstein</persName></signed>
                     <handShift new="#minor_hand_2"/><signed rend="latin align(right)"><persName ref="#p0637" type="bi">Trally</persName></signed><lb/>
                     <handShift new="#minor_hand_3"/><signed rend="latin align(right)"><persName ref="#p0636" type="bi">Hermbstaedt</persName></signed><lb/>
-                    <handShift new="#minor_hand_4"/><signed rend="latin align(right)"><persName ref="#p0301" type="bi">Erman</persName></signed></p>
-                <p><address>
+                    <handShift new="#minor_hand_4"/><signed rend="latin align(right)"><persName ref="#p0301" type="bi">Erman</persName></signed>
+                    <address>
                         <addrLine>An</addrLine>
-                        <lb/>
                         <addrLine>die <orgName ref="#g0028" type="bi">philosophische Fakultät</orgName></addrLine>
-                        <lb/>
                         <addrLine>der <orgName ref="#g0122" type="bi">Königlichen Universität</orgName></addrLine>
-                        <lb/>
                         <addrLine>hieselbst</addrLine>
-                        <lb/>
                         <addrLine>8377.</addrLine>
-                    </address></p>
+                    </address></closer>
             </div>
         </body>
     </text>

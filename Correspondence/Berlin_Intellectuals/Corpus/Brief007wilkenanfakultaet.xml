@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -71,8 +72,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -82,10 +89,15 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-03-28"/>
-                            <note resp="#eva.schneider">Der Dekan der Philosophischen Fakultät Friedrich Wilken trägt den Fakultätsmitgliedern die
-                                Bitte von Immanuel Hermann Fichte vor, die Reihenfolge des Promotionsverfahrens ausnahmsweise zu ändern, um seine
-                                Promotion zu beschleunigen</note>
-                            <note resp="#eva.schneider">Diese Bitte wird ihm verwehrt</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Der Dekan der Philosophischen Fakultät Friedrich Wilken trägt den
+                                    Fakultätsmitgliedern die Bitte von Immanuel Hermann Fichte vor, die Reihenfolge des Promotionsverfahrens
+                                    ausnahmsweise zu ändern, um seine Promotion zu beschleunigen</p><p xml:lang="en">The dean of the Philosophical
+                                    Faculty, Friedrich Wilken, asked the faculty members from Immanuel Hermann Fichte to exceptionally change the
+                                    order of the doctoral procedure in order to accelerate his doctorate</p><p xml:lang="fr">Le doyen de la Faculté de
+                                    Philosophie, Friedrich Wilken, a demandé aux membres du corps professoral d'Immanuel Hermann Fichte de modifier
+                                    exceptionnellement l'ordre de la procédure doctorale afin d'accélérer son doctorat</p></note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Diese Bitte wird ihm verwehrt</p><p xml:lang="en">He is denied this
+                                    request</p><p xml:lang="fr">Il se voit refuser cette demande</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                             <note resp="#eva.schneider" type="about">
                                 <persName ref="#p0662">Immanuel Hermann Fichte</persName>
@@ -262,8 +274,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-09" who="#eva.schneider">Changed the msContents and still found some little mistakes in the encoding, which I
                 corrected.</change>
             <change when-iso="2014-12-09" who="#eva.schneider">Changed the msContents.</change>
@@ -276,86 +289,92 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="00000239.jpg" n="1"/>
-                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
-                        >95.</hi></del></note>
-                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="1" rend="srikethrough">126.</del></note>
-                <note hand="#blue_hand" place="top-right" type="foliation">113</note>
-                <p>Noch lege ich den Herrn Collegen vor<lb/> ein Schreiben des Herrn Rectors den <hi rend="latin">Studiosus Ballmüller</hi>
-                    <choice>
-                        <abbr>betr.</abbr>
-                        <expan>betreffend</expan>
-                    </choice><lb/> zur gefälligen Kenntnißnahme.</p>
-                <p>Auch muß ich noch eine Bitte des Herrn <hi rend="latin"><choice>
-                            <abbr>Dd.</abbr>
-                            <expan>Doctorand</expan>
-                        </choice>
-                        <persName ref="#p0662" type="bi">Fichte</persName></hi> vortragen. Derselbe hat mir<lb/> nehmlich gestern den Wunsch eröffnet,
-                    daß ihm möge verstattet werden, seine öffentliche<lb/> Disputation über <hi rend="latin">theses</hi> zu halten, und demnächst die
-                    gedruckte Dissertation nachzuliefern;<note resp="#eva.schneider"><persName ref="#p0662" type="bi">Immanuel Hermann
-                            Fichte</persName> bat die <orgName ref="#g0028" type="bi">Fakultät</orgName> darum, die Reihenfolge des
-                        Promotionsverfahrens zu ändern. Den Universitätsstatuten zufolge sollte zuerst die Dissertation in gedruckter Form eingereicht
-                        werden und danach die Disputation stattfinden.</note><lb/> es sey ihm nehmlich, wie er versicherte, wegen der gegenwärtigen
-                    vielfachen Arbeiten in den<lb/> Druckereyen unmöglich, binnen den nächsten sechs Wochen, den Druck dieser Dissertation zu
-                    bewirken, und<lb/> doch trage er großes Verlangen sich noch vor dem Anfange des nächsten Semesters zu habilitiren<lb/> und dann
-                    seine <choice>
-                        <unclear cert="high" reason="illegible">Vorlesungen</unclear>
-                        <unclear cert="low" reason="illegible">Vorlesung</unclear>
-                    </choice> zu beginnen.<note resp="#eva.schneider">Um Vorlesungen halten zu dürfen, reichte das Doktorat noch nicht aus. Die
-                        Privatdozenten mussten sich vorher in der Fakultät, in der sie Vorlesungen halten wollten, habilitieren. Der Akt der
-                        Habilitation wurde durch einen freien Vortrag über ein Thema vollzogen, das entweder von der Fakultät oder vom Aspiranten
-                        bestimmt wurde.</note></p>
-                <p>Ich nehme mir also die Freyheit, die <rs ref="#g0028" type="bi">Herren Collegen</rs> zu befragen, ob Sie der Meinung<lb/> sind, daß
-                    dieses Gesuch Gewährung finden könne?</p>
-                <closer><date when-iso="1818-03-08"><choice>
-                            <abbr>d.</abbr>
-                            <expan>den</expan>
-                        </choice> 2<subst>
-                            <del rend="overwritten">9</del>
-                            <add place="across">8</add>
-                        </subst> März 1818</date>. <signed rend="align(right)"><persName ref="#p0572" type="bi"><choice>
-                                <abbr>Fr.</abbr>
-                                <expan>Friedrich</expan>
-                            </choice> Wilken</persName>
+                <div type="letter">
+                    <pb facs="00000239.jpg" n="1"/>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
+                                >95.</hi></del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="1" rend="srikethrough">126.</del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">113</note>
+                    <p>Noch lege ich den Herrn Collegen vor<lb/> ein Schreiben des Herrn Rectors den <hi rend="latin">Studiosus Ballmüller</hi>
                         <choice>
-                            <abbr>d. Z. Dec.</abbr>
-                            <expan>dieser Zeit Decan</expan>
-                        </choice></signed></closer>
-                <p><handShift new="#minor_hand_1"/>So sehr ich wünschte, daß <choice>
-                        <abbr>Hr</abbr>
-                        <expan>Herr</expan>
-                    </choice>
-                    <persName ref="#p0662" type="bi">Fichte</persName> begünstigt werden könnte, halte ich es doch für ganz unschicklich über <hi
-                        rend="latin">Theses</hi> dis<lb break="no"/>putiren zu lassen, und die <foreign xml:lang="la"><hi rend="latin">Veniam
-                            docendi</hi></foreign> zu geben, ehe die Dissertation geliefert ist. Wen̄ <choice>
-                        <abbr>Hr</abbr>
-                        <expan>Herr</expan>
-                    </choice>
-                    <persName ref="#p0662" type="bi"><choice>
-                            <abbr>F.</abbr>
-                            <expan>Fichte</expan>
-                        </choice></persName> den nächsten<lb/> Som̄er lesen wollte, mußte er frühere Anstalten treffen. Wir haben auch bisher solche
-                    Dispensationen nicht ertheilt.</p>
-                <closer><date when-iso="1818-03-08"/><choice>
-                        <abbr>d.</abbr>
-                        <expan>den</expan>
-                    </choice> 2<subst>
-                        <del rend="overwritten">9</del>
-                        <add place="across">8</add>
-                    </subst>. März. <signed rend="latin align(right)"><persName ref="#p0178" type="bi">Böckh</persName>.</signed></closer>
-                <p><handShift new="#minor_hand_2"/>Ich bin gleicher Meinung. <signed><hi rend="latin"><persName ref="#p0613" type="bi"
-                                >Weiss</persName>.</hi></signed><lb/>
-                    <handShift new="#minor_hand_3"/>Ebenfalls <signed><hi rend="latin"><persName ref="#p0413" type="bi"
-                        >Lichtenstein</persName></hi></signed><lb/>
-                    <handShift new="#minor_hand_4"/>. . . . . <hi rend="latin"><signed><persName ref="#p0637" type="bi"
-                        >Trally</persName></signed></hi><lb/>
-                    <handShift new="#minor_hand_5"/>Ebenfals <signed><persName ref="#p0616" type="bi">Rühs</persName></signed><lb/>
-                    <handShift new="#minor_hand_6"/><choice>
-                        <abbr>Desgl.</abbr>
-                        <expan>Desgleichen</expan>
-                    </choice>
-                    <signed><hi rend="latin"><persName ref="#p0636" type="bi">Hermbstaedt</persName>.</hi></signed><lb/>
-                    <handShift new="#minor_hand_7"/><signed><persName ref="#p0301" type="bi">Erman</persName></signed></p>
+                            <abbr>betr.</abbr>
+                            <expan>betreffend</expan>
+                        </choice><lb/> zur gefälligen Kenntnißnahme.</p>
+                    <p>Auch muß ich noch eine Bitte des Herrn <hi rend="latin"><choice>
+                                <abbr>Dd.</abbr>
+                                <expan>Doctorand</expan>
+                            </choice>
+                            <persName ref="#p0662" type="bi">Fichte</persName></hi> vortragen. Derselbe hat mir<lb/> nehmlich gestern den Wunsch
+                        eröffnet, daß ihm möge verstattet werden, seine öffentliche<lb/> Disputation über <hi rend="latin">theses</hi> zu halten, und
+                        demnächst die gedruckte Dissertation nachzuliefern;<note resp="#eva.schneider"><p xml:lang="de"><persName ref="#p0662"
+                                    type="bi">Immanuel Hermann Fichte</persName> bat die <orgName ref="#g0028" type="bi">Fakultät</orgName> darum, die
+                                Reihenfolge des Promotionsverfahrens zu ändern. Den Universitätsstatuten zufolge sollte zuerst die Dissertation in
+                                gedruckter Form eingereicht werden und danach die Disputation stattfinden.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note><lb/> es sey ihm nehmlich, wie er versicherte, wegen der gegenwärtigen vielfachen Arbeiten in den<lb/>
+                        Druckereyen unmöglich, binnen den nächsten sechs Wochen, den Druck dieser Dissertation zu bewirken, und<lb/> doch trage er
+                        großes Verlangen sich noch vor dem Anfange des nächsten Semesters zu habilitiren<lb/> und dann seine <choice>
+                            <unclear cert="high" reason="illegible">Vorlesungen</unclear>
+                            <unclear cert="low" reason="illegible">Vorlesung</unclear>
+                        </choice> zu beginnen.<note resp="#eva.schneider"><p xml:lang="de">Um Vorlesungen halten zu dürfen, reichte das Doktorat noch
+                                nicht aus. Die Privatdozenten mussten sich vorher in der Fakultät, in der sie Vorlesungen halten wollten,
+                                habilitieren. Der Akt der Habilitation wurde durch einen freien Vortrag über ein Thema vollzogen, das entweder von der
+                                Fakultät oder vom Aspiranten bestimmt wurde.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
+                    <p>Ich nehme mir also die Freyheit, die <rs ref="#g0028" type="bi">Herren Collegen</rs> zu befragen, ob Sie der Meinung<lb/> sind,
+                        daß dieses Gesuch Gewährung finden könne?</p>
+                    <closer><dateline><date when-iso="1818-03-08"><choice>
+                                    <abbr>d.</abbr>
+                                    <expan>den</expan>
+                                </choice> 2<subst>
+                                    <del rend="overwritten">9</del>
+                                    <add place="across">8</add>
+                                </subst> März 1818</date>.</dateline>
+                        <signed rend="align(right)"><persName ref="#p0572" type="bi"><choice>
+                                    <abbr>Fr.</abbr>
+                                    <expan>Friedrich</expan>
+                                </choice> Wilken</persName>
+                            <choice>
+                                <abbr>d. Z. Dec.</abbr>
+                                <expan>dieser Zeit Decan</expan>
+                            </choice></signed></closer>
+                </div>
+                <div type="letter">
+                    <p><handShift new="#minor_hand_1"/>So sehr ich wünschte, daß <choice>
+                            <abbr>Hr</abbr>
+                            <expan>Herr</expan>
+                        </choice>
+                        <persName ref="#p0662" type="bi">Fichte</persName> begünstigt werden könnte, halte ich es doch für ganz unschicklich über <hi
+                            rend="latin">Theses</hi> dis<lb break="no"/>putiren zu lassen, und die <foreign xml:lang="la"><hi rend="latin">Veniam
+                                docendi</hi></foreign> zu geben, ehe die Dissertation geliefert ist. Wen̄ <choice>
+                            <abbr>Hr</abbr>
+                            <expan>Herr</expan>
+                        </choice>
+                        <persName ref="#p0662" type="bi"><choice>
+                                <abbr>F.</abbr>
+                                <expan>Fichte</expan>
+                            </choice></persName> den nächsten<lb/> Som̄er lesen wollte, mußte er frühere Anstalten treffen. Wir haben auch bisher
+                        solche Dispensationen nicht ertheilt.</p>
+                    <closer><dateline><date when-iso="1818-03-08"><choice>
+                                    <abbr>d.</abbr>
+                                    <expan>den</expan>
+                                </choice> 2<subst>
+                                    <del rend="overwritten">9</del>
+                                    <add place="across">8</add>
+                                </subst>. März.</date></dateline>
+                        <signed rend="latin align(right)"><persName ref="#p0178" type="bi">Böckh</persName>.</signed><lb/>
+                        <handShift new="#minor_hand_2"/>Ich bin gleicher Meinung. <signed><hi rend="latin"><persName ref="#p0613" type="bi"
+                                    >Weiss</persName>.</hi></signed><lb/>
+                        <handShift new="#minor_hand_3"/>Ebenfalls <signed><hi rend="latin"><persName ref="#p0413" type="bi"
+                                >Lichtenstein</persName></hi></signed><lb/>
+                        <handShift new="#minor_hand_4"/>. . . . . <signed><hi rend="latin"><persName ref="#p0637" type="bi"
+                            >Trally</persName></hi></signed><lb/>
+                        <handShift new="#minor_hand_5"/>Ebenfals <signed><persName ref="#p0616" type="bi">Rühs</persName></signed><lb/>
+                        <handShift new="#minor_hand_6"/><choice>
+                            <abbr>Desgl.</abbr>
+                            <expan>Desgleichen</expan>
+                        </choice>
+                        <signed><hi rend="latin"><persName ref="#p0636" type="bi">Hermbstaedt</persName>.</hi></signed><lb/>
+                        <handShift new="#minor_hand_7"/><signed><persName ref="#p0301" type="bi">Erman</persName></signed></closer>
+                </div>
             </div>
         </body>
     </text>

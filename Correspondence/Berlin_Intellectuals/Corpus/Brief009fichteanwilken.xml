@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -78,9 +85,14 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-09-10"/>
-                            <note resp="#eva.schneider">Immanuel Hermann Fichte berichtet dem Dekan Friedrich Wilken erneut von seinen
-                                Schwierigkeiten, Opponenten für seine Disputation zu finden. Schließlich bittet er die Fakultät um eine
-                                Ausnahmeregelung: Statt einer öffentlichen Disputation möchte er eine lateinische Rede halten.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Immanuel Hermann Fichte berichtet dem Dekan Friedrich Wilken erneut von
+                                    seinen Schwierigkeiten, Opponenten für seine Disputation zu finden. Schließlich bittet er die Fakultät um eine
+                                    Ausnahmeregelung: Statt einer öffentlichen Disputation möchte er eine lateinische Rede halten.</p><p xml:lang="en"
+                                    >Immanuel Hermann Fichte again reports to the dean Friedrich Wilken of his difficulties in finding opponents for
+                                    his disputation. Finally, he asks the faculty for an exception: instead of a public disputation, he would like to
+                                    give a Latin speech.</p><p xml:lang="fr">Immanuel Hermann Fichte rapporte à nouveau au doyen Friedrich Wilken ses
+                                    difficultés à trouver des opposants à sa disputatio. Enfin, il demande une exception à la faculté : au lieu d'une
+                                    disputatio publique, il aimerait prononcer un discours en latin.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                         </msItem>
                     </msContents>
@@ -215,8 +227,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-10" who="#eva.schneider">I begin encoding. I finish the header.</change>
             <change when-iso="2015-08-11" who="#eva.schneider">I begin with the body. Encode the foliation, dateline, opener, abbreviations, latin
                 words, position etc.</change>
@@ -228,17 +241,16 @@
         <body>
             <div type="transcription">
                 <pb facs="00000341.jpg" n="1"/>
-                <dateline rend="align(right)"><choice>
-                        <abbr>V. H.</abbr>
-                        <expan>Von Hause</expan>
-                    </choice>
-                    <date when-iso="1818-09-10">den 10<hi n="2" rend="superscript underline">ten</hi> September 1818</date></dateline>
-                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">145.</del></note>
-                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough"><del hand="#blue_hand"
-                            rend="strikethrough">177</del></del></note>
-                <note hand="#blue_hand" place="top-right" type="foliation">163</note>
-                <opener rend="align(center)"><salute>Hochzuverehrender <rs ref="#p0572" type="bi">Herr Professor</rs></salute>,</opener>
-                <lb rend="both"/>
+                <opener><dateline rend="align(right)"><choice>
+                            <abbr>V. H.</abbr>
+                            <expan>Von Hause</expan>
+                        </choice>
+                        <date when-iso="1818-09-10">den 10<hi n="2" rend="superscript underline">ten</hi> September 1818</date></dateline>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">145.</del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough"><del hand="#blue_hand"
+                                rend="strikethrough">177</del></del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">163</note>
+                    <salute rend="align(center)">Hochzuverehrender <rs ref="#p0572" type="bi">Herr Professor,</rs></salute></opener>
                 <p>Entschuldigen Sie gütigst, daß ich von Neuem mich genöthigt sehe, mit Bitten<lb/> wegen meiner öffentlichen Disputation Sie zu
                     belästigen. Als ich im Monat<lb/> Juli dieselbe bis auf die Ferien, nach meiner Rückkehr von einer kleinen Rei<lb break="no"/>se
                     aufgeschoben wünschte, geschah es in der Hoffnung, daß diejenigen, welche mir<lb/> ihren Beistand nur mit der Entschuldigung
@@ -293,8 +305,9 @@
                     </choice> Disputation, eine <choice>
                         <abbr>lat.</abbr>
                         <expan>lateinische</expan>
-                    </choice> Rede halte.<note resp="#eva.schneider">Die Graduierungen fielen in den Zuständigkeitsbereich des Ministeriums für die
-                        geistlichen, Unterrichts- und Medizinalangelegenheiten.</note></p>
+                    </choice> Rede halte.<note resp="#eva.schneider"><p xml:lang="de">Die Graduierungen fielen in den Zuständigkeitsbereich des
+                            Ministeriums für die geistlichen, Unterrichts- und Medizinalangelegenheiten.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note></p>
                 <p>Darf ich so kühn seÿn, <hi rend="underline">die <orgName ref="#g0028" type="bi">Fakultät</orgName> um die gleiche gütige
                         Verwendung<lb/> bei dem <orgName ref="#g0064" type="bi">Ministerio</orgName> zu bitten;</hi> – zumal da schon der <hi
                         rend="underline">neunte</hi> Monat seit<lb/> meiner <pb facs="00000342.jpg" n="2"/>
@@ -307,9 +320,9 @@
                         Reine b<supplied reason="binding">ringen</supplied><lb/>
                         <del rend="strikethrough"><unclear cert="high" rend="strikethrough">kann</unclear></del> und nachher meine Zeit ungestört zu
                         meiner Vorbereitung für die <supplied reason="binding">Vorle</supplied><lb break="no"/>sungen benutzen könne.</hi></p>
-                <closer rend="align(center)">Hochachtungsvoll empfiehlt sich<lb/> Dero<lb/>
-                    <milestone rend="vertical-rule" unit="none"/> ganz ergebenster Diener<lb/>
-                    <signed><persName ref="#p0662" type="bi">Fichte</persName></signed>.</closer>
+                <closer><salute rend="align(center)">Hochachtungsvoll empfiehlt sich<lb/> Dero<lb/>
+                        <milestone rend="vertical-rule" unit="none"/> ganz ergebenster Diener</salute>
+                    <signed rend="align(center)"><persName ref="#p0662" type="bi">Fichte.</persName></signed></closer>
             </div>
         </body>
     </text>

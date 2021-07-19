@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -71,8 +72,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -82,8 +89,10 @@
                     <msContents>
                         <msItem>
                             <docDate when="1817-12-17"/>
-                            <note resp="#eva.schneider">Protoll der Fakultätssitzung, in der unter anderem das Examen von Immanuel Hermann Fichte
-                                stattfand</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Protoll der Fakultätssitzung, in der unter anderem das Examen von Immanuel
+                                    Hermann Fichte stattfand</p><p xml:lang="en">Minutes of the faculty meeting in which, among other things, Immanuel
+                                    Hermann Fichte's exam took place</p><p xml:lang="fr">Compte rendu de la réunion du corps professoral au cours de
+                                    laquelle, entre autres, l'examen d'Immanuel Hermann Fichte a eu lieu</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                             <note resp="#eva.schneider" type="about">
                                 <persName ref="#p0662">Immanuel Hermann Fichte</persName>
@@ -215,8 +224,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-09" who="#eva.schneider">Changed the msContents and still found some little mistakes in the encoding, which I
                 corrected.</change>
             <change when-iso="2014-12-08" who="#eva.schneider">I went on with correcting some little mistakes in the encoding.</change>
@@ -306,9 +316,10 @@
                         </choice> mit der <orgName ref="#g0122" type="bi"><subst>
                                 <del rend="overwritten">P</del>
                                 <add place="across">U</add>
-                            </subst>niversität</orgName> trete.<note resp="#eva.schneider"><persName ref="#p0413" type="bi">Hinrich
-                                Lichtenstein</persName>, Professor für Zoologie an der <orgName ref="#g0122" type="bi">Berliner Universität</orgName>,
-                            leitete auch das zur <rs ref="#g0122" type="bi">Universität</rs> gehörige zoologische Museum.</note></item>
+                            </subst>niversität</orgName> trete.<note resp="#eva.schneider"><p xml:lang="de"><persName ref="#p0413" type="bi">Hinrich
+                                    Lichtenstein</persName>, Professor für Zoologie an der <orgName ref="#g0122" type="bi">Berliner
+                                    Universität</orgName>, leitete auch das zur <rs ref="#g0122" type="bi">Universität</rs> gehörige zoologische
+                                Museum.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                     <lb/>
                     <label>5.)</label>
                     <item>Hierauf wurde das Examen des <hi rend="latin">Candidati <persName ref="#p0662" type="bi">Fichte</persName></hi> angestellt.
@@ -324,8 +335,8 @@
                                 type="bi">Fichte</persName>. Die Dissertation bildete die schriftliche Grundlage für die öffentliche Disputation, mit
                             welcher der feierliche Akt der Promotion unmittelbar verbunden war.</note></item>
                 </list>
-                <closer rend="align(right)"><hi rend="latin">In fidem</hi><lb/>
-                    <signed><persName ref="#p0572" type="bi"><choice>
+                <closer><hi rend="latin">In fidem</hi>
+                    <signed rend="align(right)"><persName ref="#p0572" type="bi"><choice>
                                 <abbr>F.</abbr>
                                 <expan>Friedrich</expan>
                             </choice> Wilken</persName></signed>

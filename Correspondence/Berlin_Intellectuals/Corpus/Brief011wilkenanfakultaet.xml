@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -78,9 +85,13 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-09-17"/>
-                            <note resp="#eva.schneider">Der Dekan Friedrich Wilken trägt den Professoren der Philosophischen Fakultät Immanuel Hermann
-                                Fichtes Bitte vor, zum Erhalt seiner Doktorwürde statt einer öffentlichen Disputation eine lateinische Rede halten zu
-                                dürfen.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Der Dekan Friedrich Wilken trägt den Professoren der Philosophischen Fakultät
+                                    Immanuel Hermann Fichtes Bitte vor, zum Erhalt seiner Doktorwürde statt einer öffentlichen Disputation eine
+                                    lateinische Rede halten zu dürfen.</p><p xml:lang="en">The dean Friedrich Wilken asked the professors of the
+                                    Philosophical Faculty Immanuel Hermann Fichte's request to be allowed to give a Latin speech instead of a public
+                                    disputation in order to receive his doctorate.</p><p xml:lang="fr">Le doyen Friedrich Wilken a demandé aux
+                                    professeurs de la Faculté de philosophie qu'Immanuel Hermann Fichte soit autorisé à prononcer un discours en latin
+                                    au lieu d'une disputatio publique afin de recevoir son doctorat.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                         </msItem>
                     </msContents>
@@ -229,8 +240,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-10" who="#eva.schneider">I begin encoding. I finish the header.</change>
             <change when-iso="2015-08-11" who="#eva.schneider">I begin with the body. Encode the foliation, closer, abbreviations, latin words
                 etc.</change>
@@ -245,29 +257,30 @@
                 <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">147</del></note>
                 <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">178</del></note>
                 <note hand="#blue_hand" place="top-right" type="foliation">165</note>
-                <p>Den Herren <orgName rs="#g0028" type="bi">Collegen</orgName> habe ich die Ehre hierbey einen ähnlichen Bericht für <persName
+                <p>Den Herren <orgName ref="#g0028" type="bi">Collegen</orgName> habe ich die Ehre hierbey einen ähnlichen Bericht für <persName
                         ref="#p0662" type="bi">Herrn<lb/>
                         <hi rend="latin">Fichte</hi></persName>, wie für Herrn <hi rend="latin">Lübbe</hi>, zur Genehmigung und Unterschrift
                     vorzulegen.<lb/> Da ich nicht glaube, daß die Sache an sich Schwierigkeiten habe, so habe ich<lb/> mir die Freyheit genommen,
                     sogleich das <hi rend="latin">Mundum</hi> in Umlauf zu setzen.</p>
-                <closer rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>
-                    <date when-iso="1818-09-17"><choice>
-                            <abbr>d.</abbr>
-                            <expan>den</expan>
-                        </choice> 17 <choice>
-                            <abbr>Sept.</abbr>
-                            <expan>September</expan>
-                        </choice> 1818</date>.<lb/>
-                    <persName ref="#p0572" type="bi">Wilken</persName>
-                    <choice>
-                        <abbr>d. Z.</abbr>
-                        <expan>dieser Zeit</expan>
-                    </choice> Decan.</closer>
-                <p><handShift new="#minor_hand_1"/><signed rend="latin align(right)">Vidi <persName ref="#p0413" type="bi"
+                <closer rend="align(center)"><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>
+                        <date when-iso="1818-09-17"><choice>
+                                <abbr>d.</abbr>
+                                <expan>den</expan>
+                            </choice> 17 <choice>
+                                <abbr>Sept.</abbr>
+                                <expan>September</expan>
+                            </choice> 1818</date>.</dateline>
+                    <signed><persName ref="#p0572" type="bi">Wilken</persName>
+                        <choice>
+                            <abbr>d. Z.</abbr>
+                            <expan>dieser Zeit</expan>
+                        </choice> Decan.</signed>
+                    <handShift new="#minor_hand_1"/><signed rend="latin align(right)">Vidi <persName ref="#p0413" type="bi"
                         >Lichtenstein</persName></signed><lb/>
                     <handShift new="#minor_hand_2"/><signed rend="latin align(right)">— <persName ref="#p0636" type="bi"
                         >Hermbstaedt</persName></signed><lb/>
-                    <handShift new="#minor_hand_3"/><signed rend="latin align(right)"><persName ref="#p0301" type="bi">Erman</persName></signed></p>
+                    <handShift new="#minor_hand_3"/><signed rend="latin align(right)"><persName ref="#p0301" type="bi"
+                    >Erman</persName></signed></closer>
             </div>
         </body>
     </text>

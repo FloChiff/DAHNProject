@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -71,8 +72,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -82,9 +89,15 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-03-25"/>
-                            <note resp="#eva.schneider">Der Dekan der Philosophischen Fakultät Friedrich Wilken bittet August Boeckh um ein Urteil
-                                über die von Immanuel Hermann Fichte eingereichte und in Latein verfasste Dissertation</note>
-                            <note resp="#eva.schneider">August Boeckh urteilt, dass die eingereichte Abhandlung als Dissertation genügt</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Der Dekan der Philosophischen Fakultät Friedrich Wilken bittet August Boeckh
+                                    um ein Urteil über die von Immanuel Hermann Fichte eingereichte und in Latein verfasste Dissertation</p><p
+                                    xml:lang="en">The dean of the Philosophical Faculty Friedrich Wilken asks August Boeckh for a judgment on the
+                                    dissertation submitted by Immanuel Hermann Fichte and written in Latin</p><p xml:lang="fr">Le doyen de la Faculté
+                                    de philosophie Friedrich Wilken demande à August Boeckh un jugement sur la thèse présentée par Immanuel Hermann
+                                    Fichte et rédigée en latin</p></note>
+                            <note resp="#eva.schneider"><p xml:lang="de">August Boeckh urteilt, dass die eingereichte Abhandlung als Dissertation
+                                    genügt</p><p xml:lang="en">August Boeckh judges that the submitted paper is sufficient as a dissertation</p><p
+                                    xml:lang="fr">August Boeckh juge que l'article soumis est suffisant comme thèse</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                             <note resp="#eva.schneider" type="about">
                                 <persName ref="#p0662">Immanuel Hermann Fichte</persName>
@@ -301,8 +314,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-12-09" who="#eva.schneider">Changed the msContents and still found some little mistakes in the encoding, which I
                 corrected.</change>
             <change when-iso="2014-12-05" who="#eva.schneider">I found some little mistakes in the encoding, which I corrected.</change>
@@ -314,66 +328,74 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="00000231.jpg" n="1"/>
-                <note hand="#pencil_3" place="top-right"><gap extent="two to three chars" reason="border"/></note>
-                <note hand="#blue_pen" place="top-right" type="foliation">109</note>
-                <p>Herr <hi rend="latin"><persName ref="#p0662" type="bi">Fichte</persName></hi> hat die beikommende Inaugural=Disputation<note
-                        resp="#eva.schneider">Gemeint ist die Dissertation, die <persName ref="#p0662" type="bi">Immanuel Hermann Fichte</persName>
-                        gemäß den damaligen Anforderungen in lateinischer Sprache verfasste. Sie trägt den Titel „De philosophiae platonicae novae
-                        origine“, auf Deutsch „Über den Ursprung der neuplatonischen Philosophie“.</note> nebst der anliegenden<lb/> Erklärung über
-                    deren Authentie mir übergeben. Indem ich beide hiemit den <rs ref="#g0028" type="bi">Herrn<lb/> Collegen</rs> vorlege, bitte ich
-                    besonders den Herrn Collegen <hi rend="latin"><persName ref="#p0178" type="bi">Böckh</persName></hi> um ein gefälliges<lb/>
-                    Urtheil über die Disputation.</p>
-                <closer rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date when-iso="1818-03-25">25 März 1818</date>.<lb/>
-                    <signed><persName ref="#p0572" type="bi">Wilken</persName></signed>
-                    <choice>
-                        <abbr>d. Z. Dec.</abbr>
-                        <expan>dieser Zeit Decan</expan>
-                    </choice></closer>
-                <p>Noch lege ich einen Abdruck unsers neuen Facultäts⹀Siegels bey.</p>
-                <p>(Hier befindet sich das Fakultäts-Siegel)</p>
-                <p><handShift new="#minor_hand_1"/><signed><hi rend="latin align(right)">Vidi. <persName ref="#p0613" type="bi"
-                        >Weiss</persName></hi></signed>.<lb/>
-                    <handShift new="#minor_hand_2"/><signed><hi rend="latin align(right)">– <persName ref="#p0413" type="bi"
-                            >Lichtenstein</persName></hi></signed><lb/>
-                    <handShift new="#minor_hand_3"/><signed><hi rend="latin align(right)">– <persName ref="#p0637" type="bi"
-                        >Trally</persName></hi></signed><lb/>
-                    <handShift new="#minor_hand_4"/><signed><hi rend="align(right)">– <persName ref="#p0616" type="bi">Rühs</persName></hi></signed><lb/>
-                    <handShift new="#minor_hand_5"/><signed><hi rend="latin align(right)">– <persName ref="#p0636" type="bi"
-                            >Hermbstaedt</persName></hi></signed><lb/>
-                    <handShift new="#minor_hand_6"/><signed><hi rend="latin align(right)">– <persName ref="#p0633" type="bi"
-                        >Hirt</persName></hi></signed></p>
-                <pb facs="00000232.jpg" n="2"/>
-                <note hand="#ink" place="margin-top">91.</note>
-                <note hand="#pencil_2" place="margin-left-vertical">34</note>
-                <pb facs="00000233.jpg" n="3"/>
-                <note hand="#ink" place="top-right" type="foliation"><del hand="#pencil_1" n="2" rend="strikethrough"><hi rend="underline"
-                        >68</hi></del></note>
-                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
-                        >92</hi></del></note>
-                <note hand="#blue_hand" place="top-right" type="foliation">110</note>
-                <p><handShift new="#minor_hand_7"/>Ich hatte zwar keine Zeit, die Abhandlung genau zu lesen, aber eine flüchtige Ansicht<lb/> lehrt
-                    schon, daß sie uns als Doctordissertation genügen kan̄. Nur möchte ich,<lb/> daß <choice>
-                        <abbr>Hrn</abbr>
-                        <expan>Herrn</expan>
-                    </choice>
-                    <persName ref="#p0662" type="bi"><choice>
-                            <abbr>F.</abbr>
-                            <expan>Fichte</expan>
-                        </choice></persName> gesagt würde, er solle von vorne herein die Latinität noch etwas<lb/> aufputzen.</p>
-                <closer><placeName ref="#l1103" type="bi"><choice>
-                            <abbr>B.</abbr>
-                            <expan>Berlin</expan>
-                        </choice></placeName>
-                    <date when-iso="1818-03-28"><choice>
-                            <abbr>d.</abbr>
-                            <expan>den</expan>
-                        </choice> 28. März 18</date>. <signed><hi rend="latin align(right)"><persName ref="#p0178" type="bi"
-                        >Böckh</persName></hi></signed>.</closer>
-                <handShift new="#minor_hand_4"/>
-                <signed><hi rend="align(right)"><persName ref="#p0616" type="bi">Rühs</persName></hi></signed>
-                <handShift new="#minor_hand_8"/>
-                <signed><hi rend="align(right)"><persName ref="#p0301" type="bi">Ermann</persName></hi></signed>
+                <div type="letter">
+                    <pb facs="00000231.jpg" n="1"/>
+                    <note hand="#pencil_3" place="top-right"><gap extent="two to three chars" reason="border"/></note>
+                    <note hand="#blue_pen" place="top-right" type="foliation">109</note>
+                    <p>Herr <hi rend="latin"><persName ref="#p0662" type="bi">Fichte</persName></hi> hat die beikommende Inaugural=Disputation<note
+                            resp="#eva.schneider"><p xml:lang="de">Gemeint ist die Dissertation, die <persName ref="#p0662" type="bi">Immanuel Hermann
+                                    Fichte</persName> gemäß den damaligen Anforderungen in lateinischer Sprache verfasste. Sie trägt den Titel „De
+                                philosophiae platonicae novae origine“, auf Deutsch „Über den Ursprung der neuplatonischen Philosophie“.</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note> nebst der anliegenden<lb/> Erklärung über deren Authentie mir übergeben.
+                        Indem ich beide hiemit den <rs ref="#g0028" type="bi">Herrn<lb/> Collegen</rs> vorlege, bitte ich besonders den Herrn Collegen
+                            <hi rend="latin"><persName ref="#p0178" type="bi">Böckh</persName></hi> um ein gefälliges<lb/> Urtheil über die
+                        Disputation.</p>
+                    <closer rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date when-iso="1818-03-25">25 März
+                            1818</date>.<lb/>
+                        <signed><persName ref="#p0572" type="bi">Wilken</persName></signed>
+                        <choice>
+                            <abbr>d. Z. Dec.</abbr>
+                            <expan>dieser Zeit Decan</expan>
+                        </choice></closer>
+                    <postscript>
+                        <p>Noch lege ich einen Abdruck unsers neuen Facultäts⹀Siegels bey.</p>
+                        <p>(Hier befindet sich das Fakultäts-Siegel)</p>
+                    </postscript>
+                    <closer><handShift new="#minor_hand_1"/><signed rend="align(right)"><hi rend="latin">Vidi. <persName ref="#p0613" type="bi"
+                                    >Weiss</persName></hi>.</signed>
+                        <handShift new="#minor_hand_2"/><signed rend="align(right)"><hi rend="latin">– <persName ref="#p0413" type="bi"
+                                    >Lichtenstein</persName></hi></signed>
+                        <handShift new="#minor_hand_3"/><signed rend="align(right)"><hi rend="latin">– <persName ref="#p0637" type="bi"
+                                    >Trally</persName></hi></signed>
+                        <handShift new="#minor_hand_4"/><signed rend="align(right)">– <persName ref="#p0616" type="bi">Rühs</persName></signed>
+                        <handShift new="#minor_hand_5"/><signed rend="align(right)"><hi rend="latin">– <persName ref="#p0636" type="bi"
+                                    >Hermbstaedt</persName></hi></signed>
+                        <handShift new="#minor_hand_6"/><signed rend="align(right)"><hi rend="latin">– <persName ref="#p0633" type="bi"
+                                    >Hirt</persName></hi></signed></closer>
+                    <pb facs="00000232.jpg" n="2"/>
+                    <note hand="#ink" place="margin-top">91.</note>
+                    <note hand="#pencil_2" place="margin(left)-vertical">34</note>
+                </div>
+                <div type="letter">
+                    <pb facs="00000233.jpg" n="3"/>
+                    <note hand="#ink" place="top-right" type="foliation"><del hand="#pencil_1" n="2" rend="strikethrough"><hi rend="underline"
+                            >68</hi></del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
+                            >92</hi></del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">110</note>
+                    <p><handShift new="#minor_hand_7"/>Ich hatte zwar keine Zeit, die Abhandlung genau zu lesen, aber eine flüchtige Ansicht<lb/>
+                        lehrt schon, daß sie uns als Doctordissertation genügen kan̄. Nur möchte ich,<lb/> daß <choice>
+                            <abbr>Hrn</abbr>
+                            <expan>Herrn</expan>
+                        </choice>
+                        <persName ref="#p0662" type="bi"><choice>
+                                <abbr>F.</abbr>
+                                <expan>Fichte</expan>
+                            </choice></persName> gesagt würde, er solle von vorne herein die Latinität noch etwas<lb/> aufputzen.</p>
+                    <closer><dateline><placeName ref="#l1103" type="bi"><choice>
+                                    <abbr>B.</abbr>
+                                    <expan>Berlin</expan>
+                                </choice></placeName>
+                            <date when-iso="1818-03-28"><choice>
+                                    <abbr>d.</abbr>
+                                    <expan>den</expan>
+                                </choice> 28. März 18</date>.</dateline>
+                        <signed rend="align(right)"><hi rend="latin"><persName ref="#p0178" type="bi">Böckh</persName></hi>.</signed>
+                        <handShift new="#minor_hand_4"/>
+                        <signed rend="align(right)"><persName ref="#p0616" type="bi">Rühs</persName></signed>
+                        <handShift new="#minor_hand_8"/>
+                        <signed rend="align(right)"><persName ref="#p0301" type="bi">Ermann</persName></signed></closer>
+                </div>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -78,8 +85,11 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-11-06"/>
-                            <note resp="#eva.schneider">Der erst kurz zuvor neu gewählte Dekan Karl Wilhelm Ferdinand Solger gibt der Fakultät
-                                bekannt, dass Immanuel Hermann Fichte seine Promotion erfolgreich abgeschlossen hat.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Der erst kurz zuvor neu gewählte Dekan Karl Wilhelm Ferdinand Solger gibt der
+                                    Fakultät bekannt, dass Immanuel Hermann Fichte seine Promotion erfolgreich abgeschlossen hat.</p><p xml:lang="en"
+                                    >The recently newly elected dean Karl Wilhelm Ferdinand Solger announces to the faculty that Immanuel Hermann
+                                    Fichte has successfully completed his doctorate.</p><p xml:lang="fr">Le nouveau doyen Karl Wilhelm Ferdinand
+                                    Solger annonce à la faculté qu'Immanuel Hermann Fichte a terminé avec succès son doctorat.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                         </msItem>
                     </msContents>
@@ -180,8 +190,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-08-10" who="#eva.schneider">I begin encoding. I finish the header.</change>
             <change when-iso="2015-08-11" who="#eva.schneider">I begin with the body. Encode the foliation, opener, closer, abbreviations, latin
                 words.</change>
@@ -193,8 +204,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000350.jpg" n="1"/>
-                <hi rend="underline align(center)"><unclear cert="medium">Register</unclear>.</hi>
-                <lb rend="both"/>
+                <note><hi rend="underline align(center)"><unclear cert="medium">Register</unclear>.</hi></note>
                 <p>Die Promotion des <persName ref="#p0662" type="bi"><choice>
                             <abbr>H.</abbr>
                             <expan>Herrn</expan>
@@ -213,8 +223,9 @@
                     </choice>
                     <persName ref="#p0622" type="bi">Hegel</persName> und<lb/> der Seminarist <persName ref="#p0672" type="bi">Klutz</persName>, da
                     die gesetzmäßige Zahl von dreien<lb/> nicht erfüllt werden konnte, weil einige, die schon versprochen<lb/> hatten, wieder
-                    zurückgetreten waren.<note resp="#eva.schneider">Der Philosoph Georg Wilhelm Friedrich Hegel war im Oktober 1818 als Nachfolger
-                        des 1814 verstorbenen Johann Gottlieb Fichte berufen worden.</note></p>
+                    zurückgetreten waren.<note resp="#eva.schneider"><p xml:lang="de">Der Philosoph Georg Wilhelm Friedrich Hegel war im Oktober 1818
+                            als Nachfolger des 1814 verstorbenen Johann Gottlieb Fichte berufen worden.</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note></p>
                 <p>Die <orgName ref="#g0028" type="bi"><choice>
                             <abbr>Fac.</abbr>
                             <expan>Facultät</expan>
@@ -226,10 +237,10 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> den Pedellen zukommenden Antheile, wovon<lb/> die Quittungen beiliegen.</p>
-                <closer rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>, <date when-iso="1818-11-6">den 6ten <choice>
-                            <abbr>Nov.</abbr>
-                            <expan>November</expan>
-                        </choice> 1818</date>.<lb/>
+                <closer><dateline rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>, <date when-iso="1818-11-6">den 6ten <choice>
+                                <abbr>Nov.</abbr>
+                                <expan>November</expan>
+                            </choice> 1818</date>.</dateline>
                     <signed rend="align(right) latin"><choice>
                             <abbr>Dr</abbr>
                             <expan>Doktor</expan>

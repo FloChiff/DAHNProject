@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -71,8 +72,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#ub.hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -82,9 +89,14 @@
                     <msContents>
                         <msItem>
                             <docDate when="1818-07-17"/>
-                            <note resp="#eva.schneider">Immanuel Hermann Fichte berichtet dem Dekan Friedrich Wilken von seinen Schwierigkeiten bei
-                                der Suche nach Opponenten für seine Disputation. Er bittet die Fakultät, ihm die Opponenten zu stellen, so dass er sie
-                                sich nicht selbst suchen müsse.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Immanuel Hermann Fichte berichtet dem Dekan Friedrich Wilken von seinen
+                                    Schwierigkeiten bei der Suche nach Opponenten für seine Disputation. Er bittet die Fakultät, ihm die Opponenten zu
+                                    stellen, so dass er sie sich nicht selbst suchen müsse.</p><p xml:lang="en">Immanuel Hermann Fichte reports to the
+                                    dean Friedrich Wilken about his difficulties in looking for opponents for his disputation. He asks the faculty to
+                                    provide him with the opponents so that he does not have to look for them himself.</p><p xml:lang="fr">Immanuel
+                                    Hermann Fichte rend compte au doyen Friedrich Wilken de ses difficultés à chercher des adversaires pour sa
+                                    disputatio. Il demande à la faculté de lui fournir les adversaires afin qu'il n'ait pas à les chercher
+                                    lui-même.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                         </msItem>
                     </msContents>
@@ -223,8 +235,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-01-12" who="#eva.schneider">I inserted a linebreak betwenn address and text.</change>
             <change when-iso="2014-12-09" who="#eva.schneider">I went on with correcting some little mistakes in the encoding.</change>
             <change when-iso="2014-12-05" who="#eva.schneider">I found some little mistakes in the encoding, which I corrected.</change>
@@ -236,16 +249,15 @@
         <body>
             <div type="transcription">
                 <pb facs="00000317.jpg" n="1"/>
-                <dateline rend="align(right)"><choice>
-                        <abbr>V. H.</abbr>
-                        <expan>Von Hause</expan>
-                    </choice>
-                    <date when-iso="1818-07-17">den 17<hi n="2" rend="superscript underline">ten</hi> Juli 1818</date></dateline>
-                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">133.</del></note>
-                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">166</del></note>
-                <note hand="#blue_hand" place="top-right" type="foliation">151</note>
-                <opener rend="align(center)"><salute>Verehrtester <rs ref="#p0572" type="bi">Herr Professor</rs></salute></opener>
-                <lb rend="both"/>
+                <opener><dateline rend="align(right)"><choice>
+                            <abbr>V. H.</abbr>
+                            <expan>Von Hause</expan>
+                        </choice>
+                        <date when-iso="1818-07-17">den 17<hi n="2" rend="superscript underline">ten</hi> Juli 1818</date></dateline>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">133.</del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">166</del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">151</note>
+                    <salute rend="align(center)">Verehrtester <rs ref="#p0572" type="bi">Herr Professor</rs></salute></opener>
                 <p>Die Angelegenheit, um deren willen ich so oft Sie zu belästigen mich genöthigt<lb/> sehe, muß in diesen Tagen ihre endliche
                     Entscheidung finden. Ich rechne dabei<lb/> auf Ihren gütigen Rath, und auf Ihre letzten Bestim̄ungen. – Vorläufig muß<lb/> ich
                     Ihnen melden, daß ich, um nichts meiner Seits unversucht zu lassen, die Herren<lb/>
@@ -345,7 +357,7 @@
                         <hi rend="latin"><persName ref="#p1361" type="bi">Ritter</persName></hi>, die dann, wohl oder übel, sich dem ihnen
                             Zukom<supplied reason="damage">men</supplied><lb break="no"/>den bequemen müßten. – Dies wäre mein Vorschlage, worüber ich
                         Ihren güti<lb break="no"/>gen Rath mir Morgen Nachmittags mündlich einholen würde.</hi></p>
-                <closer><salute><hi hand="#pencil_3" rend="mark">Bis dahin empfiehlt sich Ihrem Wohlwollen hochachtungsvoll</hi></salute><lb/>
+                <closer><salute><hi hand="#pencil_3" rend="mark">Bis dahin empfiehlt sich Ihrem Wohlwollen hochachtungsvoll</hi></salute>
                     <signed rend="align(right)"><hi hand="#pencil_3" rend="mark">Dero</hi><lb rend="both"/> ganz ergebenster<lb/>
                         <persName ref="#p0662" type="bi">Fichte</persName>.</signed></closer>
             </div>
