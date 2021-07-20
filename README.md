@@ -14,6 +14,7 @@
   - Documentation
   - Scripts
     - Correction
+    - Digitization
     - Encoding
     - Modification
     - Transcription
@@ -55,7 +56,8 @@ This folder contains those ground truth, the models subsequently developed for t
 
 #### Scripts
 With the DAHN project, we aim to create a program for the digital scientific edition of corpus. To do so, we have to follow several steps and some of them requires Python script to effectively work.
-In here, there are scripts for three parts of the program: transcription, post-processing and encoding. 
+In here, there are scripts for four parts of the program: digitization, transcription, post-processing and encoding. 
+For the digitization (done with NAKALA), there is a script to extract metadata from TEI XML files, one to fill the metadata model for NAKALA and lastly, one to change JPG or TIF facs with IIIF links.
 For the transcription, there is a script to transcribe with Kraken by using a command line, instead of the eScriptorium interface.
 For post-processing, there are scripts to help correcting the text after ocerisation. There is two types of scripts: one that search errors and one that correct them. The scripts are available for XML types files (PAGE and ALTO) and TEXT files.
 Finally, for encoding, there are three scripts: one to encode metadata, one to encode texts and one to correct recurring errors due to the previously mentioned script.
@@ -64,4 +66,4 @@ There also is a fourth folder : modification. This one does not contain files li
 #### Documentation
 There are many elements in the *Project development* folder that requires help to use it correctly and easily. 
 We then provide documentation for the most obscure part, in order to favorise the reuse of what we developed, without having to decipher it beforehand. 
-Thus, there are documentation for the process of segmentation/transcription/post-processing, as well as explanation for running the scripts.
+Thus, there are documentation for the process of digitization/segmentation/transcription/post-processing, as well as explanation for running the scripts.
