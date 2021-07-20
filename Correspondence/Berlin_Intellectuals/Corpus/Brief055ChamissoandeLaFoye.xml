@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -167,8 +174,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2013-01-28" who="#janne.stecker">Corrections in transcription.</change>
             <change when-iso="2013-01-16" who="#janne.stecker">Corrections in transcription. More detailed encoding.</change>
             <change when-iso="2013-01-14" who="#janne.stecker">More detailed encoding. Added bibliographic references.</change>
@@ -182,20 +190,19 @@
                 <pb facs="00000203.jpg" n="1"/>
                 <opener>
                     <dateline rend="align(right)">
-                        <date when-iso="1814-Frühling">Frühling 1814</date>
+                        <date from-iso="1814-03" to-iso="1814-06">Frühling 1814</date>
                     </dateline>
                 </opener>
-                <p>
-                    <note hand="#pencil_1">101</note>
-                </p>
+                <note hand="#pencil_1">101</note>
+
                 <p><note hand="#pencil_1">1J3</note>16</p>
                 <p>Ich wollte, alter Junge, du wärest von selbst auf den vernünftigen<lb/>Einfall gekommen an mich zu schreiben, und ich erhielte in
                     diesen<lb/>Tagen einen langen Brief von dir. ich könnt ihn brauchen.<lb/> – lieber, lieber! ich bin sehr eine geschlagener <hi
-                        rend="latin">Creatur</hi>.&gt;lb/&gt; – ich bin zuvor nicht in die Lüge wieder untergetaucht<lb/>aber mir ist überall wund und
-                    weh. – ich welke<lb/>hin blatt für blatt und habe keine Frucht angesetzt<lb/>und treibe keinen frischen Reis mehr. wenn
-                    die<lb/>Sonne scheint, kann ich mir noch von fernen<lb/>Reisen, und Hoffnung an der Wissenschaft heitere<lb/>Lieder singen, wenn
-                    es aber regnet oder gar<lb/>Nacht wird ist es auch in mir Nacht.</p>
-                <p><note hand="#red_pen">[</note> Vor wenigen Tagen ist die schöne, liebreiche<lb/><persName ref="#p0425" type="bi">Frau
+                        rend="latin">Creatur</hi>.<lb/> – ich bin zuvor nicht in die Lüge wieder untergetaucht<lb/>aber mir ist überall wund und weh.
+                    – ich welke<lb/>hin blatt für blatt und habe keine Frucht angesetzt<lb/>und treibe keinen frischen Reis mehr. wenn die<lb/>Sonne
+                    scheint, kann ich mir noch von fernen<lb/>Reisen, und Hoffnung an der Wissenschaft heitere<lb/>Lieder singen, wenn es aber regnet
+                    oder gar<lb/>Nacht wird ist es auch in mir Nacht.</p>
+                <p><add hand="#red_pen">[</add> Vor wenigen Tagen ist die schöne, liebreiche<lb/><persName ref="#p0425" type="bi">Frau
                         Hitzigs</persName>, nach hoffnungslosen Leiden gestorben,<lb/>ich habe in ihr Mutter und Schwester verloren, mein<lb/>Haus ist
                     verödet, des ergrauten Vaters. <persName ref="#p0239" type="bi">Eduards</persName><lb/>Leben, ist hiermit abgeschloßen, und
                     meines<lb/>sehr war hinfort, eine Fräundin widmet den<lb/>herrlichen Kindern ihr Leben und er fröhnet<lb/>für sie diesen seinen
@@ -210,15 +217,18 @@
                     gezeugt und daß dieses Kind gestorben –<lb/>Gerüchte, die eine gewisse Freundin zu verbreiten geschäftig<lb/>war, wovon schon
                     damals oft an mein Ohr gekom̄en.<lb/>Die <persName type="bi">Mutter</persName>
                     <!-- Kommentar zu Mutter evt. H. von Chezy? --> hatte mir aber <hi rend="underline">geschworen bei allem was ihr<lb/>heilig war es
-                        sei nicht so.</hi> O des rätselhaften Wallens<lb/>der Weiber! – nun hat sie mir es, zwarnie noch<lb/>mit selben Worten,
-                        gestanden,<del rend="strikethrough">und</del>
-                    <add place="above">doch</add> mir <del rend="strikethrough">versprochen</del><lb/>nähere Aufklärung, auf die ich dringe,
-                    versprochen.</p>
+                        sei nicht so.</hi> O des rätselhaften Wallens<lb/>der Weiber! – nun hat sie mir es, zwarnie noch<lb/>mit selben Worten, gestanden,<subst>
+                        <del rend="strikethrough">und</del>
+                        <add place="above">doch</add>
+                    </subst> mir <del rend="strikethrough">versprochen</del><lb/>nähere Aufklärung, auf die ich dringe, versprochen.</p>
                 <p>Mit einem Mal, mein lieb <supplied reason="stain">er</supplied>, erscheinet mir mein<lb/>Leben ganz verweist, mich neckt die
                     Gestalt<lb/>eines krauslockigen vierjährigen lächelnden Knaben<lb/>überall, und wenn ich dieses Wesen vermisse.</p>
-                <p>worin ich mich mit Anbetung wiederfinden mögte<lb/>daß ich mir in ihm frisch und froh leben könne<lb/> gap extent="seven chars"
-                    reason="illegible"/&gt; <add place="above">mir</add> ich weiß nicht wie – und es mögte<lb/>gar nichts da sein, – so eitel
-                    erscheint mir all<lb/>mein Thun und Treiben für den Todt! <note hand="#red_pen">]</note></p>
+                <p>worin ich mich mit Anbetung wiederfinden mögte<lb/>daß ich mir in ihm frisch und froh leben könne<lb/>
+                    <subst>
+                        <del rend="overwritten"><gap extent="seven chars" reason="illegible"/></del>
+                        <add place="above">mir</add>
+                    </subst> ich weiß nicht wie – und es mögte<lb/>gar nichts da sein, – so eitel erscheint mir all<lb/>mein Thun und Treiben für den
+                    Todt! <add hand="#red_pen">]</add></p>
                 <p><subst hand="#red_pen">
                         <del rend="strikethrough">Auch e</del>
                         <add place="above">E</add>
@@ -228,8 +238,10 @@
                     spät<lb/>gekommen ein gewißer <persName type="bi">Kaufmann Müller</persName>
                     <!-- Wer ist das? -->,<lb/>der mit einer schönen lieben <persName type="bi">Frau</persName>
                     <!-- Name? --> in der <lb/>schönsten Ehe lebte, die Nächst <persName ref="#p0239" type="bi">Eduards</persName> Ehe, ich<lb/>je
-                    gesehen, – nun lebt auch diese junge<lb/>Witwe nach anderthalb Jahr Glücke <gap extent="three chars" reason="strikethrough"/>
-                    <add place="above">selbst</add> weltlich</p>
+                    gesehen, – nun lebt auch diese junge<lb/>Witwe nach anderthalb Jahr Glücke <subst>
+                        <del rend="strikethrough"><gap extent="three chars"/></del>
+                        <add place="above">selbst</add>
+                    </subst> weltlich</p>
                 <pb facs="00000205.jpg" n="3"/>
                 <p>von den Worten zu dem <del rend="strikethrough">Handeln</del>Thun bekehrt.<lb/>vor mir steht eine <del rend="strikethrough"
                     >k</del>enorme Vogelscheuche<lb/>die zehn mal des Tages mich ausrufen heißt,<lb/>verflucht sei, und hohle der Teufel, das

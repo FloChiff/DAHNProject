@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -67,8 +68,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -274,8 +281,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -291,22 +299,23 @@
         <body>
             <div type="transcription">
                 <pb facs="00000217.jpg" n="1"/>
-                <add hand="editor" place="top-right"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date when-iso="1815-01-23">23. Januar
-                        1815</date></add>
-                <lb/>
-                <note hand="#pencil_1" place="margin-left" type="foliation">20</note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">108</note>
-                <note hand="#major_hand" place="margin-left-vertical"><note hand="red_hand" place="inline margin-left-vertical">[</note><hi
+                <opener><dateline rend="align(right)"><add hand="editor" place="top"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date
+                                when-iso="1815-01-23">23. Januar 1815</date></add></dateline></opener>
+                <note hand="#pencil_1" place="margin(left)" type="foliation">20</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">108</note>
+                <note hand="#major_hand" place="margin(left)-vertical"><add hand="red_hand" place="inline margin(left)-vertical">[</add><hi
                         rend="latin"><foreign xml:lang="la">Le<subst>
                                 <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                                 <add place="across">d</add>
-                            </subst>um palustre,<note resp="#stefanie.hasler">Sumpfporst bzw. Wilder Rosmarin</note> A<subst>
+                            </subst>um palustre,<note resp="#stefanie.hasler"><p xml:lang="de">Sumpfporst bzw. Wilder Rosmarin</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note> A<subst>
                                 <del rend="overwritten">d</del>
                                 <add place="across">n</add>
-                            </subst>dromeda polifolia,<note resp="#stefanie.hasler">Rosmarin- oder auch Lavendelheide</note> Stratiotes aloides.<note
-                                resp="#stefanie.hasler">Krebsschere</note> |trientalis Europaea<note resp="#stefanie.hasler"
-                            >Siebenstern</note></foreign></hi> wachst<lb/>nicht bei uns. –<note hand="red_hand" place="inline margin-left-vertical"
-                        >]</note></note>
+                            </subst>dromeda polifolia,<note resp="#stefanie.hasler"><p xml:lang="de">Rosmarin- oder auch Lavendelheide</p><p
+                                    xml:lang="en"/><p xml:lang="fr"/></note> Stratiotes aloides.<note resp="#stefanie.hasler">Krebsschere</note>
+                            |trientalis Europaea<note resp="#stefanie.hasler"><p xml:lang="de">Siebenstern</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></foreign></hi> wachst<lb/>nicht bei uns. –<add hand="red_hand" place="inline margin(left)-vertical"
+                    >]</add></note>
                 <p>Ich will diesen Brief erfrischen, der Monathe<lb/>gelegen hat, und mag ihn dennoch nicht wieder<lb/>lesen, wie er Dir bestim̄t
                     gewesen, magst<lb/>du ihn auch erhalten, er ist dein und nicht mehr<lb/>mein, zu wehmüthig sehen einen so ver<subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
@@ -316,33 +325,38 @@
                         <unclear cert="high" extent="1w" reason="illegible">mir</unclear><lb/>unter der Hand wachst und gedeiht so daß<lb/>der Arbeit
                     immer mehr wird. –</p>
                 <p>in diesem künftigen Sommer will ich,<lb/>so gott will auf den Tausch sam̄eln,<lb/>ich sehe daß es doch nichts ist mit
-                    dem<lb/>Tausch der Catalogen,<note resp="#stefanie.hasler">In <persName ref="#p0239" type="bi">Hitzigs</persName> Edition <title
-                            ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "Kataloge".</note> ich werde
-                    für<lb/>dich eine Sendung nordischer pflanzen<lb/>bereiten als da sind. <add hand="#red_hand" place="inline">[</add><note
-                        resp="#stefanie.hasler" subtype="1">Die von <persName ref="#p0239" type="bi">Hitzig</persName> gesetzten roten Klammern
-                        markieren Streichungen für den Druck. Die hier markierte, von Blatt 1 bis Blatt 3 reichende Passage fehlt demnach im Druck von
-                        Hitzig und <persName ref="#p0326" type="bi">Palm</persName>.</note><add hand="#red_hand" place="above"><choice>
+                    dem<lb/>Tausch der Catalogen,<note resp="#stefanie.hasler"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+                            Edition <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "Kataloge".</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> ich werde für<lb/>dich eine Sendung nordischer pflanzen<lb/>bereiten als da sind.
+                        <add hand="#red_hand" place="inline">[</add><note resp="#stefanie.hasler" subtype="1">Die von <persName ref="#p0239" type="bi"
+                            >Hitzig</persName> gesetzten roten Klammern markieren Streichungen für den Druck. Die hier markierte, von Blatt 1 bis
+                        Blatt 3 reichende Passage fehlt demnach im Druck von Hitzig und <persName ref="#p0326" type="bi">Palm</persName>.</note><add
+                        hand="#red_hand" place="above"><choice>
                             <abbr>u.s.w.</abbr>
                             <expan>und so weiter</expan>
                         </choice></add>
                     <foreign xml:lang="la"><hi rend="latin">Carex chondor<subst>
                                 <del rend="overwritten">iz</del>
                                 <add place="across">h</add>
-                            </subst>iza<note resp="#stefanie.hasler">Fadenwurzelige Segge</note><lb/><choice>
+                            </subst>iza<note resp="#stefanie.hasler"><p xml:lang="de">Fadenwurzelige Segge</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note><lb/><choice>
                                 <abbr>li<del rend="overwritten">l</del><add place="across">m</add>osa</abbr>
                                 <expan>Carex limosa</expan>
-                            </choice>,<note resp="#stefanie.hasler">Schlamm-Segge</note>
+                            </choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Schlamm-Segge</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                             <choice>
                                 <abbr>dioica</abbr>
                                 <expan>Carex dioica</expan>
-                            </choice>,<note resp="#stefanie.hasler">Zweihäusige Segge</note> Calla pallustris,<note resp="#stefanie.hasler"
-                                >Drachenwurz oder auch Sumpfkalla</note> potamogeton<lb/><subst>
+                            </choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Zweihäusige Segge</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                            Calla pallustris,<note resp="#stefanie.hasler"><p xml:lang="de">Drachenwurz oder auch Sumpfkalla</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note> potamogeton<lb/><subst>
                                 <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                                 <add place="across">z</add>
-                            </subst>osteri folium,<note resp="#stefanie.hasler">Flachstängeliges Laichkraut</note><choice>
+                            </subst>osteri folium,<note resp="#stefanie.hasler"><p xml:lang="de">Flachstängeliges Laichkraut</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note><choice>
                                 <abbr>praelungum <persName ref="#p1721" type="bi">Wulfen</persName></abbr>
                                 <expan>potamogeton praelongum <persName ref="#p1721" type="bi">Wulfen</persName></expan>
-                            </choice>.<note resp="#stefanie.hasler">Eigentlich "praelongum Wulfen": Gestrecktes Laichkraut</note></hi></foreign>
+                            </choice>.<note resp="#stefanie.hasler"><p xml:lang="de">Eigentlich "praelongum Wulfen": Gestrecktes Laichkraut</p><p
+                                    xml:lang="en"/><p xml:lang="fr"/></note></hi></foreign>
                     <choice>
                         <abbr>u.s.w.</abbr>
                         <expan>und so weiter.</expan>
@@ -357,12 +371,13 @@
                     </subst>orge daß besonders der Standort<pb facs="00000218.jpg" n="2"/>so wohl <del rend="strikethrough">G</del> nach der Natur des
                     erzeugenden<lb/>Bodens als nach der Gegend bezeichnet<lb/>werde. – auch <hi rend="latin">algen</hi> werden willkom̄en<lb/>sein,
                     mit diesen habe ich mir hier<lb/>Freünde gemacht und manches gute<lb/>bekom̄en. – <hi rend="latin">Orchideen</hi> und <hi
-                        rend="latin">Najaden</hi><note resp="#stefanie.hasler">Dies ist eine alte Bezeichnung für die Pflanzengattung der Najas
-                        (Nixenkräuter). Es handelt sich hierbei um Wasserpflanzen.</note><lb/>werden erwünscht sein, auch gebe<lb/>die <hi
-                        rend="latin">Autorität</hi> an für die Bestimmung,<lb/>nach welchem <hi rend="latin">Autor</hi> und nach welchem<lb/>Buch sie
-                    vorgenommen. – Deine<lb/>Bestimmungen sind auch nicht immer<lb/>die richtigsten – <hi rend="latin"><foreign xml:lang="la">Salsola
-                            soda</foreign></hi><note resp="#stefanie.hasler">Mönchsbart</note> wird wohl<lb/>nichts anders sein als <hi rend="latin"
-                            ><foreign xml:lang="la">Chenopodium<lb/>Marinum</foreign></hi>. –</p>
+                        rend="latin">Najaden</hi><note resp="#stefanie.hasler"><p xml:lang="de">Dies ist eine alte Bezeichnung für die Pflanzengattung
+                            der Najas (Nixenkräuter). Es handelt sich hierbei um Wasserpflanzen.</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note><lb/>werden erwünscht sein, auch gebe<lb/>die <hi rend="latin">Autorität</hi> an für die Bestimmung,<lb/>nach welchem <hi
+                        rend="latin">Autor</hi> und nach welchem<lb/>Buch sie vorgenommen. – Deine<lb/>Bestimmungen sind auch nicht immer<lb/>die
+                    richtigsten – <hi rend="latin"><foreign xml:lang="la">Salsola soda</foreign></hi><note resp="#stefanie.hasler"><p xml:lang="de"
+                            >Mönchsbart</p><p xml:lang="en"/><p xml:lang="fr"/></note> wird wohl<lb/>nichts anders sein als <hi rend="latin"><foreign
+                            xml:lang="la">Chenopodium<lb/>Marinum</foreign></hi>. –</p>
                 <p>vielleicht arbeite ich noch in diesem<lb/><del rend="strikethrough">som̄er</del> winter einen Auszug meiner<lb/><hi rend="latin"
                             ><foreign xml:lang="la">Desiderata</foreign></hi> aus der <hi rend="latin"><title ref="#w00326">flo<del rend="overwritten"
                                 >l</del><add place="across">r</add>e francaise</title> de<lb/><persName ref="#p0385" type="bi">De<subst>
@@ -378,12 +393,12 @@
                             <del rend="overwritten">l</del>
                             <add place="across">p</add>
                         </subst>en</placeName> – der<lb/>Berliner flora, ein paar Tausend<lb/>Garten Pflanzen, deine Algen und<lb/><hi rend="latin"
-                        >Littoralen</hi>,<note resp="stefanie.hasler">Uferpflanzen</note> 1 Hundert Capische einige<lb/>Hundert sudfranzösche
-                        süddeutsche<pb facs="00000219.jpg" n="3"/>Asiatische, Lapponische und andere ausgetauschte<lb/>Pflanzen – ein guter
-                        Freund<note resp="#stefanie.hasler">Vermutlich ist mit diesem Freund <persName ref="#p0428" type="bi">Karl Heinrich
-                            Bergius</persName> gemeint.</note> sammelt<lb/>am <placeName ref="#ll0227" type="bi">Cap</placeName> für mich.<add
-                        hand="#red_hand">]</add> –</p>
-                <note hand="#pencil_2" place="inline margin-right" type="foliation">109</note>
+                        >Littoralen</hi>,<note resp="stefanie.hasler"><p xml:lang="de">Uferpflanzen</p><p xml:lang="en"/><p xml:lang="fr"/></note> 1
+                    Hundert Capische einige<lb/>Hundert sudfranzösche süddeutsche<pb facs="00000219.jpg" n="3"/>Asiatische, Lapponische und andere
+                    ausgetauschte<lb/>Pflanzen – ein guter Freund<note resp="#stefanie.hasler"><p xml:lang="de">Vermutlich ist mit diesem Freund
+                                <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName> gemeint.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> sammelt<lb/>am <placeName ref="#ll0227" type="bi">Cap</placeName> für mich.<add hand="#red_hand">]</add> –</p>
+                <note hand="#pencil_2" place="inline margin(right)" type="foliation">109</note>
                 <p>Lieber Freund ich lie<del rend="overwritten">l</del><add place="across">g</add>e auf meinem <lb/>Heu in <gap extent="1c"
                         reason="illegible"/>erwartung des frischen Grasses<lb/>lasse die welt gehn und ziehe einen<lb/>fuß nach dem andern aus ihr
                     heraus<lb/>niemand und nichts fesselt mich recht<lb/>mehr und ich glaube man mögte fast<lb/>so ein<del rend="strikethrough"><gap
@@ -392,27 +407,31 @@
                 <p>Mein <rs ref="#w00339" type="bi"><hi rend="underline">Sieben</hi>meilig gestie<subst>
                             <del rend="overwritten">g</del>
                             <add place="across">f</add>
-                        </subst>elt Freund</rs><lb/>geht indessen ganz gut<note resp="#sabine.seifert"><title ref="#w00339">Peter Schlemihl's
-                            wundersame Geschichte</title> ist im Herbst <date when-iso="1814">1814</date> erschienen. Innerhalb kurzer Zeit folgten
-                        Nachdrucke des außerordentlich erfolgreichen Werkes.</note>, und hat was<lb/>man sagen konnte ein ausgezeichnet<add
-                        place="inline">es</add> Glück<lb/>gemacht. <foreign xml:lang="la"><hi rend="latin">Habeat Sibi<gap extent="1c"
-                                reason="illegible"/></hi></foreign>.<note resp="#stefanie.hasler">Übersetzung (lat.): Er habe seinen Willen.</note>
-                    wird <del rend="strikethrough">es</del><note resp="#sabine.seifert">In <persName ref="#p0239" type="bi">Hitzigs</persName>
-                        <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "es".</note> wohl<lb/>einmal
-                        <del rend="strikethrough">n<gap extent="1-2c" reason="illegible"/>ch</del>zu den Franzosen übersetzen,<lb/>ich glaube nicht,
-                    er komme wenigstens<lb/>nur mit den Stiefeln hin nicht mit dem<lb/>Herzen.<note resp="#stefanie.hasler">Die erste französische
-                        Übersetzung des <title ref="#w00339">Schlemihl</title>, von <persName ref="#p0237" type="bi">Chamissos</persName> Bruder
-                            <persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, wurde <date when-iso="1822">1822</date>
-                        veröffentlicht.</note> – <closer>
-                        <salute>lebe so wohl du kannst<lb/>lieber junge, und <foreign xml:lang="grc"><hi rend="greek">Χαιρε</hi></foreign><note
-                                resp="#stefanie.hasler">Übersetzung (lat.): Sei gegrüßt.</note> wenn du es<lb/>vermagst, – wir werden
-                            allmälig<lb/>schon alt <foreign xml:lang="fr"><hi rend="latin">et le plus fort en est fait:<note resp="#stefanie.hasler"
-                                        >Übersetzung (frz.): Und der größte Teil [i.e. des Lebens] ist schon geschafft.</note></hi></foreign></salute><lb/>
-                        <date when-iso="1815-01-23">23. <hi rend="latin">Januar</hi> 1815</date><note resp="#sabine.seifert">In <persName ref="#p0239"
-                                type="bi">Hitzigs</persName>
+                        </subst>elt Freund</rs><lb/>geht indessen ganz gut<note resp="#sabine.seifert"><p xml:lang="de"><title ref="#w00339">Peter
+                                Schlemihl's wundersame Geschichte</title> ist im Herbst <date when-iso="1814">1814</date> erschienen. Innerhalb kurzer
+                            Zeit folgten Nachdrucke des außerordentlich erfolgreichen Werkes.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, und hat
+                    was<lb/>man sagen konnte ein ausgezeichnet<add place="inline">es</add> Glück<lb/>gemacht. <foreign xml:lang="la"><hi rend="latin"
+                            >Habeat Sibi<gap extent="1c" reason="illegible"/></hi></foreign>.<note resp="#stefanie.hasler"><p xml:lang="de"
+                            >Übersetzung (lat.): Er habe seinen Willen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wird <del rend="strikethrough"
+                        >es</del><note resp="#sabine.seifert"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "es".</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> wohl<lb/>einmal <del rend="strikethrough">n<gap extent="1-2c" reason="illegible"/>ch</del>zu
+                    den Franzosen übersetzen,<lb/>ich glaube nicht, er komme wenigstens<lb/>nur mit den Stiefeln hin nicht mit dem<lb/>Herzen.<note
+                        resp="#stefanie.hasler"><p xml:lang="de">Die erste französische Übersetzung des <title ref="#w00339">Schlemihl</title>, von
+                                <persName ref="#p0237" type="bi">Chamissos</persName> Bruder <persName ref="#p0280" type="bi">Hippolyte de
+                                Chamisso</persName>, wurde <date when-iso="1822">1822</date> veröffentlicht.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> –</p>
+                <closer>
+                    <salute>lebe so wohl du kannst<lb/>lieber junge, und <foreign xml:lang="grc"><hi rend="greek">Χαιρε</hi></foreign>
+                        <note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (lat.): Sei gegrüßt.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                        wenn du es<lb/>vermagst, – wir werden allmälig<lb/>schon alt <foreign xml:lang="fr"><hi rend="latin">et le plus fort en est
+                                    fait:<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (frz.): Und der größte Teil [i.e. des Lebens] ist
+                                        schon geschafft.</p><p xml:lang="en"/><p xml:lang="fr"/></note></hi></foreign></salute><lb/>
+                    <date when-iso="1815-01-23">23. <hi rend="latin">Januar</hi> 1815</date><note resp="#sabine.seifert"><p xml:lang="de">In <persName
+                                ref="#p0239" type="bi">Hitzigs</persName>
                             <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird das Datum ausgelassen und die Initiale "A."
-                            als Unterschrift hinzugefügt.</note>
-                    </closer></p>
+                            als Unterschrift hinzugefügt.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                </closer>
                 <pb facs="00000220.jpg" n="4"/>
             </div>
         </body>

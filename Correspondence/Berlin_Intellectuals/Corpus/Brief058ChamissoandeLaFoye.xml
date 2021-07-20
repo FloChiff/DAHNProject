@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -48,8 +49,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section </repository>
                         <collection>Nachlass de La Foye </collection>
@@ -181,8 +188,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-01-28" who="#hannes.fischer">First encoding and commenting </change>
         </revisionDesc>
     </teiHeader>
@@ -190,11 +198,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000213.jpg" n="1"/>
-                <!--  
-                <note type="foliation" hand="pencil_1" place="margin-left">19</note>
+                <note type="foliation" hand="pencil_1" place="margin(left)">19</note>
                 <note type="foliation" place="margin-top" hand="pencil_3">Winter 1814</note>
-                <note type="foliation" hand="#pencil_2" place="margin-right">106</note>
-                <note resp="#hannes.fischer"> Dieser Brief liegt gedruckt vor bei Hitzig: S.349</note>-->
+                <note type="foliation" hand="#pencil_2" place="margin(right)">106</note>
+                <note resp="#hannes.fischer"><p xml:lang="de"> Dieser Brief liegt gedruckt vor bei Hitzig: S.349</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note>
                 <p>Ich höre diesen Winter ein Naturphilosophisches<lb/>Collegium (Horkel) — ein Physisches über Magnetismus<lb/> und Electricität von
                     Erman, und sonst ein<lb/> Lateinisches von Wolf. — ich arbeite<lb/>immer an der aufstellung der Museen —<lb/>(nun die Fische), und
                     endlich ich habe mein<lb/> Herbarium vor (?) – mein Schatz und meine<lb/>Lust – dass soll es sein und bleiben,<lb/> lieber was

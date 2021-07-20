@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE"> Germany</country>
-                        <settlement> Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository> Manuscripts section</repository>
                         <collection> de La Foye papers</collection>
@@ -241,8 +248,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -264,12 +272,13 @@
         <body>
             <div type="transcription">
                 <pb facs="00000195.jpg" n="1"/>
-                <note hand="#pencil_2" place="margin-right" type="foliation">159</note>
-                <note hand="#pencil_1" place="margin-right" type="foliation">97</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">159</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">97</note>
                 <p rend="nolb">verarmt, einzig ihrem Gram — —<lb/>Ich muß dir nach so langer Trennung eine<lb/>kleine Geschichte von mir und auch von
-                    den Freunden<lb/>entwerfen — Wie der Ruf an die<lb/>Freiwilligen<note resp="#sabine.seifert">Hiermit ist vermutlich der Aufruf der
-                        preußischen Regierung vom <date when-iso="1813-02-08">8. Februar 1813</date> gemeint, freiwillige Jägerverbände, die
-                        Freikorps, zu gründen.</note> erscholl – ward ich in mir sehr zerissen<lb/>und gar nicht einig was mir zu thun sei — Es nicht<lb/><subst>
+                    den Freunden<lb/>entwerfen — Wie der Ruf an die<lb/>Freiwilligen<note resp="#sabine.seifert"><p xml:lang="de">Hiermit ist
+                            vermutlich der Aufruf der preußischen Regierung vom <date when-iso="1813-02-08">8. Februar 1813</date> gemeint,
+                            freiwillige Jägerverbände, die Freikorps, zu gründen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> erscholl – ward ich
+                    in mir sehr zerissen<lb/>und gar nicht einig was mir zu thun sei — Es nicht<lb/><subst>
                         <del rend="strikethrough"><gap extent="1w" reason="illegible"/></del>
                         <add place="above">länger ertragend</add>
                     </subst> hatte ich wirklich schon an den <rs ref="#p0281" type="bi">König</rs> geschrieben, <unclear cert="medium" extent="1w"
@@ -289,14 +298,15 @@
                         <del rend="strikethrough">und erschien</del>
                         <add place="above">angekündigt</add>
                     </subst> als <pb facs="00000196.jpg" n="2"/> ebenbürtiger Gast und Liebhaber der Botanik<lb/><del rend="strikethrough">bei</del>
-                    <add place="above">zu</add> dem Herrn <persName ref="#p0412" type="bi">von Itzenplitz</persName>.<note resp="#sabine.seifert"> Von
-                            <date when-iso="1813-05/10">Mai bis Oktober 1813</date> hielt sich <persName ref="#p0237" type="bi">Chamisso</persName> in
-                            <placeName ref="#l0082" type="bi">Kunersdorf</placeName> bei Generalintendant <persName ref="#p0412" type="bi">von
-                            Itzenplitz</persName> auf. Hier legte er u.a. ein Herbarium an und verfaßte eine botanische Abhandlung (vgl. <rs
-                            ref="#w00321" type="bi">Feudel (1988)</rs>, S. 69).</note> — ich widmete<lb/>da in freündlicher Umgebung <del
-                        rend="strikethrough">und</del> unter guten<lb/>Leuten meinen Som̄er ausschließlich der Botanik<lb/>und es ward mir so wohl als
-                    im̄er mir sein<lb/>könnte. — Einige Klotzigkeiten des Reichthumes<lb/>die mir nicht entgingen, wurden mir lächerlicher<lb/>als
-                    drückend — ich spielte meine Rolle als eben<lb break="no"/>bürtiger Gast d<subst>
+                    <add place="above">zu</add> dem Herrn <persName ref="#p0412" type="bi">von Itzenplitz</persName>.<note resp="#sabine.seifert"><p
+                            xml:lang="de"> Von <date when-iso="1813-05/10">Mai bis Oktober 1813</date> hielt sich <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> in <placeName ref="#l0082" type="bi">Kunersdorf</placeName> bei Generalintendant <persName
+                                ref="#p0412" type="bi">von Itzenplitz</persName> auf. Hier legte er u.a. ein Herbarium an und verfaßte eine botanische
+                            Abhandlung (vgl. <rs ref="#w00321" type="bi">Feudel (1988)</rs>, S. 69).</p><p xml:lang="en"/><p xml:lang="fr"/></note> —
+                    ich widmete<lb/>da in freündlicher Umgebung <del rend="strikethrough">und</del> unter guten<lb/>Leuten meinen Som̄er
+                    ausschließlich der Botanik<lb/>und es ward mir so wohl als im̄er mir sein<lb/>könnte. — Einige Klotzigkeiten des
+                    Reichthumes<lb/>die mir nicht entgingen, wurden mir lächerlicher<lb/>als drückend — ich spielte meine Rolle als eben<lb break="no"
+                    />bürtiger Gast d<subst>
                         <del rend="overwritten"><gap extent="1-2c" reason="illegible"/></del>
                         <add place="across">ur</add>
                     </subst>ch, und ließ sie ungeschickt<lb/><subst>
@@ -306,13 +316,13 @@
                     ein Haus der<lb/>Prosa — aber die Poesie und die Fabel hab ich <add place="above">ohnedem</add> biß<lb/>über die Ohren satt — — da
                     fiel es mir dennoch<lb/>ein, ich weiß nicht wie ein Buch und zwar ein ganz<lb/>fabelhaftes, nehmlich eine Fabel<note
                         resp="#julia.theus">
-                        <seg xml:lang="de">Im <date when-iso="1813-06/10">Sommer und Herbst 1813</date> schrieb <persName ref="#p0237" type="bi"
+                        <p xml:lang="de">Im <date when-iso="1813-06/10">Sommer und Herbst 1813</date> schrieb <persName ref="#p0237" type="bi"
                                 >Chamisso</persName> in <placeName ref="#l0082" type="bi">Kunersdorf</placeName>
-                            <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</seg>
-                        <seg xml:lang="en">During the <date when-iso="1813-06/10">summer and autumn of 1813</date>, <persName ref="#p0237" type="bi"
-                                >Chamisso</persName> wrote <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</seg><seg
-                            xml:lang="fr">During the <date when-iso="1813-06/10">summer and autumn of 1813</date>, <persName ref="#p0237" type="bi"
-                                >Chamisso</persName> wrote <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</seg></note> zu
+                            <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</p>
+                        <p xml:lang="en">During the <date when-iso="1813-06/10">summer and autumn of 1813</date>, <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> wrote <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</p>
+                        <p xml:lang="fr">Durant l'<date when-iso="1813-06/10">été et l'automne 1813</date>, <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> écrit <title ref="#w00339">Peter Schlemihl's wundersame Geschichte</title>.</p></note> zu
                     schreiben, und ich<lb/>kriegte es lus<subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">t</add>
@@ -338,10 +348,10 @@
                             extent="1-2c" reason="illegible">ge</unclear></del> erhalten, endlich <note hand="#pencil_1" type="foliation"
                     >98</note>schwehr erkrankt ist er vom <placeName ref="#10215" type="bi">Rhein</placeName> — <foreign xml:lang="la"><hi
                             rend="latin">non plus ultra</hi></foreign><lb/>geziert mit dem wohlverdienten Johanniter Kreuz<lb/>nach seiner Heimath
-                    zurücke gekehrt und dichtet<lb/>jetzt ein großes Epos <subst><del rend="strikethrough">der</del> das</subst> die Krone
-                    seiner<lb/>Werke werden soll — Seit du unsere Litteratur<lb/>aus den Augen verlassen hast, hat er sich wirklich<lb/>durch den <hi
-                        rend="underline"><title ref="#w00267">Held des Norden</title></hi> den <hi rend="underline"><title ref="#w00263"
-                            >Zauberring</title></hi> und<lb/><hi rend="underline"><title ref="#w00341">Undin<subst>
+                    zurücke gekehrt und dichtet<lb/>jetzt ein großes Epos <del rend="strikethrough">der</del> das die Krone seiner<lb/>Werke werden
+                    soll — Seit du unsere Litteratur<lb/>aus den Augen verlassen hast, hat er sich wirklich<lb/>durch den <hi rend="underline"><title
+                            ref="#w00267">Held des Norden</title></hi> den <hi rend="underline"><title ref="#w00263">Zauberring</title></hi>
+                        und<lb/><hi rend="underline"><title ref="#w00341">Undin<subst>
                                 <del rend="overwritten">e</del>
                                 <add place="across">e</add>
                             </subst></title></hi> zu dem ersten Range geschwungen,<lb/>und throhnt <hi rend="underline">anerkannt</hi> unter den Fürsten.<lb/>
@@ -355,8 +365,8 @@
                             </subst>hagen von Ense</hi></persName> sag ich ist ohne<lb/>sonderlichen Patriotischen Antrieb, <del rend="strikethrough"
                         >und</del> weil<lb/>es von ihm geheischt ward, mitgegangen<lb/>und zwar als Russischer Rittmeiser und<lb/><hi rend="latin"
                         >Adjudant</hi> des Generals <hi rend="latin"><persName ref="#p0423" type="bi">Tettenborn </persName></hi>den er<lb/>auf eine
-                    nicht ganz erfreuliche Weise<lb/><hi rend="latin">flagornirt</hi><note resp="#sabine.seifert">Vom französischen "flagorner":
-                        betätscheln, umschmeicheln.</note> und <subst>
+                    nicht ganz erfreuliche Weise<lb/><hi rend="latin">flagornirt</hi><note resp="#sabine.seifert"><p xml:lang="de">Vom französischen
+                            "flagorner": betätscheln, umschmeicheln.</p><p xml:lang="en"/><p xml:lang="fr"/></note> und <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">b</add>
                     </subst>esingt unserer gute leise<lb/>lebensmüde <persName ref="#p0262" type="bi"><hi rend="latin">Neumann</hi></persName>, ist
@@ -371,9 +381,10 @@
                     was<lb/>ich nicht zu sein aufgehört, ein Student unserer<lb/>uni<subst>
                         <del rend="overwritten">w</del>
                         <add place="across">v</add>
-                    </subst>ersität,<note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> studierte ab <date
-                            when-iso="1812-10">Oktober 1812</date> an der Berliner Universität Medizin.</note> ich habe <hi rend="latin">Zoologie,
-                        Mineralogie</hi><lb/>vergleichende Anatomie <del rend="strikethrough">geschrie</del> getrieben —<lb/>ich bewege mich in der En<subst>
+                    </subst>ersität,<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> studierte ab
+                                <date when-iso="1812-10">Oktober 1812</date> an der Berliner Universität Medizin.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> ich habe <hi rend="latin">Zoologie, Mineralogie</hi><lb/>vergleichende Anatomie <del
+                        rend="strikethrough">geschrie</del> getrieben —<lb/>ich bewege mich in der En<subst>
                         <del rend="overwritten">k</del>
                         <add place="across">c</add>
                     </subst>y<subst>
@@ -382,26 +393,26 @@
                     </subst>lopadie der Natur Wissen<lb break="no"/>schaft herum, suche mich tüchtig und tüchtiger<lb/>zu machen, nehme <subst>
                         <del rend="overwritten">b</del>
                         <add place="across">z</add>
-                    </subst>u Zeiten das Lateinische<lb/>wieder vor,<note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName>
-                        nahm an einem Kolleg <persName ref="#p0175" type="bi">F. A. Wolfs</persName> an der Berliner Universität teil (vgl. <rs
-                            ref="#w00321" type="bi">Feudel (1988)</rs>, S. 93).</note> arbeite auf den Museen an<lb/>deren Aufstellung<note
-                        resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> half <persName ref="#p0413" type="bi"
-                            >Lichtenstein</persName> bei der Aufstellung der Naturaliensammlungen in den Berliner königlichen Museen (vgl. <rs
-                            ref="#w00321" type="bi">Feudel (1988)</rs>, S. 93).</note> – <persName ref="#p0413" type="bi"><hi rend="latin"
-                            >Lichtenstein</hi></persName> liebt mich<lb/>und findet mich brauchbar, und kurz ich bin<lb/>nicht ohne gegründete
-                    Hoffnung, binnen ein<lb/>Paar Jahre, wenn eine ge<subst>
+                    </subst>u Zeiten das Lateinische<lb/>wieder vor,<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi"
+                                >Chamisso</persName> nahm an einem Kolleg <persName ref="#p0175" type="bi">F. A. Wolfs</persName> an der Berliner
+                            Universität teil (vgl. <rs ref="#w00321" type="bi">Feudel (1988)</rs>, S. 93).</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> arbeite auf den Museen an<lb/>deren Aufstellung<note resp="#sabine.seifert"><persName ref="#p0237" type="bi"
+                            >Chamisso</persName> half <persName ref="#p0413" type="bi">Lichtenstein</persName> bei der Aufstellung der
+                        Naturaliensammlungen in den Berliner königlichen Museen (vgl. <rs ref="#w00321" type="bi">Feudel (1988)</rs>, S. 93).</note> –
+                        <persName ref="#p0413" type="bi"><hi rend="latin">Lichtenstein</hi></persName> liebt mich<lb/>und findet mich brauchbar, und
+                    kurz ich bin<lb/>nicht ohne gegründete Hoffnung, binnen ein<lb/>Paar Jahre, wenn eine ge<subst>
                         <del rend="overwritten">h</del>
                         <add place="across">l</add>
                     </subst>ehrte Reise unter<lb break="no"/>nom̄en wird – wenn – wie es Plan<del rend="erasure">,</del> ist,<lb/>junge Leute für die
                         Mus<unclear reason="illegible">eee</unclear>n und den<lb/>Botanischen Garten <note resp="#julia.theus">
-                        <seg xml:lang="de">Die Erwähnung der botanischen Gärten ist in <persName ref="#p0261" type="bi">Riegels</persName> Edition der
-                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> nicht enthalten.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                        <p xml:lang="de">Die Erwähnung der botanischen Gärten ist in <persName ref="#p0261" type="bi">Riegels</persName> Edition der
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> nicht enthalten.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase "und den Botanschischen
-                            Garten" is being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            Garten" is being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
                                 inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le passage "und den Botanschischen Garten" a
-                            été supprimé. </seg></note> reisen sollen. dazu <del rend="strikethrough">ernannt</del><lb/>ausgesucht werden, und <del
+                            été supprimé. </p></note> reisen sollen. dazu <del rend="strikethrough">ernannt</del><lb/>ausgesucht werden, und <del
                         rend="strikethrough">mich dazu</del> als tüchtig<lb/><subst>
                         <del rend="overwritten"><gap extent="1-2c" reason="illegible"/></del>
                         <add place="across">d</add>
@@ -409,10 +420,10 @@
                         <del rend="overwritten">s</del>
                         <add place="across">v</add>
                     </subst>or mir selber zu stehen —<lb/>So stehts mit mir Adelf<note resp="#julia.theus">
-                        <seg xml:lang="de">Diese Anrede ist die eingedeutschte, griechische Bezeichnung für "Bruder" (αδελφός).</seg>
-                        <seg xml:lang="en">This salutation is the Germanized version from the Greek expression for "brother" (αδελφός).</seg>
-                        <seg xml:lang="fr">This salutation is the Germanized version from the Greek expression for "brother" (αδελφός).</seg></note> —
-                    Ich habe<lb/>mich von der Spekulation zu der Erfahrung –</p>
+                        <p xml:lang="de">Diese Anrede ist die eingedeutschte, griechische Bezeichnung für "Bruder" (αδελφός).</p>
+                        <p xml:lang="en">This salutation is the Germanized version from the Greek expression for "brother" (αδελφός).</p>
+                        <p xml:lang="fr">Cette salutation est la version allemande de l'expression grec pour "frère" (αδελφός).</p></note> — Ich
+                    habe<lb/>mich von der Spekulation zu der Erfahrung –</p>
             </div>
         </body>
     </text>

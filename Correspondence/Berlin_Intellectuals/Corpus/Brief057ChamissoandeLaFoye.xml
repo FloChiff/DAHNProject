@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -48,8 +49,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -150,7 +157,6 @@
                                 prêt durable à la Librairie d'État de Berlin. </p></acquisition>
                     </history>
                 </msDesc>
-                <!-- -->
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -186,8 +192,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-01-28" who="#hannes.fischer">First encoding and commenting </change>
         </revisionDesc>
     </teiHeader>
@@ -195,12 +202,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000211.jpg" n="1" xml:id="Brief057ChamissoandeLaFoye-Blatt105r"/>
-                <p><!--  
-                    <note hand="pencil_1" place="top"><del hand="#pencil_1" rend="erasure"
-                            >189</del></note>
-                    <note hand="pencil_1" place="top">18</note>
-                    <note hand="pencil_2" place="top">105</note>
-                --></p>
+                <note hand="pencil_1" place="top"><del hand="#pencil_1" rend="erasure">189</del></note>
+                <note hand="pencil_1" place="top">18</note>
+                <note hand="pencil_2" place="top">105</note>
                 <p>Ich denke diese Tage an <persName ref="#auguste.stael" type="bi">August</persName> zu schreiben<lb/> von dem ich lange keine
                     Nachricht habe, und<lb/> ich werde gehe Frühjahr mein Herbarium<lb/> kommen lassen. — kann ich dir wieder<lb/> dienen, gut — —
                         <persName ref="#XXX" type="bi">Harscher Nicolaus</persName><lb/> der ältere von dem du gewiß durch mich<lb/> gehört haben
@@ -211,16 +215,13 @@
                     ___öfen — hab wohl Kind, und<lb/> schreib mir wie es dir geht.</p>
                 <pb facs="00000212.jpg" n="1" xml:id="Brief057ChamissoandeLaFoye-Blatt105v"/>
                 <p>17. 9er<lb/>bey J.E. Hitzig<lb/>Buchhändler - adresse genug.</p>
-                <lb/>
-                <lb/>
-                <p>
-                    <address>
+                <closer>
+                    <address xml:lang="fr">
                         <addrLine>A Monsieur</addrLine>
                         <addrLine><persName ref="p0248" type="bi">Monsieur Louis de la Foye</persName></addrLine>
                         <addrLine>Professeur de Mathematique au College de Quacacon</addrLine>
                         <addrLine>Depat de Calvados.</addrLine>
-                    </address>
-                </p>
+                    </address></closer>
             </div>
         </body>
         <back/>

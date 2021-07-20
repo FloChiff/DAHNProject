@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -135,8 +142,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2013-01-28" who="#janne.stecker">Added bibliographic references. Corrections in transcription.</change>
             <change when-iso="2013-01-16" who="#janne.stecker">Corrections in transcription. More detailed encoding.</change>
             <change when-iso="2013-01-14" who="#janne.stecker">More detailed encoding. Added bibliographic references.</change>
@@ -150,30 +158,26 @@
                 <pb facs="00000207.jpg" n="1"/>
                 <opener>
                     <dateline rend="align(right)">
-                        <date when-iso="1814-Herbst">Herbst 1814</date>
+                        <date from-iso="1814-09" to-iso="1814-11">Herbst 1814</date>
                     </dateline>
-                    <p>
-                        <note hand="#pencil_1">103</note>
-                    </p>
-                    <p>
-                        <note hand="#pencil_1">17</note>
-                    </p>
+                    <note hand="#pencil_1">103</note>
+                    <note hand="#pencil_1">17</note>
                     <salute>Mir gehts nicht ganz wohl, lieber <persName ref="#p0248" type="bi">Louis</persName>,</salute>
                 </opener>
-                <p><note hand="#pencil_1">und</note><lb/>ich vertröste mich auf die Nahe <gap extent="seven chars" reason="illegible"/>offnung<lb/>der
+                <p><add hand="#pencil_1">und</add><lb/>ich vertröste mich auf die Nahe <gap extent="seven chars" reason="illegible"/>offnung<lb/>der
                         <hi rend="latin">Collegien</hi>, wie ich mehr zu <unclear cert="high" extent="one word" reason="illegible">thun</unclear>
                     bekom̄en werde<lb/>und vielleicht mit drängender Beschäftigung<lb/>mehr frisch wieder entfalten werde – Gott hat<lb/>den <foreign
                         xml:lang="la"><hi rend="latin">Momolion</hi></foreign>
-                        h<!-- Verbesserung mit rotem Stift? Kommentar zu Mammalian = Säugetier--><add place="above">sehr weißlich</add> die Augen nach
-                    außen gekehrt,<lb/>und der <foreign xml:lang="la"><hi rend="latin">homo sapiens</hi></foreign> ist ein Narr, daß er<lb/>sie immer
-                    nach innen zu kehren, sobald er die<lb/>Muße hat dazu sich bemüht. – <note hand="#red_pen">[</note> mit <persName ref="#p0425"
-                        type="bi">Hitzigs Frau</persName><lb/>ist mir auch die mehrste Lust ausgegangen,<lb/>ich erlebe nur Kum̄er an meinen nächsten
-                    und<lb/>keine Freude an mir selber – <persName ref="#p0239" type="bi">Hitzig</persName> hat<lb/>nun dem Buchhandel entsagt, und
-                    daß wohl<lb/>aus <gap extent="eight chars" reason="illegible"/> hinreichendem Grunde, einmal<lb/>um einen scharfen Hinschnitt in
-                        sein<del rend="strikethrough">em</del> Leben<lb/>auch außerlich zu machen, und gleichsam nicht<lb/>den <unclear cert="medium"
-                        extent="one word" reason="stain">ausgelausten</unclear> Rosenstrauch seiner Freuden<lb/>mit all den Stacheln fest an sich zu
-                    behalten<lb/>und zum andern Mal, um das Vermögen<lb/>seiner Kinder, denn bloßer Mann er doch<lb/>nun ist, aus einem Geschäfte zu
-                    ziehen, welches<lb/>
+                        h<!-- Verbesserung mit rotem Stift? Kommentar zu Mammalian = Säugetier --><add place="above">sehr weißlich</add> die Augen
+                    nach außen gekehrt,<lb/>und der <foreign xml:lang="la"><hi rend="latin">homo sapiens</hi></foreign> ist ein Narr, daß er<lb/>sie
+                    immer nach innen zu kehren, sobald er die<lb/>Muße hat dazu sich bemüht. – <add hand="#red_pen">[</add> mit <persName
+                        ref="#p0425" type="bi">Hitzigs Frau</persName><lb/>ist mir auch die mehrste Lust ausgegangen,<lb/>ich erlebe nur Kum̄er an
+                    meinen nächsten und<lb/>keine Freude an mir selber – <persName ref="#p0239" type="bi">Hitzig</persName> hat<lb/>nun dem Buchhandel
+                    entsagt, und daß wohl<lb/>aus <gap extent="eight chars" reason="illegible"/> hinreichendem Grunde, einmal<lb/>um einen scharfen
+                    Hinschnitt in sein<del rend="strikethrough">em</del> Leben<lb/>auch außerlich zu machen, und gleichsam nicht<lb/>den <unclear
+                        cert="medium" extent="one word" reason="stain">ausgelausten</unclear> Rosenstrauch seiner Freuden<lb/>mit all den Stacheln
+                    fest an sich zu behalten<lb/>und zum andern Mal, um das Vermögen<lb/>seiner Kinder, denn bloßer Mann er doch<lb/>nun ist, aus
+                    einem Geschäfte zu ziehen, welches<lb/>
                     <del rend="strikethrough">doch</del> ein allein durch ihn den leicht sterblichen<lb/>Mann blühet und blühen kann und hinter
                     ihm<lb/>in <del rend="strikethrough">einen</del> ärger als nichts zusammen sinken<lb/>würde – – er ist in seine alte
                     Laufbahn<lb/>wieder eingetreten, und ist vorderhand <unclear cert="low" extent="one word" reason="illegible">im̄er</unclear><lb/>
@@ -185,8 +189,8 @@
                     wenn ich<lb/> einen anderweitigen Versuch mache nach<lb/>zweibeinigen Bestien <gap extent="five chars" reason="illegible"/> meiner
                     Art aus<lb/>zu gehen, um mich mit denselben in <foreign xml:lang="fr"><hi rend="latin">Diseurs</hi></foreign><lb/>zu <gap
                         extent="nine chars" reason="illegible"/> einzulassen und so zu erquiken,<lb/>bekom̄t es mir jedes mal wie Hunden der<lb/>Groß
-                        <supplied reason="illegible">fressen</supplied>, und so werde ich in mein<lb/>Kämmerlein gebannt. – <subst hand="#red_pen">
-                        <note hand="#red_pen">]</note>
+                        <supplied reason="illegible">fressen</supplied>, und so werde ich in mein<lb/>Kämmerlein gebannt. – <add hand="#red_pen"
+                        >]</add><subst hand="#red_pen">
                         <del rend="strikethrough">da</del>
                         <add place="above">Jezt</add>
                     </subst> mein lieber<lb/>ist die Botanik an der Tages Ordnung –</p>
@@ -207,7 +211,7 @@
                         xml:lang="fr">Catalogue</foreign><lb/>fertig sein werde möchte ich wohl dir ihn<lb/>mittheilen und dich um deinen bitten,
                     was<lb/>konnten wir uns nicht wechsel seitig bereichern.<lb/>aus Garten Pflanzen machte ich mir nicht viel<lb/>was könntest du mir
                     nicht alles für Französche<lb/>Pflanzen geben – ich dir nicht für nordische<lb/>und alpen pflanzen – <!-- Einfügung mit rot unleserlich -->
-                    <note hand="#red_pen">[</note>Ich habe dir von<lb/> meinen Reisaussichten wohl schon gesprochen,<lb/>der Theil <unclear
+                    <add hand="#red_pen">[</add>Ich habe dir von<lb/> meinen Reisaussichten wohl schon gesprochen,<lb/>der Theil <unclear
                         cert="medium" extent="one word" reason="illegible">unserer</unclear> derselben, der gute <persName ref="p0428" type="bi"
                         >Bergius</persName>,<lb/>geht diese Tage schon nach dem <placeName ref="i0234" type="bi">Cap</placeName> ab. er<lb/>hat einen
                     Ruf dahin als provisor eine<lb/>Apotheke angenom̄en, und wird außerdem<lb/>von der Universität wissenschaftlich
@@ -216,9 +220,7 @@
                     die Sachen, so ist es abgeredet.</p>
                 <p>– inzwischen wird er mir Pflanzen schicken und ein anderer hat mir welche aus <placeName ref="'i0032" type="bi">Wien</placeName>
                     versprochen.</p>
-                <p>
                     <note hand="#pencil_1">104</note>
-                </p>
                 <pb facs="00000210.jpg" n="4"/>
                 <p><gap extent="five chars" reason="illegible"/>
                     <gap extent="three words" reason="tape"/> Stam̄ meiner Gerbardi<!-- ? Sprache? --> in<lb/>guter Ordnung – – du glaubst nicht,
@@ -237,7 +239,7 @@
                         xml:lang="la"><hi rend="latin">Coulinia W fluvialis Pers.</hi></foreign> wird<lb/>nun wohl nichts anderes sein als eine
                         <foreign xml:lang="la"><hi rend="latin">Najas</hi></foreign><lb/>und s. weiter – die <foreign xml:lang="la"><hi rend="latin"
                             >Tluvialen</hi></foreign> sind meine<lb/>Liebhaberin – ich bin aber mehr mit den<lb/>Pflanzen als mit den Autoren
-                    darüber<lb/>zu rande, und ich liebe auch mehr die<lb/>einen als die anderen. <note hand="#red_pen">]</note></p>
+                    darüber<lb/>zu rande, und ich liebe auch mehr die<lb/>einen als die anderen. <add hand="#red_pen">]</add></p>
             </div>
         </body>
     </text>

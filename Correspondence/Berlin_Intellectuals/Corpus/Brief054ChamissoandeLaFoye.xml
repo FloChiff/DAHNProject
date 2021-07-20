@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -63,8 +64,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE"> Germany</country>
-                        <settlement> Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository> Manuscripts section</repository>
                         <collection> de La Foye papers</collection>
@@ -134,33 +141,33 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <p xml:lang="de">Das Entstehungsdatum des Briefes ist der <date when-iso="????-03-22">22. März</date>. Die
-                                Staatsbibliothek zu Berlin datiert den Brief auf das Jahr <date when-iso="1814">1814</date>. Die Datierung <persName
-                                    ref="#p0261">Riegels</persName> in den <title ref="#w00253">Correspondance d´Adelbert de Chamisso, Fragments
-                                    inédits</title> (1934), S. 227, auf den <origDate when-iso="1821-03-22">22. März 1821</origDate> ist jedoch
-                                wahrscheinlicher, da im Brief der Name <persName ref="#p0424">Choris</persName> erwähnt wird, dem <persName
-                                    ref="#p0237">Chamisso</persName> erst auf seiner Weltreise begegnet. Ferner schreibt Chamisso von einer
-                                Übersetzung des <title ref="#w00339">Schlemihl</title> durch seinen <persName ref="#p0280">Bruder</persName>. An
-                                dieser hat <persName ref="#p0280">Hippolyte von Chamisso</persName> nachweislich um <date when-iso="1820">1820</date>
-                                gearbeitet. Sehr wahrscheinlich ist, dass der Brief in <placeName ref="#l1103">Berlin</placeName> verfasst wurde.</p>
-                            <p xml:lang="en">The letter was composed on <date when-iso="????-03-22">March 22</date>. The Berlin State Library dates
-                                the letter to the year <date when-iso="1814">1814</date>. But <persName ref="#p0261">Riegel's</persName> dating to
-                                    <origDate when-iso="1821-03-22">22 March 1821</origDate> in the <title ref="#w00253">Correspondance d´Adelbert de
-                                    Chamisso, Fragments inédits</title> is more appropriate due to the fact that <persName ref="#p0237"
-                                    >Chamisso</persName> mentions the name <persName ref="#p0424">Choris</persName>, whom he first met during his
-                                world trip. Furthermore, Chamisso writes about a translation of <title ref="#w00339">Schlemihl</title> by his
-                                    <persName ref="#p0280">brother</persName>. Evidently, <persName ref="#p0280">Hippolyte von Chamisso</persName>
-                                worked on this translation around <date when-iso="1820">1820</date>. The letter was probably composed in <placeName
-                                    ref="#l1103">Berlin</placeName>.</p>
-                            <p xml:lang="fr">The letter was composed on <date when-iso="????-03-22">March 22</date>. The Berlin State Library dates
-                                the letter to the year <date when-iso="1814">1814</date>. But <persName ref="#p0261">Riegel's</persName> dating to
-                                    <origDate when-iso="1821-03-22">22 March 1821</origDate> in the <title ref="#w00253">Correspondance d´Adelbert de
-                                    Chamisso, Fragments inédits</title> is more appropriate due to the fact that <persName ref="#p0237"
-                                    >Chamisso</persName> mentions the name <persName ref="#p0424">Choris</persName>, whom he first met during his
-                                world trip. Furthermore, Chamisso writes about a translation of <title ref="#w00339">Schlemihl</title> by his
-                                    <persName ref="#p0280">brother</persName>. Evidently, <persName ref="#p0280">Hippolyte von Chamisso</persName>
-                                worked on this translation around <date when-iso="1820">1820</date>. The letter was probably composed in <placeName
-                                    ref="#l1103">Berlin</placeName>.</p>
+                            <p xml:lang="de">Das Entstehungsdatum des Briefes ist der 22. März. Die Staatsbibliothek zu Berlin datiert den Brief auf
+                                das Jahr <date when-iso="1814">1814</date>. Die Datierung <persName ref="#p0261">Riegels</persName> in den <title
+                                    ref="#w00253">Correspondance d´Adelbert de Chamisso, Fragments inédits</title> (1934), S. 227, auf den <origDate
+                                    when-iso="1821-03-22">22. März 1821</origDate> ist jedoch wahrscheinlicher, da im Brief der Name <persName
+                                    ref="#p0424">Choris</persName> erwähnt wird, dem <persName ref="#p0237">Chamisso</persName> erst auf seiner
+                                Weltreise begegnet. Ferner schreibt Chamisso von einer Übersetzung des <title ref="#w00339">Schlemihl</title> durch
+                                seinen <persName ref="#p0280">Bruder</persName>. An dieser hat <persName ref="#p0280">Hippolyte von
+                                    Chamisso</persName> nachweislich um <date when-iso="1820">1820</date> gearbeitet. Sehr wahrscheinlich ist, dass
+                                der Brief in <placeName ref="#l1103">Berlin</placeName> verfasst wurde.</p>
+                            <p xml:lang="en">The letter was composed on March 22. The Berlin State Library dates the letter to the year <date
+                                    when-iso="1814">1814</date>. But <persName ref="#p0261">Riegel's</persName> dating to <origDate
+                                    when-iso="1821-03-22">22 March 1821</origDate> in the <title ref="#w00253">Correspondance d´Adelbert de Chamisso,
+                                    Fragments inédits</title> is more appropriate due to the fact that <persName ref="#p0237">Chamisso</persName>
+                                mentions the name <persName ref="#p0424">Choris</persName>, whom he first met during his world trip. Furthermore,
+                                Chamisso writes about a translation of <title ref="#w00339">Schlemihl</title> by his <persName ref="#p0280"
+                                    >brother</persName>. Evidently, <persName ref="#p0280">Hippolyte von Chamisso</persName> worked on this
+                                translation around <date when-iso="1820">1820</date>. The letter was probably composed in <placeName ref="#l1103"
+                                    >Berlin</placeName>.</p>
+                            <p xml:lang="fr">The letter was composed on March 22. The Berlin State Library dates the letter to the year <date
+                                    when-iso="1814">1814</date>. But <persName ref="#p0261">Riegel's</persName> dating to <origDate
+                                    when-iso="1821-03-22">22 March 1821</origDate> in the <title ref="#w00253">Correspondance d´Adelbert de Chamisso,
+                                    Fragments inédits</title> is more appropriate due to the fact that <persName ref="#p0237">Chamisso</persName>
+                                mentions the name <persName ref="#p0424">Choris</persName>, whom he first met during his world trip. Furthermore,
+                                Chamisso writes about a translation of <title ref="#w00339">Schlemihl</title> by his <persName ref="#p0280"
+                                    >brother</persName>. Evidently, <persName ref="#p0280">Hippolyte von Chamisso</persName> worked on this
+                                translation around <date when-iso="1820">1820</date>. The letter was probably composed in <placeName ref="#l1103"
+                                    >Berlin</placeName>.</p>
                         </origin>
                         <acquisition>
                             <p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
@@ -236,8 +243,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -262,8 +270,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000199.jpg" n="1"/>
-                <note hand="#pencil_2" place="margin-left" type="foliation">158</note>
-                <note hand="#pencil_1" place="margin-right" type="foliation">99</note>
+                <note hand="#pencil_2" place="margin(left)" type="foliation">158</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">99</note>
                 <opener><dateline>Vom 22.<hi rend="superscript"><choice>
                                 <abbr>tn</abbr>
                                 <expan>ten</expan>
@@ -274,22 +282,22 @@
                         <add place="across">G</add>
                     </subst>elegenheit, aber keine Zeit dazwischen<lb/>und einen Meldung zettel, war durch die<lb/>Hande <persName ref="#p0424"
                         type="bi"><hi rend="latin">Choris</hi></persName> gegangen<note resp="#julia.theus">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
                                 d'Adalbert de Chamisso, Fragments inédits</title> wird die Textstelle "und einen Meldung [...] Hande Choris gegangen"
-                            ausgelassen.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                            ausgelassen.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase "und einen Meldung [...]
-                            Hande Choris gegangen" is being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            Hande Choris gegangen" is being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
                                 inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le passage "und einen Meldung [...] Hande
-                            Choris gegangen" a été supprimé.</seg></note>, wirst du<note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht "Du wirst" statt "wirst du".</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                            Choris gegangen" a été supprimé.</p></note>, wirst du<note resp="#sabine.seifert">
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "Du wirst" statt "wirst du".</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "Du wirst" instead
-                            of "wirst du".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "Du wirst" et non "wirst du".</seg>
+                            of "wirst du".</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "Du wirst" et non "wirst du".</p>
                     </note> den Stand<lb/>der Papiere (in Hinsicht unseres <hi rend="latin"><foreign xml:lang="la">Operis
                     Magni</foreign></hi>)<lb/>ersehen haben. – Vor dem Erscheinen nichts<lb/>anzufangen – nach dem Erscheinen, greife zu wer<lb/>Lust
                     hat. – <persName ref="#p0421" type="bi"><hi rend="latin">W<subst>
@@ -299,12 +307,12 @@
                                 <del rend="overwritten">a</del>
                                 <add place="across">n</add>
                             </subst>ear</hi></persName> hat mich auf <gap extent="1w" reason="illegible"/><note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> wird dieses Wort ausgelassen.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, this word is being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le mot a été supprimé.</seg>
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> wird dieses Wort ausgelassen.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, this word is being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le mot a été supprimé.</p>
                     </note> den<lb/>Punkt der Aushängebogen auf den Zahn fühlen<lb/>lassen, in derselben <subst>
                         <del rend="overwritten"><gap extent="1-2c" reason="illegible"/></del>
                         <add place="across">Ab</add>
@@ -312,33 +320,33 @@
                     nicht<lb/>gut, denn ich verzichte auf den Glauben –<lb/>Ich habe gleichfals gesagt wie die Sachen<lb/>stehn, und ausserdem du
                     hättest derlei Gedanken<lb/>gehabt, – ich wollte du stäckest hinter einem<lb/>Anderen, für einen Theil,<note
                         resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> wird der Ausdruck "für einen Theil" ausgelassen.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> wird der Ausdruck "für einen Theil" ausgelassen.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase "für einen Theil" is
-                            being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
                                 inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le passage "für einen Theil" a été
-                            supprimé.</seg>
+                            supprimé.</p>
                     </note> zur schnelleren<lb/>Beforderung des Unter nehmens – allein aus<lb/>der Provinz kannst du schwerlich mit den<lb/><rs
                         ref="#l0044" type="bi">Parisern</rs> Buchhandlern dich verständigen<lb/>stehst überall in Nachtheil und kommst zu<lb/>spät —
                     über das Lexicon kann<lb/>ich dir nichts sagen. Später – wohl,<lb/>wenn ich <persName ref="#p0301" type="bi">Erman</persName><note
                         resp="#julia.theus">
-                        <seg xml:lang="de">In <persName ref="#p0408" type="bi">Feudels</persName> Biographie <title ref="#w00321">Adelbert von
-                                Chamisso. Leben und Werk</title> (1988) werden zwar sowohl <persName ref="#p0302" type="bi">Adolf</persName> als auch
-                                <persName ref="#p0301" type="bi">Paul</persName> und <persName ref="#p0303" type="bi">Jean Pierre Erman</persName>
-                            erwähnt, für den Zeitraum der vorliegenden Briefe scheint jedoch der Austausch zwischen <persName ref="#p0237" type="bi"
-                                >Chamisso</persName> und <persName ref="#p0301" type="bi">Paul Erman</persName> vorherrschend gewesen zu sein.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0408" type="bi">Feudel's</persName> biography <title ref="#w00321">Adelbert von
-                                Chamisso. Leben und Werk</title> (1988), <persName ref="#p0302" type="bi">Adolf</persName> and <persName ref="#p0301"
-                                type="bi">Paul</persName> as well as <persName ref="#p0303" type="bi">Jean Pierre Erman</persName> are mentioned.
-                            Regarding the period of time, the connection between <persName ref="#p0237" type="bi">Chamisso</persName> and <persName
-                                ref="#p0301" type="bi">Paul Erman</persName> seems to be the most probable.</seg>
-                        <seg xml:lang="fr">In <persName ref="#p0408" type="bi">Feudel's</persName> biography <title ref="#w00321">Adelbert von
-                                Chamisso. Leben und Werk</title> (1988), <persName ref="#p0302" type="bi">Adolf</persName> and <persName ref="#p0301"
-                                type="bi">Paul</persName> as well as <persName ref="#p0303" type="bi">Jean Pierre Erman</persName> are mentioned.
-                            Regarding the period of time, the connection between <persName ref="#p0237" type="bi">Chamisso</persName> and <persName
-                                ref="#p0301" type="bi">Paul Erman</persName> seems to be the most probable.</seg></note> gesprochen haben werde – <pb
+                        <p xml:lang="de">In <persName ref="#p0408" type="bi">Feudels</persName> Biographie <title ref="#w00321">Adelbert von Chamisso.
+                                Leben und Werk</title> (1988) werden zwar sowohl <persName ref="#p0302" type="bi">Adolf</persName> als auch <persName
+                                ref="#p0301" type="bi">Paul</persName> und <persName ref="#p0303" type="bi">Jean Pierre Erman</persName> erwähnt, für
+                            den Zeitraum der vorliegenden Briefe scheint jedoch der Austausch zwischen <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> und <persName ref="#p0301" type="bi">Paul Erman</persName> vorherrschend gewesen zu sein.</p>
+                        <p xml:lang="en">In <persName ref="#p0408" type="bi">Feudel's</persName> biography <title ref="#w00321">Adelbert von Chamisso.
+                                Leben und Werk</title> (1988), <persName ref="#p0302" type="bi">Adolf</persName> and <persName ref="#p0301" type="bi"
+                                >Paul</persName> as well as <persName ref="#p0303" type="bi">Jean Pierre Erman</persName> are mentioned. Regarding the
+                            period of time, the connection between <persName ref="#p0237" type="bi">Chamisso</persName> and <persName ref="#p0301"
+                                type="bi">Paul Erman</persName> seems to be the most probable.</p>
+                        <p xml:lang="fr">In <persName ref="#p0408" type="bi">Feudel's</persName> biography <title ref="#w00321">Adelbert von Chamisso.
+                                Leben und Werk</title> (1988), <persName ref="#p0302" type="bi">Adolf</persName> and <persName ref="#p0301" type="bi"
+                                >Paul</persName> as well as <persName ref="#p0303" type="bi">Jean Pierre Erman</persName> are mentioned. Regarding the
+                            period of time, the connection between <persName ref="#p0237" type="bi">Chamisso</persName> and <persName ref="#p0301"
+                                type="bi">Paul Erman</persName> seems to be the most probable.</p></note> gesprochen haben werde – <pb
                         facs="00000200.jpg" n="2"/> kannst du <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">a</add>
@@ -352,40 +360,40 @@
                         <del rend="overwritten">es</del>
                         <add place="across">e</add>
                     </subst> zu sein <note resp="#julia.theus">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
                                 d'Adalbert de Chamisso, Fragments inédits</title> wird die Textstelle "Geschichte und Litteratur [...] solchen zu
-                            sein" ausgelassen.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                            sein" ausgelassen.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase "Geschichte und
-                            Litteratur [...] solchen zu sein" is being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            Litteratur [...] solchen zu sein" is being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
                                 inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le passage "Geschichte und Litteratur [...]
-                            solchen zu sein" a été supprimé.</seg></note> – da<lb/>der Grund selbst <subst>
+                            solchen zu sein" a été supprimé.</p></note> – da<lb/>der Grund selbst <subst>
                         <del rend="overwritten">t</del>
                         <add place="across">T</add>
                     </subst>reibsand, und alle acht Tage<lb/>ein <persName ref="#p0422" type="bi">Oerstädt</persName> alles bestehende über den
                         Haufen<lb/>schmeißt,<note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht "schmeisst ?" statt "schmeißt,".</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "schmeisst ?" statt "schmeißt,".</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "schmeisst ?"
-                            instead of "schmeißt,".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "schmeisst ?" et non "schmeißt,".</seg>
+                            instead of "schmeißt,".</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "schmeisst ?" et non "schmeißt,".</p>
                     </note> und so muß es eben sein, soll es<lb/>vorwärts gehen. – <persName ref="#p0414" type="bi">Ritter's</persName> Erdkunde –
                     ?<lb/>aber es sind erst ein Paar Theile da und ihr wollt<lb/>ganze Werke. — in meinem nächsten<lb/>Briefe mehr — Die Sonette sind
                     von mir.</p>
                 <lb/>
                 <p>Wir gedenken alle deiner in Liebe<note resp="#julia.theus">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
                                 d'Adalbert de Chamisso, Fragments inédits</title> wird die Textstelle "Die Sonette sind [...] deiner in Liebe"
-                            ausgelassen.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                            ausgelassen.</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase "Die Sonette sind [...]
-                            deiner in Liebe" is being omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            deiner in Liebe" is being omitted.</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
                                 inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, le passage "Die Sonette sind [...] deiner in
-                            Liebe" a été supprimé.</seg>
+                            Liebe" a été supprimé.</p>
                     </note> —<lb/><persName ref="#p0262" type="bi"><hi rend="latin">Neumann</hi></persName> ist <choice>
                         <abbr>Kon. Preuß.</abbr>
                         <expan>Königlicher Preußischer</expan>
@@ -393,21 +401,21 @@
                         <del rend="overwritten"><unclear reason="illegible">d</unclear></del>
                         <add place="across">t</add>
                     </subst>endatur<lb/>Rath geworden, – nehmlich eine feste<lb/>Anstellung derer er recht bedürfte,<note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht "bedurfte" statt "bedürfte".</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "bedurfte" statt "bedürfte".</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "bedurfte" instead
-                            of "bedürfte".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "bedurfte" et non "bedürfte".</seg>
+                            of "bedürfte".</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "bedurfte" et non "bedürfte".</p>
                     </note> da er<lb/>bis jetzt blos arbeite<note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht "arbeitete" statt "arbeite".</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                        <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "arbeitete" statt "arbeite".</p>
+                        <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
                             <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "arbeitete" instead
-                            of "arbeite".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "arbeitete" et non "arbeite".</seg>
+                            of "arbeite".</p>
+                        <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "arbeitete" et non "arbeite".</p>
                     </note> – Diese Anstellung<lb/>ist aber auch nur nach unserer gewöhnlichen<lb/>Art wie die ganze Ein<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">r</add>
@@ -418,53 +426,55 @@
                     </subst>ler beiläufig — <note hand="#pencil_1" type="foliation">100</note></p>
                 <closer><salute><foreign xml:lang="grc"><hi rend="grc">χαιρετε <unclear cert="medium" reason="illegible">ϑερινοι
                             διοι</unclear>.</hi></foreign><note resp="#sabine.seifert">
-                            <seg xml:lang="de">Übersetzung: „Seid gegrüßt, sommerlich Leuchtende“. In <persName ref="#p0261" type="bi"
+                            <p xml:lang="de">Übersetzung: „Seid gegrüßt, sommerlich Leuchtende“. In <persName ref="#p0261" type="bi"
                                     >Riegels</persName> Edition der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                    inédits</title> wird die Grußformel ausgelassen.</seg>
-                            <seg xml:lang="en">Translation: „All hail, you summerly glowing“. In <persName ref="#p0261" type="bi">Riegel's</persName>
+                                    inédits</title> wird die Grußformel ausgelassen.</p>
+                            <p xml:lang="en">Translation: „All hail, you summerly glowing“. In <persName ref="#p0261" type="bi">Riegel's</persName>
                                 <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the salutation is being
-                                omitted.</seg>
-                            <seg xml:lang="fr">Translation: „All hail, you summerly glowing“. Dans la version imprimée dans la <title ref="#w00253"
+                                omitted.</p>
+                            <p xml:lang="fr">Translation: „All hail, you summerly glowing“. Dans la version imprimée dans la <title ref="#w00253"
                                     >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> de <persName ref="#p0261" type="bi"
-                                    >Riegel</persName>, ce passage a été supprimé.</seg></note></salute></closer>
+                                    >Riegel</persName>, ce passage a été supprimé.</p></note></salute></closer>
                 <lb/>
                 <lb/>
-                <postcript><rs ref="#p0280" type="bi">Mein Bruder</rs> hat auch einen <title ref="#w00339"><hi rend="latin"
-                    >Schlemihl</hi></title><lb/>übersetzt, welchen er drucken lassen<lb/>will<note resp="#sabine.seifert"><seg xml:lang="de"><persName
-                                ref="#p0280" type="bi">Hippolyte de Chamisso</persName> veröffentlichte die erste französische Übersetzung von
-                                <persName ref="#p0237" type="bi">Chamissos</persName>
-                            <title ref="#w00339">Schlemihl</title> unter dem Titel <title ref="#w00440">Pierre Schlemihl</title>
-                            <date when-iso="1822">1822</date>. Chamisso sah das Manuskript vor Drucklegung durch und fügte ein Vorwort hinzu.</seg>
-                        <seg xml:lang="en"><persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName> published <title ref="#w00440">Pierre
-                                Schlemihl</title>, the first French translation of <persName ref="#p0237" type="bi">Chamisso's</persName> work, in
-                                <date when-iso="1822">1822</date>. Chamisso revised the manuscript and added a preface.</seg>
-                        <seg xml:lang="fr"><persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName> published <title ref="#w00440">Pierre
-                                Schlemihl</title>, the first French translation of <persName ref="#p0237" type="bi">Chamisso's</persName> work, in
-                                <date when-iso="1822">1822</date>. Chamisso revised the manuscript and added a preface.</seg>
-                    </note>– Er denkt es geht so — auch<lb/>ein <foreign xml:lang="grc"><hi rend="grc"><gap extent="1w" reason="illegible"
-                        /></hi></foreign><note resp="#julia.theus">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> wird dieses Wort durch "Herr" ersetzt.</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, this word is being replaced by
-                            "Herr".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "Herr".</seg>
-                    </note>
-                    <subst>
-                        <del rend="strikethrough">unserer</del>
-                        <add place="above">der <choice>
-                                <abbr>franz.</abbr>
-                                <expan>französischen</expan>
-                            </choice></add>
-                    </subst> Gesandtschaft hier, hat<lb/>einen, der die welt <gap extent="1w" reason="illegible"/><note resp="#sabine.seifert">
-                        <seg xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser Stelle "auf".</seg>
-                        <seg xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "auf".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "auf".</seg></note>
-                    Buchdruckerschwärze<lb/>herum leuft —</postcript>
+                <postscript>
+                    <p><rs ref="#p0280" type="bi">Mein Bruder</rs> hat auch einen <title ref="#w00339"><hi rend="latin"
+                        >Schlemihl</hi></title><lb/>übersetzt, welchen er drucken lassen<lb/>will<note resp="#sabine.seifert"><p xml:lang="de"
+                                    ><persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName> veröffentlichte die erste französische
+                                Übersetzung von <persName ref="#p0237" type="bi">Chamissos</persName>
+                                <title ref="#w00339">Schlemihl</title> unter dem Titel <title ref="#w00440">Pierre Schlemihl</title>
+                                <date when-iso="1822">1822</date>. Chamisso sah das Manuskript vor Drucklegung durch und fügte ein Vorwort hinzu.</p>
+                            <p xml:lang="en"><persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName> published <title ref="#w00440">Pierre
+                                    Schlemihl</title>, the first French translation of <persName ref="#p0237" type="bi">Chamisso's</persName> work, in
+                                    <date when-iso="1822">1822</date>. Chamisso revised the manuscript and added a preface.</p>
+                            <p xml:lang="fr"><persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName> published <title ref="#w00440">Pierre
+                                    Schlemihl</title>, the first French translation of <persName ref="#p0237" type="bi">Chamisso's</persName> work, in
+                                    <date when-iso="1822">1822</date>. Chamisso revised the manuscript and added a preface.</p>
+                        </note>– Er denkt es geht so — auch<lb/>ein <foreign xml:lang="grc"><hi rend="grc"><gap extent="1w" reason="illegible"
+                            /></hi></foreign><note resp="#julia.theus">
+                            <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                    d'Adalbert de Chamisso, Fragments inédits</title> wird dieses Wort durch "Herr" ersetzt.</p>
+                            <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, this word is being replaced by
+                                "Herr".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "Herr".</p>
+                        </note>
+                        <subst>
+                            <del rend="strikethrough">unserer</del>
+                            <add place="above">der <choice>
+                                    <abbr>franz.</abbr>
+                                    <expan>französischen</expan>
+                                </choice></add>
+                        </subst> Gesandtschaft hier, hat<lb/>einen, der die welt <gap extent="1w" reason="illegible"/><note resp="#sabine.seifert">
+                            <p xml:lang="de">In <persName ref="#p0261" type="bi">Riegels</persName> Edition der <title ref="#w00253">Correspondance
+                                    d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser Stelle "auf".</p>
+                            <p xml:lang="en">In <persName ref="#p0261" type="bi">Riegel's</persName>
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the text reads "auf".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title> de <persName ref="#p0261" type="bi">Riegel</persName>, on lit "auf".</p></note>
+                        Buchdruckerschwärze<lb/>herum leuft —</p>
+                </postscript>
                 <pb facs="00000202.jpg" n="4"/>
             </div>
         </body>
