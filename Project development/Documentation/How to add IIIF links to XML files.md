@@ -36,7 +36,7 @@ It will produce a Python file containing all the metadata from the CSV, filled i
 
 __3. Import the image(s) with the correspondant metadata__
 
-The next step is to import the image(s) and its metadata in NAKALA. To do so, I am using the API, by adding one of the images from the XML file in "POST:/datas/uploads". Then, I retrieve the identifier given in "sha1". I copy/paste it in the metadata part dedicated to it: "files/sha1". Finally, I copy/paste all the metadata of the file in "POST:/datas" and execute it, until I have a 201 code ("Created"). Then, if the file have more than one picture, I can add it by using "POST:/datas/{identifier}/files" in the API or by using the interface (easier if there are many files to add at once).
+The next step is to import the image(s) and its metadata in [NAKALA](https://nakala.fr). To do so, I am using the [API](https://api.nakala.fr/doc), by adding one of the images from the XML file in "POST:/datas/uploads". Then, I retrieve the identifier given in "sha1". I copy/paste it in the metadata part dedicated to it: "files/sha1". Finally, I copy/paste all the metadata of the file in "POST:/datas" and execute it, until I have a 201 code ("Created"). Then, if the file have more than one picture, I can add it by using "POST:/datas/{identifier}/files" in the API or by using the interface (easier if there are many files to add at once).
 
 __4. Modify XML files with a Python dictionary containing the old and new @facs ID__
 
