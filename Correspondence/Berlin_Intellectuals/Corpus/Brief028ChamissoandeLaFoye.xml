@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xml:id="STUDENT-Brief028ChamissoandeLaFoye_beschka.gloy" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -205,8 +212,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">notes added and some corrections</change>
         </revisionDesc>
@@ -215,53 +223,56 @@
         <body>
             <div type="transcription">
                 <pb facs="00000099.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">49</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">49</note>
                 <note hand="#pencil_2" place="top" type="foliation"><hi rend="underline">136</hi></note>
-                <note hand="#pencil_3" place="margin-left"><date when-iso="1810">1810</date>
+                <note hand="#pencil_3" place="margin(left)"><date when-iso="1810">1810</date>
                     <hi rend="underline">in <date when-iso="1823">1823</date></hi></note>
-                <note resp="beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 66. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note resp="beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                            Fragments inédits</title>, Brief 66. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe
+                        bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p>berichte doch, in neun und neunzig<lb/>Teufels nahmen, wie es dir gehet.<lb/>mir gehts wie einem Narren<lb/><persName ref="#p0293"
                         type="bi">Daunou</persName> ist schlechthin nicht mehr<lb/>zu sprechen: er soll litterarische<lb/>Arbeiten haben. <persName
-                        ref="#p0334" type="bi">Lanjuinai</persName>, <persName ref="#p0335" type="bi">Laner</persName><note resp="#beschka.gloy">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Name
-                    "Laner".</note>,<lb/>meine Familie, alles ist fort, –<lb/>könntest du mich zu dem <unclear reason="illegible"
-                        >Bourgret</unclear><lb/>verhelfen?<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> fehlt der Teilsatz hinter "alles ist fort".</note> – mit dem <rs ref="#w00212"
-                        type="bi">Schlegel</rs> gehts.<lb/>unsere Freundinn<note resp="#beschka.gloy">Hier ist vermutlich <persName ref="#p0247"
-                            type="bi">Helmina von Chézy</persName> gemeint, die regelmäßig die Sommer mit ihren Söhnen <persName ref="#p0265"
-                            type="bi">Max von Chézy</persName> und <persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> in <placeName
-                            ref="#l0075" type="bi">Montmorency</placeName> verbrachte.</note>, die täglich von dir<lb/>spricht, zieht auch auf dem
-                    Lande nach<lb/>Momereny <note resp="#beschka.gloy">Hier ist vermutlich der Ort <placeName ref="#l0075" type="bi"
-                            >Montmorency</placeName> gemeint.</note> – auch gut! mein<lb/>lieber guter es ist doch manches<lb/>anders geko<g
-                        type="mgem"/>en … im Ernst<lb/>schreibe doch ich habe ja nicht Zeit<lb/>
+                        ref="#p0334" type="bi">Lanjuinai</persName>, <persName ref="#p0335" type="bi">Laner</persName><note resp="#beschka.gloy"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der
+                            Name "Laner".</p><p xml:lang="en"/><p xml:lang="fr"/></note>,<lb/>meine Familie, alles ist fort, –<lb/>könntest du mich zu
+                    dem <unclear reason="illegible">Bourgret</unclear><lb/>verhelfen?<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Teilsatz hinter "alles ist
+                            fort".</p><p xml:lang="en"/><p xml:lang="fr"/></note> – mit dem <rs ref="#w00212" type="bi">Schlegel</rs>
+                    gehts.<lb/>unsere Freundinn<note resp="#beschka.gloy"><p xml:lang="de">Hier ist vermutlich <persName ref="#p0247" type="bi"
+                                >Helmina von Chézy</persName> gemeint, die regelmäßig die Sommer mit ihren Söhnen <persName ref="#p0265" type="bi">Max
+                                von Chézy</persName> und <persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName> in <placeName
+                                ref="#l0075" type="bi">Montmorency</placeName> verbrachte.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, die täglich
+                    von dir<lb/>spricht, zieht auch auf dem Lande nach<lb/>Momereny <note resp="#beschka.gloy"><p xml:lang="de">Hier ist vermutlich
+                            der Ort <placeName ref="#l0075" type="bi">Montmorency</placeName> gemeint.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    – auch gut! mein<lb/>lieber guter es ist doch manches<lb/>anders geko<g type="mgem"/>en … im Ernst<lb/>schreibe doch ich habe ja
+                    nicht Zeit<lb/>
                     <pb facs="00000100.jpg" n="2"/>zu schreiben, vergiß der Volks lieder<lb/>nicht. ich gebe gewiß nächsens eine <lb/>Sammlung heraus
-                    und bei euch sind gar<lb/>viele.<note resp="beschka.gloy">Chamisso plant mit Helmina von Chézy zusammen eine Volksliedersammlung
-                        herauszugeben. Das Projekt zerschlägt sich dann aber.</note> – vergiß auch nicht der Molusken<note resp="#beschka.gloy"
-                        >Mollusken sind Weichtiere.</note><lb/>für <persName ref="#p0301" type="bi">Erman</persName>, vergiß aber auch ja
-                    nicht<lb/>meiner und schreibe.</p>
+                    und bei euch sind gar<lb/>viele.<note resp="beschka.gloy"><p xml:lang="de">Chamisso plant mit Helmina von Chézy zusammen eine
+                            Volksliedersammlung herauszugeben. Das Projekt zerschlägt sich dann aber.</p><p xml:lang="en"/><p xml:lang="fr"/></note> –
+                    vergiß auch nicht der Molusken<note resp="#beschka.gloy"><p xml:lang="de">Mollusken sind Weichtiere.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note><lb/>für <persName ref="#p0301" type="bi">Erman</persName>, vergiß aber auch ja nicht<lb/>meiner und
+                    schreibe.</p>
                 <closer><salute>Immer</salute><lb/><signed rend="align(center)"><persName type="bi"><choice>
                                 <abbr>A.</abbr>
                                 <expan>Adelbert</expan>
-                            </choice></persName></signed><lb/><salute>Grüße!</salute><note resp="#beschka.gloy">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> endet der Brief hinter "schreibe".</note><lb/><address>
+                            </choice></persName></signed><lb/><salute>Grüße!</salute><note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> endet der Brief hinter
+                            "schreibe".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>
+                    <address>
                         <street>Rue de l'oratoire No.8.</street>
                     </address></closer>
                 <pb facs="00000101.jpg" n="3"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">50</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">50</note>
                 <pb facs="00000102.jpg" n="4" xml:id="Brief028ChamissoandeLaFoye-Blatt50v"/>
-                <seal>Siegelreste.</seal>
                 <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
-                <address>
-                    <addrLine><persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
-                    <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
-                    <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>. ⹀</addrLine>
-                </address>
-                <stamp>Poststempel von Paris.</stamp>
+                <closer><address>
+                        <addrLine><persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
+                        <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
+                        <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>. ⹀</addrLine>
+                    </address>
+                    <stamp>Poststempel von Paris.</stamp></closer>
             </div>
-            <milestone unit="end"/>
         </body>
     </text>
 </TEI>

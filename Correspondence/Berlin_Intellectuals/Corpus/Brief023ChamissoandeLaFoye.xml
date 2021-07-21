@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -76,8 +77,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin </settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -276,8 +283,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -303,17 +311,17 @@
                 <note hand="#pencil_3" place="top-right-diagonal inline">
                     <hi rend="underline"><date when-iso="1807-01"><foreign xml:lang="fr">Janvier 1807</foreign></date></hi>
                 </note>
-                <note hand="#pencil_1" place="margin-right-top" type="foliation">39</note>
+                <note hand="#pencil_1" place="margin(right)-top" type="foliation">39</note>
                 <p>Ich werde itzt in Urdnung komen mit meinem Civil<lb break="no" type="none"/>stand, — und werde viel viel freier sein denn ich es
                     war,<lb/>dann werd ich sonderweilen die Begehrte Wallfarht unter<lb break="no" type="none"/>nehmen<subst hand="#red_hand">
                         <del rend="overwritten">,</del>
                         <add place="inline">.</add>
-                    </subst><add hand="#red_hand" place="inline"><hi rend="large">[</hi></add><note resp="#sabine.seifert">Die von <persName
-                            ref="#p0239" type="bi">Hitzig</persName> mit rotem Stift eingeklammerten Passagen wurden im Druck von <title ref="#w00277"
-                            >Leben und Briefe</title> ausgelassen.</note> zu dem <persName ref="#p0311" type="bi">Magdlein</persName><note
-                        resp="#sabine.seifert">Hier spricht <persName ref="#p0237" type="bi">Chamisso</persName> wohl von der nicht eindeutig
-                        identifizierbaren <persName ref="#p0311" type="bi">Frau</persName>, mit der seine Familie ihn ursprünglich verheiraten
-                        wollte.</note> da<subst>
+                    </subst><add hand="#red_hand" place="inline"><hi rend="large">[</hi></add><note resp="#sabine.seifert"><p xml:lang="de">Die von
+                                <persName ref="#p0239" type="bi">Hitzig</persName> mit rotem Stift eingeklammerten Passagen wurden im Druck von <title
+                                ref="#w00277">Leben und Briefe</title> ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> zu dem <persName
+                        ref="#p0311" type="bi">Magdlein</persName><note resp="#sabine.seifert">Hier spricht <persName ref="#p0237" type="bi"
+                            >Chamisso</persName> wohl von der nicht eindeutig identifizierbaren <persName ref="#p0311" type="bi">Frau</persName>, mit
+                        der seine Familie ihn ursprünglich verheiraten wollte.</note> da<subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">s</add>
                     </subst> Vielleicht eben so wenig<lb/>meiner als ich seiner begehren wird, indem die Klugen<lb/><subst>
@@ -323,15 +331,17 @@
                         rend="strikethrough">werden</del> und ein<lb/>überflüßiges <hi rend="underline">Veto</hi> aussprechen werden — doch
                     darüber<lb/>Gott und mein Stern, dann, mein Sohn, werd ich einer <lb/>reise nach <placeName ref="#l0106" type="bi"><hi
                             rend="latin">Troye</hi></placeName> (beileibe nicht <placeName ref="#l0149" type="bi"><hi rend="latin"
-                        >Troja</hi></placeName>) gedenken und<lb/>dann, dann Ja <hi rend="latin">adelf</hi><note resp="#sabine.seifert"><persName
-                            ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem griechischen Wort
-                        für Bruder, "Adelf" (αδελφός), an.</note>,<add hand="#red_hand" place="inline"><hi rend="large"><hi rend="large"
-                        >]</hi></hi></add> über <placeName ref="#l0044" type="bi"><hi rend="latin">paris</hi></placeName> werd ich gehen<lb/><add
-                        hand="#red_hand" place="inline"><hi rend="large">[</hi></add>und sehen was <rs ref="#p0291" type="bi">er</rs><note
-                        resp="#sabine.seifert"><persName ref="#p0261" type="bi">Riegel</persName> weist darauf hin, dass es sich hier um <persName
-                            ref="#p0237" type="bi">Chamissos</persName> Freund <persName ref="#p0291" type="bi">Koreff</persName> handelt, <title
-                            ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, S. 133.</note> macht und ihn vielleicht
-                        mit<lb break="no" type="none"/>nehmen. oder<add hand="#red_hand" place="inline"><hi rend="large">]</hi></add>
+                        >Troja</hi></placeName>) gedenken und<lb/>dann, dann Ja <hi rend="latin">adelf</hi>
+                    <note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248"
+                                type="bi">Freund</rs> mit dem griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>,<add hand="#red_hand" place="inline"><hi rend="large"><hi rend="large">]</hi></hi></add> über
+                        <placeName ref="#l0044" type="bi"><hi rend="latin">paris</hi></placeName> werd ich gehen<lb/><add hand="#red_hand"
+                        place="inline"><hi rend="large">[</hi></add>und sehen was <rs ref="#p0291" type="bi">er</rs><note resp="#sabine.seifert"><p
+                            xml:lang="de"><persName ref="#p0261" type="bi">Riegel</persName> weist darauf hin, dass es sich hier um <persName
+                                ref="#p0237" type="bi">Chamissos</persName> Freund <persName ref="#p0291" type="bi">Koreff</persName> handelt, <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, S. 133.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> macht und ihn vielleicht mit<lb break="no" type="none"/>nehmen. oder<add hand="#red_hand"
+                        place="inline"><hi rend="large">]</hi></add>
                     <add hand="#red_hand" place="above"><hi rend="underline">und</hi></add> so zu dir kom̄en, in <placeName ref="#l0044" type="bi"><hi
                             rend="latin">Paris</hi></placeName> hab ich<lb/>kein Bleiben, — mein <rs ref="#p0280" type="bi">Bruder</rs> ist selber
                     nicht<lb/>zu Hause. — es wird von <persName ref="#p0291" type="bi">Koreff</persName> wegen einer<lb/>Stelle <del
@@ -351,7 +361,7 @@
                     draus<lb/>werden, bist du wieder da umarmen wir uns<lb/>und plaudern, — die Jungen erzi<subst>
                         <del rend="overwritten">h</del>
                         <add place="across">e</add>
-                    </subst>hen wir <add place="margin-right">gemeinschaftlich.</add><lb/><gap extent="2c" reason="strikethrough"/> und lernen selber
+                    </subst>hen wir <add place="margin(right)">gemeinschaftlich.</add><lb/><gap extent="2c" reason="strikethrough"/> und lernen selber
                     was, wenn wir können.<lb/>Das sind so meine Gedanken, setze die deinen<lb/>dagegen. Dann wird der Liebe Gott, nach
                     seinem<lb/>vorbehaltenen Rechte entschei<subst>
                         <del rend="overwritten">b</del>
@@ -370,15 +380,16 @@
                             ><unclear cert="low" reason="strikethrough">ich</unclear></del> wir sehen uns doch über Kurz oder Lang<lb/>dann werden wir
                         <add hand="#red_hand" place="above">uns</add> ausplaudern, ich schicke dir<lb/>im̄er nur abgerissene Worte und behalte
                     den<lb/>Busen voll. — <add hand="#red_hand" place="inline"><hi rend="large">[</hi></add>Die Schwester<note resp="#sabine.seifert"
-                            ><persName ref="#p0261" type="bi">Riegel</persName> verweist an dieser Stelle auf die Ehefrau von <persName ref="#p0237"
-                            type="bi">Chamissos</persName> Bruder <persName ref="#p0368" type="bi">Charles de Chamisso</persName>. </note> die ich
-                    hier kennen<lb/>gelernt scheint mir eine hübsche nicht <del rend="strikethrough">ganz</del><lb/>Kraftlose Blühte zu sein, ein
-                    junges liebes<lb/><unclear cert="medium" extent="1w" reason="damage">Ding</unclear>, wenn die Klangvollen Lungen<note
-                        resp="#sabine.seifert"><persName ref="#p0261" type="bi">Riegel</persName> druckt in den <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> "Zungen" statt "Lungen".</note> der franzosen<lb/><unclear cert="medium"
-                        extent="1w" reason="illegible">wissler</unclear><note resp="#sabine.seifert"><persName ref="#p0261" type="bi"
-                            >Riegel</persName> druckt in den <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                        "Witze".</note> gegen mich schiessen, schweigt sie zum<lb/>küssen — das ist ein Volk, mein Kind,</p>
+                            ><p xml:lang="de"><persName ref="#p0261" type="bi">Riegel</persName> verweist an dieser Stelle auf die Ehefrau von
+                                <persName ref="#p0237" type="bi">Chamissos</persName> Bruder <persName ref="#p0368" type="bi">Charles de
+                                Chamisso</persName>. </p><p xml:lang="en"/><p xml:lang="fr"/></note> die ich hier kennen<lb/>gelernt scheint mir eine
+                    hübsche nicht <del rend="strikethrough">ganz</del><lb/>Kraftlose Blühte zu sein, ein junges liebes<lb/><unclear cert="medium"
+                        extent="1w" reason="damage">Ding</unclear>, wenn die Klangvollen Lungen<note resp="#sabine.seifert"><persName ref="#p0261"
+                            type="bi">Riegel</persName> druckt in den <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                            inédits</title> "Zungen" statt "Lungen".</note> der franzosen<lb/><unclear cert="medium" extent="1w" reason="illegible"
+                        >wissler</unclear><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0261" type="bi">Riegel</persName> druckt in
+                            den <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> "Witze".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> gegen mich schiessen, schweigt sie zum<lb/>küssen — das ist ein Volk, mein Kind,</p>
                 <pb facs="00000081.jpg" n="3"/>
                 <note hand="#pencil_1" place="top-right" type="foliation">40</note>
                 <p>ich habe mir dieses ersonnen, <gap extent="1-2w" reason="damage"/>as hülft ja nichts, ich<lb/>bitte sie demutsvoll mich fürden
@@ -396,16 +407,19 @@
                 <p>Ich habe ein angefangenes Gedicht zu<lb/>lesen und bei dir zu vollenden, denn früher<lb/>kome ich nicht wieder dazu. —
                     keine<lb/>Metrische Zeile seit dorten.</p>
                 <lb/>
-                <closer><salute rend="align(center)"><foreign xml:lang="grc"><hi rend="greek">χαιρε τεκνον</hi></foreign><note resp="#sabine.seifert"
-                            >Die Übersetzung der Grußformel lautet: "Sei gegrüßt, Nachkomme".</note>
+                <closer><salute rend="align(center)"><foreign xml:lang="grc"><hi rend="greek">χαιρε τεκνον</hi></foreign>
+                        <note resp="#sabine.seifert"><p xml:lang="de">Die Übersetzung der Grußformel lautet: "Sei gegrüßt, Nachkomme".</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note>
                     </salute><lb/><signed rend="align(right)"><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi><lb
                             rend="both"/><foreign xml:lang="grc"><hi rend="greek"><abbr>τ.τ.π.α.</abbr><expan>τò τоυ πόλου
-                            αστρον</expan></hi></foreign><note resp="#sabine.seifert">Das Kürzel τ.τ.π.α. steht für τò τоυ πόλου αστρον ("Polarstern")
-                            und war das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237"
-                                type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
-                                >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten. Das Kürzel wird bei <persName ref="#p0239"
-                                type="bi">Hitzig</persName> in <title ref="#w00277">Leben und Briefe</title> ohne Kennzeichnung
-                        ausgelassen.</note></signed><lb/>
+                            αστρον</expan></hi></foreign>
+                        <note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel τ.τ.π.α. steht für τò τоυ πόλου αστρον ("Polarstern") und war das
+                                Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi"
+                                    >Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
+                                    >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten. Das Kürzel wird bei <persName
+                                    ref="#p0239" type="bi">Hitzig</persName> in <title ref="#w00277">Leben und Briefe</title> ohne Kennzeichnung
+                                ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    </signed><lb/>
                     <dateline><hi rend="latin"><foreign xml:lang="fr"><placeName ref="#l0097" type="bi">Vertus</placeName>
                                 <date when-iso="1807-01-16">16 Janvier<lb/><subst>
                                         <del rend="overwritten"><gap extent="1-2c" reason="overwritten"/></del>
@@ -414,19 +428,19 @@
                                         <del rend="overwritten">6</del>
                                         <add place="across">7</add>
                                     </subst>.</date></foreign></hi></dateline>
-                </closer>
-                <pb facs="00000082.jpg" n="4" xml:id="Brief023ChamissoandeLaFoye-Blatt40v"/>
-                <address rend="align(center)">
-                    <foreign xml:lang="fr"><hi rend="latin">
-                            <addrLine><persName ref="#p0248" type="bi">Louis De Lafoye</persName><stamp>Poststempel: <hi rend="majuscule">
-                                        <placeName ref="#l0105" type="bi">EPERNAY</placeName></hi>
-                                </stamp></addrLine>
-                            <addrLine>au <placeName ref="#l0148" type="bi">Vangeux</placeName> á</addrLine>
-                            <addrLine><placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
-                            <addrLine><hi n="5" rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi></addrLine>
-                            <note hand="#postman" place="across inline">6</note>
-                        </hi></foreign>
-                </address>
+                    <pb facs="00000082.jpg" n="4" xml:id="Brief023ChamissoandeLaFoye-Blatt40v"/>
+                    <foreign xml:lang="fr">
+                        <hi rend="latin">
+                            <address rend="align(center)">
+                                <addrLine><persName ref="#p0248" type="bi">Louis De Lafoye</persName>
+                                    <stamp>Poststempel: <hi rend="majuscule">
+                                            <placeName ref="#l0105" type="bi">EPERNAY</placeName></hi>
+                                    </stamp></addrLine>
+                                <addrLine>au <placeName ref="#l0148" type="bi">Vangeux</placeName> á</addrLine>
+                                <addrLine><placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
+                                <addrLine><hi n="5" rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi></addrLine>
+                                <note hand="#postman" place="across inline">6</note>
+                            </address></hi></foreign></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xml:id="STUDENT-Brief034ChamissoandeLaFoye_beschka.gloy" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -215,8 +222,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">notes added and some corrections</change>
         </revisionDesc>
@@ -225,52 +233,55 @@
         <body>
             <div type="transcription">
                 <pb facs="00000121.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">60</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">60</note>
                 <note hand="#pencil_2" place="top" type="foliation">127</note>
-                <note hand="#pencil_3" place="margin-left"><date when-iso="1810-07"><hi rend="latin"><foreign xml:lang="fr">Juillet</foreign>
+                <note hand="#pencil_3" place="margin(left)"><date when-iso="1810-07"><hi rend="latin"><foreign xml:lang="fr">Juillet</foreign>
                             1810</hi></date></note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 70. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 70. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <opener><dateline><date when-iso="1810-07-21"><gap extent="one word" reason="illegible"/>le 21 <foreign xml:lang="fr"><choice>
                                     <abbr>Jllt</abbr>
                                     <expan>Juillet</expan>
                                 </choice></foreign></date></dateline></opener>
                 <p>Wenige Worte nur, ich bin in dein altes<lb/>Quartier, <hi rend="latin"><foreign xml:lang="fr">Hotel de Bretagne. rue du
                             Bouloi</foreign></hi> gezogen,<lb/>Ich schicke mich an, zu <persName ref="#p0190" type="bi">Schlegel</persName> nach
-                        <placeName ref="#l0077" type="bi">Chaumont</placeName>,<add n="x" place="margin-left-vertical"><foreign>par Ecure Cher et
-                            Loire.</foreign><note resp="beschka.gloy">Gemeint ist das Département Loir-et-Cher. "écure" meint vermutlich eine
-                            bestimmte Stallung (=écurie), vielleicht eine Sehenswürdigkeit vor Ort oder einfach eine Übergangsstation für
-                        Post.</note></add><lb/><gap extent="one word" reason="illegible"/> binnen Wochen frist, zu reisen, und<lb/>meine <persName
-                        ref="#p0247" type="bi">Helmina</persName>, will gleich nach dem <hi rend="underline">ersten</hi><lb/><del rend="strikethrough"
-                        >mit</del> wegen ihres <rs ref="p0264" type="bi">Sohnes</rs>, nach einem noch zu<lb/>bestimmenden Bade reisen <note
-                        resp="#beschka.gloy"><persName ref="#p0237" type="bi">Chamisso</persName> bezieht sich hier vermutlich auf die Erkrankung von
-                            <persName ref="#p0264" type="bi">Wilhelm Theodor von Chézy</persName>, die er auch im Brief (ohne Ort und Datum, <ref
-                            target="Brief027ChamissoandeLaFoye.xml">Bl. 47-48</ref>) erwähnt.</note>, von wo aus sie<lb/><add place="above">über</add>
-                    ihr künftiges Schicksal entscheiden wird. Sie<lb/>will und muß von <placeName ref="#l0044" type="bi">Paris</placeName> fort, die unreinen<lb/><subst>
+                        <placeName ref="#l0077" type="bi">Chaumont</placeName>,<add n="x" place="margin(left)-vertical"><foreign>par Ecure Cher et
+                            Loire.</foreign><note resp="beschka.gloy"><p xml:lang="de">Gemeint ist das Département Loir-et-Cher. "écure" meint
+                                vermutlich eine bestimmte Stallung (=écurie), vielleicht eine Sehenswürdigkeit vor Ort oder einfach eine
+                                Übergangsstation für Post.</p><p xml:lang="en"/><p xml:lang="fr"/></note></add><lb/><gap extent="one word"
+                        reason="illegible"/> binnen Wochen frist, zu reisen, und<lb/>meine <persName ref="#p0247" type="bi">Helmina</persName>, will
+                    gleich nach dem <hi rend="underline">ersten</hi><lb/><del rend="strikethrough">mit</del> wegen ihres <rs ref="p0264" type="bi"
+                        >Sohnes</rs>, nach einem noch zu<lb/>bestimmenden Bade reisen <note resp="#beschka.gloy"><persName ref="#p0237" type="bi"
+                            >Chamisso</persName> bezieht sich hier vermutlich auf die Erkrankung von <persName ref="#p0264" type="bi">Wilhelm Theodor
+                            von Chézy</persName>, die er auch im Brief (ohne Ort und Datum, <ref target="Brief027ChamissoandeLaFoye.xml">Bl.
+                            47-48</ref>) erwähnt.</note>, von wo aus sie<lb/><add place="above">über</add> ihr künftiges Schicksal entscheiden wird.
+                    Sie<lb/>will und muß von <placeName ref="#l0044" type="bi">Paris</placeName> fort, die unreinen<lb/><subst>
                         <del rend="overwritten">v</del>
                         <add place="across">V</add>
                     </subst>erhältniße zerstören sie ganz in ihrem <gap extent="one word" reason="illegible"/><lb/><del rend="strikethrough"
                         >innisten</del> innigsten Wesen. Ich bleibe hier<lb/>biß das <rs ref="#w00212" type="bi">Schlegelsche Werk</rs> voll endet,
                     und weiter<lb/>weiß ich nichts. –</p>
-                <p>Ich bin in der Archiven Sache<note resp="#beschka.gloy">Chamisso bezieht sich hier auf die Pariser Archives Impériales, wo er auf
-                        eine Anstellung hoffte, was sich aber zerschlug.</note>, die zu lange<lb/>wärt um vernünftig auszufallen, keinen
-                    Schritt<lb/>weiter gerückt, der General, der mein Gönner<lb/>sein sollte, ist fort, er läßt <persName type="bi">August</persName>
-                    der<lb/>nun ein Brevet als Infanterie Lieutenant am<lb/>Halse haben wird, aufs Höflichste ohne Antwort<lb/>sitzen. – er war in
-                        <placeName ref="#l0103" type="bi">Bois le duc</placeName>, wird nun wohl<lb/>in <placeName ref="#l0023" type="bi"
-                        >Holland</placeName> Beschäftigung genug haben, um<lb/>sobald nicht wieder einzukommen. – Ich<lb/>wüßte übrigens nicht, was
-                    und wie ich für dich<lb/>wirken könnte. – ich möchte <del rend="strikethrough">dich</del> dir rathen<lb/>deinem Gönner <persName
-                        ref="#p0336" type="bi">Bournonville</persName> einen zu<lb/><pb facs="00000122.jpg" n="2"/>apostillirenden <foreign
-                        xml:lang="fr">Memoire</foreign><note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> steht "eine Apostille in den Mémoire" statt "einen zu apostillirenden Memoire".</note>
-                    an den <persName ref="#p0319" type="bi">Montalivet</persName><lb/><foreign xml:lang="fr">Ministre de l'intérieur</foreign>
+                <p>Ich bin in der Archiven Sache<note resp="#beschka.gloy"><p xml:lang="de">Chamisso bezieht sich hier auf die Pariser Archives
+                            Impériales, wo er auf eine Anstellung hoffte, was sich aber zerschlug.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, die
+                    zu lange<lb/>wärt um vernünftig auszufallen, keinen Schritt<lb/>weiter gerückt, der General, der mein Gönner<lb/>sein sollte, ist
+                    fort, er läßt <persName type="bi">August</persName> der<lb/>nun ein Brevet als Infanterie Lieutenant am<lb/>Halse haben wird, aufs
+                    Höflichste ohne Antwort<lb/>sitzen. – er war in <placeName ref="#l0103" type="bi">Bois le duc</placeName>, wird nun wohl<lb/>in
+                        <placeName ref="#l0023" type="bi">Holland</placeName> Beschäftigung genug haben, um<lb/>sobald nicht wieder einzukommen. –
+                    Ich<lb/>wüßte übrigens nicht, was und wie ich für dich<lb/>wirken könnte. – ich möchte <del rend="strikethrough">dich</del> dir
+                    rathen<lb/>deinem Gönner <persName ref="#p0336" type="bi">Bournonville</persName> einen zu<lb/><pb facs="00000122.jpg" n="2"
+                    />apostillirenden <foreign xml:lang="fr">Memoire</foreign><note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "eine Apostille in den Mémoire"
+                            statt "einen zu apostillirenden Memoire".</p><p xml:lang="en"/><p xml:lang="fr"/></note> an den <persName ref="#p0319"
+                        type="bi">Montalivet</persName><lb/><foreign xml:lang="fr">Ministre de l'intérieur</foreign>
                     <add place="above">zu</add> schicken, <quote>„hülfts nicht,<lb/>so schadt's auch nicht, man muß die
                         Gläubigen<lb/>stärcken“</quote>.</p>
                 <p>Hatt dich der Conducteur der Diligence<lb/>Nationale, mit einem Pack Insekthen<lb/> Nadeln in <placeName ref="#l0107" type="bi"
                         >Caen</placeName> aufgefunden; ich wußte<lb/>in der Geschwindigkeit keine Adresse von<lb/>dir anzugeben? aus deinen 1<hi
-                        rend="superscript">then</hi> Briefen<lb/>holt ich das ganz unbeachtet und vergeßen.<note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieser Satz.</note></p>
+                        rend="superscript">then</hi> Briefen<lb/>holt ich das ganz unbeachtet und vergeßen.<note resp="#beschka.gloy"><p xml:lang="de"
+                            >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieser
+                            Satz.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>A propos. nun können Bücher <add place="above">frei</add> eingeführt<lb/>werden, es dauert aber mehrere Wochen<lb/>bevor man das
                     Verlangte erhält. –<lb/>Soll für dich irgend was verlangt werden?<lb/>Nun werd ich aber <subst>
                         <del rend="overwritten">f</del>
@@ -281,10 +292,10 @@
                     der Anatomie,<lb/>nicht zu einem Cabinet, mehrere der selben<lb/>Art wären ihnen gleich willkommen. hab ich<lb/>doch allerlei
                     Schneken zu Hunderten bei ihm<lb/>gesehen, und er könnte daran nicht genug<lb/>haben – das nächste Ma<del rend="strikethrough"
                         >h</del>l daß ich dort<lb/>schreibe, will ich dein anerbieten kund geben,<lb/>oder vielmehr: setze mir etwas auf daß ich <pb
-                        facs="00000123.jpg" n="3"/><note hand="#pencil_1" place="margin-right" type="foliation">61</note>hinschicken kann. – <supplied
-                        cert="high" reason="damage">Das</supplied> Schwierigste bleibt<lb/>der Transport. –<note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Absatz von "Erman..." bis
-                        "..der Transport".</note></p>
+                        facs="00000123.jpg" n="3"/><note hand="#pencil_1" place="margin(right)" type="foliation">61</note>hinschicken kann. –
+                        <supplied cert="high" reason="damage">Das</supplied> Schwierigste bleibt<lb/>der Transport. –<note resp="#beschka.gloy"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der
+                            Absatz von "Erman..." bis "..der Transport".</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p><persName ref="#p0247" type="bi">Helmina</persName> hatte dir geschrieben, hatt aber<lb/>ihren Brief zerrißen, weil er französisch
                     gewesen,<lb/>sie schreibt gern leicht und gut, zerreist aber<lb/>sehr oft was sie also geschrieben. – Sie schreibt<lb/>dir wohl
                     vielleicht noch. <subst>
@@ -296,18 +307,16 @@
                 <closer><dateline>– Ich glaube den <date when-iso="1810-07-13">13. Juli. 1810</date>.</dateline><signed><choice>
                             <abbr>A</abbr>
                             <expan>Adelbert</expan>
-                        </choice>.</signed></closer>
-                <pb facs="00000124.jpg" n="4" xml:id="Brief034ChamissoandeLaFoye-Blatt61v"/>
-                <address>
-                    <addrLine><persName ref="p0248" type="bi">Louis de la foye</persName></addrLine>
-                    <addrLine>á <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
-                    <addrLine><hi rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi></addrLine>
-                </address>
-                <stamp>Poststempel von Paris.</stamp>
-                <seal>Siegelreste.</seal>
-                <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
+                        </choice>.</signed>
+                    <pb facs="00000124.jpg" n="4" xml:id="Brief034ChamissoandeLaFoye-Blatt61v"/>
+                    <address>
+                        <addrLine><persName ref="p0248" type="bi">Louis de la foye</persName></addrLine>
+                        <addrLine>á <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
+                        <addrLine><hi rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi></addrLine>
+                    </address>
+                    <stamp>Poststempel von Paris.</stamp>
+                    <note hand="#postman"><gap extent="one letter" reason="illegible"/></note></closer>
             </div>
-            <milestone unit="end"/>
         </body>
     </text>
 </TEI>

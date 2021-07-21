@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -131,9 +138,12 @@
                             </handNote>
                         </handDesc>
                         <sealDesc>
-                            <p xml:lang="de">Der Brief war durch ein rotes Siegel mit griechischen Zeichen verschlossen.</p>
-                            <p xml:lang="en">The letter was closed with a red seal showing Greek characters.</p>
-                            <p xml:lang="fr">La lettre était fermée par un sceau rouge montrant des caractères grecques.</p>
+                            <p xml:lang="de">Der Brief war durch ein rotes Siegel mit griechischen Zeichen verschlossen. Reste des roten Siegels, am
+                                linken Blattrand sind griechische Zeichen darauf zu erkennen.</p>
+                            <p xml:lang="en">The letter was closed with a red seal showing Greek characters. Remnants of the red seal, Greek
+                                characters can be seen on the left edge of the sheet.</p>
+                            <p xml:lang="fr">La lettre était fermée par un sceau rouge montrant des caractères grecques. Vestiges du sceau rouge, des
+                                caractères grecs sont visibles sur le bord gauche de la feuille.</p>
                         </sealDesc>
                         <accMat><p xml:lang="de"><ref target="#Brief043ChamissoandeLaFoye-Blatt4v">Blatt 4v</ref> dient als Briefumschlag.</p>
                             <p xml:lang="en"><ref target="#Brief043ChamissoandeLaFoye-Blatt4v">Page 4v</ref> is being used as envelope.</p>
@@ -228,8 +238,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -242,14 +253,15 @@
         <body>
             <div type="transcription">
                 <pb facs="00000157.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left">Aout 1811</note>
+                <note hand="#pencil_1" place="margin(left)">Aout 1811</note>
                 <note hand="#pencil_1" place="margin-top" type="foliation">117</note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">78</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">78</note>
                 <p>Ich bin wirklich noch hier, mein Lieber,<lb/> und sage <unclear cert="medium" reason="illegible">noch</unclear><note
-                        resp="#lena.ebert">Es ist unklar, ob <quote>"noch"</quote> eine Korrektur oder eine Streichung darstellt.</note> wie<note
-                        resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                            <quote>"was"</quote> statt <quote>"wie"</quote>.</note> man hier zu sagen pflegt<lb/> und ich ganz absonderlich, dass es
-                    wohl nicht<lb/>
+                        resp="#lena.ebert"><p xml:lang="de">Es ist unklar, ob <quote>"noch"</quote> eine Korrektur oder eine Streichung
+                            darstellt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wie<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"was"</quote> statt
+                                <quote>"wie"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> man hier zu sagen pflegt<lb/> und ich ganz
+                    absonderlich, dass es wohl nicht<lb/>
                     <subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">a</add>
@@ -266,9 +278,9 @@
                     </subst>ünftigm Monats los⹀, und <unclear cert="medium" reason="illegible">davon</unclear> gehen.<lb/> meiner Seits vermutlich
                     füßlings durch<lb/> die <placeName ref="#l0068" type="bi">Schweiz</placeName> und so fort nach Nord <placeName ref="#l0001"
                         type="bi">deutschland</placeName><lb/> allein, und ohne über <placeName ref="#l0065" type="bi">Heidelberg</placeName> zu
-                    gehen.<lb/> – Ich habe umsonst b<unclear cert="high" reason="illegible">i</unclear>ß itzt<note resp="#lena.ebert">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"jetzt"</quote> statt
-                            <quote>"itzt"</quote>.</note> meine<lb/>
+                    gehen.<lb/> – Ich habe umsonst b<unclear cert="high" reason="illegible">i</unclear>ß itzt<note resp="#lena.ebert"><p xml:lang="de"
+                            >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                                <quote>"jetzt"</quote> statt <quote>"itzt"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> meine<lb/>
                     <rs ref="#???" type="bi">Schwester</rs> hier durch oder doch Briefe von<lb/> ihr erwartet. – Ich habe so ziemlich diese<lb/> Zeit
                     mit <subst>
                         <del rend="overwritten">n</del>
@@ -281,21 +293,21 @@
                             cert="low" reason="illegible">an</unclear></del>gesehen<lb/> und fest gehalten, sonst aber weder angerührt<lb/> noch
                     angeredet, mit <persName ref="#p0190" type="bi">Schlegel</persName> der nun</p>
                 <pb facs="00000158.jpg" n="2"/>
-                <p>weit <del rend="strikethrough">ist</del> verreist ist<note resp="#lena.ebert">Im <date when-iso="1811-07">Juli 1811</date> hatte
-                            <persName ref="#p0190" type="bi">August Wilhelm Schlegel</persName> die <placeName ref="l0068" type="bi"
-                            >Schweiz</placeName> verlassen und war zu seinem Bruder <persName ref="#p0191" type="bi">Friedrich Schlegel</persName>,
-                        der sich in <placeName ref="#l0032" type="bi">Wien</placeName> aufhielt, gereist (<title ref="#???">Winock 2010</title>:
-                        396).</note>, wurde ich die<lb/> lezte Zeit fremd. – wir plaudern<lb/> vielleicht eimal über meine Verhältnisse<lb/> in diesem
-                    Hause, und diese Sonderbare<lb/>
+                <p>weit <del rend="strikethrough">ist</del> verreist ist<note resp="#lena.ebert"><p xml:lang="de">Im <date when-iso="1811-07">Juli
+                                1811</date> hatte <persName ref="#p0190" type="bi">August Wilhelm Schlegel</persName> die <placeName ref="l0068"
+                                type="bi">Schweiz</placeName> verlassen und war zu seinem Bruder <persName ref="#p0191" type="bi">Friedrich
+                                Schlegel</persName>, der sich in <placeName ref="#l0032" type="bi">Wien</placeName> aufhielt, gereist (<title
+                                ref="#???">Winock 2010</title>: 396).</p><p xml:lang="en"/><p xml:lang="fr"/></note>, wurde ich die<lb/> lezte Zeit
+                    fremd. – wir plaudern<lb/> vielleicht eimal über meine Verhältnisse<lb/> in diesem Hause, und diese Sonderbare<lb/>
                     <rs ref="#p0255" type="bi">Herrin</rs>, die ganze Zeit haben wir nichts<lb/> mitsammen gehabt <subst>
                         <del rend="overwritten"><gap extent="3c" reason="illegible"/></del>
                         <add place="across">hau</add>
-                    </subst>ptsächlich weil<lb/> sie <rs ref="#p0324" type="bi">mit einem andern</rs> etwas hatte.<note resp="#lena.ebert">Zwischen
-                            <persName ref="p0255" type="bi">Madame de Staël</persName> und <persName ref="#p0324" type="bi">Jean de Rocca</persName>
-                        gab es seit dem <date when-iso="1811-05-01">1. Mai 1811</date> sogar ein <quote>"promesse de marriage"</quote> (<title
-                            ref="#???">Winock 2010</title>: 407).</note><lb/> Es ist gut, recht gut so – ich habe ein<lb/> wohl wichtiges Buch nicht
-                    ohne Nutzen<lb/> gelesen, eine ganze <add place="above">neue</add> Seite der Welt<lb/> kennen gelernt, und am Ende doch<lb/> mir
-                    eine Freundin erworben. –</p>
+                    </subst>ptsächlich weil<lb/> sie <rs ref="#p0324" type="bi">mit einem andern</rs> etwas hatte.<note resp="#lena.ebert"><p
+                            xml:lang="de">Zwischen <persName ref="p0255" type="bi">Madame de Staël</persName> und <persName ref="#p0324" type="bi"
+                                >Jean de Rocca</persName> gab es seit dem <date when-iso="1811-05-01">1. Mai 1811</date> sogar ein <quote>"promesse de
+                                marriage"</quote> (<title ref="#???">Winock 2010</title>: 407).</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> Es
+                    ist gut, recht gut so – ich habe ein<lb/> wohl wichtiges Buch nicht ohne Nutzen<lb/> gelesen, eine ganze <add place="above"
+                        >neue</add> Seite der Welt<lb/> kennen gelernt, und am Ende doch<lb/> mir eine Freundin erworben. –</p>
                 <p>Ich meide zwar <del rend="strikethrough">
                         <unclear cert="medium" reason="illegible">ihr</unclear></del> künftig<hi rend="underline">hin</hi> ihr gast<lb/> so müßig zu
                     sein, <del rend="strikethrough">
@@ -305,19 +317,20 @@
                         resp="#lena.ebert">Dies ist vermutlich eine Anspielung auf die Pläne der <persName ref="p0255" type="bi">Madame de
                             Staël</persName> (geborene Necker), nach <placeName ref="l0025" type="bi">Amerika</placeName> auszuwandern (vgl. <title
                             ref="#???">Pille 1995</title>: 276, Kommentar 65).</note><lb/> Daß ich dort die rolle eins <unclear cert="medium"
-                        reason="illegible"><hi rend="latin">Eries</hi></unclear><lb/> agire<note resp="#lena.ebert">Angehöriger des Indianerstamms der
-                        Erie in <placeName ref="#l0025" type="bi">Nordamerika</placeName>. – Auch an anderen Stellen betont <persName ref="p0237"
-                            type="bi">Chamisso</persName> seine Distanz zur <quote>"feinen Welt"</quote> der <persName ref="p0255" type="bi">Madame de
-                            Staël</persName> (s. <ref target=".xml">Chamissos folgenden Brief</ref>, Seite 1).</note> – kann vieles noch kommen.<lb/>
-                    – Du sollst mir noch hier und das<lb/> gleich schreiben, wie es dir geht und<lb/> was du machst, darum schreib ich dir<lb/> einzig
-                    und allein – also laß mich</p>
+                        reason="illegible"><hi rend="latin">Eries</hi></unclear><lb/> agire<note resp="#lena.ebert"><p xml:lang="de">Angehöriger des
+                            Indianerstamms der Erie in <placeName ref="#l0025" type="bi">Nordamerika</placeName>. – Auch an anderen Stellen betont
+                                <persName ref="p0237" type="bi">Chamisso</persName> seine Distanz zur <quote>"feinen Welt"</quote> der <persName
+                                ref="p0255" type="bi">Madame de Staël</persName> (s. <ref target=".xml">Chamissos folgenden Brief</ref>, Seite
+                            1).</p><p xml:lang="en"/><p xml:lang="fr"/></note> – kann vieles noch kommen.<lb/> – Du sollst mir noch hier und das<lb/>
+                    gleich schreiben, wie es dir geht und<lb/> was du machst, darum schreib ich dir<lb/> einzig und allein – also laß mich</p>
                 <pb facs="00000159.jpg" n="3"/>
-                <note hand="#pencil_2" place="margin-right" type="foliation">79</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">79</note>
                 <p>gut<supplied cert="high" reason="damage">es</supplied>
-                    <supplied cert="high" reason="damage">hö</supplied>ren.<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"vergeßen
-                            habe"</quote>. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</note> – ich habe bei meiner<lb/> Wanderung um den
-                    See, – dein<lb/> Messer und deinen <gap extent="1w" reason="illegible"/><lb/> Behä<subst>
+                    <supplied cert="high" reason="damage">hö</supplied>ren.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis
+                                <quote>"vergeßen habe"</quote>. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> – ich habe bei meiner<lb/> Wanderung um den See, – dein<lb/> Messer und deinen <gap extent="1w"
+                        reason="illegible"/><lb/> Behä<subst>
                         <del rend="overwritten"><gap extent="2c" reason="illegible"/></del>
                         <add place="across">lt</add>
                     </subst>er verloren, <subst>
@@ -333,25 +346,28 @@
                         <add place="across">S</add>
                     </subst>itte <del rend="strikethrough">g</del>erler<supplied cert="high" reason="damage">nt</supplied>,<lb/> und schreibe mir
                     wirklich einen; –<lb/> oder kosstet es dich zu viel – auch<lb/> gut. – Ich habe hier nur eines<lb/> Mannes Bekanntschaft mit
-                        sammen<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt <quote>"mit sammen"</quote>.</note><lb/> des Verfassers der <hi rend="latin"><title ref="#???"
-                            >Histoire des Republiques<lb/> italiennes</title></hi>. <persName ref="#p0325" type="bi">Simonde Sismondi</persName> –
-                    ein<lb/> sehr wakerer, ja ein rechter Kerl;<lb/> Charackter und gesinnung vernunft<lb/> und Verstand ohne das was den<lb/> Dichter
-                    macht. – Solches erstirbt auch<lb/> mehr und mehr in mir, es war<lb/> wirklich eine Zeit wo wir die Ruthe<lb/> verdienten.<note
-                        resp="#lena.ebert">Dieses Wort befindet sich teilweise auf dem Siegelausriss, der an die obere Blattkannte geklebt
-                        wurde.</note> – was ich itzt<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                            Fragments inédits</title> steht <quote>"jetzt"</quote> statt <quote>"itzt"</quote>.</note> verdiene –<lb/> ich weiß
-                        es<note resp="#lena.ebert">Der Textteil <quote>"weiß es"</quote> befindet sich ebenfalls teilweise auf dem Siegelausriss, der
-                        an die obere Blattkannte geklebt wurde.</note> wahrlich nicht doch auf jeden</p>
+                        sammen<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> fehlt <quote>"mit sammen"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> des
+                    Verfassers der <hi rend="latin"><title ref="#???">Histoire des Republiques<lb/> italiennes</title></hi>. <persName ref="#p0325"
+                        type="bi">Simonde Sismondi</persName> – ein<lb/> sehr wakerer, ja ein rechter Kerl;<lb/> Charackter und gesinnung
+                    vernunft<lb/> und Verstand ohne das was den<lb/> Dichter macht. – Solches erstirbt auch<lb/> mehr und mehr in mir, es war<lb/>
+                    wirklich eine Zeit wo wir die Ruthe<lb/> verdienten.<note resp="#lena.ebert">Dieses Wort befindet sich teilweise auf dem
+                        Siegelausriss, der an die obere Blattkannte geklebt wurde.</note> – was ich itzt<note resp="#lena.ebert"><p xml:lang="de">Im
+                            Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                                <quote>"jetzt"</quote> statt <quote>"itzt"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> verdiene –<lb/> ich
+                    weiß es<note resp="#lena.ebert"><p xml:lang="de">Der Textteil <quote>"weiß es"</quote> befindet sich ebenfalls teilweise auf dem
+                            Siegelausriss, der an die obere Blattkannte geklebt wurde.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wahrlich nicht
+                    doch auf jeden</p>
                 <pb facs="00000160.jpg" n="4" xml:id="Brief043ChamissoandeLaFoye-Blatt4v"/>
-                <p>Fall wenig<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt dieses <quote>"wenig"</quote>.</note> genug. –</p>
+                <p>Fall wenig<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> fehlt dieses <quote>"wenig"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> genug.
+                    –</p>
                 <closer><salute>leb wohl und gedenke meiner, auf<lb/> wiedersehn <unclear cert="high" reason="illegible">ir</unclear>gendwo in dieser
                         oder der neuen oder doch jener Welt.</salute><lb/>
-                    <dateline><date when-iso="1811-08-16">16.<hi rend="superscript">ten</hi> Auguste</date> 11.</dateline></closer>
-                <p rend="align(center)"><stamp>Schwarzer Poststempel, der "<supplied cert="high" reason="illegible">9</supplied>9 <placeName
+                    <dateline><date when-iso="1811-08-16">16.<hi rend="superscript">ten</hi> Auguste</date> 11.</dateline>
+                    <stamp rend="align(center)">Schwarzer Poststempel, der "<supplied cert="high" reason="illegible">9</supplied>9 <placeName
                             ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
-                    <address>
+                    <address rend="align(center)">
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">A Monsieur</hi></foreign></addrLine>
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">Monsieur <persName ref="#p0248" type="bi">Louis de
                                 Lafoye</persName></hi></foreign></addrLine>
@@ -360,8 +376,7 @@
                             >Caen</placeName></hi>.</foreign></addrLine>
                         <addrLine><hi rend="latin"><placeName ref="#l0108" type="bi">Calvados</placeName></hi>.</addrLine>
                     </address>
-                    <seal>Reste des roten Siegels, am linken Blattrand sind griechische Zeichen darauf zu erkennen.</seal>
-                </p>
+                </closer>
             </div>
         </body>
     </text>

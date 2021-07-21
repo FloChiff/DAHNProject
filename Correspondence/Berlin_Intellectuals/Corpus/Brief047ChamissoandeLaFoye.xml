@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -128,9 +135,9 @@
                             </handNote>
                         </handDesc>
                         <sealDesc>
-                            <p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen.</p>
-                            <p xml:lang="en">The letter was closed with a red seal.</p>
-                            <p xml:lang="fr">La lettre a été fermée par un sceau rouge.</p>
+                            <p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen, von denen Reste vorhanden sind..</p>
+                            <p xml:lang="en">The letter was closed with a red seal, of which there are remains. .</p>
+                            <p xml:lang="fr">La lettre a été fermée par un sceau rouge, dont il y a des restes.</p>
                         </sealDesc>
                         <accMat><p xml:lang="de"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Blatt 4v</ref> dient als Briefumschlag.</p>
                             <p xml:lang="en"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Page 4v</ref> is being used as envelope.</p>
@@ -227,8 +234,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -241,9 +249,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000171.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left">1811 ou 1812</note>
+                <note hand="#pencil_1" place="margin(left)">1811 ou 1812</note>
                 <note hand="#pencil_1" place="margin-top" type="foliation"><hi rend="underline">114</hi></note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">85</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">85</note>
                 <p>Ich will dir nur einen papiernen Kuß<lb/> Brüderlich zu werfen, Geschichte w<subst>
                         <del rend="overwritten">u</del>
                         <add place="across">ü</add>
@@ -257,25 +265,27 @@
                             <add place="across">Sohn<unclear cert="low" reason="illegible">e</unclear></add>
                         </subst></rs> im selben Rauchfang weit ab selb ander<lb/> einquatiert, da hab ich von ihm und dessen<lb/>
                     <rs ref="#???" type="bi">Freunde</rs> sehr schöne Dinge von <hi rend="latin"><persName ref="#???" type="bi"
-                        >Quinte</persName></hi><note resp="#lena.ebert">Da Quintus ein sehr häufig vorkommender lateinischer Vorname ist, kann man
-                        kaum rekonstruieren, welchen Text <persName ref="#p0237" type="bi">Chamisso</persName> gelesen hat.</note> und<lb/> zur
-                    abwechselung von der <foreign xml:lang="fr"><hi rend="latin">Chasse aux becasses</hi></foreign><lb/> gelernt – nun ist er Krank
-                        gewesen,<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"ansteckenden Masern"</quote>. Die Lücke ist nicht mit
-                        Auslassungspunkten gekennzeichnet.</note> erst<lb/> die gebenedeite Venerika, so dann die<lb/> gefürchteten ansteckenden
-                        Masern,<note resp="#lena.ebert">In einem Kommentar in der <title ref="#???">Correspondance Générale</title> der <persName
-                            ref="p0255" type="bi">Madame de Staël</persName> wird vermutet, dass <persName ref="#???" type="bi">Albert de
-                            Staël</persName> an einer Geschlechtskrankheit litt (2008: 548, Kommentar 4), auch wenn in ihren Briefen aus dieser Zeit
-                        keine bestimmte Krankheit genannt wird. Tatsächlich wurde die Bezeichnung "venerica" in Zusammenhang mit der Syphillis
-                        verwendet, es ist aber auch nicht ausgeschlossen, dass <persName ref="p0237" type="bi">Chamisso</persName> damit den
-                        Hautausschlag der Masern meint.<!--Quellenangabe fehlt.--></note> da<lb/> bin ich mit von der menschlichen gesellschaft<lb/>
-                    abgesondert worden, <subst>
+                        >Quinte</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Da Quintus ein sehr häufig vorkommender lateinischer Vorname
+                            ist, kann man kaum rekonstruieren, welchen Text <persName ref="#p0237" type="bi">Chamisso</persName> gelesen hat.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> und<lb/> zur abwechselung von der <foreign xml:lang="fr"><hi rend="latin">Chasse
+                            aux becasses</hi></foreign><lb/> gelernt – nun ist er Krank gewesen,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab
+                            diesem Punkt bis <quote>"ansteckenden Masern"</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> erst<lb/> die gebenedeite Venerika, so dann die<lb/> gefürchteten ansteckenden
+                        Masern,<note resp="#lena.ebert"><p xml:lang="de">In einem Kommentar in der <title ref="#???">Correspondance Générale</title>
+                            der <persName ref="p0255" type="bi">Madame de Staël</persName> wird vermutet, dass <persName ref="#???" type="bi">Albert
+                                de Staël</persName> an einer Geschlechtskrankheit litt (2008: 548, Kommentar 4), auch wenn in ihren Briefen aus dieser
+                            Zeit keine bestimmte Krankheit genannt wird. Tatsächlich wurde die Bezeichnung "venerica" in Zusammenhang mit der
+                            Syphillis verwendet, es ist aber auch nicht ausgeschlossen, dass <persName ref="p0237" type="bi">Chamisso</persName> damit
+                            den Hautausschlag der Masern meint.<!--Quellenangabe fehlt.--></p><p xml:lang="en"/><p xml:lang="fr"/></note> da<lb/> bin
+                    ich mit von der menschlichen gesellschaft<lb/> abgesondert worden, <subst>
                         <del rend="strikethrough"><unclear cert="medium" reason="illegible">mit</unclear></del>
                         <add place="above">von</add>
-                    </subst> guten freuden<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"Freunden"</quote> statt <quote>"freuden"</quote>.</note><lb/> war indessen dies Loch nicht
-                    leer. –<lb/> auch einen Duel hat er gehabt, das<lb/> vertreibt alles die Zeit – ich habe<lb/> bei dem allen <hi rend="latin"
-                            ><title ref="#???">Conaxa</title></hi>, das mir in die<lb/> Hand fiel und <del rend="strikethrough">
+                    </subst> guten freuden<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> steht <quote>"Freunden"</quote> statt <quote>"freuden"</quote>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/> war indessen dies Loch nicht leer. –<lb/> auch einen Duel hat er gehabt,
+                    das<lb/> vertreibt alles die Zeit – ich habe<lb/> bei dem allen <hi rend="latin"><title ref="#???">Conaxa</title></hi>, das mir in
+                    die<lb/> Hand fiel und <del rend="strikethrough">
                         <gap extent="1w" reason="illegible"/>
                     </del> das ich wohl mochte<lb/> in sehr schöne<del rend="strikethrough">n</del> Jamben für die <del rend="strikethrough"
                     >Bün</del><lb/> deutsche Büne <del rend="strikethrough">üb<unclear cert="medium" reason="illegible">er</unclear></del> übersetzt,
@@ -301,21 +311,22 @@
                         dieses <quote>"nun"</quote></note> nachden<lb/> lezten berichten, alles ruhig <del rend="strikethrough">
                         <gap extent="2c" reason="illegible"/>
                     </del> bleiben<lb/> wird mich sachte zurücke ziehen. Die<lb/> vorlesungen fangen April an – ich<lb/> kann diese Frau so nicht
-                    verlassen, <add place="inline">ich bleibe.</add><lb/> Die Tage gehen wir nach unserem<lb/> Landgut<note resp="#lena.ebert">Hiermit
-                        ist vermutlich <placeName ref="#l0127" type="bi">Coppet</placeName> gemeint.</note> zurüke und das weitere weiß<lb/> gott, ich
-                    bin müde über alle massen, <add place="inline">ich</add><lb/>
+                    verlassen, <add place="inline">ich bleibe.</add><lb/> Die Tage gehen wir nach unserem<lb/> Landgut<note resp="#lena.ebert"><p
+                            xml:lang="de">Hiermit ist vermutlich <placeName ref="#l0127" type="bi">Coppet</placeName> gemeint.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> zurüke und das weitere weiß<lb/> gott, ich bin müde über alle massen, <add place="inline">ich</add><lb/>
                     <del rend="strikethrough">und</del> habe keinen willen mehr <del rend="strikethrough">
                         <gap extent="3c" reason="illegible"/>
                     </del> ich<lb/> sehe es noch mit an, daß mir die Beine<lb/> vom Leibe weg abfaulen <unclear cert="medium" reason="illegible"
-                        >.</unclear> in Gottes<lb/> nahmen.<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> steht <quote>"Namen"</quote> statt <quote>"nahmen"</quote>.</note> Ich sitze hier biß
-                    zum jüngsten<lb/> Ge<subst>
+                        >.</unclear> in Gottes<lb/> nahmen.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Namen"</quote> statt <quote>"nahmen"</quote>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> Ich sitze hier biß zum jüngsten<lb/> Ge<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">r</add>
-                    </subst>icht,<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"Tage"</quote> statt <quote>"Gericht"</quote>.</note> das beste ist daß ich nicht mehr
-                        geld<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"Gold"</quote> statt <quote>"geld"</quote>.</note><lb/> brauche als ich habe, aber mit der so
+                    </subst>icht,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht <quote>"Tage"</quote> statt <quote>"Gericht"</quote>.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> das beste ist daß ich nicht mehr geld<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Gold"</quote> statt
+                                <quote>"geld"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> brauche als ich habe, aber mit der so
                     genannten<lb/> menschen bestimmung siehts erbärmlich aus.<lb/> Den Sommer werd ich wohl nicht einmal<lb/> dazu kommen, einen Spa<subst>
                         <del rend="overwritten">
                             <gap extent="1c" reason="illegible"/>
@@ -330,7 +341,7 @@
                         </choice></persName> sehr mißvergnügt<lb/> wenn wir zusam̄en im selben Loche<lb/> eingesperrt sind weiß ich eben nicht<lb/>
                     wie es gehen wird – vielleicht schnellt</p>
                 <pb facs="00000173.jpg" n="3"/>
-                <note hand="#pencil_2" place="margin-right" type="foliation">86</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">86</note>
                 <p>mich das weiter. <choice>
                         <unclear cert="high" reason="illegible">auch</unclear>
                         <unclear cert="low" reason="illegible">auf</unclear>
@@ -353,19 +364,20 @@
                         <add place="across">m</add>
                     </subst>angeln es dir<lb/> zu berichten. – und in welche Richtung</p>
                 <closer>
-                    <salute>lebe wohl, ich lebe immer mit dir,<lb/> deiner liebe,<note resp="#lena.ebert">Im Druck der <title ref="#w00253"
-                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt <quote>"deiner liebe"</quote>. Die Lücke ist
-                            nicht mit Auslassungspunkten gekennzeichnet.</note> deinen Jungen, <del rend="strikethrough">und</del><lb/> und deinen
-                        Rauch wolken. lebe wohl<lb/> und mögen die Türken die Schwere noht<lb/> kriegen!<note resp="#lena.ebert">Eventuell gibt es
-                            hier einen Bezug auf <persName ref="#???" type="bi">Kleists</persName>
-                            <title ref="#???">Anekdote aus dem letzten preußischen Kriege</title>
-                            <date when-iso="1810">(1810)</date>, in der der folgende Satz vorkommt: <quote>"Na!" sagt der Kerl, die Pfeife, die er
-                                sich angeschmaucht, im Maul: "nun sollen doch die Franzosen die Schwerenot kriegen!" In: <title ref="#???">Sämtliche
-                                    Erzählungen und Anekdoten</title>, S. 264 f.</quote></note> - </salute>
-                    <seal>Rest des roten Siegels.</seal></closer>
-                <pb facs="00000174.jpg" n="4" xml:id="Brief006ChamissoandeLaFoye-Blatt4v"/>
-                <p rend="align(center)"><stamp>Schwarzer Poststempel, der "99 <placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
-                    <address>
+                    <salute>lebe wohl, ich lebe immer mit dir,<lb/> deiner liebe,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title
+                                    ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt <quote>"deiner
+                                liebe"</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note> deinen Jungen, <del rend="strikethrough">und</del><lb/> und deinen Rauch wolken. lebe wohl<lb/> und mögen die
+                        Türken die Schwere noht<lb/> kriegen!<note resp="#lena.ebert"><p xml:lang="de">Eventuell gibt es hier einen Bezug auf
+                                    <persName ref="#???" type="bi">Kleists</persName>
+                                <title ref="#???">Anekdote aus dem letzten preußischen Kriege</title>
+                                <date when-iso="1810">(1810)</date>, in der der folgende Satz vorkommt: <quote>"Na!" sagt der Kerl, die Pfeife, die er
+                                    sich angeschmaucht, im Maul: "nun sollen doch die Franzosen die Schwerenot kriegen!" In: <title ref="#???"
+                                        >Sämtliche Erzählungen und Anekdoten</title>, S. 264 f.</quote></p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                        - </salute>
+                    <pb facs="00000174.jpg" n="4" xml:id="Brief006ChamissoandeLaFoye-Blatt4v"/>
+                    <stamp rend="align(center)">Schwarzer Poststempel, der "99 <placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
+                    <address rend="align(center)">
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">Monsieur</hi></foreign></addrLine>
                         <addrLine><hi rend="latin"><persName ref="#p0248" type="bi">Louis de la foye</persName></hi></addrLine>
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">professeur de Mathematique</hi></foreign></addrLine>
@@ -378,8 +390,7 @@
                                         <expan>Departement</expan>
                                     </choice> de <placeName ref="#l0108" type="bi">Calvados.</placeName></hi></foreign></addrLine>
                     </address>
-                    <seal>Rest des roten Siegels.</seal>
-                </p>
+                </closer>
             </div>
         </body>
     </text>

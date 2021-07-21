@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -83,8 +84,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany </country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -268,8 +275,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -293,9 +301,10 @@
             <div type="transcription">
                 <pb facs="00000091.jpg" n="1"/>
                 <note hand="#pencil_2" place="margin-top-left inline"><hi rend="underline"><date when-iso="1807">1807</date></hi></note>
-                <note hand="#pencil_1" place="margin-right-top" type="foliation">45</note>
-                <p>An Entschluß ist nicht zu denken, Adelf<note resp="#patricia.fritsch"><persName ref="#p0237" type="bi">Chamisso</persName> redet
-                        seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem griechischen Wort für Bruder "Adelf" (αδελφός) an.</note>, be<subst>
+                <note hand="#pencil_1" place="margin(right)-top" type="foliation">45</note>
+                <p>An Entschluß ist nicht zu denken, Adelf<note resp="#patricia.fritsch"><p xml:lang="de"><persName ref="#p0237" type="bi"
+                                >Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem griechischen Wort für Bruder "Adelf"
+                            (αδελφός) an. </p><p xml:lang="en"/><p xml:lang="fr"/></note>, be<subst>
                         <del rend="overwritten">f</del>
                         <add place="across">v</add>
                     </subst>or <del rend="strikethrough">das</del> gegeben<lb/>ist, worüber Entschluß <subst>
@@ -311,10 +320,11 @@
                         <del rend="strikethrough"><unclear cert="medium" extent="3c" reason="illegible">und</unclear></del>
                         <add place="above">noch</add>
                     </subst> in Verschuftung sinken. —<lb/>wie arg es mit mir sei, Herz und Muth sollen <add place="above">mir</add> immer<lb/>sein. —
-                    Es kann kommen daß ich heirathe.<note resp="#patricia.fritsch">Chamissos Familie plante für ihn schon länger eine standesgemäße
-                        Ehe mit einer jungen, reichen <rs ref="#p0311" type="bi">Erbin</rs> aus <placeName ref="#l0104" type="bi">Meaux</placeName>.
-                        Vgl. <persName ref="#p0408" type="bi">Feudel</persName> (1988): <title ref="#w00321">Adelbert von Chamisso</title>, S.
-                        48.</note> — es<lb/>treibt mich und hält mich vieles ab, darüber Entschluß in<lb/>der Zeit. — es ist mir nun ein Abentheu<subst>
+                    Es kann kommen daß ich heirathe.<note resp="#patricia.fritsch"><p xml:lang="de">Chamissos Familie plante für ihn schon länger eine
+                            standesgemäße Ehe mit einer jungen, reichen <rs ref="#p0311" type="bi">Erbin</rs> aus <placeName ref="#l0104" type="bi"
+                                >Meaux</placeName>. Vgl. <persName ref="#p0408" type="bi">Feudel</persName> (1988): <title ref="#w00321">Adelbert von
+                                Chamisso</title>, S. 48.</p><p xml:lang="en"/><p xml:lang="fr"/></note> — es<lb/>treibt mich und hält mich vieles ab,
+                    darüber Entschluß in<lb/>der Zeit. — es ist mir nun ein Abentheu<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">er</add>
                     </subst> zu bestehen.<lb/>— vielleicht verschafft mir <persName ref="#p0291" type="bi">Koreff</persName> eine Stelle in <hi
@@ -323,14 +333,17 @@
                     Aber, hab ich auf jeglichen<lb/>fall wo mir Freiheit <choice>
                         <unclear cert="high" extent="5c" reason="illegible">innen</unclear>
                         <unclear cert="low" extent="5c" reason="illegible">immer</unclear>
-                    </choice><note resp="#patricia.fritsch">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht "innen".</note> Bleibt, nieder gelegt. —<lb/>wie würdest du bald entschlossen sein? —</p>
-                <p>es ist zuviel<note resp="#patricia.fritsch">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht "ja viel".</note> das wir sprechen müssen, das schreiben ist<lb/>zu arm, auch brauchen wir <unclear
-                        cert="high" extent="5c" reason="stain">beide</unclear> uns zu <unclear cert="high" extent="1c" reason="stain"
-                        >u</unclear>marmen.<lb/><foreign xml:lang="grc"><hi rend="greek">Όρκον μίμνασθαι</hi></foreign><note resp="#patricia.fritsch"
-                        >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlen die griechischen
-                        Worte. Übersetzt bedeuten sie: "Erinnere dich an den Schwur!"</note>, en<subst>
+                    </choice><note resp="#patricia.fritsch"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht "innen".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Bleibt, nieder gelegt.
+                    —<lb/>wie würdest du bald entschlossen sein? —</p>
+                <p>es ist zuviel<note resp="#patricia.fritsch"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> steht "ja viel".</p><p xml:lang="en"/><p xml:lang="fr"/></note> das wir sprechen
+                    müssen, das schreiben ist<lb/>zu arm, auch brauchen wir <unclear cert="high" extent="5c" reason="stain">beide</unclear> uns zu
+                        <unclear cert="high" extent="1c" reason="stain">u</unclear>marmen.<lb/><foreign xml:lang="grc"><hi rend="greek">Όρκον
+                            μίμνασθαι</hi></foreign>
+                    <note resp="#patricia.fritsch"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> fehlen die griechischen Worte. Übersetzt bedeuten sie: "Erinnere dich an den Schwur!"</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note>, en<subst>
                         <del rend="overwritten">d</del>
                         <add place="across">t</add>
                     </subst>weder kom̄ ich zu dir, wie ich es<lb/>dir im letzten Briefe <add place="above">noch</add> versprach, — oder — geh<subst>
@@ -340,10 +353,10 @@
                         <del rend="overwritten">w</del>
                         <add place="across">W</add>
                     </subst>egen auf.<lb/></p>
-                <p><note resp="#patricia.fritsch">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                        erfolgt ab hier eine die nächsten zwei Absätze umfassende Auslassung, die <persName ref="#p0261" type="bi">Riegel</persName>
-                        mit "…" andeutet.</note>adressen sind. <hi rend="latin"><persName ref="#p0291" type="bi">Koreff</persName>. <foreign
-                            xml:lang="fr">Place Victoire <choice>
+                <p><note resp="#patricia.fritsch"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> erfolgt ab hier eine die nächsten zwei Absätze umfassende Auslassung, die <persName ref="#p0261"
+                                type="bi">Riegel</persName> mit "…" andeutet.</p><p xml:lang="en"/><p xml:lang="fr"/></note>adressen sind. <hi
+                        rend="latin"><persName ref="#p0291" type="bi">Koreff</persName>. <foreign xml:lang="fr">Place Victoire <choice>
                                 <abbr>N.<hi rend="superscript">o</hi></abbr>
                                 <expan>Numéro</expan>
                             </choice> 10.</foreign></hi> ich selbst<lb/>entweder zu <hi rend="latin"><placeName ref="#l0104" type="bi"><choice>
@@ -387,51 +400,54 @@
                                 <add place="across">d</add>
                             </subst>' Engente</persName></hi> zu <hi rend="latin"><placeName ref="#l0106" type="bi"
                     >Troye</placeName></hi><lb/>schreibe mir so frühe und sicher wie du kannst deinen<lb/><hi rend="latin">Marcheroute</hi>.</p>
-                <p>Ich glaube dir noch ungefehr 4 <foreign xml:lang="fr"><hi rend="latin">Louis dor</hi></foreign><note resp="#patricia.fritsch">Der
-                        Louis d'or ist eine von <persName ref="#p0312" type="bi">Ludwig XIII.</persName>
-                        <date when-iso="1640/1641">1640/41</date> eingeführte französische Goldmünze.</note> schuldig<lb/>zu sein. — die Ankunft der
-                    Bücher ist mir ein Stein vom Herzen.<note resp="#patricia.fritsch">Ab dieser Stelle ist der Brieftext wieder in den <title
-                            ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> abgedruckt.</note></p>
+                <p>Ich glaube dir noch ungefehr 4 <foreign xml:lang="fr"><hi rend="latin">Louis dor</hi></foreign><note resp="#patricia.fritsch"><p
+                            xml:lang="de">Der Louis d'or ist eine von <persName ref="#p0312" type="bi">Ludwig XIII.</persName>
+                            <date when-iso="1640/1641">1640/41</date> eingeführte französische Goldmünze.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> schuldig<lb/>zu sein. — die Ankunft der Bücher ist mir ein Stein vom Herzen.<note resp="#patricia.fritsch"><p
+                            xml:lang="de">Ab dieser Stelle ist der Brieftext wieder in den <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> abgedruckt.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>noch mach ich jetzt nichts als schlafen. — kein<del rend="strikethrough">en</del><lb/>Griff in die Saiten kann mir gelingen, <subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">k</add>
-                    </subst>örper und<lb/>Seele haben nicht ruhe. <add place="above">ich kein zu Haus<note resp="#patricia.fritsch">Im Druck der
-                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "ich keine [Ruhe] zu
-                            Hause".</note></add> — den letzten <rs ref="#w00258" type="bi">Grünen</rs><note resp="#patricia.fritsch">Aufgrund der
-                        grünen Einbandfarbe wurden die <date when-iso="1804/1806">1804 bis 1806</date> publizierten <title ref="#w00255"
-                            >Musenalmanache</title> von <persName ref="#p0237" type="bi">Chamisso</persName> und seinem Freundeskreis als "Grüne" oder
-                        "Grünlinge" bezeichnet.</note><lb/>werd ich dir mittheilen und edwa 2000 Verse<lb/>meines <title ref="#w00279"
-                        >Fortunats</title><note resp="#patricia.fritsch">Der Bezug auf das im <date when-iso="1806-10">Oktober 1806</date> verfasste
-                        Fragment <title ref="#w00279">Fortunati Glückseckel und Wunschhütlein. Ein Spiel</title> ist wahrscheinlich, da <persName
-                            ref="#p0237" type="bi">Chamisso</persName> das Versdrama auch in seinen anderen Briefen stets "Fortunat"
-                    nennt.</note>.</p>
-                <p><closer rend="align(right)"><salute><foreign xml:lang="grc"><hi rend="greek">χαiρε τεκvov</hi></foreign>.</salute><lb rend="both"
-                                /><signed><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert.</persName></hi></signed><lb rend="both"
-                            /><foreign xml:lang="grc"><hi rend="greek"><choice>
-                                    <abbr>τ τ π. α</abbr>
-                                    <expan>τò τоυ πόλου αστρον</expan>
-                                </choice></hi></foreign><note resp="#patricia.fritsch">Im Druck der <title ref="#w00253">Correspondences d'Adalbert de
-                                Chamisso, Fragments inédits</title> fehlen die griechische Grußformel, die Unterschrift <persName ref="#p0237"
-                                type="bi">Chamissos</persName> und das Kürzel des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>. Die
-                            Übersetzung der Grußformel lautet: "Sei gegrüßt, Nachkomme". Das Kürzel τ.τ.π.α. steht für τò τоυ πόλου αστρον
-                            ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName
-                                ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date
-                                when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</note></closer></p>
-                <pb facs="00000093.jpg" n="3"/>
-                <note hand="#pencil_1" place="margin-top-right" type="foliation">46</note>
-                <pb facs="00000094.jpg" n="4" xml:id="Brief026ChamissoandeLaFoye-Blatt46v"/>
-                <p rend="align(center)"><note hand="#postman" place="inline"><unclear cert="medium" extent="1c" reason="illegible">6</unclear></note>
+                    </subst>örper und<lb/>Seele haben nicht ruhe. <add place="above">ich kein zu Haus<note resp="#patricia.fritsch"><p xml:lang="de"
+                                >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "ich keine
+                                [Ruhe] zu Hause".</p><p xml:lang="en"/><p xml:lang="fr"/></note></add> — den letzten <rs ref="#w00258" type="bi"
+                        >Grünen</rs><note resp="#patricia.fritsch"><p xml:lang="de">Aufgrund der grünen Einbandfarbe wurden die <date
+                                when-iso="1804/1806">1804 bis 1806</date> publizierten <title ref="#w00255">Musenalmanache</title> von <persName
+                                ref="#p0237" type="bi">Chamisso</persName> und seinem Freundeskreis als "Grüne" oder "Grünlinge" bezeichnet.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/>werd ich dir mittheilen und edwa 2000 Verse<lb/>meines <title ref="#w00279"
+                        >Fortunats</title><note resp="#patricia.fritsch"><p xml:lang="de">Der Bezug auf das im <date when-iso="1806-10">Oktober
+                                1806</date> verfasste Fragment <title ref="#w00279">Fortunati Glückseckel und Wunschhütlein. Ein Spiel</title> ist
+                            wahrscheinlich, da <persName ref="#p0237" type="bi">Chamisso</persName> das Versdrama auch in seinen anderen Briefen stets
+                            "Fortunat" nennt.</p><p xml:lang="en"/><p xml:lang="fr"/></note>.</p>
+                <closer rend="align(right)"><salute><foreign xml:lang="grc"><hi rend="greek">χαiρε τεκvov</hi></foreign>.</salute><lb rend="both"
+                            /><signed><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert.</persName></hi></signed><lb rend="both"/><foreign
+                        xml:lang="grc"><hi rend="greek"><choice>
+                                <abbr>τ τ π. α</abbr>
+                                <expan>τò τоυ πόλου αστρον</expan>
+                            </choice></hi></foreign><note resp="#patricia.fritsch"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondences
+                                d'Adalbert de Chamisso, Fragments inédits</title> fehlen die griechische Grußformel, die Unterschrift <persName
+                                ref="#p0237" type="bi">Chamissos</persName> und das Kürzel des <orgName ref="#g0031" type="bi"
+                                >Nordsternbunds</orgName>. Die Übersetzung der Grußformel lautet: "Sei gegrüßt, Nachkomme". Das Kürzel τ.τ.π.α. steht
+                            für τò τоυ πόλου αστρον ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi"
+                                >Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248"
+                                type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und
+                            Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <pb facs="00000093.jpg" n="3"/>
+                    <note hand="#pencil_1" place="margin-top-right" type="foliation">46</note>
+                    <pb facs="00000094.jpg" n="4" xml:id="Brief026ChamissoandeLaFoye-Blatt46v"/>
+                    <note hand="#postman" place="inline"><unclear cert="medium" extent="1c" reason="illegible">6</unclear></note>
                     <stamp>Poststempel: "49.<lb/>
                         <hi rend="majuscule latin">Vertus</hi>"</stamp>
                     <hi rend="latin">
-                        <address>
+                        <address rend="align(center)">
                             <addrLine><persName ref="#p0248" type="bi">Louis de La foye</persName></addrLine>
                             <addrLine><placeName ref="#l0148" type="bi">Vangeux</placeName></addrLine>
                             <addrLine><placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
                             <addrLine><hi n="3" rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi></addrLine>
                         </address>
                     </hi>
-                </p>
+                </closer>
             </div>
         </body>
     </text>

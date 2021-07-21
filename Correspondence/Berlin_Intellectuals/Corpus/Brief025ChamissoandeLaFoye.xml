@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -84,8 +85,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -272,8 +279,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -298,7 +306,7 @@
             <div type="transcription">
                 <pb facs="00000087.jpg" n="1"/>
                 <note hand="#pencil_3" place="margin_right" type="foliation">43</note>
-                <note hand="#pencil_1" place="margin-left-diagonal inline">1806, <hi rend="latin"><foreign xml:lang="fr">ou</foreign></hi><lb/><hi
+                <note hand="#pencil_1" place="margin(left)-diagonal inline">1806, <hi rend="latin"><foreign xml:lang="fr">ou</foreign></hi><lb/><hi
                         rend="large underline">1807</hi></note>
                 <note hand="#pencil_2" place="margin-top-diagonal align(center)" type="foliation"><hi rend="underline">108</hi></note>
                 <p>Ich werde gegen den 15. in <placeName ref="#l0044" type="bi">Paris</placeName> wieder<lb/> eintreffen und du kannst mir dort
@@ -308,12 +316,13 @@
                     <persName ref="#p0190" type="bi">Wilhelm Schlegel</persName> interessirt<lb/>sich sehr für das <subst>
                         <del rend="overwritten">u</del>
                         <add place="across">U</add>
-                    </subst>nternehmen<note resp="#beatrice.haeusler">Bei <persName ref="#p0261" type="bi">Riegel</persName> wird in diesem
-                        Zusammenhang auf die Zusammenarbeit von <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0247"
-                            type="bi">Helmina von Chézy</persName> an einer Übersetzung von <persName ref="#p0190" type="bi">Schlegels</persName>
-                        <title ref="#w00212">Über dramatische Kunst und Literatur. Vorlesungen</title> ins Französische verwiesen.</note> und
-                    hat<lb/>in eigenem Nahmen mit dem <rs ref="#p0410" type="bi">Buch<lb break="no" type="none"/>händler</rs> lontrahirt<note
-                        resp="#anna.busch">Vermutlich ist "contrahirt" gemeint.</note>.</p>
+                    </subst>nternehmen<note resp="#beatrice.haeusler"><p xml:lang="de">Bei <persName ref="#p0261" type="bi">Riegel</persName> wird in
+                            diesem Zusammenhang auf die Zusammenarbeit von <persName ref="#p0237" type="bi">Chamisso</persName> und <persName
+                                ref="#p0247" type="bi">Helmina von Chézy</persName> an einer Übersetzung von <persName ref="#p0190" type="bi"
+                                >Schlegels</persName>
+                            <title ref="#w00212">Über dramatische Kunst und Literatur. Vorlesungen</title> ins Französische verwiesen.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> und hat<lb/>in eigenem Nahmen mit dem <rs ref="#p0410" type="bi">Buch<lb
+                            break="no" type="none"/>händler</rs> lontrahirt<note resp="#anna.busch">Vermutlich ist "contrahirt" gemeint.</note>.</p>
                 <p rend="nolb">Die 1<hi rend="superscript">te</hi> A<add place="inline">u</add>flage<lb/>125. <hi rend="latin">louis dor honnorar</hi>
                     fürdie<lb/>3 Bände, und halb soviel für jede<lb/>folgende. Daß sind unsere bedingungen<lb/>und binnen 3 höchstens 4
                     Monathe<lb/>soll das <rs ref="#w00212" type="bi">Werk</rs> erscheinen, <persName ref="#p0190" type="bi">Schlegel</persName>
@@ -325,11 +334,12 @@
                         <add place="across">eh</add>
                     </subst>t<lb/>unsere Arbeit durch. er ist ein Meister<lb/>der französchen Sprache.</p>
                 <p>unsere <rs ref="#p0247" type="bi">Freundin</rs>
-                    <note resp="#beatrice.haeusler">Von der Annahme ausgehend, dass die Arbeit an den <title ref="#w00212">Vorlesungen</title> gemeint
-                        ist, muss es sich um <persName ref="#p0247" type="bi">Helmina von Chézy</persName> handeln.</note>
-                    <lb/>soll auch so lange Bleiben<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> heisst es: "solange da bleiben".</note> und in <placeName ref="#l0096" type="bi"
-                        >Frankreich</placeName>
+                    <note resp="#beatrice.haeusler"><p xml:lang="de">Von der Annahme ausgehend, dass die Arbeit an den <title ref="#w00212"
+                                >Vorlesungen</title> gemeint ist, muss es sich um <persName ref="#p0247" type="bi">Helmina von Chézy</persName>
+                            handeln.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <lb/>soll auch so lange Bleiben<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> heisst es: "solange da bleiben".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> und in <placeName ref="#l0096" type="bi">Frankreich</placeName>
                     <lb/>arbeiten. — Was die Grosse <pb facs="00000088.jpg" n="2"/>Marionette anbetrifft und die Archiven<lb/> weis ich dir eben
                     nichts neues zu sagen<lb/>ich habe <hi rend="latin"><persName ref="#p0334" type="bi">Lanjuinai</persName></hi> nicht wieder<note
                         resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird
@@ -350,8 +360,9 @@
                     Verhältnisse<lb/>nichts hat thun wollen, meinte es solle<lb/>mehr <subst>
                         <del rend="overwritten">e</del>
                         <add place="across">E</add>
-                    </subst>rnst in ihr Leben.<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                            Fragments inédits</title> wird der Punkt durch ein Ausrufungszeichen ersetzt.</note></p>
+                    </subst>rnst in ihr Leben.<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> wird der Punkt durch ein Ausrufungszeichen ersetzt.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <lb rend="both"/>
                 <closer>
                     <hi rend="latin"><placeName ref="#l0097" type="bi">Vertus</placeName></hi>
@@ -359,101 +370,109 @@
                 </closer>
                 <pb facs="00000089.jpg" n="3"/>
                 <note hand="#pencil_3" place="margin_right" type="foliation">44</note>
-                <hi rend="latin">
-                    <lg type="poem">
-                        <l>lebtest du So Sehr im Scherze</l>
-                        <l>Dass gar manches du versch<unclear cert="high" extent="1c" reason="strikethrough">m</unclear>erzet,</l>
-                        <l>Das <subst>
-                                <del rend="overwritten"><gap extent="1c" reason="overwritten"/></del>
-                                <add place="across">V</add>
-                            </subst>erscherzte leicht verschmerzet,</l>
-                        <l>Und gescherzt Selbst mit dem Schmerze,</l>
-                        <l>Warum<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                    inédits</title> steht "Was" statt "Warum".</note> nähmst du, liebes Herze,</l>
-                        <l>Heute dir im Ernst zu Herzen,</l>
-                        <l>Auch den Ernst nun lieb zu herzen?</l>
-                        <l>Viel zu ernsthaft ist der Ernst!</l>
-                        <l>Dass du mir Ja nicht verlernst</l>
-                        <l>Noch am Ende gar<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                    Fragments inédits</title> steht "zar" statt "gar", was vermutlich ein Druckfehler ist.</note> zu Scherzen.</l>
-                        <milestone rend="horizontal-rule" unit="none"/>
-                        <note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> wird eine Leerzeile statt dieses Striches gedruckt.</note>
-                        <l>Lass dich ernste Bestien lehren</l>
-                        <l>Aber nichts von ihnen lerne</l>
-                        <l>höre was sie <subst>
-                                <del rend="overwritten"><unclear extent="2c" reason="overwritten">sa</unclear>gen</del>
-                                <add place="across">lehren</add>
-                            </subst> gerne</l>
-                        <l>Doch in Scherz es zu verkehren.<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                                    Chamisso, Fragments inédits</title> wird der Punkt durch ein Ausrufungszeichen ersetzt.</note></l>
-                        <l>lieblich leicht gelebt in Ehren,</l>
-                        <l>Und gescherzt ohne Beschwerde!</l>
-                        <l>Dass ihr Rath zu Schanden werde,</l>
-                        <l>Den sie Altklug dich gelehrt!</l>
-                        <l>Sieh! dein Scherzen<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                    Fragments inédits</title> steht "Scherz" statt "Scherzen".</note> hat mehr Wehrt</l>
-                        <l>Als der Ernst der ganzen Erde.</l>
-                        <milestone rend="horizontal-rule" unit="none"/>
-                        <note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> wird eine Leerzeile statt dieses Striches gedruckt.</note>
-                        <l>Scherze dich über das Leben</l>
-                        <l>Leicht hinweg, und keine Reue!</l>
-                        <l>fest bewahre dir die Treue,</l>
-                        <l>Lebe wie's dir Gott gegeben.</l>
-                        <l>Das ist ja die Weisheit eben,</l>
-                        <l>Und das weiss ein jeder Christ:</l>
-                        <l>Bleibe jeder, der er ist. –<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                                    Chamisso, Fragments inédits</title> wird der Punkt sowie der Strich durch ein Ausrufungszeichen
-                            ersetzt.</note></l>
-                        <l>Liebe, liebliche Natur,</l>
-                        <l>Du verlörest immer nur. –<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                                    Chamisso, Fragments inédits</title> wird der Punkt sowie der Strich durch einen Doppelpunkt ersetzt.</note></l>
-                        <l>Bleibe <subst>
-                                <del rend="overwritten">d</del>
-                                <add place="across">D</add>
-                            </subst>u ja wie du bist.<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                                    Chamisso, Fragments inédits</title> wird der Punkt durch ein Ausrufungszeichen ersetzt.</note></l>
-                    </lg>
-                </hi>
-                <p><add place="margin-right-vertical">Dem nach bin ich in <placeName ref="#l0044" type="bi">Paris</placeName> auf 4 Monathe fest. ist
+                <postscript>
+                    <p><hi rend="latin">
+                            <lg type="poem">
+                                <l>lebtest du So Sehr im Scherze</l>
+                                <l>Dass gar manches du versch<unclear cert="high" extent="1c" reason="strikethrough">m</unclear>erzet,</l>
+                                <l>Das <subst>
+                                        <del rend="overwritten"><gap extent="1c" reason="overwritten"/></del>
+                                        <add place="across">V</add>
+                                    </subst>erscherzte leicht verschmerzet,</l>
+                                <l>Und gescherzt Selbst mit dem Schmerze,</l>
+                                <l>Warum<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                                Chamisso, Fragments inédits</title> steht "Was" statt "Warum".</p><p xml:lang="en"/><p xml:lang="fr"
+                                        /></note> nähmst du, liebes Herze,</l>
+                                <l>Heute dir im Ernst zu Herzen,</l>
+                                <l>Auch den Ernst nun lieb zu herzen?</l>
+                                <l>Viel zu ernsthaft ist der Ernst!</l>
+                                <l>Dass du mir Ja nicht verlernst</l>
+                                <l>Noch am Ende gar<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                                d'Adalbert de Chamisso, Fragments inédits</title> steht "zar" statt "gar", was vermutlich ein
+                                            Druckfehler ist.</p><p xml:lang="en"/><p xml:lang="fr"/></note> zu Scherzen.</l>
+                                <milestone rend="horizontal-rule" unit="none"/>
+                                <note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                            Fragments inédits</title> wird eine Leerzeile statt dieses Striches gedruckt.</p><p xml:lang="en"/><p
+                                        xml:lang="fr"/></note>
+                                <l>Lass dich ernste Bestien lehren</l>
+                                <l>Aber nichts von ihnen lerne</l>
+                                <l>höre was sie <subst>
+                                        <del rend="overwritten"><unclear extent="2c" reason="overwritten">sa</unclear>gen</del>
+                                        <add place="across">lehren</add>
+                                    </subst> gerne</l>
+                                <l>Doch in Scherz es zu verkehren.<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird der Punkt durch ein
+                                            Ausrufungszeichen ersetzt.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
+                                <l>lieblich leicht gelebt in Ehren,</l>
+                                <l>Und gescherzt ohne Beschwerde!</l>
+                                <l>Dass ihr Rath zu Schanden werde,</l>
+                                <l>Den sie Altklug dich gelehrt!</l>
+                                <l>Sieh! dein Scherzen<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                                d'Adalbert de Chamisso, Fragments inédits</title> steht "Scherz" statt "Scherzen".</p><p xml:lang="en"
+                                            /><p xml:lang="fr"/></note> hat mehr Wehrt</l>
+                                <l>Als der Ernst der ganzen Erde.</l>
+                                <milestone rend="horizontal-rule" unit="none"/>
+                                <note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                            Fragments inédits</title> wird eine Leerzeile statt dieses Striches gedruckt.</p><p xml:lang="en"/><p
+                                        xml:lang="fr"/></note>
+                                <l>Scherze dich über das Leben</l>
+                                <l>Leicht hinweg, und keine Reue!</l>
+                                <l>fest bewahre dir die Treue,</l>
+                                <l>Lebe wie's dir Gott gegeben.</l>
+                                <l>Das ist ja die Weisheit eben,</l>
+                                <l>Und das weiss ein jeder Christ:</l>
+                                <l>Bleibe jeder, der er ist. –<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird der Punkt sowie der Strich
+                                            durch ein Ausrufungszeichen ersetzt.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
+                                <l>Liebe, liebliche Natur,</l>
+                                <l>Du verlörest immer nur. –<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird der Punkt sowie der Strich
+                                            durch einen Doppelpunkt ersetzt.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
+                                <l>Bleibe <subst>
+                                        <del rend="overwritten">d</del>
+                                        <add place="across">D</add>
+                                    </subst>u ja wie du bist.<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird der Punkt durch ein
+                                            Ausrufungszeichen ersetzt.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
+                            </lg>
+                        </hi></p>
+                    <p rend="margin(right)-vertical">Dem nach bin ich in <placeName ref="#l0044" type="bi">Paris</placeName> auf 4 Monathe fest. ist
                             <gap extent="1w" reason="damage"/>
-                        <lb/>noch nichts loß wird es die Zeit sein zu dir zu wollen<note resp="#sabine.seifert">Im Druck der <title ref="#w00253"
-                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "wallen" statt "wollen".</note>. —
-                        auch<lb/>hat <persName ref="#p0190" type="bi">Schlegel</persName> (fals einer, dem es vorgeschlagen, wie zu glauben,
-                        nicht<lb/>annehme) mir in <placeName ref="#l0145" type="bi">Nápoleon</placeName>, bei dem der Deutschen Sprache
-                        und<lb/>litteratur befliessenen <unclear cert="medium" extent="1w" reason="illegible">Prefeckt</unclear> einem sehr
-                        vortreflichen Mann eine angenehme<lb/>Anstellung und Garzunen<note resp="sophia.zeil">Diener.</note> Statzion<note
+                        <lb/>noch nichts loß wird es die Zeit sein zu dir zu wollen<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title
+                                    ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "wallen" statt
+                                "wollen".</p><p xml:lang="en"/><p xml:lang="fr"/></note>. — auch<lb/>hat <persName ref="#p0190" type="bi"
+                            >Schlegel</persName> (fals einer, dem es vorgeschlagen, wie zu glauben, nicht<lb/>annehme) mir in <placeName ref="#l0145"
+                            type="bi">Nápoleon</placeName>, bei dem der Deutschen Sprache und<lb/>litteratur befliessenen <unclear cert="medium"
+                            extent="1w" reason="illegible">Prefeckt</unclear> einem sehr vortreflichen Mann eine angenehme<lb/>Anstellung und
+                            Garzunen<note resp="sophia.zeil"><p xml:lang="de">Diener.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Statzion<note
                             resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            steht an dieser Stelle "Garçon-Station". Der dem Satzende folgende Strich wird ausgelassen.</note> anzubieten. —
-                    </add></p>
+                            steht an dieser Stelle "Garçon-Station". Der dem Satzende folgende Strich wird ausgelassen.</note> anzubieten. — </p>
+                </postscript>
                 <pb facs="00000090.jpg" n="4" xml:id="Brief025ChamissoandeLaFoye-Blatt44v"/>
-                <address>
-                    <hi rend="latin"><foreign xml:lang="fr">
-                            <addrLine>A Monsieur</addrLine>
-                            <addrLine>Monsiour <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
-                            <stamp>Poststempel mit den Angaben: 49<lb/><hi rend="majuscule"><placeName ref="#l0097" type="bi"
-                                >VERTUS</placeName></hi></stamp>
-                            <addrLine><hi rend="underline">à <placeName ref="#l0107" type="bi">Caen</placeName>.</hi></addrLine>
-                            <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>.<note resp="#sabine.seifert">Im Druck der <title
-                                        ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die Adresse
-                                    ausgelassen.</note></addrLine>
-                        </foreign></hi>
-                </address>
-                <p>
-                    <add place="bottom-upsidedown">
-                        <choice>
-                            <abbr>S.</abbr>
-                            <expan><persName ref="#p0190" type="bi">Schlegel</persName></expan>
-                        </choice><note resp="#beatrice.haeusler">Bei <persName ref="#p0261" type="bi">Riegel</persName> steht S. für <persName
-                                ref="#p0190" type="bi">Schlegel</persName> und im Zusammenhang mit dem im Brief erwähnten gemeinschaftlichen
-                            Übersetzungsprojekt sind die ausgewiesenen personellen Bezüge sehr wahrscheinlich.</note> ist mit mir<lb/>sehr, mit <rs
-                            ref="#p0247" type="bi">ihr</rs> weniger<lb/>zufrieden. –<note resp="#sabine.seifert">Im Druck der <title ref="#w00253"
-                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird der Strich ausgelassen.</note>
-                    </add>
-                </p>
+                <closer><foreign xml:lang="fr">
+                        <hi rend="latin"><address>
+                                <addrLine>A Monsieur</addrLine>
+                                <addrLine>Monsiour <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
+                                <addrLine><stamp>Poststempel mit den Angaben: 49<lb/><hi rend="majuscule"><placeName ref="#l0097" type="bi"
+                                                >VERTUS</placeName></hi></stamp></addrLine>
+                                <addrLine><hi rend="underline">à <placeName ref="#l0107" type="bi">Caen</placeName>.</hi></addrLine>
+                                <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>.<note resp="#sabine.seifert"><p xml:lang="de">Im
+                                            Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die
+                                            Adresse ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note></addrLine>
+                            </address></hi>
+                    </foreign></closer>
+                <note place="bottom-upsidedown">
+                    <choice>
+                        <abbr>S.</abbr>
+                        <expan><persName ref="#p0190" type="bi">Schlegel</persName></expan>
+                    </choice><note resp="#beatrice.haeusler"><p xml:lang="de">Bei <persName ref="#p0261" type="bi">Riegel</persName> steht S. für
+                                <persName ref="#p0190" type="bi">Schlegel</persName> und im Zusammenhang mit dem im Brief erwähnten gemeinschaftlichen
+                            Übersetzungsprojekt sind die ausgewiesenen personellen Bezüge sehr wahrscheinlich.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> ist mit mir<lb/>sehr, mit <rs ref="#p0247" type="bi">ihr</rs> weniger<lb/>zufrieden. –<note resp="#sabine.seifert"
+                            ><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird
+                            der Strich ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                </note>
                 <note hand="#postman">6</note>
-                <seal>Reste des Siegels in roter Farbe.</seal>
             </div>
         </body>
     </text>

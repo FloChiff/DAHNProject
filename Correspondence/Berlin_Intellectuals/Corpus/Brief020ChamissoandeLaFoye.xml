@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -208,8 +215,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">Notes added and some corrections</change>
         </revisionDesc>
@@ -218,11 +226,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000071.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">35</note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 49. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">35</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 49. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p><hi rend="underline large">Nachtrag</hi>. versäume doch auch nicht von <supplied reason="damage">dein</supplied>er Seite Anfragen
                     ergehen zu lassen wegen deiner<lb/>Bücher. vom 27. August schreibt mir M<gap extent="one word" reason="damage"/>männchen:
                         <persName ref="#p0339" type="bi">Quien</persName> sagt mir, es wäre gar keine<lb/>Frage daß die Bücher jetzt schon lange in
@@ -268,13 +276,14 @@
                     frug,<lb/>dieser Freund war <del rend="strikethrough">auch</del> die Ehrlichkeit selbst, er bemühte sich sehr und hatte endlich
                     einen gl<supplied cert="medium" reason="damage">ücklichen</supplied><lb/>
                     <supplied cert="high" reason="damage">g</supplied>uten Fund heraus, es war zwar <del rend="strikethrough">f</del> wenig geld da,
-                    aber desto mehr Tugend, <gap extent="one word" reason="damage"/><note resp="#beschka.gloy">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "nun".</note> also<lb/><supplied cert="high"
-                        reason="damage">k</supplied>am der Biedermann zu einer Mamsel <gap extent="one word" reason="illegible"/> zweier gesund und
-                    frisch auf leb<supplied cert="medium" reason="damage">enden</supplied><lb/><supplied cert="high" reason="damage"
-                    >s</supplied>tarken grossen Jungen Mutter, die er für eine <hi rend="underline">unangestochene Jungfrau</hi><lb/><gap
-                        extent="one word" reason="illegible"/><note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert
-                            de Chamisso, Fragments inédits</title> steht "genommen".</note>, ich habe diese Tugendreiche Dame gekannt<note
+                    aber desto mehr Tugend, <gap extent="one word" reason="damage"/><note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "nun".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> also<lb/><supplied cert="high" reason="damage">k</supplied>am der Biedermann zu einer Mamsel <gap
+                        extent="one word" reason="illegible"/> zweier gesund und frisch auf leb<supplied cert="medium" reason="damage"
+                        >enden</supplied><lb/><supplied cert="high" reason="damage">s</supplied>tarken grossen Jungen Mutter, die er für eine <hi
+                        rend="underline">unangestochene Jungfrau</hi><lb/><gap extent="one word" reason="illegible"/><note resp="#beschka.gloy"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                            "genommen".</p><p xml:lang="en"/><p xml:lang="fr"/></note>, ich habe diese Tugendreiche Dame gekannt<note
                         resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> endet
                         der Brief an dieser Stelle.</note> auf <gap extent="one letter" reason="illegible"/>2 Schritte <gap extent="one word"
                         reason="illegible"/><lb/><supplied cert="medium" reason="damage">Da</supplied>me einem, der selbst nicht ihr Ehmann war, die
@@ -283,15 +292,15 @@
                     <salute rend="align(center)"><foreign xml:lang="grc">Χαῖρε</foreign></salute>.<signed rend="align(right)"
                     >Adelbert</signed></closer>
                 <pb facs="00000072.jpg" n="2" xml:id="Brief020ChamissoandeLaFoye-Blatt35v"/>
-                <seal>Siegelreste.</seal>
                 <note hand="#pencil_2" type="foliation"><hi rend="underline">147</hi></note>
                 <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
-                <address>
-                    <addrLine><persName ref="#p0248" type="bi">Louis de La Foye</persName></addrLine>
-                    <addrLine>au <placeName ref="#l0148" type="bi">Vaugeux</placeName> à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
-                    <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>.</addrLine>
-                </address>
-                <stamp>Poststempel mit den Worten "2 StGermain En-Laye"</stamp>
+                <closer><address>
+                        <addrLine><persName ref="#p0248" type="bi">Louis de La Foye</persName></addrLine>
+                        <addrLine>au <placeName ref="#l0148" type="bi">Vaugeux</placeName> à <placeName ref="#l0107" type="bi"
+                            >Caen</placeName></addrLine>
+                        <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>.</addrLine>
+                    </address>
+                    <stamp>Poststempel mit den Worten "2 StGermain En-Laye"</stamp></closer>
                 <note hand="brown_ink" place="end">90 – 80<lb/><hi rend="underline">10 . 90</hi><lb/>41 . 10<lb/><hi rend="underline"> 9
                     90</hi><lb/>51 00<lb/><hi rend="underline"> 4 90</hi><lb/>55 90</note>
             </div>

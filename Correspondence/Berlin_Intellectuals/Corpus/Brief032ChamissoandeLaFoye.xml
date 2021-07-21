@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xml:id="STUDENT-Brief032ChamissoandeLaFoye_beschka.gloy" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -204,8 +211,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">notes added and some corrections</change>
         </revisionDesc>
@@ -214,14 +222,14 @@
         <body>
             <div type="transcription">
                 <pb facs="00000113.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">56</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">56</note>
                 <note hand="#pencil_2" place="top" type="foliation">137</note>
-                <note hand="#pencil_3" place="margin-left"><hi rend="latin"><date when-iso="1829-06-04">4 <foreign xml:lang="fr">Juin</foreign>
+                <note hand="#pencil_3" place="margin(left)"><hi rend="latin"><date when-iso="1829-06-04">4 <foreign xml:lang="fr">Juin</foreign>
                             1829</date> (?)</hi></note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 68. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 68. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p> Es drängt mich daß ich dir schreiben muß<lb/>seis auch nur um dir zu sagen daß ich dir<lb/>eigentlich nicht schreiben <add
                         place="above">kann</add> und mich nach dir<lb/>sehne, – ich lebe ein volles aber<lb/>banges Leben. Ich <subst>
                         <del>verliere</del>
@@ -240,12 +248,13 @@
                     daran werden, ist es mir doch<lb/><pb facs="00000114.jpg" n="2"/><subst>
                         <del rend="strikethrough">doch</del>
                         <add place="above">selber</add>
-                    </subst> wie ein Traum. ich habe eine<lb/>Frau die doch den Nahmen eines anderen <lb/> nur<note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "nun" statt "nur".</note>
-                    führt, und – sollte sie Mutter werden.<lb/>wo in der Anlage gepfuscht ist kann<lb/>doch nimmer Heil gedeihen, und U<del
-                        rend="overwritten">h</del><add place="across">n</add>heil<lb/>wuchert –. Schrei es ihr nur in die<lb/>Ohren, es schallt
-                    unendlich stark aus<lb/>dem tauben Herzen ganz etwas anders<lb/>heraus. – <del rend="strikethrough">sehe</del><gap
-                        extent="one word" reason="illegible"/><del rend="strikethrough">sie</del>ja ja, wir<lb/>haben es erlebt.</p>
+                    </subst> wie ein Traum. ich habe eine<lb/>Frau die doch den Nahmen eines anderen <lb/> nur<note resp="#beschka.gloy"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                            "nun" statt "nur".</p><p xml:lang="en"/><p xml:lang="fr"/></note> führt, und – sollte sie Mutter werden.<lb/>wo in der
+                    Anlage gepfuscht ist kann<lb/>doch nimmer Heil gedeihen, und U<del rend="overwritten">h</del><add place="across"
+                    >n</add>heil<lb/>wuchert –. Schrei es ihr nur in die<lb/>Ohren, es schallt unendlich stark aus<lb/>dem tauben Herzen ganz etwas
+                    anders<lb/>heraus. – <del rend="strikethrough">sehe</del><gap extent="one word" reason="illegible"/><del rend="strikethrough"
+                        >sie</del>ja ja, wir<lb/>haben es erlebt.</p>
                 <p>Sie liebet dich sehr, nicht allein meinet<lb/>wegen dessen Bild sie seit ihrer Jugend<lb/>liebevoll <del rend="strikethrough"
                         >gepflegt</del><add place="above">gehegt</add>. – Du magst alles<lb/>wissen meinte sie; vergiß ihrer<lb/>nicht und schreibe
                     mir wenn du willst<lb/>was sie auch sehen kann.</p>
@@ -254,7 +263,7 @@
                         >Stael</persName> und <persName ref="#p0190" type="bi">Schlegel</persName><lb/> beschieden, und freue mich der Reise –<lb/>ich
                     könnte <del rend="overwritten">f</del><add place="across">v</add>ielleicht von da über <placeName ref="#l0107" type="bi"
                         >Caen</placeName><lb/> zurückkommen, aber schmeichle dir nicht<lb/><pb facs="00000115.jpg" n="3"/><note hand="#pencil_1"
-                        place="margin-right" type="foliation">57</note>zu früh, die Arbeit hat mich und auch<lb/>das Leben.</p>
+                        place="margin(right)" type="foliation">57</note>zu früh, die Arbeit hat mich und auch<lb/>das Leben.</p>
                 <p>Alle deutschen Bücher sind an der<lb/>Gränze aufgehalten, weil die Gesetze <del rend="strikethrough">noch</del><lb/>über die
                     Abgaben Censuren u s w noch<lb/>unbrauchbar sind und unbesti<g type="mgem"/>t – du<lb/>wirst die Einfuhr durch
                     Zeitungen<lb/>erfahren, sollt ich da nach dein Buch<lb/>verschreiben, binnen wenigen <del rend="strikethrough"
@@ -262,9 +271,10 @@
                     erhieltest du es dann: vermuthlich aber<lb/>enorm vertheuert..</p>
                 <p><persName ref="#p0315" type="bi">David</persName> war ausgezogen, niemand<lb/>wußte wohin. doch hat man den Brief<lb/>zur Besorgung
                     angenommen. ich kann<lb/>auf seine Adresse mir hohlen, was<lb/>soll ich aber damit, meine Zeit ist theuer<lb/><persName
-                        ref="#p0315" type="bi">Bougret</persName> kann doch hoffentlich wohl<lb/>laufen. –<note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die Passage ab "sollt ich da
-                        nach dein Buch..." bis "kann doch hoffentlich wohl laufen" ausgelassen.</note>
+                        ref="#p0315" type="bi">Bougret</persName> kann doch hoffentlich wohl<lb/>laufen. –<note resp="#beschka.gloy"><p xml:lang="de"
+                            >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die Passage ab
+                            "sollt ich da nach dein Buch..." bis "kann doch hoffentlich wohl laufen" ausgelassen.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>
                     <persName ref="#p0293" type="bi">Daunou</persName> ist immer unsichtbar.<lb/><persName ref="#p0276" type="bi">Humbolt</persName>
                     hat mich noch <add place="above">warm</add> recommandirt, wenig<lb/>Trost – –</p>
                 <closer><foreign xml:lang="grc">Χαιςα</foreign><lb/><dateline><placeName type="bi">Paris</placeName>
@@ -274,25 +284,24 @@
                         </choice></signed></closer>
                 <pb facs="00000116.jpg" n="4" xml:id="Brief032ChamissoandeLaFoye-Blatt57v"/>
                 <postscript>
-                    <p>Volks lieder !!<lb/>Ich begehrte Molusken<note resp="#beschka.gloy">Mollusken sind Weichtiere.</note> für <hi rend="underline"
-                            >Freund</hi><lb/><persName ref="#p0301" type="bi">Erman</persName>, ohne Bezahlung. nur<lb/>viele wie sie nur sind in
-                        einer<lb/>Brandwein flasche, zur Behuf der<lb/>Anatomie und Anatomie <foreign xml:lang="fr">comparée</foreign><lb/>Meine
-                        Amnistie hab ich als <foreign xml:lang="fr">non<lb/>appellé.</foreign><lb/></p>
+                    <p>Volks lieder !!<lb/>Ich begehrte Molusken<note resp="#beschka.gloy"><p xml:lang="de">Mollusken sind Weichtiere.</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note> für <hi rend="underline">Freund</hi><lb/><persName ref="#p0301" type="bi"
+                            >Erman</persName>, ohne Bezahlung. nur<lb/>viele wie sie nur sind in einer<lb/>Brandwein flasche, zur Behuf
+                        der<lb/>Anatomie und Anatomie <foreign xml:lang="fr">comparée</foreign><lb/>Meine Amnistie hab ich als <foreign xml:lang="fr"
+                            >non<lb/>appellé.</foreign><lb/></p>
                 </postscript>
                 <closer><signed><choice>
                             <abbr>A.</abbr>
                             <expan>Adelbert</expan>
-                        </choice></signed></closer>
-                <seal>Siegelreste.</seal>
+                        </choice></signed>
                 <stamp>Poststempel von Paris.</stamp>
                 <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
                 <address>
                     <addrLine><persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
                     <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
                     <addrLine><placeName ref="#l0108" type="bi">Calvados</placeName>.</addrLine>
-                </address>
+                </address></closer>
             </div>
-            <milestone unit="end"/>
         </body>
     </text>
 </TEI>

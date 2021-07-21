@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -76,8 +77,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin </settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -278,8 +285,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -304,9 +312,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000083.jpg" n="1"/>
-                <note hand="#pencil_3" place="margin-left-diagonal inline"><date when-iso="1807-01"><hi rend="underline">1807</hi>
+                <note hand="#pencil_3" place="margin(left)-diagonal inline"><date when-iso="1807-01"><hi rend="underline">1807</hi>
                         <hi rend="latin"><foreign xml:lang="fr"><hi rend="underline">Janvier</hi></foreign></hi></date></note>
-                <note hand="#pencil_1" place="margin-right" type="foliation">41</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">41</note>
                 <note hand="#pencil_2" place="top-center-diagonal" type="foliation"><hi rend="underline">13</hi></note>
                 <p>Schreibe mir be<subst>
                         <del rend="overwritten">i</del>
@@ -324,9 +332,9 @@
                         <add place="across">G</add>
                     </subst>eringes opfernd,<lb/>gehen,<add hand="#red_hand" place="inline">[</add> und die man mir bestim̄t <del rend="strikethrough"
                         >begehr ich</del><lb/>hat, werd ich nicht sehen<add hand="#red_hand" place="inline">]</add>
-                    <note resp="#beatrice.haeusler">Die von <persName ref="#p0239" type="bi">Hitzig</persName> gesetzten Klammern markieren
-                        Streichungen für den Druck. Die hier markierte Passage fehlt demnach in <title ref="#w00277">Leben und Briefe von Adelbert von
-                            Chamisso</title>.</note>.</p>
+                    <note resp="#beatrice.haeusler"><p xml:lang="de">Die von <persName ref="#p0239" type="bi">Hitzig</persName> gesetzten Klammern
+                            markieren Streichungen für den Druck. Die hier markierte Passage fehlt demnach in <title ref="#w00277">Leben und Briefe
+                                von Adelbert von Chamisso</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>.</p>
                 <p>auch an dich gerichtet der Her<add place="above">r</add>liche Brief, hier,<lb/>
                     <persName ref="#p0249" type="bi">Varn<subst>
                             <del rend="overwritten"><gap extent="1c" reason="overwritten"/></del>
@@ -349,22 +357,24 @@
                     </subst>ick, – den lesen wir erst<lb/>zusam̄en.</p>
                 <p>noch hat <persName ref="#p0291" type="bi">Koreff</persName> nicht geschrieben, und<lb/>ich nicht an ihn – mit der
                         Bibliotek<lb/>is<supplied cert="high" extent="1c">t</supplied> es nichts – nach <placeName ref="#l0001" type="bi"
-                        >Deutschland</placeName>! <note resp="#beatrice.haeusler">In einem Brief an <persName ref="#p0249" type="bi"
-                            >Varnhagen</persName> und <persName ref="#p0262" type="bi">Neumann</persName> berichtet <persName ref="#0237" type="bi"
-                            >Chamisso</persName> von <persName ref="#p0291" type="bi">Koreffs</persName> Bemühen, ihm eine Anstellung in der
-                        Bibliothek in <placeName ref="#l0044" type="bi">Paris</placeName> zu verschaffen. Der Brief datiert vom <date
-                            when-iso="1807-01-27">27. Januar 1807</date> (<title ref="#w00277">Hitzig 1839/40</title>, S. 191 f.)</note></p>
+                        >Deutschland</placeName>! <note resp="#beatrice.haeusler"><p xml:lang="de">In einem Brief an <persName ref="#p0249" type="bi"
+                                >Varnhagen</persName> und <persName ref="#p0262" type="bi">Neumann</persName> berichtet <persName ref="#0237"
+                                type="bi">Chamisso</persName> von <persName ref="#p0291" type="bi">Koreffs</persName> Bemühen, ihm eine Anstellung in
+                            der Bibliothek in <placeName ref="#l0044" type="bi">Paris</placeName> zu verschaffen. Der Brief datiert vom <date
+                                when-iso="1807-01-27">27. Januar 1807</date> (<title ref="#w00277">Hitzig 1839/40</title>, S. 191 f.)</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>ich mögte deine Bestimmung erst erhalten<lb/>bevor ich nach <placeName ref="#l0106" type="bi">Troie</placeName>
                     <add hand="#red_hand" place="above"><hi rend="latin">Troyes</hi></add>
-                    <note resp="#beatrice.haeusler">Eine von <persName ref="#p0239" type="bi">Hitzig</persName> für den Druck vorgenommene Korrektur,
-                        so auch zu finden in <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>.</note> ginge – welches
-                    ich<lb/>doch bald zu thun gedenke. in der zwischen Zei<supplied cert="high" reason="paper-folded">t</supplied></p>
+                    <note resp="#beatrice.haeusler"><p xml:lang="de">Eine von <persName ref="#p0239" type="bi">Hitzig</persName> für den Druck
+                            vorgenommene Korrektur, so auch zu finden in <title ref="#w00277">Leben und Briefe von Adelbert von
+                            Chamisso</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ginge – welches ich<lb/>doch bald zu thun gedenke. in der
+                    zwischen Zei<supplied cert="high" reason="paper-folded">t</supplied></p>
                 <pb facs="00000084.jpg" n="2"/>
                 <p>werd ich hier in der Nähe, in <placeName ref="#l0154" type="bi"><hi rend="latin">Cha<del hand="#red_hand" rend="strikethrough"
                                 >a</del>lon<add hand="#red_hand" place="inline">s</add></hi></placeName>
-                    <note resp="#beatrice.haeusler">Eine Korrektur von <persName ref="#p0239" type="bi">Hitzig</persName> für den Druck, dortige
-                        Schreibweise "Chalons" (<title ref="#w00277">Hitzig 1839/40</title>, S. 195).</note> und<lb/>auf dem Lande Besuche machen und
-                        dieses<lb/><hi rend="latin">Hauptquatier</hi> behau<subst>
+                    <note resp="#beatrice.haeusler"><p xml:lang="de">Eine Korrektur von <persName ref="#p0239" type="bi">Hitzig</persName> für den
+                            Druck, dortige Schreibweise "Chalons" (<title ref="#w00277">Hitzig 1839/40</title>, S. 195).</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> und<lb/>auf dem Lande Besuche machen und dieses<lb/><hi rend="latin">Hauptquatier</hi> behau<subst>
                         <del rend="overwritten">b</del>
                         <add place="across">p</add>
                     </subst>ten.</p>
@@ -372,8 +382,9 @@
                     verabredung.</p>
                 <p>manches mögt ich mit dir plaudern.<lb/>das wann wir erst gesprochen haben.</p>
                 <closer>
-                    <salute rend="align(right)"><foreign xml:lang="grc"><hi rend="greek">χαιρe</hi></foreign><note resp="#sabine.seifert">Übersetzung:
-                            "Sei gegrüßt!"</note></salute>
+                    <salute rend="align(right)"><foreign xml:lang="grc"><hi rend="greek">χαιρe</hi></foreign>
+                        <note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: "Sei gegrüßt!"</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note></salute>
                     <dateline rend="align(left)">
                         <date when-iso="1807-01-29">29 <hi rend="latin">Januar</hi> 180<subst>
                                 <del rend="overwritten">6</del>
@@ -385,11 +396,12 @@
                                     <abbr>τ.τ.π.α.</abbr>
                                     <expan>τò τоυ πόλου αστρον</expan>
                                 </choice>
-                                <note resp="#sabine.seifert">Das Kürzel τ.τ.π.α. steht für τò τоυ πόλου αστρον ("Polarstern") und war das
-                                    Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237"
-                                        type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date
-                                        when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten. Es wird im Druck
-                                    von <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> ausgelassen.</note></hi></foreign>
+                                <note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel τ.τ.π.α. steht für τò τоυ πόλου αστρον ("Polarstern") und war
+                                        das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237"
+                                            type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date
+                                            when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten. Es wird im
+                                        Druck von <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> ausgelassen.</p><p
+                                        xml:lang="en"/><p xml:lang="fr"/></note></hi></foreign>
                     </signed>
                 </closer>
                 <lb rend="both"/>
@@ -401,47 +413,49 @@
                             >Paris</placeName> spreche meinen <rs ref="#p0280" type="bi">Bruder</rs>.</p>
                 </postscript>
                 <pb facs="00000085.jpg" n="3"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">42</note>
-                <note resp="#sabine.seifert">Diese Seite wird im Druck von <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>
-                    ausgelassen.</note>
-                <p>
-                    <hi rend="latin"><persName ref="#p0249" type="bi">Varnhagen</persName></hi> und <hi rend="latin"><persName ref="#p0262" type="bi"
-                            >Neumann</persName></hi>
-                    <subst>
-                        <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
-                        <add place="across">p</add>
-                    </subst>rivatisirende Gelehrte.<lb/>hinter d<subst>
-                        <del rend="overwritten">i</del>
-                        <add place="across">e</add>
-                    </subst>m Rathause bei <persName ref="#p0409" type="bi">
+                <note hand="#pencil_1" place="margin(right)" type="foliation">42</note>
+                <note resp="#sabine.seifert"><p xml:lang="de">Diese Seite wird im Druck von <title ref="#w00277">Leben und Briefe von Adelbert von
+                            Chamisso</title> ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                <postscript>
+                    <p>
+                        <hi rend="latin"><persName ref="#p0249" type="bi">Varnhagen</persName></hi> und <hi rend="latin"><persName ref="#p0262"
+                                type="bi">Neumann</persName></hi>
                         <subst>
                             <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
-                            <add place="across">B</add>
-                        </subst>eier</persName><lb/></p>
-                <p rend="align(right)"><foreign xml:lang="fr">
-                        <hi rend="latin">
-                            <placeName ref="#l0060" type="bi">Halle</placeName> en <placeName ref="#l0002" type="bi"
-                    >Saxe</placeName>.</hi></foreign></p>
+                            <add place="across">p</add>
+                        </subst>rivatisirende Gelehrte.<lb/>hinter d<subst>
+                            <del rend="overwritten">i</del>
+                            <add place="across">e</add>
+                        </subst>m Rathause bei <persName ref="#p0409" type="bi">
+                            <subst>
+                                <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
+                                <add place="across">B</add>
+                            </subst>eier</persName><lb/></p>
+                    <p rend="align(right)"><foreign xml:lang="fr">
+                            <hi rend="latin">
+                                <placeName ref="#l0060" type="bi">Halle</placeName> en <placeName ref="#l0002" type="bi"
+                            >Saxe</placeName>.</hi></foreign></p>
+                </postscript>
                 <pb facs="00000086.jpg" n="4" xml:id="Brief024ChamissoandeLaFoye-Blatt42v"/>
-                <note resp="#sabine.seifert">Diese Seite wird im Druck von <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>
-                    ausgelassen.</note>
-                <address>
-                    <hi rend="latin"><foreign xml:lang="fr">
-                            <addrLine><persName ref="#p0248" type="bi">Louis de lafoye</persName></addrLine>
-                            <addrLine>au <placeName ref="#l0148" type="bi">Vangeux</placeName></addrLine>
-                            <stamp>Schwer lesbarer Poststempel mit den Angaben: <unclear reason="faded">49<lb/><hi rend="majuscule"><placeName
-                                            ref="#l0097" type="bi">VERTUS</placeName></hi></unclear></stamp>
-                            <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
-                            <addrLine><hi rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi>. <add hand="#ink">
-                                    <choice>
-                                        <abbr>Dpt</abbr>
-                                        <expan>Département</expan>
-                                    </choice>
-                                </add></addrLine></foreign>
-                    </hi>
-                    <note hand="#postman">6<del rend="strikethrough">6</del></note>
-                </address>
-                <seal>Reste des Siegels in schwarzer Farbe.</seal>
+                <note resp="#sabine.seifert"><p xml:lang="de">Diese Seite wird im Druck von <title ref="#w00277">Leben und Briefe von Adelbert von
+                            Chamisso</title> ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                <closer>
+                    <foreign xml:lang="fr">
+                        <hi rend="latin">
+                            <address>
+                                <addrLine><persName ref="#p0248" type="bi">Louis de lafoye</persName></addrLine>
+                                <addrLine>au <placeName ref="#l0148" type="bi">Vangeux</placeName></addrLine>
+                                <addrLine><stamp>Schwer lesbarer Poststempel mit den Angaben: <unclear reason="faded">49<lb/><hi rend="majuscule"
+                                                    ><placeName ref="#l0097" type="bi">VERTUS</placeName></hi></unclear></stamp></addrLine>
+                                <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
+                                <addrLine><hi rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName></hi>. <add hand="#ink">
+                                        <choice>
+                                            <abbr>Dpt</abbr>
+                                            <expan>Département</expan>
+                                        </choice>
+                                    </add></addrLine>
+                                <note hand="#postman">6<del rend="strikethrough">6</del></note>
+                            </address></hi></foreign></closer>
             </div>
         </body>
     </text>

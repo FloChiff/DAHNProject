@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -129,9 +136,12 @@
                             </handNote>
                         </handDesc>
                         <sealDesc>
-                            <p xml:lang="de">Der Brief war durch ein schwärzliches Siegel verschlossen.</p>
-                            <p xml:lang="en">The letter was closed with a blackish seal.</p>
-                            <p xml:lang="fr">La lettre était fermée par un sceau noirâtre.</p>
+                            <p xml:lang="de">Der Brief war durch ein schwärzliches Siegel verschlossen. Rest des schwärzlichen Siegels, darauf klebt
+                                der Siegelausriss von der Blattoberkante mit einem Teil des Brieftexts.</p>
+                            <p xml:lang="en">The letter was closed with a blackish seal. Remainder of the blackish seal, on which the tear-off seal
+                                sticks from the top edge of the sheet with part of the letter text.</p>
+                            <p xml:lang="fr">La lettre était fermée par un sceau noirâtre. Reste du sceau noirâtre, sur lequel le sceau détachable
+                                colle du bord supérieur de la feuille avec une partie du texte de la lettre.</p>
                         </sealDesc>
                         <accMat><p xml:lang="de"><ref target="#Brief002ChamissoandeLaFoye-Blatt4v">Blatt 4v</ref> dient als Briefumschlag.</p>
                             <p xml:lang="en"><ref target="#Brief002ChamissoandeLaFoye-Blatt4v">Page 4v</ref> is being used as envelope.</p>
@@ -232,8 +242,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -246,18 +257,19 @@
         <body>
             <div type="transcription">
                 <pb facs="00000175.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left">1811 ou 1812</note>
-                <note hand="#pencil_1" place="margin-left" type="foliation"><hi rend="underline">115</hi></note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">87</note>
+                <note hand="#pencil_1" place="margin(left)">1811 ou 1812</note>
+                <note hand="#pencil_1" place="margin(left)" type="foliation"><hi rend="underline">115</hi></note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">87</note>
                 <p>Ich hätte dir früher schreiben sollen – ich habe aber<lb/> weder Lust noch stimmung dazu. heute auch nur sum̄<lb break="no"
                     />marisch einige worte – man rathet dir zu der übersezung<lb/> der <subst>
                         <del rend="overwritten">W</del>
                         <add rend="across">R</add>
                     </subst>eise vom Herrn <hi rend="underline"><persName ref="#p0321" type="bi">von Buch</persName></hi> in <placeName ref="#l0121"
-                        type="bi">Lappland</placeName>.<note resp="#lena.ebert">Der Bericht des Geologen <persName ref="#p0321" type="bi">Christian
-                            Leopold von Buch</persName> über seine <placeName ref="#???" type="bi">Skandinavien</placeName>-Reise, <title ref="#???"
-                            >Reise durch Norwegen und Lappland</title>, war <date when-iso="1810">1810</date> erschienen.</note> – Das <hi
-                        rend="underline">geolog<gap extent="several letters" reason="illegible"/></hi><lb/> Geolo<subst>
+                        type="bi">Lappland</placeName>.<note resp="#lena.ebert"><p xml:lang="de">Der Bericht des Geologen <persName ref="#p0321"
+                                type="bi">Christian Leopold von Buch</persName> über seine <placeName ref="#???" type="bi"
+                            >Skandinavien</placeName>-Reise, <title ref="#???">Reise durch Norwegen und Lappland</title>, war <date when-iso="1810"
+                                >1810</date> erschienen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – Das <hi rend="underline">geolog<gap
+                            extent="several letters" reason="illegible"/></hi><lb/> Geolo<subst>
                         <del rend="overwritten">s</del>
                         <add rend="across">g</add>
                     </subst>ische, könnte von der Reise Beschreibung getrennt<lb/> werden, und als ein für sich bestehender Aufsaz <subst>
@@ -265,8 +277,8 @@
                             <gap extent="1w" reason="illegible"/>
                         </del>
                         <add place="above">dem Buche</add>
-                    </subst><note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt <quote>"dem Buche"</quote>.</note><lb/>
+                    </subst><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> fehlt <quote>"dem Buche"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>
                     <del rend="strikethrough">
                         <gap extent="1w" reason="illegible"/>
                     </del> angehängt werden. <subst>
@@ -278,17 +290,17 @@
                             ><unclear cert="low" reason="illegible">n</unclear></del><lb/> Straßen. – wie ich es ersehen kann, werd<unclear
                         cert="medium" reason="illegible">e</unclear> ich <add place="above">mich</add> binnen<lb/>
                     <del rend="strikethrough">nie</del> Sechs wochen auf die Straße nach Nord <placeName ref="#l0001" type="bi"
-                        >Deutschland</placeName><lb/> machen, – und bin ich ein mal immatriulirt –<note resp="#lena.ebert"><persName ref="#p0237"
-                            type="bi">Chamisso</persName> plante, an der <date when-iso="1809">1809</date> gegründeten <placeName ref="l1103"
-                            type="bi">Berliner</placeName> Universität zu studieren.</note> kriegt<lb/> mich Freund noch Feind – kriegt mich der
-                    Schwarze selbst<lb/> nicht aus dem Orte – ich studire dann daß <choice>
+                        >Deutschland</placeName><lb/> machen, – und bin ich ein mal immatriulirt –<note resp="#lena.ebert"><p xml:lang="de"><persName
+                                ref="#p0237" type="bi">Chamisso</persName> plante, an der <date when-iso="1809">1809</date> gegründeten <placeName
+                                ref="l1103" type="bi">Berliner</placeName> Universität zu studieren.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    kriegt<lb/> mich Freund noch Feind – kriegt mich der Schwarze selbst<lb/> nicht aus dem Orte – ich studire dann daß <choice>
                         <unclear cert="high" reason="illegible">mi<hi rend="underline">ch</hi></unclear>
                         <unclear cert="low" reason="illegible">mi<hi rend="underline">r</hi></unclear>
                     </choice> der<lb/> angst schweiß die Schläfen herab rollt, und es wird aus<lb/> mir was Gott will – Zeit und Geld sind dahin
                     gegangen<lb/> ich weiß nicht wie? ich bin keinem Ziele näher gerückt<lb/> als dem Grabe! – manches hab ich freilig gelebt und<lb/>
                     erlebt! – ich weiß nicht ob ich über <placeName ref="#l0065" type="bi">Heidelberg</placeName> werde<lb/> dürfen. – die Leute sind
                     rasend – wir bekümmerten<lb/>
-                    <add place="margin-left">uns</add> um niemanden – und es war als hätte <subst>
+                    <add place="margin(left)">uns</add> um niemanden – und es war als hätte <subst>
                         <del rend="overwritten">s</del>
                         <add place="across">D</add>
                     </subst>ie welt sich <choice>
@@ -304,25 +316,26 @@
                                 <gap extent="1c" reason="illegible"/>
                             </del>
                             <add place="across">d</add>
-                        </subst>elberg</placeName> gegangen weil<lb/> sie von mir schwanger gewesen<note resp="#lena.ebert"><persName ref="p0237"
-                            type="bi">Chamisso</persName> war sich zu dieser Zeit im Unklaren über sein Verhältnis zu <persName ref="#p0247" type="bi"
-                            >Helmina von Chézy</persName>, die nach der Trennung von ihrem Mann <persName ref="#p0260" type="bi">Antoine Léonard von
-                            Chézy</persName> kürzlich nach <placeName ref="#l0001" type="bi">Deutschland</placeName> zurückgekehrt
-                        war.<!-- Im
+                        </subst>elberg</placeName> gegangen weil<lb/> sie von mir schwanger gewesen<note resp="#lena.ebert"><p xml:lang="de"><persName
+                                ref="p0237" type="bi">Chamisso</persName> war sich zu dieser Zeit im Unklaren über sein Verhältnis zu <persName
+                                ref="#p0247" type="bi">Helmina von Chézy</persName>, die nach der Trennung von ihrem Mann <persName ref="#p0260"
+                                type="bi">Antoine Léonard von Chézy</persName> kürzlich nach <placeName ref="#l0001" type="bi">Deutschland</placeName>
+                            zurückgekehrt
+                            war.<!-- Im
 						noch <ref target=".xml">Brief mit der Stabi-Nummer 101-102</ref> schreibt Chamisso,
 						dass er erfahren hat, dass Helmina tatsächlich ein Kind von ihm bekam, welches früh
-						starb.--></note>
-                    – bei got sie machen</p>
+						starb.--></p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> – bei got sie machen</p>
                 <pb facs="00000176.jpg" n="2"/>
                 <p>mich irre – – mein <del rend="strikethrough">
                         <gap extent="1w" reason="illegible"/>
                     </del>
-                    <rs ref="#p0322" type="bi">Hausherr</rs> von vorigen<lb/> winter,<note resp="#lena.ebert">Es handelt sich um <persName
-                            ref="#p0322" type="bi">Prosper de Barante</persName>, als dessen Sekretär <persName ref="#p0237" type="bi"
-                            >Chamisso</persName> in <placeName ref="#l0145" type="bi">Napoléon-Vendée</placeName> für einige Monate tätig war, bevor
-                        er im Frühling <date when-iso="1811">1811</date> in die <placeName ref="#l0068" type="bi">Schweiz</placeName> zu <persName
-                            ref="#p0255" type="bi">Madame de Staël</persName> reiste (<title ref="#???">Feudel 1988</title>: 61 ff.).</note> soll an
-                    Heirathen denken mit Gott weiß we<subst>
+                    <rs ref="#p0322" type="bi">Hausherr</rs> von vorigen<lb/> winter,<note resp="#lena.ebert"><p xml:lang="de">Es handelt sich um
+                                <persName ref="#p0322" type="bi">Prosper de Barante</persName>, als dessen Sekretär <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> in <placeName ref="#l0145" type="bi">Napoléon-Vendée</placeName> für einige Monate tätig war,
+                            bevor er im Frühling <date when-iso="1811">1811</date> in die <placeName ref="#l0068" type="bi">Schweiz</placeName> zu
+                                <persName ref="#p0255" type="bi">Madame de Staël</persName> reiste (<title ref="#???">Feudel 1988</title>: 61
+                            ff.).</p><p xml:lang="en"/><p xml:lang="fr"/></note> soll an Heirathen denken mit Gott weiß we<subst>
                         <del rend="overwritten"><gap extent="several letters" reason="illegible"/></del>
                         <add place="across">lche</add>
                     </subst>m<lb/> jungen Mägdlein – wenn er an mich noch denkt,<lb/> so ist es <add place="above">wenigstens</add> nur um an mich <hi
@@ -351,21 +364,22 @@
                     </subst> zwischen die Bei<subst>
                         <del rend="overwritten">de</del>
                         <add place="across">ne</add>
-                    </subst> – sonst K<gap extent="3c" reason="illegible"/><note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser schwer lesbaren Stelle <quote>"reiss"</quote>, dies ist
-                        zwar inhaltlich plausibel, jedoch im Schriftbild nicht zu erkennen.</note> ich Gott<lb/> straf mich aus. <add place="above"
-                        >und ihr krigt mich nie wieder zu sehen.</add> – ich kann und mag an <hi rend="latin"><persName ref="#p0315" type="bi"
-                            >Bourguet</persName></hi><lb/> nicht schreiben – mir kann noch etwas in die Quer<lb/> kommen, <rs ref="#p0299" type="bi"
-                        >meiner armen Schwester</rs> gehts in <hi rend="latin"><placeName ref="#l0146" type="bi">Parma</placeName></hi><lb/> aüsserst
-                    traurig. – ihr <subst>
+                    </subst> – sonst K<gap extent="3c" reason="illegible"/><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser schwer lesbaren Stelle
+                                <quote>"reiss"</quote>, dies ist zwar inhaltlich plausibel, jedoch im Schriftbild nicht zu erkennen.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> ich Gott<lb/> straf mich aus. <add place="above">und ihr krigt mich nie wieder zu
+                        sehen.</add> – ich kann und mag an <hi rend="latin"><persName ref="#p0315" type="bi">Bourguet</persName></hi><lb/> nicht
+                    schreiben – mir kann noch etwas in die Quer<lb/> kommen, <rs ref="#p0299" type="bi">meiner armen Schwester</rs> gehts in <hi
+                        rend="latin"><placeName ref="#l0146" type="bi">Parma</placeName></hi><lb/> aüsserst traurig. – ihr <subst>
                         <del rend="overwritten">m</del>
                         <add place="across">M</add>
-                    </subst>ann ist abwesend, <del rend="strikethrough">und</del><note resp="#lena.ebert" subtype="1">Im Druck der <title
-                            ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird nicht wiedergegeben, dass dieses
-                            <quote>"und"</quote> gestrichen wurde.</note>
-                    <note resp="#lena.ebert" subtype="2">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht an dieser Stelle ein von <persName ref="p0237" type="bi">Chamisso</persName> gestrichenes
-                            <quote>"und"</quote>.</note> ein Kind<lb/> ihr an der Auszärung Todtkrank. – i<subst>
+                    </subst>ann ist abwesend, <del rend="strikethrough">und</del><note resp="#lena.ebert" subtype="1"><p xml:lang="de">Im Druck der
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird nicht wiedergegeben, dass
+                            dieses <quote>"und"</quote> gestrichen wurde.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <note resp="#lena.ebert" subtype="2"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht an dieser Stelle ein von <persName ref="p0237" type="bi">Chamisso</persName>
+                            gestrichenes <quote>"und"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ein Kind<lb/> ihr an der Auszärung
+                    Todtkrank. – i<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">h</add>
                     </subst>r stehen reisen bevor,<lb/> Geschäfte, Gottweiß all das <del rend="strikethrough">El</del> Elend – ruft sie mich etwa<lb/>
@@ -374,48 +388,55 @@
                         <add place="across">t</add>
                     </subst>s dabei,<lb/> ich sehe sich hier den Knaül entwirren, und laufe dann<lb/> ab nach meiner Schule – – Ich habe eine
                     achttägiche<lb/> Fußreise in die <placeName ref="#l0125" type="bi">Alpen</placeName> gemacht – habe über all <foreign
-                        xml:lang="fr"><hi rend="latin">Doiniers</hi></foreign><note resp="#???">Diese Schreibweise von <foreign xml:lang="fr"
-                            >"douanier"</foreign> lehnt sich an die französische Aussprache an.</note><lb/>
+                        xml:lang="fr"><hi rend="latin">Doiniers</hi></foreign><note resp="#???"><p xml:lang="de">Diese Schreibweise von <foreign
+                                xml:lang="fr">"douanier"</foreign> lehnt sich an die französische Aussprache an.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><lb/>
                     <foreign xml:lang="fr"><hi rend="latin">Gensdárm<supplied cert="medium" reason="damage">es</supplied> Garnisaires</hi></foreign>,
                         <foreign xml:lang="fr"><hi rend="latin">colonnes mobils</hi></foreign> angetroffen –</p>
                 <pb facs="00000177.jpg" n="3"/>
-                <note hand="#pencil_2" place="margin-right" type="foliation">88</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">88</note>
                 <p>– <choice>
                         <unclear cert="high" reason="damage">du</unclear>
                         <unclear cert="low" reason="damage">Du</unclear>
                     </choice> kannst in <hi rend="latin">
-                        <persName ref="#p0323" type="bi">Sausure</persName></hi><note resp="#lena.ebert">Der vorstehende Textteil befindet sich auf
-                        dem Siegelausriss, der an die untere Blattkannte geklebt wurde</note> nachschlagen der <hi rend="latin">Montblanc</hi>
-                    sei<lb/> 2000 <unclear cert="high" reason="damage">und</unclear> 4 biß 500<note resp="#lena.ebert">Der Textteil <quote>"und 4 biß
-                            500"</quote> befindet sich teilweise auf dem Siegelausriss.</note>
-                    <hi rend="latin">toisen</hi><note resp="#lena.ebert">Die Toise ist eine alte Längeneinheit. Sie entsprach sechs Fuß bzw. knapp
-                        zwei Metern.</note> Hoch<note resp="#lena.ebert"><persName ref="#p0237" type="bi">Chamisso</persName> meint mit sehr großer
-                        Wahrscheinlichkeit <persName ref="#p0323" type="bi">Horace-Bénédict de Saussures</persName> Werk <foreign xml:lang="fr"><title
-                                ref="#???">Voyages dans les Alpes</title></foreign>. Saussure, der den Montblanc im Jahr <date when-iso="1787"
-                            >1787</date> bestieg (<title ref="#???">Reinhardt 2011</title>: 283), gibt darin dessen Höhe mit <quote><foreign
-                                xml:lang="fr">"2446 toises"</foreign></quote> an (Bd. 1, 1779: 355).</note> – ich weiß es nicht besser.<lb/>
+                        <persName ref="#p0323" type="bi">Sausure</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Der vorstehende Textteil
+                            befindet sich auf dem Siegelausriss, der an die untere Blattkannte geklebt wurde</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> nachschlagen der <hi rend="latin">Montblanc</hi> sei<lb/> 2000 <unclear cert="high" reason="damage">und</unclear> 4
+                    biß 500<note resp="#lena.ebert"><p xml:lang="de">Der Textteil <quote>"und 4 biß 500"</quote> befindet sich teilweise auf dem
+                            Siegelausriss.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <hi rend="latin">toisen</hi><note resp="#lena.ebert"><p xml:lang="de">Die Toise ist eine alte Längeneinheit. Sie entsprach sechs
+                            Fuß bzw. knapp zwei Metern.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Hoch<note resp="#lena.ebert"><p xml:lang="de"
+                                ><persName ref="#p0237" type="bi">Chamisso</persName> meint mit sehr großer Wahrscheinlichkeit <persName ref="#p0323"
+                                type="bi">Horace-Bénédict de Saussures</persName> Werk <foreign xml:lang="fr"><title ref="#???">Voyages dans les
+                                    Alpes</title></foreign>. Saussure, der den Montblanc im Jahr <date when-iso="1787">1787</date> bestieg (<title
+                                ref="#???">Reinhardt 2011</title>: 283), gibt darin dessen Höhe mit <quote><foreign xml:lang="fr">"2446
+                                    toises"</foreign></quote> an (Bd. 1, 1779: 355).</p><p xml:lang="en"/><p xml:lang="fr"/></note> – ich weiß es
+                    nicht besser.<lb/>
                     <del rend="strikethrough">die Wolken lagen</del> ich bin zwar in seiner Nähe gewesen – aber<lb/> die Wolken lagen ihm auf den
                     Schultern und der Schnee<lb/>
                     <del rend="strikethrough">biß</del> hing ihm tief unter dem gürtel – es ist noch überall<lb/> zu früh – noch blühet <del
                         rend="strikethrough">
                         <gap extent="1w" reason="illegible"/>
-                    </del> der<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"das"</quote> statt <quote>"der"</quote>.</note>
-                    <hi rend="latin">rododendron</hi><note resp="#lena.ebert">Alpenrose.</note> erst in den<lb/> hohen Thalen, und die Lerchen Baume
-                    treiben noch <del rend="strikethrough">
+                    </del> der<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht <quote>"das"</quote> statt <quote>"der"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note>
+                    <hi rend="latin">rododendron</hi><note resp="#lena.ebert"><p xml:lang="de">Alpenrose.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> erst in den<lb/> hohen Thalen, und die Lerchen Baume treiben noch <del rend="strikethrough">
                         <gap extent="1w" reason="illegible"/>
                     </del><lb/> nicht ihr zartes Grün auf den Höhen – der Schnee liegt noch<lb/> zu tief – Diese grossen Koloßen können nur recht<lb/>
                     von fern erschaut werden – in der Nähe sind sie für<lb/> den menschen wie für die Ameise nicht. – ein Paar<lb/> schon<note
                         resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
                             <quote>"schön"</quote> statt <quote>"schon"</quote>.</note> grupirte Granitgeschiebe sind oft schöner –<lb/> eben das mögt
                     ich von den waßer fällen sagen – –</p>
-                <p>– übrigens singt man <foreign xml:lang="fr"><hi rend="latin">la petite Cendrillon</hi></foreign><note resp="#lena.ebert">Das Lied
-                        des <foreign xml:lang="fr">"petite Cendrillon"</foreign> kommt im Libretto der Oper <title ref="#???">Cendrillon</title>
-                            (<date when-iso="1810">1810</date>: 16) von <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> vor, der
-                        auch das Stück <title ref="#???">Les deux gendres</title> verfasste. <persName ref="p0237" type="bi">Chamisso</persName>
-                        übersetzte in der <placeName ref="#l0068" type="bi">Schweiz</placeName>
-                        <title ref="#???">Conaxa ou les Gendres dupés</title>, das Étienne vermutlich als Vorlage für Les deux gendres diente (zu
-                        Conaxa und Les deux gendres s. den Kommentar im <ref target="#???">Brief aus Genf von Anfang 1812</ref>, Seite 1).</note> im Thale<lb/>
+                <p>– übrigens singt man <foreign xml:lang="fr"><hi rend="latin">la petite Cendrillon</hi></foreign><note resp="#lena.ebert"><p
+                            xml:lang="de">Das Lied des <foreign xml:lang="fr">"petite Cendrillon"</foreign> kommt im Libretto der Oper <title
+                                ref="#???">Cendrillon</title> (<date when-iso="1810">1810</date>: 16) von <persName ref="#???" type="bi"
+                                >Charles-Gauillaume Étienne</persName> vor, der auch das Stück <title ref="#???">Les deux gendres</title> verfasste.
+                                <persName ref="p0237" type="bi">Chamisso</persName> übersetzte in der <placeName ref="#l0068" type="bi"
+                                >Schweiz</placeName>
+                            <title ref="#???">Conaxa ou les Gendres dupés</title>, das Étienne vermutlich als Vorlage für Les deux gendres diente (zu
+                            Conaxa und Les deux gendres s. den Kommentar im <ref target="#???">Brief aus Genf von Anfang 1812</ref>, Seite 1).</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> im Thale<lb/>
                     <hi rend="latin"><placeName ref="#l0128" type="bi">Chamonnix</placeName></hi> – im Thale <hi rend="latin"><placeName ref="#l0128"
                             type="bi">Chamonnix</placeName></hi> sind – <foreign xml:lang="fr"><hi rend="latin">les<lb/> Voyageurs</hi></foreign> ein
                     art Thiere die <del rend="strikethrough">sie</del> zu schinden, ihr<lb/> bestes erwerb ist – o der Menschen! – in die<lb/>
@@ -423,16 +444,14 @@
                         rend="strikethrough">
                         <gap extent="2c" reason="illegible"/>
                     </del> französche Zunge, französche ober Herrschaft!</p>
-                <closer><salute>– leb wohl, mein süßer guter,</salute> – ich verliere mehr<lb/> und mehr das Wort des Räthsels und mich
-                    selbst.</closer>
-                <seal>Rest des schwärzlichen Siegels, darauf klebt der Siegelausriss von der Blattoberkante mit einem Teil des Brieftexts.</seal>
-                <pb facs="00000178.jpg" n="4" xml:id="Brief002ChamissoandeLaFoye-Blatt4v"/>
-                <p rend="align(center)"><stamp>Schwarzer Poststempel, stark verwischt und unleserlich. Er besagt vermutlich "<unclear cert="medium"
+                <closer><salute>– leb wohl, mein süßer guter,</salute> – ich verliere mehr<lb/> und mehr das Wort des Räthsels und mich selbst. <pb
+                        facs="00000178.jpg" n="4" xml:id="Brief002ChamissoandeLaFoye-Blatt4v"/>
+                    <stamp rend="align(center)">Schwarzer Poststempel, stark verwischt und unleserlich. Er besagt vermutlich "<unclear cert="medium"
                             reason="illegible"><foreign xml:lang="fr"><placeName ref="#l0068" type="bi">Suisse</placeName> par <placeName ref="#l0127"
                                     type="bi">Coppet</placeName></foreign></unclear>".</stamp>
-                    <stamp>Ein weiterer Poststempel, ebenfalls stark verwischt und unleserlich. Er besagt vermutlich "<unclear cert="medium"
-                            reason="illegible"><placeName ref="#l0079" type="bi">Genève</placeName></unclear>".</stamp>
-                    <address>
+                    <stamp rend="align(center)">Ein weiterer Poststempel, ebenfalls stark verwischt und unleserlich. Er besagt vermutlich "<unclear
+                            cert="medium" reason="illegible"><placeName ref="#l0079" type="bi">Genève</placeName></unclear>".</stamp>
+                    <address rend="align(center)">
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">a Monsieur</hi></foreign></addrLine>
                         <addrLine><hi rend="latin"><persName ref="#p0248" type="bi">Louis de La Foye</persName></hi></addrLine>
                         <note hand="#postman" place="across"><unclear cert="medium" reason="illegible">9</unclear></note>
@@ -440,11 +459,11 @@
                         <addrLine><hi rend="latin"><placeName ref="#l0107" type="bi">Caen</placeName></hi></addrLine>
                         <addrLine><hi rend="latin"><placeName ref="#l0108" type="bi">Calvados.</placeName></hi></addrLine>
                     </address>
-                </p>
-                <note place="margin-left-vertical">77 20<lb/>
+                </closer>
+                <note place="margin(left)-vertical">77 20<lb/>
                     <hi rend="underline">9<g type="unknown"/> 70</hi><lb/> 86 90</note>
-                <note resp="#lena.ebert" subtype="1">Die Rechnung stammt womöglich nicht von <persName ref="#p0237" type="bi">Chamissos</persName>
-                    Hand.</note>
+                <note resp="#lena.ebert" subtype="1"><p xml:lang="de">Die Rechnung stammt womöglich nicht von <persName ref="#p0237" type="bi"
+                            >Chamissos</persName> Hand.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
             </div>
         </body>
     </text>

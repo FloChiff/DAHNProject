@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -244,8 +251,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -258,41 +266,43 @@
         <body>
             <div type="transcription">
                 <pb facs="00000167.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left">1811 ou 1812</note>
+                <note hand="#pencil_1" place="margin(left)">1811 ou 1812</note>
                 <note hand="#pencil_1" place="margin-top" type="foliation"><hi rend="underline">113</hi></note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">83</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">83</note>
                 <p>Ich dächte <hi rend="latin"><persName ref="#p0315" type="bi"><choice>
                                 <abbr>B.</abbr>
                                 <expan>Bourguet</expan>
                             </choice></persName></hi> meinung wäre gewesen<lb/> die Bittschrift an den <hi rend="latin"><persName ref="#p0316"
-                            type="bi">Coru Sarthe</persName></hi><note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert
-                            de Chamisso, Fragments inédits</title> steht <quote>"Varthe"</quote> statt <quote>"Coru Sarthe"</quote>.</note>
+                            type="bi">Coru Sarthe</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Varthe"</quote> statt <quote>"Coru
+                                Sarthe"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <foreign xml:lang="fr"><hi rend="latin">Secretaire<lb/> General des Archives </hi></foreign> zu <subst>
                         <del rend="strikethrough">
                             <unclear cert="medium" reason="illegible">sende</unclear>
                         </del>
                         <add place="inline">richten</add>
-                    </subst>, –<note resp="#lena.ebert"><persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de
-                            La Foye</persName> versuchten damals beide, eine Anstellung bei den <placeName ref="#l0044" type="bi">Pariser</placeName>
-                        Archiven zu erhalten.</note><lb/> oder vielmehr an den <hi rend="latin"><persName ref="#p0293" type="bi">Donou</persName></hi>
-                    zu richten und<lb/> an den <hi rend="latin"><persName ref="#p0316" type="bi">Coru Sarthe</persName></hi><note resp="#lena.ebert"
-                        >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                            <quote>"Varthe"</quote> statt <quote>"Coru Sarthe"</quote>.</note> zu senden – so habe ich's<lb/> wenigstens <subst>
+                    </subst>, –<note resp="#lena.ebert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> und <persName
+                                ref="#p0248" type="bi">de La Foye</persName> versuchten damals beide, eine Anstellung bei den <placeName ref="#l0044"
+                                type="bi">Pariser</placeName> Archiven zu erhalten.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> oder vielmehr
+                    an den <hi rend="latin"><persName ref="#p0293" type="bi">Donou</persName></hi> zu richten und<lb/> an den <hi rend="latin"
+                            ><persName ref="#p0316" type="bi">Coru Sarthe</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Varthe"</quote> statt
+                                <quote>"Coru Sarthe"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> zu senden – so habe ich's<lb/> wenigstens <subst>
                         <del rend="strikethrough"><unclear cert="medium" reason="illegible">gemacht</unclear></del>
                         <add place="above">machen müße<unclear cert="medium" reason="illegible">n</unclear></add>
-                    </subst>, und <hi rend="latin"><persName ref="#p0316" type="bi">Sarthe</persName></hi><note resp="#lena.ebert">Im Druck der <title
-                            ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Varthe"</quote> statt
-                            <quote>"Sarthe"</quote>.</note> hat meine<lb/>
+                    </subst>, und <hi rend="latin"><persName ref="#p0316" type="bi">Sarthe</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Im
+                            Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                                <quote>"Varthe"</quote> statt <quote>"Sarthe"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> hat meine<lb/>
                     <foreign xml:lang="fr"><hi rend="latin">en potefeuille</hi></foreign> um sie im Nothfall geltend<lb/> zu machen – an den <hi
                         rend="latin"><rs ref="#p0319" type="bi">Minister</rs></hi> sieht es mir<lb/> gar einer <foreign xml:lang="fr"><hi rend="latin"
-                            >feuille de chou</hi></foreign> ähnlich.<note resp="#lena.ebert"><persName ref="p0248" type="bi">De la Foye</persName>
-                        schrieb am <date when-iso="1811-04-08">8. April 1811</date> an <persName ref="#p0319" type="bi">Jean Pierre Bachasson de
-                            Montavilet</persName>, den französischen Innenminister, bezüglich der Anstellung in den Archiven (<title ref="#???"
-                            >Dufraisse 1982</title>: 76). Er erwähnt dann in seinem vorhergehenden Brief an <persName ref="p0237" type="bi"
-                            >Chamisso</persName> vom <date when-iso="1811-04-16">16. April 1811</date>, er habe <quote>"gestern noch eine Petition dem
-                            Ministre de de l'Intérieur gesendet"</quote> (abgedruckt in der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title>, Brief 94).</note> – schreibe<lb/> etwa noch <unclear cert="high" reason="illegible"
-                        >eine</unclear>
+                            >feuille de chou</hi></foreign> ähnlich.<note resp="#lena.ebert"><p xml:lang="de"><persName ref="p0248" type="bi">De la
+                                Foye</persName> schrieb am <date when-iso="1811-04-08">8. April 1811</date> an <persName ref="#p0319" type="bi">Jean
+                                Pierre Bachasson de Montavilet</persName>, den französischen Innenminister, bezüglich der Anstellung in den Archiven
+                                (<title ref="#???">Dufraisse 1982</title>: 76). Er erwähnt dann in seinem vorhergehenden Brief an <persName
+                                ref="p0237" type="bi">Chamisso</persName> vom <date when-iso="1811-04-16">16. April 1811</date>, er habe
+                                <quote>"gestern noch eine Petition dem Ministre de de l'Intérieur gesendet"</quote> (abgedruckt in der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, Brief 94).</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> – schreibe<lb/> etwa noch <unclear cert="high" reason="illegible">eine</unclear>
                     <del rend="erasure">
                         <gap extent="1w" reason="illegible"/>
                     </del> und schike sie<lb/> dem <hi rend="latin"><persName ref="#p0315" type="bi"><choice>
@@ -302,29 +312,31 @@
                     <del rend="strikethrough">mit</del> dem du <subst>
                         <del rend="strikethrough">auch</del>
                         <add place="above">zu gleich</add>
-                    </subst><note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"gleich"</quote> statt <quote>"zu gleich"</quote>.</note> sagen wirst<lb/> was du gemacht
-                    hast. – der <title ref="#???">30. Jährige<lb/> Krieg</title> ist übersetzt. – die <title ref="#???"><unclear cert="high"
-                            reason="illegible">S</unclear>chweizer Geschichten</title><lb/> sind <subst>
+                    </subst><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht <quote>"gleich"</quote> statt <quote>"zu gleich"</quote>.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> sagen wirst<lb/> was du gemacht hast. – der <title ref="#???">30. Jährige<lb/> Krieg</title> ist
+                    übersetzt. – die <title ref="#???"><unclear cert="high" reason="illegible">S</unclear>chweizer Geschichten</title><lb/> sind <subst>
                         <del rend="overwritten">ü</del>
                         <add place="across">e</add>
-                    </subst>inerseits unüberseztbar, und anderer<lb/> seits schon übersetzt<note resp="#lena.ebert"><persName ref="p0248" type="bi">De
-                            La Foye</persName> bat <persName ref="p0237" type="bi">Chamisso</persName> in seinem Brief vom <date when-iso="1811-04-16"
-                            >16. April 1811</date> auch darum, ihm bei der Auswahl eines deutschen Werks zu helfen, welches er ins Französische
-                        übertragen wollte (abgedruckt in der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>,
-                        Brief 94).</note> – – in <persName ref="#p0213" type="bi">Müllers</persName>
+                    </subst>inerseits unüberseztbar, und anderer<lb/> seits schon übersetzt<note resp="#lena.ebert"><p xml:lang="de"><persName
+                                ref="p0248" type="bi">De La Foye</persName> bat <persName ref="p0237" type="bi">Chamisso</persName> in seinem Brief
+                            vom <date when-iso="1811-04-16">16. April 1811</date> auch darum, ihm bei der Auswahl eines deutschen Werks zu helfen,
+                            welches er ins Französische übertragen wollte (abgedruckt in der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title>, Brief 94).</p><p xml:lang="en"/><p xml:lang="fr"/></note> – – in <persName
+                        ref="#p0213" type="bi">Müllers</persName>
                     <title ref="#???">nachgelaßen<lb/> Werken</title> ist eine <title ref="#???">Welt geschichte in 3 Bänden</title><lb/> das wäre ein <subst>
                         <del rend="strikethrough">
                             <gap extent="1w" reason="illegible"/>
                         </del>
                         <add place="above">Buch</add>
-                    </subst> was<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht <quote>"das"</quote> statt <quote>"was"</quote>.</note> man <subst>
+                    </subst> was<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht <quote>"das"</quote> statt <quote>"was"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> man <subst>
                         <del cert="medium" rend="strikethrough">wohl</del>
                         <add place="above">allerdings</add>
-                    </subst> übersezen<lb/> könnte – man müßte nun<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert
-                            de Chamisso, Fragments inédits</title> steht <quote>"nur"</quote> statt <quote>"nun"</quote>.</note> gewiß sein daß<lb/>
-                    keiner <subst>
+                    </subst> übersezen<lb/> könnte – man müßte nun<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"nur"</quote> statt
+                                <quote>"nun"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> gewiß sein daß<lb/> keiner <subst>
                         <del rend="erasure">
                             <gap extent="several words" reason="illegible"/>
                         </del>
@@ -332,30 +344,31 @@
                     </subst> – eine<lb/>
                     <rs ref="#p0320" type="bi">Gewisse Dame</rs> aus der <placeName ref="#l0068" type="bi">Schweiz</placeName> hat schon<lb/> die
                         <title ref="#???">Briefen eines Jungen Gelehrten</title> (<persName ref="#p0213" type="bi">Müller</persName><lb/> an <persName
-                        ref="#p0318" type="bi">Bonstäten</persName>)<note resp="#lena.ebert">Die <title ref="#???">Briefe eines jungen Gelehrten an
-                            seinen Freund</title> (<date when-iso="1802">1802</date>) wurden <date when-iso="1810">1810</date> von <persName
-                            ref="p0320" type="bi">Marie-Aimée Steck-Guichelin</persName> ins Französische übersetzt (s. die Zeittafel in der
-                        Bonstetten-Briefausgabe <title ref="#???">Bonstettiana</title>, Bd. X.2, 2003: 797).</note> sehr glücklich übersezt.<note
-                        resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt
-                        der Textabschnitt ab diesem Punkt bis <quote>"damit beschäftigt"</quote>. Die Lücke ist mit Auslassungspunkten
-                        gekennzeichnet.</note> wenn<lb/> du es unternim̄st so mußt du mit <unclear cert="low" reason="illegible"
-                        >buchhandler</unclear><note resp="#lena.ebert">Womöglich nimmt <persName ref="#p0237" type="bi">Chamisso</persName> mit
-                            <quote>"buchhandler"</quote> auf den gemeinsamen Freund <persName ref="#p0239" type="bi">Julius Eduard Hitzig</persName>
-                        Bezug, so erwähnt er auch im <ref target="Brief111ChamissoandeLaFoye.xml">Brief aus Schaffhausen</ref> den <quote>"Buchhändler
-                            Hitzig"</quote>.</note><lb/> rücksprache nehmen und ich konnte hier an die</p>
+                        ref="#p0318" type="bi">Bonstäten</persName>)<note resp="#lena.ebert"><p xml:lang="de">Die <title ref="#???">Briefe eines
+                                jungen Gelehrten an seinen Freund</title> (<date when-iso="1802">1802</date>) wurden <date when-iso="1810">1810</date>
+                            von <persName ref="p0320" type="bi">Marie-Aimée Steck-Guichelin</persName> ins Französische übersetzt (s. die Zeittafel in
+                            der Bonstetten-Briefausgabe <title ref="#???">Bonstettiana</title>, Bd. X.2, 2003: 797).</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> sehr glücklich übersezt.<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance
+                            d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"damit
+                            beschäftigt"</quote>. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</note> wenn<lb/> du es unternim̄st so mußt du
+                    mit <unclear cert="low" reason="illegible">buchhandler</unclear><note resp="#lena.ebert"><p xml:lang="de">Womöglich nimmt
+                                <persName ref="#p0237" type="bi">Chamisso</persName> mit <quote>"buchhandler"</quote> auf den gemeinsamen Freund
+                                <persName ref="#p0239" type="bi">Julius Eduard Hitzig</persName> Bezug, so erwähnt er auch im <ref
+                                target="Brief111ChamissoandeLaFoye.xml">Brief aus Schaffhausen</ref> den <quote>"Buchhändler Hitzig"</quote>.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note><lb/> rücksprache nehmen und ich konnte hier an die</p>
                 <pb facs="00000168.jpg" n="2"/>
                 <p>dann Nachricht geben laßen. – Mir ist<lb/> noch bei zeiten eingefallen mit <persName ref="#p0318" type="bi"
                     >Bonstätten</persName><lb/> Rücksprache zu nehmen. – er hatt<del rend="strikethrough">e</del> die<lb/> Frau von <choice>
                         <sic><hi rend="latin">Staëk</hi></sic>
                         <corr><hi rend="latin"><persName ref="#p0255" type="bi">Staël</persName></hi></corr>
-                    </choice><note resp="#lena.ebert" subtype="1">Gemeint ist mit sehr großer Wahrscheinlichkeit <persName ref="#p0255" type="bi"
-                            >Madame de Staël</persName></note> auffodern wollen besagte<lb/> Geschichte zu übersezen – <rs ref="#p0317" type="bi"
-                        >Müllers Bruder</rs><lb/> hat ihn aber benachrichtigt es wären <subst>
+                    </choice><note resp="#lena.ebert" subtype="1"><p xml:lang="de">Gemeint ist mit sehr großer Wahrscheinlichkeit <persName
+                                ref="#p0255" type="bi">Madame de Staël</persName></p><p xml:lang="en"/><p xml:lang="fr"/></note> auffodern wollen
+                    besagte<lb/> Geschichte zu übersezen – <rs ref="#p0317" type="bi">Müllers Bruder</rs><lb/> hat ihn aber benachrichtigt es wären <subst>
                         <del rend="overwritten">s</del>
                         <add place="across">b</add>
                     </subst>ereits<lb/>
-                    <rs type="bi">zwei <foreign xml:lang="la"><hi rend="latin">litterati</hi></foreign></rs><note resp="#lena.ebert">Es ist unklar, um
-                        wen es sich hierbei handelt.</note> damit beschäftigt.</p>
+                    <rs type="bi">zwei <foreign xml:lang="la"><hi rend="latin">litterati</hi></foreign></rs><note resp="#lena.ebert"><p xml:lang="de"
+                            >Es ist unklar, um wen es sich hierbei handelt.</p><p xml:lang="en"/><p xml:lang="fr"/></note> damit beschäftigt.</p>
                 <p>– Mir fallt ein ein ganz altes Volksbuch<lb/> von T<gap extent="3c" reason="stain"/>. <persName ref="#p0133" type="bi"
                         >Tieck</persName>. im <title ref="#???"><choice>
                             <abbr>8<hi rend="superscript">ten</hi></abbr>
@@ -367,18 +380,20 @@
                 <p>Mich trösten ein heliches Land, ein<lb/> schönes Wasser, wunderbare Gebürge, und<lb/> eine reine Luft, für alle
                     Mißheligkeiten,<lb/> des innern und außeren Geschickes –<lb/> ich warte es ab, – ich weiß nicht was aus<lb/> mir wird, aber die
                     Sehnsucht zieht mich<lb/> nach <hi rend="latin"><placeName ref="#l0072" type="bi">Italien</placeName></hi><note resp="#lena.ebert"
-                            ><persName ref="#p0237" type="bi">Chamissos</persName> Schwester <persName ref="#p0299" type="bi">Madeleine
-                            d'Engente</persName> hielt sich zu der Zeit mit ihrer Familie in <placeName ref="#l0072" type="bi">Italien</placeName>
-                        auf, vgl. <ref target=".xml">Chamissos folgenden Brief</ref>.</note> – die vernunft bannt mich<lb/> in eine deutsche
-                    universität – und gewiße<lb/> Zauber halten mich hier fest. – biß sich<lb/> wenigstens manches Gestaltet – ich</p>
+                            ><p xml:lang="de"><persName ref="#p0237" type="bi">Chamissos</persName> Schwester <persName ref="#p0299" type="bi"
+                                >Madeleine d'Engente</persName> hielt sich zu der Zeit mit ihrer Familie in <placeName ref="#l0072" type="bi"
+                                >Italien</placeName> auf, vgl. <ref target=".xml">Chamissos folgenden Brief</ref>.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> – die vernunft bannt mich<lb/> in eine deutsche universität – und gewiße<lb/> Zauber halten mich
+                    hier fest. – biß sich<lb/> wenigstens manches Gestaltet – ich</p>
                 <pb facs="00000169.jpg" n="3"/>
-                <note hand="#pencil_2" place="margin-right" type="foliation">84</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">84</note>
                 <p>werde die Tage eine Reise nach der<lb/> Trappe unternehmen – es würde doch<lb/> seltsam sein wenn es mich gleich dort<lb/> fest
-                    hielt. – Die <rs ref="#p0255" type="bi">Schöne Herrin</rs>dieses<lb/> Zauber Gartens, gehört sehr so<note resp="#lena.ebert">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieses
-                            <quote>"so"</quote>.</note> sehr der<lb/> Welt an, . sie wirft sich gewisser ma<unclear cert="medium" reason="illegible"
-                        >ß</unclear>en<lb/> dem Teufel zu in dem sie auf gott verzwe<unclear cert="medium" reason="illegible">i</unclear><lb
-                        break="no" type="none"/>flungsvoll verzicht geleistet. – sie hat eine<lb/> hohe reiche begeisterte volle <subst>
+                    hielt. – Die <rs ref="#p0255" type="bi">Schöne Herrin</rs>dieses<lb/> Zauber Gartens, gehört sehr so<note resp="#lena.ebert"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt
+                            dieses <quote>"so"</quote>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> sehr der<lb/> Welt an, . sie wirft sich
+                    gewisser ma<unclear cert="medium" reason="illegible">ß</unclear>en<lb/> dem Teufel zu in dem sie auf gott verzwe<unclear
+                        cert="medium" reason="illegible">i</unclear><lb break="no" type="none"/>flungsvoll verzicht geleistet. – sie hat eine<lb/>
+                    hohe reiche begeisterte volle <subst>
                         <del rend="overwritten">s</del>
                         <add place="across">S</add>
                     </subst>eele, aber zu<lb/> viel Tolhet für das <subst>
@@ -397,9 +412,10 @@
                     </subst> zu ihr als sie<lb/> zu mi<subst>
                         <del rend="overwritten">ch</del>
                         <add place="across"><hi rend="underline">r</hi></add>
-                    </subst> empfinde –<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"gehalten werde"</quote> auf der folgenden Seite. Die
-                        Lücke ist mit Auslassungspunkten gekennzeichnet.</note> Gott! möge sich doch<lb/> für <subst>
+                    </subst> empfinde –<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"gehalten werde"</quote> auf
+                            der folgenden Seite. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    Gott! möge sich doch<lb/> für <subst>
                         <del rend="strikethrough">das</del>
                         <add place="above">dich und mich</add>
                     </subst>
@@ -409,32 +425,32 @@
                         <unclear cert="low" reason="illegible">gestatten</unclear>
                     </choice>, – man hat so vieles<lb/> sich zu sagen daß man strengem Still<lb break="no"/>schweigen verdammt ist – mag ich dir nur<lb/>
                     <unclear cert="medium" reason="illegible">dienen</unclear>
-                    <gap extent="1w" reason="damage"/> dir die <rs type="bi">Braut</rs><note resp="#lena.ebert">Es ist unklar, auf wen sich <persName
-                            ref="#p0248" type="bi">Chamisso</persName> hier bezieht. Die Gegenbriefe von <persName ref="#p0248" type="bi">de La
-                            Foye</persName> liegen uns nicht vor und wurden in der Ausgabe <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                            Fragments inédits</title> nur mit zahlreichen Auslassungen abgedruckt.</note>
+                    <gap extent="1w" reason="damage"/> dir die <rs type="bi">Braut</rs><note resp="#lena.ebert"><p xml:lang="de">Es ist unklar, auf
+                            wen sich <persName ref="#p0248" type="bi">Chamisso</persName> hier bezieht. Die Gegenbriefe von <persName ref="#p0248"
+                                type="bi">de La Foye</persName> liegen uns nicht vor und wurden in der Ausgabe <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> nur mit zahlreichen Auslassungen abgedruckt.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>
                     <unclear cert="high" reason="illegible">heim</unclear> zu führen –<lb/> wenn ich <unclear cert="high" reason="damage"
                     >e</unclear>ben nicht zur Zeit strengst ab und</p>
                 <pb facs="00000170.jpg" n="4" xml:id="Brief001ChamissoandeLaFoye-Blatt4v"/>
                 <p>fest gehalten werde. – mein Guter freund. wie schön<lb/> wie herrlich dieses Land ist, daß kannst du gar nicht<lb/> g<subst>
                         <del rend="overwritten">r</del>
                         <add place="across">l</add>
-                    </subst>auben – !<note resp="#lena.ebert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt der folgende letzte Satz des Briefs. Die Lücke ist nicht mit Auslassungspunkten
-                        gekennzeichnet.</note> – seit ich hier bin hab ich fast gar nich<unclear cert="medium" reason="illegible">t</unclear><lb/>
-                    geschrieben und noch weniger Briefe erhalten. –</p>
-                <p rend="align(center)">
+                    </subst>auben – !<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> fehlt der folgende letzte Satz des Briefs. Die Lücke ist nicht mit
+                            Auslassungspunkten gekennzeichnet.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – seit ich hier bin hab ich fast gar
+                        nich<unclear cert="medium" reason="illegible">t</unclear><lb/> geschrieben und noch weniger Briefe erhalten. –</p>
+                <closer>
                     <g type="unknown"/>
-                    <address>
+                    <address rend="align(center)">
                         <addrLine><foreign xml:lang="fr"><hi rend="latin">à Monsieur <persName ref="#p0248" type="bi">Louis
                                 deLafoye</persName></hi></foreign></addrLine>
-                        <note hand="#postman" place="across"><unclear cert="medium" reason="illegible">9</unclear></note>
-                        <stamp>Schwarzer Poststempel, der "<placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
+                        <addrLine><note hand="#postman" place="across"><unclear cert="medium" reason="illegible">9</unclear></note></addrLine>
+                        <addrLine><stamp>Schwarzer Poststempel, der "<placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp></addrLine>
                         <addrLine><hi rend="latin"><placeName ref="#l0107" type="bi">Caen</placeName></hi></addrLine>
                         <addrLine><hi rend="latin"><placeName ref="#l0108" type="bi">Calvados.</placeName></hi></addrLine>
                     </address>
-                    <seal>Reste des roten Siegels, auf dem griechische Zeichen zu erkennen sind.</seal>
-                </p>
+                </closer>
             </div>
         </body>
     </text>

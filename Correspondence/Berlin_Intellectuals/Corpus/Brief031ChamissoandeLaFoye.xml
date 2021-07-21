@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -64,8 +65,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlass de La Foye</collection>
@@ -218,8 +225,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-01-28" who="#sabine.seifert">Changes according to Wohlgeformtheit so that file can be uploaded to server via
                 SVN.</change>
             <change when-iso="2012-07-01" who="#caroline.forscht">Added description of manuscript, endcoding, notes and jpg</change>
@@ -306,7 +314,7 @@
                 </closer>
                 <postscript>
                     <p>– den<lb/> Vers hab ich mir jüngst in meinem <persName ref="#" type="bi">rabelais</persName><lb/>gemerkt: <foreign
-                            xml:lang="la"><hi rend="latin">deficiente pecu, deficit omne, nia.</hi></foreign><lb/>hier <foreign xml:lang="la"><hi
+                            xml:lang="la"><hi rend="latin">deficiente pecu, deficsit omne, nia.</hi></foreign><lb/>hier <foreign xml:lang="la"><hi
                                 rend="latin">deficit</hi></foreign>führ wahr, – ich seh bloß wie ein<lb/>Freund aus im Hauß.</p>
                 </postscript>
             </div>
