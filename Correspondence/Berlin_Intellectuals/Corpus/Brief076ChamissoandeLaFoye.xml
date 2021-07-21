@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository/>
                         <collection>Nachlass de la Foye</collection>
@@ -201,8 +208,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2013-02-12" who="#nina.breher">Added bibliographic references.</change>
         </revisionDesc>
     </teiHeader>
@@ -210,14 +218,14 @@
         <body>
             <div type="transcription">
                 <pb facs="00000277.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left" type="foliation">132</note>
-                <note hand="#pencil_2" place="margin-right" type="foliation">138</note>
-                <p>
-                    <opener>
-                        <dateline><date when-iso="1822-09-28">28 9 1822</date></dateline><dateline rend="align(right)">am 10<hi rend="superscript"
-                                >ten</hi> 10<hi rend="superscript">b</hi> abgegeben.</dateline>
-                    </opener>
-                    <foreign xml:lang="la"><hi rend="latin">Peccavi</hi></foreign>. ich habe aber erst zu Ende <date when-iso="1822-08">8<hi
+                <note hand="#pencil_1" place="margin(left)" type="foliation">132</note>
+                <note hand="#pencil_2" place="margin(right)" type="foliation">138</note>
+
+                <opener>
+                    <dateline><date when-iso="1822-09-28">28 9 1822</date></dateline><dateline rend="align(right)">am 10<hi rend="superscript"
+                            >ten</hi> 10<hi rend="superscript">b</hi> abgegeben.</dateline>
+                </opener>
+                <p><foreign xml:lang="la"><hi rend="latin">Peccavi</hi></foreign>. ich habe aber erst zu Ende <date when-iso="1822-08">8<hi
                             rend="superscript">ber</hi></date> deinen Brief<lb/> vom <date when-iso="1822-09-17">17 <unclear cert="high"
                             reason="illegible">9</unclear><hi rend="superscript">ber</hi></date>, <hi rend="superscript">dein Diplom vor 8 Tagen</hi>
                     und heute deinen vom <date when-iso="1822-08-29">29 8<hi rend="superscript">b</hi></date> erhalten. — zur<lb/> Antwort. Luftsteine
@@ -238,12 +246,13 @@
                             <unclear cert="medium" reason="illegible">Eif. Lenp.</unclear></hi></foreign> dir die nächsten verhüllst. = Ich werde dir
                     <lb/> ein ander mal schreiben heute kann ich dich nur umarmen,<lb/> die arme Welt geht schief und schiefer! </p>
                 <pb facs="00000275.jpg" n="2" xml:id="Brief075ChamissoanddeLaFoye-Blatt138r"/>
-                <p> A. Monsieur<lb/> Monsieur Louis de la Foye<lb/>
-                    <gap extent="fifteen chars" reason="illegible"/>
-                    <p/>
-                    <hi rend="align(right)"><placeName ref="#l0107" type="bi">a Caen</placeName>.<lb/>
-                        <placeName ref="#l0108" type="bi">Calvados</placeName>.</hi>
-                </p>
+                <closer><address>
+                        <addrLine>A. Monsieur</addrLine>
+                        <addrLine>Monsieur Louis de la Foye</addrLine>
+                        <addrLine><gap extent="fifteen chars" reason="illegible"/></addrLine>
+                        <addrLine rend="align(right)"><placeName ref="#l0107" type="bi">a Caen</placeName>.<lb/>
+                            <placeName ref="#l0108" type="bi">Calvados</placeName>.</addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

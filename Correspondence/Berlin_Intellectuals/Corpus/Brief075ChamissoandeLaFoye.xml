@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -61,8 +62,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository/>
                         <collection>Nachlass de la Foye</collection>
@@ -219,8 +226,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2013-02-12" who="#nina.breher">Added bibliographic references.</change>
         </revisionDesc>
     </teiHeader>
@@ -228,13 +236,14 @@
         <body>
             <div type="transcription">
                 <pb facs="00000273.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-left" type="foliation">139</note>
+                <note hand="#pencil_1" place="margin(left)" type="foliation">139</note>
                 <note hand="#pencil_1" place="margin-top" type="foliation">3<hi rend="superscript">ter</hi> August 1822</note>
-                <note hand="#pencil_3" place="margin-right" type="foliation">136</note>
-                <note resp="#nina.breher"> Dieser Brief liegt gedruckt vor in <title ref="#w00253"> Leben und Briefe von Adelbert von Chamisso
-                    </title> , Brief 13. Der Herausgeber <persName ref="p0261" type="bi">Hitzig</persName> nimmt Eingriffe bezüglich der Groß- und
-                    Kleinschreibung, Rechtschreibung und Zeichensetzung vor. Er ignoriert den Wechsel zwischen Kurrentschrift und lateinischer Schrift
-                    und druckt den Brief mit nicht gekennzeichneten Auslassungen. </note>
+                <note hand="#pencil_3" place="margin(right)" type="foliation">136</note>
+                <note resp="#nina.breher"><p xml:lang="de">Dieser Brief liegt gedruckt vor in <title ref="#w00253"> Leben und Briefe von Adelbert von
+                            Chamisso </title> , Brief 13. Der Herausgeber <persName ref="p0261" type="bi">Hitzig</persName> nimmt Eingriffe bezüglich
+                        der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor. Er ignoriert den Wechsel zwischen Kurrentschrift und
+                        lateinischer Schrift und druckt den Brief mit nicht gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note>
                 <p> Du hast mir zuletzt einen befriedigenden Brief geschrieben,<lb/> mein sehr lieber Freund, und ich habe <del rend="strikethrough"
                             ><unclear cert="medium" reason="illegible">und</unclear></del><add place="above">bis zuletzt</add> darauf zu
                     antworten<lb/> versäumt — seither haben mich verschieden<unclear cert="high" reason="illegible">e</unclear> Stürme
@@ -280,17 +289,19 @@
                         >L'avocad</hi>
                     <gap extent="seven chars" reason="strikethrough"/> lustig gemacht.<lb/> Ich hoffe nicht mehr meine Bemerk<unclear cert="medium"
                         reason="illegible">ed</unclear>ungen und a<note hand="#pencil_1">A</note>nsichten <lb/> über den <placeName ref="#ll0215"
-                        type="bi"><note hand="#pencil_1">h</note>ein</placeName> kommen zu sehen. <note resp="#nina.breher"> Im Druck der <title
-                            ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der Textabschnitt ab diesem Punkt bis
-                            <quote>"ausgegeben."</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet. </note> — Kotzebue hat <unclear
-                        cert="low" reason="stain">ferner/fanen</unclear><lb/> über den <unclear cert="low" reason="illegible">lanel</unclear>
-                    gehalten, aber die Ueberführung wird<lb/> selbst von den Engländern für eine Sudelei ausgegeben.<lb/>
+                        type="bi"><note hand="#pencil_1">h</note>ein</placeName> kommen zu sehen. <note resp="#nina.breher"><p xml:lang="de"> Im Druck
+                            der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der Textabschnitt ab diesem Punkt bis
+                                <quote>"ausgegeben."</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet. </p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> — Kotzebue hat <unclear cert="low" reason="stain">ferner/fanen</unclear><lb/> über den <unclear
+                        cert="low" reason="illegible">lanel</unclear> gehalten, aber die Ueberführung wird<lb/> selbst von den Engländern für eine
+                    Sudelei ausgegeben.<lb/>
                     <hi rend="latin">Hic erat in fotis.</hi>
                     <del rend="strikethrough"><unclear cert="high" reason="strikethrough">Hoff</unclear></del> Hole der Hund den ganzen<lb/> Kram! Ich
                     werde mich wohl, wenn ich zur Ruhe<lb/> gelange, wieder an die zu sehr vernachlüssigte<lb/> Botanik machen. bis dahin, wie gesagt,
                     ich schlafe,<lb/> dann wollen wir sehen, was wir thun können.<lb/>
-                    <note resp="#nina.breher"> Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der
-                        Textabschnitt ab diesem Punkt bis <quote>"von mir."</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet. </note>
+                    <note resp="#nina.breher"><p xml:lang="de"> Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>
+                            fehlt der Textabschnitt ab diesem Punkt bis <quote>"von mir."</quote>. Die Lücke ist nicht mit Auslassungspunkten
+                            gekennzeichnet. </p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <hi rend="latin"><persName ref="#p0424" type="bi">Choris</persName></hi> scheint mit seinem <rs ref="#???" type="bi">Werke</rs>
                     fertig geworden<lb/> zu sein. du findest auch darin manche Schnitzeln von mir.<lb/>
                 </p>
@@ -304,25 +315,23 @@
                     befinde, und so <rs ref="#???" type="bi">Weib</rs>, und <rs ref="#???" type="bi">zwei Knaben</rs><lb/> — der älteste, ein wackerer
                     bursch von zwei Jahren<lb/> der andere von eben so vielen Monathen.<lb/>
                     <hi rend="align(right) latin"><foreign xml:lang="grc">Vale xai yaipe si potes.</foreign></hi> Ich habe meinem zweiten Jungen den Namen<lb/>
-                    <persName ref="#???" type="bi"><hi rend="latin">Wahrmund</hi></persName> gegeben und das religiose, wie<lb/> Dem ersten den Namen
-                        <persName ref="#???" type="bi"><hi rend="latin">Deodatus</hi></persName>. wir nennen sie<lb/> aber, den ältesten <hi
+                    <persName ref="#p3128" type="bi"><hi rend="latin">Wahrmund</hi></persName> gegeben und das religiose, wie<lb/> Dem ersten den
+                    Namen <persName ref="#p1754" type="bi"><hi rend="latin">Deodatus</hi></persName>. wir nennen sie<lb/> aber, den ältesten <hi
                         rend="latin">Ernst</hi>, den zweiten <hi rend="latin">Max. <persName ref="#p0262" type="bi">Neumann</persName></hi><lb/> hat
                     auch einen Sohn zu seiner Tochter bekommen. —<lb/> dieser unser Freund weiß nur noch von seinem Neste etwas<lb/> und nichts mehr
                     von der Welt, die keine Notiz mehr von<lb/> ihm nimmt. <persName ref="#p0249" type="bi">Varnhagen</persName> ist auf Bäde<note
                         hand="#hitzig">r</note> gereist und<lb/>
                     <persName ref="#p0239" type="bi">Hitzig</persName> (des<note hand="#hitzig">ß</note> Gesundheit immer schleppt) thut dieser
-                    Tage<lb/> desgleichen, Familie begleitet ihn.<lb/>
-                    <closer>
-                        <dateline rend="align(center)"><date when-iso="1822-08-03">3 August 1822</date></dateline>
-                    </closer>
-                </p>
-                <pb facs="00000276.jpg" n="4" xml:id="Brief075ChamissoanddeLaFoye-Blatt137r"/>
-                <p> A Monsieur<lb/> Monsieur b Professeur Louis de la Foye<lb/>
-                    <p/>
-                    <hi rend="align(right)"><placeName ref="#l0107" type="bi">Caen</placeName>.<lb/>
-                        <placeName ref="#l0108" type="bi">Calvados</placeName>.</hi><p/>
-                    <seal>Reste eines Siegels in roter Farbe.</seal>
-                </p>
+                    Tage<lb/> desgleichen, Familie begleitet ihn.</p>
+                <closer>
+                    <dateline rend="align(center)"><date when-iso="1822-08-03">3 August 1822</date></dateline>
+                    <pb facs="00000276.jpg" n="4" xml:id="Brief075ChamissoanddeLaFoye-Blatt137r"/>
+                    <address>
+                        <addrLine rend="align(center)">A Monsieur</addrLine>
+                        <addrLine rend="align(center)">Monsieur b Professeur Louis de la Foye</addrLine>
+                        <addrLine rend="align(right)"><placeName ref="#l0107" type="bi">Caen</placeName>.<lb/>
+                            <placeName ref="#l0108" type="bi">Calvados</placeName>.</addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

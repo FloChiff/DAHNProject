@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -270,8 +277,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2014-11-06" who="#anna.busch">Added subtype to note.</change>
@@ -292,16 +300,17 @@
         <body>
             <div type="transcription">
                 <pb facs="00000221.jpg" n="1"/>
-                <add hand="#pencil_3" place="margin-center">Frühling 1819</add>
-                <note hand="#pencil_1" place="margin-right" type="foliation">110</note>
-                <note hand="#pencil_2" place="margin-left" type="foliation">22</note>
+                <opener><dateline><add hand="#pencil_3" place="margin-center">Frühling 1819</add></dateline></opener>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">110</note>
+                <note hand="#pencil_2" place="margin(left)" type="foliation">22</note>
                 <p><subst>
                         <del rend="overwritten">S</del>
                         <add place="across">D</add>
                     </subst>as hast Du sehr gut gemacht. <add hand="#pencil_3" place="margin-top-left">nämlich, zu heirathen.</add>
                     <foreign xml:lang="la"><hi rend="latin">Crescite <unclear cert="medium" reason="illegible">et</unclear> Multipli<lb break="no"
-                                type="none"/>Camini</hi></foreign>!<note resp="#stefanie.hasler">Übersetzung (lat.): "Seid fruchtbar und mehret euch!"
-                        Zitat aus dem <rs ref="#w00008" type="bi">1. Buch Mose</rs> (1,28).</note> – Glaube aber nicht es rühr<subst>
+                                type="none"/>Camini</hi></foreign>!<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (lat.): "Seid fruchtbar
+                            und mehret euch!" Zitat aus dem <rs ref="#w00008" type="bi">1. Buch Mose</rs> (1,28).</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> – Glaube aber nicht es rühr<subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">e</add>
                     </subst> von deiner<lb/><subst>
@@ -310,12 +319,13 @@
                     </subst>igenen Weisheit her, und sei darauf <add place="above">nicht</add> stolz – Nein<lb/>mein lieber, ich weis es besser – es
                     steckt jetzt<lb/>in der Luft, es ist <subst>
                         <del rend="overwritten">e</del>
-                        <hi rend="latin"><add place="across">e</add></hi>
-                    </subst><hi rend="latin">ndemisch</hi><note resp="#stefanie.hasler">Endemisch: in einem bestimmten Gebiet verbreitet.</note> –
-                    unser <persName ref="#p0262" type="bi">Neumann</persName><lb/>zum Beispiel, <del rend="strikethrough">er</del> läßt grüßen, und
-                    sitzt bei der<lb/><rs ref="#p0417" type="bi">Braut</rs><note resp="#sabine.seifert"><persName ref="#p0262" type="bi">Friedrich
-                            Wilhelm Neumann</persName> heiratete <date when-iso="1819">1819</date>
-                        <persName ref="#p0417" type="bi">Doris Mnioch</persName>.</note>
+                        <add place="across"><hi rend="latin">e</hi></add>
+                    </subst><hi rend="latin">ndemisch</hi><note resp="#stefanie.hasler"><p xml:lang="de">Endemisch: in einem bestimmten Gebiet
+                            verbreitet.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – unser <persName ref="#p0262" type="bi"
+                    >Neumann</persName><lb/>zum Beispiel, <del rend="strikethrough">er</del> läßt grüßen, und sitzt bei der<lb/><rs ref="#p0417"
+                        type="bi">Braut</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0262" type="bi">Friedrich Wilhelm
+                                Neumann</persName> heiratete <date when-iso="1819">1819</date>
+                            <persName ref="#p0417" type="bi">Doris Mnioch</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <gap extent="2-3c" reason="illegible"/> er küßt, küßt, küßt daß einem<lb/>Angst und Bang<add place="inline">e</add> wird, und er
                     selber ganz<lb/>herunter kom̄t, der Braut Vater ist aber un<subst>
                         <del rend="overwritten">s</del>
@@ -329,15 +339,16 @@
                     <subst>
                         <del rend="overwritten">–</del>
                         <add place="across"><hi rend="latin">Periode</hi></add>
-                    </subst><note resp="#stefanie_hasler"><persName ref="#p0239" type="bi">Julius Eduard Hitzig</persName> arbeitete von <date
-                            when-iso="1804/1807">1804 bis 1807</date> als Regierungsassessor in <placeName ref="#l0221" type="bi"
-                        >Warschau</placeName>, wo er Bekanntschaft mit dem Dichter <persName ref="#p0416" type="bi">Johann Jakob Mnioch</persName>
-                        machte. Aufgrund seines frühen Todes <date when-iso="1804">1804</date> wurde seine Tochter <persName ref="#p0417" type="bi"
-                            >Doris Mnioch</persName> Hitzigs Pflegekind.</note> Was mich anbetrift, so <del rend="strikethrough">seht</del><lb/>seh
-                    ich <del rend="strikethrough">wohl</del> kom̄en daß ich im früh jahr noch<lb/>das Heirathen<note resp="#sabine.seifert"
-                        >Ursprünglich war der <date when-iso="1819-07-15">15. Juli 1819</date> als Hochzeitstag mit <persName ref="#p1723" type="bi"
-                            >Antonie Piaste</persName> geplant. Da eine Anstellung <persName ref="#p0237" type="bi">Chamissos</persName> sich
-                        verzögerte, wurde die Hochzeit auf den <date when-iso="1819-09-25">25. September 1819</date> verschoben.</note> wie <del
+                    </subst><note resp="#stefanie_hasler"><p xml:lang="de"><persName ref="#p0239" type="bi">Julius Eduard Hitzig</persName> arbeitete
+                            von <date when-iso="1804/1807">1804 bis 1807</date> als Regierungsassessor in <placeName ref="#l0221" type="bi"
+                                >Warschau</placeName>, wo er Bekanntschaft mit dem Dichter <persName ref="#p0416" type="bi">Johann Jakob
+                                Mnioch</persName> machte. Aufgrund seines frühen Todes <date when-iso="1804">1804</date> wurde seine Tochter <persName
+                                ref="#p0417" type="bi">Doris Mnioch</persName> Hitzigs Pflegekind.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Was
+                    mich anbetrift, so <del rend="strikethrough">seht</del><lb/>seh ich <del rend="strikethrough">wohl</del> kom̄en daß ich im früh
+                    jahr noch<lb/>das Heirathen<note resp="#sabine.seifert"><p xml:lang="de">Ursprünglich war der <date when-iso="1819-07-15">15. Juli
+                                1819</date> als Hochzeitstag mit <persName ref="#p1723" type="bi">Antonie Piaste</persName> geplant. Da eine
+                            Anstellung <persName ref="#p0237" type="bi">Chamissos</persName> sich verzögerte, wurde die Hochzeit auf den <date
+                                when-iso="1819-09-25">25. September 1819</date> verschoben.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wie <del
                         rend="strikethrough">den</del> im Herbst den <subst>
                         <del rend="overwritten">s</del>
                         <add place="across">S</add>
@@ -360,14 +371,14 @@
                         hand="#pencil_3">
                         <del rend="none">p</del>
                         <add place="above">ct</add>
-                    </subst>ische Ocean, – aber <hi rend="latin">Calmplat</hi><note resp="#sabine.seifert">Übersetzung "calme plat" (frz.): ruhiger
-                        Ozean.</note><lb/>und lauter fremde Elemente – mir fällt nichts<lb/>vernünftiges ein – <title ref="#w00263">Der
-                        Zauberring</title> von <hi rend="latin"><persName ref="#p0240" type="bi">Fouqué</persName></hi><lb/>ist <unclear cert="high"
-                        extent="1w" reason="illegible">ein</unclear> vollendetes<add hand="#pencil_3" place="above">tes</add> Werk und nahmentlich
-                    der<lb/>vollendete Ring aller seiner <add place="above">sonstigen</add> Dichtungen, <del rend="strikethrough">wo von</del><add
-                        place="above">deren</add> jegliche<lb/>nur ein Stück davon <del rend="strikethrough">mit</del> als Punsch extract
-                    mit<lb/>gehörigem warm<add place="inline">en</add> Wasser <add place="above">ist</add> – aber ein Dichter Werk,<lb/>und ein
-                    deutsches, mit vielen Liedern und Gedichten.<lb/>– <subst>
+                    </subst>ische Ocean, – aber <hi rend="latin">Calmplat</hi><note resp="#sabine.seifert"><p xml:lang="de">Übersetzung "calme plat"
+                            (frz.): ruhiger Ozean.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>und lauter fremde Elemente – mir fällt
+                    nichts<lb/>vernünftiges ein – <title ref="#w00263">Der Zauberring</title> von <hi rend="latin"><persName ref="#p0240" type="bi"
+                            >Fouqué</persName></hi><lb/>ist <unclear cert="high" extent="1w" reason="illegible">ein</unclear> vollendetes<add
+                        hand="#pencil_3" place="above">tes</add> Werk und nahmentlich der<lb/>vollendete Ring aller seiner <add place="above"
+                        >sonstigen</add> Dichtungen, <del rend="strikethrough">wo von</del><add place="above">deren</add> jegliche<lb/>nur ein Stück
+                    davon <del rend="strikethrough">mit</del> als Punsch extract mit<lb/>gehörigem warm<add place="inline">en</add> Wasser <add
+                        place="above">ist</add> – aber ein Dichter Werk,<lb/>und ein deutsches, mit vielen Liedern und Gedichten.<lb/>– <subst>
                         <del rend="overwritten">u</del>
                         <add place="across">U</add>
                     </subst>nser <persName ref="#p0185" type="bi">H<subst>
@@ -375,9 +386,10 @@
                             <add place="across">off</add>
                         </subst>mann</persName> ist wohl, <unclear cert="medium" extent="1w" reason="illegible">no</unclear>ch
                     eigenthümlicher<lb/>örtlicher deutsch als <hi rend="latin"><persName ref="#p0241" type="bi">Jean paul</persName></hi>. –
-                    unverständlicher<lb/>und fremder für euch – Jetzt unstreitig unser erster<lb/>Humoristiker<note resp="#sabine.seifert">In
-                            <persName ref="#p0239" type="bi">Hitzigs</persName>
-                        <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht "Humorist" statt "Humoristiker".</note> – <subst>
+                    unverständlicher<lb/>und fremder für euch – Jetzt unstreitig unser erster<lb/>Humoristiker<note resp="#sabine.seifert"><p
+                            xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht "Humorist" statt "Humoristiker".</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> – <subst>
                         <add hand="#pencil_3" place="above">Er läßt</add>
                         <del hand="#pencil_3" rend="strikethrough">erläst</del>
                     </subst> den Hund berganza <add hand="#pencil_3" place="above">Berganza</add> von<lb/>
@@ -406,7 +418,7 @@
                             <del rend="overwritten">9</del>
                             <add place="across">8</add>
                         </subst></date>,, 2 <del rend="strikethrough"><gap reason="illegible"/></del>
-                    <del hand="pencil_3" rend="strikethrough">große</del><lb/><add hand="#pencil_3" place="margin-left">gr</add> 8° Bände<note
+                    <del hand="pencil_3" rend="strikethrough">große</del><lb/><add hand="#pencil_3" place="margin(left)">gr</add> 8° Bände<note
                         resp="#sabine.seifert">Bände im Oktav-Format (Höhe etwa ca. 18–20 cm).</note> zu 900 Seiten jedes enthalten noch nu<subst
                         hand="#pencil_3">
                         <del rend="overwritten">r</del>
@@ -421,29 +433,31 @@
                         <del rend="overwritten">d</del>
                         <add place="across">b</add>
                     </subst>er ist<lb/>das für euch <del hand="#pencil_3" rend="none">–</del><add hand="#pencil_3" place="above">?</add> Gelehrte für
-                    die es sein könnte, lesen <note hand="#major_hand" place="margin-left-vertical">wie ware es mit den neuen <hi rend="latin">polar
-                            expedizion</hi> aus dem Englischen.<note resp="#sabine.seifert">Im Druck von <persName ref="#p0239" type="bi"
-                                >Hitzigs</persName>
-                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird diese vertikale Anmerkung
-                        ausgelassen.</note></note><pb facs="00000223.jpg" n="3"/>auch deutsch, und ihr seid doch alle nicht gründlich <note
-                        hand="#pencil_1" place="margin-right" type="foliation">111</note><lb/>oder vielmehr <del rend="strikethrough">die</del> ist
-                    die gründlichkeit doch bei euch nicht<lb/><foreign xml:lang="fr"><hi rend="latin">populair</hi></foreign> – wenn mir <del
-                        rend="strikethrough"><unclear cert="medium" reason="illegible">et</unclear></del> einst etwas gescheites<lb/>einfällt will
-                    ichs dir sagen, jetzt <subst>
+                    die es sein könnte, lesen <note hand="#major_hand" place="margin(left)-vertical">wie ware es mit den neuen <hi rend="latin">polar
+                            expedizion</hi> aus dem Englischen.<note resp="#sabine.seifert"><p xml:lang="de">Im Druck von <persName ref="#p0239"
+                                    type="bi">Hitzigs</persName>
+                                <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird diese vertikale Anmerkung
+                                ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note></note><pb facs="00000223.jpg" n="3"/>auch deutsch, und ihr
+                    seid doch alle nicht gründlich <note hand="#pencil_1" place="margin(right)" type="foliation">111</note><lb/>oder vielmehr <del
+                        rend="strikethrough">die</del> ist die gründlichkeit doch bei euch nicht<lb/><foreign xml:lang="fr"><hi rend="latin"
+                            >populair</hi></foreign> – wenn mir <del rend="strikethrough"><unclear cert="medium" reason="illegible">et</unclear></del>
+                    einst etwas gescheites<lb/>einfällt will ichs dir sagen, jetzt <subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">b</add>
-                    </subst>in ich <hi rend="latin">Pritsch</hi>.<note resp="#stefanie.hasler">Pritsch: hin, verloren (vgl. <ref
-                            target="http://woerterbuchnetz.de/DWB/">Deutsches Wörterbuch von Jacob und Wilhelm Grimm</ref> [Zugriff
-                        30.07.2013]).</note><lb/>— <title ref="#w00453">Der Puzlivizli oder der Mann ohne Schollen</title><note resp="#sabine.seifert"
-                        >Der korrekte Titel lautet: <title ref="#w00453">Der Puzlivizli oder der Mann ohne Schatten</title>.</note><lb/>(Seiten Stück
-                    zum <title ref="#w00454">Vitzlipuzli</title>) nach <hi rend="latin"><persName ref="#p0240" type="bi">dela Motte
-                        Fouqué</persName></hi><lb/>(der Vitzliputzli ist auch noch <unclear cert="low" reason="illegible">hier</unclear> – das
-                        Galgenmännlein<note resp="#sabine.seifert">Hiermit ist die Hauptfigur in <persName ref="#p0240" type="bi">Fouqués</persName>
-                        <title ref="#w00452">Geschichte vom Galgenmännlein</title> gemeint. Im Druck von <persName ref="#p0239" type="bi"
-                            >Hitzigs</persName>
-                        <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird abgekürzt zu: "der Vitzliputzli ist das
-                        Galgenmännlein".</note>)<lb/>ist jetzt ein Zugstück der kleinen <placeName ref="#l0032" type="bi">Wiener</placeName>
-                    Theater.<lb/></p>
+                    </subst>in ich <hi rend="latin">Pritsch</hi>.<note resp="#stefanie.hasler"><p xml:lang="de">Pritsch: hin, verloren (vgl. <ref
+                                target="http://woerterbuchnetz.de/DWB/">Deutsches Wörterbuch von Jacob und Wilhelm Grimm</ref> [Zugriff
+                            30.07.2013]).</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>— <title ref="#w00453">Der Puzlivizli oder der Mann ohne
+                        Schollen</title><note resp="#sabine.seifert"><p xml:lang="de">Der korrekte Titel lautet: <title ref="#w00453">Der Puzlivizli
+                                oder der Mann ohne Schatten</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>(Seiten Stück zum <title
+                        ref="#w00454">Vitzlipuzli</title>) nach <hi rend="latin"><persName ref="#p0240" type="bi">dela Motte
+                    Fouqué</persName></hi><lb/>(der Vitzliputzli ist auch noch <unclear cert="low" reason="illegible">hier</unclear> – das
+                        Galgenmännlein<note resp="#sabine.seifert"><p xml:lang="de">Hiermit ist die Hauptfigur in <persName ref="#p0240" type="bi"
+                                >Fouqués</persName>
+                            <title ref="#w00452">Geschichte vom Galgenmännlein</title> gemeint. Im Druck von <persName ref="#p0239" type="bi"
+                                >Hitzigs</persName>
+                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird abgekürzt zu: "der Vitzliputzli ist das
+                            Galgenmännlein".</p><p xml:lang="en"/><p xml:lang="fr"/></note>)<lb/>ist jetzt ein Zugstück der kleinen <placeName
+                        ref="#l0032" type="bi">Wiener</placeName> Theater.<lb/></p>
                 <p>— Merke dir, daß im Som̄er <hi rend="underline"><hi rend="latin"><persName ref="#p0413" type="bi"
                     >Lichtenstein</persName></hi></hi>,<lb/>mein Lehrer<add hand="#pencil_3" place="inline">,</add> freund und alles, <del
                         rend="strikethrough"><gap extent="1w" reason="illegible"/></del>
@@ -465,56 +479,59 @@
                                 animalibus quibusdam<lb/>e Classe vermium <subst>
                                     <del hand="#pencil_3" rend="overwritten">l</del>
                                     <add hand="#pencil_3" place="across">L</add>
-                                </subst>inea<add hand="#pencil_3" place="above">ea</add>na</title></hi></foreign>.<note resp="#sabine.seifert">Hier
-                        handelt es sich um <persName ref="#p0237" type="bi">Chamissos</persName> Dissertation. Am <date when-iso="1819-03-20">20. März
-                            1819</date> erhielt er die Ehrendoktorwürde für Philosophie der Berliner Universität.</note> – ich habe etwas<lb/>in die
-                    Welt ausstoßen wollen, und das ist es<lb/>geworden – Darauf hör ich daß die <hi rend="latin">Facultät</hi><lb/>sich anschickt<add
-                        hand="#pencil_3">,</add> mir das <hi rend="latin">Doctor Diplom</hi> zu<lb/>übersenden – und die Naturforscher mich<lb/>aufzu
-                        nehmen.<note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> wurde <date when-iso="1819"
-                            >1819</date> Mitglied der <orgName ref="#g0115" type="bi">Gesellschaft naturforschender Freunde zu
-                        Berlin</orgName>.</note>
-                    <closer><foreign xml:lang="la"><hi rend="latin">Vale</hi></foreign>.<note resp="#stefanie.hasler">Übersetzung (lat.): "Lebe
-                            wohl".</note></closer>
-                    <postscript>
-                        <persName ref="#p0239" type="bi">Hitzig</persName> liebt dich<lb/>sehr – <add hand="#pencil_3">[</add><note
+                                </subst>inea<add hand="#pencil_3" place="above">ea</add>na</title></hi></foreign>.<note resp="#sabine.seifert"><p
+                            xml:lang="de">Hier handelt es sich um <persName ref="#p0237" type="bi">Chamissos</persName> Dissertation. Am <date
+                                when-iso="1819-03-20">20. März 1819</date> erhielt er die Ehrendoktorwürde für Philosophie der Berliner
+                            Universität.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – ich habe etwas<lb/>in die Welt ausstoßen wollen, und das ist
+                    es<lb/>geworden – Darauf hör ich daß die <hi rend="latin">Facultät</hi><lb/>sich anschickt<add hand="#pencil_3">,</add> mir das
+                        <hi rend="latin">Doctor Diplom</hi> zu<lb/>übersenden – und die Naturforscher mich<lb/>aufzu nehmen.<note
+                        resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> wurde <date when-iso="1819">1819</date> Mitglied
+                        der <orgName ref="#g0115" type="bi">Gesellschaft naturforschender Freunde zu Berlin</orgName>.</note></p>
+                <closer><foreign xml:lang="la"><hi rend="latin">Vale</hi></foreign>.<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (lat.):
+                            "Lebe wohl".</p><p xml:lang="en"/><p xml:lang="fr"/></note></closer>
+                <postscript>
+                    <p><persName ref="#p0239" type="bi">Hitzig</persName> liebt dich<lb/>sehr – <add hand="#pencil_3">[</add><note
                             resp="#stefanie.hasler" subtype="1">Die gesetzten Klammern markieren die von <persName ref="#p0239" type="bi"
                                 >Hitzig</persName> vorgenommenen Streichungen in <title ref="#w00277">Leben und Briefe von Adelbert von
-                                Chamisso</title>.</note><persName ref="#p0249" type="bi">Varhagen</persName><note resp="#stefanie.hasler"><persName
-                                ref="#p0237" type="bi">Chamisso</persName> schreibt häufig "Varhagen" statt "Varnhagen".</note> hat den großen
-                        Löwen,<lb/>einen orden in <hi rend="latin">Folio</hi> erhalten.<note resp="#stefanie.hasler">Anfang <date when-iso="1819"
-                                >1819</date> erhielt <persName ref="#p0249" type="bi">Varnhagen</persName> durch Großherzog <persName ref="#p0426"
-                                type="bi">Karl Ludwig Friedrich von Baden</persName> den Orden vom Zähringer Löwen.</note>
+                                Chamisso</title>.</note><persName ref="#p0249" type="bi">Varhagen</persName><note resp="#stefanie.hasler"><p
+                                xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> schreibt häufig "Varhagen" statt "Varnhagen".</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note> hat den großen Löwen,<lb/>einen orden in <hi rend="latin">Folio</hi>
+                            erhalten.<note resp="#stefanie.hasler"><p xml:lang="de">Anfang <date when-iso="1819">1819</date> erhielt <persName
+                                    ref="#p0249" type="bi">Varnhagen</persName> durch Großherzog <persName ref="#p0426" type="bi">Karl Ludwig
+                                    Friedrich von Baden</persName> den Orden vom Zähringer Löwen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                         <persName ref="#p0415" type="bi">Sem̄ler</persName>, ein<lb/>anderer Freund, einen andern <hi rend="latin">dito</hi> –<add
                             hand="#pencil_3">]</add> die <subst hand="#pencil_3">
                             <del rend="overwritten">R</del>
                             <add place="across">R</add>
-                        </subst>ussen<lb/><note resp="#sabine.seifert">Diese Anmerkung bezieht sich vermutlich auf <persName ref="#p0237" type="bi"
-                                >Chamissos</persName> Schiffsexpedition unter russischer Leitung <date when-iso="1815/1818">1815 bis 1818</date>. Im
-                            Druck von <persName ref="#p0239" type="bi">Hitzigs</persName>
-                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird an dieser Stelle ergänzt: haben.</note>
-                        <add place="margin-left-vertical"><add hand="#pencil_3">übrigens</add> mir keine andere Belohnung <subst>
+                        </subst>ussen<lb/><note resp="#sabine.seifert"><p xml:lang="de">Diese Anmerkung bezieht sich vermutlich auf <persName
+                                    ref="#p0237" type="bi">Chamissos</persName> Schiffsexpedition unter russischer Leitung <date when-iso="1815/1818"
+                                    >1815 bis 1818</date>. Im Druck von <persName ref="#p0239" type="bi">Hitzigs</persName>
+                                <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird an dieser Stelle ergänzt: haben.</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note>
+                        <add place="margin(left)-vertical"><add hand="#pencil_3">übrigens</add> mir keine andere Belohnung <subst>
                                 <del rend="overwritten"><gap extent="3-4c" reason="illegible"/></del>
                                 <add place="across">gege</add>
                             </subst>ben, als das Recht <del rend="strikethrough">sie</del> und die Freiheit sie auszuschimpfen<lb/>was ich denn auch
                             gern, ob<subst>
                                 <del rend="overwritten">l</del>
                                 <add place="across">g</add>
-                            </subst>leich nur <hi rend="latin">privatim</hi> ausübe.</add>
-                    </postscript></p>
+                            </subst>leich nur <hi rend="latin">privatim</hi> ausübe.</add></p>
+                </postscript>
                 <pb facs="00000224.jpg" n="4" xml:id="Brief060ChamissoandeLaFoye-Blatt111v"/>
-                <note resp="#stefanie.hasler">Im Druck von <persName ref="#p0239" type="bi">Hitzigs</persName>
-                    <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird die Adresse ausgelassen.</note>
-                <p><address>
-                        <foreign xml:lang="fr"><hi rend="latin">
-                                <addrLine>A Monsieur</addrLine>
-                                <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
-                                <addrLine><hi rend="align(center)">professeur es sciences<note resp="#stefanie.hasler">Übersetzung (frz.): Professor
-                                            der Naturwissenschaften.</note></hi></addrLine>
-                                <addrLine><hi rend="underline align(right)">à <placeName ref="#l0696" type="bi">Al<del rend="overwritten">a</del><add
-                                                place="across">e</add>nçon</placeName>.</hi><note hand="#postman"><gap extent="1c" reason="illegible"
-                                            /><note resp="#stefanie.hasler">Vermutlich Beförderungsvermerk.</note></note></addrLine>
-                            </hi></foreign>
-                    </address></p>
+                <note resp="#stefanie.hasler"><p xml:lang="de">Im Druck von <persName ref="#p0239" type="bi">Hitzigs</persName>
+                        <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> wird die Adresse ausgelassen.</p><p xml:lang="en"/><p
+                        xml:lang="fr"/></note>
+                <closer>
+                    <foreign xml:lang="fr"><address rend="latin">
+                            <addrLine>A Monsieur</addrLine>
+                            <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
+                            <addrLine><hi rend="align(center)">professeur es sciences<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung
+                                            (frz.): Professor der Naturwissenschaften.</p><p xml:lang="en"/><p xml:lang="fr"/></note></hi></addrLine>
+                            <addrLine><hi rend="underline align(right)">à <placeName ref="#l0696" type="bi">Al<del rend="overwritten">a</del><add
+                                            place="across">e</add>nçon</placeName>.</hi><note hand="#postman"><gap extent="1c" reason="illegible"
+                                        /><note resp="#stefanie.hasler">Vermutlich Beförderungsvermerk.</note></note></addrLine>
+
+                        </address></foreign></closer>
             </div>
         </body>
     </text>
