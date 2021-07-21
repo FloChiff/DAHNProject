@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -79,8 +80,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -242,8 +249,9 @@
                 <language ident="de" usage="100"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Re-organized information in first footnote and bibl element.</change>
@@ -256,73 +264,80 @@
         <body>
             <div type="transcription">
                 <pb facs="00000007.jpg" n="1"/>
-                <note hand="#pencil" place="top-margin-right" type="foliation">3</note>
-                <note hand="#brown_ink" place="top-margin-right" type="foliation">33</note>
-                <head rend="align(center)">Blumen lese von 1804<note resp="#janine.katins">"Blumenlese" ist das deutsche Synonym für den griechischen
-                        Terminus "Anthologie". Dieses Sonett bildet das Pendant zu dem Sonett "An mich" auf der Rückseite der Handschrift. Beide
-                        Gedichte sind unter dem Titel <title ref="#w00297">Sie und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName>
-                        und <persName ref="#p0249" type="bi">Varnhagens</persName>
-                        <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</note></head>
-                <milestone rend="horizontal-rule" unit="none"/>
-                <lg type="poem">
-                    <l>Ob ich es soll im raschen Wahne wagen</l>
-                    <l>Von deinem Arm umfangen mich zu laßen?</l>
-                    <l>Ganz mich hingebend, stark dich zu umfaßen?</l>
-                    <l>Ob nun der Liebe Sonne mir soll tagen?</l>
-                    <lb/>
-                    <l>Ob ich den Schwachen Mächten soll entsagen</l>
-                    <l><subst>
-                            <del rend="overwritten">d</del>
-                            <add place="across">D</add>
-                        </subst>ie, schürrend sie, der Liebe Flammen hassen;</l>
-                    <l>Ob Ehre Tugend, dich, ich soll verlaßen?</l>
-                    <l>Es will die angst bestürmte Brust verzagen.</l>
-                    <lb/>
-                    <l>So. Sturmgeschlagen rauschen auf die Wogen</l>
-                    <l>doch ihr <subst>
-                            <del rend="overwritten">e</del>
-                            <add place="across">E</add>
-                        </subst>rkosen klaget meinem Trauer:</l>
-                    <l>„In unsern Tiefen wohnt ein nächt’ger Schlummer.</l>
-                    <lb/>
-                    <l>Und abwarts ist mein Sehnen ernst gezogen</l>
-                    <l>Den Kampf entweichend dort mit Hoffnungsschauer</l>
-                    <l>Erhoff ich Rast von meinem heißen Kummer.</l>
-                </lg>
-                <signed rend="align(right) latin"><persName ref="#p0237" type="bi"><choice>
-                            <abbr>v</abbr>
-                            <expan>von </expan>
-                        </choice>Chamisso.</persName></signed>
-                <pb facs="00000008.jpg" n="2"/>
-                <note hand="#brown_ink" place="top-margin-left" type="foliation">34</note>
-                <milestone rend="horizontal-rule" unit="none"/>
-                <lg type="poem">
-                    <head rend="align(center)">An mich<note resp="#anna.busch">Dieses Sonett bildet das Pendant zu dem Sonett auf der Vorderseite der
+                <note hand="#pencil" place="top-margin(right)" type="foliation">3</note>
+                <note hand="#brown_ink" place="top-margin(right)" type="foliation">33</note>
+                <head rend="align(center)">Blumen lese von 1804<note resp="#janine.katins"><p xml:lang="de">"Blumenlese" ist das deutsche Synonym für
+                            den griechischen Terminus "Anthologie". Dieses Sonett bildet das Pendant zu dem Sonett "An mich" auf der Rückseite der
                             Handschrift. Beide Gedichte sind unter dem Titel <title ref="#w00297">Sie und Er</title> in <persName ref="#p0237"
                                 type="bi">Chamissos</persName> und <persName ref="#p0249" type="bi">Varnhagens</persName>
-                            <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</note></head>
-                    <l>Die zarten Saiten stark erschüttert laßen,</l>
-                    <l>Umleuchten nicht von Himmlischen Ackorden</l>
-                    <l>Der Harmonien Kelch. Vom rauhen Norden</l>
-                    <l>Erbrausen Stürme die das schöne haßen.</l>
-                    <lb/>
-                    <l>Auf raffe dich und wiße dich zu faßen,</l>
-                    <l>Des Himmels götterkraft ist dir geworden,</l>
-                    <l>Des Himmels Feuer soll das irrd’sche Morden,</l>
-                    <l>Das Schreckbild de<supplied cert="high" extent="1c" reason="damage">r</supplied> Gewöhnlichkeit erblaßen.</l>
-                    <lb/>
-                    <l>Die Kraft der Liebe walle unbestritten,</l>
-                    <l>Im Flammen Fluten tauch'<add place="inline">,</add> und neugebohren</l>
-                    <l>Entschwinge stark dich ja der blauen Klarheit.</l>
-                    <lb/>
-                    <l>Die Afterwelt entsinkt den Flammen tritten,</l>
-                    <l>Wir fanden uns, die wollend sich erkohren</l>
-                    <l>Dem doppel Todt erstand das uns in Wahrheit</l>
-                </lg>
-                <signed rend="align(right) latin"><hi rend="underline"><persName ref="#p0237" type="bi"><choice>
+                            <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note></head>
+                <div type="poem">
+                    <milestone rend="horizontal-rule" unit="none"/>
+                    <lg type="poem">
+                        <l>Ob ich es soll im raschen Wahne wagen</l>
+                        <l>Von deinem Arm umfangen mich zu laßen?</l>
+                        <l>Ganz mich hingebend, stark dich zu umfaßen?</l>
+                        <l>Ob nun der Liebe Sonne mir soll tagen?</l>
+                        <lb/>
+                        <l>Ob ich den Schwachen Mächten soll entsagen</l>
+                        <l><subst>
+                                <del rend="overwritten">d</del>
+                                <add place="across">D</add>
+                            </subst>ie, schürrend sie, der Liebe Flammen hassen;</l>
+                        <l>Ob Ehre Tugend, dich, ich soll verlaßen?</l>
+                        <l>Es will die angst bestürmte Brust verzagen.</l>
+                        <lb/>
+                        <l>So. Sturmgeschlagen rauschen auf die Wogen</l>
+                        <l>doch ihr <subst>
+                                <del rend="overwritten">e</del>
+                                <add place="across">E</add>
+                            </subst>rkosen klaget meinem Trauer:</l>
+                        <l>„In unsern Tiefen wohnt ein nächt’ger Schlummer.</l>
+                        <lb/>
+                        <l>Und abwarts ist mein Sehnen ernst gezogen</l>
+                        <l>Den Kampf entweichend dort mit Hoffnungsschauer</l>
+                        <l>Erhoff ich Rast von meinem heißen Kummer.</l>
+                    </lg>
+                    <signed rend="align(right) latin"><persName ref="#p0237" type="bi"><choice>
                                 <abbr>v</abbr>
                                 <expan>von </expan>
-                            </choice>Chamisso</persName></hi></signed>
+                            </choice>Chamisso.</persName></signed>
+                </div>
+                <div type="poem">
+                    <pb facs="00000008.jpg" n="2"/>
+                    <note hand="#brown_ink" place="top-margin(left)" type="foliation">34</note>
+                    <milestone rend="horizontal-rule" unit="none"/>
+                    <lg type="poem">
+                        <head rend="align(center)">An mich<note resp="#anna.busch"><p xml:lang="de">Dieses Sonett bildet das Pendant zu dem Sonett auf
+                                    der Vorderseite der Handschrift. Beide Gedichte sind unter dem Titel <title ref="#w00297">Sie und Er</title> in
+                                        <persName ref="#p0237" type="bi">Chamissos</persName> und <persName ref="#p0249" type="bi"
+                                        >Varnhagens</persName>
+                                    <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note></head>
+                        <l>Die zarten Saiten stark erschüttert laßen,</l>
+                        <l>Umleuchten nicht von Himmlischen Ackorden</l>
+                        <l>Der Harmonien Kelch. Vom rauhen Norden</l>
+                        <l>Erbrausen Stürme die das schöne haßen.</l>
+                        <lb/>
+                        <l>Auf raffe dich und wiße dich zu faßen,</l>
+                        <l>Des Himmels götterkraft ist dir geworden,</l>
+                        <l>Des Himmels Feuer soll das irrd’sche Morden,</l>
+                        <l>Das Schreckbild de<supplied cert="high" extent="1c" reason="damage">r</supplied> Gewöhnlichkeit erblaßen.</l>
+                        <lb/>
+                        <l>Die Kraft der Liebe walle unbestritten,</l>
+                        <l>Im Flammen Fluten tauch'<add place="inline">,</add> und neugebohren</l>
+                        <l>Entschwinge stark dich ja der blauen Klarheit.</l>
+                        <lb/>
+                        <l>Die Afterwelt entsinkt den Flammen tritten,</l>
+                        <l>Wir fanden uns, die wollend sich erkohren</l>
+                        <l>Dem doppel Todt erstand das uns in Wahrheit</l>
+                    </lg>
+                    <signed rend="align(right) latin"><hi rend="underline"><persName ref="#p0237" type="bi"><choice>
+                                    <abbr>v</abbr>
+                                    <expan>von </expan>
+                                </choice>Chamisso</persName></hi></signed>
+                </div>
             </div>
         </body>
     </text>

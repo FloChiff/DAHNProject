@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -65,8 +66,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>de La Foye papers</collection>
@@ -252,8 +259,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
@@ -275,33 +283,34 @@
         <body>
             <div type="transcription">
                 <pb facs="00000005.jpg" n="1"/>
-                <note hand="#pencil" place="margin-right" type="foliation">2</note>
+                <note hand="#pencil" place="margin(right)" type="foliation">2</note>
                 <p>95 <choice>
                         <abbr>Rhhl</abbr>
                         <expan>Reichstaler</expan>
                     </choice> 2 <choice>
                         <abbr>gr.</abbr>
                         <expan>Groschen</expan>
-                    </choice> Scheide Münze<note resp="#sabine.seifert"><seg xml:lang="de">Scheidemünzen sind Münzen, deren Metallwert geringer ist
-                            als ihr Zahlungswert. Bei Kurantmünzen hingegen wird der Zahlungswert durch den Metallwert gedeckt.</seg>
-                        <seg xml:lang="en">"Scheidemünzen" are coins whose metal value is less than their legal value. By contrast, currency money
-                            (Kurantmünzen) is money with a market value similar to the value of the metal it contains.</seg>
-                        <seg xml:lang="fr">"Scheidemünzen" are coins whose metal value is less than their legal value. By contrast, currency money
-                            (Kurantmünzen) is money with a market value similar to the value of the metal it contains.</seg></note><lb/>habe ich vom
-                        <hi rend="latin"><choice>
+                    </choice> Scheide Münze<note resp="#sabine.seifert">
+                        <p xml:lang="de">Scheidemünzen sind Münzen, deren Metallwert geringer ist als ihr Zahlungswert. Bei Kurantmünzen hingegen wird
+                            der Zahlungswert durch den Metallwert gedeckt.</p>
+                        <p xml:lang="en">"Scheidemünzen" are coins whose metal value is less than their legal value. By contrast, currency money
+                            (Kurantmünzen) is money with a market value similar to the value of the metal it contains.</p>
+                        <p xml:lang="fr">"Scheidemünzen" are coins whose metal value is less than their legal value. By contrast, currency money
+                            (Kurantmünzen) is money with a market value similar to the value of the metal it contains.</p></note><lb/>habe ich vom <hi
+                        rend="latin"><choice>
                             <abbr>Regimt</abbr>
                             <expan>Regiment</expan>
                         </choice>
                         <persName ref="#p0274" type="bi">Winning</persName></hi><note resp="#sabine.seifert">
-                        <seg xml:lang="de">Im Regiment von <persName ref="#p0274" type="bi">Winning</persName> war <persName ref="#p0248" type="bi"
+                        <p xml:lang="de">Im Regiment von <persName ref="#p0274" type="bi">Winning</persName> war <persName ref="#p0248" type="bi"
                                 >Louis de La Foye</persName> ab <date when-iso="1799">Ende 1799</date> oder <date when-iso="1800">Anfang 1800</date>
-                            Offiziersanwärter.</seg>
-                        <seg xml:lang="en"><persName ref="#p0248" type="bi">Louis de La Foye</persName> served in the regiment of <persName
-                                ref="#p0274" type="bi">Winning</persName> as officer cadet (Offiziersanwärter) since the <date when-iso="1799">end of
-                                1799</date> or <date when-iso="1800">the beginning of 1800</date>.</seg>
-                        <seg xml:lang="fr"><persName ref="#p0248" type="bi">Louis de La Foye</persName> served in the regiment of <persName
-                                ref="#p0274" type="bi">Winning</persName> as officer cadet (Offiziersanwärter) since the <date when-iso="1799">end of
-                                1799</date> or <date when-iso="1800">the beginning of 1800</date>.</seg>
+                            Offiziersanwärter.</p>
+                        <p xml:lang="en"><persName ref="#p0248" type="bi">Louis de La Foye</persName> served in the regiment of <persName ref="#p0274"
+                                type="bi">Winning</persName> as officer cadet (Offiziersanwärter) since the <date when-iso="1799">end of 1799</date>
+                            or <date when-iso="1800">the beginning of 1800</date>.</p>
+                        <p xml:lang="fr"><persName ref="#p0248" type="bi">Louis de La Foye</persName> served in the regiment of <persName ref="#p0274"
+                                type="bi">Winning</persName> as officer cadet (Offiziersanwärter) since the <date when-iso="1799">end of 1799</date>
+                            or <date when-iso="1800">the beginning of 1800</date>.</p>
                     </note> erhalten<lb/>und sind die Rechnungen ganz rigtig.<lb/>biß dahin daß wohl ein Theil <hi rend="latin">Courant</hi>
                     zu<lb/>fodern gewesen wäre. - auch hat<lb/>das <hi rend="latin"><choice>
                             <abbr>Regimt</abbr>
@@ -339,112 +348,122 @@
                             <expan>von</expan>
                         </choice>
                         <persName ref="#p0273" type="bi">Götze</persName></hi><note resp="#sabine.seifert">
-                        <seg xml:lang="de"><date when-iso="1798">1798</date> wurde <persName ref="#p0237" type="bi">Chamisso</persName> Fähnrich im
+                        <p xml:lang="de"><date when-iso="1798">1798</date> wurde <persName ref="#p0237" type="bi">Chamisso</persName> Fähnrich im
                             Infanterieregiment von <persName ref="#p0273" type="bi">Götze</persName> bei der Berliner Stadtgarnison, in der er <date
                                 when-iso="1801">1801</date> zum Leutnant befördert wurde. <date when-iso="1806">1806</date> zog er sich aus dem
-                            preußischen Militärdienst zurück. Seine Entlassung wurde <date when-iso="1808">1808</date> offiziell bestätigt.</seg>
-                        <seg xml:lang="en">In <date when-iso="1798">1798</date>, <persName ref="#p0237" type="bi">Chamisso</persName> became officer
+                            preußischen Militärdienst zurück. Seine Entlassung wurde <date when-iso="1808">1808</date> offiziell bestätigt.</p>
+                        <p xml:lang="en">In <date when-iso="1798">1798</date>, <persName ref="#p0237" type="bi">Chamisso</persName> became officer
                             cadet (Fähnrich) in the regiment of <persName ref="#p0273" type="bi">Götze</persName> in Berlin. In <date when-iso="1801"
                                 >1801</date>, he was promoted to lieutenant. In <date when-iso="1806">1806</date>, Chamisso withdrew from military
-                            service in the Prussian army, and in <date when-iso="1808">1808</date>, was officially discharged.</seg>
-                        <seg xml:lang="fr">In <date when-iso="1798">1798</date>, <persName ref="#p0237" type="bi">Chamisso</persName> became officer
+                            service in the Prussian army, and in <date when-iso="1808">1808</date>, was officially discharged.</p>
+                        <p xml:lang="fr">In <date when-iso="1798">1798</date>, <persName ref="#p0237" type="bi">Chamisso</persName> became officer
                             cadet (Fähnrich) in the regiment of <persName ref="#p0273" type="bi">Götze</persName> in Berlin. In <date when-iso="1801"
                                 >1801</date>, he was promoted to lieutenant. In <date when-iso="1806">1806</date>, Chamisso withdrew from military
-                            service in the Prussian army, and in <date when-iso="1808">1808</date>, was officially discharged.</seg>
+                            service in the Prussian army, and in <date when-iso="1808">1808</date>, was officially discharged.</p>
                     </note></closer>
                 <pb facs="00000006.jpg" n="2"/>
-                <p>ein ander mahl mehr und besser<lb/>ich heut so lehr und dum wie eine<lb/>Drom̄el.<note resp="#anna.busch">
-                        <seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> heisst
-                            es: "ich bin heute leer und dumm wie eine Trommel". Es mag sein, dass <persName ref="#p0237" type="bi">Chamisso</persName>
-                            mit der bewusst fehlerhaften Schreibweise "lehr und dum" seine Aussage zu verstärken suchte. Bei "Drommel" (auch Drummel)
-                            handelt es sich um eine Nebenform zu "Trommel".</seg>
-                        <seg xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, the text reads "ich bin heute leer und dumm wie eine Trommel". It is possible that <persName
-                                ref="#p0237" type="bi">Chamisso</persName> consciously misspelt "lehr und dum" to emphasize his statement. "Drommel"
-                            (also "Drummel") is a variation of "Trommel".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, on lit "leer und dumm wie eine Trommel" et non "lehr und dum wie eine Drom̄el."</seg>
-                    </note>
-                    <persName ref="#p0249" type="bi">Varnhagen</persName><note resp="#sabine.seifert">
-                        <seg xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0249" type="bi"
-                                >Varnhagen</persName> waren seit <date when-iso="1803">1803</date> befreundet. Gemeinsam gründeten sie den <orgName
-                                ref="#g0031" type="bi">Nordsternbund</orgName> und gaben die <title ref="#w00255">Musenalmanache</title> heraus.</seg>
-                        <seg xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> made friends with <persName ref="#p0249" type="bi"
-                                >Varnhagen</persName> in <date when-iso="1803">1803</date>. Together, they founded the <orgName ref="#g0031" type="bi"
-                                >Nordsternbund</orgName> and edited the <title ref="#w00255">Musenalmanache</title>.</seg>
-                        <seg xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> made friends with <persName ref="#p0249" type="bi"
-                                >Varnhagen</persName> in <date when-iso="1803">1803</date>. Together, they founded the <orgName ref="#g0031" type="bi"
-                                >Nordsternbund</orgName> and edited the <title ref="#w00255">Musenalmanache</title>.</seg>
-                    </note> schricht<note resp="#anna.busch">
-                        <seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird
-                            "schricht" verbessert zu "spricht". "schricht" scheint eine versehentliche Zusammenziehung von 'schreiben' und 'sprechen'
-                            zu sein.</seg>
-                        <seg xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, the text reads "spricht" instead of "schricht". The latter seems to be an accidental contraction of
-                            "schreiben" and "sprechen".</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, on lit "spricht" et non "schricht".</seg>
-                    </note> mir<lb/>mit liebe von dir, von ihm<lb/>nächstens ein gutes Wort.<lb/></p>
-                <p><cit>
+                <postscript>
+                    <p>ein ander mahl mehr und besser<lb/>ich heut so lehr und dum wie eine<lb/>Drom̄el.<note resp="#anna.busch">
+                            <p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> heisst
+                                es: "ich bin heute leer und dumm wie eine Trommel". Es mag sein, dass <persName ref="#p0237" type="bi"
+                                    >Chamisso</persName> mit der bewusst fehlerhaften Schreibweise "lehr und dum" seine Aussage zu verstärken suchte.
+                                Bei "Drommel" (auch Drummel) handelt es sich um eine Nebenform zu "Trommel".</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, the text reads "ich bin heute leer und dumm wie eine Trommel". It is possible that <persName
+                                    ref="#p0237" type="bi">Chamisso</persName> consciously misspelt "lehr und dum" to emphasize his statement.
+                                "Drommel" (also "Drummel") is a variation of "Trommel".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, on lit "leer und dumm wie eine Trommel" et non "lehr und dum wie eine Drom̄el."</p>
+                        </note>
+                        <persName ref="#p0249" type="bi">Varnhagen</persName><note resp="#sabine.seifert">
+                            <p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0249" type="bi"
+                                    >Varnhagen</persName> waren seit <date when-iso="1803">1803</date> befreundet. Gemeinsam gründeten sie den
+                                    <orgName ref="#g0031" type="bi">Nordsternbund</orgName> und gaben die <title ref="#w00255">Musenalmanache</title>
+                                heraus.</p>
+                            <p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> made friends with <persName ref="#p0249" type="bi"
+                                    >Varnhagen</persName> in <date when-iso="1803">1803</date>. Together, they founded the <orgName ref="#g0031"
+                                    type="bi">Nordsternbund</orgName> and edited the <title ref="#w00255">Musenalmanache</title>.</p>
+                            <p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> made friends with <persName ref="#p0249" type="bi"
+                                    >Varnhagen</persName> in <date when-iso="1803">1803</date>. Together, they founded the <orgName ref="#g0031"
+                                    type="bi">Nordsternbund</orgName> and edited the <title ref="#w00255">Musenalmanache</title>.</p>
+                        </note> schricht<note resp="#anna.busch">
+                            <p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird
+                                "schricht" verbessert zu "spricht". "schricht" scheint eine versehentliche Zusammenziehung von 'schreiben' und
+                                'sprechen' zu sein.</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, the text reads "spricht" instead of "schricht". The latter seems to be an accidental contraction
+                                of "schreiben" and "sprechen".</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, on lit "spricht" et non "schricht".</p>
+                        </note> mir<lb/>mit liebe von dir, von ihm<lb/>nächstens ein gutes Wort.<lb/></p>
+                </postscript>
+                <epigraph>
+                    <cit>
                         <quote>
                             <lg type="poem">
                                 <l>da nun die Liebe haucht in die Gedanken</l>
                                 <l>Ich werde kunstvoll gut gesetzt an Jahren</l>
                             </lg><note resp="#sabine.seifert">
-                                <seg xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus dem Gedicht <title ref="#w00260"
+                                <p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus dem Gedicht <title ref="#w00260"
                                         >Erfüllung</title> von <persName ref="#p0249" type="bi">Karl August Varnhagen von Ense</persName>, das
                                     gedruckt in den <title ref="#w00254">Vermischten Gedichten</title> Varnhagens vorliegt (S. 102). Hier lautet die
                                     letzte Strophe: "Doch nun die Liebe haucht in die Gedanken, / Naht schnell begehrter Ufer ferne Weite, / Ich werde
-                                    kunstvoll, gut, gesetzt von Jahren."</seg>
-                                <seg xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes the poem <title ref="#w00260"
+                                    kunstvoll, gut, gesetzt von Jahren."</p>
+                                <p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes the poem <title ref="#w00260"
                                         >Erfüllung</title> by <persName ref="#p0249" type="bi">Karl August Varnhagen von Ense</persName>. It is
                                     printed in Varnhagen's <title ref="#w00254">Vermischte Gedichte</title> (p. 102). The text of the last stanza
                                     reads: "Doch nun die Liebe haucht in die Gedanken, / Naht schnell begehrter Ufer ferne Weite, / Ich werde
-                                    kunstvoll, gut, gesetzt von Jahren."</seg>
-                                <seg xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite un passage du poème <title ref="#w00260"
+                                    kunstvoll, gut, gesetzt von Jahren."</p>
+                                <p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite un passage du poème <title ref="#w00260"
                                         >Erfüllung</title> de <persName ref="#p0249" type="bi">Karl August Varnhagen von Ense</persName>. Dans la
                                     version imprimée dans les <title ref="#w00254">Vermischte Gedichte</title> (p. 102), ce vers apparaît sous la
                                     forme: "Doch nun die Liebe haucht in die Gedanken, / Naht schnell begehrter Ufer ferne Weite, / Ich werde
-                                    kunstvoll, gut, gesetzt von Jahren."</seg>
+                                    kunstvoll, gut, gesetzt von Jahren."</p>
                             </note>
                         </quote>
-                    </cit><lb/></p>
-                <p>Wohl wird es edwas daraus.<note resp="#sabine.seifert">
-                        <seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> werden
-                            beide Verse und der nachfolgende Satz ausgelassen.</seg>
-                        <seg xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, both lines and the following sentence are omitted.</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, omission des deux vers ainsi que de la phrase suivante. </seg>
-                    </note> seine<lb/>Jugend setzt sich an, und in seiner<lb/>jetzigen <foreign xml:lang="fr"><hi rend="latin">Retraite
-                            Spirituele</hi></foreign><note resp="#sabine.seifert">
-                        <seg xml:lang="de"><persName ref="#p0249" type="bi">Varnhagen</persName> verläßt <date when-iso="1804">1804</date>
-                            <placeName ref="#l1103" type="bi">Berlin</placeName> und reist zu seiner Familie nach <placeName ref="#l0084" type="bi"
-                                >Hamburg</placeName>. Dort vertieft er seine wissenschaftlichen Studien.</seg>
-                        <seg xml:lang="en">In <date when-iso="1804">1804</date>, <persName ref="#p0249" type="bi">Varnhagen</persName> folios
-                                <placeName ref="#l1103" type="bi">Berlin</placeName> and travels to his family in <placeName ref="#l0084" type="bi"
-                                >Hamburg</placeName> where he delves into scientific studies.</seg>
-                        <seg xml:lang="fr">In <date when-iso="1804">1804</date>, <persName ref="#p0249" type="bi">Varnhagen</persName> folios
-                                <placeName ref="#l1103" type="bi">Berlin</placeName> and travels to his family in <placeName ref="#l0084" type="bi"
-                                >Hamburg</placeName> where he delves into scientific studies.</seg>
-                    </note> unter seinen<lb/>Prosaischen Juden, verkocht er, nützlig<lb/>alles in unseren Berlinischen <del rend="strikethrough"
-                        >Zei</del>reichen<lb/>Zeiten, wildhin verlebte.<note resp="#sabine.seifert">
-                        <seg xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                            "erlebte!" statt "verlebte."</seg>
-                        <seg xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, the text reads "erlebte!" instead of "verlebte."</seg>
-                        <seg xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title>, on lit "erlebte!" et non "verlebte."</seg>
-                    </note></p>
-                <closer rend="align(center)"><salute><foreign xml:lang="grc"><hi rend="greek">Χαιρε αφιδ</hi></foreign>.<note resp="#anna.busch">
-                            <seg xml:lang="de">Zeittypisches Griechisch ohne Akzente. Übersetzung: "Sei gegrüßt, (mein) Bester!" Im Druck der <title
+                    </cit>
+                    <lb/>
+                </epigraph>
+                <postscript>
+                    <p>Wohl wird es edwas daraus.<note resp="#sabine.seifert">
+                            <p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> werden
+                                beide Verse und der nachfolgende Satz ausgelassen.</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, both lines and the following sentence are omitted.</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, omission des deux vers ainsi que de la phrase suivante. </p>
+                        </note> seine<lb/>Jugend setzt sich an, und in seiner<lb/>jetzigen <foreign xml:lang="fr"><hi rend="latin">Retraite
+                                Spirituele</hi></foreign><note resp="#sabine.seifert">
+                            <p xml:lang="de"><persName ref="#p0249" type="bi">Varnhagen</persName> verläßt <date when-iso="1804">1804</date>
+                                <placeName ref="#l1103" type="bi">Berlin</placeName> und reist zu seiner Familie nach <placeName ref="#l0084"
+                                    type="bi">Hamburg</placeName>. Dort vertieft er seine wissenschaftlichen Studien.</p>
+                            <p xml:lang="en">In <date when-iso="1804">1804</date>, <persName ref="#p0249" type="bi">Varnhagen</persName> folios
+                                    <placeName ref="#l1103" type="bi">Berlin</placeName> and travels to his family in <placeName ref="#l0084"
+                                    type="bi">Hamburg</placeName> where he delves into scientific studies.</p>
+                            <p xml:lang="fr">In <date when-iso="1804">1804</date>, <persName ref="#p0249" type="bi">Varnhagen</persName> folios
+                                    <placeName ref="#l1103" type="bi">Berlin</placeName> and travels to his family in <placeName ref="#l0084"
+                                    type="bi">Hamburg</placeName> where he delves into scientific studies.</p>
+                        </note> unter seinen<lb/>Prosaischen Juden, verkocht er, nützlig<lb/>alles in unseren Berlinischen <del rend="strikethrough"
+                            >Zei</del>reichen<lb/>Zeiten, wildhin verlebte.<note resp="#sabine.seifert">
+                            <p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                                "erlebte!" statt "verlebte."</p>
+                            <p xml:lang="en">In the print version of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, the text reads "erlebte!" instead of "verlebte."</p>
+                            <p xml:lang="fr">Dans la version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                    inédits</title>, on lit "erlebte!" et non "verlebte."</p>
+                        </note></p>
+                </postscript>
+                <closer>
+                    <salute rend="align(center)"><foreign xml:lang="grc"><hi rend="greek">Χαιρε αφιδ</hi></foreign>.<note resp="#anna.busch">
+                            <p xml:lang="de">Zeittypisches Griechisch ohne Akzente. Übersetzung: "Sei gegrüßt, (mein) Bester!" Im Druck der <title
                                     ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die griechische Grußformel
-                                ausgelassen.</seg>
-                            <seg xml:lang="en">Greek phrase that translates "All hail, (my) best!" In the print version of the <title ref="#w00253"
-                                    >Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase is being omitted.</seg>
-                            <seg xml:lang="fr">Expression grecque signifiant: "Salut à toi, (mon) très cher!" Ce passage a été supprimé dans la
-                                version imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>.</seg>
-                        </note></salute></closer>
+                                ausgelassen.</p>
+                            <p xml:lang="en">Greek phrase that translates "All hail, (my) best!" In the print version of the <title ref="#w00253"
+                                    >Correspondance d'Adalbert de Chamisso, Fragments inédits</title>, the phrase is being omitted.</p>
+                            <p xml:lang="fr">Expression grecque signifiant: "Salut à toi, (mon) très cher!" Ce passage a été supprimé dans la version
+                                imprimée dans la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>.</p>
+                        </note></salute>
+                </closer>
             </div>
         </body>
     </text>

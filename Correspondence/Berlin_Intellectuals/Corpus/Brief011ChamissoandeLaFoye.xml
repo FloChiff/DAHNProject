@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -240,8 +247,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-12-17" who="#sabine.seifert">Changed deleted ID for entry p0397 into ID p0361.</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
@@ -262,19 +270,23 @@
         <body>
             <div type="transcription">
                 <pb facs="00000039.jpg" n="1"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">19</note>
-                <note hand="#pencil_2" place="top-margin-left-diagonal" type="foliation"><hi rend="underline">103</hi></note>
-                <p><foreign xml:lang="grc"><hi rend="greek">τὸ του πόλοῦ ἄστρον</hi></foreign><note resp="#sabine.seifert">Übersetzung: „Polarstern“.
-                        Dieser war das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237"
-                            type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
-                            >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</note> sei die Lo<subst>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">19</note>
+                <note hand="#pencil_2" place="top-margin(left)-diagonal" type="foliation"><hi rend="underline">103</hi></note>
+                <p><foreign xml:lang="grc"><hi rend="greek">τὸ του πόλοῦ ἄστρον</hi></foreign>
+                    <note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: „Polarstern“. Dieser war das Erkennungszeichen des <orgName
+                                ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und
+                                <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
+                            jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"/></note> sei die Lo<subst>
                         <del rend="overwritten">t</del>
                         <add place="across">s</add>
-                    </subst>ung.<lb/><foreign xml:lang="grc"><hi rend="greek">Ὁρκιον μεμνασθαι</hi></foreign><note resp="#sabine.seifert">Übersetzung:
-                        „Erinnere dich an den Schwur“.</note> ein<del rend="strikethrough">e</del> gewigtigeres Wort, eine spät
-                        auszusprechende<lb/>Anrufung.<lb/><foreign xml:lang="grc"><hi rend="greek">Αδελφος</hi></foreign><note resp="#sabine.seifert">
-                        <persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem griechischen
-                        Wort für Bruder, "Adelf" (αδελφός), an.</note> aber unsern wechselseitigen süs<add place="inline">s</add>en <subst>
+                    </subst>ung.<lb/><foreign xml:lang="grc"><hi rend="greek">Ὁρκιον μεμνασθαι</hi></foreign>
+                    <note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: „Erinnere dich an den Schwur“.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> ein<del rend="strikethrough">e</del> gewigtigeres Wort, eine spät auszusprechende<lb/>Anrufung.<lb/><foreign
+                        xml:lang="grc"><hi rend="greek">Αδελφος</hi></foreign>
+                    <note resp="#sabine.seifert"><p xml:lang="de">
+                            <persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem
+                            griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p xml:lang="en"/><p xml:lang="fr"/></note> aber unsern
+                    wechselseitigen süs<add place="inline">s</add>en <subst>
                         <del rend="overwritten"/>
                         <add place="across">N</add>
                     </subst>ahmen, und so mit mein<lb/>lieber Adelf, durch ekle Windstille, und erwünschteren Sturm<lb/>in das Leben hinein. Wir
@@ -294,13 +306,14 @@
                     </subst>iegle ich<lb/>meine Briefe, wie ich mit dem Monogramm meine unterschrift bewehre <foreign xml:lang="grc"><hi rend="greek"><choice>
                                 <abbr>τ τ π α</abbr>
                                 <expan>τὸ του πόλοῦ ἄστρον</expan>
-                            </choice></hi></foreign><note resp="#sabine.seifert">Das Kürzel <foreign xml:lang="grc">τ.τ.π.α.</foreign> steht für
-                            <foreign xml:lang="grc">τò τоυ πόλου αστρον</foreign>, der „Polarstern“.</note>
+                            </choice></hi></foreign>
+                    <note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc">τ.τ.π.α.</foreign> steht für <foreign
+                                xml:lang="grc">τò τоυ πόλου αστρον</foreign>, der „Polarstern“. </p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <lb/>aber auch <hi rend="latin"><persName ref="#p0291" type="bi">Koreff</persName></hi> sollte sich den Siegelring anschaffen!</p>
                 <p>Schön hast du über Schwüre mir gesprochen, und mich beschämet, ich fühl' es,<lb/>worte doch sind immer eitel, und nur in dem Herzen
-                    ist das Leben, wie zuvor<lb/>so nur noch nach<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> wird die Passage "wie zuvor so nur noch nach" ausgelassen.</note>, –
-                    zwei Engeln hatten den kind<subst>
+                    ist das Leben, wie zuvor<lb/>so nur noch nach<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird die Passage "wie zuvor so nur noch nach"
+                            ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, – zwei Engeln hatten den kind<subst>
                         <del rend="strikethrough"><gap extent="some chars" reason="illegible"/></del>
                         <add place="across">isch</add>
                     </subst>en <subst>
@@ -310,8 +323,9 @@
                         <del rend="strikethrough">Sprache</del>
                         <add place="above">Zunge</add>
                     </subst> zu einanger zu reden, und siehe sie haben sich nichts sagen können –<lb/>fühle dann die höhere Bedeutung von <foreign
-                        xml:lang="grc"><hi rend="greek">Ὁκιον μεμνασθαι</hi></foreign><note resp="#sabine.seifert">Übersetzung: „Erinnere dich an den
-                        Schwur“. Im ersten Wort hat Chamisso den zweiten Buchstaben vergessen.</note>, mystische <hi rend="latin"
+                        xml:lang="grc"><hi rend="greek">Ὁκιον μεμνασθαι</hi></foreign>
+                    <note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: „Erinnere dich an den Schwur“. Im ersten Wort hat Chamisso den zweiten
+                            Buchstaben vergessen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, mystische <hi rend="latin"
                     >sacramental</hi><lb/>worte sind unsere, einer wahren Kirche <hi rend="latin">sacramental</hi> Worte.</p>
                 <p>Ich wa<subst>
                         <del rend="overwritten">h</del>
@@ -320,23 +334,25 @@
                         resp="#sabine.seifert">Übersetzung: [ich schwöre] „bei den Augen deines Kopfes“.</note>, daß dir ein<lb/>solches nicht
                     geschehe, ich hatte vieles dir zu sagen, wollte einen sehr langen<lb/>gewigtigen Briefen an dich schreiben, war<del
                         rend="strikethrough">d</del> schlecht aufgelegt, und wurde<lb/> einige Mal gestöret. also hatt sich es verschläpt und ich
-                    schreibe dir endlig<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> wird das Wort "endlig" ausgelassen.</note><lb/>Heute spät in der <subst>
+                    schreibe dir endlig<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso. Fragments inédits</title> wird das Wort "endlig" ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note><lb/>Heute spät in der <subst>
                         <del rend="overwritten">n</del>
                         <add place="across">N</add>
                     </subst>acht anfangend sei es nur um dir kund zu thun daß ich<lb/>dir bald mehr zu senden werde.</p>
-                <p>Den <rs ref="#w00255" type="bi">Grünen</rs><note resp="#sabine.seifert">Aufgrund der grünen Einbandfarbe wurden die <date
-                            when-iso="1804/1806">1804 bis 1806</date> publizierten <title ref="#w00255">Musenalmanache</title> von <persName
-                            ref="#p0237" type="bi">Chamisso</persName> und seinem Freundeskreis als "Grüne" oder "Grünlinge" bezeichnet.</note> hast
-                    du also, lieber, guter, ich <subst>
+                <p>Den <rs ref="#w00255" type="bi">Grünen</rs><note resp="#sabine.seifert"><p xml:lang="de">Aufgrund der grünen Einbandfarbe wurden
+                            die <date when-iso="1804/1806">1804 bis 1806</date> publizierten <title ref="#w00255">Musenalmanache</title> von <persName
+                                ref="#p0237" type="bi">Chamisso</persName> und seinem Freundeskreis als "Grüne" oder "Grünlinge" bezeichnet.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> hast du also, lieber, guter, ich <subst>
                         <del rend="overwritten">w</del>
                         <add place="across">h</add>
                     </subst>abe geläch<subst>
                         <del rend="overwritten">t</del>
                         <add place="across">e</add>
-                    </subst>lt, er war dir,<lb/>was jenem <hi rend="latin">Otaytyer</hi><note resp="#sabine.seifert">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser Stelle "Otahaitier", womit
-                        wahrscheinlich das Volk aus <placeName ref="#l0893" type="bi">Tahiti</placeName> gemeint ist.</note>
+                    </subst>lt, er war dir,<lb/>was jenem <hi rend="latin">Otaytyer</hi><note resp="#sabine.seifert"><p xml:lang="de">Im Druck der
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht an dieser Stelle
+                            "Otahaitier", womit wahrscheinlich das Volk aus <placeName ref="#l0893" type="bi">Tahiti</placeName> gemeint ist.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note>
                     <subst>
                         <del rend="overwritten">zu</del>
                         <add place="across">in</add>
@@ -347,9 +363,10 @@
                         <add place="across">ß</add>
                     </subst> du mir ihn recenziren solst versteht sich von selbst, <del rend="strikethrough"><gap extent="1w" reason="illegible"
                         /></del>
-                    <add place="above">noch mehr</add><note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso. Fragments inédits</title> steht "nochmal".</note>, itzt giebt es<lb/>in <placeName ref="#l0044" type="bi"><hi
-                            rend="latin">Paris</hi></placeName> zwei <hi rend="latin">Journale</hi>, für<del rend="strikethrough">e</del>
+                    <add place="above">noch mehr</add><note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso. Fragments inédits</title> steht "nochmal".</p><p xml:lang="en"/><p xml:lang="fr"/></note>,
+                    itzt giebt es<lb/>in <placeName ref="#l0044" type="bi"><hi rend="latin">Paris</hi></placeName> zwei <hi rend="latin"
+                    >Journale</hi>, für<del rend="strikethrough">e</del>
                     <subst>
                         <del rend="overwritten">v</del>
                         <add place="across">f</add>
@@ -373,10 +390,10 @@
                     </subst>ielen Verkehrtheiten finden sich gute aufsäze des sehr schäzbaren<lb/><hi rend="latin"><persName ref="#p0355" type="bi"
                             >Villers</persName></hi>. Siehe zu daß du zu einem dieser <hi rend="latin">Journalen</hi> gelangest.<lb/>Da konntest du
                     von deinem <hi rend="latin"><rs ref="#w00281" type="bi">Wilhelm</rs>
-                    </hi> und der zu erscheinenden<lb/>Uebersetzung<note resp="#sabine.seifert"><persName ref="#p0248" type="bi">De La Foye</persName>
-                        hat die von ihm erarbeitete Übersetzung von <persName ref="#p0194" type="bi">Goethes</persName>
-                        <title ref="#w00281">Wilhelm Meisters Lehrjahre</title> weder abgeschlossen noch veröffentlicht.</note> zuforderst sprechen,
-                    so dann würd' ich mich grünligst<lb/>deiner Huld empfehlen, <subst>
+                    </hi> und der zu erscheinenden<lb/>Uebersetzung<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0248" type="bi">De
+                                La Foye</persName> hat die von ihm erarbeitete Übersetzung von <persName ref="#p0194" type="bi">Goethes</persName>
+                            <title ref="#w00281">Wilhelm Meisters Lehrjahre</title> weder abgeschlossen noch veröffentlicht.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> zuforderst sprechen, so dann würd' ich mich grünligst<lb/>deiner Huld empfehlen, <subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                         <add place="across">d</add>
                     </subst>ie leuten müßten staunend erfahren daß<lb/><del rend="strikethrough">sie</del> mann sich auch von ihnen zu den <foreign
@@ -390,28 +407,30 @@
                         >Metrique<lb/>prosodie, Sprache</hi>, übersezungen der Deutschen würdest du manches<lb/>Gute sagen konnen, und bücher wollte
                     ich dir von zeit zu zeit<lb/>schicken, (ich habe ein<add place="inline">en</add>
                     <hi rend="latin"><rs ref="#p0033" type="bi">Homer</rs></hi> von <hi rend="latin"><persName ref="#p0361" type="bi"
-                        >Voss</persName>.</hi><note resp="#sabine.seifert">Hiermit ist die Übersetzung von <persName ref="#p0033" type="bi"
-                            >Homers</persName>
-                        <title ref="#w01552">Odyssee</title> oder der <title ref="#w01551">Ilias</title> von <persName ref="#p0361" type="bi"
-                            >Voss</persName> gemeint.</note> für dich gekauft.)</p>
+                        >Voss</persName>.</hi><note resp="#sabine.seifert"><p xml:lang="de">Hiermit ist die Übersetzung von <persName ref="#p0033"
+                                type="bi">Homers</persName>
+                            <title ref="#w01552">Odyssee</title> oder der <title ref="#w01551">Ilias</title> von <persName ref="#p0361" type="bi"
+                                >Voss</persName> gemeint.</p><p xml:lang="en"/><p xml:lang="fr"/></note> für dich gekauft.)</p>
                 <p>Zu dem wehrt des <rs ref="#w00255" type="bi">Grünen</rs> zurück gekehrt, ich schä<add place="inline">t</add>z ihn weil er
                     Gutes<lb/>gestiftet hat. als <hi rend="latin">Manuscript</hi> für Freunde hat er <subst>
                         <del rend="overwritten"><gap extent="1w" reason="illegible"/></del>
                         <add place="across">Wert</add>
                     </subst> und<lb/>so wünsch ich daß er leben möge, als edwas an und für sich da taugt<lb/>er in die unermässlige flut des nicht
                     besten, und gewicht los<lb/>durch seine form, <del rend="strikethrough">h<gap extent="2-3c" reason="illegible"/>t</del> vermögen
-                    ihn nicht empor zu halten<lb/>eine guten<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso. Fragments inédits</title> steht "einige guten" anstelle von "eine guten".</note> Blätter die er haben mag. ein
-                        <title ref="#w03301">Sonnet</title><note resp="#sabine.seifert">Das <persName ref="#p0248" type="bi">de La Foye</persName>
-                        gewidmete Gedicht trägt den Titel: „<hi rend="greek"><foreign xml:lang="grc">τὸ του πόλοῦ ἄστρον</foreign></hi> [Polarstern].
-                        An Louis de la Foye“.</note> schäz ich<pb facs="00000041.jpg" n="3"/> unter meinen Beiträgen, das ist das an dich, und auch
-                    mein <hi rend="latin"><title ref="#w00302">Stabat</title></hi><note hand="#pencil_1" place="top-margin-right-inline"
-                        type="foliation">20</note> ist nicht übel. – <del rend="none">daß</del><lb/>(daß ich es nicht vergesse den Vers den du mir
-                    geschickt ist nicht<lb/>da<subst>
+                    ihn nicht empor zu halten<lb/>eine guten<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "einige guten" anstelle von "eine
+                            guten".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Blätter die er haben mag. ein <title ref="#w03301"
+                        >Sonnet</title><note resp="#sabine.seifert"><p xml:lang="de">Das <persName ref="#p0248" type="bi">de La Foye</persName>
+                            gewidmete Gedicht trägt den Titel: „<hi rend="greek"><foreign xml:lang="grc">τὸ του πόλοῦ ἄστρον</foreign></hi>
+                            [Polarstern]. An Louis de la Foye“.</p><p xml:lang="en"/><p xml:lang="fr"/></note> schäz ich<pb facs="00000041.jpg" n="3"
+                    /> unter meinen Beiträgen, das ist das an dich, und auch mein <hi rend="latin"><title ref="#w00302">Stabat</title></hi><note
+                        hand="#pencil_1" place="top-margin(right)-inline" type="foliation">20</note> ist nicht übel. – <del rend="none"
+                    >daß</del><lb/>(daß ich es nicht vergesse den Vers den du mir geschickt ist nicht<lb/>da<subst>
                         <del rend="overwritten"><gap extent="1c" reason="illegilbe"/></del>
                         <add place="across">s</add>
-                    </subst> was mir gefehlt, schicke mir die letzte Stanze ganz.)<note resp="#janine.katins">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt der eingeklammerte Satz.</note></p>
+                    </subst> was mir gefehlt, schicke mir die letzte Stanze ganz.)<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt der eingeklammerte Satz.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>und nun wieder zu <persName ref="#w00281" type="bi">wilhelm</persName>. dieses muß ich dir sagen: <hi rend="latin"><persName
                             ref="#p0347" type="bi">Ducis</persName></hi> ist ein<lb/>sehr schäzbarer <subst>
                         <del rend="overwritten">m</del>
@@ -476,25 +495,28 @@
                         <choice>
                             <abbr>&amp;</abbr>
                             <expan>et cetera</expan>
-                        </choice><note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert hier ein <title
-                                ref="#w03308">Gedicht</title>
-                            <persName ref="#p0194" type="bi">Goethes</persName> aus <title ref="#w00281">Wilhelm Meisters
-                        Lehrjahre</title>.</note>.</seg><pb facs="00000042.jpg" n="4"/>habe ich versucht es ist so weit ganz gut daß es noch gar nicht
-                    franzosch<lb/>geworden ist, hat aber leider aufgehort <del rend="strikethrough">fran</del> deutsch zu sein.</p>
+                        </choice><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert hier ein
+                                    <title ref="#w03308">Gedicht</title>
+                                <persName ref="#p0194" type="bi">Goethes</persName> aus <title ref="#w00281">Wilhelm Meisters Lehrjahre</title>.</p><p
+                                xml:lang="en"/><p xml:lang="fr"/></note>.</seg><pb facs="00000042.jpg" n="4"/>habe ich versucht es ist so weit ganz
+                    gut daß es noch gar nicht franzosch<lb/>geworden ist, hat aber leider aufgehort <del rend="strikethrough">fran</del> deutsch zu
+                    sein.</p>
                 <p>Ich hab mit <persName ref="#p0251" type="bi">Fichten</persName> über <rs ref="#w00281" type="bi"><hi rend="latin">Wilhelm</hi></rs>
                     gesprochen, <hi rend="underline">seine</hi>
                     <subst>
                         <del rend="overwritten">m</del>
                         <add place="across">M</add>
-                    </subst>einung ist es sei<lb/>es sei<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso. Fragments inédits</title> fehlt die Wiederholung des "es sei".</note> eine keine Frucht versprechende Bemühung
-                        sei<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> wurde dieses "sei" ebenfalls nicht transkribiert.</note>, daß dieses zuvorder<unclear cert="medium"
-                        extent="1w" reason="illegible">st</unclear><lb/>für die Franzosen zu thun sei, und ehe<del rend="none">s</del> es geschehen,
-                    alles andre sei nur<lb/>eitel, nehmlich sie — — Griechisch zu lehren.</p>
+                    </subst>einung ist es sei<lb/>es sei<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso. Fragments inédits</title> fehlt die Wiederholung des "es sei".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> eine keine Frucht versprechende Bemühung sei<note resp="#janine.katins"><p xml:lang="de">Im Druck
+                            der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wurde dieses "sei" ebenfalls
+                            nicht transkribiert.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, daß dieses zuvorder<unclear cert="medium" extent="1w"
+                        reason="illegible">st</unclear><lb/>für die Franzosen zu thun sei, und ehe<del rend="none">s</del> es geschehen, alles andre
+                    sei nur<lb/>eitel, nehmlich sie — — Griechisch zu lehren.</p>
                 <p>Eine Schmerzen volle Erfahrung die ich gemacht habe, muß ich dir<lb/>mittheilen. — hast du mir von <hi rend="latin"><persName
-                            ref="#p0351" type="bi">Krutener</persName></hi> jemals<note resp="#janine.katins">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "zumals".</note> sprechen hören. Der<lb/>Junge <subst>
+                            ref="#p0351" type="bi">Krutener</persName></hi> jemals<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "zumals".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> sprechen hören. Der<lb/>Junge <subst>
                         <del rend="overwritten"/>
                         <add place="across">M</add>
                     </subst>ann schien ein schönes Gemüth <subst>
@@ -530,8 +552,9 @@
                         <del rend="overwritten">i</del>
                         <add place="across">a</add>
                     </subst>us dem reinen Herzen stiegen, so war er mir noch<lb/>vor einem Jahre ein Freund, er geht und schwört mir, an mich<lb/>zu
-                    schreiben, er schreibet nicht an mich, das lass ich noch gut sein,<lb/>endlich ich erfahre<note resp="#janine.katins">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "endlich erfahre ich".</note> da<subst>
+                    schreiben, er schreibet nicht an mich, das lass ich noch gut sein,<lb/>endlich ich erfahre<note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht
+                            "endlich erfahre ich".</p><p xml:lang="en"/><p xml:lang="fr"/></note> da<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">ß</add>
                     </subst> er hieher erwartet wird, und zurück kehret,<lb/>dess freu ich mich, – freue mich – und erfahre nun daß er
@@ -544,8 +567,9 @@
                     <hi rend="latin"><persName ref="#p0248" type="bi">Louis</persName></hi>, und der wird nicht von mir gehen.<lb/>fahre du hin!!.</p>
                 <p>Die <hi rend="latin"><persName ref="#p2204" type="bi">Haack</persName></hi><!-- wer? --> hat uns nicht anvertraut was sie haben
                     will von<lb/>Seiner <hi rend="latin">Majestät</hi><!-- welche Person? -->, wohl aber in einem zweiten Briefen sich
-                    bestens<lb/>bedankt. und sich dir empfohlen.<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso. Fragments inédits</title> fehlt dieser Absatz.</note></p>
+                    bestens<lb/>bedankt. und sich dir empfohlen.<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt dieser Absatz.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note></p>
                 <p><persName ref="#p0224" type="bi">Gibbon</persName> will nicht daß du ihm edwas schuldig seist, ich werde<lb/>es ihm noch einmahl
                     anheim stellen sich zu melden mit seiner<lb/>Schuld, und dann pfeife du ihm in gottes nahmen zum andenken<lb/>ein<add
                         place="inline">en</add> preussischen regiments <subst>
@@ -553,11 +577,11 @@
                         <add place="inline">M</add>
                     </subst>arsch. —</p>
                 <pb facs="00000043.jpg" n="5"/>
-                <note hand="#pencil_2" place="top-margin-left-diagonal inline"><foreign xml:lang="fr"><date when-iso="1805-03"><choice>
+                <note hand="#pencil_2" place="top-margin(left)-diagonal inline"><foreign xml:lang="fr"><date when-iso="1805-03"><choice>
                                 <abbr>Mar</abbr>
                                 <expan>Mars</expan>
                             </choice> 1805</date></foreign></note>
-                <note hand="#pencil_2" place="top-margin-left-diagonal inline" type="foliation"><hi rend="underline">101</hi></note>
+                <note hand="#pencil_2" place="top-margin(left)-diagonal inline" type="foliation"><hi rend="underline">101</hi></note>
                 <p><foreign xml:lang="fr"><hi rend="latin">après plusieurs mois de silence je recois dans cette instant cette lettre de <placeName
                                 ref="#l0263" type="bi">Konigsberg</placeName>.<lb/>datee de <date when-iso="1805-02-26">26. Fevrier</date>.<note
                                 resp="#janine.katins">Übersetzung: „Nach mehreren Monaten der Stille erhalte ich in diesem Moment diesen Brief aus
@@ -592,29 +616,31 @@
                                 <abbr>M.<hi rend="superscript">r</hi></abbr>
                                 <expan>Monsieur</expan>
                             </choice><lb/><persName ref="#p0248" type="bi">de Lafoye</persName>, noublie pas de m'en parler tu ne saurois croire
-                            combien je<lb/>m'interesse à lui. rappelle moi à son souvenir.</hi></foreign><note resp="#sabine.seifert">Bei diesem
-                        französischen Teil (ab "Je conviens") handelt es sich um die Abschrift eines Briefes von <persName ref="#p0305" type="bi"
-                            >Cérès Duvernay</persName> an <persName ref="#p0237" type="bi">Chamisso</persName>. Übersetzung: <p>„Ich gestehe, mein
-                            lieber <persName ref="#p0237" type="bi">Adelbert</persName>, dass, wenn Du mir solange nicht schreiben würdest, wie ich es
-                            tue, ich es Dir sehr übel nehmen würde. Ich glaube, dass ich keine Entschuldigung annehmen würde. Dennoch bist Du so gut
-                            [lieb?], dass ich meine Gründe angegeben hätte. Ich zweifle nicht, dass Du eine Schwester, die an Dich immer denkt, dafür
-                            um Vergebung bittest, sie auf so ehrenlose Weise verdächtigt zu haben. Um zu der Sache zu kommen ist der Grund dieser
-                            scheinbaren Nachlässigkeit die Unwissenheit, in der ich bezüglich meines Geschickes bin. Ich verzögerte immer, dabei
-                            hoffend, dass ich Dir etwas Sicheres zu melden haben würde. Für dieses Mal sollst Du noch nichts erfahren, ich habe die
-                            Nachrichten nicht erhalten, mit denen ich gerechnet hatte.</p><p>Ich war heute zu einem großen Ball eingeladen, aber Du
-                            spürst schon, dass ich, indem ich diesen Abend meiner Mutter und Dir gewidmet habe [i.e. mit Schreiben von Briefen an
-                            diese], keine Sekunde gezögert habe, abzusagen. Wenn ich die künstlichen Vergnügen der Gesellschaft mit der Freude
-                            vergleiche, die ich empfinde, wenn ich Dir wiederhole, dass Du auf ewig derjenige bist, in den ich all meine Achtung, mein
-                            Vertrauen gesetzt habe, dass Du in der Welt kein Wesen finden könntest, das Dich mit mehr Ehrlichkeit und Zärtlichkeit
-                            liebte als Deine <persName ref="#p0305" type="bi">Ceres</persName>, dann fasse ich beinahe den Entschluss, gar keinen
-                            Verkehr mit dem Rest der Menschheit [oder: mit allen anderen Männern] je zu haben.</p><p>Mein Freund, mein Bruder, warum
-                            müssen wir getrennt sein, ich liebe Dich so, dass ich in Deiner Nähe unfehlbar zu Deinem Glück beitragen würde. Beitragen
-                            sage ich aus Bescheidenheit, denn mein Streben und Ehrgeiz wären nur befriedigt, wenn ich allein imstande wäre, Dein Glück
-                            zu sein. <persName ref="#p0354" type="bi">Cesar</persName> geht es gut. Schreibe mir zum ersten Mal - mein Gott wäre ich
-                            in Deiner Nähe, oh, dann wüsste ich nur noch Dein sein, ab jetzt fürs Leben, Deine Schwester.</p><p>Gib mir Nachrichten
-                            von Deiner Familie, so Du solche bekommst, und Monsieur <persName ref="#p0248" type="bi">de Lafoye</persName>, von dem
-                            darfst Du nicht vergessen zu berichten. Du würdest nicht glauben, wie sehr ich mich für ihn interessiere. Empfehle mich
-                            seiner Erinnerung.“</p></note></p>
+                            combien je<lb/>m'interesse à lui. rappelle moi à son souvenir.</hi></foreign><note resp="#sabine.seifert"><p xml:lang="de"
+                            >Bei diesem französischen Teil (ab "Je conviens") handelt es sich um die Abschrift eines Briefes von <persName
+                                ref="#p0305" type="bi">Cérès Duvernay</persName> an <persName ref="#p0237" type="bi">Chamisso</persName>. Übersetzung:
+                                    <quote><p>„Ich gestehe, mein lieber <persName ref="#p0237" type="bi">Adelbert</persName>, dass, wenn Du mir
+                                    solange nicht schreiben würdest, wie ich es tue, ich es Dir sehr übel nehmen würde. Ich glaube, dass ich keine
+                                    Entschuldigung annehmen würde. Dennoch bist Du so gut [lieb?], dass ich meine Gründe angegeben hätte. Ich zweifle
+                                    nicht, dass Du eine Schwester, die an Dich immer denkt, dafür um Vergebung bittest, sie auf so ehrenlose Weise
+                                    verdächtigt zu haben. Um zu der Sache zu kommen ist der Grund dieser scheinbaren Nachlässigkeit die Unwissenheit,
+                                    in der ich bezüglich meines Geschickes bin. Ich verzögerte immer, dabei hoffend, dass ich Dir etwas Sicheres zu
+                                    melden haben würde. Für dieses Mal sollst Du noch nichts erfahren, ich habe die Nachrichten nicht erhalten, mit
+                                    denen ich gerechnet hatte.</p><p>Ich war heute zu einem großen Ball eingeladen, aber Du spürst schon, dass ich,
+                                    indem ich diesen Abend meiner Mutter und Dir gewidmet habe [i.e. mit Schreiben von Briefen an diese], keine
+                                    Sekunde gezögert habe, abzusagen. Wenn ich die künstlichen Vergnügen der Gesellschaft mit der Freude vergleiche,
+                                    die ich empfinde, wenn ich Dir wiederhole, dass Du auf ewig derjenige bist, in den ich all meine Achtung, mein
+                                    Vertrauen gesetzt habe, dass Du in der Welt kein Wesen finden könntest, das Dich mit mehr Ehrlichkeit und
+                                    Zärtlichkeit liebte als Deine <persName ref="#p0305" type="bi">Ceres</persName>, dann fasse ich beinahe den
+                                    Entschluss, gar keinen Verkehr mit dem Rest der Menschheit [oder: mit allen anderen Männern] je zu
+                                    haben.</p><p>Mein Freund, mein Bruder, warum müssen wir getrennt sein, ich liebe Dich so, dass ich in Deiner Nähe
+                                    unfehlbar zu Deinem Glück beitragen würde. Beitragen sage ich aus Bescheidenheit, denn mein Streben und Ehrgeiz
+                                    wären nur befriedigt, wenn ich allein imstande wäre, Dein Glück zu sein. <persName ref="#p0354" type="bi"
+                                        >Cesar</persName> geht es gut. Schreibe mir zum ersten Mal - mein Gott wäre ich in Deiner Nähe, oh, dann
+                                    wüsste ich nur noch Dein sein, ab jetzt fürs Leben, Deine Schwester.</p><p>Gib mir Nachrichten von Deiner Familie,
+                                    so Du solche bekommst, und Monsieur <persName ref="#p0248" type="bi">de Lafoye</persName>, von dem darfst Du nicht
+                                    vergessen zu berichten. Du würdest nicht glauben, wie sehr ich mich für ihn interessiere. Empfehle mich seiner
+                                    Erinnerung.“</p></quote></p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p rend="nolb">fest und fester, Adelf, weben die Seltsamen Banden sich in dennen dies <rs ref="#p0305" type="bi">Weib</rs>
                     mich<lb/>gefesselt hällt, und ich gehöre ihr <hi rend="underline">ganz</hi>, <hi rend="underline">ganz</hi> an, <foreign
                         xml:lang="fr"><hi rend="latin">je me suis <hi n="2" rend="underline">fait</hi> aimer d'elle</hi></foreign><note
@@ -645,9 +671,9 @@
                             1804</date> eine Stelle als Hauslehrerin in <placeName ref="#l0041" type="bi">Königsberg an</placeName> (<rs ref="#w00321"
                             type="bi">Feudel</rs>, S. 38).</note>. — ist sie denn auch ganz Wahr<lb/><del rend="strikethrough">Die</del> haltt sie
                     wenigstens nicht zurück, die ewig es umgeht mir<lb/>edwas anders zu sagen, als: <foreign xml:lang="fr"><hi rend="latin">je t'aime,
-                            je t'aime pourtoi</hi><note resp="#janine.katins">Übersetzung: "Ich liebe dich, ich liebe dich um
-                        deinetwillen."</note></foreign>, und, auf,<lb/>filleicht, <add place="above">daß</add> diese Rechte mir heiliger seien,
-                        <foreign xml:lang="fr">
+                            je t'aime pourtoi</hi><note resp="#janine.katins"><p xml:lang="de">Übersetzung: "Ich liebe dich, ich liebe dich um
+                                deinetwillen."</p><p xml:lang="en"/><p xml:lang="fr"/></note></foreign>, und, auf,<lb/>filleicht, <add place="above"
+                        >daß</add> diese Rechte mir heiliger seien, <foreign xml:lang="fr">
                         <hi rend="latin">je ne pretends aucun <unclear cert="medium" reason="illegible">droite</unclear> sur<lb/>toi, je ne <add
                                 place="above">veux</add> que cela <add place="above">seul</add> que tu sois heureux</hi></foreign><note
                         resp="#janine.katins">Übersetzung: "Ich erhebe keinen Anspruch auf dich, ich möchte nur dieses eine - dass du glücklich
@@ -657,9 +683,10 @@
                     </subst> sie nicht Schach edwa.<lb/>— <hi rend="latin">Boraston</hi> mögte einst eines <hi rend="latin"><choice>
                             <abbr>S<hi rend="superscript">t</hi></abbr>
                             <expan>Saint</expan>
-                        </choice> Preux</hi><note resp="#sabine.seifert">Boraston und Saint Preux sind Figuren aus <persName ref="#p0068" type="bi"
-                            >Rousseaus</persName>
-                        <title ref="w00002">Julie ou la Nouvelle Heloise</title>.</note> wohl bedürftig sein. –<lb/>das mir <subst>
+                        </choice> Preux</hi><note resp="#sabine.seifert"><p xml:lang="de">Boraston und Saint Preux sind Figuren aus <persName
+                                ref="#p0068" type="bi">Rousseaus</persName>
+                            <title ref="w00002">Julie ou la Nouvelle Heloise</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wohl bedürftig
+                    sein. –<lb/>das mir <subst>
                         <del rend="overwritten">e</del>
                         <add place="across">E</add>
                     </subst>rscheinen dieses <rs ref="#p0305" type="bi">weibes</rs>, (und ich habe ihr selber auch dies<lb/><subst>
@@ -678,13 +705,14 @@
                                         <l>ὧδε δε τις εἴπεσκεν ἰδων ες πλησίον ἄλλον.</l>
                                         <l>Ἧ ῾ρ’ αῦτις πόλεμός τε κακὸς και φύλοπις αινη</l>
                                         <l>ἔσσεται, ἢ φιλοτητα μετ αμφοτέροισι τίθησι</l>
-                                        <l>Ζεύς, ὅς τ’ ανθρώπων ταμίης πολέμοιο τέτυκται.<note resp="#sabine.seifert"><persName ref="#p0237" type="bi"
-                                                    >Chamisso</persName> zitiert hier aus <persName ref="#p0033" type="bi">Homers</persName>
-                                                <title ref="#w00382">Ilias</title>, 4. Buch, V. 74–84 (Übersetzung von <persName ref="#p0361"
-                                                    type="bi">Voss</persName> im <ref target="http://gutenberg.spiegel.de/buch/1821/11">Projekt
-                                                    Gutenberg</ref> [Zugriff 27.01.2014]). Im Druck der <title ref="#w00253">Correspondance d'Adalbert
-                                                    de Chamisso. Fragments inédits</title> fehlt der Absatz von "Boraston mögte einst" bis zum Ende
-                                                des griechischen Zitats.</note></l>
+                                        <l>Ζεύς, ὅς τ’ ανθρώπων ταμίης πολέμοιο τέτυκται. <note resp="#sabine.seifert"><p xml:lang="de"><persName
+                                                        ref="#p0237" type="bi">Chamisso</persName> zitiert hier aus <persName ref="#p0033" type="bi"
+                                                        >Homers</persName>
+                                                    <title ref="#w00382">Ilias</title>, 4. Buch, V. 74–84 (Übersetzung von <persName ref="#p0361"
+                                                        type="bi">Voss</persName> im <ref target="http://gutenberg.spiegel.de/buch/1821/11">Projekt
+                                                        Gutenberg</ref> [Zugriff 27.01.2014]). Im Druck der <title ref="#w00253">Correspondance
+                                                        d'Adalbert de Chamisso. Fragments inédits</title> fehlt der Absatz von "Boraston mögte einst"
+                                                    bis zum Ende des griechischen Zitats.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
                                     </lg></quote>
                             </cit></hi></foreign>
                 </p>
@@ -705,35 +733,37 @@
                                 <del rend="overwritten"><gap extent="1w" reason="illegible"/></del>
                                 <add place="across">temps</add>
                             </subst> qu'à mesure quil se<lb/>deroule et l'avenir m'est caché j'ai cependant de la confience dans lauteur qui<lb/>à
-                            tracé les caracteres et qui en a Connu le sens. adieu je taime et tu mecrieras</hi><note resp="#sabine.seifert">Bei diesem
-                            französischen Teil handelt es sich um die Abschrift von <persName ref="#p0237" type="bi">Chamissos</persName> Antwortbrief
-                            an <persName ref="#p0305" type="bi">Cérès Duvernay</persName>. Übersetzung: „Aber Du versprichst bald einen
-                            umfangreicheren Brief, ich will an das, was Du sagst, glauben und auf Deine Briefe hoffen - <persName ref="#p0305"
-                                type="bi">Ceres</persName>, meine Schwester, meine Geliebte, betrübe doch nicht weiter Deinen <persName ref="#p0237"
-                                type="bi">Adelbert</persName> - und warum würden wir uns lieben, warum wäre ich Dir gegeben worden, wenn ich damit
-                            nicht Deine Leiden in meinem Herzen tragen kann, damit Du Dich genug auf mich stützst. Warum hätte ich selbst Dich, wenn
-                            ich damit nicht mein ganzes Leben, reicher und schöner, derjenigen geben kann, der ich es gebe. Meine Freundin, ich gehöre
-                            Dir, ich bin Dein, aber ich kann in der Handschrift der Zeit nur soweit lesen, wie sie sich entrollt, und die Zukunft
-                            bleibt mir geheim. Dennoch habe ich Vertrauen in den Autor dieser Zeichen, der deren Sinn nicht verkannt hat. Adieu, ich
-                            liebe Dich und Du schreibst mir.“</note>
+                            tracé les caracteres et qui en a Connu le sens. adieu je taime et tu mecrieras</hi><note resp="#sabine.seifert"><p
+                                xml:lang="de">Bei diesem französischen Teil handelt es sich um die Abschrift von <persName ref="#p0237" type="bi"
+                                    >Chamissos</persName> Antwortbrief an <persName ref="#p0305" type="bi">Cérès Duvernay</persName>. Übersetzung:
+                                „Aber Du versprichst bald einen umfangreicheren Brief, ich will an das, was Du sagst, glauben und auf Deine Briefe
+                                hoffen - <persName ref="#p0305" type="bi">Ceres</persName>, meine Schwester, meine Geliebte, betrübe doch nicht weiter
+                                Deinen <persName ref="#p0237" type="bi">Adelbert</persName> - und warum würden wir uns lieben, warum wäre ich Dir
+                                gegeben worden, wenn ich damit nicht Deine Leiden in meinem Herzen tragen kann, damit Du Dich genug auf mich stützst.
+                                Warum hätte ich selbst Dich, wenn ich damit nicht mein ganzes Leben, reicher und schöner, derjenigen geben kann, der
+                                ich es gebe. Meine Freundin, ich gehöre Dir, ich bin Dein, aber ich kann in der Handschrift der Zeit nur soweit lesen,
+                                wie sie sich entrollt, und die Zukunft bleibt mir geheim. Dennoch habe ich Vertrauen in den Autor dieser Zeichen, der
+                                deren Sinn nicht verkannt hat. Adieu, ich liebe Dich und Du schreibst mir.“</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note>
                     </foreign></p>
-                <p>übriegens sag ich <rs ref="#p0305" type="bi">ihr</rs> auch das daß ein Mädgen mir von meinen Aeltern<note resp="#sabine.seifert"
-                        >Das sind <persName ref="#p0864" type="bi">Louis Marie de Chamisso de Boncourt</persName> und <persName ref="#p0430" type="bi"
-                            >Marie Anne Chamisso</persName>. Diese planen später, <persName ref="#p0237" type="bi">Chamisso</persName> mit einer nicht
-                        eindeutig identifizierbaren <rs ref="#p0311" type="bi">Frau</rs> zu verheiraten.</note> bestim̄t<lb/>wird<note
-                        resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht
-                        "ist" statt "wird".</note>. — ich erwarte mit <subst>
+                <p>übriegens sag ich <rs ref="#p0305" type="bi">ihr</rs> auch das daß ein Mädgen mir von meinen Aeltern<note resp="#sabine.seifert"><p
+                            xml:lang="de">Das sind <persName ref="#p0864" type="bi">Louis Marie de Chamisso de Boncourt</persName> und <persName
+                                ref="#p0430" type="bi">Marie Anne Chamisso</persName>. Diese planen später, <persName ref="#p0237" type="bi"
+                                >Chamisso</persName> mit einer nicht eindeutig identifizierbaren <rs ref="#p0311" type="bi">Frau</rs> zu
+                            verheiraten.</p><p xml:lang="en"/><p xml:lang="fr"/></note> bestim̄t<lb/>wird<note resp="#janine.katins">Im Druck der
+                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "ist" statt "wird".</note>. —
+                    ich erwarte mit <subst>
                         <del rend="overwritten">s</del>
                         <add place="across">S</add>
                     </subst>ehnsucht und bangem Gefühle. hä<subst>
                         <del rend="overwritten">h</del>
                         <add place="across">l</add>
                     </subst>t sie vielleicht aber<lb/>auch zu mir diese Aet<add place="inline">h</add>erische Liebe, die sie allein von ihrer Ichheit
-                        mir<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> steht "nur" statt "mir".</note> preis giebt.</p>
+                        mir<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                Fragments inédits</title> steht "nur" statt "mir".</p><p xml:lang="en"/><p xml:lang="fr"/></note> preis giebt.</p>
                 <pb facs="00000045.jpg" n="7"/>
                 <p>Wir, junge Leute, mein lieber Adelf, dichten öfters mit dem gewöhnligen Lieben <note hand="#pencil_1"
-                        place="top-margin-right inline" type="foliation">22</note><lb/>statt in ihr nur zu dichten, errinnre dich des Wortes des
+                        place="top-margin(right) inline" type="foliation">22</note><lb/>statt in ihr nur zu dichten, errinnre dich des Wortes des
                     Meisters, (<hi rend="latin"><persName ref="#p0291" type="bi">Koreffs</persName></hi>) <hi rend="underline">Wahrheit,<lb/>Wahrheit
                         mit uns selber</hi>. dies Dichten scheint mir der fall zu sein bei dir, mit meiner<lb/><persName ref="#p0345" type="bi"
                         >augusta</persName>, du hast es höher genom̄en wie die Sache jemals <del rend="strikethrough">zu</del> steigen zu
@@ -747,12 +777,13 @@
                     </subst><add place="inline">l</add>lee wiederfinden,<lb/>so viel scheinet mir wohl wahr, sie ist eine Blume eines
                     milderen<lb/>Himelstriches die da in ödem Sande, den nur des Winters Winde durchstreichen<lb/>und heimsuchen seine Schneen, <del
                         rend="strikethrough">verdorr</del> nicht aufblühet und verdorrt.<lb/>wohl ist sie die Verfasserin der Stanze, der Variazionen,
-                    und jener Gedichten<lb/>im <rs ref="#w00255" type="bi">Grünen</rs><note resp="#sabine.seifert">Im <title ref="#w00257"
-                            >Musenalmanach auf das Jahr 1805</title> sind von <persName ref="#p0345" type="bi">Auguste Klaproth</persName> fünf
-                        Gedichte erschienen: <title ref="#w00310">Frühling</title>, <title ref="#w03302">Göthe</title>, <title ref="#w03303"
-                            >Mignon</title>, <title ref="#w00312">Variazion</title> und <title ref="#w00311">Sonett</title>.</note>, die dem <persName
-                        ref="#p0251" type="bi">Fichte</persName> diesen Uhrtheil erpressten, die Hätte es auch<lb/>wohl können bleiben lassen, schwach
-                    sind die Dinge, <del rend="strikethrough">für wahl</del> wer gesteh<subst>
+                    und jener Gedichten<lb/>im <rs ref="#w00255" type="bi">Grünen</rs><note resp="#sabine.seifert"><p xml:lang="de">Im <title
+                                ref="#w00257">Musenalmanach auf das Jahr 1805</title> sind von <persName ref="#p0345" type="bi">Auguste
+                                Klaproth</persName> fünf Gedichte erschienen: <title ref="#w00310">Frühling</title>, <title ref="#w03302"
+                                >Göthe</title>, <title ref="#w03303">Mignon</title>, <title ref="#w00312">Variazion</title> und <title ref="#w00311"
+                                >Sonett</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>, die dem <persName ref="#p0251" type="bi"
+                        >Fichte</persName> diesen Uhrtheil erpressten, die Hätte es auch<lb/>wohl können bleiben lassen, schwach sind die Dinge, <del
+                        rend="strikethrough">für wahl</del> wer gesteh<subst>
                         <del rend="overwritten">t</del>
                         <add place="across">et</add>
                     </subst><lb/>es nicht, manches aber, scheint mir nicht <subst>
@@ -770,16 +801,18 @@
                             <del rend="overwritten">b</del>
                             <add place="across">z</add>
                         </subst>u</del> mit dem<lb/>ersten Blick zu erschauen ist, welche unsre Leben erfaßt hat, nur<lb/>sie hatt uns zusamen Bringen
-                    können und zu den Freunden, uns die<lb/>Zeit der ersten <rs ref="#w00255" type="bi">Grünen</rs><note resp="#janine.katins">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "des ersten
-                        Grünen".</note> erblühen lassen, und biß auf Schulden deren<lb/>wir uns bewußt sind, können ausser<note resp="#janine.katins"
-                        >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "aus".</note> ihrer
+                    können und zu den Freunden, uns die<lb/>Zeit der ersten <rs ref="#w00255" type="bi">Grünen</rs><note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht
+                            "des ersten Grünen".</p><p xml:lang="en"/><p xml:lang="fr"/></note> erblühen lassen, und biß auf Schulden deren<lb/>wir
+                    uns bewußt sind, können ausser<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso. Fragments inédits</title> steht "aus".</p><p xml:lang="en"/><p xml:lang="fr"/></note> ihrer
                     Kostbaren <unclear cert="medium" extent="several chars" reason="illegible">Erfahr</unclear>ung, auch nach<note
-                        resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>
-                        steht "noch" statt "nach".</note><lb/>künftig hin, deucht es mir, schöneres uns erblühen lassen. Drum an<lb/>uns selber
-                        nur<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> wurde das Wort "nur" ausgelassen.</note> und an einander, fest und nicht verzagend gehangen,<lb/>nur die
-                    Zukunft hat den Schlüssel zu de<subst>
+                        resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
+                                inédits</title> steht "noch" statt "nach".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>künftig hin, deucht es
+                    mir, schöneres uns erblühen lassen. Drum an<lb/>uns selber nur<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wurde das Wort "nur" ausgelassen.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> und an einander, fest und nicht verzagend gehangen,<lb/>nur die Zukunft hat den
+                    Schlüssel zu de<subst>
                         <del rend="overwritten">r</del>
                         <add place="across">m</add>
                     </subst> Rätzel der Gegenwa<subst>
@@ -789,15 +822,17 @@
                 <p>Deine Ideen zu Briefen, und was du bei Gelegenheit der <foreign xml:lang="fr"><hi rend="latin"><title ref="#w03309">Lettres de
                                 deux<lb/>amans qui ne se sont jamais vus</title></hi></foreign> sagst hat mich ganz hingerissen, lies<lb/>doch <add
                         place="inline">ja</add> dies <rs ref="#w03309" type="bi">Buch</rs>, vermutlig ein sehr schlechtes, und schreibe du nach
-                    deinem<lb/>Sinne solche Briefen, wohl Briefen<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso. Fragments inédits</title> fehlt "wohl Briefen".</note> der ewigen Liebe, an das Ideal.<pb
-                        facs="00000046.jpg" n="8"/>fiele Deutschen Dichter haben aber schon, zwar nur imer einzelne <choice>
+                    deinem<lb/>Sinne solche Briefen, wohl Briefen<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt "wohl Briefen".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> der ewigen Liebe, an das Ideal.<pb facs="00000046.jpg" n="8"/>fiele Deutschen Dichter haben aber
+                    schon, zwar nur imer einzelne <choice>
                         <unclear cert="high" reason="illegible">kindische</unclear>
                         <unclear cert="low" reason="illegible">Liedische</unclear>
-                    </choice><note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> wird "kindische" ausgelassen.</note><lb/>Gedichte, an die Künftige geliebte gedichtet, so sind einige
-                    Stücke im<lb/><rs ref="#w00256" type="bi">ersten</rs> und <rs ref="#w00257" type="bi">zweiten Grünen</rs>, die du erkennen wirst.
-                    — laß mir aber<lb/>noch mehr darüber hören, und erfreue mich villeicht mit proben, ich wollte<lb/>sie hier wohl unterbringen.</p>
+                    </choice><note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                Fragments inédits</title> wird "kindische" ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>Gedichte,
+                    an die Künftige geliebte gedichtet, so sind einige Stücke im<lb/><rs ref="#w00256" type="bi">ersten</rs> und <rs ref="#w00257"
+                        type="bi">zweiten Grünen</rs>, die du erkennen wirst. — laß mir aber<lb/>noch mehr darüber hören, und erfreue mich villeicht
+                    mit proben, ich wollte<lb/>sie hier wohl unterbringen.</p>
                 <p>Göttlich irronisch ist dein Einfall daß du Mondsüchtig bist, und auf meiner<lb/>Ehre ich mögte es wohl mit dir sein, ein
                     Mondsvirtel <subst>
                         <del rend="overwritten">e</del>
@@ -811,13 +846,14 @@
                     <foreign xml:lang="grc">
                         <hi rend="greek align(center)"><lg>
                                 <l>Ὡς ἔφαθ’. οἱ δ’ ἀρα παντες ακην ἐγένοντο σιωπῃ,</l>
-                                <l>Μύθου ἀγασσαμενοι μαλα γὰρ κρατερῶς ἀγορευσε<note resp="#sabine.seifert"><persName ref="#p0237" type="bi"
-                                            >Chamisso</persName> zitiert hier aus <persName ref="#p0033" type="bi">Homers</persName>
-                                        <title ref="#w00382">Ilias</title>. Diese Verse wiederholen sich dreimal: 8. Buch, V. 28-29 (Übersetzung von
-                                            <persName ref="#p0361" type="bi">Voss</persName> im <ref target="http://gutenberg.spiegel.de/buch/1821/23"
-                                            >Projekt Gutenberg</ref> [Zugriff 27.01.2014]); 9. Buch, V. 430-431 und V. 693-694. Im Druck der <title
-                                            ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt der gesamte Text von
-                                        "wie?, was?" bis einschließlich des griechischen Zitats.</note></l>
+                                <l>Μύθου ἀγασσαμενοι μαλα γὰρ κρατερῶς ἀγορευσε <note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237"
+                                                type="bi">Chamisso</persName> zitiert hier aus <persName ref="#p0033" type="bi">Homers</persName>
+                                            <title ref="#w00382">Ilias</title>. Diese Verse wiederholen sich dreimal: 8. Buch, V. 28-29 (Übersetzung
+                                            von <persName ref="#p0361" type="bi">Voss</persName> im <ref
+                                                target="http://gutenberg.spiegel.de/buch/1821/23">Projekt Gutenberg</ref> [Zugriff 27.01.2014]); 9.
+                                            Buch, V. 430-431 und V. 693-694. Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                                Fragments inédits</title> fehlt der gesamte Text von "wie?, was?" bis einschließlich des griechischen
+                                            Zitats.</p><p xml:lang="en"/><p xml:lang="fr"/></note></l>
                             </lg></hi></foreign></p>
                 <p>Auch die Beibehaltung der Pfeife lob' ich, sie ist dir jetzt die Frucht des<lb/>Vaterlandes, wie schmauchen und dampfen wollen wir
                     einstens vereint<del rend="strikethrough"><gap extent="1c" reason="illegible"/></del><lb/>und deutsch zusam̄en sprechen. ein ma<subst>
@@ -847,55 +883,58 @@
                     geseufzet<lb/>daß du das Blat geschnitten hattest, und so weiter. ich schicke ihn dir nicht<lb/>in diesem Briefen und erwarte
                     entweder Befehle, oder eine gelegenheit, zumal<lb/>da ich glaube daß gesetzt auch <unclear cert="high" extent="1w" reason="stain"
                         >daß</unclear> du <foreign xml:lang="fr">
-                        <hi rend="latin">le Mal Prussien</hi></foreign><note resp="#janine.katins">Hinter dem Namen "le mal Prussien" verbirgt sich
-                        eine Durchfallkrankheit, die auf der Grundlage einer bakteriellen Infektion mit Viren oder Parasiten ausbricht.</note>
-                    hättest, du doch andres<lb/>Papier finden würdest, und <subst>
+                        <hi rend="latin">le Mal Prussien</hi></foreign><note resp="#janine.katins"><p xml:lang="de">Hinter dem Namen "le mal Prussien"
+                            verbirgt sich eine Durchfallkrankheit, die auf der Grundlage einer bakteriellen Infektion mit Viren oder Parasiten
+                            ausbricht.</p><p xml:lang="en"/><p xml:lang="fr"/></note> hättest, du doch andres<lb/>Papier finden würdest, und <subst>
                         <del rend="overwritten">nicht</del>
                         <add place="across">dich</add>
                     </subst> darum <add place="above">noch nicht</add> gezwungen <del rend="strikethrough">Dich</del> fändest dich unter<lb/>den
-                        <foreign xml:lang="fr"><hi rend="latin">Gens civiles</hi></foreign> zu begeben.<note resp="#janine.katins">Mit den Gens
-                        civiles sind die Bürger gemeint. Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> fehlt der Abschnitt von "und dich darum" bis "zu begeben".</note></p>
+                        <foreign xml:lang="fr"><hi rend="latin">Gens civiles</hi></foreign> zu begeben.<note resp="#janine.katins"><p xml:lang="de"
+                            >Mit den Gens civiles sind die Bürger gemeint. Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                Fragments inédits</title> fehlt der Abschnitt von "und dich darum" bis "zu begeben".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note></p>
                 <pb facs="00000047.jpg" n="9"/>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">23</note>
-                <p>ich schicke<note resp="#sabine.seifert">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> steht "schreibe" statt "schicke".</note> dir nachstens einige gedichteten kleinigkeiten und
-                    darunter<lb/>das von <hi rend="latin"><persName ref="#p0262" type="bi">Wilhe<subst>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">23</note>
+                <p>ich schicke<note resp="#sabine.seifert"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso.
+                                Fragments inédits</title> steht "schreibe" statt "schicke".</p><p xml:lang="en"/><p xml:lang="fr"/></note> dir
+                    nachstens einige gedichteten kleinigkeiten und darunter<lb/>das von <hi rend="latin"><persName ref="#p0262" type="bi">Wilhe<subst>
                                 <del rend="overwritten"><gap extent="1c" reason="illegible"/></del>
                                 <add place="across">l</add>
-                            </subst>m</persName></hi> mit <hi rend="latin">Comentar</hi>. heut ist schon fürcht ich sehr<note resp="#janine.katins">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt "sehr".</note><lb/>das
-                    maß übergelaufen.. ferner wird auch bald der Tag erscheinen<lb/>und ich hätte doch biß wieder zu der Nacht schreiben mögen,
-                    also<lb/>treibe es auch du. sag mir wenn du mein geschmire gut<lb/>lesen kann, und <subst>
+                            </subst>m</persName></hi> mit <hi rend="latin">Comentar</hi>. heut ist schon fürcht ich sehr<note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt
+                            "sehr".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>das maß übergelaufen.. ferner wird auch bald der Tag
+                    erscheinen<lb/>und ich hätte doch biß wieder zu der Nacht schreiben mögen, also<lb/>treibe es auch du. sag mir wenn du mein
+                    geschmire gut<lb/>lesen kann, und <subst>
                         <del rend="overwritten">g</del>
                         <add place="across">m</add>
                     </subst>it meiner <supplied reason="hole">Kl</supplied>aue vertraut genuch bist um nichts<lb/>zu verlieren. wie das gedrukte
                         <supplied reason="hole">l</supplied>es ich was du schreibt, auch ist<lb/>freilich dein reiner Natürlicher heerliger still dem
                     leser viel<lb/>günstiger als mein zusammen gehackter sein mag.</p>
                 <p>mein 2<hi rend="superscript">ter</hi>
-                    <rs type="bi">Bruder</rs><note resp="#sabine.seifert">Hier ist entweder <persName ref="#p0280" type="bi">Hippolyte de
-                            Chamisso</persName> oder <persName ref="#p0368" type="bi">Charles de Chamisso</persName> gemeint.</note> mögte (leise
-                    unter uns) bald <subst>
+                    <rs type="bi">Bruder</rs><note resp="#sabine.seifert"><p xml:lang="de">Hier ist entweder <persName ref="#p0280" type="bi"
+                                >Hippolyte de Chamisso</persName> oder <persName ref="#p0368" type="bi">Charles de Chamisso</persName> gemeint.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> mögte (leise unter uns) bald <subst>
                         <del rend="overwritten">H</del>
                         <add place="across">h</add>
                     </subst>eiraten, dann<lb/>mogte ich villeicht <foreign xml:lang="la">anno</foreign>
-                    <date when-iso="1806">6</date><note resp="#sabine.seifert">Gemeint ist: 1806.</note> gleich da bleiben, gott über alles! –<note
-                        resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt
-                        dieser Satz.</note><lb/>wie geht es mit deiner anstellung. ich <del rend="strikethrough">hatte </del>sähe dich doch nicht gern
-                    in<lb/>den fesseln einer ähnligen St<subst>
+                    <date when-iso="1806">6</date><note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist: 1806.</p></note> gleich da bleiben, gott
+                    über alles! –<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
+                            inédits</title> fehlt dieser Satz.</note><lb/>wie geht es mit deiner anstellung. ich <del rend="strikethrough">hatte
+                    </del>sähe dich doch nicht gern in<lb/>den fesseln einer ähnligen St<subst>
                         <del rend="strikethrough">ä</del>
                         <add place="across">e</add>
-                    </subst>lle, und solch ein Diener eines solchen<lb/>Amtes<note resp="#janine.katins">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "Staates".</note>, – ich habe Ideen zu einigen <hi
-                        rend="latin"><rs ref="#p0330" type="bi">Rabelaischen</rs>
-                        <del rend="strikethrough">ged</del> Capitteln</hi><note resp="#janine.katins"><persName ref="#p0237" type="bi"
-                            >Chamisso</persName> hat das Berliner <orgName ref="#g0119" type="bi">Französische Gymnasium</orgName> zwischen <date
-                            when-iso="1797/1798">1797 und 1798</date> besucht, wo er unter anderem Philosophie und Physik bei <persName ref="#p0301"
-                            type="bi">Paul Erman</persName> belegte, der ihm <persName ref="#p0330" type="bi">Rabelais</persName> näher
-                        brachte.</note>.<lb/>nim̄t das <hi rend="latin">papier</hi> sie auf so gehts grad nach <hi rend="latin"><placeName
-                            ref="#l0107" type="bi">Caen</placeName></hi>. —<lb/>was schütz dich de<gap extent="1-2c" reason="illegible"/> gegen einer
-                    Flinte? —<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
-                            inédits</title> fehlt dieser Satz.</note></p>
+                    </subst>lle, und solch ein Diener eines solchen<lb/>Amtes<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "Staates".</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note>, – ich habe Ideen zu einigen <hi rend="latin"><rs ref="#p0330" type="bi">Rabelaischen</rs>
+                        <del rend="strikethrough">ged</del> Capitteln</hi><note resp="#janine.katins"><p xml:lang="de"><persName ref="#p0237"
+                                type="bi">Chamisso</persName> hat das Berliner <orgName ref="#g0119" type="bi">Französische Gymnasium</orgName>
+                            zwischen <date when-iso="1797/1798">1797 und 1798</date> besucht, wo er unter anderem Philosophie und Physik bei <persName
+                                ref="#p0301" type="bi">Paul Erman</persName> belegte, der ihm <persName ref="#p0330" type="bi">Rabelais</persName>
+                            näher brachte.</p><p xml:lang="en"/><p xml:lang="fr"/></note>.<lb/>nim̄t das <hi rend="latin">papier</hi> sie auf so gehts
+                    grad nach <hi rend="latin"><placeName ref="#l0107" type="bi">Caen</placeName></hi>. —<lb/>was schütz dich de<gap extent="1-2c"
+                        reason="illegible"/> gegen einer Flinte? —<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt dieser Satz.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note></p>
                 <pb facs="00000048.jpg" n="10"/>
                 <p>Die <hi rend="latin"><persName ref="#p0350" type="bi">Kohen</persName></hi> schatzt dich unendlich ihr geht es schlimm und
                     schlimmer<lb/>auch die <hi rend="latin"><persName ref="#p0348" type="bi">Sander</persName></hi>. sie bedauert sehr meinen Adelf
@@ -922,24 +961,26 @@
                                             <l>Λαλιστέρον μ’ ἔθηκας,</l>
                                             <l>Ἄνθρωπε, και κορωνης.</l>
                                         </lg></quote>
-                                </cit></hi><note resp="#janine.katins"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert hier aus <persName
-                                    ref="#p0343" type="bi">Anakreons</persName>
-                                <title ref="#w03304">Ode</title> 9, V. 36-37. Übersetzung: "Hast du mich doch so schwatzhaft / Gemacht, als eine
-                                Krähe." (nach <rs ref="#w03305" type="bi">Ramler</rs>, S. 29).</note></foreign>
+                                </cit></hi><note resp="#janine.katins"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert
+                                    hier aus <persName ref="#p0343" type="bi">Anakreons</persName>
+                                    <title ref="#w03304">Ode</title> 9, V. 36-37. Übersetzung: "Hast du mich doch so schwatzhaft / Gemacht, als eine
+                                    Krähe." (nach <rs ref="#w03305" type="bi">Ramler</rs>, S. 29).</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note></foreign>
                     </salute>
                     <dateline>den <date when-iso="1805-03-01">1<hi rend="superscript">ten</hi> Marz 1805</date>.</dateline>
                     <salute rend="align(right)">
-                        <foreign xml:lang="grc"><hi rend="greek">Χαιρε ἀδελφε </hi><note resp="#janine.katins">Übersetzung: "Sei mir gegrüßt, (mein)
-                                Bruder."</note></foreign></salute><lb/>
+                        <foreign xml:lang="grc"><hi rend="greek">Χαιρε ἀδελφε </hi>
+                            <note resp="#janine.katins"><p xml:lang="de">Übersetzung: "Sei mir gegrüßt, (mein) Bruder."</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note></foreign></salute><lb/>
                     <signed rend="align(right)"><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi></signed><lb/><salute
                         rend="align(right)"><foreign xml:lang="grc"><hi rend="greek"><choice>
                                     <abbr>τ τ π α.</abbr>
                                     <expan>τὸ του πόλοῦ ἄστρον.</expan>
-                                </choice></hi><note resp="#sabine.seifert">Das Kürzel <foreign xml:lang="grc">τ.τ.π.α. </foreign> steht für <foreign
-                                    xml:lang="grc"> τò τоυ πόλου αστρον</foreign>: der "Polarstern". Im Druck der <title ref="#w00253">Correspondance
-                                    d'Adalbert de Chamisso. Fragments inédits</title> fehlt mit Ausnahme des Datums die gesamte
-                                Abschiedsformel.</note></foreign></salute>
-                    <note hand="#pencil_2" place="bottom-margin-left-vertical" type="foliation"><hi rend="underline">102</hi></note>
+                                </choice></hi><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc">τ.τ.π.α. </foreign>
+                                    steht für <foreign xml:lang="grc"> τò τоυ πόλου αστρον</foreign>: der "Polarstern". Im Druck der <title
+                                        ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> fehlt mit Ausnahme des Datums
+                                    die gesamte Abschiedsformel.</p><p xml:lang="en"/><p xml:lang="fr"/></note></foreign></salute>
+                    <note hand="#pencil_2" place="bottom-margin(left)-vertical" type="foliation"><hi rend="underline">102</hi></note>
                 </closer>
             </div>
         </body>

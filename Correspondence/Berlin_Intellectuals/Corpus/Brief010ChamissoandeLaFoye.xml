@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye Papers</collection>
@@ -283,8 +290,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-23" who="sophia.zeil">Added missing index-numbers.</change>
             <change when-iso="2015-03-16" who="anna.busch">Change of respStmt. Corrections within the french parts as suggested by Anne Baillot.
@@ -305,8 +313,8 @@
                 <pb facs="00000027.jpg" n="1"/>
                 <note hand="red_hand" place="margin-top"><date when-iso="1805-01-20">20<hi rend="superscript">t</hi> Januar 1805</date> [] wird nicht
                     mit abgeschrieben.<lb/>4., <hi rend="underline superscript">a.</hi></note>
-                <note hand="pencil_2" place="top-margin-right" type="foliation"><hi n="2" rend="underline">2</hi></note>
-                <note hand="pencil_1" place="top-margin-right" type="foliation">13</note>
+                <note hand="pencil_2" place="top-margin(right)" type="foliation"><hi n="2" rend="underline">2</hi></note>
+                <note hand="pencil_1" place="top-margin(right)" type="foliation">13</note>
                 <p>Ich habe dir einen sehr langen Briefen zu schreiben. Darum habe ich gezeugert biß ich<lb/>an das Werk trat, und nun ergreife ich
                     die feder, und nun verleihe mir Gott Worte,<lb/>denn das Herz überschwillt — mein <persName ref="#p0248" type="bi"
                         >Lafoye</persName>!</p>
@@ -367,10 +375,10 @@
                 <p>Daß ich wohl verstehe, was du, guter, in dich zurück gedrängter, leiden magst,<lb/>wird, erinn<subst>
                         <del rend="overwritten">e</del>
                         <add place="across">re</add>
-                    </subst> ich mich dessen wohl, mein Letzter Brief<note resp="#anna.busch">Gemeint ist der Brief vom 6. Januar 1805, der bei
-                            <persName ref="#p0375" type="bi">Geiger</persName>, <title ref="#w00282">Aus Chamissos Frühzeit</title>, S. 59-67 gedruckt
-                        ist.</note> dir gezeigt<lb/>haben. aber, freund, dies sei uns Regel: Handele frei und frech<lb/>wie das bessere Herz in uns
-                    gebiehtet, und <add place="above">nur</add> mit <subst>
+                    </subst> ich mich dessen wohl, mein Letzter Brief<note resp="#anna.busch"><p xml:lang="de">Gemeint ist der Brief vom 6. Januar
+                            1805, der bei <persName ref="#p0375" type="bi">Geiger</persName>, <title ref="#w00282">Aus Chamissos Frühzeit</title>, S.
+                            59-67 gedruckt ist.</p><p xml:lang="en"/><p xml:lang="fr"/></note> dir gezeigt<lb/>haben. aber, freund, dies sei uns
+                    Regel: Handele frei und frech<lb/>wie das bessere Herz in uns gebiehtet, und <add place="above">nur</add> mit <subst>
                         <del rend="strikethrough">w</del>
                         <add place="across">W</add>
                     </subst>orten rückhalten gegen<pb facs="00000028.jpg" n="2"/>Pöbel. — nicht uns lieber guter, ward es gegeben uns auf<lb/><subst>
@@ -387,7 +395,7 @@
                                     au d'a</unclear></del> d'annoncer <add place="above">ou</add> le peu d'importance que vous y mettez ou<lb/>la
                             nullité, enfin ne mettez point d'obstacle au bien qu'on vous veut, comme<lb/>malheureusement j'en vois tant tous les
                             jours, et soyez je vous le repete paisible<lb/>et tranquille en attendant. Revez vous quand vous parlez des <orgName
-                                ref="" type="bi">universités de Saxe</orgName>? La<lb/>science est sans doute une <add place="above">fort</add>
+                                ref="#" type="bi">universités de Saxe</orgName>? La<lb/>science est sans doute une <add place="above">fort</add>
                             <subst>
                                 <del rend="overwritten">bell</del>
                                 <add place="across">bonne</add>
@@ -419,7 +427,7 @@
                     <subst>
                         <del rend="overwritten">b</del>
                         <add place="across">B</add>
-                    </subst>eim abschreiben hat mich meine<pb facs="00000029.jpg" n="3"/><note hand="pencil_1" place="top-margin-right"
+                    </subst>eim abschreiben hat mich meine<pb facs="00000029.jpg" n="3"/><note hand="pencil_1" place="top-margin(right)"
                         type="foliation">14</note><lb/>Braut geschichte an die deine errinnert. von der ich dir noch zu sprechen habe.<lb/>possirlig
                     wahrlig gennuch wenn .. – man uns Beiden die selbe versprochene<lb/>verspreche. da wollt ich dir schon sch<unclear
                         reason="illegible">ön</unclear> zur pflicht machen, Dich nach Sicht,<lb/>und ist es rathsam, recht <del rend="strikethrough"
@@ -431,9 +439,10 @@
                         <add place="across">r</add>
                     </subst> davon <add place="above">trage</add> wie es übriegens auch noch wohl der fall<lb/>sein würde. Scherzet ohne, <del
                         rend="strikethrough">aber</del> du <del rend="strikethrough"><gap extent="1c" reason="illegible"/></del> erklärest dich nicht
-                    warum du es zu verschmähen<lb/>scheinest dieses goldbeflügelte <rs ref="" type="bi">Engel</rs> von 13 jahren, in aufmerktsamem
+                    warum du es zu verschmähen<lb/>scheinest dieses goldbeflügelte <rs ref="#" type="bi">Engel</rs> von 13 jahren, in aufmerktsamem
                     Augenschein<lb/>zu nehmen. ich treibe dich dazu an, nun, über Tauschhandel von Gold und Seelen<lb/>denken wir doch gleich, da hat
-                    es also nicht gefahr. Laß also die freundliche <rs ref="" type="bi"><hi rend="latin">Cousine</hi></rs><lb/>wirken und weben, halte di<subst>
+                    es also nicht gefahr. Laß also die freundliche <rs ref="#" type="bi"><hi rend="latin">Cousine</hi></rs><lb/>wirken und weben,
+                    halte di<subst>
                         <del rend="overwritten">ch</del>
                         <add place="across">r</add>
                     </subst> den rücken frei und siehe zu mit allen Augen<lb/>deines Antlitzes, —</p>
@@ -448,8 +457,8 @@
                         >und angepasst</add>. Du sagst<lb/>mir nicht <add place="above">ein mahl</add> von welcher Stelle die Rede ist, das sage mir,
                         <del rend="strikethrough">darauf<lb/>und <gap extent="1w" reason="illegible"/> die rede <gap extent="1w" reason="illegible"
                         /></del>, das muß ich wissen. ich sah dich so<lb/>gern ein Jünger des <hi rend="greek"><foreign xml:lang="grc"
-                            >Ασκληπιος</foreign></hi>,<note resp="#sophia.zeil">Asklepios ist in der griechischen Mythologie der Gott der
-                        Heilkunst.</note>
+                            >Ασκληπιος</foreign></hi>, <note resp="#sophia.zeil"><p xml:lang="de">Asklepios ist in der griechischen Mythologie der
+                            Gott der Heilkunst.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <del rend="strikethrough">sollte</del> auch davon <add place="above">sollte</add> nichts werden!<lb/><hi rend="latin">apropos</hi>
                     – Geld zu deiner <hi rend="greek"><foreign xml:lang="grc">ανατομια</foreign></hi>: dieses beachte: ich habe wie du weist,<lb/>(die
                     rigtigere Rechnung habe ich dir geschickt.) 111 <choice>
@@ -462,7 +471,7 @@
                             <expan>Reichsthaler</expan>
                         </choice></add> im metallischem glanze wieder zu gesichte bekom̄en, <del rend="strikethrough">so</del> oder<lb/>bequemer eine
                     Zahl von französchen Münzen, so lass ich dir die<lb/>in diesem frühjar, wo Geld mir versprochen worden ist vom Hause,<lb/>von
-                    meinem <rs ref="" type="bi">Bruder</rs> zustellen, und schaffe dir <add place="above">an</add>, für das übrige <add place="above"
+                    meinem <rs ref="#" type="bi">Bruder</rs> zustellen, und schaffe dir <add place="above">an</add>, für das übrige <add place="above"
                         >Geld</add>,<lb/>Bücher die du mir auch sagen <del rend="strikethrough">sollst</del> oder andeuten sollst, und die mit<lb/>dem
                     Bücher Handel von der Oster Messe sehr bequem und wohlfeil nach<lb/><placeName ref="#l0044" type="bi"><hi rend="latin"
                         >Paris</hi></placeName>
@@ -471,7 +480,7 @@
                     <subst>
                         <del rend="overwritten">i</del>
                         <add place="across">a</add>
-                    </subst>n meinen <rs ref="" type="bi">Bruder</rs>, und lege dir<lb/>hier bei ein Blat das du aus gefüllt, an ihn zu schiken
+                    </subst>n meinen <rs ref="#" type="bi">Bruder</rs>, und lege dir<lb/>hier bei ein Blat das du aus gefüllt, an ihn zu schiken
                         haben<pb facs="00000030.jpg" n="4"/>wirst. ich hoffe wenigstens daß noch alles bei zeiten geschehen<lb/>wird und <del
                         rend="strikethrough">alles</del> gut ausfallen, so verlieren wir beide am wenigsten,<lb/>zumahl, da dein schatz hier in
                     liebligen sechser bestehet – ich sehe <add place="above">eben</add> daß<lb/>du <unclear cert="medium" reason="illegible"
@@ -479,8 +488,8 @@
                             <abbr><unclear cert="high" reason="illegible">Th</unclear></abbr>
                             <expan>Thalern</expan>
                         </choice></hi> sprichst desto leichetr wird es gehen und desto mehr<lb/>muß ich nachricht von dir haben wegen den Wahl der
-                    Bücher. 2 <rs ref="" type="bi">grünen</rs><lb/>sind für dich auf dem Wege <hi rend="latin" xml:lang="fr">par occasion</hi> und
-                    mein <rs ref="" type="bi">Bruder</rs>.<lb/>zu Bücher <subst>
+                    Bücher. 2 <rs ref="#" type="bi">grünen</rs><lb/>sind für dich auf dem Wege <hi rend="latin" xml:lang="fr">par occasion</hi> und
+                    mein <rs ref="#" type="bi">Bruder</rs>.<lb/>zu Bücher <subst>
                         <del rend="overwritten"><unclear reason="overwritten"/></del>
                         <add place="across">S</add>
                     </subst>endungen Wiederhole ich <add place="above">dir</add> muß die messe Benutzt werden<lb/>also nicht gezeugert. Gieb mir auch
@@ -488,8 +497,8 @@
                         ref="#l0107" type="bi"><subst>
                             <del rend="overwritten">K</del>
                             <add place="across">C</add>
-                        </subst>aen</placeName> correspondire.<lb/>sreibe auch gleich meinem <persName ref="" type="bi">Bruder</persName> 100 francken
-                    erhälltzt du wohl<lb/>unverzüglich. — Laß aus dem Ekel dieses geldgesprächs uns rasch erheben!</p>
+                        </subst>aen</placeName> correspondire.<lb/>sreibe auch gleich meinem <persName ref="#" type="bi">Bruder</persName> 100
+                    francken erhälltzt du wohl<lb/>unverzüglich. — Laß aus dem Ekel dieses geldgesprächs uns rasch erheben!</p>
                 <p><persName ref="#p0291" type="bi">Koreff</persName> treibt es nicht besser mit mir als mit dir, und schreibt<lb/>auch nicht an
                         <persName ref="#p0344" type="bi">Klapproth</persName>, dem er Freund ist und sonst <del rend="strikethrough">alle</del>
                     jeglicher Woche<lb/>Schrieb, nur an seinen <persName ref="#p3581" type="bi">Vater</persName> und seine <persName ref="#p3582"
@@ -499,10 +508,10 @@
                     geschrieben, und ofters kleine <subst>
                         <del rend="overwritten">w</del>
                         <add place="across">W</add>
-                    </subst>ische<lb/>in den Briefen meines <persName ref="" type="bi">Bruders</persName> eingelegt, auf nichts habe ich
-                    andwort<lb/>erhalten. hier abermahls seine Adresse die ich <add place="above">dir</add> glaub ich durch mein<lb/><persName ref=""
+                    </subst>ische<lb/>in den Briefen meines <persName ref="#" type="bi">Bruders</persName> eingelegt, auf nichts habe ich
+                    andwort<lb/>erhalten. hier abermahls seine Adresse die ich <add place="above">dir</add> glaub ich durch mein<lb/><persName ref="#"
                         type="bi">Bruder</persName> bereits einmahl geschikt habe. <hi rend="latin"><foreign xml:lang="frz">Rue Ecole de Medecine,
-                            Hotel Germanique<lb/>Cour de Commerce.</foreign></hi> ich will ihm noch ein Wort einlegen in meines<lb/><persName ref=""
+                            Hotel Germanique<lb/>Cour de Commerce.</foreign></hi> ich will ihm noch ein Wort einlegen in meines<lb/><persName ref="#"
                         type="bi">Bruders</persName> Brief. nachlässig scheint mir <subst>
                         <del rend="strikethrough">auch</del>
                         <add place="above">aber</add>
@@ -529,7 +538,7 @@
                         <add place="above">wußte</add>
                     </subst>. — die gut und treffend waren.</p>
                 <pb facs="00000031.jpg" n="5"/>
-                <note hand="pencil_1" place="top-margin-right" type="foliation">15</note>
+                <note hand="pencil_1" place="top-margin(right)" type="foliation">15</note>
                 <lb/>
                 <p>Schik' ihm auch nicht so leicht <hi rend="latin">Manuscripte</hi> von denen du keine<lb/>abschrift<del rend="strikethrough"
                         >en</del> hättest, und laß beileibe nicht weltliche irdische dinge<lb/>durch ihn abhandeln. wer weis selbst wie er <del
@@ -562,12 +571,12 @@
                         >Paris</placeName> hätte druken lassen<lb/>ich habe nicht mein <rs ref="#w00281" type="bi">Exemplar</rs> im Hause, ich will es
                     wieder<lb/>ein beordern, und dann lese ich ihn, spreche mit <persName ref="#p0251" type="bi">Fichte</persName>, und<lb/>kom̄t
                     einmal die rechte Stimmung, ergreife die feder. —</p>
-                <p>Die <title ref="">Lieder</title> sind auch ein verdam̄tes stück arbeit. schike mir<lb/>eine Probe von deiner Arbeit mit deinem
+                <p>Die <title ref="#">Lieder</title> sind auch ein verdam̄tes stück arbeit. schike mir<lb/>eine Probe von deiner Arbeit mit deinem
                     nächsten Briefen.</p>
                 <p><del rend="strikethrough">Du muß</del> wegen des anbringens und des finden eines Verlägers<lb/>so werd ich di<subst>
                         <del rend="overwritten">ch</del>
                         <add place="across">r</add>
-                    </subst> vielleicht entweder durch meinem <persName ref="" type="bi">Bruder</persName>, oder auch<lb/>durch viel bessere Can<subst>
+                    </subst> vielleicht entweder durch meinem <persName ref="#" type="bi">Bruder</persName>, oder auch<lb/>durch viel bessere Can<subst>
                         <del rend="overwritten">e</del>
                         <add place="across">ä</add>
                     </subst>le helfen konnen. lass erst ein Par Theile<lb/>des <hi rend="latin">Manuscriptes</hi> da sein, — mehr darüber nach deiner
@@ -612,7 +621,7 @@
                     </subst><lb/>gegründet. ich meine die Mathematik. die treibe mit ihm<lb/><subst>
                         <del rend="overwritten"><unclear reason="illegible">nu</unclear></del>
                         <add place="across">so</add>
-                    </subst> weit er nur kann und mag. ich werde dir dein <persName ref="" type="bi">Beson</persName> wieder<lb/>senden. – Sprachen
+                    </subst> weit er nur kann und mag. ich werde dir dein <persName ref="#" type="bi">Beson</persName> wieder<lb/>senden. – Sprachen
                     noch muß man als Kind lernen. und hat<lb/>dann dazu die Beste Zeit. Deutsch muß er spielend und plaudernd<lb/>und lesend mit dir
                     lernen, ganz wie franzosch. und du mußt<lb/>ih<subst>
                         <del rend="strikethrough">m</del>
@@ -628,7 +637,7 @@
                     <del rend="strikethrough">sch</del> abschreiben und dann <del rend="strikethrough">sch</del> selbst schreiben ohne selbst<lb/>zu
                     ahnden <del rend="strikethrough"><gap extent="1c" reason="illegible"/></del> was beabsigtigt wird. – Dann noch eins – Kinder <add
                         place="above">auf dem Lande</add> werden<lb/>gewöhnlig mächtig von der Natur angezogen, Blumen, <hi rend="latin"
-                        >insecten</hi><pb facs="00000033.jpg" n="7"/><note hand="pencil_1" place="top-margin-right" type="foliation"
+                        >insecten</hi><pb facs="00000033.jpg" n="7"/><note hand="pencil_1" place="top-margin(right)" type="foliation"
                     >16</note><lb/>alles was da ist Blühet sich reget, und die grösseren <del rend="strikethrough">erscheinun</del> massen<lb/>die
                     geheimniss-vollen Berge, die gewässer, die Erscheinungen der<lb/>Luft habben einen unsäglichen Reitz für ihre Seele. so
                     war<lb/>wenigstens ich <del rend="strikethrough">auch</del> und ich weiß noch wie ich die Inseckten erspehte,<lb/>neuen Pflanzen
@@ -721,8 +730,8 @@
                     fliehenden<lb/>und 3 ma<add place="inline">h</add>l zurück kehrenden Stanze die da zwei gleichreimenden <del rend="strikethrough"
                         >beh</del> werse<lb/>endlig schliessen, <add place="above">beleidigst</add> in dem du die zweiten Werse in die dritten
                     hinein<lb/>laufen läßt. ein punckt gehöret von rechts wegen jegligem zweiten Wers.<pb facs="00000035.jpg" n="9"/><note
-                        hand="pencil_2" place="top-margin-left" type="foliation"><hi rend="underline">100</hi></note><note hand="pencil_1"
-                        place="top-margin-right" type="foliation">17</note><lb/>und <del rend="overwritten">e</del><add place="across">E</add><hi
+                        hand="pencil_2" place="top-margin(left)" type="foliation"><hi rend="underline">100</hi></note><note hand="pencil_1"
+                        place="top-margin(right)" type="foliation">17</note><lb/>und <del rend="overwritten">e</del><add place="across">E</add><hi
                         rend="latin">njembements</hi> zu den <hi rend="latin"><foreign xml:lang="frz">Coups deffet</foreign></hi>, wie edwa in den
                         franzo<supplied reason="damage">schen</supplied><lb/>Alexandriner. <del rend="strikethrough">daß</del> so edwas mußt du weg
                     kriegen in dem du gute<lb/>Stanzen liesest. — sihe doch den leuten <del rend="overwritten">i</del><add place="across">a</add>n die
@@ -764,7 +773,8 @@
                         <add place="across">W</add>
                     </subst>ie hab' ich glaub ich deinen Briefen beantwortet!!</p>
                 <p><note hand="red_hand" place="inline">[</note>Eine gewisse <persName ref="#p3587" type="bi"><hi rend="latin">Henriette</hi> von <hi
-                            rend="latin">Hacke</hi></persName><note resp="#sophia.zeil">Personenzuordnung unsicher.</note> hat im <subst>
+                            rend="latin">Hacke</hi></persName><note resp="#sophia.zeil"><p xml:lang="de">Personenzuordnung unsicher.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> hat im <subst>
                         <del rend="overwritten">n</del>
                         <add place="across">N</add>
                     </subst>ahmen<lb/>ihrer <add place="above">kranken</add>
@@ -773,7 +783,7 @@
                         <del rend="overwritten">s</del>
                         <add place="across">ü</add>
                     </subst>berschreiben und<lb/>abzuschiken, ich habe den Briefen an die Gesandschaft hier ab<lb/>geliefert, und ihr in deinem Nahmen
-                    geandwortet. sie sagte<lb/><del rend="strikethrough">mir</del> dir sie wäre um <rs ref="" type="bi"><hi rend="latin"
+                    geandwortet. sie sagte<lb/><del rend="strikethrough">mir</del> dir sie wäre um <rs ref="#" type="bi"><hi rend="latin"
                         >Bo....</hi></rs> der seit einem halben Jahre<lb/>schwiege bang und bat dich um Nachrichten. ich habe gesagt daß<lb/>wenn ich
                         ra<add place="inline">t</add>hen dürfte, so glaubte ich du seiest itzt nicht mehr<lb/>in <hi rend="latin"><foreign
                             xml:lang="frz">Correspondance</foreign></hi> mit ihm. und habe so vort meine andwort<lb/>nach <placeName ref="#l1116"
@@ -782,7 +792,7 @@
                 <p>Dein <hi rend="latin">Ex <persName ref="#p2119" type="bi">General Schirstadt</persName></hi>
                     <del rend="strikethrough">ist</del> hat mit dem <rs ref="#p0281" type="bi">König</rs> gerechtet<lb/>um ein andres Regiment als das
                     ihm gegegebene zu weit<lb/>entfernte zu erhallten, und hat sein voliges Abschied dawon<lb/>getragen. sein <rs ref="#p2146"
-                        type="bi">Sohn</rs> ist sehr Krank. <persName ref="" type="bi">Rappart</persName> hat <hi rend="latin">banque<lb break="no"
+                        type="bi">Sohn</rs> ist sehr Krank. <persName ref="#" type="bi">Rappart</persName> hat <hi rend="latin">banque<lb break="no"
                         />route</hi> gemacht, wie ein kaufmann. was meine Schuld anbetrift<lb/>so bleibt es beim alten, er ist sie mir schuldig.</p>
                 <p><persName ref="#p0305" type="bi"><hi rend="latin">Ceres</hi></persName>
                     <rs ref="#p3589" type="bi">Bruder</rs>, adjudant seines <rs ref="#p3590" type="bi">schwagers</rs> ist diesen som̄er<lb/>mit
@@ -795,7 +805,7 @@
                     ungezwungen<lb/>wohl zu sein, und hat mir mit keiner Silbe von der Vergangenheit<lb/>gesprochen. nur dieses sie hatte mir
                     versprochen, damit ich<lb/>von ihrer Prosa sehe, <del rend="strikethrough">ihr</del> ihr Leben, Vergangenheit,
                         gegenwart<lb/><supplied reason="wax">un</supplied>d zukunft, im Schleier eines Märchens für mich <del rend="strikethrough"
-                        >zu</del> dar zu <pb break="no" facs="00000037.jpg" n="11"/><note hand="pencil_1" place="top-margin-right" type="foliation"
+                        >zu</del> dar zu <pb break="no" facs="00000037.jpg" n="11"/><note hand="pencil_1" place="top-margin(right)" type="foliation"
                         >18</note><lb/>stellen, und neuerdin<supplied cert="high" reason="damage">gs</supplied>
                     <gap extent="1w" reason="damage"/>, sagte sie mir, mit lebhaftigkeit<lb/>daß sie itzt gar nich<supplied cert="high"
                         reason="damage">t</supplied>
@@ -820,11 +830,12 @@
                                 rend="latin">Adelbert</hi></persName><lb/><foreign rend="align(right)" xml:lang="grc"><hi rend="greek"><choice>
                                     <abbr>τ τ π α.</abbr>
                                     <expan>τò τоυ πόλου αστρον</expan>
-                                </choice></hi></foreign><note resp="#sabine.seifert">Das Kürzel <foreign xml:lang="grc">τ τ π α.</foreign> steht für
-                                <foreign xml:lang="grc">τò τоυ πόλου αστρον</foreign> ("Polarstern") und war das Erkennungszeichen des <orgName
-                                ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und
-                                <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
-                            jungen Dichtern und Gelehrten angehörten.</note></signed></closer>
+                                </choice></hi></foreign><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc">τ τ π
+                                    α.</foreign> steht für <foreign xml:lang="grc">τò τоυ πόλου αστρον</foreign> ("Polarstern") und war das
+                                Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi"
+                                    >Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
+                                    >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note></signed></closer>
                 <postscript>
                     <p>im nächsten Briefe gedichte errinere mich allen fals daran. —<lb/>Ich habe so viele Blätter vollgeschmirt und so viel mögt ich
                         noch dir sagen. und alles was<lb/>ich dir gesagt habe, hab' ich so eilig gedrangt hin geworfen. doch darf ich<lb/>heut kein
@@ -836,12 +847,12 @@
                         erfehlt<lb/>in meiner abschrift, dann noch mehr, über das Liebe Gedicht.</p>
                 </postscript>
                 <pb facs="00000038.jpg" n="12" xml:id="Brief010ChamissoandeLaFoye-Blatt6v"/>
-                <note hand="#pencil_3" place="top-margin-left-upsidedown"><hi rend="underline">180<subst>
+                <note hand="#pencil_3" place="top-margin(left)-upsidedown"><hi rend="underline">180<subst>
                             <del rend="overwritteb">4</del>
                             <add place="across">5</add>
                         </subst> 100</hi></note>
                 <note hand="ink_1" place="top-center"><gap reason="illegible"/></note>
-                <p><hi rend="latin"><foreign xml:lang="frz">
+                <closer><foreign xml:lang="fr"><hi rend="latin">
                             <address>
                                 <addrLine rend="align(center)">A Monsieur</addrLine>
                                 <addrLine rend="align(center)">Monsieur <persName ref="#p0248" type="bi">Louis de La Foye</persName></addrLine>
@@ -851,8 +862,8 @@
                                 <addrLine rend="align(right)">Departement du</addrLine>
                                 <addrLine rend="align(right)"><placeName ref="#l0108" type="bi"><hi rend="underline"
                                     >Calvados</hi></placeName></addrLine>
-                            </address></foreign></hi>
-                </p>
+                            </address></hi></foreign>
+                </closer>
                 <note hand="ink_2" place="center"><unclear reason="illegible">32</unclear></note>
                 <note hand="ink_3" place="center">10</note>
             </div>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye Papers</collection>
@@ -242,8 +249,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-16" who="anna.busch">Change of respStmt.</change>
             <change when-iso="2015-03-09" who="sophia.zeil">Corrections within header and body. Added french and english metadata. Added
@@ -255,12 +263,12 @@
         <body>
             <div type="transcription">
                 <pb facs="00000049.jpg" n="1"/>
-                <note hand="pencil_1" place="top-margin-right" type="foliation">24</note>
-                <note hand="pencil_2" place="top-margin-left" type="foliation"><hi rend="underline">9</hi></note>
+                <note hand="pencil_1" place="top-margin(right)" type="foliation">24</note>
+                <note hand="pencil_2" place="top-margin(left)" type="foliation"><hi rend="underline">9</hi></note>
                 <p rend="nolb">Unrecht, mich quälendes Unrecht hab' ich guter <persName ref="#p0248" type="bi">Adelf</persName><note
-                        resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi"
-                            >Freund</rs> mit dem griechischen Wort für Bruder, "Adelf" (αδελφός), an.</note> auch gegen <add place="above">dich</add>
-                    abzubüssen. seit <subst>
+                        resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248"
+                                type="bi">Freund</rs> mit dem griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> auch gegen <add place="above">dich</add> abzubüssen. seit <subst>
                         <del rend="overwritten">L</del>
                         <add place="across">l</add>
                     </subst>angen Monaten hab' ich keinem der Lieben,<lb/>und dir nicht, sreiben könen und mögen, <subst>
@@ -336,9 +344,9 @@
                         <del rend="overwritten">a</del>
                         <add place="across">A</add>
                     </subst>us<pc>=</pc>einanderfallen, und sei geschäftig gedrägt zusam̄en zu hallten die sätze und <add place="below">punkte zu
-                        machen.</add><note resp="#cecile.lambert">Hier folgt ein Zeichnen als Hinweis einer Bemerkung am rechten Seitenrand. Zu Beginn
-                        der Randbemerkung wird es wiedergegeben.</note>
-                    <add place="margin-right-vertical">vorbildern hast du an die Alten<lb/>und deutschen Die ich dir schicken werde.</add><lb/>was
+                        machen.</add><note resp="#cecile.lambert"><p xml:lang="de">Hier folgt ein Zeichnen als Hinweis einer Bemerkung am rechten
+                            Seitenrand. Zu Beginn der Randbemerkung wird es wiedergegeben.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    <add place="margin(right)-vertical">vorbildern hast du an die Alten<lb/>und deutschen Die ich dir schicken werde.</add><lb/>was
                     mich <add place="inline">an</add>betrifft ich fühle daß ich nach <hi rend="latin">Perioden</hi> jage i<subst>
                         <del rend="overwritten">ch</del>
                         <add place="across">n</add>
@@ -372,28 +380,27 @@
                         <add place="above">höchstens</add>
                     </subst> anderthalb bogen. ich mögte irren, aber <gap extent="2-3w" reason="damage"/>. und gieb mir Andwort. begehrt<lb/>es nicht
                     ein gedicht zu werden.</p>
-                <note hand="pencil_1" place="bottom-margin-right" type="foliation">24</note>
+                <note hand="pencil_1" place="bottom-margin(right)" type="foliation">24</note>
                 <pb facs="00000050.jpg" n="2" xml:id="Brief012ChamissoandeLaFoye-Blatt1v"/>
                 <note hand="pencil_3" place="top-center"><hi rend="underline">Mai 1805</hi></note>
-                <p><address rend="align(center)">
-                        <hi rend="latin"><foreign xml:lang="frz">
+                <closer><foreign xml:lang="fr"><hi rend="latin"><address rend="align(center)">
                                 <addrLine>A Monsieur</addrLine>
                                 <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
                                 <addrLine>Au <placeName ref="#l0148" type="bi">Vangeux</placeName></addrLine>
                                 <addrLine>à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
-                                <addrLine><hi n="2" rend="underline"><placeName ref="#l0108" type="bi"
-                            >Calvados</placeName>.</hi></addrLine></foreign></hi>
-                    </address></p>
-                <note hand="ink_2" place="center">17</note>
-                <note hand="ink_3" place="center">10</note>
-                <note hand="ink_1" place="center">R</note>
-                <closer rend="align(bottom-center)">
-                    <dateline>den <date when-iso="1805-05-25">25 Mai 1805</date></dateline><lb/><signed><persName ref="#p0237" type="bi"><hi
-                                rend="latin">Adelbert</hi></persName><lb/><foreign xml:lang="grc"><hi rend="greek"><abbr>τ τ π α</abbr><expan>τò τоυ
-                                    πόλου αστρον</expan></hi></foreign><note resp="#sabine.seifert">Das Kürzel τ τ π α steht für τò τоυ πόλου αστρον
-                            ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName
-                                ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date
-                                when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</note></signed>
+                                <addrLine><hi n="2" rend="underline"><placeName ref="#l0108" type="bi">Calvados</placeName>.</hi></addrLine>
+                            </address></hi></foreign>
+                    <note hand="ink_2" place="center">17</note>
+                    <note hand="ink_3" place="center">10</note>
+                    <note hand="ink_1" place="center">R</note>
+                    <dateline rend="align(center)">den <date when-iso="1805-05-25">25 Mai 1805</date></dateline><lb/><signed><persName ref="#p0237"
+                            type="bi"><hi rend="latin">Adelbert</hi></persName><lb/><foreign xml:lang="grc"><hi rend="greek"><abbr>τ τ π
+                                    α</abbr><expan>τò τоυ πόλου αστρον</expan></hi></foreign>
+                        <note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel τ τ π α steht für τò τоυ πόλου αστρον ("Polarstern") und war das
+                                Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi"
+                                    >Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
+                                    >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note></signed>
                 </closer>
             </div>
         </body>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -76,8 +77,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -240,8 +247,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-16" who="#anna.busch">Corrections within transcription.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
@@ -256,7 +264,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000025.jpg" n="1"/>
-                <note hand="#pencil_2" place="top-margin-left inline"><hi rend="underline">1804</hi></note>
+                <note hand="#pencil_2" place="top-margin(left) inline"><hi rend="underline">1804</hi></note>
                 <note hand="#pencil_2" place="top-left inline" type="foliation"><hi rend="underline">5</hi></note>
                 <p>Ich behalte mich vor, lieber, guter, herrlicher<del rend="strikethrough">,</del>
                     <rs ref="#p0248" type="bi">Freund</rs>,<lb/>dir in wenigen Tagen einige Schöffel Skripturen zu<lb/>weben. itzt nur ein 3 <hi
@@ -296,10 +304,11 @@
                     </subst>lend daran und im̄er noch auf<lb/>Uhrlaub. — die <persName ref="#p2147" type="bi">Jänisch</persName>. fand ich sehr
                         <unclear cert="medium" reason="illegible">lau</unclear>,<lb/>und <del rend="strikethrough">wenig</del>
                     <add place="inline">un</add> theilnemend, doch weinte sie sprechend<lb/>von dem Zeite des Unglücks das sie noch itzt
-                    in<lb/>martender ungewißheit liesse, und wo du ihr beigestan<lb break="no" type="none"/>den hattest.<note resp="#janine.katins">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wird die Passage von "sein
-                        sohn" bis "beigestanden hattest" ausgelassen.</note> – – <hi rend="latin">Procuration</hi> brauchst du<lb/>mir <hi
-                        rend="underline">nicht</hi> zu schiken. – in edwa 14 Tagen<lb/>glaub ich daß du loß sein sollst.</p>
+                    in<lb/>martender ungewißheit liesse, und wo du ihr beigestan<lb break="no" type="none"/>den hattest.<note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wird die
+                            Passage von "sein sohn" bis "beigestanden hattest" ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – – <hi
+                        rend="latin">Procuration</hi> brauchst du<lb/>mir <hi rend="underline">nicht</hi> zu schiken. – in edwa 14 Tagen<lb/>glaub ich
+                    daß du loß sein sollst.</p>
                 <p>Dein Brief mein Lieber ist herrlig nur<lb/>zu kurz, ist weis gott Stellen weise<lb/><hi rend="latin">Sublime</hi>. nicht solche<del
                         rend="strikethrough"><gap extent="1c" reason="illegible"/></del> tief gedachten, glühend<lb/>geschrieben, und Kunstvoll
                     gewobenen <note hand="#pencil_1" place="bottom-right inline" type="foliation">12</note><pb facs="00000026.jpg" n="2"/><hi
@@ -329,18 +338,20 @@
                             <abbr>A.</abbr>
                             <expan>Augusta</expan>
                         </choice></persName> habbe<lb/>ich nur seit der Zeit ein mahl flüchtig gesehen<lb/>und ihr ein Sonnet gegeben. ich habe sie
-                        seit<lb break="no" type="none"/>her ein par mahl<note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso. Fragments inédits</title> steht "ein paarmal".</note> verfehlt. — <persName ref="#p2149" type="bi"
-                            ><hi rend="latin">August Bode</hi></persName><note resp="#janine.katins">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso. Fragments inédits</title> steht fälschlicherweise "August Boa".</note><lb/>der Dichter, deß
-                    Ratschaft war <foreign xml:lang="grc"><hi rend="greek">Χρ<subst>
+                        seit<lb break="no" type="none"/>her ein par mahl<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "ein paarmal".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> verfehlt. — <persName ref="#p2149" type="bi"><hi rend="latin">August Bode</hi></persName><note
+                        resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments
+                                inédits</title> steht fälschlicherweise "August Boa".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>der Dichter,
+                    deß Ratschaft war <foreign xml:lang="grc"><hi rend="greek">Χρ<subst>
                                 <del rend="strikethrough">ε</del>
                                 <del rend="none">ι</del>
                                 <add place="above">αιν</add>
-                            </subst>ειν</hi></foreign><note resp="#janine.katins">Übersetzung: „beflecken“ oder „entweihen“ (im Infinitiv). Im Druck
-                        der <title ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wird die Passage von "Ratschaft" bis
-                        einschließlich des griechischen Terminus ausgelassen.</note> ist eines<lb/>elenden langweiligen Todes gestorben, es
-                    war<lb/>Grosse Trauer im Hause <persName ref="#p0345" type="bi"><choice>
+                            </subst>ειν</hi></foreign>
+                    <note resp="#janine.katins"><p xml:lang="de">Übersetzung: „beflecken“ oder „entweihen“ (im Infinitiv). Im Druck der <title
+                                ref="#w00253">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> wird die Passage von "Ratschaft" bis
+                            einschließlich des griechischen Terminus ausgelassen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> ist eines<lb/>elenden
+                    langweiligen Todes gestorben, es war<lb/>Grosse Trauer im Hause <persName ref="#p0345" type="bi"><choice>
                             <abbr>A</abbr>
                             <expan>Augusta</expan>
                         </choice></persName>. sie sind nahe<lb/><hi rend="latin">Cousins</hi> und bewohnen ein Haus. — nur <persName ref="#p0344"
@@ -363,22 +374,22 @@
                     <signed><foreign xml:lang="grc"><hi rend="greek"><choice>
                                     <abbr>τ τ π α.</abbr>
                                     <expan>τò τоυ πόλου αστρον</expan>
-                                </choice><note resp="#sabine.seifert">Das Kürzel <foreign xml:lang="grc">τ τ π α.</foreign> steht für <foreign
-                                        xml:lang="grc">τò τоυ πόλου αστρον</foreign> ("Polarstern") und war das Erkennungszeichen des <orgName
-                                        ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und
-                                        <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit
-                                    anderen jungen Dichtern und Gelehrten angehörten.</note></hi></foreign>
+                                </choice><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc">τ τ π α.</foreign> steht für
+                                            <foreign xml:lang="grc">τò τоυ πόλου αστρον</foreign> ("Polarstern") und war das Erkennungszeichen des
+                                            <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi"
+                                            >Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804"
+                                            >1804</date> zusammen mit anderen jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en"/><p
+                                        xml:lang="fr"/></note></hi></foreign>
                         <hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi>.</signed>
-                </closer>
-                <p><hi rend="latin"><foreign xml:lang="fr"><address>
+                    <foreign xml:lang="fr"><hi rend="latin"><address>
                                 <addrLine>à <persName ref="#p0248" type="bi">Louis de la Foye</persName></addrLine>
                                 <addrLine>au <placeName ref="#l0148" type="bi">Vangeux</placeName>
                                     <choice>
                                         <abbr>N.<hi rend="superscript">o</hi></abbr>
                                         <expan>Numéro</expan>
                                     </choice> 2. à <placeName ref="#l0107" type="bi">Caen</placeName>.</addrLine>
-                            </address></foreign></hi></p>
-                <note hand="#pencil_2" place="bottom-margin-right inline" type="foliation"><hi rend="underline">5</hi></note>
+                            </address></hi></foreign>
+                    <note hand="#pencil_2" place="bottom-margin(right) inline" type="foliation"><hi rend="underline">5</hi></note></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -197,8 +204,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">Notes added and some corrections</change>
         </revisionDesc>
@@ -207,12 +215,12 @@
         <body>
             <div type="transcription">
                 <pb facs="00000069.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">34</note>
-                <note hand="#pencil_2" place="margin-left" type="foliation">194</note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 74. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">34</note>
+                <note hand="#pencil_2" place="margin(left)" type="foliation">194</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 74. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p>Ich bleibe wohl hier biß <choice>
                         <abbr>7ber</abbr>
                         <expan>September</expan>
@@ -222,8 +230,8 @@
                     ich erst zu dir<lb/><pb facs="00000070.jpg" n="2"/>auf ein Paar Monathe –<lb/>wenn ich heirathe ist, –<lb/>– mir kam er vor als
                     erschräckes<lb/>du bei dem Worte heiraten – nun<lb/>ich erschrecke schon nicht mehr –<lb/>wenn ich heirathe sag ich wird
                     es<lb/>ein anderes sein – Denn da<del rend="strikethrough">r</del> werd<lb/>ich am Ende doch das Feld räumen<lb/>müßen. –<lb/></p>
-                <p>(altgr.)<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> fehlt die griechische Grußformel.</note></p>
+                <p>(altgr.)<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> fehlt die griechische Grußformel.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
             </div>
         </body>
     </text>

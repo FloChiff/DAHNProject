@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -75,8 +76,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -267,8 +274,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-09" who="sabine.seifert">Added some French translations, updated Gregorian date for 21. Frimaire within French
@@ -283,8 +291,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000017.jpg" n="1"/>
-                <note hand="#red_hand" place="top-margin-left inline"><gap reason="illegible"/></note>
-                <note hand="#red_hand" place="top-margin-right inline"><hi rend="latin">20<choice>
+                <note hand="#red_hand" place="top-margin(left) inline"><gap reason="illegible"/></note>
+                <note hand="#red_hand" place="top-margin(right) inline"><hi rend="latin">20<choice>
                             <abbr><hi rend="superscript">t</hi></abbr>
                             <expan>ter</expan>
                         </choice>
@@ -293,19 +301,21 @@
                             <expan>September</expan>
                         </choice>
                         <unclear cert="medium" reason="illegible">1804</unclear></hi></note>
-                <note hand="#black_ink" place="top-margin-left inline"><del hand="#red_hand" rend="strikethrough">III</del></note>
-                <note hand="#pencil_2" place="top-margin-left inline" type="foliation"><hi rend="underline">3</hi></note>
-                <note hand="#pencil_1" place="top-margin-right" type="foliation">8</note>
-                <p><note resp="#sabine.seifert">Der Beginn des Briefes bis "es dir erzählen" ist mit Rotstift vom Herausgeber <persName ref="#p0239"
-                            type="bi">Hitzig</persName> gestrichen. Folglich fehlt diese Passage im Druck der <title ref="#w00277">Leben und Briefe
-                            von Adelbert von Chamisso</title>.</note>Du hast nun die beigefügten Blätter gelesen, Freund, auch weiß ich<lb/>nichts
-                    hinzu zu fügen, nichts dem seltsamen Gehalte<del rend="strikethrough">s</del> des <choice>
+                <note hand="#black_ink" place="top-margin(left) inline"><del hand="#red_hand" rend="strikethrough">III</del></note>
+                <note hand="#pencil_2" place="top-margin(left) inline" type="foliation"><hi rend="underline">3</hi></note>
+                <note hand="#pencil_1" place="top-margin(right)" type="foliation">8</note>
+                <p><note resp="#sabine.seifert"><p xml:lang="de">Der Beginn des Briefes bis "es dir erzählen" ist mit Rotstift vom Herausgeber
+                                <persName ref="#p0239" type="bi">Hitzig</persName> gestrichen. Folglich fehlt diese Passage im Druck der <title
+                                ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>Du
+                    hast nun die beigefügten Blätter gelesen, Freund, auch weiß ich<lb/>nichts hinzu zu fügen, nichts dem seltsamen Gehalte<del
+                        rend="strikethrough">s</del> des <choice>
                         <abbr>N.<hi rend="superscript">o</hi></abbr>
                         <expan>Numéro</expan>
-                    </choice> II<note resp="#sabine.seifert">Da vorliegendes Blatt mit "III" numeriert ist, ist mit "II" das vorhergehende, verlorene
-                        Blatt gemeint.</note> hinzu zu<lb/>fügen, betroffen der ich bin da ich ihn erhalte, <hi rend="latin">kouvertire</hi> ich ihn
-                    nur<lb/>und schike es ab, und weis dir nichts zu sagen als — sei Manne<gap extent="1c" reason="illegible"/><lb/>sollte ein
-                    ferneres Forschen nur edwas merkwüdiges von dem Mäglein<lb/>lehren so w<subst>
+                    </choice> II<note resp="#sabine.seifert"><p xml:lang="de">Da vorliegendes Blatt mit "III" numeriert ist, ist mit "II" das
+                            vorhergehende, verlorene Blatt gemeint.</p><p xml:lang="en"/><p xml:lang="fr"/></note> hinzu zu<lb/>fügen, betroffen der
+                    ich bin da ich ihn erhalte, <hi rend="latin">kouvertire</hi> ich ihn nur<lb/>und schike es ab, und weis dir nichts zu sagen als —
+                    sei Manne<gap extent="1c" reason="illegible"/><lb/>sollte ein ferneres Forschen nur edwas merkwüdiges von dem Mäglein<lb/>lehren
+                    so w<subst>
                         <del rend="overwritten"><unclear cert="medium" reason="overwritten">ü</unclear></del>
                         <add place="across">e</add>
                     </subst>rde ich es dir <del rend="strikethrough">nachmelden</del> erzählen.</p>
@@ -317,17 +327,17 @@
                         <add place="above">wo du</add>
                     </subst> ihm Beri<gap extent="1c" reason="illegible"/><unclear cert="medium" reason="illegible">c</unclear>ht von dem <hi
                         rend="latin"><unclear cert="medium" reason="illegible"><persName ref="#p2121" type="bi">Saintrailles</persName></unclear></hi>
-                    abstatetest, und um die<lb/>Stelle seines <hi rend="latin">Secretaires</hi> wieder warbst,<note resp="#janine.katins">Im Druck der
-                            <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der Teilsatz von "und wo du" bis "wieder
-                        warbst".</note> für dich ret<subst>
+                    abstatetest, und um die<lb/>Stelle seines <hi rend="latin">Secretaires</hi> wieder warbst,<note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der Teilsatz von
+                            "und wo du" bis "wieder warbst".</p><p xml:lang="en"/><p xml:lang="fr"/></note> für dich ret<subst>
                         <del rend="overwritten">u</del>
                         <add place="across">o</add>
                     </subst>ur erhalten, <hi rend="latin"><foreign xml:lang="fr">parti<lb/>on ne sais où le <date calendar="french-rev-cal"
                                 when-iso="1803-12-13">21 frimaire</date></foreign></hi>
-                    <note resp="#janine.katins">Übersetzung: "abgeschickt – man weiß nicht von wo – am 21. Frimaire". Der Frimaire bezeichnet den
-                        dritten Monat des Französischen Revolutionskalenders. Das hier genannte Datum ist der <date when-iso="1803-12-13">13. Dezember
-                            1803</date>. Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt der französische
-                        Teil.</note>. da<subst>
+                    <note resp="#janine.katins"><p xml:lang="de">Übersetzung: "abgeschickt – man weiß nicht von wo – am 21. Frimaire". Der Frimaire
+                            bezeichnet den dritten Monat des Französischen Revolutionskalenders. Das hier genannte Datum ist der <date
+                                when-iso="1803-12-13">13. Dezember 1803</date>. Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von
+                                Chamisso</title> fehlt der französische Teil.</p><p xml:lang="en"/><p xml:lang="fr"/></note>. da<subst>
                         <del rend="overwritten">ß</del>
                         <add place="across">s</add>
                     </subst> noch hab ich dir zu melden<lb/>gehabt.</p>
@@ -352,9 +362,10 @@
                     <hi rend="latin"><persName ref="#p2123" type="bi"><choice>
                                 <abbr>Capt:</abbr>
                                 <expan>Capitaine</expan>
-                            </choice></persName></hi> der einmal auf der<lb/>Hauptwacht <hi rend="latin">Neumarck</hi><note resp="#janine.katins">Im
-                        Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht "Hauptwacht am Neuen Markt".</note>
-                    uns sprach, hat mir einige mal eusserst<lb/>freundschaftlich von dir gesprochen, und empfielt sich dir. –</p>
+                            </choice></persName></hi> der einmal auf der<lb/>Hauptwacht <hi rend="latin">Neumarck</hi><note resp="#janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> steht "Hauptwacht am
+                            Neuen Markt".</p><p xml:lang="en"/><p xml:lang="fr"/></note> uns sprach, hat mir einige mal eusserst<lb/>freundschaftlich
+                    von dir gesprochen, und empfielt sich dir. –</p>
                 <p>Wieviel <subst>
                         <del rend="overwritten">m</del>
                         <add place="across">M</add>
@@ -412,16 +423,18 @@
                         type="bi"><subst>
                             <del rend="overwritten">Sc</del>
                             <add place="across">C</add>
-                        </subst>inesen</rs><note resp="#sabine.seifert"><persName ref="#p0239" type="bi">Hitzig</persName> merkt an, dass es sich hier
-                        um <persName ref="#p0344" type="bi">Julius Klaproth</persName> handelt.</note> zu<lb/>geleiten gedenk<subst>
+                        </subst>inesen</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0239" type="bi">Hitzig</persName> merkt an,
+                            dass es sich hier um <persName ref="#p0344" type="bi">Julius Klaproth</persName> handelt.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> zu<lb/>geleiten gedenk<subst>
                         <del rend="overwritten">s</del>
                         <add place="across">t</add>
                     </subst><del rend="strikethrough">t</del>, wenn nach <placeName ref="#l0166" type="bi">Indien</placeName> gereist wird, ist
                     er<lb/>von der Partie, er hat im ganzen sein Plan nicht so Dum̄<lb/>entworfen. die beiden studiren jetzt, <hi rend="latin"
-                        >Samscrittdali</hi>sch<note resp="#janine.katins">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von
-                            Chamisso</title> steht "Sanscrit".</note> zu<lb/>sam̄en, aus Römischen gedrukten grammatiken. <hi rend="latin"><persName
-                            ref="#p0249" type="bi">Varnhagen</persName></hi><lb/> ist in <hi rend="latin"><placeName ref="#l0084" type="bi"
-                            >Hamburg</placeName></hi> mit guten Hausbacken Menschen<del rend="strikethrough">,</del> vorlieb<lb/>nehmend, und zu frieden<subst>
+                        >Samscrittdali</hi>sch<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00277">Leben und Briefe von
+                                Adelbert von Chamisso</title> steht "Sanscrit".</p><p xml:lang="en"/><p xml:lang="fr"/></note> zu<lb/>sam̄en, aus
+                    Römischen gedrukten grammatiken. <hi rend="latin"><persName ref="#p0249" type="bi">Varnhagen</persName></hi><lb/> ist in <hi
+                        rend="latin"><placeName ref="#l0084" type="bi">Hamburg</placeName></hi> mit guten Hausbacken Menschen<del rend="strikethrough"
+                        >,</del> vorlieb<lb/>nehmend, und zu frieden<subst>
                         <del rend="overwritten">,</del>
                         <add place="across">.</add>
                     </subst> Ich habe, seit seiner Abreise 14<lb/>Tage <hi rend="latin">ensuite, Maneuvrirt</hi> und — — geschlafen.<lb/>nur den
@@ -444,14 +457,15 @@
                         <add place="across">n</add>
                     </subst>ter, <foreign xml:lang="grc"><hi rend="greek">Βουγρε</hi></foreign>
                     <lb/>ist. bißt du auch schon <hi rend="underline">so</hi> geliebt worden, haben auch<lb/>Jünglinge deiner begehrt?</p>
-                <p><persName ref="#p0305" type="bi">Ceres</persName> reiset mit dem nächsten ab.<note resp="#sabine.seifert"><persName ref="#p0305"
-                            type="bi">Cérès Duvernay</persName> reist Ende <date when-iso="1804-10">Oktober 1804</date> nach <placeName ref="#l0041"
-                            type="bi">Königsberg</placeName> ab (<rs ref="#w00321" type="bi">Feudel, S. 257</rs>).</note> es bleibt bei dem<lb/>allem
-                    was ich dir sagte, doch ist von jener Posse nichts<lb/>verneres erwähnt worden, und nichts von dem Bilde dem sie<note
-                        resp="#sabine.seifert">Der Schlusssatz ist mit Rotstift vom Herausgeber <persName ref="#p0239" type="bi">Hitzig</persName>
-                        gestrichen. Folglich fehlt diese Passage im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>,
-                        und so auch in <persName ref="#p0261" type="bi">Riegels</persName>
-                        <rs ref="#w00253" type="bi">Edition</rs>.</note></p>
+                <p><persName ref="#p0305" type="bi">Ceres</persName> reiset mit dem nächsten ab.<note resp="#sabine.seifert"><p xml:lang="de"
+                                ><persName ref="#p0305" type="bi">Cérès Duvernay</persName> reist Ende <date when-iso="1804-10">Oktober 1804</date>
+                            nach <placeName ref="#l0041" type="bi">Königsberg</placeName> ab (<rs ref="#w00321" type="bi">Feudel, S. 257</rs>).</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> es bleibt bei dem<lb/>allem was ich dir sagte, doch ist von jener Posse
+                    nichts<lb/>verneres erwähnt worden, und nichts von dem Bilde dem sie<note resp="#sabine.seifert"><p xml:lang="de">Der Schlusssatz
+                            ist mit Rotstift vom Herausgeber <persName ref="#p0239" type="bi">Hitzig</persName> gestrichen. Folglich fehlt diese
+                            Passage im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>, und so auch in <persName
+                                ref="#p0261" type="bi">Riegels</persName>
+                            <rs ref="#w00253" type="bi">Edition</rs>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
             </div>
         </body>
     </text>

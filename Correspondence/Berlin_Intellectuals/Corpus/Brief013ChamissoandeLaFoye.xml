@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -68,8 +69,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye Papers</collection>
@@ -263,8 +270,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-23" who="sophia.zeil">Added missing index-numbers.</change>
             <change when-iso="2015-03-16" who="anna.busch">Change of respStmt. Corrections within the french parts as suggested by Anne
@@ -279,8 +287,8 @@
         <body>
             <div type="transcription">
                 <pb facs="00000051.jpg" n="1"/>
-                <note hand="pencil_2" place="top-margin-left" type="foliation"><hi rend="underline">104</hi></note>
-                <note hand="pencil_1" place="top-margin-right" type="foliation">25</note>
+                <note hand="pencil_2" place="top-margin(left)" type="foliation"><hi rend="underline">104</hi></note>
+                <note hand="pencil_1" place="top-margin(right)" type="foliation">25</note>
                 <p xml:lang="fr"><hi rend="latin">Un coin de terre à cultiver, vent moi cela, mon cher <persName ref="#p0237" type="bi"
                             >Adelbert</persName>, des que tu quittes le Service du <rs ref="#p0281" type="bi"
                         >Roi</rs><!-- oder ist französischer König gemeint? --> pour passer au<lb/>tiens, alors, ah oui<subst>
@@ -293,13 +301,13 @@
                         rappeller les plaisirs de l'age d'or sans les regreter. Ne prends point ceci pour des idées<lb/>romanesques, il est decidé que
                         je ne trouverai le bonheur que sous le chaume, et je me plais à croire qu'il y a une<lb/>telle conformité dans notre manière
                         de voir, quil est impossible que a qui pourroit me rendre heureuse, ne Suffise à<lb/>ta felicité.</hi></p>
-                <note hand="pencil_3" place="margin-right"><date when-iso="1805-07-19"><hi rend="underline"><hi rend=" latin"
+                <note hand="pencil_3" place="margin(right)"><date when-iso="1805-07-19"><hi rend="underline"><hi rend=" latin"
                                 ><!-- latin nicht angezeigt? -->19 Juillet 1805</hi></hi></date></note>
-                <p>also hat sie zu mir geredet, und, <persName ref="#p0237" type="bi">Adelf</persName>,<note resp="#sabine.seifert"><persName
-                            ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem griechischen Wort
-                        für Bruder, "Adelf" (αδελφός), an.</note> ich habe dir diese Worte, diese gehaltschwehren Worte, die mir das<lb/>geschlagene
-                    Herz erfüllen, <del rend="strikethrough">die</del> mir Bangenden einen Weg bezeichnen, und in ihm die Thäler die vor mir
-                    lagen<lb/>sich <subst>
+                <p>also hat sie zu mir geredet, und, <persName ref="#p0237" type="bi">Adelf</persName>,<note resp="#sabine.seifert"><p xml:lang="de"
+                                ><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi">Freund</rs> mit dem
+                            griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p xml:lang="en"/><p xml:lang="fr"/></note> ich habe dir diese
+                    Worte, diese gehaltschwehren Worte, die mir das<lb/>geschlagene Herz erfüllen, <del rend="strikethrough">die</del> mir Bangenden
+                    einen Weg bezeichnen, und in ihm die Thäler die vor mir lagen<lb/>sich <subst>
                         <del rend="strikethrough"><gap extent="2c" reason="strikethrough"/> wie</del>
                         <add place="above">als</add>
                     </subst> Steile Berge erheben mach<subst>
@@ -363,7 +371,7 @@
                         <abbr>2<hi rend="superscript">te</hi></abbr>
                         <expan>zweite</expan>
                     </choice>
-                    <title ref="">Phönix</title> ist<lb/>in der <rs ref="#p0194" type="bi">Göthischen</rs>
+                    <title ref="#">Phönix</title> ist<lb/>in der <rs ref="#p0194" type="bi">Göthischen</rs>
                     <title ref="#w04448">Jenaischen Litteratur Zeitung</title> mit 2 <add place="above">verschiedenen</add> Rezenzionen beachtet
                     worden. aber mit einer solchen<lb/>Bitteren Fülle der Verachtung hab ich nie mit meinen Augen gesehen daß stolze platte
                     Schufte<lb/>behandelt wurden, wie es uns wiederfahren ist. <persName ref="#p0191" type="bi">Friederich Schlegel</persName>
@@ -388,17 +396,17 @@
                     und vertrocknet, nehme du mit dem kargen geschenke dies mal<lb/>fürlieb. – senden muss ich es doch, und wäre es karger noch auf
                     daß du von dem Freunde<lb/>der deiner bedürfet und begehret ein Herzens Sehnsucht Seufzer <add place="above">doch</add> ver
                     nehmest, vielleicht findest<lb/>du einliegend eine kleine Einlage an <persName ref="#p0300" type="bi">Theremin</persName>, schicke
-                    es dann sogleich in die Post.<lb/>einen ausführligen Brief an ihn zu verfertigen, fählet mir alles, Kraft und Zeit,<lb/>
-                    <closer>
-                        <salute>– ich küsse dich Herzensjung</salute><signed rend="align(center)"><hi rend="latin"><persName ref="#p0237" type="bi"
-                                    >Adelbert</persName></hi><lb/><hi rend="grc"><foreign xml:lang="greek"><choice>
-                                        <abbr>ιπ</abbr>
-                                        <expan>XXX</expan>
-                                    </choice></foreign></hi></signed><lb/><dateline>den <date when-iso="1805-07-19">19<hi rend="superscript">ten</hi>
-                                July 1805.</date></dateline></closer></p>
+                    es dann sogleich in die Post.<lb/>einen ausführligen Brief an ihn zu verfertigen, fählet mir alles, Kraft und Zeit,</p>
+                <closer>
+                    <salute>– ich küsse dich Herzensjung</salute><signed rend="align(center)"><hi rend="latin"><persName ref="#p0237" type="bi"
+                                >Adelbert</persName></hi><lb/><hi rend="grc"><foreign xml:lang="greek"><choice>
+                                    <abbr>ιπ</abbr>
+                                    <expan>XXX</expan>
+                                </choice></foreign></hi></signed><lb/><dateline>den <date when-iso="1805-07-19">19<hi rend="superscript">ten</hi> July
+                            1805.</date></dateline></closer>
                 <postscript>
                     <p><date when-iso="1805-08-20">20 Aug</date> —<lb/>avec une lettre pour <persName ref="#p0300" type="bi">theremin</persName>
-                        envoyée le <date when-iso="1805-08-19">19 aout</date> de <placeName ref="" type="bi"
+                        envoyée le <date when-iso="1805-08-19">19 aout</date> de <placeName ref="#" type="bi"
                             >flepy</placeName><!-- Ort?? -->.<lb/><persName ref="#p0300" type="bi">François theremin</persName> Ministre du <hi
                             rend="superscript">St.</hi> Evangile a <placeName ref="#l1103" type="bi">Berlin</placeName> chez <choice>
                             <abbr>M<hi rend="superscript">r</hi></abbr>
@@ -407,27 +415,27 @@
                                 type="bi">Valenton</placeName></hi> Sine devoilé<lb/></p>
                 </postscript>
                 <pb facs="00000053.jpg" n="3"/>
-                <note hand="pencil_1" place="top-margin-right" type="foliation">26</note>
-                <add hand="#pencil_4" place="top-right">114<lb/><hi rend="underline"> 30</hi><lb/>44<lb/><hi rend="underline">38</hi><lb/>4</add>
+                <note hand="pencil_1" place="top-margin(right)" type="foliation">26</note>
+                <note hand="#pencil_4" place="top-right">114<lb/><hi rend="underline"> 30</hi><lb/>44<lb/><hi rend="underline">38</hi><lb/>4</note>
                 <pb facs="00000054.jpg" n="4" xml:id="Brief012ChamissoandeLaFoye-Blatt2v"/>
-                <stamp rend="align(center)">Poststempel: <foreign xml:lang="frz"><hi rend="majuscule latin">
-                            <placeName ref="#l0092" type="bi">PRUSSE</placeName><lb/>PAR <placeName ref="#l0833" type="bi"
-                        >MAASEYCK</placeName></hi></foreign>
-                </stamp>
-                <foreign xml:lang="frz"><hi rend="latin"><address rend="align(center)">
-                            <addrLine>Monsieur</addrLine>
-                            <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de la Foye.</persName></addrLine>
-                            <addrLine>Au <placeName ref="#l0148" type="bi">Vangeux</placeName> à <placeName ref="#l0107" type="bi"
-                                >Caen</placeName>.</addrLine>
-                            <addrLine><choice>
-                                    <abbr>Depart:</abbr>
-                                    <expan>Département:</expan>
-                                </choice></addrLine>
-                            <addrLine><hi rend="underline">du <placeName ref="#l0108" type="bi">Calvados</placeName>.</hi></addrLine>
-                        </address></hi></foreign>
-                <note hand="ink_3" place="center">10</note>
-                <note hand="ink_2" place="center">40</note>
-                <note hand="ink_1" place="upsidedown">von<lb/>ich muß doch</note>
+                <closer><stamp rend="align(center)">Poststempel: <foreign xml:lang="frz"><hi rend="majuscule latin">
+                                <placeName ref="#l0092" type="bi">PRUSSE</placeName><lb/>PAR <placeName ref="#l0833" type="bi"
+                                >MAASEYCK</placeName></hi></foreign>
+                    </stamp>
+                    <foreign xml:lang="frz"><hi rend="latin"><address rend="align(center)">
+                                <addrLine>Monsieur</addrLine>
+                                <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de la Foye.</persName></addrLine>
+                                <addrLine>Au <placeName ref="#l0148" type="bi">Vangeux</placeName> à <placeName ref="#l0107" type="bi"
+                                        >Caen</placeName>.</addrLine>
+                                <addrLine><choice>
+                                        <abbr>Depart:</abbr>
+                                        <expan>Département:</expan>
+                                    </choice></addrLine>
+                                <addrLine><hi rend="underline">du <placeName ref="#l0108" type="bi">Calvados</placeName>.</hi></addrLine>
+                            </address></hi></foreign>
+                    <note hand="ink_3" place="center">10</note>
+                    <note hand="ink_2" place="center">40</note>
+                    <note hand="ink_1" place="upsidedown">von<lb/>ich muß doch</note></closer>
             </div>
         </body>
     </text>

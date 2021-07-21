@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -53,8 +54,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -193,8 +200,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">Notes added and some corrections</change>
         </revisionDesc>
@@ -203,38 +211,41 @@
         <body>
             <div type="transcription">
                 <pb facs="00000055.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">27</note>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">27</note>
                 <note hand="#pencil_2" place="top" type="foliation">109</note>
-                <note hand="#pencil_3" place="margin-left"><date when-iso="1806-02"><hi rend="latin"><foreign xml:lang="fr">fevrier</foreign></hi>
+                <note hand="#pencil_3" place="margin(left)"><date when-iso="1806-02"><hi rend="latin"><foreign xml:lang="fr">fevrier</foreign></hi>
                         1806</date></note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 38. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 38. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p><choice>
                         <unclear cert="medium" reason="illegible">h</unclear>
                         <unclear cert="high" reason="illegible">V</unclear>
-                    </choice>ier Worte nur, nur ein Seelen Kuß meinem <gap extent="one word" reason="damage"/><note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "Bruder".</note><lb/>ich
-                    schreibe ihm nächstens, mag, kann ihm heute in der jezigen<lb/>Gehrung nicht sreiben, es könnens es sollens es werdens<lb/>die
-                    Freunde Thun, in deren Hände ich meine Lose gebe<lb/>Adelf – hier brennen mir die Solen und ich bleibe nicht.<lb/> – Im Traum da
-                    getraumt wird ist die Vereinigung zu<lb/><placeName ref="#l0060" type="bi">Halle</placeName>, – ich schlage ihm <subst>
+                    </choice>ier Worte nur, nur ein Seelen Kuß meinem <gap extent="one word" reason="damage"/><note resp="#beschka.gloy"><p
+                            xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
+                            "Bruder".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>ich schreibe ihm nächstens, mag, kann ihm heute in der
+                    jezigen<lb/>Gehrung nicht sreiben, es könnens es sollens es werdens<lb/>die Freunde Thun, in deren Hände ich meine Lose
+                    gebe<lb/>Adelf – hier brennen mir die Solen und ich bleibe nicht.<lb/> – Im Traum da getraumt wird ist die Vereinigung
+                        zu<lb/><placeName ref="#l0060" type="bi">Halle</placeName>, – ich schlage ihm <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">v</add>
-                    </subst>or dich abzuholen – dich. <note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> fehlt "dich".</note><lb/>daß alles muß in <placeName ref="#l0084" type="bi"
-                        >Hamburg</placeName> zu seiner Reife gedacht<lb/>werden, und rasch dann ausgeführt –.<lb/></p>
+                    </subst>or dich abzuholen – dich. <note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> fehlt "dich".</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>daß
+                    alles muß in <placeName ref="#l0084" type="bi">Hamburg</placeName> zu seiner Reife gedacht<lb/>werden, und rasch dann ausgeführt
+                    –.<lb/></p>
                 <p>also Briefe erhältst du aus <placeName ref="#l0084" type="bi">Hamburg</placeName>, – von mir nur<lb/>den Kuß und die
                     Thränen.<lb/>Adelf ich schlage Wellen wie das klare Berggewässer<lb/>an dem ich wohne, und von dessen Thänen<note
                         resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
                         "Thauen".</note> die Winterlichen<lb/>Wiesen <add place="above">selbst</add> grünen, aber die fröliche Weser ist nahe
-                    die<lb/>ihn empfängt und ruhig frölich<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
-                            Chamisso, Fragments inédits</title> steht "herrlich".</note> dann mit ihm, Schiffe tragend<lb/>zu dem Okeanos<note
-                        resp="#beschka.gloy">In der griechischen Mythologie bezeichnet dies den Gott des Stromes, der das Erdreich umfließt.</note>
+                    die<lb/>ihn empfängt und ruhig frölich<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "herrlich".</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    dann mit ihm, Schiffe tragend<lb/>zu dem Okeanos<note resp="#beschka.gloy"><p xml:lang="de">In der griechischen Mythologie
+                            bezeichnet dies den Gott des Stromes, der das Erdreich umfließt.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <del rend="strikethrough">wallt</del> herniederwallt.</p>
-                <closer><salute rend="align(center)">lebe du wohl göttlicher Jung</salute><lb/>
+                <closer>
+                    <salute rend="align(center)">lebe du wohl göttlicher Jung</salute><lb/>
                     <signed rend="align(right)">Adelbert</signed><dateline><date when-iso="1906-02-17"> 17. Februar 1806.</date></dateline></closer>
-                <lb/>
                 <postscript>
                     <p>das weib wegen des du mich befragst ist im<lb/><placeName ref="#l0096" type="bi">Frankreich</placeName> – ich habe einen Brief
                         von 6 Zeilen von<lb/>ihr erhalten. muß nächstens wieder an sie schreiben.<lb/>ich verstehe sie nicht – aber es ist doch

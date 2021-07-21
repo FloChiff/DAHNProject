@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -285,8 +292,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-11" who="sabine.seifert">Corrected some IDs.</change>
@@ -307,7 +315,7 @@
                 <closer>
                     <salute>— lebe wohl, guter ich lasse <unclear cert="medium" reason="damage">dich</unclear> nun nach <unclear cert="medium"
                             reason="damage">deinem</unclear><lb/>Sohn zu sehen. füg' ich auch hier nichts hinzu so <note hand="#pencil_1"
-                            place="margin-right inline" type="foliation">6</note><lb/>erwarte es doch unter acht Tage.</salute>
+                            place="margin(right) inline" type="foliation">6</note><lb/>erwarte es doch unter acht Tage.</salute>
                     <dateline><hi rend="latin"><choice>
                                 <abbr>d.</abbr>
                                 <expan>den</expan>
@@ -318,13 +326,13 @@
                                 </subst>y. 1804.</date></hi></dateline>
                     <signed rend="align(right)"><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi><lb/><foreign xml:lang="grc"
                                 ><hi rend="greek">τo τ<unclear reason="illegible">ου</unclear> πoλου ασ<unclear reason="illegible"
-                                >τρ</unclear>ον.</hi></foreign><note resp="#sabine.seifert">Übersetzung: "Polarstern". Dies war das Erkennungszeichen
-                            des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und
-                                <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
-                            jungen Dichtern und Gelehrten angehörten.</note></signed></closer>
-                <note hand="#pencil_2" place="align(center)" type="foliation"><hi rend="underline">99</hi></note>
-                <pb facs="00000014.jpg" n="2" xml:id="Brief005ChamissoandeLaFoye-Blatt6v"/>
-                <p>
+                                >τρ</unclear>ον.</hi></foreign>
+                        <note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: "Polarstern". Dies war das Erkennungszeichen des <orgName
+                                    ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und
+                                    <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
+                                jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"/></note></signed>
+                    <note hand="#pencil_2" place="align(center)" type="foliation"><hi rend="underline">99</hi></note>
+                    <pb facs="00000014.jpg" n="2" xml:id="Brief005ChamissoandeLaFoye-Blatt6v"/>
                     <hi rend="latin vertical"><foreign xml:lang="fr"><address>
                                 <addrLine>A Monsieur</addrLine>
                                 <addrLine>Monsieur <persName ref="#p0248" type="bi">Louis de La Foye</persName>
@@ -342,14 +350,15 @@
                             <hi rend="latin majuscule">
                                 <supplied reason="faded"><placeName ref="#l0092" type="bi">PRUSSE</placeName></supplied>
                                 <lb/>PAR <placeName ref="#l0833" type="bi">MAASEYCK</placeName></hi></foreign>
-                    </stamp></p>
+                    </stamp></closer>
                 <note hand="#postman_1" place="across"><hi rend="vertical"><gap extent="2c" reason="illegible"/></hi></note>
                 <note hand="#postman_2" place="across"><hi rend="vertical"><unclear cert="medium" reason="illegible">10</unclear></hi></note>
                 <note hand="#brown_ink_2" place="bottom"><foreign xml:lang="la"><hi rend="latin upsidedown"><choice>
                                 <abbr>Compl.</abbr>
                                 <expan>Complet</expan>
-                            </choice> an<lb/>Explicat</hi></foreign><note resp="#sabine.seifert">Diese lateinische Anmerkung bezieht sich auf das rote
-                        Siegel, dessen Inhalt ergänzt oder erklärt werden soll.</note></note>
+                            </choice> an<lb/>Explicat</hi></foreign><note resp="#sabine.seifert"><p xml:lang="de">Diese lateinische Anmerkung bezieht
+                            sich auf das rote Siegel, dessen Inhalt ergänzt oder erklärt werden soll.</p><p xml:lang="en"/><p xml:lang="fr"
+                    /></note></note>
             </div>
         </body>
     </text>

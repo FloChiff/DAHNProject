@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -204,8 +211,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-22" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-06-30" who="#beschka.gloy">Some corrections and notes added</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">Some minor corrections</change>
@@ -215,23 +223,24 @@
         <body>
             <div type="transcription">
                 <pb facs="00000061.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">30</note>
-                <note hand="pencil_2" place="margin-left" type="foliation"><hi rend="underline">14S</hi>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">30</note>
+                <note hand="pencil_2" place="margin(left)" type="foliation"><hi rend="underline">14S</hi>
                 </note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 42. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 42. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                 <p>(3 zeilen altgriechisch) mir jetzt ein goldenes Büchlein!<lb/> Vier langen Monathe haben die Menschen gezeugert<lb/>und gezeugert,
                     imer wurden Abschiede gegeben, und<lb/>sie zeugerten und zeugerten noch weil sie noch einen<lb/>Zweiten mit mir eingeben<note
                         resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                        "geben" statt "eingeben".</note> wollten, <foreign xml:lang="grc">ελεγχεες</foreign><note resp="#beschka.gloy">Im Druck der
-                            <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der griechische
-                        Ausdruck.</note>! nun<lb/>endlich rücken sie heraus mit der Sprache – und –<lb/>und meinen und des Anderen Abschied werden –
-                    nicht<lb/>bewiliget – und auf die Zeit der Demobil machung<note resp="#beschka.gloy">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "Mobilmachung" statt
-                    "Demobilmachung".</note><lb/>verwiesen, ferner <del rend="strikethrough">sch</del> werden gar seltsam klingende<lb/>Bemerkungen
-                    auf mich geworfen, als wär ich nicht dankbar<lb/><choice>
+                        "geben" statt "eingeben".</note> wollten, <foreign xml:lang="grc">ελεγχεες</foreign>
+                    <note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+                                inédits</title> fehlt der griechische Ausdruck.</p><p xml:lang="en"/><p xml:lang="fr"/></note>! nun<lb/>endlich rücken
+                    sie heraus mit der Sprache – und –<lb/>und meinen und des Anderen Abschied werden – nicht<lb/>bewiliget – und auf die Zeit der
+                    Demobil machung<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> steht "Mobilmachung" statt "Demobilmachung".</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note><lb/>verwiesen, ferner <del rend="strikethrough">sch</del> werden gar seltsam klingende<lb/>Bemerkungen auf mich
+                    geworfen, als wär ich nicht dankbar<lb/><choice>
                         <unclear cert="high" reason="illegible">der</unclear>
                         <unclear cert="medium" reason="illegible">da</unclear>
                     </choice> ich die Wohlthaten meiner Erzihung doch von dem Staate<lb/>genossen, und was weiß ich mehr, – also
@@ -248,17 +257,19 @@
                     Mordgrube<lb/>diese Tage verlassen, nach <placeName ref="#l1103" type="bi">Berlin</placeName> gehen, und vielleicht<lb/>von da
                     gegen die Schweden, – ich sage das alles aber<lb/>nur so, du weißt was von dem Geschwetze zu halten,<lb/>und insonders was ich
                     davon halte.<lb/></p>
-                <p>Du aber<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                            inédits</title> steht "lieber" statt "aber".</note>
+                <p>Du aber<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+                                Fragments inédits</title> steht "lieber" statt "aber".</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     <persName type="bi">adelf</persName>, – was machst du? und – und warum<lb/>schreibt du nicht, wenn du nicht krank nicht todt
                     oder<lb/>gar Soldat bist ist es verzeiglich? betrachte doch wie<lb/>ich dich liebe an dich hänge. und wie du Kum̄er mir<lb/>machen
                     kannst. <persName type="bi">Adelf</persName>! Schreibe doch. du hast<lb/><pb facs="00000062.jpg" n="2"/>ja <add place="above"
                         >da</add> Zeit genuch in deiner verweisten Einsamke<supplied cert="high" reason="damage">it</supplied><lb/>studiere – was es
-                    sei. – Die Medezin und die<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                            Fragments inédits</title> fehlt der Teilsatz "Die Medizin und die...".</note>
+                    sei. – Die Medezin und die<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert
+                                de Chamisso, Fragments inédits</title> fehlt der Teilsatz "Die Medizin und die...".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>
                     <gap extent="one word" reason="damage"/>
-                    <gap extent="one word" reason="damage"/><lb/>Sprache<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> steht "sprich" statt "Sprache".</note> kühn – Ich soll den Schleier <choice>
+                    <gap extent="one word" reason="damage"/><lb/>Sprache<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "sprich" statt "Sprache".</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> kühn – Ich soll den Schleier <choice>
                         <unclear cert="high" reason="illegible">J</unclear>
                         <unclear cert="medium" reason="illegible">I</unclear>
                     </choice>sis dir
@@ -321,24 +332,26 @@
                         <del rend="overwritten">w</del>
                         <add place="across">s</add>
                     </subst>oll bei<lb/>dem grossen Eierkuchen zu <placeName ref="#l0102" type="bi">Ulm</placeName> zugegen<note resp="#beschka.gloy"
-                        >Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt "zugegen".</note>
-                    gewesen sein.<lb/><persName ref="#p0300" type="bi">Theremin</persName> ist in <placeName ref="#l1103" type="bi"
-                    >Berlin</placeName>, und mit aller Freiheit<lb/>bei einem jungen Grafen ehrenvoll<note resp="#beschka.gloy">Im Druck der <title
-                            ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt "ehrenvoll".</note>
+                            ><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt
+                            "zugegen".</p><p xml:lang="en"/><p xml:lang="fr"/></note> gewesen sein.<lb/><persName ref="#p0300" type="bi"
+                        >Theremin</persName> ist in <placeName ref="#l1103" type="bi">Berlin</placeName>, und mit aller Freiheit<lb/>bei einem jungen
+                    Grafen ehrenvoll<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> fehlt "ehrenvoll".</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                     angestellt.<lb/></p>
                 <p>Ich bin von hier wieder nach <placeName type="bi">Rautenberg</placeName> gewesen.<lb/>diese Blüthen der Eglantiers<note
                         resp="#beschka.gloy">Eglantiers sind Heckenrosen (Rosa canina), auch Hunds-Rose genannt.</note> freuten dich und mich,<lb/>und
                     es wird dir willkom̄n sein daß ich dir wieder von ihnen<lb/>rede. – wohl lebte noch mein Angedenken unter ihnen<lb/> und <del
                         rend="strikethrough">mehr noch als eh</del> ich habe mich gefreut mehr noch als ehmals<lb/><note hand="pencil_1"
-                        place="margin-right" type="foliation">31</note>
-                    <pb facs="00000064.jpg" n="4"/>Sie waren traurich um<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> fehlt "um".</note> meinet Willen gewesen daß<lb/>ich nicht, wie ich es
-                    versprochen, geschrieben hatte. ich<lb/>hatte es erst aus Unmut über ünser wesen nicht gethan<lb/>dann weil ich wohl wußte wieder
-                    zu ihnen zu gehen. – wie<lb/>sie mich gewahrten erblaßten sie alle und wollten sinken.<lb/>– du kennst mich und ich kenn dich –
-                    dieses doch goß schmerz<lb/>in meine Freude – die Eine scheint eine Wunde zu haben<lb/>die nicht heilet, und es ängstete mich –
-                    ich redete wieder<lb/>viel, redete noch von meiner Braut, vermied, nahm<lb/>und zeigte innigen Antheil erwiederte nur
-                    Freundschaft.<lb/>– eine Locke Haares war in meiner Schreibtafel<lb/>wie ich sie hier wieder öfnete. – wenn ich kann<lb/>gehe ich
-                    wieder nach <placeName type="bi">Rautenberg</placeName>.<lb/></p>
+                        place="margin(right)" type="foliation">31</note>
+                    <pb facs="00000064.jpg" n="4"/>Sie waren traurich um<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt "um".</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> meinet Willen gewesen daß<lb/>ich nicht, wie ich es versprochen, geschrieben hatte. ich<lb/>hatte es erst aus Unmut
+                    über ünser wesen nicht gethan<lb/>dann weil ich wohl wußte wieder zu ihnen zu gehen. – wie<lb/>sie mich gewahrten erblaßten sie
+                    alle und wollten sinken.<lb/>– du kennst mich und ich kenn dich – dieses doch goß schmerz<lb/>in meine Freude – die Eine scheint
+                    eine Wunde zu haben<lb/>die nicht heilet, und es ängstete mich – ich redete wieder<lb/>viel, redete noch von meiner Braut,
+                    vermied, nahm<lb/>und zeigte innigen Antheil erwiederte nur Freundschaft.<lb/>– eine Locke Haares war in meiner
+                    Schreibtafel<lb/>wie ich sie hier wieder öfnete. – wenn ich kann<lb/>gehe ich wieder nach <placeName type="bi"
+                        >Rautenberg</placeName>.<lb/></p>
                 <p><persName ref="#p0305" type="bi">Ceres</persName> in <placeName ref="#l0044" type="bi">Paris</placeName> – hatte mir ihre
                     umschändliche Adresse<lb/>gegeben, nicht aber ihren Nahmen. Sie rief <add place="above">mich</add> wartete<lb/>mit Schmerzen auf
                     mich sagte mir <del rend="strikethrough">darauf</del>
@@ -357,13 +370,14 @@
                         </choice></persName>: fing an<lb/> – weißt du apropos daß du in wenigen Tagen<lb/>mit uns in <placeName ref="#l0060" type="bi"
                         >Halle</placeName> sein wirst und studieren. da hub<lb/>sich das gespräch an, noch sollte nichts beschlossen<lb/>werden. – nun
                     ging der Mond herrlich auf und<lb/>wir wandelten in seinem Schein. Sie hielten mich<lb/>
-                    <pb facs="00000065.jpg" n="5"/><note hand="pencil_1" place="margin-right" type="foliation">32</note>beiderseits umfaßt. <gap
-                        extent="2 words"/>b<note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                            Fragments inédits</title> steht "ich erhob".</note> meine Stime<lb/>und sprach und häuf<gap extent="2 words"/><note
-                        resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht
-                        "häufte bestreitend".</note>und, wie der Dämon<lb/>selbst, alle seine G<gap extent="2 words"/><note resp="#beschka.gloy">Im
-                        Druck der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "Gründe und".</note>
-                    Scheingründe, und<lb/>meine Stim̄e war stark und stark in meinem<lb/>Munde <del rend="strikethrough">alles</del> was ich <subst>
+                    <pb facs="00000065.jpg" n="5"/><note hand="pencil_1" place="margin(right)" type="foliation">32</note>beiderseits umfaßt. <gap
+                        extent="2 words"/>b<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance d'Adalbert de
+                                Chamisso, Fragments inédits</title> steht "ich erhob".</p><p xml:lang="en"/><p xml:lang="fr"/></note> meine
+                    Stime<lb/>und sprach und häuf<gap extent="2 words"/><note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance
+                            d'Adalbert de Chamisso, Fragments inédits</title> steht "häufte bestreitend".</note>und, wie der Dämon<lb/>selbst, alle
+                    seine G<gap extent="2 words"/><note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253">Correspondance
+                                d'Adalbert de Chamisso, Fragments inédits</title> steht "Gründe und".</p></note> Scheingründe, und<lb/>meine Stim̄e
+                    war stark und stark in meinem<lb/>Munde <del rend="strikethrough">alles</del> was ich <subst>
                         <del rend="strikethrough">sachte</del>
                         <add place="above">sprach.</add>
                     </subst> – sie aber schwiegen.<lb/>und horchten und waren bewegt – endlich gebrach<lb/>mir die Stim̄e, meine Kniehen <subst>
@@ -380,28 +394,28 @@
                         <add place="above">und</add>
                     </subst> corigirt Fäler in ein,<lb/>– andererseits stirbt der Verleger und die Erben<lb/>spielen Bankerot. – nicht nur das <rs
                         ref="#w00258" type="bi">3<hi rend="superscript">te</hi></rs> sondern<lb/>auch das 4<hi rend="superscript">te</hi> müssen
-                        erscheinen.<note resp="#beschka.gloy">Ursprünglich war ein vierter Band des Musenalmanachs geplant, der dann aber nicht mehr
-                        zustande kam.</note> – auch geben<lb/><persName ref="#p0262" type="bi">Neumann</persName> und <persName ref="#p0249" type="bi"
-                        >Varnhagen</persName> ein Band Prosaische<lb/>gemischte Schriften heraus.<note resp="#beschka.gloy">Es handelt sich um den
-                        Band "Erzählungen und Spiele", der 1807 erscheint.</note> da zu hab ich ein<del rend="strikethrough">e</del><lb/>schönes
+                        erscheinen.<note resp="#beschka.gloy"><p xml:lang="de">Ursprünglich war ein vierter Band des Musenalmanachs geplant, der dann
+                            aber nicht mehr zustande kam.</p><p xml:lang="en"/><p xml:lang="fr"/></note> – auch geben<lb/><persName ref="#p0262"
+                        type="bi">Neumann</persName> und <persName ref="#p0249" type="bi">Varnhagen</persName> ein Band Prosaische<lb/>gemischte
+                    Schriften heraus.<note resp="#beschka.gloy"><p xml:lang="de">Es handelt sich um den Band "Erzählungen und Spiele", der 1807
+                            erscheint.</p><p xml:lang="en"/><p xml:lang="fr"/></note> da zu hab ich ein<del rend="strikethrough">e</del><lb/>schönes
                     Märchen gedichtet, woran du deine Freude<lb/>haben sollst. –</p>
                 <closer><foreign rend="align(center)" xml:lang="grc">Χαιςα</foreign><lb/><signed rend="align(right)">Adelbert</signed><dateline><date
                             when-iso="1806-07-10">10 <foreign xml:lang="fr">Juillet</foreign> 1806</date>.<lb/><placeName type="bi"
-                        >Hameln</placeName>.</dateline></closer>
-                <note hand="pencil_2" place="margin-right" type="foliation">106</note>
-                <note hand="pencil_1" place="margin-right" type="foliation">32</note>
-                <pb facs="00000066.jpg" n="6" xml:id="Brief017ChamissoandeLaFoye-Blatt32v"/>
-                <seal>Siegelreste.</seal>
-                <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
-                <address>
-                    <addrLine><persName type="bi">Louis de La Foye</persName></addrLine>
-                    <addrLine><foreign xml:lang="fr">au <placeName ref="#l0148" type="bi">Vaugeux</placeName> à <placeName ref="#l0107" type="bi"
-                                >Caen</placeName>.</foreign></addrLine>
-                    <addrLine><foreign xml:lang="fr"><choice>
-                                <abbr>Dp.<hi rend="superscript">t</hi></abbr>
-                                <expan>Département</expan>
-                            </choice> du <placeName ref="l0108" type="bi">Calvados</placeName></foreign></addrLine>
-                </address>
+                        >Hameln</placeName>.</dateline>
+                    <note hand="pencil_2" place="margin(right)" type="foliation">106</note>
+                    <note hand="pencil_1" place="margin(right)" type="foliation">32</note>
+                    <pb facs="00000066.jpg" n="6" xml:id="Brief017ChamissoandeLaFoye-Blatt32v"/>
+                    <note hand="#postman"><gap extent="one letter" reason="illegible"/></note>
+                    <address>
+                        <addrLine><persName type="bi">Louis de La Foye</persName></addrLine>
+                        <addrLine><foreign xml:lang="fr">au <placeName ref="#l0148" type="bi">Vaugeux</placeName> à <placeName ref="#l0107" type="bi"
+                                    >Caen</placeName>.</foreign></addrLine>
+                        <addrLine><foreign xml:lang="fr"><choice>
+                                    <abbr>Dp.<hi rend="superscript">t</hi></abbr>
+                                    <expan>Département</expan>
+                                </choice> du <placeName ref="l0108" type="bi">Calvados</placeName></foreign></addrLine>
+                    </address></closer>
             </div>
         </body>
     </text>

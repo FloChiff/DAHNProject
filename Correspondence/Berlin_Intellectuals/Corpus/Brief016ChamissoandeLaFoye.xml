@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Deutschland</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Handschriftenabteilung</repository>
                         <collection>Nachlaß de la Foye</collection>
@@ -179,8 +186,9 @@
                 </correspAction>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-05" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2012-06-06" who="#beschka.gloy">Transcription and first encoding</change>
             <change when-iso="2012-07-23" who="#beschka.gloy">Notes added and some corrections</change>
         </revisionDesc>
@@ -189,26 +197,27 @@
         <body>
             <div type="transcription">
                 <pb facs="00000059.jpg" n="1"/>
-                <note hand="#pencil_1" place="margin-right" type="foliation">29</note>
-                <note hand="pencil_2" place="margin-left" type="foliation"><hi rend="underline">1S0</hi></note>
-                <note resp="#beschka.gloy">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                        inédits</title>, Brief 51. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt Eingriffe bezüglich der
-                    Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht gekennzeichneten
-                    Auslassungen.</note>
-                <p>Spät in der Nacht wende ich mich noch zu meinem Adelf,<lb/>nur wenige<note resp="#beschka.gloy">Im Druck der <title ref="#w00253"
-                            >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "um einige" statt "nur wenige".</note> Worte,
-                    teurer Bruder, – ob ich mir schon an die<lb/>Stirne Reibe, so ist mir doch der Kopf schwer und das Herz<lb/>noch nicht heiter. wie
-                    es werden wird steht beim Schicksal,<lb/>der Stein ist geschleudert und ich sehe ihm zu wie er<lb/>auf bergesabhang hinab rollen
-                    wird,</p>
+                <note hand="#pencil_1" place="margin(right)" type="foliation">29</note>
+                <note hand="pencil_2" place="margin(left)" type="foliation"><hi rend="underline">1S0</hi></note>
+                <note resp="#beschka.gloy"><p xml:lang="de">Der Brief liegt gedruckt vor in <title ref="#w00253">Correspondance d'Adalbert de
+                            Chamisso, Fragments inédits</title>, Brief 51. Der Herausgeber <persName ref="#p0261" type="bi">Riegel</persName> nimmt
+                        Eingriffe bezüglich der Groß- und Kleinschreibung, Rechtschreibung und Zeichensetzung vor und druckt den Brief mit nicht
+                        gekennzeichneten Auslassungen.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                <p>Spät in der Nacht wende ich mich noch zu meinem Adelf,<lb/>nur wenige<note resp="#beschka.gloy"><p xml:lang="de">Im Druck der
+                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht "um einige" statt "nur
+                            wenige".</p><p xml:lang="en"/><p xml:lang="fr"/></note> Worte, teurer Bruder, – ob ich mir schon an die<lb/>Stirne Reibe,
+                    so ist mir doch der Kopf schwer und das Herz<lb/>noch nicht heiter. wie es werden wird steht beim Schicksal,<lb/>der Stein ist
+                    geschleudert und ich sehe ihm zu wie er<lb/>auf bergesabhang hinab rollen wird,</p>
                 <p>Die Dinge stehen wahrlich ungefehr also wie <subst>
                         <del rend="strikethrough">es sie</del>
                         <add place="above">es</add>
-                    </subst> dir Verhagen<note resp="#beschka.gloy">Hier ist sehr wahrscheinlich <persName ref="#p0249" type="bi">Karl August
-                            Varnhagen von Ense</persName> gemeint, der auch mit <persName ref="#p0248" type="bi">De La Foye</persName> bekannt
-                        war.</note><lb/>gesagt hat, nur nicht so grell bei mir abgezeichnet. mehr<lb/>Nebel<del rend="strikethrough">n</del>
-                    beschleiert mir die Zukunft, werde was es wolle,<lb/>nun ist es ausser mir und gehört seiner eigenen Nothwendigkeit<lb/>– <gap
-                        extent="one word" reason="illegible"/> Adelf ich werde so Gott will dich bald, sehr<lb/>bald wiedersehen, deiner <del
-                        rend="strikethorugh">oft</del> vielleicht sehr bedürftig sein,<lb/>und Herz an Herz fest umschlungen werden wir <subst>
+                    </subst> dir Verhagen<note resp="#beschka.gloy"><p xml:lang="de">Hier ist sehr wahrscheinlich <persName ref="#p0249" type="bi"
+                                >Karl August Varnhagen von Ense</persName> gemeint, der auch mit <persName ref="#p0248" type="bi">De La
+                                Foye</persName> bekannt war.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>gesagt hat, nur nicht so grell bei mir
+                    abgezeichnet. mehr<lb/>Nebel<del rend="strikethrough">n</del> beschleiert mir die Zukunft, werde was es wolle,<lb/>nun ist es
+                    ausser mir und gehört seiner eigenen Nothwendigkeit<lb/>– <gap extent="one word" reason="illegible"/> Adelf ich werde so Gott will
+                    dich bald, sehr<lb/>bald wiedersehen, deiner <del rend="strikethorugh">oft</del> vielleicht sehr bedürftig sein,<lb/>und Herz an
+                    Herz fest umschlungen werden wir <subst>
                         <del rend="overwritten">f</del>
                         <add place="across">v</add>
                     </subst>ielleicht<lb/>manche Thräne weinen, und wir werden uns ausreden<lb/>über diese<subst>
@@ -233,11 +242,14 @@
                         type="bi">halle</placeName> kom̄en stehet<lb/>zu erwarten, zu <subst>
                         <del rend="overwritten">v</del>
                         <add place="across">f</add>
-                    </subst>ördesst muß ich nun bald das<lb/><del rend="strikethrough">dortige</del><add place="above">Hallische</add> Wesen in
-                    augenschein nehmen, und dann<lb/>hinüber nach der Heimath, vielleicht zu Krieg und<lb/>Kampf, – fliesse denn Herzensblut wenn <gap
-                        extent="one word" reason="damage"/><lb/>verhängt ist. –</p>
-                <closer><signed rend="align(center)">Adelf</signed><note resp="#beschka.gloy">Im Druck der <title ref="#w00253">Correspondance
-                            d'Adalbert de Chamisso, Fragments inédits</title> fehlt die Signatur "Adelf".</note></closer>
+                    </subst>ördesst muß ich nun bald das<lb/><subst>
+                        <del rend="strikethrough">dortige</del>
+                        <add place="above">Hallische</add>
+                    </subst> Wesen in augenschein nehmen, und dann<lb/>hinüber nach der Heimath, vielleicht zu Krieg und<lb/>Kampf, – fliesse denn
+                    Herzensblut wenn <gap extent="one word" reason="damage"/><lb/>verhängt ist. –</p>
+                <closer><signed rend="align(center)">Adelf</signed><note resp="#beschka.gloy"><p xml:lang="de">Im Druck der <title ref="#w00253"
+                                >Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt die Signatur "Adelf".</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note></closer>
                 <postscript>
                     <p>in <placeName ref="#l0044" type="bi">Paris</placeName> muß ich auch <orgName type="bi">Freimaurer</orgName> werden</p>
                 </postscript>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -72,8 +73,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
                         <repository>Manuscripts section</repository>
                         <collection>De La Foye papers</collection>
@@ -241,8 +248,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
             <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
             <change when-iso="2013-12-09" who="sabine.seifert">Corrected two typos.</change>
@@ -257,11 +265,11 @@
         <body>
             <div type="transcription">
                 <pb facs="00000015.jpg" n="1"/>
-                <note hand="#red_hand" place="top-margin-left inline"><gap reason="illegible"/></note>
+                <note hand="#red_hand" place="top-margin(left) inline"><gap reason="illegible"/></note>
                 <lb/>
-                <note hand="#pencil_2" place="top-margin-left inline">1804</note>
-                <note hand="#pencil_2" place="top-margin-left inline" type="foliation">I</note>
-                <note hand="#brown_ink" place="top-margin-right inline"><placeName ref="#l1103" type="bi">Berlin</placeName>
+                <note hand="#pencil_2" place="top-margin(left) inline">1804</note>
+                <note hand="#pencil_2" place="top-margin(left) inline" type="foliation">I</note>
+                <note hand="#brown_ink" place="top-margin(right) inline"><placeName ref="#l1103" type="bi">Berlin</placeName>
                     <choice>
                         <abbr>d.</abbr>
                         <expan>den</expan>
@@ -292,25 +300,26 @@
                         <add place="across">M</add>
                     </subst>al mit dem Schicksale<lb/>recht wild zu kämpfen, teusche dich nicht, du hast auch schon<lb/>Landrekruten exerziert,
                     kämpften die recht wild mit<lb/>dem Schiksale. Du scheinst deinen alten Dienst aufgeben<lb/>zu wollen. <hi rend="underline"
-                        >wollen</hi><note resp="janine.katins">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>
-                        fehlt das zweite unterstrichene "wollen".</note> es sei denn, eine Entschliesung,<lb/>eine Handlung ist immer gut und loblig,
-                    im̄er ein<lb/>Schritt, und nur das ekle weilen ist Todt. aber, guter,<lb/>ich, dein Freund, ermahne, beschwöre dich durch die
-                    ehrliche<lb/>Pforte hinaus zu wandeln, <subst>
+                        >wollen</hi><note resp="janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von
+                                Chamisso</title> fehlt das zweite unterstrichene "wollen".</p><p xml:lang="en"/><p xml:lang="fr"/></note> es sei denn,
+                    eine Entschliesung,<lb/>eine Handlung ist immer gut und loblig, im̄er ein<lb/>Schritt, und nur das ekle weilen ist Todt. aber,
+                    guter,<lb/>ich, dein Freund, ermahne, beschwöre dich durch die ehrliche<lb/>Pforte hinaus zu wandeln, <subst>
                         <del rend="overwritten">d</del>
                         <add place="across">a</add>
                     </subst>uf daß nicht die Gemeinheit<lb/>ein Laut des Tadels über dich erheben dürfe. fodere bei Zeiten<lb/>deinen ehrlichen
-                    Abschied, und bleibe nicht, wie schon einmal,<lb/>über Uhrlaub.<note resp="janine.katins">Auf Empfehlung eines polnischen Adeligen
-                        aus <placeName ref="#l0853" type="bi">Czarnikau</placeName> in <placeName ref="#l0854" type="bi">Pomerellen</placeName>, bei
-                        dem sich die Familie de La Foye gegen <date notAfter-iso="1800-02" notBefore-iso="1799-10">Ende 1799/Beginn 1800</date>
-                        einfand, konnte <persName ref="#p0248" type="bi">Louis de La Foye</persName> der Preußischen Armee als Junker beitreten. De La
-                        Foye wurde in das Infanterieregiment 23 des Generals <persName ref="#p0274" type="bi">von Winning</persName> eingegliedert,
-                        das in <placeName ref="#l1103" type="bi">Berlin</placeName> stationiert war. <placeName ref="#p0237" type="bi"
-                            >Chamissos</placeName> Anspielung auf de La Foyes unrechtmäßiges Fernbleiben über den Urlaub hinaus rekurriert darauf,
-                        dass die Familie de La Foyes <date when-iso="1801">1801</date> die Erlaubnis erhielt, nach <placeName ref="#l0096" type="bi"
-                            >Frankreich</placeName> zurückkehren zu dürfen. De La Foye beantragte hierfür eine Beurlaubung, die er auf vier Monate
-                        ausdehnte. Im <date when-iso="1804-03/05">Frühjahr 1804</date> erhielt er die Nachricht vom Tode seines <persName ref="#p2115"
-                            type="bi">Vaters</persName> und entschied sich, nach Frankreich zurückzukehren, um fortan seine <persName ref="#p0304"
-                            type="bi">Mutter</persName> zu unterstützen.</note> keine Reue – das sind wir ein<subst>
+                    Abschied, und bleibe nicht, wie schon einmal,<lb/>über Uhrlaub.<note resp="janine.katins"><p xml:lang="de">Auf Empfehlung eines
+                            polnischen Adeligen aus <placeName ref="#l0853" type="bi">Czarnikau</placeName> in <placeName ref="#l0854" type="bi"
+                                >Pomerellen</placeName>, bei dem sich die Familie de La Foye gegen <date notAfter-iso="1800-02"
+                                notBefore-iso="1799-10">Ende 1799/Beginn 1800</date> einfand, konnte <persName ref="#p0248" type="bi">Louis de La
+                                Foye</persName> der Preußischen Armee als Junker beitreten. De La Foye wurde in das Infanterieregiment 23 des Generals
+                                <persName ref="#p0274" type="bi">von Winning</persName> eingegliedert, das in <placeName ref="#l1103" type="bi"
+                                >Berlin</placeName> stationiert war. <placeName ref="#p0237" type="bi">Chamissos</placeName> Anspielung auf de La
+                            Foyes unrechtmäßiges Fernbleiben über den Urlaub hinaus rekurriert darauf, dass die Familie de La Foyes <date
+                                when-iso="1801">1801</date> die Erlaubnis erhielt, nach <placeName ref="#l0096" type="bi">Frankreich</placeName>
+                            zurückkehren zu dürfen. De La Foye beantragte hierfür eine Beurlaubung, die er auf vier Monate ausdehnte. Im <date
+                                when-iso="1804-03/05">Frühjahr 1804</date> erhielt er die Nachricht vom Tode seines <persName ref="#p2115" type="bi"
+                                >Vaters</persName> und entschied sich, nach Frankreich zurückzukehren, um fortan seine <persName ref="#p0304"
+                                type="bi">Mutter</persName> zu unterstützen.</p><p xml:lang="en"/><p xml:lang="fr"/></note> keine Reue – das sind wir ein<subst>
                         <del rend="overwritten">f</del>
                         <add place="across">v</add>
                     </subst>erstanden<lb/>aber bedenke, und erwäge alles wohl eher du handelst,<lb/>auch keine falsche scham auf das einmal gedachte
@@ -323,7 +332,7 @@
                             <expan>tens</expan>
                         </choice></hi> die Hälfte meines Bettes<lb/>(so lang ich unverheiratet bin) meines Zim̄ers, meines Lichtes,<lb/>meiner
                     Heizung. — 2 auch wenn es sein soll die kleinere<lb/>Hälfte meines täglichen Brotes da ich den grosseren <hi rend="latin"
-                        >Apetit</hi><lb/><note hand="#pencil_1" place="bottom-margin-right" type="foliation">7</note><pb facs="00000016.jpg" n="2"
+                        >Apetit</hi><lb/><note hand="#pencil_1" place="bottom-margin(right)" type="foliation">7</note><pb facs="00000016.jpg" n="2"
                     />habe, die Pfeife rechnet sich natürlich <del rend="strikethrough">da</del>zu<add place="inline">m</add>
                     <add place="above">Brote</add>. 3 tens<lb/>auf einige französche Stunden, allen Vermuten nach<lb/>schon im 1.<hi
                         rend="superscript">ten</hi> oder doch im 2<hi rend="superscript">ten</hi> Monate, und <del rend="strikethrough"
@@ -362,10 +371,11 @@
                             </choice> 24</foreign></hi>. auch will ich ihm dort deine<lb/><hi rend="latin">Adresse</hi> schicken, er gab vor dir schon
                     einige<lb/>mal geschrieben zu haben. daß der gute jung mir<lb/>meine <hi rend="latin"><foreign xml:lang="fr"
                         >Picalions</foreign></hi>
-                    <note resp="janine.katins">Der Schreibung nach zu urteilen, ist hier der französische Begriff „<foreign xml:lang="fr"
-                            >picaillons</foreign>“ gemeint, der eine umgangssprachliche Wendung für „Geld“ ist.</note> mich wieder zu senden könnte
-                    hat mich<lb/>zu den deinen gewannt.<note resp="janine.katins">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von
-                            Chamisso</title> fehlt dieser Satz.</note></p>
+                    <note resp="janine.katins"><p xml:lang="de">Der Schreibung nach zu urteilen, ist hier der französische Begriff „<foreign
+                                xml:lang="fr">picaillons</foreign>“ gemeint, der eine umgangssprachliche Wendung für „Geld“ ist.</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> mich wieder zu senden könnte hat mich<lb/>zu den deinen gewannt.<note resp="janine.katins"><p
+                            xml:lang="de">Im Druck der <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title> fehlt dieser
+                            Satz.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p rend="nolb">Ich will nicht vergessen dir zu sagen daß <hi rend="latin"><persName ref="#p2116" type="bi">Tin Tin</persName></hi>
                         und<lb/><hi rend="latin"><persName ref="#p2117" type="bi">Witztum</persName></hi> sich dir wirklich freundschaftlich
                     empfehlen<lb/>lassen, <add place="above">auch <persName ref="#p2118" type="bi">Gibon</persName></add> es sind doch gute leute und
@@ -377,19 +387,20 @@
                 <closer>
                     <salute>leb' wohl, sollt ich dir dies mal nicht<lb/>langer schreiben so erhälst du nächstens einen<lb/>sehr langen B<supplied
                             reason="wax">ri</supplied>efen von mir.<lb/><hi rend="latin"><persName ref="#p2119" type="bi">Schirstedt</persName></hi>
-                        hat ein <hi rend="latin">Regiment</hi>.<note resp="#sabine.seifert">Seit <date when-iso="1804">1804</date> befehligte
-                                <persName ref="#p2119" type="bi">Schirstedt</persName> das Infanterieregiment Nr. 33.</note><lb/>
+                        hat ein <hi rend="latin">Regiment</hi>.<note resp="#sabine.seifert"><p xml:lang="de">Seit <date when-iso="1804">1804</date>
+                                befehligte <persName ref="#p2119" type="bi">Schirstedt</persName> das Infanterieregiment Nr. 33.</p><p xml:lang="en"
+                                /><p xml:lang="fr"/></note><lb/>
                         <foreign xml:lang="grc"><hi rend="greek"><choice>
                                     <abbr>τ τ π α.</abbr>
                                     <expan>τὸ του πόλοῦ ἄστρον</expan>
-                                </choice></hi></foreign><note resp="#sabine.seifert">Das Kürzel steht für <foreign xml:lang="grc">τò τоυ πόλου
-                                αστρον</foreign> ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi"
-                                >Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248"
-                                type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und
-                            Gelehrten angehörten.</note></salute>
-                    <dateline rend="align(center)">den <hi rend="latin"><date when-iso="1804-08-15">15. August 1804</date></hi></dateline><signed
-                        rend="align(right)"><hi rend="latin">Adelbert</hi></signed><placeName ref="#l1103" type="bi"><hi rend="align(center) latin"
-                            >Berlin</hi></placeName></closer>
+                                </choice></hi></foreign><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel steht für <foreign xml:lang="grc">τò
+                                    τоυ πόλου αστρον</foreign> ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi"
+                                    >Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248"
+                                    type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen jungen Dichtern und
+                                Gelehrten angehörten.</p><p xml:lang="en"/><p xml:lang="fr"/></note></salute>
+                    <dateline rend="align(center)">den <hi rend="latin"><date when-iso="1804-08-15">15. August 1804</date></hi><lb/><placeName
+                            ref="#l1103" type="bi"><hi rend="align(center) latin">Berlin</hi></placeName></dateline>
+                    <signed rend="align(right)"><hi rend="latin">Adelbert</hi></signed></closer>
             </div>
         </body>
     </text>
