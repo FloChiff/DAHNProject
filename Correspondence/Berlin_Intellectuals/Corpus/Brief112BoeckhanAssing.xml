@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -50,8 +51,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Poland</country>
-                        <settlement>Kraków</settlement>
+                        <location>
+                            <address>
+                                <street>Gołębia 24</street>
+                                <postCode>31-007</postCode>
+                                <settlement>Kraków</settlement>
+                                <country key="PL">Poland</country>
+                            </address>
+                        </location>
                         <institution ref="#uni.krakau">Jagiellonian University Kraków</institution>
                         <repository>University library</repository>
                         <collection>Varnhagen papers</collection>
@@ -189,8 +196,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2014-06-25" who="#sabine.seifert">Reworked respStmt according to new structure.</change>
             <change when-iso="2014-02-20" who="#sabine.seifert">Added some IDs.</change>
             <change when-iso="2014-02-08" who="#sabine.seifert">Encoding of metadata, transcription and annotation.</change>
@@ -200,24 +208,27 @@
         <body>
             <div type="transcription">
                 <pb facs="krakau_boeckh_varnhagen_16.jpg" n="1"/>
-                <note hand="#brown_hand" place="inline"><hi rend="underline"><persName ref="#p0178" type="bi">August Böckh</persName></hi>. <placeName
-                        ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1859-04-16">16. April 1859.</date></note>
-                <lb/>
-                <lb/>
-                <opener rend="align(center)">Verehrtestes <rs ref="#p1894" type="bi">Fräulein</rs><note resp="#sabine.seifert"><persName ref="#p1894"
-                            type="bi">Ludmilla Assing</persName> ist die Nichte von <persName ref="#p0249" type="bi">Varnhagen</persName>. Sie erbte
-                        nach dessen Tod die Handschriftensammlung und gab <persName ref="#p0249" type="bi">Varnhagens</persName>
-                        <title ref="#w03318">Tagebücher</title> sowie Briefe <persName ref="#p1482" type="bi">Rahel Varnhagens</persName> und
-                            <persName ref="#p0276" type="bi">Alexander von Humboldts</persName> heraus.</note>!</opener>
+                <opener><signed><hi rend="underline"><add hand="#brown_hand"><persName ref="#p0178" type="bi">August
+                        Böckh</persName></add></hi>.</signed>
+                    <dateline><add hand="#brown_hand"><placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1859-04-16">16. April
+                                1859.</date></add></dateline>
+                    <salute rend="align(center)">Verehrtestes <rs ref="#p1894" type="bi">Fräulein</rs><note resp="#sabine.seifert"><p xml:lang="de"
+                                    ><persName ref="#p1894" type="bi">Ludmilla Assing</persName> ist die Nichte von <persName ref="#p0249" type="bi"
+                                    >Varnhagen</persName>. Sie erbte nach dessen Tod die Handschriftensammlung und gab <persName ref="#p0249"
+                                    type="bi">Varnhagens</persName>
+                                <title ref="#w03318">Tagebücher</title> sowie Briefe <persName ref="#p1482" type="bi">Rahel Varnhagens</persName> und
+                                    <persName ref="#p0276" type="bi">Alexander von Humboldts</persName> heraus.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note>!</salute></opener>
                 <lb rend="both"/>
                 <p>Ein nicht unbedeutendes Unwohlseÿn nöthigt mich das Zimmer<lb/>zu hüten und beraubt mich des Vergnügens Ihnen persönlich<lb/>meine
                     Aufwartung zu machen, um Ihnen für das gütige Ge<lb break="no"/>schenck zu danken, welches Ihr verewigter <rs ref="#p0249"
-                        type="bi">Oheim</rs><note resp="#sabine.seifert"><persName ref="#p0249" type="bi">Varnhagen</persName> starb am <date
-                            when-iso="1858-10-10">10. Oktober 1858</date>.</note> mir zuge<lb break="no"/>dacht hatte. Der freundlichen und
-                    nachsichtigen Beurtheilung meiner<lb/>kleinen Leistungen, die er mir öfter bewiesen, hat er auch in<lb/>einem <rs ref="#w04307"
-                        type="bi">Aufsatze</rs> dieses <rs ref="#w04306" type="bi">Bandes</rs> freien Lauf gelassen. Gewiß<lb/>gehöre ich zu seinen
-                    aufrichtigsten Verehrern. Indem ich mir vor<lb break="no"/>behalte nach erfolgter Wiederherstellung Ihnen mich persönlich vor<lb
-                        break="no"/>zustellen, bitte ich diesen vorläufigen Dank wohlwollend auf<lb break="no"/>nehmen zu wollen.</p>
+                        type="bi">Oheim</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0249" type="bi">Varnhagen</persName> starb
+                            am <date when-iso="1858-10-10">10. Oktober 1858</date>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> mir zuge<lb
+                        break="no"/>dacht hatte. Der freundlichen und nachsichtigen Beurtheilung meiner<lb/>kleinen Leistungen, die er mir öfter
+                    bewiesen, hat er auch in<lb/>einem <rs ref="#w04307" type="bi">Aufsatze</rs> dieses <rs ref="#w04306" type="bi">Bandes</rs> freien
+                    Lauf gelassen. Gewiß<lb/>gehöre ich zu seinen aufrichtigsten Verehrern. Indem ich mir vor<lb break="no"/>behalte nach erfolgter
+                    Wiederherstellung Ihnen mich persönlich vor<lb break="no"/>zustellen, bitte ich diesen vorläufigen Dank wohlwollend auf<lb
+                        break="no"/>nehmen zu wollen.</p>
                 <closer>
                     <salute rend="align(right)">Verehrungsvoll und ergebenst</salute>
                     <milestone rend="vertical-rule align(right)" unit="none"/>
@@ -231,19 +242,18 @@
                     <signed>
                         <hi rend="latin align(right)"><persName ref="p0178" type="bi">Böckh</persName>.</hi>
                     </signed>
-                </closer>
-                <pb facs="krakau_boeckh_varnhagen_17.jpg" n="2"/>
-                <p><hi rend="latin"><address>
+                    <pb facs="krakau_boeckh_varnhagen_17.jpg" n="2"/>
+                    <hi rend="latin"><address>
                             <addrLine rend="align(center)">An</addrLine>
                             <addrLine rend="align(center)">Fräulein <persName ref="#p1894" type="bi">Ludmilla Assing</persName></addrLine>
                             <addrLine rend="align(right)"><choice>
                                     <abbr>Potsdam. Str.</abbr>
                                     <expan>Potsdamer Straße</expan>
                                 </choice><lb/>131.</addrLine>
-                        </address></hi></p>
-                <pb facs="krakau_boeckh_varnhagen_18.jpg" n="3"/>
-                <stamp rend="align(right)">Bibliotheksstempel [<hi rend="majuscule">STAATSBIBLIOTHEK <placeName ref="#l1103" type="bi"
-                            >BERLIN</placeName></hi>]</stamp>
+                        </address></hi>
+                    <pb facs="krakau_boeckh_varnhagen_18.jpg" n="3"/>
+                    <stamp rend="align(right)">Bibliotheksstempel [<hi rend="majuscule">STAATSBIBLIOTHEK <placeName ref="#l1103" type="bi"
+                                >BERLIN</placeName></hi>]</stamp></closer>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -51,8 +52,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -228,8 +235,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief008BoeckhanInnenministerium.xml to
                 Brief008Boeckh and updated content of element correspContext.</change>
             <change when-iso="2016-01-07" who="#sabine.seifert">Publication of letter in digital edition.</change>
@@ -240,14 +248,17 @@
         <body>
             <div type="transcription">
                 <pb facs="00000302b.jpg" n="1"/>
-                <add hand="black_ink" place="margin-left">Gelesen<lb/><signed><gap extent="one_word" reason="illegible"/></signed><lb/><date
-                        when-iso="1823-01-28">28/1</date><lb/><choice>
+                <opener><add hand="black_ink" place="margin(left)">Gelesen</add><lb/>
+                    <signed rend="margin(left)"><gap extent="one_word" reason="illegible"/></signed><lb/>
+                    <dateline rend="margin(left)"><date when-iso="1823-01-28">28/1</date></dateline></opener>
+                <lb/>
+                <note hand="#black_ink" place="margin(left)"><choice>
                         <abbr>No.</abbr>
                         <expan>Nummer</expan>
-                    </choice> 28.</add>
-                <note place="margin-right" type="foliation">
+                    </choice> 28.</note>
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">167</seg>
+                        <del rend="overwritten"><add hand="#pencil">167</add>
                         </del>
                         <add place="across">167</add>
                     </subst>
@@ -267,8 +278,8 @@
                     Abhandlungen, für deren Zweckmäßigkeit übrigens<lb/>die bereits bei andern philologischen Seminarien im <rs ref="#l0092" type="bi"
                         >Staate</rs><lb/>gemachte Erfahrung spricht, auch bei dem hiesigen <orgName ref="#g0079" type="bi"
                         >philologischen<lb/>Seminar</orgName> in Anwendung zu bringen für nöthig erachten werden.</p>
-                <closer><hi rend="align(center)"><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1823-01-18"
-                                    >18t<hi rend="superscript underline">en</hi> Januar 1823.</date></dateline></hi><lb/>
+                <closer><dateline rend="align(center)"><placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1823-01-18">18t<hi
+                                rend="superscript underline">en</hi> Januar 1823.</date></dateline><lb/>
                     <signed><orgName ref="#g0064" type="bi">Ministerium der Geistlichen, Unterrichts<pc>=</pc> und
                             Medizinal<pc>=</pc>Angelegenheiten</orgName>.<lb/><add hand="#brown_ink" rend="align(center)"><persName ref="#p0680"
                                 type="bi">Altenstein</persName></add></signed><lb/><lb/><lb/>
@@ -279,11 +290,11 @@
                                     rend="latin">Boeckh</hi></persName></addrLine>
                         <addrLine>hieselbst.</addrLine>
                     </address></closer>
-                <add hand="#brown_ink_2" place="margin-left">19,155.</add>
-                <add hand="#brown_ink_3" place="margin-right"><choice>
+                <note hand="#brown_ink_2" place="margin(left)">19,155.</note>
+                <note hand="#brown_ink_3" place="margin(right)"><choice>
                         <abbr>R. B.</abbr>
                         <expan>R. B.</expan>
-                    </choice></add>
+                    </choice></note>
             </div>
         </body>
     </text>

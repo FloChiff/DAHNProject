@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -58,8 +59,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -201,8 +208,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief004BoeckhanInnenministerium.xml to
                 Brief004Boeckh and updated content of element correspContext.</change>
@@ -237,9 +245,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000062b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">37</seg>
+                        <del rend="overwritten"><add hand="#pencil">37</add>
                         </del>
                         <add place="across">37</add>
                     </subst>
@@ -251,9 +259,10 @@
                         </choice> öffentlichen Unterricht</orgName> im<lb/><orgName ref="#g0068" type="bi">Ministerium des Innern</orgName> giebt sich
                     der Unterzeichnete die Ehre den durch §. 13. des<lb/><ref
                         target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement">Reglements</ref><note
-                        resp="#sabine.seifert">Die Statuten des Seminars wurden von <persName ref="#p0239" type="bi">Hitzig</persName> im <title
-                            ref="#w00383">Berliner Universitätskalender 1813</title>, S. 24–28, veröffentlicht.</note> für das <orgName ref="#g0079"
-                        type="bi">philologische Seminar</orgName> verordneten Jahresbericht hierdurch<lb/>einzureichen.</p>
+                        resp="#sabine.seifert"><p xml:lang="de">Die Statuten des Seminars wurden von <persName ref="#p0239" type="bi"
+                                >Hitzig</persName> im <title ref="#w00383">Berliner Universitätskalender 1813</title>, S. 24–28, veröffentlicht.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> für das <orgName ref="#g0079" type="bi">philologische Seminar</orgName>
+                    verordneten Jahresbericht hierdurch<lb/>einzureichen.</p>
                 <p>Im <date when-iso="1813-10/1814-02">Winterhalbeniahre 1813 - 1814.</date> bestand das <orgName ref="#g0079" type="bi">philologische
                         Seminar</orgName> nur<lb/>aus folgenden drei ordentlichen Mitgliedern,<list>
                         <lb/>
@@ -283,10 +292,11 @@
                     veranlasste.</p>
                 <p><label>1)</label> Zu den <hi rend="underline">Interpretationsübungen</hi> hatte der <rs ref="#p0178" type="bi">Director</rs> auf
                     besonderes Verlangen der <orgName ref="#g0037" type="bi">Mit<lb break="no"/>glieder</orgName> einige <title ref="#w00371"
-                        >Oden</title> des <persName ref="#p0176" type="bi">Pindar</persName> gewählt,<note resp="#sabine.seifert">Im
-                        Vorlesungsverzeichnis ursprünglich angekündigt waren "einige Stücke des <persName ref="#p0034" type="bi">Platon</persName>"
-                            (<persName ref="#p2718" type="bi">Virmond</persName> (2011): <title ref="#w04440">Vorlesungen</title>, S. 78).</note> und
-                    es wurden in wöchentlich zwei Stunden<lb/><hi rend="latin"><title ref="#w03296"><choice>
+                        >Oden</title> des <persName ref="#p0176" type="bi">Pindar</persName> gewählt,<note resp="#sabine.seifert"><p xml:lang="de">Im
+                            Vorlesungsverzeichnis ursprünglich angekündigt waren "einige Stücke des <persName ref="#p0034" type="bi"
+                            >Platon</persName>" (<persName ref="#p2718" type="bi">Virmond</persName> (2011): <title ref="#w04440">Vorlesungen</title>,
+                            S. 78).</p><p xml:lang="en"/><p xml:lang="fr"/></note> und es wurden in wöchentlich zwei Stunden<lb/><hi rend="latin"
+                            ><title ref="#w03296"><choice>
                                 <abbr>Nem.</abbr>
                                 <expan>Nemea</expan>
                             </choice></title></hi> IX. XI. <hi rend="latin"><title ref="#w03297"><choice>
@@ -313,41 +323,43 @@
                     Mitgliedes aufgenommen<lb/>war. Die Titel derselben sind folgende:<lb rend="both"/><list>
                         <label>I.</label>
                         <item> Von <persName ref="#p0654" type="bi">Wernicke</persName>: <hi rend="latin"><foreign xml:lang="la"><title ref="#w04425"
-                                        >Libellus Emendationum in poetas Graecos.</title></foreign></hi><note resp="#sabine.seifert">Übersetzung:
-                                Kleine Schrift der Emendationen bei griechischen Dichtern.</note></item>
+                                        >Libellus Emendationum in poetas Graecos.</title></foreign></hi><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Kleine Schrift der Emendationen bei griechischen Dichtern.</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note></item>
                         <lb/>
                         <label>II.</label>
                         <item>Von <persName ref="#p0662" type="bi">Fichte</persName>: <hi rend="latin"><foreign xml:lang="la"><title ref="#w04426"
                                         >Dissertatio geographica de erroribus <persName ref="#p2588" type="bi"><choice>
                                                 <abbr>Ius</abbr>
                                                 <expan>Iustini</expan>
-                                            </choice></persName>. Pars I.</title></foreign></hi><note resp="#sabine.seifert">Übersetzung:
-                                Geographische Erörterung über Irrtümer des <persName ref="#p2588" type="bi">Iustinus</persName>, Teil 1.</note>
+                                            </choice></persName>. Pars I.</title></foreign></hi><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Geographische Erörterung über Irrtümer des <persName ref="#p2588" type="bi">Iustinus</persName>,
+                                    Teil 1.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                         </item>
                         <lb/>
                         <label>III.</label>
                         <item>Von <persName ref="#p0665" type="bi">Schröner</persName>: <hi rend="latin"><foreign xml:lang="la"><title ref="#w04427"
                                         >Primum chori, qui in <persName ref="#p0353" type="bi">Aeschÿli</persName>
                                         <title ref="#w00446">Agamemnone</title> adest,<lb/>canticum in germana metra restitutum. Accedunt critices
-                                            quae<lb break="no"/>dam pericula.</title></foreign></hi><note resp="#sabine.seifert">Übersetzung: Der
-                                erste Gesang des Chors in <persName ref="#p0353" type="bi">Aischylos</persName>’ <title ref="#w00446"
-                                    >Agamemnon</title> im richtigen Versmaß wiedergegeben. Kritiken begleiten diese
-                                Proben.<!--Übersetzung überprüfen!-->
-                            </note>
+                                            quae<lb break="no"/>dam pericula.</title></foreign></hi><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Der erste Gesang des Chors in <persName ref="#p0353" type="bi">Aischylos</persName>’ <title
+                                        ref="#w00446">Agamemnon</title> im richtigen Versmaß wiedergegeben. Kritiken begleiten diese
+                                    Proben.<!--Übersetzung überprüfen!-->
+                                </p><p xml:lang="en"/><p xml:lang="fr"/></note>
                         </item>
                         <lb/>
                         <label>IV.</label>
                         <item>Von <hi rend="latin"><persName ref="#p1431" type="bi">Leps</persName></hi>: <hi rend="latin"><foreign xml:lang="la"
                                         ><title ref="#w04428">De <persName ref="#p0024" type="bi">Horatii</persName>
                                         <title ref="#w00009">carminum</title> quorundam temporibus adversus<lb/><persName ref="#p1241" type="bi"
-                                            >Bentleium</persName> dissertatio.</title></foreign></hi><note resp="#sabine.seifert">Übersetzung:
-                                Erörterung über die Zeitumstände bestimmter <title ref="#w00009">Oden</title> des <persName ref="#p0024" type="bi"
-                                    >Horaz</persName> entgegen <persName ref="#p1241" type="bi">Bentley</persName>. Bentley veröffentlichte seine <rs
-                                    ref="#w05667" type="bi">Horaz-Ausgabe</rs> erstmals <date when-iso="1711">1711</date>. In <persName ref="#p0178"
-                                    type="bi">Boeckhs</persName> Bibliothek befand sich eine <rs ref="#w00158" type="bi">Ausgabe</rs> von <date
-                                    when-iso="1764">1764</date>, Nr. 4 im <ref
-                                    target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#4">Katalog meiner
-                                    Bücher</ref>.</note>
+                                            >Bentleium</persName> dissertatio.</title></foreign></hi><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Erörterung über die Zeitumstände bestimmter <title ref="#w00009">Oden</title> des <persName
+                                        ref="#p0024" type="bi">Horaz</persName> entgegen <persName ref="#p1241" type="bi">Bentley</persName>. Bentley
+                                    veröffentlichte seine <rs ref="#w05667" type="bi">Horaz-Ausgabe</rs> erstmals <date when-iso="1711">1711</date>.
+                                    In <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek befand sich eine <rs ref="#w00158" type="bi"
+                                        >Ausgabe</rs> von <date when-iso="1764">1764</date>, Nr. 4 im <ref
+                                        target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#4">Katalog meiner
+                                        Bücher</ref>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                         </item>
                     </list></p>
                 <p>Die drei erstgenannten zeichnen sich, wiewohl auf verschiedene Weise vortheilhaft aus.<lb/>In der <rs ref="#w04425" type="bi"
@@ -410,23 +422,25 @@
                                             <abbr>ed.</abbr>
                                             <expan>edidit</expan>
                                         </choice></rs>
-                                    <persName ref="#p0747" type="bi">Heeren</persName>.<note resp="#sabine.seifert">Die mehrbändige Ausgabe <persName
-                                            ref="#p0747" type="bi">Heerens</persName> hat <persName ref="#p0178" type="bi">Boeckh</persName> als Nr.
-                                        259-262 im <ref target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#6"
-                                            >Katalog meiner Bücher</ref> verzeichnet.</note> incipit<lb/>Hermeticum carmen <foreign xml:lang="grc"><hi
-                                            rend="greek">περὶ εἱμαρμένης</hi></foreign> sic:<lb/><quote><foreign xml:lang="grc"><hi rend="greek">ἑπτὰ
-                                                πολυπλανέες κατ᾽ ᾿Ολύμπιον ἀστέρες οὐδόν<lb/>εἱλεῦνται, μετὰ τοῖσιν ἀεὶ δ᾿ ἐπινήσεται
-                                            αἰών.</hi></foreign></quote><lb/>Non capio illud <quote><foreign xml:lang="grc"><hi rend="greek"
-                                                >ἐπινήσεται</hi></foreign></quote>, <choice>
+                                    <persName ref="#p0747" type="bi">Heeren</persName>.<note resp="#sabine.seifert"><p xml:lang="de">Die mehrbändige
+                                            Ausgabe <persName ref="#p0747" type="bi">Heerens</persName> hat <persName ref="#p0178" type="bi"
+                                                >Boeckh</persName> als Nr. 259-262 im <ref
+                                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#6">Katalog
+                                                meiner Bücher</ref> verzeichnet.</p><p xml:lang="en"/><p xml:lang="fr"/></note> incipit<lb/>Hermeticum
+                                    carmen <foreign xml:lang="grc"><hi rend="greek">περὶ εἱμαρμένης</hi></foreign> sic:<lb/><quote><foreign
+                                            xml:lang="grc"><hi rend="greek">ἑπτὰ πολυπλανέες κατ᾽ ᾿Ολύμπιον ἀστέρες οὐδόν<lb/>εἱλεῦνται, μετὰ τοῖσιν
+                                                ἀεὶ δ᾿ ἐπινήσεται αἰών.</hi></foreign></quote><lb/>Non capio illud <quote><foreign xml:lang="grc"><hi
+                                                rend="greek">ἐπινήσεται</hi></foreign></quote>, <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: In <persName ref="#p1033" type="bi">Stobaeus</persName>'
-                                            <title ref="#w04430">Eclogae physicae</title> Buch 1, Kapitel 6, in der <rs ref="#w01366" type="bi"
-                                            >Edition</rs> von <persName ref="#p0747" type="bi">Heeren</persName> S. 174, beginnt das carmen Hermeticum
-                                            <foreign xml:lang="grc"><hi rend="greek">περὶ εἱμαρμένης</hi></foreign> auf folgende Weise:
-                                                <quote><foreign xml:lang="grc"><hi rend="greek">ἑπτὰ πολυπλανέες κατ᾽ ᾿Ολύμπιον ἀστέρες οὐδόν
-                                                    εἱλεῦνται, μετὰ τοῖσιν ἀεὶ δ᾿ ἐπινήσεται αἰών.</hi></foreign></quote> Ich verstehe das nicht:
-                                                <quote><foreign xml:lang="grc"><hi rend="greek">ἐπινήσεται</hi></foreign></quote> etc.</note></item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: In <persName ref="#p1033" type="bi"
+                                                >Stobaeus</persName>' <title ref="#w04430">Eclogae physicae</title> Buch 1, Kapitel 6, in der <rs
+                                                ref="#w01366" type="bi">Edition</rs> von <persName ref="#p0747" type="bi">Heeren</persName> S. 174,
+                                            beginnt das carmen Hermeticum <foreign xml:lang="grc"><hi rend="greek">περὶ εἱμαρμένης</hi></foreign> auf
+                                            folgende Weise: <quote><foreign xml:lang="grc"><hi rend="greek">ἑπτὰ πολυπλανέες κατ᾽ ᾿Ολύμπιον ἀστέρες
+                                                        οὐδόν εἱλεῦνται, μετὰ τοῖσιν ἀεὶ δ᾿ ἐπινήσεται αἰών.</hi></foreign></quote> Ich verstehe das
+                                            nicht: <quote><foreign xml:lang="grc"><hi rend="greek">ἐπινήσεται</hi></foreign></quote> etc.</p><p
+                                            xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>3.</label>
                                 <item>Quomodo explicandus locus <persName ref="#p1006" type="bi">Apollonii Rhodii</persName>
@@ -435,9 +449,10 @@
                                     <choice>
                                         <abbr>&amp;c.</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>?<note resp="#sabine.seifert">Übersetzung: Wie ist die Stelle <rs ref="#w04431" type="bi">IV, 565.</rs>
-                                        bei <persName ref="#p1006" type="bi">Apollonius Rhodius</persName> zu erklären: <quote><foreign xml:lang="grc"
-                                                    ><hi rend="greek">ἴσσα τε Δυσκέλαδός</hi></foreign></quote> etc.?</note></item>
+                                    </choice>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie ist die Stelle <rs ref="#w04431"
+                                                type="bi">IV, 565.</rs> bei <persName ref="#p1006" type="bi">Apollonius Rhodius</persName> zu
+                                            erklären: <quote><foreign xml:lang="grc"><hi rend="greek">ἴσσα τε Δυσκέλαδός</hi></foreign></quote>
+                                            etc.?</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>4.</label>
                                 <item>Quid sentiendum de <persName ref="#p0353" type="bi">Aeschÿli</persName>
@@ -452,23 +467,24 @@
                                         <abbr>ed.</abbr>
                                         <expan>edidit</expan>
                                     </choice>
-                                    <persName ref="#p0979" type="bi">Schütz</persName>.<note resp="#sabine.seifert">Vermutlich ist hier die aktuelle
-                                            <rs ref="#w00703" type="bi">Ausgabe</rs> von <date when-iso="1809">1809</date> gemeint, die <rs
-                                            ref="#w00083" type="bi">Erstausgabe</rs> erschien <date when-iso="1782">1782</date>. Beide Ausgaben waren
-                                        in <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek vorhanden, als <ref
-                                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#30">Nr.
-                                            1348</ref> und <ref
-                                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#1">Nr.
-                                        29</ref>.</note>
+                                    <persName ref="#p0979" type="bi">Schütz</persName>.<note resp="#sabine.seifert"><p xml:lang="de">Vermutlich ist
+                                            hier die aktuelle <rs ref="#w00703" type="bi">Ausgabe</rs> von <date when-iso="1809">1809</date> gemeint,
+                                            die <rs ref="#w00083" type="bi">Erstausgabe</rs> erschien <date when-iso="1782">1782</date>. Beide
+                                            Ausgaben waren in <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek vorhanden, als <ref
+                                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#30">Nr.
+                                                1348</ref> und <ref
+                                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Buchkatalog#1">Nr.
+                                                29</ref>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                                     <quote><foreign xml:lang="grc"><hi rend="greek">ὦ φίλον Οἰδί<lb break="no"/>που τέκος, ἔδεισ'
                                             ἀκούσασ᾽</hi></foreign></quote>
                                     <choice>
                                         <abbr>&amp;c.</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>?<note resp="#sabine.seifert">Übersetzung: Was ist zu halten von <persName ref="#p0353" type="bi"
-                                            >Aeschylos</persName>' <title ref="#w00373">Sieben gegen Theben</title>, S. 206 in der Edition von
-                                            <persName ref="#p0979" type="bi">Schütz</persName>: <quote><foreign xml:lang="grc"><hi rend="greek">ὦ
-                                                    φίλον Οἰδίπου τέκος, ἔδεισ' ἀκούσασ᾽</hi></foreign></quote> etc.?</note></item>
+                                    </choice>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Was ist zu halten von <persName ref="#p0353"
+                                                type="bi">Aeschylos</persName>' <title ref="#w00373">Sieben gegen Theben</title>, S. 206 in der
+                                            Edition von <persName ref="#p0979" type="bi">Schütz</persName>: <quote><foreign xml:lang="grc"><hi
+                                                        rend="greek">ὦ φίλον Οἰδίπου τέκος, ἔδεισ' ἀκούσασ᾽</hi></foreign></quote> etc.?</p><p
+                                            xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>5.</label>
                                 <item>Quomodo interpretanda sunt verba <persName ref="#p0003" type="bi">Ciceronis</persName>
@@ -479,9 +495,10 @@
                                     <choice>
                                         <abbr>&amp;c.</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>"?<note resp="#sabine.seifert">Übersetzung: Wie sind die Worte <persName ref="#p0003" type="bi"
-                                            >Ciceros</persName> in <title ref="#w03317">Divinatio in Caecilium</title> 8 zu verstehen: <quote>"Non
-                                            enim singulos ferre sententias, sed universos constituere</quote> etc."?</note></item>
+                                    </choice>"?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie sind die Worte <persName ref="#p0003"
+                                                type="bi">Ciceros</persName> in <title ref="#w03317">Divinatio in Caecilium</title> 8 zu verstehen:
+                                                <quote>"Non enim singulos ferre sententias, sed universos constituere</quote> etc."?</p><p
+                                            xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>6.</label>
                                 <item>Quomodo vel explicandus sit vel emendandus locus <persName ref="#p0353" type="bi"><choice>
@@ -496,9 +513,10 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: Wie ist die Stelle in <persName ref="#p0353" type="bi"
-                                            >Aischylos</persName>' <title ref="#w00446">Agamemnon</title> zu erklären oder zu emendieren: <quote><hi
-                                                rend="greek"><foreign xml:lang="grc">Ἄρης δ' οὐκ ἔνι χώρᾳ</foreign></hi></quote> etc.</note></item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie ist die Stelle in <persName ref="#p0353"
+                                                type="bi">Aischylos</persName>' <title ref="#w00446">Agamemnon</title> zu erklären oder zu emendieren:
+                                                    <quote><hi rend="greek"><foreign xml:lang="grc">Ἄρης δ' οὐκ ἔνι χώρᾳ</foreign></hi></quote>
+                                            etc.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>7.</label>
                                 <item>Quid sentiendum sit de <persName ref="#p0353" type="bi"><choice>
@@ -513,9 +531,10 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: Was sei zu halten von <persName ref="#p0353" type="bi"
-                                            >Aischylos</persName>' <title ref="#w00446">Agamemnon</title> 148: <quote><hi rend="greek"><foreign
-                                                    xml:lang="grc">τούτων αἰτῶ ξύμβολα κρανᾶν</foreign></hi></quote> etc. </note></item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Was sei zu halten von <persName ref="#p0353"
+                                                type="bi">Aischylos</persName>' <title ref="#w00446">Agamemnon</title> 148: <quote><hi rend="greek"
+                                                        ><foreign xml:lang="grc">τούτων αἰτῶ ξύμβολα κρανᾶν</foreign></hi></quote> etc. </p><p
+                                            xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>8.</label>
                                 <item>Qua ratione aut explicanda emendanda sunt verba <persName ref="#p1927" type="bi">Isaei</persName>
@@ -527,10 +546,11 @@
                                         <abbr>p.</abbr>
                                         <expan>pagina</expan>
                                     </choice> 292. <quote><hi rend="greek"><foreign xml:lang="grc">ὥστε εἶναι μὲν οὐχ ἱκανά, λειτουργεῖν δὲ μὴ
-                                                ἄξια</foreign></hi></quote>?<note resp="#sabine.seifert">Übersetzung: Mit welcher Begründung können
-                                        die Worte <persName ref="#p1927" type="bi">Isaeus</persName>' in <title ref="#w04320">De Hagniae
-                                            hereditate</title> S. 292 erklärt oder emendiert werden: <quote><hi rend="greek"><foreign xml:lang="grc"
-                                                    >ὥστε εἶναι μὲν οὐχ ἱκανά, λειτουργεῖν δὲ μὴ ἄξια</foreign></hi></quote> ?</note></item>
+                                                ἄξια</foreign></hi></quote>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Mit welcher
+                                            Begründung können die Worte <persName ref="#p1927" type="bi">Isaeus</persName>' in <title ref="#w04320">De
+                                                Hagniae hereditate</title> S. 292 erklärt oder emendiert werden: <quote><hi rend="greek"><foreign
+                                                        xml:lang="grc">ὥστε εἶναι μὲν οὐχ ἱκανά, λειτουργεῖν δὲ μὴ ἄξια</foreign></hi></quote> ?</p><p
+                                            xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>9.</label>
                                 <item>Cui oratio <persName ref="#p1927" type="bi">Isaei</persName>
@@ -565,10 +585,10 @@
                                     <choice>
                                         <abbr>&amp;c.</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>" est intelligendus?<note resp="#sabine.seifert">Übersetzung: Wie ist die Stelle in <persName
-                                            ref="#p0024" type="bi">Horaz</persName>' <title ref="#w00009">Ode</title> 1, 35, 21 etc. zu verstehen:
-                                            <quote>"Te spes est albo<lb/>rara fides colit"?</quote>
-                                    </note></item>
+                                    </choice>" est intelligendus?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie ist die Stelle in
+                                                <persName ref="#p0024" type="bi">Horaz</persName>' <title ref="#w00009">Ode</title> 1, 35, 21 etc. zu
+                                            verstehen: <quote>"Te spes est albo<lb/>rara fides colit"?</quote>
+                                        </p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                             </list></hi></foreign></p>
                 <p>Nach Beendigung dieses Lehrcurses erkannte ein <orgName ref="#g0063" type="bi"><choice>
                             <abbr>Hochpreißl. Dep. <add place="above">Abth.</add> f. d Cultus u öff.<lb/>Unt.</abbr>
@@ -665,10 +685,10 @@
                         <item><persName ref="#p0668" type="bi">Christian Stenger</persName> aus dem <choice>
                                 <abbr>Herzogth.</abbr>
                                 <expan>Herzogthum</expan>
-                            </choice><lb/><seg rend="align(center)"><placeName ref="#l0221" type="bi">Warschau</placeName>, } <choice>
+                            </choice><lb/><hi rend="align(center)"><placeName ref="#l0221" type="bi">Warschau</placeName>, } <choice>
                                     <abbr>ordentl.</abbr>
                                     <expan>ordentliche</expan>
-                                </choice> Mitglieder,</seg></item>
+                                </choice> Mitglieder,</hi></item>
                         <label>5)</label>
                         <item><persName ref="#p0471" type="bi">Eduard Gerhard</persName> aus <placeName ref="#l0027" type="bi">Breslau</placeName>, <choice>
                                 <abbr/>
@@ -691,18 +711,19 @@
                         <item><persName ref="#p1432" type="bi">Carl <choice>
                                     <abbr>Ludw.</abbr>
                                     <expan>Ludwig</expan>
-                                </choice> Blum</persName>, aus dem <rs ref="#l0583" type="bi">Bernburgischen</rs>,<note resp="#sabine.seifert"
-                                    ><persName ref="#p1432" type="bi">Blum</persName> kommt nicht aus der Gegend um <placeName resp="#l0583" type="bi"
-                                    >Bernburg (Saale)</placeName>, sondern aus <placeName ref="#l0209" type="bi">Hanau</placeName>.</note>
+                                </choice> Blum</persName>, aus dem <rs ref="#l0583" type="bi">Bernburgischen</rs>,<note resp="#sabine.seifert"><p
+                                    xml:lang="de"><persName ref="#p1432" type="bi">Blum</persName> kommt nicht aus der Gegend um <placeName
+                                        resp="#l0583" type="bi">Bernburg (Saale)</placeName>, sondern aus <placeName ref="#l0209" type="bi"
+                                        >Hanau</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                             <choice>
                                 <abbr>außerordtl. Mitgl</abbr>
                                 <expan>außerordentliches Mitglied</expan>
                             </choice>.</item>
                     </list></p>
                 <pb facs="00000064b.jpg" n="3"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">38</seg>
+                        <del rend="overwritten"><add hand="#pencil">38</add>
                         </del>
                         <add place="across">38</add>
                     </subst>
@@ -767,8 +788,9 @@
                                         >Dissertatio geographica de <persName ref="#p2588" type="bi"><choice>
                                                 <abbr>Ius</abbr>
                                                 <expan>Iustini</expan>
-                                            </choice></persName> erroribus pars II</hi></foreign></title>.<note resp="#sabine.seifert">Übersetzung:
-                                Geographische Erörterung über Irrtümer des <persName ref="#p2588" type="bi">Iustinus</persName>, Teil 2.</note></item>
+                                            </choice></persName> erroribus pars II</hi></foreign></title>.<note resp="#sabine.seifert"><p
+                                    xml:lang="de">Übersetzung: Geographische Erörterung über Irrtümer des <persName ref="#p2588" type="bi"
+                                        >Iustinus</persName>, Teil 2.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>II.</label>
                         <item>Von <persName ref="#p0665" type="bi">Schröner</persName>: <title ref="#w04433"><foreign xml:lang="la"><hi rend="latin"
@@ -784,33 +806,35 @@
                         <label>III.</label>
                         <item>Von <persName ref="#p0667" type="bi">Osann</persName>: <title ref="#w04434"><foreign xml:lang="la"><hi rend="latin"
                                         >Animadversiones criticae in minora, quae feruntur,<lb/><persName ref="#p0033" type="bi">Homeri</persName>
-                                        <title ref="#w05669">carmina</title>.</hi></foreign></title><note resp="#sabine.seifert">Übersetzung:
-                                Kritische Beobachtungen in den sogenannten kleineren Dichtungen Homers. Hier handelt es sich vermutlich um die
-                                Homerischen <title ref="#w05669">Hymnen</title>, deren Echtheit jedoch umstritten ist.</note></item>
+                                        <title ref="#w05669">carmina</title>.</hi></foreign></title><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Kritische Beobachtungen in den sogenannten kleineren Dichtungen Homers. Hier handelt es sich
+                                    vermutlich um die Homerischen <title ref="#w05669">Hymnen</title>, deren Echtheit jedoch umstritten ist.</p><p
+                                    xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>IV.</label>
                         <item>Von <persName ref="#p0668" type="bi">Stenger</persName>: <title ref="#w04435"><foreign xml:lang="la"><hi rend="latin"
                                             ><persName ref="#p1187" type="bi">Persii</persName>
-                                        <title ref="#w05670">satira</title> secunda explicata</hi></foreign></title>.<note resp="#sabine.seifert"
-                                >Übersetzung: Die zweite <title ref="#w05670">Satire</title> des <persName ref="#p1187" type="bi">Persius</persName>
-                                erörtert.</note></item>
+                                        <title ref="#w05670">satira</title> secunda explicata</hi></foreign></title>.<note resp="#sabine.seifert"><p
+                                    xml:lang="de">Übersetzung: Die zweite <title ref="#w05670">Satire</title> des <persName ref="#p1187" type="bi"
+                                        >Persius</persName> erörtert.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>V.</label>
                         <item>Von <persName ref="#p0471" type="bi">Gerhard</persName>: <title ref="#w04436"><foreign xml:lang="la"><hi rend="latin">De
                                         digamma Aeolici usu <persName ref="#p0033" type="bi">Homerico</persName>.</hi></foreign></title><note
-                                resp="#sabine.seifert">Übersetzung: Über das äolische Digamma im Gebrauch bei <persName ref="#p0033" type="bi"
-                                    >Homer</persName>.</note></item>
+                                resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über das äolische Digamma im Gebrauch bei <persName ref="#p0033"
+                                        type="bi">Homer</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>VI.</label>
                         <item>Von <persName ref="#p0509" type="bi">Meier</persName>: <title ref="#w04437"><foreign xml:lang="la"><hi rend="latin">De
-                                        permutatis verborum generibus in lingua<lb/>Graeca</hi></foreign></title>.<note resp="#sabine.seifert"
-                                >Übersetzung: Über Wortarten in der griechischen Sprache, die sich verändert
-                                haben.<!-- Übersetzung überprüfen! --></note></item>
+                                        permutatis verborum generibus in lingua<lb/>Graeca</hi></foreign></title>.<note resp="#sabine.seifert"><p
+                                    xml:lang="de">Übersetzung: Über Wortarten in der griechischen Sprache, die sich verändert
+                                    haben.<!-- Übersetzung überprüfen! --></p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                     </list></p>
                 <p>Die 7te von <persName ref="#p0666" type="bi">Grimm</persName>, <title ref="#w04438"><foreign xml:lang="la"><hi rend="latin">de
-                                tropaeis veterum</hi></foreign></title>,<note resp="#sabine.seifert">Übersetzung: Über die Siegeszeichen der
-                        Alten.<!-- Übersetzung überprüfen! --></note> konnte aus Mangel an Zeit nicht mehr<lb/>vorgelesen werden, <hi n="5"
-                        rend="mark">und der <rs ref="#p0178" type="bi">Director</rs> begnügt sich daher, die sechs andern einem <choice>
+                                tropaeis veterum</hi></foreign></title>,<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über die
+                            Siegeszeichen der Alten.<!-- Übersetzung überprüfen! --></p><p xml:lang="en"/><p xml:lang="fr"/></note> konnte aus Mangel
+                    an Zeit nicht mehr<lb/>vorgelesen werden, <hi n="5" rend="mark">und der <rs ref="#p0178" type="bi">Director</rs> begnügt sich
+                        daher, die sechs andern einem <choice>
                             <abbr>hochpreißl.</abbr>
                             <expan>hochpreißlichen</expan>
                         </choice><lb/><orgName ref="#g0063" type="bi"><choice>
@@ -878,9 +902,9 @@
                                     <rs ref="#w04323" type="bi">I,6.</rs>
                                     <cit>
                                         <quote>„Nihil est enim, quod<lb/>non alicubi esse cogatur“?</quote>
-                                    </cit></hi></foreign><note resp="#sabine.seifert"><!--Übersetzung: ??? . -->Es handelt sich hier um ein Zitat aus
-                                    <persName ref="#p0003" type="bi">Ciceros</persName>
-                                <title ref="#w04323">Academici</title>. </note></item>
+                                    </cit></hi></foreign><note resp="#sabine.seifert"><p xml:lang="de"><!--Übersetzung: ??? . -->Es handelt sich hier
+                                    um ein Zitat aus <persName ref="#p0003" type="bi">Ciceros</persName>
+                                    <title ref="#w04323">Academici</title>. </p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>3.</label>
                         <item><foreign xml:lang="la"><hi rend="latin">Num <hi rend="underline"><cit>
@@ -939,9 +963,10 @@
                                     <choice>
                                         <abbr><title ref="#w05669">Hÿmn</title>. in Mercur.</abbr>
                                         <expan><title ref="#w05669">Hymn.<!-- ?? --></title> in Mercur.<!-- ??? --></expan>
-                                    </choice><note resp="#sabine.seifert">Der römische Gott Merkur heißt in der griechischen Mythologie Hermes,
-                                        weshalb hier vermutlich die <title ref="#w05669">Hymne</title> an Hermes gemeint ist. Die Verfasserschaft
-                                            <persName ref="#p0033" type="bi">Homers</persName> ist umstritten.</note> 409 <choice>
+                                    </choice><note resp="#sabine.seifert"><p xml:lang="de">Der römische Gott Merkur heißt in der griechischen
+                                            Mythologie Hermes, weshalb hier vermutlich die <title ref="#w05669">Hymne</title> an Hermes gemeint ist.
+                                            Die Verfasserschaft <persName ref="#p0033" type="bi">Homers</persName> ist umstritten.</p><p xml:lang="en"
+                                            /><p xml:lang="fr"/></note> 409 <choice>
                                         <abbr>sqq.</abbr>
                                         <expan>sequentia</expan>
                                     </choice>
@@ -1161,24 +1186,25 @@
                     <orgName ref="#g0063" type="bi"><hi rend="underline">Departement</hi></orgName> um die hohe Genehmi<lb break="no"/>gung dieses
                     Antrages.</p>
                 <p>Nachträglich liefert der Unterzeichnete von den in dem Rescript vom <date when-iso="1813-10-07">7. October<lb/>1813.</date><note
-                        resp="#sabine.seifert">Dies war die Antwort auf <persName ref="#p0178" type="bi">Boeckhs</persName>
-                        <ref target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#1"
-                            >Jahresbericht</ref> vom <date when-iso="1813-09-26">26. September 1813</date>, in der die Mitarbeiter des <orgName
-                            ref="#g0063" type="bi">Departements</orgName> ihre "völlige Zufriedenheit" mit <persName ref="#p0178" type="bi"
-                            >Boeckhs</persName> Leitung bekundeten, jedoch in Bezug auf das <ref
-                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement">Reglement</ref> künftig das
-                        Beilegen der Probearbeiten der Seminaristen forderten (HU, Universitätsarchiv, Phil. Fak. 99, Bl. 34).</note> vermissten vier
-                        Probearbeiten<note resp="#sabine.seifert">Es handelt sich um folgende, im <ref target="Brief003BoeckhanInnenministerium.xml#2"
-                            >Jahresbericht</ref> vom <date when-iso="1813-09-26">26. September 1813</date> genannte Arbeiten: von <persName
-                            ref="#p0655" type="bi">Helmholtz</persName>
-                        <title ref="#w04439">"De indole tragoediae Græcæ"</title>, von <persName ref="#w04410" type="bi">Pfefferkorn</persName>
-                        <title ref="#w04410">"Historia artis oratoriæ apud Romanos ante Ciceronem"</title>, von <persName ref="#p0654" type="bi"
-                            >Wernicke</persName>
-                        <title ref="#w04404">"De Priapeis atque eorum auctoribus"</title> und von <persName ref="#p0659" type="bi"
-                            >Hasselbach</persName>
-                        <title ref="#w04408">"De Philocteta Sophoclis"</title>.</note> des <date when-iso="1812-10/1813-02">Winterhalbeniahres 1812 –
-                        1813.</date> Drei<lb/><hi n="3" rend="mark">mit der Bitte um deren Zurücksendung ein, und bedauert die vierte von dem<lb/>aus
-                        dem Felde zurückgekehrten Verfasser noch nicht erhalten zu haben.</hi></p>
+                        resp="#sabine.seifert"><p xml:lang="de">Dies war die Antwort auf <persName ref="#p0178" type="bi">Boeckhs</persName>
+                            <ref target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#1"
+                                >Jahresbericht</ref> vom <date when-iso="1813-09-26">26. September 1813</date>, in der die Mitarbeiter des <orgName
+                                ref="#g0063" type="bi">Departements</orgName> ihre "völlige Zufriedenheit" mit <persName ref="#p0178" type="bi"
+                                >Boeckhs</persName> Leitung bekundeten, jedoch in Bezug auf das <ref
+                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement">Reglement</ref> künftig das
+                            Beilegen der Probearbeiten der Seminaristen forderten (HU, Universitätsarchiv, Phil. Fak. 99, Bl. 34).</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> vermissten vier Probearbeiten<note resp="#sabine.seifert"><p xml:lang="de">Es handelt sich um
+                            folgende, im <ref target="Brief003BoeckhanInnenministerium.xml#2">Jahresbericht</ref> vom <date when-iso="1813-09-26">26.
+                                September 1813</date> genannte Arbeiten: von <persName ref="#p0655" type="bi">Helmholtz</persName>
+                            <title ref="#w04439">"De indole tragoediae Græcæ"</title>, von <persName ref="#w04410" type="bi">Pfefferkorn</persName>
+                            <title ref="#w04410">"Historia artis oratoriæ apud Romanos ante Ciceronem"</title>, von <persName ref="#p0654" type="bi"
+                                >Wernicke</persName>
+                            <title ref="#w04404">"De Priapeis atque eorum auctoribus"</title> und von <persName ref="#p0659" type="bi"
+                                >Hasselbach</persName>
+                            <title ref="#w04408">"De Philocteta Sophoclis"</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> des <date
+                        when-iso="1812-10/1813-02">Winterhalbeniahres 1812 – 1813.</date> Drei<lb/><hi n="3" rend="mark">mit der Bitte um deren
+                        Zurücksendung ein, und bedauert die vierte von dem<lb/>aus dem Felde zurückgekehrten Verfasser noch nicht erhalten zu
+                        haben.</hi></p>
                 <closer><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>
                         <choice>
                             <abbr>d.</abbr>
@@ -1186,8 +1212,9 @@
                         </choice>
                         <date when-iso="1814-08-24">24. August 1814.</date></dateline><signed rend="align(right)">der Director des <orgName
                             ref="#g0079" type="bi">philologischen<lb/>Seminars</orgName> der hiesigen <orgName ref="#g0122" type="bi"
-                            >Universität</orgName>.<lb/><persName ref="#p0178" type="bi">Böckh</persName>.</signed></closer>
-                <note hand="brown"><hi rend="latin">Mundirt</hi><lb/><signed><gap extent="?c" reason="illegible"/></signed></note>
+                            >Universität</orgName>.<lb/><persName ref="#p0178" type="bi">Böckh</persName>.</signed>
+                    <signed hand="brown"><hi rend="latin">Mundirt</hi><lb/><gap extent="?c" reason="illegible"/></signed>
+                </closer>
             </div>
         </body>
     </text>

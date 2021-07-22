@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -187,8 +194,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-23" who="#sabine.seifert">Some minor corrections.</change>
             <change when-iso="2020-07-20" who="#sabine.seifert">Corrected encoding in signed and origin.</change>
             <change when-iso="2020-05-12" who="#sabine.seifert">Updated information in correspContext, corrected docDate in msItem.</change>
@@ -206,9 +214,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000097b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">59</seg>
+                        <del rend="overwritten"><add hand="#pencil">59</add>
                         </del>
                         <add place="across">59</add>
                     </subst>
@@ -218,7 +226,7 @@
                     Jahresbericht über<lb/>den Zustand des <orgName ref="#g0079" type="bi">philologischen Seminars</orgName> im<lb/>verflossenen
                     akademischen Jahre pflichtschuldigst<lb/>zu erstatten.</p>
                 <div>
-                    <head place="margin-left"><label>1. </label>Übersicht der<lb/>Mit<lb break="no"/>glieder.</head>
+                    <head place="margin(left)"><label>1. </label>Übersicht der<lb/>Mit<lb break="no"/>glieder.</head>
                     <p>Im <date when-iso="1815-10/1816-02">Winterhalbeniahre 1815–1816.</date> bestand das<lb/><orgName ref="#g0079" type="bi"
                             >Seminar</orgName> nach dem Abgange zweier älteren<lb/>Mitglieder <hi rend="latin"><persName ref="#p0671" type="bi">Dr.
                                 Döderlein</persName></hi> und <hi rend="latin"><persName ref="#p0471" type="bi">Dr. Gerhard</persName></hi><lb/>aus
@@ -310,7 +318,7 @@
                 </div>
                 <pb facs="00000098b.jpg" n="2"/>
                 <div>
-                    <head place="margin-left"><label>II. </label>Übungen des <orgName ref="#g0079" type="bi">Seminars</orgName>.</head>
+                    <head place="margin(left)"><label>II. </label>Übungen des <orgName ref="#g0079" type="bi">Seminars</orgName>.</head>
                     <p>Die Übungen des <orgName ref="#g0079" type="bi">Seminars</orgName> wurden wie gewöhnlich<lb/>regelmäßig angestellt.</p>
                     <p><label>1)</label> Im Auslegen der lateinischen Schriftsteller übte<lb/><choice>
                             <abbr>Hr Prof.</abbr>
@@ -424,16 +432,16 @@
                                 <expan>Verfassers</expan>
                             </choice></rs>
                         <pb facs="00000099b.jpg" n="3"/>
-                        <note place="margin-right" type="foliation">2</note>
-                        <note place="margin-right" type="foliation">
+                        <note place="margin(right)" type="foliation">2</note>
+                        <note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
-                                <del rend="overwritten"><seg hand="#pencil">60</seg>
+                                <del rend="overwritten"><add hand="#pencil">60</add>
                                 </del>
                                 <add place="across">60</add>
                             </subst>
                         </note>
-                        <note place="margin-right">(Ist hierher zu sch<unclear extent="several_characters" reason="illegible"
-                        >reiben</unclear>)</note>glaubte erwarten zu können, aber doch viel<lb/>Schönes <choice>
+                        <note place="margin(right)">(Ist hierher zu sch<unclear extent="several_characters" reason="illegible"
+                            >reiben</unclear>)</note>glaubte erwarten zu können, aber doch viel<lb/>Schönes <choice>
                             <abbr>u</abbr>
                             <expan>und</expan>
                         </choice> Wohlgedachtes enthält. Indem der <rs ref="#p0178" type="bi">Di<lb break="no"/>rector</rs> um die Zurücksendung der
@@ -642,16 +650,16 @@
                                 </list></hi></foreign></p>
                 </div>
                 <pb facs="00000101b.jpg" n="5"/>
-                <note place="margin-right" type="foliation">3</note>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">3</note>
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">61</seg>
+                        <del rend="overwritten"><add hand="#pencil">61</add>
                         </del>
                         <add place="across">61</add>
                     </subst>
                 </note>
                 <div>
-                    <head place="margin-left"><label>III. </label><hi rend="underline">Zuerkannte Prämien</hi>.</head>
+                    <head place="margin(left)"><label>III. </label><hi rend="underline">Zuerkannte Prämien</hi>.</head>
                     <p>So wohl im <date when-iso="1815-10/1816-02">ersten</date> als <date when-iso="1816-03/09">zweiten halben Jahre</date> be<lb
                             break="no"/>bewiesen die ordentlichen Mitglieder der <rs ref="#g0079" type="bi">Anstalt</rs><lb/>einen regen Eifer für das
                         Studium, und machten<lb/>ieder nach Maßgabe seiner früher erworbenen<lb/>Ken̄tnisse und seiner Fähigkeiten
@@ -698,7 +706,7 @@
                         </choice> für zukünftige außerordentliche<lb/>Prämien disponibel ist.</p>
                 </div>
                 <div>
-                    <head place="margin-left"><label>IV. </label>Abgehende Mitglieder.</head>
+                    <head place="margin(left)"><label>IV. </label>Abgehende Mitglieder.</head>
                     <p>Mit dem Schluße dieses Jahres sind aus dem <orgName ref="#g0079" type="bi">Semi<lb break="no"/>nar</orgName> ausgetreten:<lb
                             rend="both"/>
                         <list>
@@ -740,9 +748,8 @@
                             <expan>den</expan>
                         </choice>
                         <date when-iso="1816-09-20">20. September 1816.</date></dateline><milestone rend="vertical-rule align(center)" unit="none"
-                        /><hi rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
-                            >philologischen<lb/>Seminars</orgName> hierselbst.</hi><lb/><signed rend="align(right)"><persName ref="#p0178" type="bi"
-                            >Böckh</persName></signed></closer>
+                        /><signed rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
+                            >philologischen<lb/>Seminars</orgName> hierselbst.<lb/><persName ref="#p0178" type="bi">Böckh</persName></signed></closer>
             </div>
         </body>
     </text>

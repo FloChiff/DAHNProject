@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -51,8 +52,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -232,8 +239,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief006BoeckhanInnenministerium.xml to
                 Brief006Boeckh and updated content of element correspContext.</change>
             <change when-iso="2020-05-03" who="#sabine.seifert">Updated previous letter in correspContext to Brief011Boeckh.xml.</change>
@@ -248,22 +256,23 @@
         <body>
             <div type="transcription">
                 <pb facs="00000296b.jpg" n="1"/>
-                <add hand="brown_ink_3" place="margin-left">Gelesen<lb/><signed><gap extent="one_word" reason="illegible"/></signed><lb/><date
-                        when-iso="1822-11-15">15/11</date></add>
+                <opener><add hand="brown_ink_3" place="margin(left)">Gelesen</add><lb/>
+                    <signed hand="#brown_ink_3" rend="margin(left)"><gap extent="one_word" reason="illegible"/></signed><lb/>
+                    <dateline rend="margin(left)"><add hand="#brown_ink_3"><date when-iso="1822-11-15">15/11</date></add></dateline></opener>
                 <lb/>
-                <add hand="brown_ink_4" place="margin-left"><hi rend="underline"><unclear extent="2-3c" reason="illegible">ds</unclear>:
-                    323.</hi></add>
-                <note place="margin-right" type="foliation">
+                <note hand="brown_ink_4" place="margin(left)"><hi rend="underline"><unclear extent="2-3c" reason="illegible">ds</unclear>:
+                    323.</hi></note>
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">164</seg>
+                        <del rend="overwritten"><add hand="#pencil">164</add>
                         </del>
                         <add place="across">164</add>
                     </subst>
                 </note>
-                <p>Das <orgName ref="#g0064" type="bi">Ministerium</orgName> hat aus Ihrem beifallswerthen Berichte<note resp="sabine.seifert">Hiermit
-                        ist <persName ref="#p0178" type="bi">Boeckhs</persName> Jahresbericht vom <date when-iso="1822-10-16">16. Oktober 1822</date>
-                        (HUB, UA, Phil. Fak. Nr. 99, Bl. 154-157) gemeint.</note> vom<lb/><date when-iso="1822-10-16">16.<hi
-                            rend="superscript underline">ten</hi>
+                <p>Das <orgName ref="#g0064" type="bi">Ministerium</orgName> hat aus Ihrem beifallswerthen Berichte<note resp="#sabine.seifert"><p
+                            xml:lang="de">Hiermit ist <persName ref="#p0178" type="bi">Boeckhs</persName> Jahresbericht vom <date
+                                when-iso="1822-10-16">16. Oktober 1822</date> (HUB, UA, Phil. Fak. Nr. 99, Bl. 154-157) gemeint.</p><p xml:lang="en"
+                            /><p xml:lang="fr"/></note> vom<lb/><date when-iso="1822-10-16">16.<hi rend="superscript underline">ten</hi>
                         <choice>
                             <abbr>v.</abbr>
                             <expan>vorigen</expan>
@@ -278,12 +287,13 @@
                     eingereichten und hieneben zurückerfolgenden<lb/>Abhandlungen der Seminaristen hat das <orgName ref="#g0064" type="bi"
                         >Ministerium</orgName><lb/>nähere Kenntniß genommen, und darin ungern die<lb/>Korrectur von Seiten der Direction vermißt,
                     deren<lb/>doch dieselben auch in Hinsicht auf den lateinischen Stÿl<lb/>nicht wohl entbehren können. Von den Directionen<lb/>der
-                    übrigen philologischen Seminarien<note resp="#sabine.seifert">In Preußen gab es sechs philologische Seminare. Neben <placeName
-                            ref="#l1103" type="bi">Berlin</placeName> waren diese an den Universitäten <placeName ref="#l0060" type="bi"
-                            >Halle</placeName>, <placeName ref="#l0041" type="bi">Königsberg</placeName>, <placeName ref="#l0027" type="bi"
-                            >Breslau</placeName>, <placeName ref="#l0205" type="bi">Bonn</placeName> und <placeName ref="#Greifswald" type="bi"
-                            >Greifswald</placeName>.</note> werden die schrift<lb break="no"/>lichen Ausarbeitungen der Seminaristen, nachdem
-                    sie<lb/>bei den <hi hand="brown_ink_2" rend="underline">ausser</hi>ordentlichen<note hand="brown_ink_2">doch wohl <choice>
+                    übrigen philologischen Seminarien<note resp="#sabine.seifert"><p xml:lang="de">In Preußen gab es sechs philologische Seminare.
+                            Neben <placeName ref="#l1103" type="bi">Berlin</placeName> waren diese an den Universitäten <placeName ref="#l0060"
+                                type="bi">Halle</placeName>, <placeName ref="#l0041" type="bi">Königsberg</placeName>, <placeName ref="#l0027"
+                                type="bi">Breslau</placeName>, <placeName ref="#l0205" type="bi">Bonn</placeName> und <placeName ref="#Greifswald"
+                                type="bi">Greifswald</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> werden die schrift<lb break="no"
+                    />lichen Ausarbeitungen der Seminaristen, nachdem sie<lb/>bei den <hi hand="brown_ink_2" rend="underline"
+                        >ausser</hi>ordentlichen<note hand="brown_ink_2">doch wohl <choice>
                             <abbr>schwerl</abbr>
                             <expan>schwerlich</expan>
                         </choice></note> Mitgliedern des Seminars<lb/>cirkulirt haben, und in den gewöhnlichen Versammlungen<lb/>vorgelesen und
@@ -292,26 +302,27 @@
                     Inhalts und der Form derselben<lb/>beigefügt. Diese zur Belehrung und Ermunterung der<lb/>Seminaristen sehr zweckmässige
                     Einrichtung ist von jetzt<lb/>an auch in dem hiesigen <orgName ref="#g0079" type="bi">philologischen Seminar</orgName> in
                     Ausführung<lb/>zu bringen.</p>
-                <closer><hi rend="latin align(center)"><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>, den <date when-iso="1822-11-11"
-                                    >11.<hi rend="superscript underline">ten</hi> November 1822</date></dateline></hi><lb/><signed
-                        rend="align(center)"><orgName ref="#g0064" type="bi">Ministerium der Geistlichen, Unterrichts- und
+                <closer><dateline rend="align(center)"><hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName>, den <date
+                                when-iso="1822-11-11">11.<hi rend="superscript underline">ten</hi> November 1822</date></hi></dateline>
+                    <signed rend="align(center)"><orgName ref="#g0064" type="bi">Ministerium der Geistlichen, Unterrichts- und
                             Medicinal-Angelegenheiten.<lb/> Unterrichts<pc>=</pc>Abtheilung</orgName>.<lb/><add hand="#brown_ink" rend="align(center)"
                                 ><persName ref="#p0681" type="bi">Süvern</persName>.</add></signed><lb/><lb/><lb/>
                     <address>
                         <addrLine>An</addrLine>
                         <addrLine>den Director des <orgName ref="#g0082" type="bi">Seminarii für</orgName></addrLine>
-                        <addrLine><orgName ref="#g0082" type="bi">gelehrte Schulen</orgName>,<note resp="#sabine.seifert"><persName ref="#p0178"
-                                    type="bi">Boeckh</persName> leitete dieses <orgName ref="#g0082" type="bi">Seminar</orgName> von <date
-                                    when-iso="1819/1867">1819 bis 1867</date> und war damit auch für die Lehrerausbildung in <placeName ref="#l0092"
-                                    type="bi">Preußen</placeName> zuständig.</note> Herrn Professor</addrLine>
+                        <addrLine><orgName ref="#g0082" type="bi">gelehrte Schulen</orgName>,<note resp="#sabine.seifert"><p xml:lang="de"><persName
+                                        ref="#p0178" type="bi">Boeckh</persName> leitete dieses <orgName ref="#g0082" type="bi">Seminar</orgName> von
+                                        <date when-iso="1819/1867">1819 bis 1867</date> und war damit auch für die Lehrerausbildung in <placeName
+                                        ref="#l0092" type="bi">Preußen</placeName> zuständig.</p><p xml:lang="en"/><p xml:lang="fr"/></note> Herrn
+                            Professor</addrLine>
                         <addrLine><hi rend="latin"><persName ref="#p0178" type="bi">Boeckh</persName></hi></addrLine>
                         <addrLine><hi rend="underline">hieselbst.</hi></addrLine>
                     </address></closer>
-                <add hand="#brown_ink_5" place="margin-left">17,574.</add>
-                <add hand="#brown_ink_4" place="margin-right"><hi rend="underline"><choice>
+                <note hand="#brown_ink_5" place="margin(left)">17,574.</note>
+                <note hand="#brown_ink_4" place="margin(right)"><hi rend="underline"><choice>
                             <abbr>R. B.</abbr>
                             <expan>R. B.</expan>
-                        </choice></hi></add>
+                        </choice></hi></note>
             </div>
         </body>
     </text>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -53,8 +54,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
             <change when-iso="2020-05-14" who="#sabine.seifert">Encoding of metadata.</change>
         </revisionDesc>
@@ -198,7 +206,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000382b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
                         <del rend="overwritten"><seg hand="#pencil">212</seg>
                         </del>
@@ -213,7 +221,7 @@
                     <p>[Transkription folgt - Transcription coming soon]</p>
                 </div>
                 <pb facs="00000384b.jpg" n="3"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
                         <del rend="overwritten"><seg hand="#pencil">213</seg>
                         </del>
@@ -228,7 +236,7 @@
                     <p>[Transkription folgt - Transcription coming soon]</p>
                 </div>
                 <pb facs="00000386b.jpg" n="5"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
                         <del rend="overwritten"><seg hand="#pencil">214</seg>
                         </del>
@@ -243,7 +251,7 @@
                     <p>[Transkription folgt - Transcription coming soon]</p>
                 </div>
                 <pb facs="00000388b.jpg" n="7"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
                         <del rend="overwritten"><seg hand="#pencil">215</seg>
                         </del>

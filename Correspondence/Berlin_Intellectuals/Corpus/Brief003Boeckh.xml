@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -58,8 +59,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -201,8 +208,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief003BoeckhanInnenministerium.xml to
                 Brief003Boeckh and updated content of element correspContext.</change>
@@ -239,9 +247,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000053b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">32</seg>
+                        <del rend="overwritten"><add hand="#pencil">32</add>
                         </del>
                         <add place="across">32</add>
                     </subst>
@@ -261,12 +269,13 @@
                             <abbr>C. u. öff. U.</abbr>
                             <expan>Cultus und öffentlichen Unterricht</expan>
                         </choice></orgName> in dem <ref target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement"
-                        >Reglement</ref><note resp="#sabine.seifert">Die Statuten des Seminars wurden von <persName ref="#p0239" type="bi"
-                            >Hitzig</persName> im <title ref="#w00383">Berliner Universitätskalender 1813</title>, S. 24–28, veröffentlicht.</note>
-                    für das<lb/><orgName ref="#g0079" type="bi">philologische Seminar</orgName> §.13. zu erkennen gegeben hat, daß der erste
-                        ausführ<lb break="no"/>liche Jahresbericht über die Arbeiten dieser Anstalt nach Ablauf des <date when-iso="1813-03/09">Som<lb
-                            break="no"/>merhalbeniahres 1813</date>. würde erwartet werden; so giebt sich der Unterzeichnete<lb/>die Ehre, denselben
-                    hierdurch einzureichen, wiewohl er gewünscht hätte, die erste<lb/>genauere Rechenschaft vo<subst>
+                        >Reglement</ref><note resp="#sabine.seifert"><p xml:lang="de">Die Statuten des Seminars wurden von <persName ref="#p0239"
+                                type="bi">Hitzig</persName> im <title ref="#w00383">Berliner Universitätskalender 1813</title>, S. 24–28,
+                            veröffentlicht.</p><p xml:lang="en"/><p xml:lang="fr"/></note> für das<lb/><orgName ref="#g0079" type="bi">philologische
+                        Seminar</orgName> §.13. zu erkennen gegeben hat, daß der erste ausführ<lb break="no"/>liche Jahresbericht über die Arbeiten
+                    dieser Anstalt nach Ablauf des <date when-iso="1813-03/09">Som<lb break="no"/>merhalbeniahres 1813</date>. würde erwartet werden;
+                    so giebt sich der Unterzeichnete<lb/>die Ehre, denselben hierdurch einzureichen, wiewohl er gewünscht hätte, die
+                    erste<lb/>genauere Rechenschaft vo<subst>
                         <del><gap extent="1-2c" reason="overwritten"/></del>
                         <add place="across">n</add>
                     </subst> seinen Bemühungen zu einer demselben günstigern Zeit<lb/>ablegen zu können.</p>
@@ -395,12 +404,13 @@
                         <label>2)</label>
                         <item>Von <persName ref="#p0679" type="bi">Jungclaußen</persName>, <title ref="#w04405"><hi rend="latin"><foreign
                                         xml:lang="la">de fato <rs ref="#p0033" type="bi">Homerico</rs></foreign></hi></title>;<note
-                                resp="#sabine.seifert">Übersetzung: Über den Begriff des Schicksals bei Homer.</note></item>
+                                resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über den Begriff des Schicksals bei Homer.</p><p xml:lang="en"
+                                    /><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>3)</label>
                         <item>Von <persName ref="#p0654" type="bi">Wernike</persName>, <title ref="#w04417"><hi rend="latin"><foreign xml:lang="la">de
-                                        Ostracismo</foreign></hi></title>;<note resp="#sabine.seifert">Übersetzung: Über das Scherbengericht
-                                (Ostrazismus).</note></item>
+                                        Ostracismo</foreign></hi></title>;<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über das
+                                    Scherbengericht (Ostrazismus).</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>4)</label>
                         <item>Von <persName ref="#p0588" type="bi">Zumpt</persName>, <title ref="#w04407">über ein Gedicht des <persName ref="#p1158"
@@ -413,13 +423,15 @@
                         <lb/>
                         <label>6)</label>
                         <item>Von <persName ref="#p0661" type="bi">Salomo</persName>, <title ref="#w04406"><hi rend="latin"><foreign xml:lang="la">Quæ
-                                        sit philologiæ vera vis &amp; natura</foreign></hi></title>;<note resp="#sabine.seifert">Übersetzung: Was die
-                                wahre Bedeutung und Natur der Philologie sei.</note></item>
+                                        sit philologiæ vera vis &amp; natura</foreign></hi></title>;<note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Was die wahre Bedeutung und Natur der Philologie sei.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note></item>
                         <lb/>
                         <label>7)</label>
                         <item>Von <persName ref="#p0659" type="bi">Hasselbach</persName>, <title ref="#w04401"><hi rend="latin"><foreign xml:lang="la"
-                                        >de carmine bucolico</foreign></hi></title>;<note resp="#sabine.seifert">Übersetzung: Über bukolische
-                                Gedichte. Die Bukolik ist eine in der Antike entstandene literarische Gattung.</note></item>
+                                        >de carmine bucolico</foreign></hi></title>;<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über
+                                    bukolische Gedichte. Die Bukolik ist eine in der Antike entstandene literarische Gattung.</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note></item>
                         <lb/>
                         <label>8)</label>
                         <item>Von <persName ref="#p0660" type="bi">Kalisch</persName>
@@ -435,8 +447,8 @@
                                         <abbr>Liv.</abbr>
                                         <expan>Livius</expan>
                                     </choice></persName>
-                                <rs ref="#w00366" type="bi">VII,2.</rs></title>;<note resp="#sabine.seifert">Es handelt sich um das Werk <title
-                                    ref="#w00366">Ab urbe condita</title>.</note></item>
+                                <rs ref="#w00366" type="bi">VII,2.</rs></title>;<note resp="#sabine.seifert"><p xml:lang="de">Es handelt sich um das
+                                    Werk <title ref="#w00366">Ab urbe condita</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>10)</label>
                         <item>Von <persName ref="#p1140" type="bi">Weiß</persName>, <title ref="#w04398">über ein Fragment des <persName ref="#p1156"
@@ -607,10 +619,11 @@
                         <item><persName ref="#p0670" type="bi"><choice>
                                     <abbr>Heinr. Wilh.</abbr>
                                     <expan>Heinrich Wilhelm</expan>
-                                </choice> Müller</persName>,<note resp="#sabine.seifert">Hier handelt es sich um den späteren Dichter der Romantik,
-                                dessen Gedichte durch die Vertonungen <persName ref="#p1948" type="bi">Franz Schuberts</persName> Bekanntheit
-                                erlangten. Die Angabe des Vornamens Heinrich ist falsch, der korrekte vollständige Name lautet <persName ref="#p0670"
-                                    type="bi">Johann Ludwig Wilhelm Müller</persName>.</note>
+                                </choice> Müller</persName>,<note resp="#sabine.seifert"><p xml:lang="de">Hier handelt es sich um den späteren Dichter
+                                    der Romantik, dessen Gedichte durch die Vertonungen <persName ref="#p1948" type="bi">Franz Schuberts</persName>
+                                    Bekanntheit erlangten. Die Angabe des Vornamens Heinrich ist falsch, der korrekte vollständige Name lautet
+                                        <persName ref="#p0670" type="bi">Johann Ludwig Wilhelm Müller</persName>.</p><p xml:lang="en"/><p
+                                    xml:lang="fr"/></note>
                             <choice>
                                 <abbr>}</abbr>
                                 <expan>aus <placeName ref="#l0268" type="bi">Dessau</placeName>.</expan>
@@ -639,29 +652,31 @@
                         <lb/>
                         <label>1)</label>
                         <item>Von <persName ref="#p0655" type="bi">Helmholz</persName>, <title ref="#w04439"><hi rend="latin"><foreign xml:lang="la"
-                                        >de indole tragoediae Græcæ</foreign></hi></title>;<note resp="#sabine.seifert">Übersetzung: Über den
-                                Charakter der griechischen Tragödie. Im <ref
-                                    target="tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief001BoeckhanInnenministerium#3">Jahresbericht
-                                    1812, S. 3</ref> schreibt <persName ref="#p0178" type="bi">Boeckh</persName>, die Arbeit handele vom Chor in der
-                                griechischen Tragödie.</note></item>
+                                        >de indole tragoediae Græcæ</foreign></hi></title>;<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung:
+                                    Über den Charakter der griechischen Tragödie. Im <ref
+                                        target="tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief001BoeckhanInnenministerium#3"
+                                        >Jahresbericht 1812, S. 3</ref> schreibt <persName ref="#p0178" type="bi">Boeckh</persName>, die Arbeit
+                                    handele vom Chor in der griechischen Tragödie.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>2)</label>
                         <item>Von <persName ref="#p0657" type="bi">Pfefferkorn</persName>, <title ref="#w04410"><hi rend="latin"><foreign
                                         xml:lang="la">Historia artis oratoriæ apud Romanos ante <persName ref="#p0003" type="bi">Cicero<lb break="no"
-                                            />nem</persName></foreign></hi></title>;<note resp="#sabine.seifert">Übersetzung: Geschichte der Redekunst
-                                bei den Römern vor <persName ref="#p0003" type="bi">Cicero</persName>.</note></item>
+                                            />nem</persName></foreign></hi></title>;<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung:
+                                    Geschichte der Redekunst bei den Römern vor <persName ref="#p0003" type="bi">Cicero</persName>.</p><p
+                                    xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>3)</label>
                         <item>Von <persName ref="#p0654" type="bi">Wernike</persName>, <title ref="#w04404"><hi rend="latin"><foreign xml:lang="la">de
                                             <title ref="#w00374">Priapeis</title> atque eorum auctoribus</foreign></hi></title>;<note
-                                resp="#sabine.seifert">Übersetzung: Über die <title ref="#w00374">Priapea</title> und deren Verfasser.</note></item>
+                                resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über die <title ref="#w00374">Priapea</title> und deren
+                                    Verfasser.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         <lb/>
                         <label>4)</label>
                         <item>Von <persName ref="#p0659" type="bi">Hasselbach</persName>, <title ref="#w04408"><hi rend="latin"><foreign xml:lang="la"
                                         >de <title ref="#w00387">Philocteta</title>
-                                        <persName ref="#p0192" type="bi">Sophoclis</persName></foreign></hi></title>.<note resp="#sabine.seifert"
-                                >Übersetzung: Über den <title ref="#w00387">Philoktetes</title> des <persName ref="#p0192" type="bi"
-                                    >Sophokles</persName>.</note></item>
+                                        <persName ref="#p0192" type="bi">Sophoclis</persName></foreign></hi></title>.<note resp="#sabine.seifert"><p
+                                    xml:lang="de">Übersetzung: Über den <title ref="#w00387">Philoktetes</title> des <persName ref="#p0192" type="bi"
+                                        >Sophokles</persName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                     </list></p>
                 <lb/>
                 <p>Die <rs ref="#w04439" type="bi">erste</rs> war, wie die Fähigkeiten und Kenntnisse des <rs ref="#p0655" type="bi"><choice>
@@ -677,9 +692,9 @@
                     </subst>ssen; die <rs ref="#w04410" type="bi">zweite</rs> enthält einen fleissigen Anfang zu einer Sammlung der<lb/>Bruchstücke
                     der Römischen Redner vor <persName ref="#p0003" type="bi">Cicero</persName>, und würde bei längerem Aufenthalt <pb
                         facs="00000055b.jpg" n="3"/>
-                    <note place="margin-right" type="foliation">
+                    <note place="margin(right)" type="foliation">
                         <subst hand="#blue_pen">
-                            <del rend="overwritten"><seg hand="#pencil">33</seg>
+                            <del rend="overwritten"><add hand="#pencil">33</add>
                             </del>
                             <add place="across">33</add>
                         </subst>
@@ -733,10 +748,11 @@
                                                 <abbr>γ</abbr>
                                                 <expan>γάμμα</expan>
                                             </choice>.180. <quote>εἴποτʼ ἔην γε</quote>
-                                        </foreign></hi>?<note resp="#sabine.seifert">Übersetzung: Wie muss die Stelle in <persName ref="#p0033"
-                                            type="bi">Homers</persName>
-                                        <title ref="#w00382">Ilias</title> 3,180 <hi rend="greek"><foreign xml:lang="grc"><quote>εἴποτʼ ἔην γε</quote>
-                                            </foreign></hi> interpretiert werden?</note></item>
+                                        </foreign></hi>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie muss die Stelle in <persName
+                                                ref="#p0033" type="bi">Homers</persName>
+                                            <title ref="#w00382">Ilias</title> 3,180 <hi rend="greek"><foreign xml:lang="grc"><quote>εἴποτʼ ἔην
+                                                        γε</quote>
+                                                </foreign></hi> interpretiert werden?</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>2.</label>
                                 <item>Nonne omittenda sunt verba <hi rend="greek"><foreign xml:lang="grc"><quote>τὴν ἀκοὴν</quote>
@@ -749,19 +765,19 @@
                                             <abbr>Herodot.</abbr>
                                             <expan>Herodotum</expan>
                                         </choice></persName>
-                                    <rs ref="#w00442" type="bi">I.38.</rs>?<note resp="#sabine.seifert">Übersetzung: Müssen die Wörter <hi
-                                            rend="greek"><foreign xml:lang="grc"><quote>τὴν ἀκοὴν</quote>
-                                            </foreign></hi> ["bezüglich des Gehörs/am Gehör"] nicht ausgelassen werden bei <persName ref="#p1021"
-                                            type="bi">Herodot</persName>
-                                        <rs ref="#w00442" type="bi">I.38</rs>?<lb rend="both"/>Diese Frage bezieht sich auf die Stelle <rs
-                                            ref="#w00442" type="bi">1,38,2</rs>: <quote><hi rend="greek"><foreign xml:lang="grc">τὸν γὰρ δὴ ἕτερον
-                                                    διεφθαρμένον τὴν ἀκοὴν οὐκ εἶναι μοι λογίζομαι</foreign></hi></quote> ["auf den anderen [Sohn],
-                                        der am Gehör geschädigt ist, zähle ich nicht mehr".] In der <rs ref="#w00146" type="bi"
-                                            >Oxford-Textausgabe</rs> von <persName ref="#p0149" type="bi">Hude</persName> (ab 3. Aufl. 1928) werden
-                                        die Wörter <hi rend="greek"><foreign xml:lang="grc"><quote>τὴν ἀκοὴν</quote>
-                                            </foreign></hi> athetiert, der Editor der <rs ref="#w01259" type="bi">Teubner-Edition</rs>
-                                        <persName ref="#p1897" type="bi">Rosén</persName> (Leipzig 1987) behält sie im Text.</note><lb/><del
-                                        rend="erasure"><gap extent="1s" reason="illegible"/></del></item>
+                                    <rs ref="#w00442" type="bi">I.38.</rs>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Müssen die
+                                            Wörter <hi rend="greek"><foreign xml:lang="grc"><quote>τὴν ἀκοὴν</quote>
+                                                </foreign></hi> ["bezüglich des Gehörs/am Gehör"] nicht ausgelassen werden bei <persName ref="#p1021"
+                                                type="bi">Herodot</persName>
+                                            <rs ref="#w00442" type="bi">I.38</rs>?<lb rend="both"/>Diese Frage bezieht sich auf die Stelle <rs
+                                                ref="#w00442" type="bi">1,38,2</rs>: <quote><hi rend="greek"><foreign xml:lang="grc">τὸν γὰρ δὴ ἕτερον
+                                                        διεφθαρμένον τὴν ἀκοὴν οὐκ εἶναι μοι λογίζομαι</foreign></hi></quote> ["auf den anderen
+                                            [Sohn], der am Gehör geschädigt ist, zähle ich nicht mehr".] In der <rs ref="#w00146" type="bi"
+                                                >Oxford-Textausgabe</rs> von <persName ref="#p0149" type="bi">Hude</persName> (ab 3. Aufl. 1928)
+                                            werden die Wörter <hi rend="greek"><foreign xml:lang="grc"><quote>τὴν ἀκοὴν</quote>
+                                                </foreign></hi> athetiert, der Editor der <rs ref="#w01259" type="bi">Teubner-Edition</rs>
+                                            <persName ref="#p1897" type="bi">Rosén</persName> (Leipzig 1987) behält sie im Text.</p><p xml:lang="en"
+                                            /><p xml:lang="fr"/></note><lb/><del rend="erasure"><gap extent="1s" reason="illegible"/></del></item>
                                 <lb/>
                                 <label>3.</label>
                                 <item>Quomodo explicanda sunt verba <persName ref="#p1021" type="bi">Herodoti</persName>
@@ -772,13 +788,13 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>. Numque is locus sanus est, an<lb/>eget emendatione?<note resp="#sabine.seifert">Übersetzung: Wie sind
-                                        die Worte <persName ref="#p1021" type="bi">Herodots</persName>
-                                        <rs ref="#w00442" type="bi">V,68</rs>
-                                        <hi rend="greek"><foreign xml:lang="grc"><quote>ἐπὶ γὰρ ὑός τε ... αὐτὰ τὰ τελευταῖα ἐπέθηκε</quote>
-                                            </foreign></hi> etc. zu erklären, wo vom Tyrannen <persName ref="#p1688" type="bi">Kleisthenes</persName>
-                                        gesagt wird, dass er die Sikyonier aufs heftigste verhöhnt habe? Ist diese Stelle korrekt oder bedarf sie
-                                        einer Emendation?</note></item>
+                                    </choice>. Numque is locus sanus est, an<lb/>eget emendatione?<note resp="#sabine.seifert"><p xml:lang="de"
+                                            >Übersetzung: Wie sind die Worte <persName ref="#p1021" type="bi">Herodots</persName>
+                                            <rs ref="#w00442" type="bi">V,68</rs>
+                                            <hi rend="greek"><foreign xml:lang="grc"><quote>ἐπὶ γὰρ ὑός τε ... αὐτὰ τὰ τελευταῖα ἐπέθηκε</quote>
+                                                </foreign></hi> etc. zu erklären, wo vom Tyrannen <persName ref="#p1688" type="bi"
+                                                >Kleisthenes</persName> gesagt wird, dass er die Sikyonier aufs heftigste verhöhnt habe? Ist diese
+                                            Stelle korrekt oder bedarf sie einer Emendation?</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>4.</label>
                                 <item><persName ref="#p0192" type="bi">Sophocles</persName> in <title ref="#w00443">Aiace</title> flagellifero <choice>
@@ -792,15 +808,16 @@
                                         ref="#l0769" type="bi">Hellesponto</placeName> quasi de<lb/>freto uno atque eodem loquuntur<subst>
                                         <del rend="overwritten"> ? n</del>
                                         <add place="across">. N</add>
-                                    </subst>um confundere poterant?<lb/>an alia ratione explicari ii loci possunt?<note resp="#sabine.seifert"
-                                        >Übersetzung: <persName ref="#p0192" type="bi">Sophokles</persName> im <title ref="#w00443">Aias</title>, V.
-                                        884, und vor ihm <persName ref="#p0353" type="bi">Aischylos</persName> in den <title ref="#w01262"
-                                            >Persern</title>, V.721f. und 745f., sprechen von <placeName ref="#l0768" type="bi">Bosporus</placeName>
-                                        und <placeName ref="#l0769" type="bi">Hellespont</placeName> gleichsam als ein und derselben Meerenge. Konnten
-                                        sie [sie] verwechseln? Oder sind diese Stellen auf andere Weise zu erklären?<lb rend="both"/>Im lateinischen
-                                        Text der Aufgabenstellung fehlt entweder ein "eos": "Konnten sie [Sophokles, Aischylos] (sie) [Bosporus,
-                                        Hellespont] verwechseln." - oder es steht grammatikalisch falsch "confundere"(aktiv) für "confundi" (passiv):
-                                        "Konnten sie [Bosporus, Hellespont] verwechsel(t werde)n."</note></item>
+                                    </subst>um confundere poterant?<lb/>an alia ratione explicari ii loci possunt?<note resp="#sabine.seifert"><p
+                                            xml:lang="de">Übersetzung: <persName ref="#p0192" type="bi">Sophokles</persName> im <title ref="#w00443"
+                                                >Aias</title>, V. 884, und vor ihm <persName ref="#p0353" type="bi">Aischylos</persName> in den <title
+                                                ref="#w01262">Persern</title>, V.721f. und 745f., sprechen von <placeName ref="#l0768" type="bi"
+                                                >Bosporus</placeName> und <placeName ref="#l0769" type="bi">Hellespont</placeName> gleichsam als ein
+                                            und derselben Meerenge. Konnten sie [sie] verwechseln? Oder sind diese Stellen auf andere Weise zu
+                                                erklären?<lb rend="both"/>Im lateinischen Text der Aufgabenstellung fehlt entweder ein "eos": "Konnten
+                                            sie [Sophokles, Aischylos] (sie) [Bosporus, Hellespont] verwechseln." - oder es steht grammatikalisch
+                                            falsch "confundere"(aktiv) für "confundi" (passiv): "Konnten sie [Bosporus, Hellespont] verwechsel(t
+                                            werde)n."</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>5.</label>
                                 <item>Quomodo interpretanda sunt verba <persName ref="#p0215" type="bi">Plutarchi</persName>
@@ -815,17 +832,19 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: Wie sind die Worte <hi rend="greek"><foreign xml:lang="grc"
-                                                    ><quote>οἷα καὶ πρὸς Ἀνδρίους</quote>
-                                            </foreign></hi> etc. in <persName ref="#p0215" type="bi">Plutarchs</persName>
-                                        <title ref="#w00444">Themistokles</title>, 122 C, zu verstehen?</note> Eine unbedeutende Frage.</item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie sind die Worte <hi rend="greek"><foreign
+                                                    xml:lang="grc"><quote>οἷα καὶ πρὸς Ἀνδρίους</quote>
+                                                </foreign></hi> etc. in <persName ref="#p0215" type="bi">Plutarchs</persName>
+                                            <title ref="#w00444">Themistokles</title>, 122 C, zu verstehen?</p><p xml:lang="en"/><p xml:lang="fr"
+                                        /></note> Eine unbedeutende Frage.</item>
                                 <lb/>
                                 <label>6.</label>
                                 <item>Emendetur locus <title ref="#w01630">Anacreontici carminis</title> 49. <choice>
                                         <abbr>vs.</abbr>
                                         <expan>versos</expan>
-                                    </choice> 25 &amp; 26.<note resp="#sabine.seifert">Übersetzung: Im <title ref="#w01630">Anacreonteum</title> 49,
-                                        V. 25f. soll [der Text kritisch] verbessert werden.</note></item>
+                                    </choice> 25 &amp; 26.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Im <title ref="#w01630"
+                                                >Anacreonteum</title> 49, V. 25f. soll [der Text kritisch] verbessert werden.</p><p xml:lang="en"/><p
+                                            xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>7.</label>
                                 <item>Quomodo explicandus aut restituendus locus <persName ref="#p0070" type="bi">Ovidii</persName>
@@ -833,12 +852,12 @@
                                             <abbr>Amor.</abbr>
                                             <expan>Amores</expan>
                                         </choice></title> I,8,<lb/>65. <quote>Nec te decipiant veteres quinquatria ceræ</quote>?<note
-                                        resp="#sabine.seifert">Übersetzung: Wie ist die Textpassage in <persName ref="#p0070" type="bi"
-                                            >Ovids</persName>
-                                        <title ref="#w00445">Amores</title> 1,8,65 <quote>Nec te decipiant veteres quinquatria ceræ</quote> zu
-                                        erklären oder [textkritisch] wiederherzustellen?<lb rend="both"/>Moderne Ausgaben drucken meist statt des
-                                        einhellig in den Handschriften überlieferten, aber nicht recht erklärbaren "quinquatria" die Konjektur "circum
-                                        atria".</note></item>
+                                        resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie ist die Textpassage in <persName ref="#p0070"
+                                                type="bi">Ovids</persName>
+                                            <title ref="#w00445">Amores</title> 1,8,65 <quote>Nec te decipiant veteres quinquatria ceræ</quote> zu
+                                            erklären oder [textkritisch] wiederherzustellen?<lb rend="both"/>Moderne Ausgaben drucken meist statt des
+                                            einhellig in den Handschriften überlieferten, aber nicht recht erklärbaren "quinquatria" die Konjektur
+                                            "circum atria".</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>8.</label>
                                 <item>Exponantur verba <persName ref="#p0192" type="bi"><choice>
@@ -849,19 +868,22 @@
                                             <abbr>Antig.</abbr>
                                             <expan>Antigone</expan>
                                         </choice></title> 782. <hi rend="greek"><foreign xml:lang="grc"><quote>Ἔρως, ὃς ἐν κτήμασι πίπτεις.</quote>
-                                        </foreign></hi>?<note resp="#sabine.seifert">Übersetzung: Es sollen die Worte <quote><foreign xml:lang="grc"
-                                                >Ἔρως, ὃς ἐν κτήμασι πίπτεις</foreign></quote> ("Eros, der du über Güter herfällst" [<rs ref="#w02171"
-                                            type="bi">Schadewaldt 1974</rs>]) in <persName ref="#p0192" type="bi">Sophokles'</persName>
-                                        <title ref="#w00368">Antigone</title>, V. 782, erläutert werden.</note></item>
+                                        </foreign></hi>?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Es sollen die Worte <quote><foreign
+                                                    xml:lang="grc">Ἔρως, ὃς ἐν κτήμασι πίπτεις</foreign></quote> ("Eros, der du über Güter herfällst"
+                                                [<rs ref="#w02171" type="bi">Schadewaldt 1974</rs>]) in <persName ref="#p0192" type="bi"
+                                                >Sophokles'</persName>
+                                            <title ref="#w00368">Antigone</title>, V. 782, erläutert werden.</p><p xml:lang="en"/><p xml:lang="fr"
+                                        /></note></item>
                                 <lb/>
                                 <label>9.</label>
                                 <item>Quomodo interpretandus est locus <persName ref="#p0353" type="bi">Aeschÿli</persName>
                                     <title ref="#w00449"><choice>
                                             <abbr>Suppl.</abbr>
                                             <expan>Supplices</expan>
-                                        </choice></title> 856 — 863.<lb/>item 841 — 850.<note resp="#sabine.seifert">Übersetzung: Wie ist die
-                                        Textpassage in <persName ref="#p0353" type="bi">Aischylos</persName>' <title ref="#w00449">Supplices</title>
-                                        V.856-863 zu interpretieren? Und ebenso 841-850?</note></item>
+                                        </choice></title> 856 — 863.<lb/>item 841 — 850.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie
+                                            ist die Textpassage in <persName ref="#p0353" type="bi">Aischylos</persName>' <title ref="#w00449"
+                                                >Supplices</title> V.856-863 zu interpretieren? Und ebenso 841-850?</p><p xml:lang="en"/><p
+                                            xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>10.</label>
                                 <item>Restituatur locus <persName ref="#p1022" type="bi"><choice>
@@ -876,11 +898,12 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: Man stelle die Textpassage in <persName ref="#p1022" type="bi"
-                                            >Xenophons</persName>
-                                        <title ref="#w02172">Historia Graeca</title> 1,6,5 <hi rend="greek"><foreign xml:lang="grc"><quote>ὑμεῖς
-                                                    δὲ</quote>
-                                            </foreign></hi> etc. [textkritisch] wieder her.</note> Unbedeutend.</item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Man stelle die Textpassage in <persName
+                                                ref="#p1022" type="bi">Xenophons</persName>
+                                            <title ref="#w02172">Historia Graeca</title> 1,6,5 <hi rend="greek"><foreign xml:lang="grc"><quote>ὑμεῖς
+                                                        δὲ</quote>
+                                                </foreign></hi> etc. [textkritisch] wieder her.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                                    Unbedeutend.</item>
                                 <lb/>
                                 <label>11.</label>
                                 <item>Quomodo explicanda sunt verba Ismenæ <choice>
@@ -898,8 +921,9 @@
                                         </choice></title><lb/><choice>
                                         <abbr>vs.</abbr>
                                         <expan>versos</expan>
-                                    </choice> 39, 40.?<note resp="#sabine.seifert">Übersetzung: Wie sind Ismenes Worte in <persName ref="#p0192"
-                                            type="bi">Sophokles</persName>' <title ref="#w00368">Antigone</title> V. 39f. zu erklären?</note></item>
+                                    </choice> 39, 40.?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Wie sind Ismenes Worte in <persName
+                                                ref="#p0192" type="bi">Sophokles</persName>' <title ref="#w00368">Antigone</title> V. 39f. zu
+                                            erklären?</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>12.</label>
                                 <item>Illustrentur verba <persName ref="#p0353" type="bi">Aeschÿli</persName>
@@ -908,17 +932,18 @@
                                             <expan>Agamemnon</expan>
                                         </choice></title> 817. <hi rend="greek"><foreign xml:lang="grc"><quote>τῷ δʼ ἐναντίῳ κύτει<lb/>ἐλπὶς προσῄει,
                                                 χειρὸς οὐ πληρουμένῳ.</quote>
-                                        </foreign></hi><note resp="#sabine.seifert">Übersetzung: Man erläutere die Textpassage in <persName
-                                            ref="#p0353" type="bi">Aischylos</persName>' <title ref="#w00446">Agamemnon</title> 817 <hi rend="greek"
-                                                ><foreign xml:lang="grc"><quote>τῷ δʼ ἐναντίῳ κύτει ἐλπὶς προσῄει, χειρὸς οὐ πληρουμένῳ.</quote>
-                                            </foreign></hi><lb rend="both"/>In der <rs ref="#w02173" type="bi">Aischylos-Ausgabe von West</rs>
-                                        (Leipzig 1990) findet sich die Textstelle in V. 816b/817. Dort wird auch geschrieben: <hi rend="greek"
-                                                ><foreign xml:lang="grc"><quote>Ἐλπὶς</quote>
-                                            </foreign></hi>. Die vertrackt formulierte Stelle "dem entgegengesetzten Gefäß / kam nur die Hoffnung
-                                        nahe, es wurde nicht von einer Hand gefüllt" bezieht sich in der Rede Agamemnons auf den Untergang <placeName
-                                            ref="#l0149" type="bi">Trojas</placeName>. Alle Götter stimmten für den Untergang, dem Gefäß für
-                                        Freispruch [das andere Gefäß, i.d. die Wahlurne] näherte sich nur die Hoffnung, aber keine Hand warf einen
-                                        Stimmstein ein.</note></item>
+                                        </foreign></hi><note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Man erläutere die Textpassage in
+                                                <persName ref="#p0353" type="bi">Aischylos</persName>' <title ref="#w00446">Agamemnon</title> 817 <hi
+                                                rend="greek"><foreign xml:lang="grc"><quote>τῷ δʼ ἐναντίῳ κύτει ἐλπὶς προσῄει, χειρὸς οὐ
+                                                        πληρουμένῳ.</quote>
+                                                </foreign></hi><lb rend="both"/>In der <rs ref="#w02173" type="bi">Aischylos-Ausgabe von West</rs>
+                                            (Leipzig 1990) findet sich die Textstelle in V. 816b/817. Dort wird auch geschrieben: <hi rend="greek"
+                                                    ><foreign xml:lang="grc"><quote>Ἐλπὶς</quote>
+                                                </foreign></hi>. Die vertrackt formulierte Stelle "dem entgegengesetzten Gefäß / kam nur die Hoffnung
+                                            nahe, es wurde nicht von einer Hand gefüllt" bezieht sich in der Rede Agamemnons auf den Untergang
+                                                <placeName ref="#l0149" type="bi">Trojas</placeName>. Alle Götter stimmten für den Untergang, dem
+                                            Gefäß für Freispruch [das andere Gefäß, i.d. die Wahlurne] näherte sich nur die Hoffnung, aber keine Hand
+                                            warf einen Stimmstein ein.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>13.</label>
                                 <item>Explicetur versus <persName ref="#p1517" type="bi">Theocriti</persName>
@@ -927,10 +952,11 @@
                                     <choice>
                                         <abbr>&amp;c</abbr>
                                         <expan>et cetera</expan>
-                                    </choice>.<note resp="#sabine.seifert">Übersetzung: Man erkläre <persName ref="#p1517" type="bi"
-                                            >Theokrits</persName> Vers <title ref="#w02176">Idylle</title> 18,26 <hi rend="greek"><foreign
-                                                xml:lang="grc"><quote>Ἀὼς ἀντέλλοισα</quote>
-                                            </foreign></hi> ("die aufsteigende Morgenröte") etc.</note></item>
+                                    </choice>.<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Man erkläre <persName ref="#p1517" type="bi"
+                                                >Theokrits</persName> Vers <title ref="#w02176">Idylle</title> 18,26 <hi rend="greek"><foreign
+                                                    xml:lang="grc"><quote>Ἀὼς ἀντέλλοισα</quote>
+                                                </foreign></hi> ("die aufsteigende Morgenröte") etc.</p><p xml:lang="en"/><p xml:lang="fr"
+                                    /></note></item>
                                 <lb/>
                                 <label>14.</label>
                                 <item>In <persName ref="#p0192" type="bi"><choice>
@@ -949,17 +975,18 @@
                                             <expan>Erfurdti</expan>
                                         </choice></persName> ubi scribitur <hi rend="greek"><foreign xml:lang="grc"><quote>ἢ νῦν φέρει,</quote>
                                         </foreign></hi> alii<lb/>legunt <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει.</quote>
-                                        </foreign></hi> Utra lectio præferenda?<note resp="#sabine.seifert">Übersetzung: In <persName ref="#p0192"
-                                            type="bi">Sophokles</persName>' <title ref="#w00368">Antigone</title> V. 1077 der <rs ref="#w02174"
-                                            type="bi">Edition</rs> von <persName ref="#p1082" type="bi">Erfurdt</persName>, wo geschrieben steht <hi
-                                            rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει,</quote>
-                                            </foreign></hi> lesen andere <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει.</quote>
-                                            </foreign></hi> Welche der beiden Lesarten ist vorzuziehen?<lb rend="both"/>In der modernen Ausgabe von
-                                            <rs ref="#w02175" type="bi">Lloyd-Jones/Wilson</rs> (Oxford 1990) hat der Vers die Zahl 1090 und die
-                                        Editoren drucken <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει,</quote>
-                                            </foreign></hi> was eine Konjektur von <persName ref="#p1075" type="bi">Brunck</persName> ist, <hi
-                                            rend="greek"><foreign xml:lang="grc"><quote>ἢ νῦν φέρει</quote>
-                                            </foreign></hi> ist die Lesart aller Handschriften.</note></item>
+                                        </foreign></hi> Utra lectio præferenda?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: In <persName
+                                                ref="#p0192" type="bi">Sophokles</persName>' <title ref="#w00368">Antigone</title> V. 1077 der <rs
+                                                ref="#w02174" type="bi">Edition</rs> von <persName ref="#p1082" type="bi">Erfurdt</persName>, wo
+                                            geschrieben steht <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει,</quote>
+                                                </foreign></hi> lesen andere <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει.</quote>
+                                                </foreign></hi> Welche der beiden Lesarten ist vorzuziehen?<lb rend="both"/>In der modernen Ausgabe
+                                            von <rs ref="#w02175" type="bi">Lloyd-Jones/Wilson</rs> (Oxford 1990) hat der Vers die Zahl 1090 und die
+                                            Editoren drucken <hi rend="greek"><foreign xml:lang="grc"><quote>ὧν νῦν φέρει,</quote>
+                                                </foreign></hi> was eine Konjektur von <persName ref="#p1075" type="bi">Brunck</persName> ist, <hi
+                                                rend="greek"><foreign xml:lang="grc"><quote>ἢ νῦν φέρει</quote>
+                                                </foreign></hi> ist die Lesart aller Handschriften.</p><p xml:lang="en"/><p xml:lang="fr"
+                                    /></note></item>
                                 <lb/>
                                 <label>15.</label>
                                 <item>Utrum apud <persName ref="#p0961" type="bi"><choice>
@@ -967,19 +994,20 @@
                                             <expan>Gellium</expan>
                                         </choice></persName>
                                     <rs ref="#w00447" type="bi">II, 21.</rs> legendum est Opicii an opici, et quo<lb break="no"/>modo alterutra lectio
-                                        explicanda?<note resp="#sabine.seifert">Übersetzung: Ob bei <persName ref="#p0961" type="bi"
-                                            >Gellius</persName>
-                                        <rs ref="#w00447" type="bi">2,21</rs> "Opicii" oder "opici" zu lesen ist, und auf welche Weise jede der beiden
-                                        Lesarten zu erläutern ist.</note></item>
+                                        explicanda?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Ob bei <persName ref="#p0961" type="bi"
+                                                >Gellius</persName>
+                                            <rs ref="#w00447" type="bi">2,21</rs> "Opicii" oder "opici" zu lesen ist, und auf welche Weise jede der
+                                            beiden Lesarten zu erläutern ist.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>16.</label>
                                 <item>Qua ratione expediendæ sunt difficultates, quibus <persName ref="#p0916" type="bi">Catulli</persName>
                                     <title ref="#w00448">car<lb break="no"/>men</title> secundum inde a <choice>
                                         <abbr>vs.</abbr>
                                         <expan>versus</expan>
-                                    </choice> 5. laborat?<note resp="#sabine.seifert">Übersetzung: Auf welche Weise sind die Schwierigkeiten zu
-                                        beseitigen, mit denen <persName ref="#p0916" type="bi">Catull</persName> in <title ref="#w00448"
-                                            >carmen</title> 2 ab Vers 5 behaftet ist?</note></item>
+                                    </choice> 5. laborat?<note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Auf welche Weise sind die
+                                            Schwierigkeiten zu beseitigen, mit denen <persName ref="#p0916" type="bi">Catull</persName> in <title
+                                                ref="#w00448">carmen</title> 2 ab Vers 5 behaftet ist?</p><p xml:lang="en"/><p xml:lang="fr"
+                                    /></note></item>
                             </list></hi></foreign>
                 </p>
                 <lb/>
@@ -1094,8 +1122,8 @@
                             <abbr>d.</abbr>
                             <expan>den</expan>
                         </choice>
-                        <date when-iso="1813-09-26">26. September 1813.</date></dateline><lb/><lb/><signed rend="align(right)">Der Director des
-                            <orgName ref="#g0079" type="bi"><choice>
+                        <date when-iso="1813-09-26">26. September 1813.</date></dateline><lb/><lb/>
+                    <signed rend="align(right)">Der Director des <orgName ref="#g0079" type="bi"><choice>
                                 <abbr>philolog.</abbr>
                                 <expan>philologischen</expan>
                             </choice> Seminars</orgName><lb/>der hiesigen <orgName ref="#g0122" type="bi">Universität</orgName>.<lb/><hi rend="latin"

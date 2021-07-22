@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -51,8 +52,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -214,8 +221,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief007BoeckhanInnenministerium.xml to
                 Brief007Boeckh and updated content of element correspContext.</change>
             <change when-iso="2020-03-20" who="#sabine.seifert">Minor correction in markup.</change>
@@ -229,24 +237,25 @@
         <body>
             <div type="transcription">
                 <pb facs="00000298b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">165</seg>
+                        <del rend="overwritten"><add hand="#pencil">165</add>
                         </del>
                         <add place="across">165</add>
                     </subst>
                 </note>
-                <note place="margin-left">Schleunig zu mundiren, <choice>
-                        <abbr>u</abbr>
-                        <expan>und</expan>
-                    </choice> auf gewöhnliche<lb/>Weise zu expediren.<lb/><signed><persName ref="#p0178" type="bi">Böckh</persName></signed><lb/><choice>
-                        <abbr>d</abbr>
-                        <expan>den</expan>
-                    </choice>
-                    <date when-iso="1822-11-19">19. <choice>
-                            <abbr>Nov.</abbr>
-                            <expan>November</expan>
-                        </choice> 22.</date></note>
+                <opener><salute rend="margin(left)">Schleunig zu mundiren, <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> auf gewöhnliche<lb/>Weise zu expediren.</salute><lb/><signed rend="margin(left)"><persName ref="#p0178" type="bi"
+                            >Böckh</persName></signed><lb/><dateline rend="margin(left)"><choice>
+                            <abbr>d</abbr>
+                            <expan>den</expan>
+                        </choice>
+                        <date when-iso="1822-11-19">19. <choice>
+                                <abbr>Nov.</abbr>
+                                <expan>November</expan>
+                            </choice> 22.</date></dateline></opener>
                 <p>Ein hohes <orgName ref="#g0064" type="bi">Ministerium der geistlichen, Unter<lb break="no"/>richts<pc>=</pc> und
                         Medicinalangelegenheiten</orgName>, Unter<lb break="no"/>richtsabtheilung, hat in dem verehrlichen <ref
                         target="Brief006KultusministeriumanBoeckh.xml">Re<lb break="no"/>script</ref> vom <date when-iso="1822-11-11">11. <choice>
@@ -258,26 +267,28 @@
                         hinzu<lb break="no"/>gefügt und darauf eine Anforderung an mich<lb/>gegründet, welche mir zu bedeutend ist, als<lb/>daß ich
                     nicht einem hohen <orgName ref="#g0064" type="bi">Ministerium</orgName> sogleich<lb/>meine Ansicht darüber gehorsamst
                     vortragen<lb/>sollte.</p>
-                <p>Ein hohes <orgName ref="#g0064" type="bi">Ministerium</orgName> hat nehmlich ungern die<lb/>Correctur<add place="margin-left"> der
+                <p>Ein hohes <orgName ref="#g0064" type="bi">Ministerium</orgName> hat nehmlich ungern die<lb/>Correctur<add place="margin(left)"> der
                         Abhandlungen</add> von Seiten der Direction vermißt,<lb/>da doch von den Directionen der übrigen philo<lb break="no"
                     />logischen Seminarien die schriftlichen Ausarbei<lb break="no"/>tungen der Seminaristen, nachdem sie bei den<lb/>Mitgliedern des
-                    Seminars circulirt haben, und<lb/>in den gewöhnlichen Versammlungen<note resp="sabine.seifert">Die Verlesung und Beurteilung der
-                        von den Seminaristen verfaßten Arbeiten bildete eine der drei Übungsformen des Seminars, vgl. dazu das <ref
-                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement+de#4">Reglement §
-                        11,2</ref>.</note> vorgelesen<lb/>und besprochen worden, genau und sorgfältig<lb/>corrigirt, und am Schluße jeder
-                    Abhandlung<lb/>die schriftlichen Urtheile über den Werth der<lb/>Abhandlung hinsichtlich des Inhaltes und der<lb/>Form beigefügt
-                    würden; welche zur Beleh<lb break="no"/>rung und Ermunterung der Seminaristen sehr<lb/>zweckmäßige Einrichtung von jetzo an
-                    auch<lb/>bei dem hiesigen <orgName ref="#g0079" type="bi">philologischen Seminar</orgName> in<lb/>Ausübung zu bringen sei.</p>
+                    Seminars circulirt haben, und<lb/>in den gewöhnlichen Versammlungen<note resp="#sabine.seifert"><p xml:lang="de">Die Verlesung und
+                            Beurteilung der von den Seminaristen verfaßten Arbeiten bildete eine der drei Übungsformen des Seminars, vgl. dazu das
+                                <ref target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement+de#4">Reglement §
+                                11,2</ref>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> vorgelesen<lb/>und besprochen worden, genau und
+                    sorgfältig<lb/>corrigirt, und am Schluße jeder Abhandlung<lb/>die schriftlichen Urtheile über den Werth der<lb/>Abhandlung
+                    hinsichtlich des Inhaltes und der<lb/>Form beigefügt würden; welche zur Beleh<lb break="no"/>rung und Ermunterung der Seminaristen
+                    sehr<lb/>zweckmäßige Einrichtung von jetzo an auch<lb/>bei dem hiesigen <orgName ref="#g0079" type="bi">philologischen
+                        Seminar</orgName> in<lb/>Ausübung zu bringen sei.</p>
                 <p>Da das <ref target="Boeckh_Reglement.xml">Reglement</ref> diese Einrichtung nicht vor<lb break="no"/>schreibt, auch seit dem <date
                         when-iso="1812-05">Sommer 1812.</date> seit welcher<lb/>Zeit das hiesige <orgName ref="#g0079" type="bi">philologische
-                        Seminar</orgName> besteht,<note resp="sabine.seifert">Das <orgName ref="#g0079" type="bi">philologische Seminar</orgName>
-                        wurde mit Verabschiedung des <ref target="Boeckh_Reglement.xml">Reglements</ref>, d.i. die Statuten, am <date
-                            when-iso="1812-05-28">28. Mai 1812</date> gegründet.</note><lb/>jetzt zum ersten Mahle dieser Mangel gerügt<lb/>wird, so
-                    erlaube ich mir ganz gehorsamst, einem<lb/>hohen <orgName ref="#g0064" type="bi">Ministerium</orgName> in dieser Hinsicht eine
-                        Ge<lb break="no"/>genvorstellung zu machen: denn ich kann weder<lb/>die Nothwendigkeit noch die Zweckmäßigkeit<lb/>dieser
-                    neuen Einrichtung erkennen. Was die<lb/>Nothwendigkeit betrifft, so fällt diese bei der<lb/>Art, wie die mündlichen Übungen
-                    betrieben<lb/>werden, ganz weg. Die Mitglieder sowohl als ich<lb/>selbst lesen die Abhandlungen, ehe sie öffent<lb break="no"
-                    />lich behandelt werden; hierbei machen jene und<lb/>ich Striche mit der Bleifeder an <del rend="strikethrough">je</del>de<subst>
+                        Seminar</orgName> besteht,<note resp="#sabine.seifert"><p xml:lang="de">Das <orgName ref="#g0079" type="bi">philologische
+                                Seminar</orgName> wurde mit Verabschiedung des <ref target="Boeckh_Reglement.xml">Reglements</ref>, d.i. die Statuten,
+                            am <date when-iso="1812-05-28">28. Mai 1812</date> gegründet.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>jetzt zum
+                    ersten Mahle dieser Mangel gerügt<lb/>wird, so erlaube ich mir ganz gehorsamst, einem<lb/>hohen <orgName ref="#g0064" type="bi"
+                        >Ministerium</orgName> in dieser Hinsicht eine Ge<lb break="no"/>genvorstellung zu machen: denn ich kann weder<lb/>die
+                    Nothwendigkeit noch die Zweckmäßigkeit<lb/>dieser neuen Einrichtung erkennen. Was die<lb/>Nothwendigkeit betrifft, so fällt diese
+                    bei der<lb/>Art, wie die mündlichen Übungen betrieben<lb/>werden, ganz weg. Die Mitglieder sowohl als ich<lb/>selbst lesen die
+                    Abhandlungen, ehe sie öffent<lb break="no"/>lich behandelt werden; hierbei machen jene und<lb/>ich Striche mit der Bleifeder an
+                        <del rend="strikethrough">je</del>de<subst>
                         <del rend="overwritten">r</del>
                         <add place="across">n</add>
                     </subst> Stelle<subst>
@@ -315,15 +326,15 @@
                     meiner Überzeugung<lb/>nach auch auf diese; und in dem Verhältnisse, in<lb/>welchem ich mit den Mitgliedern des <orgName
                         ref="#g0079" type="bi">Seminars</orgName><lb/>stehe, habe ich weit mehr Gelegenheit durch persön<lb break="no"/>liche und
                     mündliche Einwirkung Aufmunterung<lb/>zu geben als durch ein schriftliches Lob, wie<pb facs="00000300b.jpg" n="3"/><note
-                        place="margin-right" type="foliation">
+                        place="margin(right)" type="foliation">
                         <subst hand="#blue_pen">
-                            <del rend="overwritten"><seg hand="#pencil">166</seg>
+                            <del rend="overwritten"><add hand="#pencil">166</add>
                             </del>
                             <add place="across">166</add>
                         </subst>
                     </note>man es einem Schüler unter seine Ausarbeitung<lb/>schreibt; weil der Lehrer auf Schulen nicht alle<lb/>Aufsätze mündlich <subst>
                         <del rend="strikethrough">durchgeht</del>
-                        <add place="margin-left">durchgehen kann</add>
+                        <add place="margin(left)">durchgehen kann</add>
                     </subst> und darum den<lb/>Weg der Schrift <subst>
                         <del rend="strikethrough">wählt</del>
                         <add place="inline">wählen</add>
@@ -334,9 +345,9 @@
                         <add place="above">und</add>
                     </subst> dieselbe für nicht völlig unersprießlich<lb/>und unwirksam hält, mich nicht durch <subst>
                         <del rend="strikethrough"><gap extent="1w" reason="overwritten"/></del>
-                        <add place="margin-left">eine Vorschrift,</add>
+                        <add place="margin(left)">eine Vorschrift,</add>
                     </subst><lb/>die ich nach meinen Ansichten von dem Stand<lb break="no"/>puncte des akademischen Lehrers und seiner Art<lb/>junge
-                    Leute zu bilden, auszuführen unfähig<lb/><note hand="brown_ink" place="margin-left"><hi rend="underline"><choice>
+                    Leute zu bilden, auszuführen unfähig<lb/><note hand="brown_ink" place="margin(left)"><hi rend="underline"><choice>
                                 <abbr>mund</abbr>
                                 <expan>mundiert</expan>
                             </choice></hi><lb/><choice>
@@ -344,22 +355,23 @@
                             <expan>Br:</expan>
                         </choice></note>bin, in meiner Richtung und Thätigkeit irre zu<lb/>machen; und hoffe von <rs ref="#g0064" type="bi"
                         >Hochdesselben</rs> gewohnter<lb/>Huld, daß es mich der neu aufgelegten Pflicht<lb/>entbinden werde, zumahl da auch die
-                    Direction<lb/>des hiesigen <orgName ref="#g0135" type="bi">theologischen Seminars</orgName><note resp="#sabine.seifert">Die
-                        Direktion des <orgName ref="#g0135" type="bi">theologischen Seminars</orgName> hatte der jeweilige Dekan der <orgName
-                            ref="#g0136" type="bi">Theologischen Fakultät</orgName> inne.</note> keine solche<lb/>Verpflichtung hat.</p>
+                    Direction<lb/>des hiesigen <orgName ref="#g0135" type="bi">theologischen Seminars</orgName><note resp="#sabine.seifert"><p
+                            xml:lang="de">Die Direktion des <orgName ref="#g0135" type="bi">theologischen Seminars</orgName> hatte der jeweilige Dekan
+                            der <orgName ref="#g0136" type="bi">Theologischen Fakultät</orgName> inne.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                    keine solche<lb/>Verpflichtung hat.</p>
                 <closer><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>
                         <choice>
                             <abbr>d</abbr>
                             <expan>den</expan>
                         </choice>
                         <date when-iso="1822-11-14">14. November 1822.</date></dateline><lb/><milestone rend="vertical-rule align(center)" unit="none"
-                    /><lb/>Der Director des <orgName ref="#g0079" type="bi"><choice>
-                            <abbr>philol. Sem.</abbr>
-                            <expan>philologischen Seminars</expan>
-                        </choice></orgName><lb/>der hiesigen <orgName ref="#g0122" type="bi"><choice>
-                            <abbr>Univ.</abbr>
-                            <expan>Universität</expan>
-                        </choice></orgName><lb/><signed><persName ref="#p0178" type="bi">Böckh</persName></signed></closer>
+                        /><lb/><signed>Der Director des <orgName ref="#g0079" type="bi"><choice>
+                                <abbr>philol. Sem.</abbr>
+                                <expan>philologischen Seminars</expan>
+                            </choice></orgName><lb/>der hiesigen <orgName ref="#g0122" type="bi"><choice>
+                                <abbr>Univ.</abbr>
+                                <expan>Universität</expan>
+                            </choice></orgName><lb/><persName ref="#p0178" type="bi">Böckh</persName></signed></closer>
             </div>
         </body>
     </text>

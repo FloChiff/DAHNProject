@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -51,8 +52,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -217,8 +224,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url)from Brief002BoeckhanInnenministerium.xml to
                 Brief002Boeckh and updated content of element correspContext.</change>
             <change when-iso="2015-08-01" who="#sabine.seifert">Minor correction.</change>
@@ -247,9 +255,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000050b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">29</seg>
+                        <del rend="overwritten"><add hand="#pencil">29</add>
                         </del>
                         <add place="across">29</add>
                     </subst>
@@ -273,13 +281,13 @@
                         <add place="across">s</add>
                     </subst>
                     <orgName ref="#g0079" type="bi">philologischen Seminars</orgName>, zu zahlen.</p>
-                <closer><hi rend="latin align(center)"><dateline><placeName ref="#l1103" type="bi">Berlin</placeName>
+                <closer><dateline rend="align(center)"><hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName>
                             <choice>
                                 <abbr>d</abbr>
                                 <expan>den</expan>
                             </choice>
-                            <date when-iso="1812-09-03">3 September 1812.</date></dateline></hi><lb/><signed rend="latin align(center)"><orgName
-                            ref="#g0063" type="bi">Departement für den Cultus und <choice>
+                            <date when-iso="1812-09-03">3 September 1812.</date></hi></dateline><lb/>
+                    <signed rend="latin align(center)"><orgName ref="#g0063" type="bi">Departement für den Cultus und <choice>
                                 <abbr>öffentl:</abbr>
                                 <expan>öffentlichen</expan>
                             </choice> Unterricht</orgName><lb/>im <orgName ref="#g0068" type="bi">Ministerio des In̄ern</orgName>.<lb/><add
@@ -292,15 +300,15 @@
                                 >Universität</orgName></addrLine>
                         <addrLine>Herrn Professor <hi rend="latin"><persName ref="#p0178" type="bi">Boeckh</persName></hi></addrLine>
                         <addrLine>hieselbst.</addrLine>
-                    </address></closer>
-                <pb facs="00000058b.jpg" n="2" xml:id="Brief002KultusministeriumanBoeckh-Blatt2v"/>
-                <p><address>
+                    </address>
+                    <pb facs="00000058b.jpg" n="2" xml:id="Brief002KultusministeriumanBoeckh-Blatt2v"/>
+                    <address>
                         <addrLine><hi rend="align(center)">An</hi></addrLine>
                         <addrLine>den Director des <orgName ref="#g0079" type="bi">philologischen Seminarii</orgName> bei hiesiger</addrLine>
                         <addrLine><orgName ref="#g0122" type="bi">Universität</orgName> Herrn Professor <hi rend="latin"><persName ref="#p0178"
                                     type="bi">Boeckh</persName></hi></addrLine>
                         <addrLine><hi rend="underline align(right)">hieselbst</hi></addrLine>
-                    </address></p>
+                    </address></closer>
             </div>
         </body>
     </text>

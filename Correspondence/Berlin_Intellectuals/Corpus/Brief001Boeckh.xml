@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -51,8 +52,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -214,8 +221,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief001BoeckhanInnenministerium.xml to
                 Brief001Boeckh and updated content of element correspContext.</change>
@@ -251,9 +259,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000046b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">27</seg>
+                        <del rend="overwritten"><add hand="#pencil">27</add>
                         </del>
                         <add place="across">27</add>
                     </subst>
@@ -277,10 +285,10 @@
                                         <add place="across">ch</add>
                                     </subst> August Eduard Wernicke</persName></hi> aus <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
                         <lb/>
-                        <item><persName ref="#p0655" type="bi">Johann Friedrich Helmholtz</persName><note resp="#sabine.seifert"><persName
-                                    ref="#p0178" type="bi">Boeckh</persName> verwechselt hier die Vornamen. Gemeint ist <persName ref="#p0655"
-                                    type="bi">August Ferdinand Julius Helmholtz</persName>.</note> aus <placeName ref="#l1103" type="bi"
-                                >Berlin</placeName>,</item>
+                        <item><persName ref="#p0655" type="bi">Johann Friedrich Helmholtz</persName><note resp="#sabine.seifert"><p xml:lang="de"
+                                        ><persName ref="#p0178" type="bi">Boeckh</persName> verwechselt hier die Vornamen. Gemeint ist <persName
+                                        ref="#p0655" type="bi">August Ferdinand Julius Helmholtz</persName>.</p><p xml:lang="en"/><p xml:lang="fr"
+                                /></note> aus <placeName ref="#l1103" type="bi">Berlin</placeName>,</item>
                         <lb/>
                         <item><persName ref="#p0588" type="bi">Carl Gottlob Zumpt</persName> aus <placeName ref="#l1103" type="bi"
                             >Berlin</placeName>,</item>
@@ -289,7 +297,7 @@
                                     rend="latin">Flatow</hi></placeName> in <placeName ref="#l0092" type="bi">Preußen</placeName></item>
                         <lb/>
                         <item><persName ref="#p1137" type="bi">Heinrich Karsten</persName> aus <placeName ref="#l0465" type="bi">Rostock</placeName>,
-                                <add place="margin-right">dieser hat nun <unclear cert="medium" reason="illegible">die</unclear>
+                                <add place="margin(right)">dieser hat nun <unclear cert="medium" reason="illegible">die</unclear>
                                 <choice>
                                     <abbr>Abh.</abbr>
                                     <expan>Abhandlung</expan>
@@ -301,8 +309,9 @@
                                             <abbr>Liv.</abbr>
                                             <expan>Livius</expan>
                                         </choice></persName>
-                                    <rs ref="#w00366" type="bi">VII. 2.</rs></title><note resp="#sabine.seifert">Es handelt sich um das Werk <title
-                                        ref="#w00366">Ab urbe condita</title>.</note></add></item>
+                                    <rs ref="#w00366" type="bi">VII. 2.</rs></title><note resp="#sabine.seifert"><p xml:lang="de">Es handelt sich um
+                                        das Werk <title ref="#w00366">Ab urbe condita</title>.</p><p xml:lang="en"/><p xml:lang="fr"
+                            /></note></add></item>
                         <lb/>
                         <item><persName ref="#p1139" type="bi">Heinrich Johann Theophilus Karsten</persName> aus <placeName ref="#l0468" type="bi"
                                 >Menz</placeName> beÿ<lb/><placeName ref="#l0469" type="bi">Reinsberg</placeName>,</item>
@@ -319,10 +328,11 @@
                         <item><persName ref="#p0659" type="bi"><hi rend="latin">Wilhelm Friedrich Ferdinand Hasselbach</hi></persName>
                                 aus<lb/><placeName ref="#l0250" type="bi">Anklam</placeName>,</item>
                         <lb/>
-                        <item><hi rend="latin"><persName ref="#p1154" type="bi">Wilhelm Carl Koene</persName></hi><note resp="#sabine.seifert">In
-                                    <persName ref="#p1244" type="bi">Bahl</persName>/<persName ref="#p1245" type="bi">Ribbe</persName> (2010): <title
-                                    ref="#w00385">Matrikel</title> wird der Vorname mit "Wolf Koppel" angegeben.</note> aus <placeName ref="#l0262"
-                                type="bi"><hi rend="latin">Stargard</hi> in Pom̄ern</placeName>,</item>
+                        <item><hi rend="latin"><persName ref="#p1154" type="bi">Wilhelm Carl Koene</persName></hi><note resp="#sabine.seifert"><p
+                                    xml:lang="de">In <persName ref="#p1244" type="bi">Bahl</persName>/<persName ref="#p1245" type="bi"
+                                        >Ribbe</persName> (2010): <title ref="#w00385">Matrikel</title> wird der Vorname mit "Wolf Koppel"
+                                    angegeben.</p><p xml:lang="en"/><p xml:lang="fr"/></note> aus <placeName ref="#l0262" type="bi"><hi rend="latin"
+                                    >Stargard</hi> in Pom̄ern</placeName>,</item>
                         <lb/>
                         <item><persName ref="#p1155" type="bi"><hi rend="latin">Marcus Cohen</hi></persName> aus <hi rend="latin"><placeName
                                     ref="#l0404" type="bi">Norden</placeName></hi> in <placeName ref="#l0474" type="bi"
@@ -366,9 +376,9 @@
                                     <abbr>Heinr. Joh.</abbr>
                                     <expan>Heinrich Johann</expan>
                                 </choice> Theophilus Karsten</persName> eine<lb/>Abhandlung <title ref="#w04397"><hi rend="latin"><foreign
-                                        xml:lang="la">de Prætore Romano</foreign></hi></title>,<note resp="#sabine.seifert">Übersetzung: Über den
-                                römischen Statthalter.</note>
-                            <add place="margin-left">Dieser ist <choice>
+                                        xml:lang="la">de Prætore Romano</foreign></hi></title>,<note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Über den römischen Statthalter.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                            <add place="margin(left)">Dieser ist <choice>
                                     <abbr>s<hi n="2" rend="underline superscript">r</hi></abbr>
                                     <expan>seiner</expan>
                                 </choice> Schwäche halber<lb/>wieder abgetreten.</add></item>
@@ -401,10 +411,10 @@
                                 <expan>Studiosus</expan>
                             </choice>
                             <persName ref="#p0659" type="bi">Hasselbach</persName> eine <title ref="#w04401">Abhandlung <hi rend="latin"><foreign
-                                        xml:lang="la">de<lb/>carmine Bucolico</foreign></hi></title><note resp="#sabine.seifert">Übersetzung: Über
-                                bukolische Gedichte.<lb rend="both"/>Die Bukolik ist eine in der Antike entstandene literarische Gattung.</note> nebst
-                            Lateinischer<lb/>und Deutscher Übersetzung einiger Griech<unclear cert="high" reason="damage">i</unclear><lb break="no"
-                            />schen Idÿllen,</item>
+                                        xml:lang="la">de<lb/>carmine Bucolico</foreign></hi></title><note resp="#sabine.seifert"><p xml:lang="de"
+                                    >Übersetzung: Über bukolische Gedichte.<lb rend="both"/>Die Bukolik ist eine in der Antike entstandene
+                                    literarische Gattung.</p><p xml:lang="en"/><p xml:lang="fr"/></note> nebst Lateinischer<lb/>und Deutscher
+                            Übersetzung einiger Griech<unclear cert="high" reason="damage">i</unclear><lb break="no"/>schen Idÿllen,</item>
                         <lb/>
                         <item>Vom <choice>
                                 <abbr>Stud.</abbr>
@@ -421,24 +431,25 @@
                             <persName ref="#p0662" type="bi">Fichte</persName> eine <title ref="#w04403">Erklärung des Anfan<lb break="no"/>ges der
                                     <title ref="#w00373">Sieben gegen Theben</title> des <persName ref="#p0353" type="bi"
                             >Aeschÿlus</persName></title>.</item>
-                        <item><add place="margin-left"><hi rend="latin"><persName ref="#p0654" type="bi">Wernike</persName>
+                        <item><add place="margin(left)"><hi rend="latin"><persName ref="#p0654" type="bi">Wernike</persName>
                                     <title ref="#w04404"><title ref="#w00374">Priap<unclear cert="high" reason="illegible"
-                                        >ea</unclear></title></title></hi>.<note resp="#sabine.seifert"><persName ref="#p0178" type="bi"
-                                        >Boeckh</persName> verwechselt an dieser Stelle die nachgereichnete Probeschrift <persName ref="#p0654"
-                                        type="bi">Wernikes</persName>
-                                    <title ref="#w04417">De Ostracismo</title> mit dessen Seminararbeit <title ref="#w04404">De Priapeis atque eorum
-                                        auctoribus</title>, wie aus dem folgenden <ref
-                                        target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#1"
-                                        >Jahresbericht von <date when-iso="1813">1813</date>, S. 1,</ref> hervorgeht.</note></add></item>
+                                        >ea</unclear></title></title></hi>.<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0178"
+                                            type="bi">Boeckh</persName> verwechselt an dieser Stelle die nachgereichnete Probeschrift <persName
+                                            ref="#p0654" type="bi">Wernikes</persName>
+                                        <title ref="#w04417">De Ostracismo</title> mit dessen Seminararbeit <title ref="#w04404">De Priapeis atque
+                                            eorum auctoribus</title>, wie aus dem folgenden <ref
+                                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#1"
+                                            >Jahresbericht von <date when-iso="1813">1813</date>, S. 1,</ref> hervorgeht.</p><p xml:lang="en"/><p
+                                        xml:lang="fr"/></note></add></item>
                         <lb/>
-                        <item><add place="margin-left"><hi rend="latin"><persName ref="#p0679" type="bi">Jungklaussen</persName>
+                        <item><add place="margin(left)"><hi rend="latin"><persName ref="#p0679" type="bi">Jungklaussen</persName>
                                     <title ref="#w04405"><foreign xml:lang="la">de fato <rs ref="#p0033" type="bi"><choice>
                                                     <abbr>Hom.</abbr>
                                                     <expan>Homerico</expan>
-                                                </choice></rs></foreign></title></hi><note resp="#sabine.seifert">Übersetzung: Über den Begriff des
-                                    Schicksals bei Homer.</note></add></item>
+                                                </choice></rs></foreign></title></hi><note resp="#sabine.seifert"><p xml:lang="de">Übersetzung: Über
+                                        den Begriff des Schicksals bei Homer.</p><p xml:lang="en"/><p xml:lang="fr"/></note></add></item>
                         <lb/>
-                        <item><add place="margin-left"><hi rend="latin"><persName ref="#p0661" type="bi">Salomo</persName></hi>
+                        <item><add place="margin(left)"><hi rend="latin"><persName ref="#p0661" type="bi">Salomo</persName></hi>
                                 <title ref="#w04406"><unclear cert="medium" reason="illegible"><choice>
                                             <abbr>üb.</abbr>
                                             <expan>über</expan>
@@ -447,7 +458,7 @@
                                             <expan>Philologie</expan>
                                         </choice></hi></title></add></item>
                         <lb/>
-                        <item><add place="margin-left"><hi rend="latin"><persName ref="#p0588" type="bi">Zumpt</persName>
+                        <item><add place="margin(left)"><hi rend="latin"><persName ref="#p0588" type="bi">Zumpt</persName>
                                     <title ref="#w04407"><unclear cert="medium" reason="illegible"><choice>
                                                 <abbr>üb.</abbr>
                                                 <expan>über</expan>
@@ -488,10 +499,11 @@
                 <p>Nachdem sämmtliche Mitglieder die Inter<lb break="no" type="sh"/>pretationsübungen durchgemacht hatten,<lb/>wurden als die
                     würdigsten <add place="above">noch</add> die Studiosen <hi rend="latin"><persName ref="#p0659" type="bi"
                         >Hasselbach</persName></hi> und <hi rend="latin"><persName ref="#p0660" type="bi">Kalisch</persName></hi> unter die or<lb
-                        break="no"/>dentlichen Mitglieder aufgenom̄en.<note resp="#sabine.seifert">Aufgrund des großen Bewerberandranges wandelte
-                            <persName ref="#p0178" type="bi">Boeckh</persName> die obligatorische Aufnahmeprüfung über die Vorkenntnisse der Studenten
-                        in eine gemeinschaftliche Interpretationsübung um.</note> Da <pb facs="00000048b.jpg" n="3"/>
-                    <note place="margin-right" type="foliation">
+                        break="no"/>dentlichen Mitglieder aufgenom̄en.<note resp="#sabine.seifert"><p xml:lang="de">Aufgrund des großen
+                            Bewerberandranges wandelte <persName ref="#p0178" type="bi">Boeckh</persName> die obligatorische Aufnahmeprüfung über die
+                            Vorkenntnisse der Studenten in eine gemeinschaftliche Interpretationsübung um.</p><p xml:lang="en"/><p xml:lang="fr"
+                        /></note> Da <pb facs="00000048b.jpg" n="3"/>
+                    <note place="margin(right)" type="foliation">
                         <subst hand="#blue_pen">
                             <del rend="overwritten"><add hand="#pencil">28</add>
                             </del>
@@ -505,28 +517,30 @@
                         <expan>Studiosus</expan>
                     </choice>
                     <hi rend="latin"><persName ref="#p0663" type="bi">Pettavel</persName></hi> aus <placeName ref="#l0079" type="bi"
-                        >Genf</placeName>,<note resp="#sabine.seifert">Laut dem <ref target="http://www.hls-dhs-dss.ch/textes/d/D43770.php"
-                            >Historischen Lexikon der Schweiz</ref> [Zugriff: 14. Mai 2013] kommt <persName ref="#p0663" type="bi">Pettavel</persName>
-                        aus <placeName ref="#l0196" type="bi">Neuenburg</placeName>.</note> welcher sich später<lb/>gemeldet, und <unclear
+                        >Genf</placeName>,<note resp="#sabine.seifert"><p xml:lang="de">Laut dem <ref
+                                target="http://www.hls-dhs-dss.ch/textes/d/D43770.php">Historischen Lexikon der Schweiz</ref> [Zugriff: 14. Mai 2013]
+                            kommt <persName ref="#p0663" type="bi">Pettavel</persName> aus <placeName ref="#l0196" type="bi"
+                            >Neuenburg</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> welcher sich später<lb/>gemeldet, und <unclear
                         cert="medium" reason="illegible">zur</unclear> Probearbeit eine <title ref="#w04409"> französische Übersetzung aus<lb/>dem 14.
                         Buch der <title ref="#w00382">Iliade</title></title> eingeliefert hatte, und dem <rs ref="#p0178" type="bi">Di<lb break="no"
                         />rector</rs> als fleißig und kenntnißreich schon bekan̄t war.</p>
-                <p>Der Unterzeichnete bedauert, daß die im Reglement<note resp="#sabine.seifert">Das <ref
-                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement">Reglement</ref>, i.e. Statuten,
-                        des <orgName ref="#g0079" type="bi">philologischen Seminars</orgName> wurde am <date when-iso="1812-05-28">28. Mai 1812</date>
-                        vom <orgName ref="#g0063" type="bi">Innenministerium</orgName> verabschiedet und beruht auf einem von <persName ref="#p0178"
-                            type="bi">Boeckh</persName> ausgearbeiteten Plan. Es liegt gedruckt vor u.a. im <title ref="#w00383">Berliner
-                            Universitätskalender 1813</title>, S.24-28, und bei <persName ref="#p1243" type="bi">Koch</persName> (1839/40): <title
-                            ref="#w00384">Die Preussischen Universitäten</title>, Bd. 2,2 S.560-562.</note> vorge<lb break="no"/>schriebenen Übungen
-                    in diesem Semester aus Mangel an Zeit<lb/>nicht alle konnten vorgenommen werden, da die Studirenden<lb/>nicht so viele freie
-                    Stunden mehr hatten, als dazu erfor<lb break="no"/>derlich waren. Die Verhandlungen des <orgName ref="#g0079" type="bi"
-                        >Seminars</orgName> mußten<lb/>dafür auf wöchentlich zweÿmahliges Interpretiren verbun<lb break="no"/>den mit Disputirübungen
-                    über die vorkom̄enden schwieri<lb break="no"/>gen Stellen beschränkt werden. Abhandlungen konnten um<lb/>so weniger verlesen
-                    werden, da zu deren Ausarbeitung<lb/>den Mitgliedern acht Wochen Zeit festgesetzt ist, und<lb/>vom <date when-iso="1812-06-27">27.
-                        Juni</date>, an welchem das <orgName ref="#g0079" type="bi">Seminar</orgName> eröffnet wurde,<note resp="#sabine.seifert">Am
-                            <date when-iso="1812-06-27">27. Juni 1812</date> fand eine Versammlung aller Mitglieder und Anwärter zur Eröffnung des
-                            <orgName ref="#g0079" type="bi">Seminars</orgName> statt, auf der auch die Übungen des ersten Semesters besprochen
-                        wurden.</note><lb/>nur noch ungefähr so viel Wochen übrig waren.</p>
+                <p>Der Unterzeichnete bedauert, daß die im Reglement<note resp="#sabine.seifert"><p xml:lang="de">Das <ref
+                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Boeckh_Reglement">Reglement</ref>, i.e.
+                            Statuten, des <orgName ref="#g0079" type="bi">philologischen Seminars</orgName> wurde am <date when-iso="1812-05-28">28.
+                                Mai 1812</date> vom <orgName ref="#g0063" type="bi">Innenministerium</orgName> verabschiedet und beruht auf einem von
+                                <persName ref="#p0178" type="bi">Boeckh</persName> ausgearbeiteten Plan. Es liegt gedruckt vor u.a. im <title
+                                ref="#w00383">Berliner Universitätskalender 1813</title>, S.24-28, und bei <persName ref="#p1243" type="bi"
+                                >Koch</persName> (1839/40): <title ref="#w00384">Die Preussischen Universitäten</title>, Bd. 2,2 S.560-562.</p><p
+                            xml:lang="en"/><p xml:lang="fr"/></note> vorge<lb break="no"/>schriebenen Übungen in diesem Semester aus Mangel an
+                    Zeit<lb/>nicht alle konnten vorgenommen werden, da die Studirenden<lb/>nicht so viele freie Stunden mehr hatten, als dazu erfor<lb
+                        break="no"/>derlich waren. Die Verhandlungen des <orgName ref="#g0079" type="bi">Seminars</orgName> mußten<lb/>dafür auf
+                    wöchentlich zweÿmahliges Interpretiren verbun<lb break="no"/>den mit Disputirübungen über die vorkom̄enden schwieri<lb break="no"
+                    />gen Stellen beschränkt werden. Abhandlungen konnten um<lb/>so weniger verlesen werden, da zu deren Ausarbeitung<lb/>den
+                    Mitgliedern acht Wochen Zeit festgesetzt ist, und<lb/>vom <date when-iso="1812-06-27">27. Juni</date>, an welchem das <orgName
+                        ref="#g0079" type="bi">Seminar</orgName> eröffnet wurde,<note resp="#sabine.seifert"><p xml:lang="de">Am <date
+                                when-iso="1812-06-27">27. Juni 1812</date> fand eine Versammlung aller Mitglieder und Anwärter zur Eröffnung des
+                                <orgName ref="#g0079" type="bi">Seminars</orgName> statt, auf der auch die Übungen des ersten Semesters besprochen
+                            wurden.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/>nur noch ungefähr so viel Wochen übrig waren.</p>
                 <p>Die benannten acht <orgName ref="#g0034" type="bi">ordentlichen Mitglieder</orgName>, welche nach<lb/>§. 12. auf die von einem
                     Hochpreißlichen <orgName ref="#g0063" type="bi">Departement</orgName><lb/>zu ertheilenden Prämien Anspruch haben, zeichneten
                     sich<lb/>durch den Fleiß und Eifer und die Ken̄tnisse, welche sie<lb/>in dem Institut bewiesen haben, so rühmlich aus, daß
@@ -556,11 +570,12 @@
                         <expan>Studiosus</expan>
                     </choice>
                     <persName ref="#p0655" type="bi">Helmholtz</persName> eine Abhandlung <title ref="#w04439">über den Chor<lb/>der Griechischen
-                        Tragödie</title><note resp="#sabine.seifert">Im <ref
-                            target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#2">Jahresbericht
-                            1813, S. 2,</ref> lautet der Titel der Abhandlung <foreign xml:lang="la"><title ref="#w04439">De indole tragoediae
-                                Græcæ</title></foreign> [Über den Charakter der griechischen Tragödie].</note> angefangen, welche nach<lb/>seinem
-                    Fleiß und seinen Fähigkeiten zu urtheilen,<lb/>der Bekanntmachung einst nicht unwürdig seÿn dürfte.<lb/>Außerdem <subst>
+                        Tragödie</title><note resp="#sabine.seifert"><p xml:lang="de">Im <ref
+                                target="http://tei.ibi.hu-berlin.de/berliner-intellektuelle/manuscript?Brief003BoeckhanInnenministerium#2"
+                                >Jahresbericht 1813, S. 2,</ref> lautet der Titel der Abhandlung <foreign xml:lang="la"><title ref="#w04439">De indole
+                                    tragoediae Græcæ</title></foreign> [Über den Charakter der griechischen Tragödie].</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note> angefangen, welche nach<lb/>seinem Fleiß und seinen Fähigkeiten zu urtheilen,<lb/>der
+                    Bekanntmachung einst nicht unwürdig seÿn dürfte.<lb/>Außerdem <subst>
                         <add place="inline">ist</add>
                         <del rend="strikethrough">scheint</del>
                     </subst> der <choice>
@@ -613,7 +628,7 @@
                         <add place="above">geben</add>
                     </subst>, da sie aus den obigen Gründen nicht<lb/>konnten geliefert werden, so <subst>
                         <del rend="strikethrough">hofft <gap extent="1-2w" reason="strikethrough"/></del>
-                        <add place="margin-left">glaubt er doch<lb/>hoffen zu dürfen</add>
+                        <add place="margin(left)">glaubt er doch<lb/>hoffen zu dürfen</add>
                     </subst> daß ein Hochpreißliches<lb/>Departement, mit Rücksicht darauf, daß in den zweÿ Monathen,<lb/>seitdem das Institut
                     besteht, nicht das geleistet werden konnte,<lb/>was in Zukunft mit Recht gefordert werden kan̄, seine Vor<lb break="no"/>schläge
                     genehmigen, und dadurch ihm und den <orgName ref="#g0034" type="bi">Mitgliedern</orgName><lb/>eine Aufmunterung zu ihren künftigen

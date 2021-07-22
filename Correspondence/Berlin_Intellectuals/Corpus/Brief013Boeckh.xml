@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -53,8 +54,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-08-03" who="#sabine.seifert">Final revision and corrections of transcription and encoding.</change>
             <change when-iso="2020-07-30" who="#sabine.seifert">Encoding of page 5. Publication online.</change>
             <change when-iso="2020-07-25" who="#sabine.seifert">Encoding of page 3 and 4.</change>
@@ -202,9 +210,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000166b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">99</seg>
+                        <del rend="overwritten"><add hand="#pencil">99</add>
                         </del>
                         <add place="across">99</add>
                     </subst>
@@ -332,8 +340,8 @@
                                         <abbr>Eberh.</abbr>
                                         <expan>Eberhard</expan>
                                     </choice> Wiens</persName> aus <placeName ref="#l0187" type="bi">Westphalen</placeName>,<note
-                                    resp="#sabine.seifert"><persName ref="#p3735" type="bi">Wiens</persName> stammte aus <placeName ref="#l0560"
-                                        type="bi">Burgsteinfurt</placeName>.</note></item>
+                                    resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p3735" type="bi">Wiens</persName> stammte aus <placeName
+                                            ref="#l0560" type="bi">Burgsteinfurt</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                         </list><lb rend="both"/>einige andere, welche sich noch gemeldet hatten, haben<lb/>so wenig Theil genom̄en, daß sie nicht
                         genan̄t zu<lb/>werden verdienen.</p>
                     <p>Für das folgende <date when-iso="1819-03/09">Som̄erhalbeiahr</date> blieben alle ge<lb break="no"/>nan̄ten mit Ausschluss des
@@ -404,9 +412,9 @@
                             <expan>und</expan>
                         </choice> 2. <title ref="#w05811">Satire</title> und das zweite Buch der <rs ref="#p0070" type="bi">Ovidischen</rs><lb/><title
                             ref="#w03292">Fasten</title> vor; bei dem <rs ref="#p0178" type="bi">Unterzeichneten</rs> wurde in beiden<lb/>halben
-                        Jahren der <persName ref="#p1021" type="bi">Herodot</persName> behandelt.<note resp="#sabine.seifert">Es handelt sich
-                            wahrscheinlich um <persName ref="#p1021" type="bi">Herodots</persName>
-                            <title ref="#w00442">Historien</title>.</note></p>
+                        Jahren der <persName ref="#p1021" type="bi">Herodot</persName> behandelt.<note resp="#sabine.seifert"><p xml:lang="de">Es
+                                handelt sich wahrscheinlich um <persName ref="#p1021" type="bi">Herodots</persName>
+                                <title ref="#w00442">Historien</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                     <p><label>2)</label> Folgende <hi rend="underline">Abhandlungen</hi> wurden von den Mitgliedern<lb/>geliefert:<lb rend="both"/>
                         <hi rend="latin"><list>
                                 <label>1.</label>
@@ -440,9 +448,10 @@
                                 <label>8.</label>
                                 <item>Von <hi rend="underline"><persName ref="#p1438" type="bi">Bernhardÿ</persName></hi>: <title ref="#w05839">De
                                         Cÿrenis pars prima</title>, <add place="above">zum zweiten mahl <gap extent="one_word" reason="illegible"
-                                            /><note resp="#sabine.seifert">Eine erste Fassung dieser Arbeit hatte <persName ref="#p1438" type="bi"
-                                                >Bernhardÿ</persName> bereits ein Jahr zuvor eingereicht, wie aus dem <ref target="Brief012Boeckh#2"
-                                                >Jahresbericht 1818, S. 2</ref>, hervorgeht.</note></add></item>
+                                            /><note resp="#sabine.seifert"><p xml:lang="de">Eine erste Fassung dieser Arbeit hatte <persName
+                                                    ref="#p1438" type="bi">Bernhardÿ</persName> bereits ein Jahr zuvor eingereicht, wie aus dem <ref
+                                                    target="Brief012Boeckh#2">Jahresbericht 1818, S. 2</ref>, hervorgeht.</p><p xml:lang="en"/><p
+                                                xml:lang="fr"/></note></add></item>
                                 <lb/>
                                 <label>9.</label>
                                 <item> Von <rs ref="#p1438" type="bi">demselben</rs>: <title ref="#w05840">De Cÿrenis pars secunda</title>.</item>
@@ -502,9 +511,9 @@
                                     <item>Disputetur de loco <title ref="#w04350">Odÿss.</title>
                                         <gap extent="one_char" reason="illegible"/>, 70.</item>
                                     <pb facs="00000168b.jpg" n="3"/>
-                                    <note place="margin-right" type="foliation">
+                                    <note place="margin(right)" type="foliation">
                                         <subst hand="#blue_pen">
-                                            <del rend="overwritten"><seg hand="#pencil">100</seg>
+                                            <del rend="overwritten"><add hand="#pencil">100</add>
                                             </del>
                                             <add place="across">100</add>
                                         </subst>
@@ -702,9 +711,9 @@
                         </choice>
                         <hi rend="underline"><persName ref="#p1590" type="bi">Kritz</persName></hi>, ieden zu einer Prämie von<pb facs="00000170b.jpg"
                             n="5"/>
-                        <note place="margin-right" type="foliation">
+                        <note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
-                                <del rend="overwritten"><seg hand="#pencil">101</seg>
+                                <del rend="overwritten"><add hand="#pencil">101</add>
                                 </del>
                                 <add place="across">101</add>
                             </subst>
@@ -776,7 +785,7 @@
                             <expan>außerordentlicher</expan>
                         </choice> Professor der alten<lb/>Litteratur, eine für seine Ausbildung vortheil<lb break="no"/>hafte Stelle erhalten hat.</p>
                 </div>
-                <note hand="#brown_pen" place="margin-left"><choice>
+                <note hand="#brown_pen" place="margin(left)"><choice>
                         <abbr>mund. d.</abbr>
                         <expan>mundiert den</expan>
                     </choice> 15 <gap extent="two_chars" reason="illegible"/><lb/><persName ref="#p3868" type="bi">Wernicke</persName></note>
@@ -786,10 +795,9 @@
                             <expan>den</expan>
                         </choice>
                         <date when-iso="1819-09-20">20. September 1819.</date></dateline><milestone rend="vertical-rule align(center)" unit="none"
-                        /><hi rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
-                            >philologischen<lb/>Seminars</orgName> der hiesigen<lb/><orgName ref="#g0122" type="bi"
-                        >Universität</orgName>.</hi><lb/><signed rend="align(right)"><hi rend="latin"><persName ref="#p0178" type="bi"
-                                >Böckh.</persName></hi></signed>
+                        /><signed rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
+                            >philologischen<lb/>Seminars</orgName> der hiesigen<lb/><orgName ref="#g0122" type="bi">Universität</orgName>.<lb/>
+                        <hi rend="latin"><persName ref="#p0178" type="bi">Böckh.</persName></hi></signed>
                 </closer>
             </div>
         </body>

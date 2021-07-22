@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -59,8 +60,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -194,8 +201,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-23" who="#sabine.seifert">Some minor corrections.</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
             <change when-iso="2015-05-12" who="#sabine.seifert">Changed name of file (and thus, url) from Brief009BoeckhanInnenministerium.xml to
@@ -213,7 +221,7 @@
         <body>
             <div type="transcription">
                 <pb facs="00000084b.jpg" n="1"/>
-                <p><address>
+                <opener><address>
                         <addrLine>An eine <choice>
                                 <abbr>Hochpreißl. Abth. f. d.</abbr>
                                 <expan>Hochpreißliche Abtheilung für den</expan>
@@ -223,10 +231,10 @@
                                     <expan>und öffentlichen</expan>
                                 </choice> Unterricht</orgName></addrLine>
                         <addrLine>im <orgName ref="#g0068" type="bi">Ministerium des Innern</orgName>.</addrLine>
-                    </address></p>
-                <note place="margin-right" type="foliation">
+                    </address></opener>
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">50</seg>
+                        <del rend="overwritten"><add hand="#pencil">50</add>
                         </del>
                         <add place="across">50</add>
                     </subst>
@@ -238,7 +246,7 @@
                         im ver<lb break="no"/>gangenen akademischen Jahre einzureichen.</p>
                 </div>
                 <div>
-                    <head place="margin-right"><label>1. </label><hi rend="underline">Übersicht der<lb/>Mitglieder.</hi></head>
+                    <head place="margin(right)"><label>1. </label><hi rend="underline">Übersicht der<lb/>Mitglieder.</hi></head>
                     <p><label>I. </label>Im <date when-iso="1814-10/1815-02">Winterhalbeniahre 1814 – 1815.</date> bestand das <orgName ref="#g0079"
                             type="bi">philologische Seminar</orgName> aus<lb/>folgenden 8 <orgName ref="#g0039" type="bi">ordentlichen
                             Mitgliedern</orgName>:<lb/><list>
@@ -377,13 +385,13 @@
                             <item><persName ref="#p1122" type="bi">Dr. <hi rend="underline">Göttling</hi></persName>, bekannt durch eine nicht
                                 werthlose <rs ref="#w01811" type="bi">Schrift</rs> über den <persName ref="#p1344" type="bi">Kal<lb break="no"
                                     />limachus</persName> und eine andere über das <title ref="#w00266">Niebelungenlied</title>.<note
-                                    resp="#sabine.seifert">Bei ersterem handelt es sich um <title ref="#w01811">"Animadversiones criticae in
-                                        Callimachi Epigrammata et achillem tatium"</title>, das 1811 erschienen ist und sich in <persName ref="#p0178"
-                                        type="bi">Boeckhs</persName> Privatbibliothek befand (<ref target="Boeckh_Buchkatalog.xml#17">Nr. 830 im
-                                        "Katalog meiner Bücher"</ref>). Zweiteres meint die Veröffentlichung <title ref="#w05817">"Über das
-                                        Geschichtliche im Niebelungenliede"</title>.</note> Er wollte anfangs<lb/>zu Felde gehen, wird aber ietzo dem
-                                Vernehmen nach an dem Gÿm<lb break="no"/>nasium zu <placeName ref="#l0548" type="bi">Rudolstadt</placeName>
-                                angestellt.</item>
+                                    resp="#sabine.seifert"><p xml:lang="de">Bei ersterem handelt es sich um <title ref="#w01811">"Animadversiones
+                                            criticae in Callimachi Epigrammata et achillem tatium"</title>, das 1811 erschienen ist und sich in
+                                            <persName ref="#p0178" type="bi">Boeckhs</persName> Privatbibliothek befand (<ref
+                                            target="Boeckh_Buchkatalog.xml#17">Nr. 830 im "Katalog meiner Bücher"</ref>). Zweiteres meint die
+                                        Veröffentlichung <title ref="#w05817">"Über das Geschichtliche im Niebelungenliede"</title>.</p><p
+                                        xml:lang="en"/><p xml:lang="fr"/></note> Er wollte anfangs<lb/>zu Felde gehen, wird aber ietzo dem Vernehmen
+                                nach an dem Gÿm<lb break="no"/>nasium zu <placeName ref="#l0548" type="bi">Rudolstadt</placeName> angestellt.</item>
                             <lb/>
                             <label>3)</label>
                             <item><persName ref="#p1434" type="bi"><hi rend="underline">Martins</hi></persName>, welcher als Offizier zum Kriegsdienst
@@ -429,7 +437,7 @@
                             >Schweidnitz</placeName>.</p>
                 </div>
                 <div>
-                    <head place="margin-left"><label>II. </label><hi rend="underline">Übungen des<lb/>
+                    <head place="margin(left)"><label>II. </label><hi rend="underline">Übungen des<lb/>
                             <orgName ref="#g0079" type="bi">Seminars</orgName></hi>.</head>
                     <p><label>II.</label> Die gewöhnlichen <hi rend="underline">Übungen</hi> der Seminaristen wurden in diesem Jahre regel<lb
                             break="no"/>mäßig angestellt.</p>
@@ -455,9 +463,9 @@
                                     III</title></foreign></hi>. Eine wohl<lb break="no"/>gedachte und von gutem Urtheil zeugende kleine
                                     Abhandlung.</hi></item>
                             <pb facs="00000086b.jpg" n="3"/>
-                            <note place="margin-right" type="foliation">
+                            <note place="margin(right)" type="foliation">
                                 <subst hand="#blue_pen">
-                                    <del rend="overwritten"><seg hand="#pencil">51</seg>
+                                    <del rend="overwritten"><add hand="#pencil">51</add>
                                     </del>
                                     <add place="across">51</add>
                                 </subst>
@@ -606,9 +614,9 @@
                                         <persName ref="#p3809" type="bi"><choice>
                                                 <abbr>Ruhk.</abbr>
                                                 <expan>Ruhkopf</expan>
-                                            </choice></persName><lb/><quote>Mihi crede — timendum sit.</quote><note resp="#sabine.seifert">Es handelt
-                                            sich um <persName ref="#p1044" type="bi">Senecas</persName>
-                                            <title ref="#w05814">Epistel</title> 24,11.</note>
+                                            </choice></persName><lb/><quote>Mihi crede — timendum sit.</quote><note resp="#sabine.seifert"><p
+                                                xml:lang="de">Es handelt sich um <persName ref="#p1044" type="bi">Senecas</persName>
+                                                <title ref="#w05814">Epistel</title> 24,11.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                                     </item>
                                     <lb/>
                                     <label>9.</label>
@@ -622,10 +630,11 @@
                                             </choice></persName>
                                         <rs ref="#w05816" type="bi">I, 2</rs>, 50. lectis codicum, <quote><hi rend="underline">Convocat<lb/>orbe
                                                 nives</hi>,</quote> retinenda sit, an <persName ref="#p0361" type="bi">Vossii</persName> correctio
-                                            recipienda.<note resp="#sabine.seifert">Vermutlich handelt es sich um die Ausgabe <title ref="#w01667"
-                                                >"Albius Tibullus et Lygdamus, codicum ope emendati a Joanne Henrico Vossio"</title> von 1811, die
-                                            sich auch in <persName ref="#p0178" type="bi">Boeckhs</persName> Privatbibliothek befand (<ref
-                                                target="Boeckh_Buchkatalog.xml#13">Nr. 629 im "Katalog meiner Bücher"</ref>).</note></item>
+                                            recipienda.<note resp="#sabine.seifert"><p xml:lang="de">Vermutlich handelt es sich um die Ausgabe <title
+                                                    ref="#w01667">"Albius Tibullus et Lygdamus, codicum ope emendati a Joanne Henrico Vossio"</title>
+                                                von 1811, die sich auch in <persName ref="#p0178" type="bi">Boeckhs</persName> Privatbibliothek befand
+                                                    (<ref target="Boeckh_Buchkatalog.xml#13">Nr. 629 im "Katalog meiner Bücher"</ref>).</p><p
+                                                xml:lang="en"/><p xml:lang="fr"/></note></item>
                                     <pb facs="00000087b.jpg" n="4"/>
                                     <label>11.</label>
                                     <item>Explicetur <persName ref="#p0192" type="bi">Sophocl.</persName>
@@ -706,19 +715,21 @@
                                     <label>23.</label>
                                     <item>Disputetur de <persName ref="#p0192" type="bi">Sophocl.</persName>
                                         <title ref="#w00443">Aiac.</title> 1094. <persName ref="#p0504" type="bi">Lobeck</persName>.<note
-                                            resp="#sabine.seifert">Vermutlich handelt es sich um die Ausgabe <title ref="#w01668">Sophoclis Ajax
-                                                Graece cum scholiis et commentario perpetuo</title> von 1809, die sich auch in <persName ref="#p0178"
-                                                type="bi">Boeckhs</persName> Privatbibliothek befand (<ref target="Boeckh_Buchkatalog.xml#13">Nr. 630
-                                                im "Katalog meiner Bücher"</ref>).</note>
+                                            resp="#sabine.seifert"><p xml:lang="de">Vermutlich handelt es sich um die Ausgabe <title ref="#w01668"
+                                                    >Sophoclis Ajax Graece cum scholiis et commentario perpetuo</title> von 1809, die sich auch in
+                                                    <persName ref="#p0178" type="bi">Boeckhs</persName> Privatbibliothek befand (<ref
+                                                    target="Boeckh_Buchkatalog.xml#13">Nr. 630 im "Katalog meiner Bücher"</ref>).</p><p xml:lang="en"
+                                                /><p xml:lang="fr"/></note>
                                         <quote><hi rend="greek"><foreign xml:lang="grc">ὕπαρχος ἄλλων —<lb/>ἡγεῖσθαι
                                         ποτε.</foreign></hi></quote></item>
                                     <lb/>
                                     <label>24.</label>
                                     <item>Visendum, an vera sit <persName ref="#p0486" type="bi">Hermanni</persName> emendatio <title ref="#w05812"
-                                            >Orph. Argon.</title><lb/>1283.<note resp="#sabine.seifert">Vermutlich handelt es sich um die Ausgabe
-                                                <title ref="#w01369">Orphica</title> von 1805, die sich auch in <persName ref="#p0178" type="bi"
-                                                >Boeckhs</persName> Privatbibliothek befand (<ref target="Boeckh_Buchkatalog.xml#book-265">Nr. 265 im
-                                                "Katalog meiner Bücher"</ref>).</note>
+                                            >Orph. Argon.</title><lb/>1283.<note resp="#sabine.seifert"><p xml:lang="de">Vermutlich handelt es sich um
+                                                die Ausgabe <title ref="#w01369">Orphica</title> von 1805, die sich auch in <persName ref="#p0178"
+                                                    type="bi">Boeckhs</persName> Privatbibliothek befand (<ref
+                                                    target="Boeckh_Buchkatalog.xml#book-265">Nr. 265 im "Katalog meiner Bücher"</ref>).</p><p
+                                                xml:lang="en"/><p xml:lang="fr"/></note>
                                         <quote><hi rend="greek"><foreign xml:lang="grc">ἤειδον δὲ λιγὺ κλάζων διὰ θέσκελον
                                             ὕμνον.</foreign></hi></quote></item>
                                     <lb/>
@@ -734,7 +745,7 @@
                     </p>
                 </div>
                 <div>
-                    <head place="margin-left"><label>III. </label><hi rend="underline">Zuerkannte Prä<lb break="no"/>mien</hi>.</head>
+                    <head place="margin(left)"><label>III. </label><hi rend="underline">Zuerkannte Prä<lb break="no"/>mien</hi>.</head>
                     <p><label>III.</label> Aus dem Vorgetragenen geht schon zur Genüge hervor, daß das <orgName ref="#g0079" type="bi"
                             >Seminarium</orgName><lb/>in diesem Jahre mehrere iunge Männer von ausgezeichneten Kenntnissen zähl<lb break="no"/>te:
                         Wenn Einige, wie <persName ref="#p0669" type="bi">Bischoff</persName> und <persName ref="#p0670" type="bi">Müller</persName>,
@@ -834,9 +845,9 @@
                             <expan>den</expan>
                         </choice>
                         <date when-iso="1815-08-03">3. August 1815.</date></dateline>
-                    <hi rend="align(right)">Der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi">philologischen
-                            Seminars</orgName> der hiesi<lb break="no"/>gen <orgName ref="#g0122" type="bi">Universität</orgName></hi><lb/><signed
-                        rend="latin align(right)"><persName ref="#p0178" type="bi">Böckh</persName></signed></closer>
+                    <signed rend="align(right)">Der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi">philologischen
+                            Seminars</orgName> der hiesi<lb break="no"/>gen <orgName ref="#g0122" type="bi">Universität</orgName><lb/><hi rend="latin"
+                                ><persName ref="#p0178" type="bi">Böckh</persName></hi></signed></closer>
             </div>
         </body>
     </text>

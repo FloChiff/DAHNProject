@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -52,8 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -187,8 +194,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-07-23" who="#sabine.seifert">Some minor corrections.</change>
             <change when-iso="2020-07-20" who="#sabine.seifert">Corrected encoding in signed and origin.</change>
             <change when-iso="2020-05-13" who="#sabine.seifert">Corrected docdate, date in correspDesc, updated correspContext.</change>
@@ -204,9 +212,9 @@
         <body>
             <div type="transcription">
                 <pb facs="00000116b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">71</seg>
+                        <del rend="overwritten"><add hand="#pencil">71</add>
                         </del>
                         <add place="across">71</add>
                     </subst>
@@ -257,15 +265,17 @@
                             <lb/>
                             <label>2)</label>
                             <item><persName ref="#p0926" type="bi">Bötticher</persName> von <placeName ref="#l0321" type="bi"
-                                    >Helmstädt</placeName>,<note resp="#sabine.seifert"><persName ref="#p0926" type="bi">Bötticher</persName> stammte
-                                    aus <placeName ref="#l0589" type="bi">Wormsdorf</placeName>, in <placeName ref="#l0321" type="bi"
-                                        >Helmstedt</placeName> besuchte er die Schule.</note></item>
+                                    >Helmstädt</placeName>,<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0926" type="bi"
+                                            >Bötticher</persName> stammte aus <placeName ref="#l0589" type="bi">Wormsdorf</placeName>, in <placeName
+                                            ref="#l0321" type="bi">Helmstedt</placeName> besuchte er die Schule.</p><p xml:lang="en"/><p xml:lang="fr"
+                                    /></note></item>
                             <lb/>
                             <label>3)</label>
                             <item><persName ref="#p0678" type="bi">Wilberg</persName> von <placeName ref="#l0871" type="bi"
-                                    >Elberfeld</placeName>.<note resp="#sabine.seifert"><persName ref="#p0678" type="bi">Wilberg</persName> stammte
-                                    aus <placeName ref="#l0273" type="bi">Overdyk bei Bochum</placeName>, verbrachte seine Kindheit jedoch in
-                                        <placeName ref="#l0871" type="bi">Elberfeld</placeName>.</note></item>
+                                    >Elberfeld</placeName>.<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0678" type="bi"
+                                            >Wilberg</persName> stammte aus <placeName ref="#l0273" type="bi">Overdyk bei Bochum</placeName>,
+                                        verbrachte seine Kindheit jedoch in <placeName ref="#l0871" type="bi">Elberfeld</placeName>.</p><p
+                                        xml:lang="en"/><p xml:lang="fr"/></note></item>
                         </list></p>
                     <p>Mit dem Ablauf des Winterhalbeniahres verließen das<lb/><orgName ref="#g0079" type="bi">Seminar</orgName> nach vollendeten
                         akademischen Studien<lb rend="both"/>
@@ -435,9 +445,9 @@
                                     <item>Explicentur verba <persName ref="#p0003" type="bi">Ciceronis</persName> in <rs ref="#w06034" type="bi">eadem
                                                 episto<lb break="no"/>la</rs>: <quote>"Quem enim nostrum ille – acciderit optatius."</quote></item>
                                     <pb facs="00000118b.jpg" n="3"/>
-                                    <note place="margin-right" type="foliation">
+                                    <note place="margin(right)" type="foliation">
                                         <subst hand="#blue_pen">
-                                            <del rend="overwritten"><seg hand="#pencil">72</seg>
+                                            <del rend="overwritten"><add hand="#pencil">72</add>
                                             </del>
                                             <add place="across">72</add>
                                         </subst>
@@ -657,7 +667,7 @@
                             <abbr>Thlr</abbr>
                             <expan>Thaler</expan>
                         </choice>,<lb/>welche <subst>
-                            <add place="margin-left">bis jetzt</add>
+                            <add place="margin(left)">bis jetzt</add>
                             <del><gap extent="two_words" reason="deleted"/></del>
                         </subst> gespart worden, disponibel.</p>
                 </div>
@@ -670,9 +680,9 @@
                                 <expan>des Jahres</expan>
                             </choice></date> einem hohen <orgName ref="#g0068" type="bi">Ministerium</orgName> von<lb/>der Abnahme der humanistischen
                         Studien auf der hie<lb break="no"/>sigen <orgName ref="#g0122" type="bi">Universität</orgName> Bericht erstattet, und daselbst
-                            er<pb break="no" facs="00000120b.jpg" n="5"/><note place="margin-right" type="foliation">
+                            er<pb break="no" facs="00000120b.jpg" n="5"/><note place="margin(right)" type="foliation">
                             <subst hand="#blue_pen">
-                                <del rend="overwritten"><seg hand="#pencil">73</seg>
+                                <del rend="overwritten"><add hand="#pencil">73</add>
                                 </del>
                                 <add place="across">73</add>
                             </subst>
@@ -721,7 +731,7 @@
                             ietzo gedruckt wird, öffentlich vertheidigen.<lb/>Er verdient in ieder Hinsicht einem hohen Mi<lb break="no"/>nisterium
                             angelegentlichst empfohlen zu werden,<lb/>da er sich zu einer guten Anstellung vorzüglich eignet: <del
                                 rend="strikethrough"><gap extent="several_lines" reason="deleted"/></del> und besonders wäre ihm diese an <add n="F"
-                                place="margin-left">einem bedeutendern litterarische Hülfs<lb break="no" rend="sh"/>mittel gewährenden Orte zu
+                                place="margin(left)">einem bedeutendern litterarische Hülfs<lb break="no" rend="sh"/>mittel gewährenden Orte zu
                                 wünschen,<lb/>damit er der Wissenschaft nicht entzogen<lb/>würde.</add></item>
                         <lb/>
                         <label>2.</label>
@@ -806,10 +816,10 @@
                             <abbr>d.</abbr>
                             <expan>den</expan>
                         </choice>
-                        <date when-iso="1817-08-10">10. August 1817.</date></dateline><milestone rend="vertical-rule align(center)" unit="none"/><hi
-                        rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
-                            >philologischen<lb/>Seminars</orgName>.</hi><lb/><signed rend="align(right)"><persName ref="#p0178" type="bi"
-                            >Böckh.</persName></signed></closer>
+                        <date when-iso="1817-08-10">10. August 1817.</date></dateline><milestone rend="vertical-rule align(center)" unit="none"/>
+                    <signed rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
+                            >philologischen<lb/>Seminars</orgName>.<lb/>
+                        <persName ref="#p0178" type="bi">Böckh.</persName></signed></closer>
             </div>
         </body>
     </text>

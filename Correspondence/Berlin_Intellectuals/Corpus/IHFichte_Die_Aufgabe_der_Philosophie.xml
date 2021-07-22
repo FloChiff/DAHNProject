@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -74,8 +75,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden</street>
+                                <postCode>10117 </postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">University Library, Humboldt University of Berlin</institution>
                         <repository>Historical Collections</repository>
                         <collection>Acta of the Royal Friedrich-Wilhelm University of Berlin concerning the graduations. From 1812 to 1822. Faculty of
@@ -85,10 +92,16 @@
                     <msContents>
                         <msItem>
                             <docDate when="1817"/>
-                            <note resp="#eva.schneider">Die Abhandlung "Über den Begriff der Philosophie pp." besteht aus zwei Teilen: Im ersten Teil
-                                bestimmt Immanuel Hermann Fichte die Aufgabe der Philosophie. Im zweiten, umfangreicheren Teil wendet er seinen Blick
-                                auf die Geschichte der Philosophie und prüft, ob und wie die Philosophen der Vergangenheit die Aufgabe der Philosophie
-                                lösten.</note>
+                            <note resp="#eva.schneider"><p xml:lang="de">Die Abhandlung "Über den Begriff der Philosophie pp." besteht aus zwei
+                                    Teilen: Im ersten Teil bestimmt Immanuel Hermann Fichte die Aufgabe der Philosophie. Im zweiten, umfangreicheren
+                                    Teil wendet er seinen Blick auf die Geschichte der Philosophie und prüft, ob und wie die Philosophen der
+                                    Vergangenheit die Aufgabe der Philosophie lösten.</p><p xml:lang="en">The treatise "On the Concept of Philosophy
+                                    pp." consists of two parts: In the first part, Immanuel Hermann Fichte determines the task of philosophy. In the
+                                    second, more extensive part, he turns his gaze to the history of philosophy and examines whether and how the
+                                    philosophers of the past solved the problem of philosophy.</p><p xml:lang="fr">Le traité "Sur le concept de
+                                    philosophie pp." se compose de deux parties : Dans la première partie, Immanuel Hermann Fichte détermine la tâche
+                                    de la philosophie. Dans la seconde partie, plus étendue, il porte son regard sur l'histoire de la philosophie et
+                                    examine si et comment les philosophes du passé ont résolu le problème de la philosophie.</p></note>
                             <note resp="#eva.schneider" type="keyword">Promotionsverfahren</note>
                             <note resp="#eva.schneider" type="keyword">Probeschrift</note>
                         </msItem>
@@ -239,8 +252,9 @@
                 <language ident="la" usage="05"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2015-01-12" who="#eva.schneider">I changed the footnotes from "note" to "add".</change>
             <change when-iso="2015-01-02" who="#eva.schneider">I checked the pdf version, which works now.</change>
             <change when-iso="2014-12-11" who="#eva.schneider">I went on with correcting some little mistakes in the encoding. The encoding is not
@@ -266,7 +280,7 @@
                         >96</hi></del></note>
                 <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">128.</del></note>
                 <note hand="#blue_hand" place="top-right" type="foliation">114</note>
-                <hi rend="underline align(center)">Als Vorerinnerung.</hi>
+                <p rend="underline align(center)">Als Vorerinnerung.</p>
                 <p>Indem ich, gegen meinen frühern Plan, nur mit einem<lb/> Bruchstücke der Abhandlung hervortrete, die ich meinen<lb/> verehrtesten
                     Lehrern zur Prüfung vorzulegen gedach<lb break="no"/>te, bedarf es der Entschuldigung und Rechenschaft des<lb break="no"
                     />wegen.</p>
@@ -294,13 +308,13 @@
                     </subst> früheren Plane, desto mehr Neues<lb/> zog sich in meinen Umkreis hinein; und ich <del rend="strikethrough">sah</del><lb/>
                     sah voraus, daß, ehe ich die neue Ausarbeitung<lb/> vollenden könnte, noch eine geraume Zeit hinge<lb break="no"/>hen würde. Da
                     mir nun aus andern Gründen<lb/> sehr viel daran gelegen war, die Abhandlung in<lb/> Kurzem geendigt zu sehen,<note
-                        resp="#eva.schneider"><persName ref="#p0662" type="bi">Immanuel Hermann Fichte</persName> war sehr daran gelegen, seine
-                        Promotion baldmöglichst zu beenden und gegen Honorar selbst Vorlesungen zu halten. Finanziell war es nämlich nicht gut um ihn
-                        bestellt, seitdem sein <rs ref="#p0251" type="bi">Vater</rs>, <persName ref="#p0251" type="bi">Johann Gottlieb
-                            Fichte</persName>, im Jahr 1814 unerwartet gestorben war und ihn und seine Mutter beinahe mittellos zurückgelassen
-                        hatte.</note> so <del rend="strikethrough"><gap extent="two words" reason="illegible"/></del>sahe ich mich<lb/> zu meinem
-                    großen Verdruß genöthigt, auch diesen<lb/> Plan aufzugeben. Es blieb unter diesen Umstän<lb break="no"/>den nichts übrig, als ein
-                    größeres Bruchstück der<lb/> alten Bearbeitung<choice>
+                        resp="#eva.schneider"><p xml:lang="de"><persName ref="#p0662" type="bi">Immanuel Hermann Fichte</persName> war sehr daran
+                            gelegen, seine Promotion baldmöglichst zu beenden und gegen Honorar selbst Vorlesungen zu halten. Finanziell war es
+                            nämlich nicht gut um ihn bestellt, seitdem sein <rs ref="#p0251" type="bi">Vater</rs>, <persName ref="#p0251" type="bi"
+                                >Johann Gottlieb Fichte</persName>, im Jahr 1814 unerwartet gestorben war und ihn und seine Mutter beinahe mittellos
+                            zurückgelassen hatte.</p><p xml:lang="en"/><p xml:lang="fr"/></note> so <del rend="strikethrough"><gap extent="two words"
+                            reason="illegible"/></del>sahe ich mich<lb/> zu meinem großen Verdruß genöthigt, auch diesen<lb/> Plan aufzugeben. Es
+                    blieb unter diesen Umstän<lb break="no"/>den nichts übrig, als ein größeres Bruchstück der<lb/> alten Bearbeitung<choice>
                         <sic>:</sic>
                         <corr>,</corr>
                     </choice> welches noch am Füglichsten als<lb/> etwas für sich bestehendes angesehen werden könnte,<lb/> auszuwählen, und von dem <subst>
@@ -319,9 +333,9 @@
                         <sic>zu</sic>
                         <corr><del rend="strikethrough">zu</del></corr>
                     </choice>
-                    <del rend="strikethrough">verthei<lb break="no"/>digen </del>weiter zu begründen.<note resp="#eva.schneider">An der Qualität der
-                        Probeschrift entschieden die Fakultätsmitglieder, ob der Kandidat zum mündlichen Examen zugelassen werde. Im Examen wurde er
-                        dann auf die von ihm eingereichte Probe geprüft.</note></p>
+                    <del rend="strikethrough">verthei<lb break="no"/>digen </del>weiter zu begründen.<note resp="#eva.schneider"><p xml:lang="de">An
+                            der Qualität der Probeschrift entschieden die Fakultätsmitglieder, ob der Kandidat zum mündlichen Examen zugelassen werde.
+                            Im Examen wurde er dann auf die von ihm eingereichte Probe geprüft.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p>Indem ich also wegen der großen Unvollkom̄enheit<lb/> dessen, was ich liefere, um Nachsicht bitte, werde es mir<lb/> erlaubt eine
                     kurze Uebersicht dessen vorauszuschicken,<lb/> was dem Plane <del rend="strikethrough">gemäß </del>der Abhandlung gemäß,
                     jenem<lb/> Bruchstücke vorangehen sollte.</p>
@@ -342,13 +356,14 @@
                     dem<lb/> Auffassen des <hi rend="underline">Faktums</hi> stehen bleibt, Sehen der bloßen<lb/>
                     <hi rend="underline">Gegebenheit</hi> ist.)</p>
                 <p>2. Das Erken̄en <hi rend="underline">erzeugt</hi> seinen Gegenstand durch frei<lb break="no"/>es Denken, durchdringt ihn genetisch
-                    in seinem ganzen<lb/> Wesen; und eben dadurch, daß es ihn aus seinen ursprüng<lb break="no"/>lichen <add n="╒" place="margin-left"><subst>
+                    in seinem ganzen<lb/> Wesen; und eben dadurch, daß es ihn aus seinen ursprüng<lb break="no"/>lichen <add n="╒"
+                        place="margin(left)"><subst>
                             <del rend="strikethrough">Theilen</del>
                             <add place="inline">Bestandtheilen</add>
                         </subst></add> entstehen läßt, ist es im Stande, die <hi rend="underline">nothwendi<lb break="no"/>gen</hi>
                     <hi rend="underline">Bedingungen</hi> vollständig auf<add place="above">zu</add>zählen<add place="inline">,</add>
                     <del rend="strikethrough">zu können, </del>die<lb/>
-                    <add place="margin-left">zu</add> sein<add place="below">em</add> Wesen <subst>
+                    <add place="margin(left)">zu</add> sein<add place="below">em</add> Wesen <subst>
                         <del rend="strikethrough">ausmachen</del>
                         <add place="above">gehören</add>
                     </subst>, ein <hi rend="underline">Gesetz</hi> über denselben auf<lb break="no"/>zustellen: – gezeigt an einem Beispiele aus der
@@ -356,7 +371,7 @@
                 <p>3. Den <hi rend="underline">Stoff</hi>, welchen es auf diese Weise zu behandeln<lb/> hat, liefert ihm die Erfahrung, <hi
                         rend="underline">innere</hi> sowohl als<lb/>
                     <hi rend="underline">äußere</hi>.</p>
-                <p>Indem es aber denselben frei reproducirt, kann es,<lb/> falls der gewählte Gegenstand ein <add n="╒" place="margin-left"><subst>
+                <p>Indem es aber denselben frei reproducirt, kann es,<lb/> falls der gewählte Gegenstand ein <add n="╒" place="margin(left)"><subst>
                             <del rend="strikethrough">Ma</del>
                             <add place="inline">aus Mannigfaltigem</add>
                         </subst></add> zusam̄engesetzter ist, <pb facs="00000245.jpg" n="5"/>
@@ -380,7 +395,7 @@
                     </subst><lb/>
                     <subst>
                         <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>
-                        <add n="╒" place="margin-right">wirklich</add>
+                        <add n="╒" place="margin(right)">wirklich</add>
                     </subst> gebe, oder nicht.)</p>
                 <p>Oder es sucht zugleich die <hi rend="underline">Existenz</hi> seines Objekts zur Nothwen<lb break="no"/>digkeit zu erheben: (<hi
                         rend="latin">X</hi>
@@ -433,7 +448,7 @@
                     in einer <hi rend="underline">fortlaufenden</hi>
                     <hi rend="underline">Reihe</hi>
                     <hi rend="underline">von Begründungen</hi> eines<lb/> aus dem andern <subst>
-                        <add n="╒" place="margin-right">hergeleitet würde</add>
+                        <add n="╒" place="margin(right)">hergeleitet würde</add>
                         <del rend="strikethrough">folgte</del>
                     </subst>, <subst>
                         <del rend="strikethrough">(</del>
@@ -451,7 +466,7 @@
                         <add place="across">e</add>
                     </subst>
                     <subst>
-                        <add n="╒" place="margin-right">zusam̄enhängende Kette</add>
+                        <add n="╒" place="margin(right)">zusam̄enhängende Kette</add>
                         <del rend="strikethrough">Umkreis</del>
                     </subst> aufgenom̄en <subst>
                         <del rend="overwritten">ist</del>
@@ -469,21 +484,21 @@
                     nothwendig als <hi rend="underline">absolut</hi>; (<choice>
                         <abbr>vgl.</abbr>
                         <expan>vergleiche</expan>
-                    </choice> 6) bliebe es nun bei <add place="margin-right">diesem Gliede,</add>
+                    </choice> 6) bliebe es nun bei <add place="margin(right)">diesem Gliede,</add>
                     <pb facs="00000248.jpg" n="8"/>
                     <note hand="#major_hand" place="top-left" type="foliation">8</note> als dem in der That Absoluten stehen, so würde es niemals<lb/>
                     die vollendete Erken̄tniß realisiren können. Es bedarf al<lb break="no"/>so eines andern, diese Beschränktheit der Form des
                         Erken<lb break="no"/>nens gleichsam ergänzenden und unschädlich machenden Prin<lb break="no"/>cipes: dies ist die <hi
                         rend="underline">Reflexion</hi>, das Gewahrwerden des<lb/> bloßen <hi rend="underline">Setzens</hi>
-                    <add n="╒" place="margin-left">des Absoluten</add>, des Denk<hi rend="underline">aktes</hi>, und das Aufheben der Ab<lb break="no"
-                    />solutheit dadurch. – Es ist also unverbrüchliche Maxime<lb/> des Erken̄ens, überall zu <hi rend="underline"
-                    >reflektiren</hi>.</p>
+                    <add n="╒" place="margin(left)">des Absoluten</add>, des Denk<hi rend="underline">aktes</hi>, und das Aufheben der Ab<lb
+                        break="no"/>solutheit dadurch. – Es ist also unverbrüchliche Maxime<lb/> des Erken̄ens, überall zu <hi rend="underline"
+                        >reflektiren</hi>.</p>
                 <p>10. Durch wechselseitiges <hi rend="underline">Setzen</hi> eines Absoluten, und<lb/>
                     <hi rend="underline">Wiederaufheben</hi> desselben durch Reflexion (9.) wird nun<lb/> das Erken̄en im̄er höher sich erheben<subst>
                         <add place="inline">:</add>
                         <del rend="strikethrough">,</del>
                     </subst> – ob in’s Unend<lb break="no"/>liche fort, oder nicht, und was ihm hier etwa <del rend="strikethrough">die Gränze</del><lb/>
-                    <add place="margin-left">eine</add> Begränzung geben könne, ist die Frage. Sein <hi rend="underline">Inhalt</hi>, wie<lb/> es
+                    <add place="margin(left)">eine</add> Begränzung geben könne, ist die Frage. Sein <hi rend="underline">Inhalt</hi>, wie<lb/> es
                     scheint: wenn es nichts mehr zu begründen haben wird,<lb/> muß es sich wohl von selbst für vollendet halten. – Doch<lb/> gesetzt
                     nun, es habe alle Phänomene hergeleitet aus<lb/> wenigen, oder auch <add place="above">nur</add> aus Einer Thatsache, wird es sich
                     jetzt<lb/> beruhigen <add place="above">können?</add>. Diese wenigen oder diese Eine werden<lb/> zwar Deduktionspunkt für alles
@@ -514,7 +529,7 @@
                 <p>12. Des letzten Problems Beantwortung wird so<lb/>
                     <supplied reason="binding">ver</supplied>sucht, daß wir zeigen, wie allem, was die Erfahrung<lb/>
                     <supplied cert="high" reason="binding">dar</supplied>biete, der Charakter<del rend="strikethrough">der Beschränktheit</del>, des
-                    Werdens,<lb/> Wandels und Vergehens, kurz der <add n="╒" place="margin-right">Beschränktheit und</add> Endlichkeit wesentlich<lb/>
+                    Werdens,<lb/> Wandels und Vergehens, kurz der <add n="╒" place="margin(right)">Beschränktheit und</add> Endlichkeit wesentlich<lb/>
                     <supplied reason="binding">s</supplied>eÿ; und daß dies insgesam̄t sich nicht nur nicht ausgleichen<lb/>
                     <supplied reason="binding">la</supplied>sse mit dem Charakter der <hi rend="underline">Absolutheit</hi>, (Ewigkeit, Unwan<lb
                         break="no"/><supplied reason="binding">de</supplied>lbarkeit, Unbeschränktheit) sondern sogar ihm <hi rend="underline"
@@ -538,7 +553,7 @@
                     <subst>
                         <del rend="strikethrough"><hi rend="underline">unendlichen</hi> Reihe aus einander entspringender, <gap extent="one word"
                                 reason="strikethrough"/></del>
-                        <add place="margin-left">end⹀ und bodenlosen Entstehens und Sichveränderns:</add>
+                        <add place="margin(left)">end⹀ und bodenlosen Entstehens und Sichveränderns:</add>
                     </subst><lb/> allem Werdenden muß ein Seÿn, das da nicht geworden ist<supplied reason="binding">,</supplied><lb/> allem Entstehen
                     ein Nichtentstandenes zu Grunde liegen<supplied reason="binding">,</supplied><lb/> als Grundlage und Anhalt gleichsam für das
                     wandelnde<lb/> Existirende; denn es läßt sich weder ein Entstehen<lb/> des Wirklichen aus dem reinen Nichts gedenken,
@@ -570,7 +585,7 @@
                     <hi n="2" rend="underline">Fakt<supplied reason="binding">um</supplied></hi><lb/>
                     <del rend="strikethrough">aus</del>, von der Existenz der Endlichkeit, seÿ. (Sie <supplied reason="binding">hat</supplied><lb/>
                     nicht in sich selbst den letzten Grund ihres Daseÿns, s<supplied reason="binding">on</supplied><lb break="no"/>dern im Absoluten;
-                    dieses ist also außer seinen <supplied reason="binding">Cha</supplied><lb break="no"/>rakter <add n="┌" place="margin-left">als
+                    dieses ist also außer seinen <supplied reason="binding">Cha</supplied><lb break="no"/>rakter <add n="┌" place="margin(left)">als
                         Absolutes,</add> noch Princip, Grund, zeugende Ursache <supplied reason="binding">ei</supplied><lb break="no"/>nes Zweiten
                     außer ihm.) Dieser Umstand kön<supplied reason="binding">nte</supplied>
                     <pb facs="00000253.jpg" n="11"/>
@@ -578,7 +593,7 @@
                     <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">101.</del></note>
                     <note hand="#pencil_1" n="2" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">133</del></note>
                     <note hand="#blue_hand" place="top-right" type="foliation">119</note> für die Zukunft von Bedeutung werden.</p>
-                <p>15. Dem gemäß wäre die Aufgabe der vollendeten<lb/> Erken̄tniß (= Philosophie) dahin zu bestim̄en, <add n="┌" place="margin-right"
+                <p>15. Dem gemäß wäre die Aufgabe der vollendeten<lb/> Erken̄tniß (= Philosophie) dahin zu bestim̄en, <add n="┌" place="margin(right)"
                         >daß sie</add> die <hi rend="underline">Endlich<lb break="no"/>keit</hi>, ihrem <hi rend="underline">Seÿn</hi> sowohl, als
                     ihrem <hi rend="underline">Soseÿn</hi> nach, aus ih<lb break="no"/>rem <hi rend="underline">absoluten</hi>
                     <hi rend="underline">Urgrunde</hi>
@@ -587,7 +602,7 @@
                 <milestone rend="horizontal-rule" unit="none"/>
                 <p>16. Wenn wir uns nämlich besinnen, wie weit eigentlich<lb/> jener über das Absolute geführter Beweis (12 und 13)<lb/> reiche, so
                     finden wir, daß dadurch nur dargethan seÿ,<lb/> es dürfe <del rend="strikethrough">überhaupt </del>eine höchste, letzte, absolute
-                        Grund<lb break="no"/>lage aller Wirklichkeit <add n="╒" place="margin-right"><hi rend="underline">überhaupt</hi></add> nicht
+                        Grund<lb break="no"/>lage aller Wirklichkeit <add n="╒" place="margin(right)"><hi rend="underline">überhaupt</hi></add> nicht
                     fehlen, daß jener Beweis<lb/> aber <add place="above">dieselbe sonst</add> durchaus unbestim̄t lasse, namentlich in der Hin<lb
                         break="no"/>sicht, ob eine <hi rend="underline">Einheit</hi> oder <hi rend="underline">Mehrheit</hi>
                     <subst>
@@ -629,10 +644,10 @@
                         <add place="above">daher</add>
                     </subst> keine<lb/> andere Beweisführung für das Erken̄en <add place="above">überhaupt</add> übrig blie<lb break="no"/>be, als die
                     durch Ableitung, so <del rend="strikethrough">wäre </del>vermöchte es über<lb/> das Absolute schlechterdings nichts zu beweisen,
-                    sondern<lb/> wäre <add place="margin-left">darüber</add> zu ewiger <del rend="strikethrough"><gap extent="one word"
+                    sondern<lb/> wäre <add place="margin(left)">darüber</add> zu ewiger <del rend="strikethrough"><gap extent="one word"
                             reason="illegible"/></del>Ungewißheit ver<subst>
                         <del rend="strikethrough"><gap extent="three to four chars" reason="illegible"/></del>
-                        <add n="╒" place="margin-left">urtheilt.</add>
+                        <add n="╒" place="margin(left)">urtheilt.</add>
                     </subst>. –</p>
                 <p>Doch das Zurückschließen hat uns schon vorher Dien<lb break="no"/>ste geleistet: (13.) der Rückschluß von der <hi rend="underline"
                         >nackten<lb/> Fakticität</hi> reichte aber nur bis zum Daseÿn eines <pb facs="00000255.jpg" n="13"/>
@@ -689,7 +704,7 @@
                         rend="underline">vermittelnden</hi> zu nen̄en.) Je<lb break="no"/>nes <hi rend="underline">dritte</hi> ist von den Philosophen
                     verschiedentlich <subst>
                         <del rend="strikethrough">ausge<lb break="no"/>führt</del>
-                        <add place="margin-left">dargestellt</add>
+                        <add place="margin(left)">dargestellt</add>
                     </subst> worden, als <foreign xml:lang="la"><hi rend="latin">systema divinae assistentia</hi></foreign> und <gap
                         extent="one to two chars" reason="damage"/><lb/>
                     <foreign xml:lang="la"><hi rend="latin">caussarum occasionalium</hi></foreign> bei <del rend="strikethrough">De </del><persName
@@ -805,11 +820,12 @@
                         <add place="across">L</add>
                     </subst>etzten und Höchsten <hi rend="underline">überhaupt</hi> auf die Behaup<lb break="no"/>tung <hi rend="underline"
                     >Eines</hi>, des <hi rend="underline">allerrealsten</hi>
-                    <add n="╒" place="margin-right"><hi rend="underline">alle</hi>
+                    <add n="╒" place="margin(right)"><hi rend="underline">alle</hi>
                         <hi rend="underline">Bedingungen</hi>
                         <hi rend="underline">in sich</hi>
-                        <hi rend="underline">vereinigenden</hi></add> Wesens.<note resp="#eva.schneider"><persName ref="#p0662" type="bi">Immanuel
-                            Hermann Fichte</persName> bezieht sich auf KrV A 592/B 620-A 631/B 659.</note>
+                        <hi rend="underline">vereinigenden</hi></add> Wesens.<note resp="#eva.schneider"><p xml:lang="de"><persName ref="#p0662"
+                                type="bi">Immanuel Hermann Fichte</persName> bezieht sich auf KrV A 592/B 620-A 631/B 659.</p><p xml:lang="en"/><p
+                            xml:lang="fr"/></note>
                     <persName ref="#p2767" type="bi">Kant</persName> also sagt:<lb/> Der Beweis für das <subst>
                         <del rend="strikethrough">Objekti</del>
                         <add place="inline">Daseÿn</add>
@@ -819,12 +835,12 @@
                     </choice> ob die letzten Gründe aller Realität<lb/>
                     <supplied reason="binding">in</supplied>
                     <hi rend="underline">Einem</hi> Wesen vereinigt, oder an mehrere vertheilt seÿen,<lb/> seÿ durch Beweise nicht zu erhärten. Im
-                    Wesentlichen <add n="┌" place="margin-right">also</add> würde<lb/> unser Resultat mit dem <persName ref="#p2767" type="bi"
+                    Wesentlichen <add n="┌" place="margin(right)">also</add> würde<lb/> unser Resultat mit dem <persName ref="#p2767" type="bi"
                         >Kantischen</persName> wohl übereinstim̄en.</p>
                 <p>24. So ist eigentlich keine Philosophie möglich; denn dem<lb/> Erken̄en ist es versagt, sich über die Fakticität zu erheben:<lb/>
                     der eigentliche Kern und <subst>
                         <del rend="strikethrough">das</del>
-                        <add n="╒" place="margin-right">Mittelpunkt</add>
+                        <add n="╒" place="margin(right)">Mittelpunkt</add>
                     </subst>
                     <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>der Spe<lb break="no"/>kulation, die endlichen Dinge in
                     ihrem Verhältnisse zum<lb/> Absoluten zu begreifen, bleibt ihm für im̄er <del rend="strikethrough">ver<lb break="no"/>schlossen
@@ -836,7 +852,7 @@
                     unbewußt, auf alle Philosophen gewirkt: denn wie wäre <pb facs="00000260.jpg" n="18"/>
                     <note hand="#major_hand" place="top-left" type="foliation">18</note> es sonst begreiflich, daß man den gewöhnlichen Beweisen<lb/>
                     für das Daseÿn Gottes so lange Zutrauen schenken, sie<lb/> für wirklich beweisend halten konnte? – Man war schon<lb/> vorher
-                    überzeugt, und trug nun, da man diese unmittel<lb break="no"/>bare Ueberzeugung gern unterstützt <add n="┌" place="margin-left"
+                    überzeugt, und trug nun, da man diese unmittel<lb break="no"/>bare Ueberzeugung gern unterstützt <add n="┌" place="margin(left)"
                         >und gesichert</add> sahe, diese auf die<lb/> Kraft der vermeintlichen Beweise über: hätten dagegen<lb/> diese jene Einsicht
                     erst erwecken und sichern sollen,<lb/> so wäre wohl kein Einziger befriedigt davon gegangen.<lb/> – Sie erscheint als <del
                         rend="strikethrough">ein </del>unmittelbares Axiom des Erken̄ens,<lb/> indem sie sich ohne Weiteres als das allein wahre
@@ -844,502 +860,493 @@
                     und<lb/> unbedingt verworfen, und die Einheit unbedingt behauptet,<lb/> ohne daß die Eine widerlegt, <subst>
                         <del rend="strikethrough">noch</del>
                         <add place="above">oder</add>
-                    </subst> die Andere bewiesen wer<lb break="no"/>den kann. <p>Mit wie inniger Ueberzeugungskraft uns daher jene<lb/>
-                        <hi rend="underline">unmittelbare</hi> Einsicht auch durchdringen mag, für die<lb/> Philosophie scheint sie dennoch
-                        unbrauchbar, weil es ihr<lb/> im̄er an gültigen, rein rationalen Beweisen fehlt.</p>
-                    <p>26. Doch – könnte man sagen – der Beweise bedarf<lb/> es erst da, wo <del rend="strikethrough"><add place="above">über
-                            </add></del>etwas Unbekan̄tes <del rend="strikethrough">entschieden </del>festgesetzt,<lb/> oder über Zweifelhaftes
-                        entschieden werden soll. Wäre<lb/> es daher nicht völlig überflüssig, auch dafür noch Beweise<lb/> suchen zu wollen, woran
-                        schon sonst Niemand zwei<lb break="no"/><hi rend="align(right)">felt,</hi>
-                        <pb facs="00000261.jpg" n="19"/>
-                        <note hand="#major_hand" place="top-right" type="foliation">19</note>
-                        <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">105.</del></note>
-                        <note hand="#pencil_1" place="top right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">137</del></note>
-                        <note hand="#blue_hand" place="top-right" type="foliation">123</note> und unverantwortlich, falls es deren nicht giebt, sich
-                        der<lb/> Ungewißheit zu überlassen, und alle <subst>
-                            <add n="╒" place="margin-right">Hoffnungen und Plane</add>
-                            <del rend="strikethrough">Plane</del>
-                        </subst> einer festen<lb/> Erken̄tniß aufzugeben?</p>
-                    <p>27. Doch, da dies alles noch nicht entscheidet, – heben wir die<lb/> Sache in einen erweiterten Gesichtskreis: Beweisen über<lb
-                            break="no"/>haupt ist lediglich <hi rend="underline">Identificiren</hi> mit einem schon im <hi rend="underline"
-                            >Voraus</hi><lb/> Wahren und Gewissen, – kann also nur ein <hi rend="underline">bedingt</hi>⹀Wahres<lb/> an das Licht
-                        fördern; die Kraft der Beweise ist erst eine<lb/>
-                        <hi rend="underline">mitgetheilte</hi>, eine aus der <hi rend="underline">zweit</hi>en Hand. Dies macht nothwendig<lb/> ein
-                            <hi rend="underline">unmittelbar</hi> und durch sich selbst und eigene Kraft Wahres<lb/> und Gewisses, und es ist nur die
-                        Frage, wo ein solches zu finden<lb/> seÿ. – Offenbar in der Region der Unbedingtheit, <del rend="strikethrough"><gap
-                                extent="one char" reason="illegible"/></del>Absolut<lb break="no"/>heit; denn das in seinem Seÿn be<hi
-                            rend="underline">dingte</hi> wird auch im Erken̄en<lb/> als bedingt, als ableitbar, seine Gewißheit aus einem höheren <add
-                            place="margin-right">empfangend</add><lb/>
-                        <del rend="strikethrough">schöpfend</del>, erscheinen müssen. Das Absolute dagegen, eben weil<lb/> es dies ist, kann nur
-                        erkan̄t werden in einer die Gewiß<lb break="no"/>heit aus sich selbst schöpfenden Einsicht, ebenso wie es selbst<lb/> in sich
-                        selbst die Quelle seines Daseÿns hat. Und alles An<lb break="no"/>dere kann nur darum gewiß seÿn, weil <hi rend="underline"
-                            >dieses</hi> gewiß ist:<lb/> Dies das durch sich Evidente, und dem Andern erst die<lb/> Evidenz mittheilende.</p>
-                    <p>28. So liegt also im Begriffe absoluter Erken̄tniß selbst<lb/> schon die Nothwendigkeit auszugehen von einem ursprüng<lb
-                            break="no"/>lich Wahren. <hi rend="underline">Untergeordnete</hi> Erken̄tnisse können, eben weil <pb facs="00000262.jpg"
-                            n="20"/>
-                        <note hand="#major_hand" place="top-left" type="foliation">20</note> sie dies sind, <del rend="strikethrough">können
-                        </del>anfangen von einem <hi rend="underline">Lehrsatze</hi>,<lb/> der anderweitig bewiesen, ihnen zum Stützpunkte dient,
-                        und<lb/> so in allen Theilen <del rend="strikethrough"><gap extent="three to four chars" reason="illegible"/></del>strenger
-                            <del rend="strikethrough">Beweisbarkeit Anspruch</del><lb/>
-                        <del rend="strikethrough">machen </del>Bewiesenheit sich rühmen; Philosophie nicht, eben weil<lb/> sie höchste Erken̄tniß
-                        ist.</p>
-                    <p>29. Ein solches durch sich Gewisse finden wir nun in<lb/> der Idee der <hi rend="underline">Einheit</hi> des Absoluten, die,
-                        weder ableitbar<lb/> noch durch Zurückschließen zu finden, wie gefordert, den<lb/> Stempel der Wahrheit in sich selbst
-                        trägt.</p>
-                    <p>– Idee der <hi rend="underline">Einheit des Absoluten</hi>, ohne allen weitern qua<lb break="no"/>litativen Beisatz, – eines <subst>
-                            <del rend="overwritten">aus</del>
-                            <add place="across">durch</add>
-                        </subst> sich selbst seÿenden, allge<lb break="no"/>nugsamen, höchstvollkom̄enen Daseÿns.</p>
-                    <p>30. Doch, indem diese Einsicht zwar erweckt und durch<lb/> Geistesbildung gekräftigt, nicht aber schlechthin Unver<lb
-                            break="no"/>mögenden oder Uebelwollenden <hi rend="underline">aufgezwungen</hi> und<lb/>
-                        <hi rend="underline">andemonstrirt</hi> werden kann, so bleibt die Philosophie <add place="above">in</add> ih<lb break="no"
-                        />rer wissenschaftlichen <hi rend="underline">Form</hi> wenigstens mangelhaft, und<lb/>
-                        <subst>
-                            <del rend="strikethrough"><unclear cert="medium" reason="illegible">bleibt</unclear></del>
-                            <add place="above">ist</add>
-                        </subst> Anfällen des Skepticismus ausgesetzt, der ihr<lb/> vorwerfen kann, daß sie in allen Theilen auf strenge<lb/>
-                        Demonstration nicht Anspruch zu machen habe, nicht in<lb/> sich <hi rend="underline">abgerundete</hi> Wissenschaft seÿ. Und
-                        inwiefern er Recht<lb/> habe, wissen wir. Sie m<subst>
-                            <del rend="overwritten">u</del>
-                            <add place="across">ü</add>
-                        </subst>ßte daher suchen, durch einen<lb/> Vergleich <subst>
-                            <del rend="strikethrough">sich vor</del>
-                            <add place="above">mit</add>
-                        </subst> ihm <add place="above">sich</add> sicher zu stellen. Dem <del rend="strikethrough">streng</del><lb/> Beweisbaren
-                        gemäß sollte sie in <hi rend="underline">Unentschiedenheit</hi>
-                        <pb facs="00000263.jpg" n="21"/>
-                        <note hand="#major_hand" place="top-right" type="foliation">21</note>
-                        <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">106.</del></note>
-                        <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">138</del></note>
-                        <note hand="#blue_hand" place="top-right" type="foliation">124</note> bleiben über die Absolutheit. (22 <choice>
-                            <abbr>fin.</abbr>
-                            <expan>finis</expan>
-                        </choice>) Entsagt sie dieser <add place="margin-right">Unentschiedenheit</add><lb/> aus irgend einem Grunde, so kann sie
-                        streng <hi rend="underline">beweisen</hi>, daß<lb/> sie nur die <hi rend="underline">Einheit</hi>
-                        <hi rend="underline">annehmen</hi> könne, indem diese <hi n="2" rend="underline">hin<lb break="no"/>reiche</hi>, und mehr als
-                        Ein Absolutes anzun<subst>
-                            <del rend="overwritten">hm</del>
-                            <add place="across">ehmen</add>
-                        </subst> – die<lb/> innere Unbestim̄theit davon abgerechnet, – durchaus <hi rend="underline">willkür<lb break="no"/>lich</hi>
-                        <add>seÿ</add>, und über die Befugniß des Beweises hinausgehe; daß<lb/> also wenigstens als <hi rend="underline"
-                            >subjektive</hi>
-                        <del rend="strikethrough"><hi rend="underline"><gap extent="one word" reason="illegible"/></hi></del><hi rend="underline"
-                            >Voraussetzung</hi> die<lb/> der Einheit die einzig mögliche seÿ.</p>
-                    <p>3<subst>
-                            <del rend="overwritten">0</del>
-                            <add place="across">1</add>
-                        </subst>. So ließe sich die Philosophie aus einem doppelten Stand<lb break="no"/>punkte betrachten: Dem Skepticismus
-                        gegenüber, in Rück<lb break="no"/>sicht der formalen Beweisbarkeit spricht sie von der Einheit<lb/> des Absoluten nur als
-                        einer subjektiven Voraussetzung,<lb/> um philosophiren zu können; beweist aber zugleich, daß, wenn<lb/> einer Annahme Raum
-                        gestattet werde, diese die einzig<lb/> mögliche seÿ: dem Skepticismus dagegen <del rend="strikethrough"><gap
-                                extent="one to two chars" reason="illegible"/></del>gesteht sie <add place="margin-right">das Recht</add><lb/>
-                        <del rend="strikethrough">Erlaubniß </del>zu, in seiner Unentschiedenheit zu verharren. –<lb/> Absehend aber von der bloßen
-                        Form, und überwältigt<lb/> von der inneren <subst>
-                            <del rend="strikethrough">Einsicht</del>
-                            <add place="above">Ueberzeugung</add>
-                        </subst>, herrscht sie dogmatisch, allen Zwei<lb break="no"/>fel ausschließend, und jede Ungewißheit niederschlagend;<lb/>
-                        gerade das, was sie vorher Annahme, Voraussetzung nan̄<lb break="no"/>te, und was es auf <subst>
-                            <del rend="strikethrough">diesem</del>
-                            <add place="above">jenem</add>
-                        </subst> Standpunkte auch allerdings<lb/> nur war, wird ihr nun das Gewisseste, Evidenste, die<lb/> Quelle, aus der sie alle
-                        andere Wahrheit ableitet. –</p>
-                    <p>32. Aber gerade dadurch, daß sie mit dem Skepticismus <pb facs="00000264.jpg" n="22"/>
-                        <note hand="#major_hand" place="top-left" type="foliation">22</note> sich also abfindet, erwehrt sie auch äußerlich sich
-                        seiner auf<lb/> das Beste. Wäre sie, wie die früheren Dogmatiker, be<lb break="no"/>müht gewesen, das Daseÿn Gottes zu <hi
-                            rend="underline">erweisen</hi>, so hätte Er<lb/> triumphirend sie der Irrthümer, der Ungründlichkeit<lb/> überweisen, und
-                        ihr Gebäude zerstören können: jetzt,<lb/> indem sie von falschen Anmaßungen absteht, und ihm<lb/> im Voraus schon einen
-                        ehrenvollen Platz sich gegenü<lb break="no"/>ber einräumt, vernichtet sie ihn gerade dadurch; wie<lb/> jedes negative, nur auf
-                        Zerstören berechnete Princip,<lb/> sobald es keinen Widerstand findet, von selbst in Nichts<lb/> vergeht. Er kann ihrem
-                        Beginnen nicht mehr schaden,<lb/> weil sie im Voraus auf ihn rechnete, hat also schlechthin<lb/> kein Interesse mehr, seiner
-                        eigenen innern Einsicht,<lb/> der logischen Beweisbarkeit zu Liebe, Hohn zu sprechen.</p>
-                    <milestone rend="horizontal-rule" unit="none"/>
-                    <p>32. Nach 15 besteht die Aufgabe der Philosophie in der<lb/>
-                        <hi rend="underline">Ableitung</hi> der Endlichkeit aus dem Absoluten. – Doch wo<lb break="no"/>raus abgeleitet werden soll,
-                        das muß in freiem Den<lb break="no"/>ken <hi rend="underline">reproducirt</hi>, in seinem Wesen genetisch durch<lb break="no"
-                        />drungen werden; es muß also im Voraus schon (durch<lb/> Erfahrung) dem Erken̄en bekan̄t <del rend="strikethrough"
-                        >seÿn</del>, <del rend="strikethrough">und </del>gleichsam sein<lb/> Eigenthum seÿn, mit dem es frei schalten kann.</p>
-                    <p>Hier scheitert also das Unternehmen der Philoso<lb break="no"/>phie abermals: aus dem Absoluten kann nicht abge<pb break="no"
-                            facs="00000265.jpg" n="23"/>
-                        <note hand="#major_hand" place="top-right" type="foliation">23</note>
-                        <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">107.</del></note>
-                        <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">139</del></note>
-                        <note hand="#blue_hand" place="top-right" type="foliation">125</note> leitet werden, weil Es, durchaus überfaktisch, <del
-                            rend="strikethrough">sein </del>in seinem <lb/> innern Wesen völlig verborgen und unsichtbar bleibt, und<lb/> nur <hi
-                            rend="underline">negativ</hi> – durch Abzug aller <hi rend="underline">endlichen</hi> Bestim̄ungen<lb/> von Ihm – zu
-                        charakterisiren ist.</p>
-                    <p>33. Sonach bleibt auch für die Philosophie schlechthin <hi rend="underline">un<lb break="no"/>begreiflich</hi>, <hi n="2"
-                            rend="underline">warum</hi> das Absolute nicht in sich selbst bleibe, son<lb break="no"/>dern Grund werde eines zweiten,
-                        nicht⹀Absoluten, der Endlich<lb break="no"/>keit: (<choice>
-                            <abbr>vgl.</abbr>
-                            <expan>vergleiche</expan>
-                        </choice> auch besonders 14.) es ist dies nur als ursprüng<lb break="no"/>liches <hi rend="underline">Faktum</hi> zu nehmen. – <subst>
-                            <del rend="strikethrough">Doch unbenom̄en</del>
-                            <add place="above">Dagegen</add>
-                        </subst> bleibt es dem<lb/> Erken̄en unbenom̄en, das <hi n="2" rend="underline">Wie</hi> dieses <hi rend="underline"
-                            >Grundseÿns</hi> des Ab<lb break="no"/>soluten, <add place="above">oder</add> des Hervorgehens der Endlichkeit aus jenem
-                        zu<lb/> bestim̄en; (ob es als Schöpfung, oder als Emanation <foreign xml:lang="la"><hi rend="latin"><choice>
-                                    <abbr>pp</abbr>
-                                    <expan>perge perge</expan>
-                                </choice></hi></foreign> zu <lb/> denken seÿ.) Und so modificirt sich die Aufgabe der Philoso<lb break="no"/>phie
-                        dahin, daß sie, ausgehend von dem <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del><hi n="2"
-                            rend="underline">Faktum</hi>
-                        <hi rend="underline">der Zwei<lb break="no"/>heit</hi>, das <hi rend="underline">Verhältniß</hi>
-                        <hi rend="underline">de<subst>
-                                <del rend="overwritten">s</del>
-                                <add place="across">r</add>
-                            </subst> Endlichkeit zum Absoluten zu bestim̄en,</hi><lb/> oder, da wir im Allgemeinen früher das Absolute als <hi
-                            rend="underline">Ur<lb break="no"/>grund</hi> der Endlichkeit charakterisirten, festzusetzen hätte,<lb/>
-                        <hi rend="underline">in welchem Sinne dies zu denken seÿ</hi></p>
-                    <p>34. <hi rend="underline">Dies</hi> wäre die höchste Aufgabe, die das Erken̄en sich<lb/> stellen kann, sonach auch erster und
-                            <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>vorzüglichster Ge<lb break="no"/>genstand der
-                        Philosophie, und zugleich das Wichtigste und Wissens<lb break="no"/>würdigste in allem Wissen, indem die Fragen, die
-                        sonst<lb/> auch <subst>
-                            <del rend="strikethrough">das</del>
-                            <add place="above">vom</add>
-                        </subst> höchste<add>n</add> Interesse <subst>
-                            <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>
-                            <add place="above">sind</add>
-                        </subst>, weil sie das Heiligste<lb/> unseres Gemüths angehen, erst hier, in der Tiefe und<lb/> aus dem Urquell aller Realität
-                        befriedigende Lösung <pb facs="00000266.jpg" n="24"/>
-                        <note hand="#major_hand" place="top-left" type="foliation">24</note>
-                        <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>erhalten können. So möchte die Philosophie nicht
-                        bloß einer,<lb/> an sich auch nicht verwerflichen Wisbegier Aufschluß geben,<lb/> sondern selbst das höchste praktische
-                        Interesse haben.</p>
-                    <p>35. Wenn wir früher als die Aufgabe der Philosophie fanden, die End<lb break="no"/>lichkeit ihrem <hi rend="underline"
-                            >Seÿn</hi> und <hi rend="underline">Soseÿn</hi> nach aus dem Absoluten <hi rend="underline">abzuleiten</hi>,<lb/> so hat
-                        sich dieses freilich als unmöglich <subst>
-                            <add n="╒" place="margin-left">gezeigt</add>
-                            <del rend="strikethrough">gefunden</del>
-                        </subst>, indem im Absoluten<lb/> niemals ein Deduktionspunkt sich finden lasse. Dagegen wäre die<lb/> Frage, ob statt dessen
-                        die Ableitung nicht aus der Bestim̄ung des<lb/>
-                        <hi rend="underline">Verhältnisses</hi> zwischen beiden Theilen (33) gelingen könne; („weil<lb/> „das Absolute in <hi
-                            rend="underline">diesem</hi> Sinne Grund ist der Endlichkeit, so folgt da<lb break="no"/>„raus, daß letztere <hi
-                            rend="underline">so <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> so</hi> beschaffen seÿn müsse, <choice>
-                            <abbr>u dergl.</abbr>
-                            <expan>und dergleichen</expan>
-                        </choice>„ – ) so daß<lb/> der Deduktionspunkt nur in einer nieder<subst>
-                            <del rend="overwritten">en,</del>
-                            <add place="across">ern,</add>
-                        </subst> dem denken zugänglichen<lb/> Region gesucht würde. – Mit Absicht drücken wir indessen uns da<lb break="no"/>rüber nur
-                        problematisch aus, indem dies erst aus der wirklichen Be<lb break="no"/>stim̄ung jenes Verhältnisses sich ergeben kann, <del
-                            rend="strikethrough"><gap extent="one word" reason="illegible"/></del><choice>
-                            <abbr>d. h.</abbr>
-                            <expan>das heißt</expan>
-                        </choice> wenn der er<lb break="no"/>ste Theil der Aufgabe der Philosophie schon <del rend="strikethrough"><gap
-                                extent="one word" reason="illegible"/></del>vollzogen ist, also<lb/> vorläufig und im <hi rend="underline">Allgemeinen
-                            darüber</hi> sich nichts bestim̄en läßt.</p>
-                    <p>36. Wird aber das Absolute gedacht, und alles Ernstes gedacht, so erscheint<lb/> Es <add n="╒" rend="margin-left">ganz von
-                            selbst</add> als das <hi rend="underline">allein</hi> seÿende, <del rend="strikethrough"><gap extent="one word"
-                                reason="illegible"/></del>als in sich <hi rend="underline">umfassend</hi> und <hi rend="underline">er<lb break="no"
-                            />schöpfend alle Existenz</hi>. Es ist das Allgenugsame, Allvollkom̄ne, ohne Bedürf<lb break="no"/>niß eines Andern, ohne
-                        Mangel und Beraubung irgend einer Art: die<lb/> ganze Fülle der Realität ist in Ihm; was bliebe noch übrig für ein<lb/>
-                        <hi rend="underline">Anderes</hi> außer Ihm? Wie vermöchte E<subst>
-                            <del rend="overwritten">r</del>
-                            <add place="across">s</add>
-                        </subst> überhaupt aus sich <hi rend="underline">herauszugehen</hi>
-                        <choice>
-                            <unclear cert="high" reason="illegible">um</unclear>
-                            <unclear cert="low" reason="illegible">und</unclear>
-                        </choice><lb/> einem Zweiten Daseÿn zu geben? Vielmehr ist in Ihm Alles, was seÿn kan̄,<lb/> erschöpft und vollendet; Es
-                        umfaßt und verschlingt gleichsam alles unter<lb break="no"/>geordnete Existirende, so wie die Sonne im Aufgange alle kleineren
-                            Ge<lb break="no"/>stirne überstrahlt. – <hi rend="underline">Nur Gott ist, und außer Ihm nichts</hi>.</p>
-                    <p>Indem aber das Erken̄en diesen Satz ausspricht, zeigt sich ihm die Fakticität<lb/> in ihrem, dem Charakter de<subst>
-                            <del rend="overwritten">r</del>
-                            <add place="across">s</add>
-                        </subst>
-                        <subst>
-                            <del rend="strikethrough">Absolutheit</del>
-                            <add n="╒" place="margin-left">Absoluten</add>
-                        </subst> durchaus <hi rend="underline">entgegengesetzten</hi> Wesen,<lb/> und dadurch die Aufgabe, das Daseÿn dieses dem
-                        Anschein nach <hi rend="underline">Nicht<lb break="no"/>absoluten</hi> zu erklären, und auszugleichen mit jener Wahrheit, die
-                        ihm<lb/> so lebendig geworden ist: – den Widerspruch zwischen <hi rend="underline">Erken̄tniß</hi> und <hi rend="underline"
-                                >Er<lb break="no"/>fahrung</hi> aufzulösen, entweder dadurch, daß es die dem Absoluten wider<lb break="no"/>sprechende
-                        Form der Endlichkeit dennoch mit Jenem ausgleicht, oder, falls<lb/> dies nicht gelingen sollte, daß es einen umfassendern Satz
-                        an die Stelle des<lb/> obigen setzt. – Hieran schließt sich nun der folgende (<hi rend="latin">IV</hi>) Abschnitt:</p>
-                    <pb facs="00000267.jpg" n="25"/>
-                    <note hand="#major_hand" place="top-right" type="foliation">25</note>
-                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
-                                >108</hi></del></note>
-                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">140</del></note>
-                    <note hand="#blue_hand" place="top-right" type="foliation">126</note>
-                    <handShift new="#brown_ink"/><hi rend="align(center)"><hi rend="latin">IV.</hi>
-                        <hi rend="underline">Vom Verhältnisse der Endlichkeit<lb/> zum Absoluten.</hi></hi>
-                    <p><supplied reason="binding">8</supplied>5. Es wäre eben so ungründlich als undankbar, wenn wir bei<lb/>
-                        <supplied reason="binding">der</supplied> bevorstehenden Untersuchung nicht zu Rathe zögen, und gleichsam<lb/>
-                        <supplied reason="binding">un</supplied>s zum Leiter und Stützpunkte machten, was die vorigen Zeiten<lb/>
-                        <supplied reason="binding">in</supplied> dieser Hinsicht geleistet haben. Doch je man̄igfaltiger hier die Mei<lb break="no"
-                        />nungen sind, um desto mehr thut Vorsicht in der Wahl und Entscheidung<lb/> Noth. <add place="above">Und</add>
-                        <subst>
-                            <del rend="overwritten">E</del>
-                            <add place="across">e</add>
-                        </subst>s muß wohl in dieser <subst hand="#major_hand">
-                            <add n="╒" place="margin-right">Beurtheilung</add>
-                            <del rend="strikethrough">Beobachtung</del>
-                        </subst><note resp="#eva.schneider">Die Seiten 25-64 der Promotionsschrift stammen nicht von der Hand <persName ref="#p0662"
-                                type="bi">Immanuel Hermann Fichtes</persName>, sondern von der eines Abschreibers. <persName ref="#p0662" type="bi"
-                                >Fichte</persName> nahm in der Abschrift allerdings Korrekturen vor, die in dieser Edition wiedergegeben werden. Zudem
-                            verdeutlichte er auf jeder der genannten Seiten einzelne Buchstaben - zum Beispiel setzte er über viele der vom
-                            Abschreiber geschriebenen Umlaute Pünktchen und zeichnete in einigen Fällen das große D nach, das beim Abschreiber selten
-                            eindeutig vom kleinen d zu unterscheiden ist. Diese Eingriffe werden der Leserlichkeit halber nicht wiedergegeben.</note>
-                        vorzüglich der Grundsatz beobachtet<lb/> werden, <hi rend="underline">überall streng die Beweisbarkeit zu prüfen, und jede
-                            Behauptung,<lb/> die ohne einen solchen strengen Beweis aufgeführt wird, sofort in<lb/> Beschlag zu nehmen.</hi> Zum
-                        Letzteren – dem Behaupten ohne eigentlichen Beweis –<lb/> wird man hier vorzüglich eingeladen, wo das Erkennen, welches nur
-                        mit<lb/> großen Anstrengungen und durch Umschweife zu einem festen Ziele<lb/> gelangt, der Einbildungskraft willig Spielraum
-                        vergön̄t, die, grade<lb/> hier, wo kaum Erfahrung sie Lügen strafen kann, an ihrem Platze, ohne<lb/> große Mühe nach
-                        Lieblingsmeinungen und Vorurtheilen die Sache entscheidet.</p>
-                    <p>86. Der ursprüngliche Maasstab, den die menschliche Vernunft an das<lb/>
-                        <supplied reason="binding">W</supplied>esen der Gottheit anlegt, ist, daß sie dieselbe als unendlich <hi rend="underline"
-                            >erhaben</hi><lb/>
-                        <supplied reason="binding">ü</supplied>ber alles Irdische und Sichtbare anerkennt. Bevor sie sich aber bescheidet<lb/>
-                        <supplied reason="binding">ü</supplied>ber das innere Wesen des Absoluten Etwas erken̄en zu wollen, bevor<lb/>
-                        <supplied reason="binding">si</supplied>e – was erst bei größerer Reife <del hand="#major_hand" rend="strikethrough"><add
-                                hand="#major_hand" n="╒" place="margin-right">des philosophischen <gap extent="one word" reason="strikethrough"
-                                /></add></del>und einem höhern Grade von Beson̄en<lb break="no"/><supplied reason="binding">hei</supplied>t erwartet
-                        werden kan̄ – alles Irdische und Endliche Ihm abspricht,<lb/>
-                        <supplied reason="binding">ve</supplied>rmag sie Es nur zu denken, als in <hi rend="underline">höherm Grade</hi> und <hi
-                            rend="underline">größerer<lb/>
-                            <supplied reason="binding">V</supplied>ollendung irdische Eigenschaften an sich tragend</hi>. Je niedriger aber<lb/>
-                        <supplied reason="binding">der</supplied> Mensch, je niedriger die Gegenstände, in die derselbe die Realität<lb/>
-                        <supplied reason="binding">sieh</supplied>t, desto niedriger wird auch seine Idee der Gottheit ausfallen müssen.<lb/>
-                        <supplied cert="medium" reason="binding">So</supplied> wird sie ihm auf der ersten Stufe der Kultur als ein Wesen im<lb/>
-                        <supplied reason="binding">Ra</supplied>ume, mit vollendetern Organen, und mit übermenschlichen Kräften –<lb/>
-                        <supplied reason="binding">aber</supplied> auch Leidenschaften – ausgerüstet erscheinen müssen. <add hand="#major_hand"
-                            place="above">–</add> Doch der Mensch<lb/>
-                        <supplied reason="binding">wan</supplied>delt sich, und mit ihm auch sein Geschöpf, <subst hand="#major_hand">
-                            <del rend="strikethrough">sein</del>
-                            <add place="above">der</add>
-                        </subst> Begriff von Gott; er<lb/>
-                        <supplied reason="binding">erke</supplied>n̄t bald für das <subst hand="#major_hand">
-                            <del rend="overwritten">h</del>
-                            <add place="across">H</add>
-                        </subst>öchste, was die Endlichkeit darbietet, die Tugend, die<lb/>
-                        <supplied reason="binding">Freihe</supplied>it, die Vernunft, und so wird jener als die höchste Weisheit, die unbe<lb
-                            break="no"/><supplied reason="binding">schrän</supplied>kteste Freiheit und Allmacht, kurz, als die höchste Potenz jeder edlern<lb/>
-                        <supplied reason="binding">Geiste</supplied>skraft erkan̄t; edler zwar, und würdiger, aber doch bleibt es im̄er <pb
-                            facs="00000268.jpg" n="26"/>
-                        <note hand="#major_hand" place="top-left" type="foliation">26</note> dasselbe – wenigstens unphilosophische – Princip, – ein
-                        Gestalten nach eig<supplied reason="binding">enem</supplied><lb/> Bilde, <hi rend="underline">Anthropomorphismus</hi>, wie
-                        dies sehr bezeichnend genan̄t worden.</p>
-                    <p>87. Indem das Absolute ins Bewußtseyn tritt, und der Endlichkeit <supplied reason="binding">als solcher</supplied><lb/> sich
-                        entgegensetzt, erscheint es in dieser Entgegensetzung ursprünglich a<supplied reason="binding">ls <hi rend="underline"
-                            >Ur</hi></supplied><lb break="no"/><hi rend="underline">grund</hi> derselben, und kan̄ nicht anders erscheinen. Es ist
-                        dies ein Beis<supplied reason="binding">atz, der</supplied><lb/> zwar nicht im Wesen des Absoluten als solchem liegt, wohl
-                        aber in <supplied reason="binding">der</supplied><lb/> Verknüpfung, in welcher es <subst>
-                            <del rend="overwritten">im</del>
-                            <add place="across">dem</add>
-                        </subst> Erken̄en <subst hand="#major_hand">
-                            <del rend="strikethrough">erscheint</del>
-                            <add place="across">sich darstellt</add>
-                        </subst>. Wie nun jener <supplied reason="binding">allgemeine,</supplied><lb/> ziemlich unbestim̄te Begriff des Urgrundseyns
-                        nach den eben (86) <supplied reason="binding">eröffne</supplied><lb break="no"/>ten Principien gedeutet werden müsse, liegt am
-                        Tage. Der Mensch <supplied reason="binding">ordnet,</supplied><lb/> bildet, producirt nach Zwecken, <del rend="strikethrough"
-                            >und </del>nach bestim̄ten Vorbildern; wa<supplied reason="binding">rum nicht</supplied><lb/> auch Gott? Er nur auf
-                        unendlich vollkomnere Weise; daher sein P<supplied reason="binding">rodukt auch</supplied><lb/> um so vollendeter seyn mußte.
-                        So ist Er, in den ersten Anfängen <supplied reason="binding">der</supplied><lb/> Philosophie, <hi rend="underline">Ordner</hi>
-                        und <hi rend="underline">Erbauer</hi> der Welt (<foreign xml:lang="grc"><hi rend="greek">δημιουργὸς τοῦ
-                            ὅλου</hi></foreign><supplied reason="binding">.) was</supplied><lb/> stets mehr oder weniger klar die Idee eines <hi
-                            rend="underline">ursprünglichen Stoffes</hi> (<foreign xml:lang="grc"><hi rend="greek">υλη</hi></foreign><add n="x)"
-                            type="footnote">die spätere philosophische Bedeutung dieses Wortes hat vielleicht die auch <supplied reason="binding"
-                                >sonst hierher</supplied><lb/> gehörende Stelle des <persName ref="#p0034" type="bi">Platonischen</persName>
-                            <title ref="#w0075">Timäus</title> (<foreign xml:lang="la"><hi rend="latin"><choice>
-                                        <abbr>p.</abbr>
-                                        <expan>pagina</expan>
-                                    </choice></hi></foreign> 385. <foreign xml:lang="la"><hi rend="latin"><choice>
-                                        <abbr>bip.</abbr>
-                                        <expan>bipontina</expan>
-                                    </choice></hi></foreign>) verlanlaßt: <supplied reason="binding">Sowie das</supplied><lb/>
-                            <foreign xml:lang="grc"><hi rend="greek">τέκλονες</hi></foreign> das Holz (<foreign xml:lang="grc"><hi rend="greek"
-                                    >ὔλην</hi></foreign>) bearbeiten, so bildet der <foreign xml:lang="grc"><hi rend="greek">δημιουγὸς</hi></foreign>
-                            aus de<supplied reason="binding">m Vorliegenden</supplied><lb/> das Man̄igfaltige: Ueberhaupt bildet dieser Dialog – er
-                            mag nun den höch<supplied reason="binding">sten und letzten</supplied><lb/> Gipfel <persName ref="#p0034" type="bi"
-                                >Platonischer</persName> Spekulation über diesen Punkt enthalten, oder nicht – <supplied reason="binding">den
-                                vollkom</supplied><lb break="no"/>mensten <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> geistvollsten Beleg zu der oben erwähnten Ansicht.</add><lb/>
-                        <foreign xml:lang="la"><hi rend="latin">materies</hi></foreign>) für jene Bearbeitung, einer <hi rend="underline"
-                        >Ur</hi>materie neben dem Absolu<supplied reason="binding">ten he</supplied><lb break="no"/>raustrat. <add hand="#major_hand"
-                            n="╒" place="margin-left">So führt diese Ansicht nothwendig auf einen <hi rend="underline">Dualismus</hi>.–</add></p>
-                    <p>88. Doch eine solche <hi hand="#major_hand" rend="underline">Zweiheit</hi> befriedigt nicht; <del rend="strikethrough">aus
-                        </del>ganz von selbst en<supplied reason="binding">tsteht die</supplied><lb/> Frage: woher denn nun jener Urstoff selber? Und
-                        man konnte in d<supplied reason="binding">iesem</supplied><lb/> Zusam̄enhange vor der Hand um die Antwort nicht verlegen seyn:
-                            <supplied reason="binding">Gott soll</supplied><lb/> nicht bloß <hi rend="underline">Baumeister</hi> und <hi
-                            rend="underline">Ordner</hi> der Welt <add hand="#major_hand" place="above">seyn</add>, indem sodan̄ die Frei<supplied
-                            reason="binding">heit seines</supplied><lb/> Schaffens, seine Allmacht durch die <hi rend="underline">Taug</hi>lichkeit
-                        des <hi rend="underline">Stoffes</hi> beschrän<supplied reason="binding">kt werde</supplied><lb/> und so die Welt nicht sein
-                        freies Produkt, sondern das Erzeugniß <supplied reason="binding"><hi rend="underline">zweier</hi></supplied><lb/> Kräfte seyn
-                        würde: <subst hand="#major_hand">
-                            <add n="╒" place="margin-left">vielmehr fordert der Begriff der <lb/>Allmacht anznehmen, daß er unbe<lb break="no"
-                                />schränkt <hi rend="underline">Alles</hi> aus sich <del rend="strikethrough">erscha </del>erzeugt <lb/>habe.</add>
-                            <del rend="strikethrough">so führt diese Ansicht nothwendig auf einen <supplied reason="binding"
-                                >Dualismus</supplied></del>
-                            <lb/>
-                            <del rend="strikethrough">der durchaus dem innern Wesen der Vernunft widerstrebt.</del>
-                        </subst> Es muß<supplied reason="binding">te daher</supplied><lb/> zunächst die Behauptung aufkom̄en, daß <subst
-                            hand="#major_hand">
-                            <del rend="overwritten">a</del>
-                            <add place="across">A</add>
-                        </subst>lles in Gott seinen Ursp<supplied reason="binding">rung hat,</supplied><lb/> und so entstand die Idee einer <hi
-                            rend="underline">Schöpfung aus Nichts</hi>.<add n="xx)" next="#add-00000271" type="footnote" xml:id="add-00000268">Es läßt
-                            sich über jene Meinung nicht viel reden, noch weniger sie k<supplied reason="binding">unstmäßig
-                            widerlegen,</supplied></add></p>
-                    <p>89. Abgerechnet nun die innere Unbestimtheit und Unverständ<supplied reason="binding">lichkeit des</supplied><lb/> Begriffes
-                        des <hi rend="underline">Schaffens</hi>, und die Unmöglichkeit eines Erzeugens aus <supplied reason="binding"
-                            >Nichts,</supplied><lb/> so liegt doch außerdem ein Anthropomorphismus zu Tage, der etwas d<supplied reason="binding">em
-                            Wesen</supplied><lb/> des Absoluten schlechthin <hi rend="underline">widerstreitendes</hi> behauptet. Gott <hi
-                            rend="underline">handelt</hi>, v<supplied reason="binding">ollführt alles</supplied><lb/> und, da nichts <subst>
-                            <del rend="overwritten">a</del>
-                            <add place="across">A</add>
-                        </subst>nderes Grund dieser Veränderung seyn kann, <add hand="#major_hand" place="above">er</add> entsch<supplied
-                            reason="binding">ließt – sich</supplied><lb/> selbst dazu, zufolge einer freien Willensbestimmung, und geht auf <supplied
-                            reason="binding">diese Weise, </supplied></p>
-                    <pb facs="00000269.jpg" n="27"/>
-                    <note hand="#major_hand" place="top-right" type="foliation">25</note>
-                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
-                                >109.</hi></del></note>
-                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">143</del></note>
-                    <note hand="#blue_hand" place="top-right" type="foliation">127</note>
-                    <handShift new="#major_hand"/><hi rend="underline">Zu <choice>
+                    </subst> die Andere bewiesen wer<lb break="no"/>den kann.</p>
+                <p>Mit wie inniger Ueberzeugungskraft uns daher jene<lb/>
+                    <hi rend="underline">unmittelbare</hi> Einsicht auch durchdringen mag, für die<lb/> Philosophie scheint sie dennoch unbrauchbar,
+                    weil es ihr<lb/> im̄er an gültigen, rein rationalen Beweisen fehlt.</p>
+                <p>26. Doch – könnte man sagen – der Beweise bedarf<lb/> es erst da, wo <del rend="strikethrough"><add place="above">über
+                    </add></del>etwas Unbekan̄tes <del rend="strikethrough">entschieden </del>festgesetzt,<lb/> oder über Zweifelhaftes entschieden
+                    werden soll. Wäre<lb/> es daher nicht völlig überflüssig, auch dafür noch Beweise<lb/> suchen zu wollen, woran schon sonst Niemand
+                        zwei<lb break="no"/><hi rend="align(right)">felt,</hi>
+                    <pb facs="00000261.jpg" n="19"/>
+                    <note hand="#major_hand" place="top-right" type="foliation">19</note>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">105.</del></note>
+                    <note hand="#pencil_1" place="top right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">137</del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">123</note> und unverantwortlich, falls es deren nicht giebt, sich
+                    der<lb/> Ungewißheit zu überlassen, und alle <subst>
+                        <add n="╒" place="margin(right)">Hoffnungen und Plane</add>
+                        <del rend="strikethrough">Plane</del>
+                    </subst> einer festen<lb/> Erken̄tniß aufzugeben?</p>
+                <p>27. Doch, da dies alles noch nicht entscheidet, – heben wir die<lb/> Sache in einen erweiterten Gesichtskreis: Beweisen über<lb
+                        break="no"/>haupt ist lediglich <hi rend="underline">Identificiren</hi> mit einem schon im <hi rend="underline"
+                    >Voraus</hi><lb/> Wahren und Gewissen, – kann also nur ein <hi rend="underline">bedingt</hi>⹀Wahres<lb/> an das Licht fördern; die
+                    Kraft der Beweise ist erst eine<lb/>
+                    <hi rend="underline">mitgetheilte</hi>, eine aus der <hi rend="underline">zweit</hi>en Hand. Dies macht nothwendig<lb/> ein <hi
+                        rend="underline">unmittelbar</hi> und durch sich selbst und eigene Kraft Wahres<lb/> und Gewisses, und es ist nur die Frage,
+                    wo ein solches zu finden<lb/> seÿ. – Offenbar in der Region der Unbedingtheit, <del rend="strikethrough"><gap extent="one char"
+                            reason="illegible"/></del>Absolut<lb break="no"/>heit; denn das in seinem Seÿn be<hi rend="underline">dingte</hi> wird
+                    auch im Erken̄en<lb/> als bedingt, als ableitbar, seine Gewißheit aus einem höheren <add place="margin(right)">empfangend</add><lb/>
+                    <del rend="strikethrough">schöpfend</del>, erscheinen müssen. Das Absolute dagegen, eben weil<lb/> es dies ist, kann nur erkan̄t
+                    werden in einer die Gewiß<lb break="no"/>heit aus sich selbst schöpfenden Einsicht, ebenso wie es selbst<lb/> in sich selbst die
+                    Quelle seines Daseÿns hat. Und alles An<lb break="no"/>dere kann nur darum gewiß seÿn, weil <hi rend="underline">dieses</hi> gewiß
+                    ist:<lb/> Dies das durch sich Evidente, und dem Andern erst die<lb/> Evidenz mittheilende.</p>
+                <p>28. So liegt also im Begriffe absoluter Erken̄tniß selbst<lb/> schon die Nothwendigkeit auszugehen von einem ursprüng<lb break="no"
+                    />lich Wahren. <hi rend="underline">Untergeordnete</hi> Erken̄tnisse können, eben weil <pb facs="00000262.jpg" n="20"/>
+                    <note hand="#major_hand" place="top-left" type="foliation">20</note> sie dies sind, <del rend="strikethrough">können
+                    </del>anfangen von einem <hi rend="underline">Lehrsatze</hi>,<lb/> der anderweitig bewiesen, ihnen zum Stützpunkte dient, und<lb/>
+                    so in allen Theilen <del rend="strikethrough"><gap extent="three to four chars" reason="illegible"/></del>strenger <del
+                        rend="strikethrough">Beweisbarkeit Anspruch</del><lb/>
+                    <del rend="strikethrough">machen </del>Bewiesenheit sich rühmen; Philosophie nicht, eben weil<lb/> sie höchste Erken̄tniß ist.</p>
+                <p>29. Ein solches durch sich Gewisse finden wir nun in<lb/> der Idee der <hi rend="underline">Einheit</hi> des Absoluten, die, weder
+                    ableitbar<lb/> noch durch Zurückschließen zu finden, wie gefordert, den<lb/> Stempel der Wahrheit in sich selbst trägt.</p>
+                <p>– Idee der <hi rend="underline">Einheit des Absoluten</hi>, ohne allen weitern qua<lb break="no"/>litativen Beisatz, – eines <subst>
+                        <del rend="overwritten">aus</del>
+                        <add place="across">durch</add>
+                    </subst> sich selbst seÿenden, allge<lb break="no"/>nugsamen, höchstvollkom̄enen Daseÿns.</p>
+                <p>30. Doch, indem diese Einsicht zwar erweckt und durch<lb/> Geistesbildung gekräftigt, nicht aber schlechthin Unver<lb break="no"
+                    />mögenden oder Uebelwollenden <hi rend="underline">aufgezwungen</hi> und<lb/>
+                    <hi rend="underline">andemonstrirt</hi> werden kann, so bleibt die Philosophie <add place="above">in</add> ih<lb break="no"/>rer
+                    wissenschaftlichen <hi rend="underline">Form</hi> wenigstens mangelhaft, und<lb/>
+                    <subst>
+                        <del rend="strikethrough"><unclear cert="medium" reason="illegible">bleibt</unclear></del>
+                        <add place="above">ist</add>
+                    </subst> Anfällen des Skepticismus ausgesetzt, der ihr<lb/> vorwerfen kann, daß sie in allen Theilen auf strenge<lb/>
+                    Demonstration nicht Anspruch zu machen habe, nicht in<lb/> sich <hi rend="underline">abgerundete</hi> Wissenschaft seÿ. Und
+                    inwiefern er Recht<lb/> habe, wissen wir. Sie m<subst>
+                        <del rend="overwritten">u</del>
+                        <add place="across">ü</add>
+                    </subst>ßte daher suchen, durch einen<lb/> Vergleich <subst>
+                        <del rend="strikethrough">sich vor</del>
+                        <add place="above">mit</add>
+                    </subst> ihm <add place="above">sich</add> sicher zu stellen. Dem <del rend="strikethrough">streng</del><lb/> Beweisbaren gemäß
+                    sollte sie in <hi rend="underline">Unentschiedenheit</hi>
+                    <pb facs="00000263.jpg" n="21"/>
+                    <note hand="#major_hand" place="top-right" type="foliation">21</note>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">106.</del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">138</del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">124</note> bleiben über die Absolutheit. (22 <choice>
+                        <abbr>fin.</abbr>
+                        <expan>finis</expan>
+                    </choice>) Entsagt sie dieser <add place="margin(right)">Unentschiedenheit</add><lb/> aus irgend einem Grunde, so kann sie streng
+                        <hi rend="underline">beweisen</hi>, daß<lb/> sie nur die <hi rend="underline">Einheit</hi>
+                    <hi rend="underline">annehmen</hi> könne, indem diese <hi n="2" rend="underline">hin<lb break="no"/>reiche</hi>, und mehr als Ein
+                    Absolutes anzun<subst>
+                        <del rend="overwritten">hm</del>
+                        <add place="across">ehmen</add>
+                    </subst> – die<lb/> innere Unbestim̄theit davon abgerechnet, – durchaus <hi rend="underline">willkür<lb break="no"/>lich</hi>
+                    <add>seÿ</add>, und über die Befugniß des Beweises hinausgehe; daß<lb/> also wenigstens als <hi rend="underline">subjektive</hi>
+                    <del rend="strikethrough"><hi rend="underline"><gap extent="one word" reason="illegible"/></hi></del><hi rend="underline"
+                        >Voraussetzung</hi> die<lb/> der Einheit die einzig mögliche seÿ.</p>
+                <p>3<subst>
+                        <del rend="overwritten">0</del>
+                        <add place="across">1</add>
+                    </subst>. So ließe sich die Philosophie aus einem doppelten Stand<lb break="no"/>punkte betrachten: Dem Skepticismus gegenüber, in
+                        Rück<lb break="no"/>sicht der formalen Beweisbarkeit spricht sie von der Einheit<lb/> des Absoluten nur als einer subjektiven
+                    Voraussetzung,<lb/> um philosophiren zu können; beweist aber zugleich, daß, wenn<lb/> einer Annahme Raum gestattet werde, diese
+                    die einzig<lb/> mögliche seÿ: dem Skepticismus dagegen <del rend="strikethrough"><gap extent="one to two chars" reason="illegible"
+                        /></del>gesteht sie <add place="margin(right)">das Recht</add><lb/>
+                    <del rend="strikethrough">Erlaubniß </del>zu, in seiner Unentschiedenheit zu verharren. –<lb/> Absehend aber von der bloßen Form,
+                    und überwältigt<lb/> von der inneren <subst>
+                        <del rend="strikethrough">Einsicht</del>
+                        <add place="above">Ueberzeugung</add>
+                    </subst>, herrscht sie dogmatisch, allen Zwei<lb break="no"/>fel ausschließend, und jede Ungewißheit niederschlagend;<lb/> gerade
+                    das, was sie vorher Annahme, Voraussetzung nan̄<lb break="no"/>te, und was es auf <subst>
+                        <del rend="strikethrough">diesem</del>
+                        <add place="above">jenem</add>
+                    </subst> Standpunkte auch allerdings<lb/> nur war, wird ihr nun das Gewisseste, Evidenste, die<lb/> Quelle, aus der sie alle
+                    andere Wahrheit ableitet. –</p>
+                <p>32. Aber gerade dadurch, daß sie mit dem Skepticismus <pb facs="00000264.jpg" n="22"/>
+                    <note hand="#major_hand" place="top-left" type="foliation">22</note> sich also abfindet, erwehrt sie auch äußerlich sich seiner
+                    auf<lb/> das Beste. Wäre sie, wie die früheren Dogmatiker, be<lb break="no"/>müht gewesen, das Daseÿn Gottes zu <hi
+                        rend="underline">erweisen</hi>, so hätte Er<lb/> triumphirend sie der Irrthümer, der Ungründlichkeit<lb/> überweisen, und ihr
+                    Gebäude zerstören können: jetzt,<lb/> indem sie von falschen Anmaßungen absteht, und ihm<lb/> im Voraus schon einen ehrenvollen
+                    Platz sich gegenü<lb break="no"/>ber einräumt, vernichtet sie ihn gerade dadurch; wie<lb/> jedes negative, nur auf Zerstören
+                    berechnete Princip,<lb/> sobald es keinen Widerstand findet, von selbst in Nichts<lb/> vergeht. Er kann ihrem Beginnen nicht mehr
+                    schaden,<lb/> weil sie im Voraus auf ihn rechnete, hat also schlechthin<lb/> kein Interesse mehr, seiner eigenen innern
+                    Einsicht,<lb/> der logischen Beweisbarkeit zu Liebe, Hohn zu sprechen.</p>
+                <milestone rend="horizontal-rule" unit="none"/>
+                <p>32. Nach 15 besteht die Aufgabe der Philosophie in der<lb/>
+                    <hi rend="underline">Ableitung</hi> der Endlichkeit aus dem Absoluten. – Doch wo<lb break="no"/>raus abgeleitet werden soll, das
+                    muß in freiem Den<lb break="no"/>ken <hi rend="underline">reproducirt</hi>, in seinem Wesen genetisch durch<lb break="no"/>drungen
+                    werden; es muß also im Voraus schon (durch<lb/> Erfahrung) dem Erken̄en bekan̄t <del rend="strikethrough">seÿn</del>, <del
+                        rend="strikethrough">und </del>gleichsam sein<lb/> Eigenthum seÿn, mit dem es frei schalten kann.</p>
+                <p>Hier scheitert also das Unternehmen der Philoso<lb break="no"/>phie abermals: aus dem Absoluten kann nicht abge<pb break="no"
+                        facs="00000265.jpg" n="23"/>
+                    <note hand="#major_hand" place="top-right" type="foliation">23</note>
+                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough">107.</del></note>
+                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">139</del></note>
+                    <note hand="#blue_hand" place="top-right" type="foliation">125</note> leitet werden, weil Es, durchaus überfaktisch, <del
+                        rend="strikethrough">sein </del>in seinem <lb/> innern Wesen völlig verborgen und unsichtbar bleibt, und<lb/> nur <hi
+                        rend="underline">negativ</hi> – durch Abzug aller <hi rend="underline">endlichen</hi> Bestim̄ungen<lb/> von Ihm – zu
+                    charakterisiren ist.</p>
+                <p>33. Sonach bleibt auch für die Philosophie schlechthin <hi rend="underline">un<lb break="no"/>begreiflich</hi>, <hi n="2"
+                        rend="underline">warum</hi> das Absolute nicht in sich selbst bleibe, son<lb break="no"/>dern Grund werde eines zweiten,
+                    nicht⹀Absoluten, der Endlich<lb break="no"/>keit: (<choice>
+                        <abbr>vgl.</abbr>
+                        <expan>vergleiche</expan>
+                    </choice> auch besonders 14.) es ist dies nur als ursprüng<lb break="no"/>liches <hi rend="underline">Faktum</hi> zu nehmen. – <subst>
+                        <del rend="strikethrough">Doch unbenom̄en</del>
+                        <add place="above">Dagegen</add>
+                    </subst> bleibt es dem<lb/> Erken̄en unbenom̄en, das <hi n="2" rend="underline">Wie</hi> dieses <hi rend="underline"
+                        >Grundseÿns</hi> des Ab<lb break="no"/>soluten, <add place="above">oder</add> des Hervorgehens der Endlichkeit aus jenem
+                    zu<lb/> bestim̄en; (ob es als Schöpfung, oder als Emanation <foreign xml:lang="la"><hi rend="latin"><choice>
+                                <abbr>pp</abbr>
+                                <expan>perge perge</expan>
+                            </choice></hi></foreign> zu <lb/> denken seÿ.) Und so modificirt sich die Aufgabe der Philoso<lb break="no"/>phie dahin,
+                    daß sie, ausgehend von dem <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del><hi n="2" rend="underline"
+                        >Faktum</hi>
+                    <hi rend="underline">der Zwei<lb break="no"/>heit</hi>, das <hi rend="underline">Verhältniß</hi>
+                    <hi rend="underline">de<subst>
+                            <del rend="overwritten">s</del>
+                            <add place="across">r</add>
+                        </subst> Endlichkeit zum Absoluten zu bestim̄en,</hi><lb/> oder, da wir im Allgemeinen früher das Absolute als <hi
+                        rend="underline">Ur<lb break="no"/>grund</hi> der Endlichkeit charakterisirten, festzusetzen hätte,<lb/>
+                    <hi rend="underline">in welchem Sinne dies zu denken seÿ</hi></p>
+                <p>34. <hi rend="underline">Dies</hi> wäre die höchste Aufgabe, die das Erken̄en sich<lb/> stellen kann, sonach auch erster und <del
+                        rend="strikethrough"><gap extent="one word" reason="illegible"/></del>vorzüglichster Ge<lb break="no"/>genstand der
+                    Philosophie, und zugleich das Wichtigste und Wissens<lb break="no"/>würdigste in allem Wissen, indem die Fragen, die sonst<lb/>
+                    auch <subst>
+                        <del rend="strikethrough">das</del>
+                        <add place="above">vom</add>
+                    </subst> höchste<add>n</add> Interesse <subst>
+                        <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>
+                        <add place="above">sind</add>
+                    </subst>, weil sie das Heiligste<lb/> unseres Gemüths angehen, erst hier, in der Tiefe und<lb/> aus dem Urquell aller Realität
+                    befriedigende Lösung <pb facs="00000266.jpg" n="24"/>
+                    <note hand="#major_hand" place="top-left" type="foliation">24</note>
+                    <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>erhalten können. So möchte die Philosophie nicht bloß
+                    einer,<lb/> an sich auch nicht verwerflichen Wisbegier Aufschluß geben,<lb/> sondern selbst das höchste praktische Interesse
+                    haben.</p>
+                <p>35. Wenn wir früher als die Aufgabe der Philosophie fanden, die End<lb break="no"/>lichkeit ihrem <hi rend="underline">Seÿn</hi>
+                    und <hi rend="underline">Soseÿn</hi> nach aus dem Absoluten <hi rend="underline">abzuleiten</hi>,<lb/> so hat sich dieses freilich
+                    als unmöglich <subst>
+                        <add n="╒" place="margin(left)">gezeigt</add>
+                        <del rend="strikethrough">gefunden</del>
+                    </subst>, indem im Absoluten<lb/> niemals ein Deduktionspunkt sich finden lasse. Dagegen wäre die<lb/> Frage, ob statt dessen die
+                    Ableitung nicht aus der Bestim̄ung des<lb/>
+                    <hi rend="underline">Verhältnisses</hi> zwischen beiden Theilen (33) gelingen könne; („weil<lb/> „das Absolute in <hi
+                        rend="underline">diesem</hi> Sinne Grund ist der Endlichkeit, so folgt da<lb break="no"/>„raus, daß letztere <hi
+                        rend="underline">so <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> so</hi> beschaffen seÿn müsse, <choice>
+                        <abbr>u dergl.</abbr>
+                        <expan>und dergleichen</expan>
+                    </choice>„ – ) so daß<lb/> der Deduktionspunkt nur in einer nieder<subst>
+                        <del rend="overwritten">en,</del>
+                        <add place="across">ern,</add>
+                    </subst> dem denken zugänglichen<lb/> Region gesucht würde. – Mit Absicht drücken wir indessen uns da<lb break="no"/>rüber nur
+                    problematisch aus, indem dies erst aus der wirklichen Be<lb break="no"/>stim̄ung jenes Verhältnisses sich ergeben kann, <del
+                        rend="strikethrough"><gap extent="one word" reason="illegible"/></del><choice>
+                        <abbr>d. h.</abbr>
+                        <expan>das heißt</expan>
+                    </choice> wenn der er<lb break="no"/>ste Theil der Aufgabe der Philosophie schon <del rend="strikethrough"><gap extent="one word"
+                            reason="illegible"/></del>vollzogen ist, also<lb/> vorläufig und im <hi rend="underline">Allgemeinen darüber</hi> sich
+                    nichts bestim̄en läßt.</p>
+                <p>36. Wird aber das Absolute gedacht, und alles Ernstes gedacht, so erscheint<lb/> Es <add n="╒" rend="margin(left)">ganz von
+                        selbst</add> als das <hi rend="underline">allein</hi> seÿende, <del rend="strikethrough"><gap extent="one word"
+                            reason="illegible"/></del>als in sich <hi rend="underline">umfassend</hi> und <hi rend="underline">er<lb break="no"
+                        />schöpfend alle Existenz</hi>. Es ist das Allgenugsame, Allvollkom̄ne, ohne Bedürf<lb break="no"/>niß eines Andern, ohne
+                    Mangel und Beraubung irgend einer Art: die<lb/> ganze Fülle der Realität ist in Ihm; was bliebe noch übrig für ein<lb/>
+                    <hi rend="underline">Anderes</hi> außer Ihm? Wie vermöchte E<subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">s</add>
+                    </subst> überhaupt aus sich <hi rend="underline">herauszugehen</hi>
+                    <choice>
+                        <unclear cert="high" reason="illegible">um</unclear>
+                        <unclear cert="low" reason="illegible">und</unclear>
+                    </choice><lb/> einem Zweiten Daseÿn zu geben? Vielmehr ist in Ihm Alles, was seÿn kan̄,<lb/> erschöpft und vollendet; Es umfaßt
+                    und verschlingt gleichsam alles unter<lb break="no"/>geordnete Existirende, so wie die Sonne im Aufgange alle kleineren Ge<lb
+                        break="no"/>stirne überstrahlt. – <hi rend="underline">Nur Gott ist, und außer Ihm nichts</hi>.</p>
+                <p>Indem aber das Erken̄en diesen Satz ausspricht, zeigt sich ihm die Fakticität<lb/> in ihrem, dem Charakter de<subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">s</add>
+                    </subst>
+                    <subst>
+                        <del rend="strikethrough">Absolutheit</del>
+                        <add n="╒" place="margin(left)">Absoluten</add>
+                    </subst> durchaus <hi rend="underline">entgegengesetzten</hi> Wesen,<lb/> und dadurch die Aufgabe, das Daseÿn dieses dem Anschein
+                    nach <hi rend="underline">Nicht<lb break="no"/>absoluten</hi> zu erklären, und auszugleichen mit jener Wahrheit, die ihm<lb/> so
+                    lebendig geworden ist: – den Widerspruch zwischen <hi rend="underline">Erken̄tniß</hi> und <hi rend="underline">Er<lb break="no"
+                        />fahrung</hi> aufzulösen, entweder dadurch, daß es die dem Absoluten wider<lb break="no"/>sprechende Form der Endlichkeit
+                    dennoch mit Jenem ausgleicht, oder, falls<lb/> dies nicht gelingen sollte, daß es einen umfassendern Satz an die Stelle des<lb/>
+                    obigen setzt. – Hieran schließt sich nun der folgende (<hi rend="latin">IV</hi>) Abschnitt:</p>
+                <pb facs="00000267.jpg" n="25"/>
+                <note hand="#major_hand" place="top-right" type="foliation">25</note>
+                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
+                        >108</hi></del></note>
+                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">140</del></note>
+                <note hand="#blue_hand" place="top-right" type="foliation">126</note>
+                <p><title><handShift new="#brown_ink"/><hi rend="align(center)"><hi rend="latin">IV.</hi>
+                            <hi rend="underline">Vom Verhältnisse der Endlichkeit<lb/> zum Absoluten.</hi></hi></title></p>
+                <p><supplied reason="binding">8</supplied>5. Es wäre eben so ungründlich als undankbar, wenn wir bei<lb/>
+                    <supplied reason="binding">der</supplied> bevorstehenden Untersuchung nicht zu Rathe zögen, und gleichsam<lb/>
+                    <supplied reason="binding">un</supplied>s zum Leiter und Stützpunkte machten, was die vorigen Zeiten<lb/>
+                    <supplied reason="binding">in</supplied> dieser Hinsicht geleistet haben. Doch je man̄igfaltiger hier die Mei<lb break="no"
+                    />nungen sind, um desto mehr thut Vorsicht in der Wahl und Entscheidung<lb/> Noth. <add place="above">Und</add>
+                    <subst>
+                        <del rend="overwritten">E</del>
+                        <add place="across">e</add>
+                    </subst>s muß wohl in dieser <subst hand="#major_hand">
+                        <add n="╒" place="margin(right)">Beurtheilung</add>
+                        <del rend="strikethrough">Beobachtung</del>
+                    </subst><note resp="#eva.schneider"><p xml:lang="de">Die Seiten 25-64 der Promotionsschrift stammen nicht von der Hand <persName
+                                ref="#p0662" type="bi">Immanuel Hermann Fichtes</persName>, sondern von der eines Abschreibers. <persName ref="#p0662"
+                                type="bi">Fichte</persName> nahm in der Abschrift allerdings Korrekturen vor, die in dieser Edition wiedergegeben
+                            werden. Zudem verdeutlichte er auf jeder der genannten Seiten einzelne Buchstaben - zum Beispiel setzte er über viele der
+                            vom Abschreiber geschriebenen Umlaute Pünktchen und zeichnete in einigen Fällen das große D nach, das beim Abschreiber
+                            selten eindeutig vom kleinen d zu unterscheiden ist. Diese Eingriffe werden der Leserlichkeit halber nicht
+                            wiedergegeben.</p><p xml:lang="en"/><p xml:lang="fr"/></note> vorzüglich der Grundsatz beobachtet<lb/> werden, <hi
+                        rend="underline">überall streng die Beweisbarkeit zu prüfen, und jede Behauptung,<lb/> die ohne einen solchen strengen Beweis
+                        aufgeführt wird, sofort in<lb/> Beschlag zu nehmen.</hi> Zum Letzteren – dem Behaupten ohne eigentlichen Beweis –<lb/> wird
+                    man hier vorzüglich eingeladen, wo das Erkennen, welches nur mit<lb/> großen Anstrengungen und durch Umschweife zu einem festen
+                    Ziele<lb/> gelangt, der Einbildungskraft willig Spielraum vergön̄t, die, grade<lb/> hier, wo kaum Erfahrung sie Lügen strafen
+                    kann, an ihrem Platze, ohne<lb/> große Mühe nach Lieblingsmeinungen und Vorurtheilen die Sache entscheidet.</p>
+                <p>86. Der ursprüngliche Maasstab, den die menschliche Vernunft an das<lb/>
+                    <supplied reason="binding">W</supplied>esen der Gottheit anlegt, ist, daß sie dieselbe als unendlich <hi rend="underline"
+                        >erhaben</hi><lb/>
+                    <supplied reason="binding">ü</supplied>ber alles Irdische und Sichtbare anerkennt. Bevor sie sich aber bescheidet<lb/>
+                    <supplied reason="binding">ü</supplied>ber das innere Wesen des Absoluten Etwas erken̄en zu wollen, bevor<lb/>
+                    <supplied reason="binding">si</supplied>e – was erst bei größerer Reife <del hand="#major_hand" rend="strikethrough"><add
+                            hand="#major_hand" n="╒" place="margin(right)">des philosophischen <gap extent="one word" reason="strikethrough"
+                        /></add></del>und einem höhern Grade von Beson̄en<lb break="no"/><supplied reason="binding">hei</supplied>t erwartet werden
+                    kan̄ – alles Irdische und Endliche Ihm abspricht,<lb/>
+                    <supplied reason="binding">ve</supplied>rmag sie Es nur zu denken, als in <hi rend="underline">höherm Grade</hi> und <hi
+                        rend="underline">größerer<lb/>
+                        <supplied reason="binding">V</supplied>ollendung irdische Eigenschaften an sich tragend</hi>. Je niedriger aber<lb/>
+                    <supplied reason="binding">der</supplied> Mensch, je niedriger die Gegenstände, in die derselbe die Realität<lb/>
+                    <supplied reason="binding">sieh</supplied>t, desto niedriger wird auch seine Idee der Gottheit ausfallen müssen.<lb/>
+                    <supplied cert="medium" reason="binding">So</supplied> wird sie ihm auf der ersten Stufe der Kultur als ein Wesen im<lb/>
+                    <supplied reason="binding">Ra</supplied>ume, mit vollendetern Organen, und mit übermenschlichen Kräften –<lb/>
+                    <supplied reason="binding">aber</supplied> auch Leidenschaften – ausgerüstet erscheinen müssen. <add hand="#major_hand"
+                        place="above">–</add> Doch der Mensch<lb/>
+                    <supplied reason="binding">wan</supplied>delt sich, und mit ihm auch sein Geschöpf, <subst hand="#major_hand">
+                        <del rend="strikethrough">sein</del>
+                        <add place="above">der</add>
+                    </subst> Begriff von Gott; er<lb/>
+                    <supplied reason="binding">erke</supplied>n̄t bald für das <subst hand="#major_hand">
+                        <del rend="overwritten">h</del>
+                        <add place="across">H</add>
+                    </subst>öchste, was die Endlichkeit darbietet, die Tugend, die<lb/>
+                    <supplied reason="binding">Freihe</supplied>it, die Vernunft, und so wird jener als die höchste Weisheit, die unbe<lb break="no"
+                        /><supplied reason="binding">schrän</supplied>kteste Freiheit und Allmacht, kurz, als die höchste Potenz jeder edlern<lb/>
+                    <supplied reason="binding">Geiste</supplied>skraft erkan̄t; edler zwar, und würdiger, aber doch bleibt es im̄er <pb
+                        facs="00000268.jpg" n="26"/>
+                    <note hand="#major_hand" place="top-left" type="foliation">26</note> dasselbe – wenigstens unphilosophische – Princip, – ein
+                    Gestalten nach eig<supplied reason="binding">enem</supplied><lb/> Bilde, <hi rend="underline">Anthropomorphismus</hi>, wie dies
+                    sehr bezeichnend genan̄t worden.</p>
+                <p>87. Indem das Absolute ins Bewußtseyn tritt, und der Endlichkeit <supplied reason="binding">als solcher</supplied><lb/> sich
+                    entgegensetzt, erscheint es in dieser Entgegensetzung ursprünglich a<supplied reason="binding">ls <hi rend="underline"
+                        >Ur</hi></supplied><lb break="no"/><hi rend="underline">grund</hi> derselben, und kan̄ nicht anders erscheinen. Es ist dies
+                    ein Beis<supplied reason="binding">atz, der</supplied><lb/> zwar nicht im Wesen des Absoluten als solchem liegt, wohl aber in
+                        <supplied reason="binding">der</supplied><lb/> Verknüpfung, in welcher es <subst>
+                        <del rend="overwritten">im</del>
+                        <add place="across">dem</add>
+                    </subst> Erken̄en <subst hand="#major_hand">
+                        <del rend="strikethrough">erscheint</del>
+                        <add place="across">sich darstellt</add>
+                    </subst>. Wie nun jener <supplied reason="binding">allgemeine,</supplied><lb/> ziemlich unbestim̄te Begriff des Urgrundseyns nach
+                    den eben (86) <supplied reason="binding">eröffne</supplied><lb break="no"/>ten Principien gedeutet werden müsse, liegt am Tage.
+                    Der Mensch <supplied reason="binding">ordnet,</supplied><lb/> bildet, producirt nach Zwecken, <del rend="strikethrough">und
+                    </del>nach bestim̄ten Vorbildern; wa<supplied reason="binding">rum nicht</supplied><lb/> auch Gott? Er nur auf unendlich
+                    vollkomnere Weise; daher sein P<supplied reason="binding">rodukt auch</supplied><lb/> um so vollendeter seyn mußte. So ist Er, in
+                    den ersten Anfängen <supplied reason="binding">der</supplied><lb/> Philosophie, <hi rend="underline">Ordner</hi> und <hi
+                        rend="underline">Erbauer</hi> der Welt (<foreign xml:lang="grc"><hi rend="greek">δημιουργὸς τοῦ ὅλου</hi></foreign><supplied
+                        reason="binding">.) was</supplied><lb/> stets mehr oder weniger klar die Idee eines <hi rend="underline">ursprünglichen
+                        Stoffes</hi> (<foreign xml:lang="grc"><hi rend="greek">υλη</hi></foreign><add n="x)" type="footnote">die spätere
+                        philosophische Bedeutung dieses Wortes hat vielleicht die auch <supplied reason="binding">sonst hierher</supplied><lb/>
+                        gehörende Stelle des <persName ref="#p0034" type="bi">Platonischen</persName>
+                        <title ref="#w0075">Timäus</title> (<foreign xml:lang="la"><hi rend="latin"><choice>
+                                    <abbr>p.</abbr>
+                                    <expan>pagina</expan>
+                                </choice></hi></foreign> 385. <foreign xml:lang="la"><hi rend="latin"><choice>
+                                    <abbr>bip.</abbr>
+                                    <expan>bipontina</expan>
+                                </choice></hi></foreign>) verlanlaßt: <supplied reason="binding">Sowie das</supplied><lb/>
+                        <foreign xml:lang="grc"><hi rend="greek">τέκλονες</hi></foreign> das Holz (<foreign xml:lang="grc"><hi rend="greek"
+                            >ὔλην</hi></foreign>) bearbeiten, so bildet der <foreign xml:lang="grc"><hi rend="greek">δημιουγὸς</hi></foreign> aus
+                            de<supplied reason="binding">m Vorliegenden</supplied><lb/> das Man̄igfaltige: Ueberhaupt bildet dieser Dialog – er mag
+                        nun den höch<supplied reason="binding">sten und letzten</supplied><lb/> Gipfel <persName ref="#p0034" type="bi"
+                            >Platonischer</persName> Spekulation über diesen Punkt enthalten, oder nicht – <supplied reason="binding">den
+                            vollkom</supplied><lb break="no"/>mensten <choice>
+                            <abbr>u</abbr>
+                            <expan>und</expan>
+                        </choice> geistvollsten Beleg zu der oben erwähnten Ansicht.</add><lb/>
+                    <foreign xml:lang="la"><hi rend="latin">materies</hi></foreign>) für jene Bearbeitung, einer <hi rend="underline">Ur</hi>materie
+                    neben dem Absolu<supplied reason="binding">ten he</supplied><lb break="no"/>raustrat. <add hand="#major_hand" n="╒"
+                        place="margin(left)">So führt diese Ansicht nothwendig auf einen <hi rend="underline">Dualismus</hi>.–</add></p>
+                <p>88. Doch eine solche <hi hand="#major_hand" rend="underline">Zweiheit</hi> befriedigt nicht; <del rend="strikethrough">aus
+                    </del>ganz von selbst en<supplied reason="binding">tsteht die</supplied><lb/> Frage: woher denn nun jener Urstoff selber? Und man
+                    konnte in d<supplied reason="binding">iesem</supplied><lb/> Zusam̄enhange vor der Hand um die Antwort nicht verlegen seyn:
+                        <supplied reason="binding">Gott soll</supplied><lb/> nicht bloß <hi rend="underline">Baumeister</hi> und <hi rend="underline"
+                        >Ordner</hi> der Welt <add hand="#major_hand" place="above">seyn</add>, indem sodan̄ die Frei<supplied reason="binding">heit
+                        seines</supplied><lb/> Schaffens, seine Allmacht durch die <hi rend="underline">Taug</hi>lichkeit des <hi rend="underline"
+                        >Stoffes</hi> beschrän<supplied reason="binding">kt werde</supplied><lb/> und so die Welt nicht sein freies Produkt, sondern
+                    das Erzeugniß <supplied reason="binding"><hi rend="underline">zweier</hi></supplied><lb/> Kräfte seyn würde: <subst
+                        hand="#major_hand">
+                        <add n="╒" place="margin(left)">vielmehr fordert der Begriff der <lb/>Allmacht anznehmen, daß er unbe<lb break="no"/>schränkt
+                                <hi rend="underline">Alles</hi> aus sich <del rend="strikethrough">erscha </del>erzeugt <lb/>habe.</add>
+                        <del rend="strikethrough">so führt diese Ansicht nothwendig auf einen <supplied reason="binding">Dualismus</supplied></del>
+                        <lb/>
+                        <del rend="strikethrough">der durchaus dem innern Wesen der Vernunft widerstrebt.</del>
+                    </subst> Es muß<supplied reason="binding">te daher</supplied><lb/> zunächst die Behauptung aufkom̄en, daß <subst
+                        hand="#major_hand">
+                        <del rend="overwritten">a</del>
+                        <add place="across">A</add>
+                    </subst>lles in Gott seinen Ursp<supplied reason="binding">rung hat,</supplied><lb/> und so entstand die Idee einer <hi
+                        rend="underline">Schöpfung aus Nichts</hi>.<add n="xx)" next="#add-00000271" type="footnote" xml:id="add-00000268">Es läßt
+                        sich über jene Meinung nicht viel reden, noch weniger sie k<supplied reason="binding">unstmäßig
+                    widerlegen,</supplied></add></p>
+                <p>89. Abgerechnet nun die innere Unbestimtheit und Unverständ<supplied reason="binding">lichkeit des</supplied><lb/> Begriffes des
+                        <hi rend="underline">Schaffens</hi>, und die Unmöglichkeit eines Erzeugens aus <supplied reason="binding"
+                    >Nichts,</supplied><lb/> so liegt doch außerdem ein Anthropomorphismus zu Tage, der etwas d<supplied reason="binding">em
+                        Wesen</supplied><lb/> des Absoluten schlechthin <hi rend="underline">widerstreitendes</hi> behauptet. Gott <hi
+                        rend="underline">handelt</hi>, v<supplied reason="binding">ollführt alles</supplied><lb/> und, da nichts <subst>
+                        <del rend="overwritten">a</del>
+                        <add place="across">A</add>
+                    </subst>nderes Grund dieser Veränderung seyn kann, <add hand="#major_hand" place="above">er</add> entsch<supplied reason="binding"
+                        >ließt – sich</supplied><lb/> selbst dazu, zufolge einer freien Willensbestimmung, und geht auf <supplied reason="binding"
+                        >diese Weise, </supplied></p>
+                <pb facs="00000269.jpg" n="27"/>
+                <note hand="#major_hand" place="top-right" type="foliation">25</note>
+                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
+                        >109.</hi></del></note>
+                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">143</del></note>
+                <note hand="#blue_hand" place="top-right" type="foliation">127</note>
+                <p><handShift new="#major_hand"/><hi rend="underline">Zu <choice>
                             <abbr>S.</abbr>
                             <expan>Seite</expan>
-                        </choice> 27.</hi>
-                    <p><supplied reason="binding">(</supplied>Aus Versehen des Abschreibers ist der Anfang<lb/>
-                        <unclear cert="high" reason="binding">§</unclear> fehlerhaft abgefaßt; er muß lauten wie<lb/>
-                        <gap extent="one word" reason="binding"/> – Ueberhaupt bitten wir wegen der Un<lb break="no"/><supplied cert="high"
-                            reason="binding">leserlichke</supplied>it diese<subst>
-                            <del rend="overwritten">r</del>
-                            <add place="across">s</add>
-                        </subst> Theils der Abschrift, und der an<lb break="no"/><supplied cert="high" reason="binding">deren
-                        N</supplied>achlässigkeiten <choice>
+                        </choice> 27.</hi></p>
+                <p><supplied reason="binding">(</supplied>Aus Versehen des Abschreibers ist der Anfang<lb/>
+                    <unclear cert="high" reason="binding">§</unclear> fehlerhaft abgefaßt; er muß lauten wie<lb/>
+                    <gap extent="one word" reason="binding"/> – Ueberhaupt bitten wir wegen der Un<lb break="no"/><supplied cert="high"
+                        reason="binding">leserlichke</supplied>it diese<subst>
+                        <del rend="overwritten">r</del>
+                        <add place="across">s</add>
+                    </subst> Theils der Abschrift, und der an<lb break="no"/><supplied cert="high" reason="binding">deren N</supplied>achlässigkeiten <choice>
+                        <abbr>u.s.w.</abbr>
+                        <expan>und so weiter</expan>
+                    </choice>, die ganz unerwartet<lb/>
+                    <supplied cert="high" reason="binding">ohne</supplied> unsere Schuld eintraten, um die gütige<lb/>
+                    <supplied cert="high" reason="binding">Umsicht</supplied> der Leser.)</p>
+                <p><supplied reason="binding">90.</supplied> Doch alle diese, theils unerwiesenen, theils<lb/>
+                    <supplied reason="binding">sich widersprech</supplied>enden Behauptungen mußten bald Verdacht<lb/>
+                    <supplied cert="high" reason="binding">erwecken</supplied> und so wurde dem Absoluten schon von den<lb/>
+                    <gap extent="one word" reason="bindung"/>etesten Philosophen des Alterthums das,<lb/>
+                    <supplied reason="binding">was ihm</supplied> allein zukom̄t, ein <hi rend="underline">unveränderliches</hi>
+                    <hi rend="underline">Behar</hi><lb break="no"/><supplied reason="binding"><hi rend="underline">ren</hi> vindi</supplied>cirt. Je
+                    mehr sie nun hierbei gründlich<lb/>
+                    <gap extent="one word" reason="binding"/>en verfuhren, desto größer wurde ihre<lb/>
+                    <gap extent="one word" reason="binding"/>t in Hinsicht des <hi rend="underline">zweiten</hi> Punktes: die<lb/>
+                    <supplied reason="binding">Welt d</supplied>urfte nicht als <hi rend="underline">unabhängig</hi> vom Absoluten,<lb/>
+                    <supplied reason="binding">a</supplied>us sich, durch sich⹀Seÿendes dastehen; es kehrte<lb/>
+                    <supplied reason="binding">um so</supplied> dringender die Anforderung zurück, dieser<lb/>
+                    <supplied reason="binding">irg</supplied>endwie einen <hi rend="underline">Ursprung</hi> aus dem Absoluten<lb/>
+                    <supplied cert="high" reason="binding">anzuweisen</supplied>. – Doch wie kann in dem durch sich Befrie<lb break="no"/><supplied
+                        reason="binding">digten, All</supplied>vollkom̄nen zugleich eine Tendenz gedacht<lb/>
+                    <supplied reason="binding">werden, über</supplied> den Umkreis seines Seÿns hinauszustreben, <pb facs="00000270.jpg" n="28"/>
+                    seine <hi rend="underline">Im̄anenz</hi> in <hi rend="underline">Emanenz</hi> zu verwande<supplied reason="binding">ln. Sein
+                        We</supplied><lb break="no"/>sen besteht ja eben darin, daß der gan<supplied reason="binding">ze Inbegriff</supplied><lb/>
+                    seiner <hi rend="underline">Möglichkeit</hi> gleich ursprünglich <supplied reason="binding">und ohne allen</supplied><lb/>
+                    Rückhalt <hi rend="underline">wirklich</hi> ist; (sein <hi rend="underline">Wesen</hi> invol<supplied reason="binding">virt in
+                        allen Thei</supplied><lb break="no"/>len auch das <hi rend="underline">Seÿn</hi>) ein Vermögen zu <supplied cert="high"
+                        reason="binding">etwas Neuem</supplied><lb/> kann ihm daher nie zugeschrieben werden<supplied reason="binding">,
+                        und</supplied>
+                    <gap extent="one word" reason="binding"/>.<lb/>
+                    <hi rend="underline">Entstehen</hi> eines <hi rend="underline">Zweiten</hi> aus Ihm in jedem <supplied reason="binding"
+                        >Sinne</supplied>
+                    <gap extent="one word" reason="binding"/><lb break="no"/>lich, indem es dem Charakter der Vo<supplied reason="binding">llendeten
+                        Ab</supplied><lb break="no"/>solutheit widerspricht. – Dennoch könnte <supplied reason="binding"><choice>
                             <abbr>u.s.w.</abbr>
                             <expan>und so weiter</expan>
-                        </choice>, die ganz unerwartet<lb/>
-                        <supplied cert="high" reason="binding">ohne</supplied> unsere Schuld eintraten, um die gütige<lb/>
-                        <supplied cert="high" reason="binding">Umsicht</supplied> der Leser.)</p>
-                    <p><supplied reason="binding">90.</supplied> Doch alle diese, theils unerwiesenen, theils<lb/>
-                        <supplied reason="binding">sich widersprech</supplied>enden Behauptungen mußten bald Verdacht<lb/>
-                        <supplied cert="high" reason="binding">erwecken</supplied> und so wurde dem Absoluten schon von den<lb/>
-                        <gap extent="one word" reason="bindung"/>etesten Philosophen des Alterthums das,<lb/>
-                        <supplied reason="binding">was ihm</supplied> allein zukom̄t, ein <hi rend="underline">unveränderliches</hi>
-                        <hi rend="underline">Behar</hi><lb break="no"/><supplied reason="binding"><hi rend="underline">ren</hi> vindi</supplied>cirt.
-                        Je mehr sie nun hierbei gründlich<lb/>
-                        <gap extent="one word" reason="binding"/>en verfuhren, desto größer wurde ihre<lb/>
-                        <gap extent="one word" reason="binding"/>t in Hinsicht des <hi rend="underline">zweiten</hi> Punktes: die<lb/>
-                        <supplied reason="binding">Welt d</supplied>urfte nicht als <hi rend="underline">unabhängig</hi> vom Absoluten,<lb/>
-                        <supplied reason="binding">a</supplied>us sich, durch sich⹀Seÿendes dastehen; es kehrte<lb/>
-                        <supplied reason="binding">um so</supplied> dringender die Anforderung zurück, dieser<lb/>
-                        <supplied reason="binding">irg</supplied>endwie einen <hi rend="underline">Ursprung</hi> aus dem Absoluten<lb/>
-                        <supplied cert="high" reason="binding">anzuweisen</supplied>. – Doch wie kann in dem durch sich Befrie<lb break="no"
-                            /><supplied reason="binding">digten, All</supplied>vollkom̄nen zugleich eine Tendenz gedacht<lb/>
-                        <supplied reason="binding">werden, über</supplied> den Umkreis seines Seÿns hinauszustreben, <pb facs="00000270.jpg" n="28"/>
-                        seine <hi rend="underline">Im̄anenz</hi> in <hi rend="underline">Emanenz</hi> zu verwande<supplied reason="binding">ln. Sein
-                            We</supplied><lb break="no"/>sen besteht ja eben darin, daß der gan<supplied reason="binding">ze Inbegriff</supplied><lb/>
-                        seiner <hi rend="underline">Möglichkeit</hi> gleich ursprünglich <supplied reason="binding">und ohne allen</supplied><lb/>
-                        Rückhalt <hi rend="underline">wirklich</hi> ist; (sein <hi rend="underline">Wesen</hi> invol<supplied reason="binding">virt in
-                            allen Thei</supplied><lb break="no"/>len auch das <hi rend="underline">Seÿn</hi>) ein Vermögen zu <supplied cert="high"
-                            reason="binding">etwas Neuem</supplied><lb/> kann ihm daher nie zugeschrieben werden<supplied reason="binding">,
-                            und</supplied>
-                        <gap extent="one word" reason="binding"/>.<lb/>
-                        <hi rend="underline">Entstehen</hi> eines <hi rend="underline">Zweiten</hi> aus Ihm in jedem <supplied reason="binding"
-                            >Sinne</supplied>
-                        <gap extent="one word" reason="binding"/><lb break="no"/>lich, indem es dem Charakter der Vo<supplied reason="binding"
-                            >llendeten Ab</supplied><lb break="no"/>solutheit widerspricht. – Dennoch könnte <supplied reason="binding"><choice>
-                                <abbr>u.s.w.</abbr>
-                                <expan>und so weiter</expan>
-                            </choice></supplied></p>
-                    <pb facs="00000271.jpg" n="29"/>
-                    <note hand="#major_hand" place="top-right" type="foliation">27</note>
-                    <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
-                                >110</hi></del></note>
-                    <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">141</del></note>
-                    <note hand="#blue_hand" place="top-right" type="foliation">128</note>
-                    <p><handShift new="#brown_ink"/><supplied reason="binding">aus dem <hi rend="underline">Ein</hi></supplied><hi rend="underline"
-                            >en</hi> Zustande – dem nicht schaffenden – in dem entgegengesetzten,<lb/>
-                        <supplied reason="binding">den schaffen</supplied>den über; er <hi rend="underline">verändert</hi> sich wesentlich, was seinem
-                        Charakter der<lb/>
-                        <supplied reason="binding">Unwandel</supplied>barkeit und Unveränderlichkeit widerspricht: Er ist, <hi rend="underline">wie er
-                            einmal ist</hi>,<lb/>
-                        <supplied reason="binding">und zu sein</supplied>em Seyn kan̄ in alle Ewigkeit nichts <subst hand="#major_hand">
-                            <del rend="overwritten">n</del>
-                            <add place="across">N</add>
-                        </subst>eues hinzukom̄en.</p>
-                    <p><del hand="#major_hand" rend="strikethrough"><supplied reason="binding">90. Diese</supplied> unerwiesenen und sich
-                            widersprechenden Behauptungen mußten</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">jedoch bald al</supplied>s solche erkan̄t, und dem
-                            Absoluten das, was ihm allein zukom̄en</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">kann, ein <hi rend="underline">u</hi></supplied><hi
-                                rend="underline">nveränderliches Beharren</hi>, vindicirt worden. Den̄och durfte die</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Welt nicht als</supplied> unabhängig von ihm, als ein
-                                <hi rend="underline">zweites</hi> Absolutes dastehen; es</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">kehrte also</supplied> um so dringender das Bedürfniß
-                            zurück, dieser irgend wie <hi rend="underline">ihren</hi></del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><hi rend="underline">aus dem Absoluten</hi> anzuweisen. Doch wie vermag jemals
-                            aus dem</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">in sich <hi rend="underline">Vol</hi></supplied><hi
-                                rend="underline">lendeten</hi>, <hi rend="underline">Vollkomnen</hi>, durch sich <hi rend="underline"
-                                >Befriedigten</hi> irgend etwas heraus<lb break="no"/><supplied reason="binding">zutreten;</supplied></del><lb/>
-                        <del hand="#major_hand" rend="strikethrough">wie vermag überhaupt etwas <hi rend="underline">zweites</hi> neben Jenen da zu
-                            seyn?</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Wie kann je</supplied> die Einheit zur Zweiheit
-                            werden? <subst>
-                                <del rend="strikethrough">Entweder</del>
-                                <add place="above">Es</add>
-                            </subst> müßte <del rend="strikethrough"><add place="above"><unclear cert="medium" reason="strikethrough">eben
-                                    </unclear></add></del>durch jenes</del><lb/>
-                        <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Sich verwa</supplied>ndeln in die Zweiheit <add n="┌"
-                                place="margin-right">wenn es nicht schon außerdem <del hand="#major_hand" rend="strikethrough">Unsinn wäre</del></add>
-                            dem Absoluten eine <hi rend="underline">neue</hi> Realität erwachsen,</del></p>
-                    <add n="xx)" prev="#add-00000268" type="footnote" xml:id="add-00000271">weil sie, völlig schwankend und verschwim̄end, eine Menge
-                            Deu<lb break="no"/><supplied reason="binding">tungen zu</supplied>läßt, und nur einer festen Thesis eine eben so bestim̄te Antithesis<lb/>
-                        <supplied reason="binding">entgegenge</supplied>stellt werden kan̄. Will man indessen in einem festen Denken sich<lb/>
-                        <supplied reason="binding">die Sache ve</supplied>rständlich machen, so kom̄t man alsdann im̄er wieder auf jenen <hi
-                            rend="underline">Stoff</hi><lb/>
-                        <supplied reason="binding">zurück, als</supplied> die Unterlage der nachmaligen Erzeugung; und so wurde <del
-                            rend="strikethrough">selbst </del>das<lb/>
-                        <supplied reason="binding"><hi rend="underline">Nichts</hi> selbst, wie</supplied>
-                        <persName ref="#p2768" type="bi">Spino<subst hand="#major_hand">
-                                <del rend="overwritten">z</del>
-                                <add place="across">s</add>
-                            </subst>a</persName> sagt, <del hand="#major_hand" rend="strikethrough">gleichsam </del><del hand="#major_hand"
-                            rend="strikethrough">wieder </del>der Einbildungskraft <add hand="major_hand" place="above">gleichsam wieder</add> ein
-                        solcher Stoff<lb/>
-                        <supplied reason="binding">das Substr</supplied>at. <p><supplied reason="binding">Dies führt</supplied> auf umfassendere
-                            Sätze, die wir hier auszuführen keinen Anstand nehmen. –<lb/>
-                            <supplied reason="binding">Es ist ein w</supplied>ichtiges Gesetz des Denkens, daß es einer jeden <hi rend="underline"
-                                >Wirklichkeit</hi> eine feste und<lb/>
-                            <supplied reason="binding">gleichbleibe</supplied>nde Grundlage voraussetzen muß, die, selbst nie geworden, allem<lb/>
-                            <supplied reason="binding">Werden und</supplied> allen Veränderungen in ihr einen <hi rend="underline">Anhalt</hi> giebt.
-                            Nun hat die Phi<lb break="no"/><supplied reason="binding">losophie zw</supplied>ei große Hälften zu Gegenständen ihrer
-                            Betrachtung: Gott, und die<lb/>
-                            <supplied reason="binding">Welt. Wie</supplied> jener von dieser ausgesondert, und ihr gegenübergestellt, etwa als
-                                <supplied reason="binding">Schöpfer un</supplied>d Erzeuger derselben, so ist, um das Daseyn der Welt sich zu erklären,<lb/>
-                            <supplied reason="binding">eine solche</supplied> ewige <hi rend="underline">Grundlage für ihre Existenz</hi> für das
-                            Denken unvermeidlich;<lb/>
-                            <supplied reason="binding">denn ihr An</supplied>fang aus dem reinen Nichts erscheint völlig widersinnig; und<lb/>
-                            <supplied reason="binding">so hätte je</supplied>ne Zweiheit der Urprincipien <add hand="#major_hand" n="╒"
-                                place="margin-right">(87 und 88.)</add> einen tiefern Sinn <add n="┌" place="margin-right">als wir <subst>
-                                    <del rend="overwritten">a</del>
-                                    <add place="across">A</add>
-                                </subst>nfangs glaubten.</add>; es liege ihr ein<lb/>
-                            <supplied reason="binding">Allgemein</supplied>es <subst hand="#major_hand">
-                                <del rend="strikethrough">Gesetz</del>
-                                <add n="╒" place="margin-right">Denkgesetz</add>
-                            </subst> zu Grunde. – Wäre dagegen Gott als <hi rend="underline">im̄anentes Princip</hi><lb/>
-                            <supplied reason="binding">der Welt ge</supplied>dacht (wie im <persName ref="#p2768" type="bi">Spinosischen</persName>
-                            Systeme), so tritt er selbst an die Stelle<lb/>
-                            <supplied reason="binding">jenes Stoff</supplied>es, der der Welt schon vorläufig ihre Wirklichkeit sichern soll, und<lb/>
-                            <supplied reason="binding">er ist eigen</supplied>tlich nichts weiter als dieser, an welchem das Denken die verschiedenen<lb/>
-                            <supplied reason="binding">Accidenzen</supplied> aufreicht; das Unveränderliche, Behar<subst>
-                                <del rend="overwritten">l</del>
-                                <add place="across">r</add>
-                            </subst>liche in der Veränderung,<lb/>
-                            <supplied reason="binding">die Eine S</supplied>ubstanz des <persName ref="#p2768" type="bi">Spinosa</persName>.</p></add>
-                    <pb facs="00000272.jpg" n="30"/>
-                    <note hand="#major_hand" place="top-left" type="foliation">28</note>
-                    <del hand="#major_hand" rend="strikethrough">welche Annahme aber in sich selbst einen Widerspruch enthält. Das Absol<supplied
+                        </choice></supplied></p>
+                <pb facs="00000271.jpg" n="29"/>
+                <note hand="#major_hand" place="top-right" type="foliation">27</note>
+                <note hand="#pencil_2" place="top-right" type="foliation"><del hand="#blue_hand" rend="strikethrough"><hi rend="underline"
+                        >110</hi></del></note>
+                <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">141</del></note>
+                <note hand="#blue_hand" place="top-right" type="foliation">128</note>
+                <p><handShift new="#brown_ink"/><supplied reason="binding">aus dem <hi rend="underline">Ein</hi></supplied><hi rend="underline"
+                        >en</hi> Zustande – dem nicht schaffenden – in dem entgegengesetzten,<lb/>
+                    <supplied reason="binding">den schaffen</supplied>den über; er <hi rend="underline">verändert</hi> sich wesentlich, was seinem
+                    Charakter der<lb/>
+                    <supplied reason="binding">Unwandel</supplied>barkeit und Unveränderlichkeit widerspricht: Er ist, <hi rend="underline">wie er
+                        einmal ist</hi>,<lb/>
+                    <supplied reason="binding">und zu sein</supplied>em Seyn kan̄ in alle Ewigkeit nichts <subst hand="#major_hand">
+                        <del rend="overwritten">n</del>
+                        <add place="across">N</add>
+                    </subst>eues hinzukom̄en.</p>
+                <p><del hand="#major_hand" rend="strikethrough"><supplied reason="binding">90. Diese</supplied> unerwiesenen und sich widersprechenden
+                        Behauptungen mußten</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">jedoch bald al</supplied>s solche erkan̄t, und dem
+                        Absoluten das, was ihm allein zukom̄en</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">kann, ein <hi rend="underline">u</hi></supplied><hi
+                            rend="underline">nveränderliches Beharren</hi>, vindicirt worden. Den̄och durfte die</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Welt nicht als</supplied> unabhängig von ihm, als ein <hi
+                            rend="underline">zweites</hi> Absolutes dastehen; es</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">kehrte also</supplied> um so dringender das Bedürfniß
+                        zurück, dieser irgend wie <hi rend="underline">ihren</hi></del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><hi rend="underline">aus dem Absoluten</hi> anzuweisen. Doch wie vermag jemals aus
+                        dem</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">in sich <hi rend="underline">Vol</hi></supplied><hi
+                            rend="underline">lendeten</hi>, <hi rend="underline">Vollkomnen</hi>, durch sich <hi rend="underline">Befriedigten</hi>
+                        irgend etwas heraus<lb break="no"/><supplied reason="binding">zutreten;</supplied></del><lb/>
+                    <del hand="#major_hand" rend="strikethrough">wie vermag überhaupt etwas <hi rend="underline">zweites</hi> neben Jenen da zu
+                        seyn?</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Wie kann je</supplied> die Einheit zur Zweiheit werden? <subst>
+                            <del rend="strikethrough">Entweder</del>
+                            <add place="above">Es</add>
+                        </subst> müßte <del rend="strikethrough"><add place="above"><unclear cert="medium" reason="strikethrough">eben
+                                </unclear></add></del>durch jenes</del><lb/>
+                    <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">Sich verwa</supplied>ndeln in die Zweiheit <add n="┌"
+                            place="margin(right)">wenn es nicht schon außerdem <del hand="#major_hand" rend="strikethrough">Unsinn wäre</del></add>
+                        dem Absoluten eine <hi rend="underline">neue</hi> Realität erwachsen,</del></p>
+                <note n="xx)" prev="#add-00000268" type="footnote" xml:id="add-00000271">weil sie, völlig schwankend und verschwim̄end, eine Menge
+                        Deu<lb break="no"/><supplied reason="binding">tungen zu</supplied>läßt, und nur einer festen Thesis eine eben so bestim̄te Antithesis<lb/>
+                    <supplied reason="binding">entgegenge</supplied>stellt werden kan̄. Will man indessen in einem festen Denken sich<lb/>
+                    <supplied reason="binding">die Sache ve</supplied>rständlich machen, so kom̄t man alsdann im̄er wieder auf jenen <hi
+                        rend="underline">Stoff</hi><lb/>
+                    <supplied reason="binding">zurück, als</supplied> die Unterlage der nachmaligen Erzeugung; und so wurde <del rend="strikethrough"
+                        >selbst </del>das<lb/>
+                    <supplied reason="binding"><hi rend="underline">Nichts</hi> selbst, wie</supplied>
+                    <persName ref="#p2768" type="bi">Spino<subst hand="#major_hand">
+                            <del rend="overwritten">z</del>
+                            <add place="across">s</add>
+                        </subst>a</persName> sagt, <del hand="#major_hand" rend="strikethrough">gleichsam </del><del hand="#major_hand"
+                        rend="strikethrough">wieder </del>der Einbildungskraft <add hand="major_hand" place="above">gleichsam wieder</add> ein solcher Stoff<lb/>
+                    <supplied reason="binding">das Substr</supplied>at. <p><supplied reason="binding">Dies führt</supplied> auf umfassendere Sätze,
+                        die wir hier auszuführen keinen Anstand nehmen. –<lb/>
+                        <supplied reason="binding">Es ist ein w</supplied>ichtiges Gesetz des Denkens, daß es einer jeden <hi rend="underline"
+                            >Wirklichkeit</hi> eine feste und<lb/>
+                        <supplied reason="binding">gleichbleibe</supplied>nde Grundlage voraussetzen muß, die, selbst nie geworden, allem<lb/>
+                        <supplied reason="binding">Werden und</supplied> allen Veränderungen in ihr einen <hi rend="underline">Anhalt</hi> giebt. Nun
+                        hat die Phi<lb break="no"/><supplied reason="binding">losophie zw</supplied>ei große Hälften zu Gegenständen ihrer
+                        Betrachtung: Gott, und die<lb/>
+                        <supplied reason="binding">Welt. Wie</supplied> jener von dieser ausgesondert, und ihr gegenübergestellt, etwa als <supplied
+                            reason="binding">Schöpfer un</supplied>d Erzeuger derselben, so ist, um das Daseyn der Welt sich zu erklären,<lb/>
+                        <supplied reason="binding">eine solche</supplied> ewige <hi rend="underline">Grundlage für ihre Existenz</hi> für das Denken unvermeidlich;<lb/>
+                        <supplied reason="binding">denn ihr An</supplied>fang aus dem reinen Nichts erscheint völlig widersinnig; und<lb/>
+                        <supplied reason="binding">so hätte je</supplied>ne Zweiheit der Urprincipien <add hand="#major_hand" n="╒"
+                            place="margin(right)">(87 und 88.)</add> einen tiefern Sinn <add n="┌" place="margin(right)">als wir <subst>
+                                <del rend="overwritten">a</del>
+                                <add place="across">A</add>
+                            </subst>nfangs glaubten.</add>; es liege ihr ein<lb/>
+                        <supplied reason="binding">Allgemein</supplied>es <subst hand="#major_hand">
+                            <del rend="strikethrough">Gesetz</del>
+                            <add n="╒" place="margin(right)">Denkgesetz</add>
+                        </subst> zu Grunde. – Wäre dagegen Gott als <hi rend="underline">im̄anentes Princip</hi><lb/>
+                        <supplied reason="binding">der Welt ge</supplied>dacht (wie im <persName ref="#p2768" type="bi">Spinosischen</persName>
+                        Systeme), so tritt er selbst an die Stelle<lb/>
+                        <supplied reason="binding">jenes Stoff</supplied>es, der der Welt schon vorläufig ihre Wirklichkeit sichern soll, und<lb/>
+                        <supplied reason="binding">er ist eigen</supplied>tlich nichts weiter als dieser, an welchem das Denken die verschiedenen<lb/>
+                        <supplied reason="binding">Accidenzen</supplied> aufreicht; das Unveränderliche, Behar<subst>
+                            <del rend="overwritten">l</del>
+                            <add place="across">r</add>
+                        </subst>liche in der Veränderung,<lb/>
+                        <supplied reason="binding">die Eine S</supplied>ubstanz des <persName ref="#p2768" type="bi">Spinosa</persName>.</p></note>
+                <pb facs="00000272.jpg" n="30"/>
+                <note hand="#major_hand" place="top-left" type="foliation">28</note>
+                <p><del hand="#major_hand" rend="strikethrough">welche Annahme aber in sich selbst einen Widerspruch enthält. Das Absol<supplied
                             reason="binding">ute wird</supplied></del><lb/>
                     <del hand="#major_hand" rend="strikethrough">als Beharrendes, Vollendetes, keines andern außer ihm bedürfendes <supplied
                             reason="binding">behaup</supplied><lb break="no"/>tet: ein Vermögen zu etwas Neuem kann ihm also durchaus nicht
@@ -1368,7 +1375,7 @@
                         rend="underline">Allgenugs</hi><supplied reason="binding"><hi rend="underline">amkeit</hi>, als</supplied><lb/> die
                     entgegengesetzte Meinung. Jenen Gedanken übrigens – <hi rend="underline">des unwil<supplied reason="binding"
                             >lkührlichen</supplied><lb/> Ueberströmens aus innerer Fülle</hi> – äußert nicht <subst hand="#major_hand">
-                        <add n="╒" place="margin-left">undeutlich</add>
+                        <add n="╒" place="margin(left)">undeutlich</add>
                         <del rend="strikethrough">unwillkührlich</del>
                     </subst> der <supplied reason="binding">Hauptre</supplied><lb break="no"/>praesentant der Emanationsansicht, den wir sogleich
                     nen̄en werden.</p>
@@ -1393,7 +1400,7 @@
                         rend="strikethrough"><gap extent="one word" reason="illegible"/></del>das Licht ist <hi rend="underline"
                         >unzertren</hi><supplied reason="binding"><hi rend="underline">nlich</hi> von seinem</supplied><lb/> Ausstrahlen, was sich
                     passend auf das Absolute übertragen ließ; und <supplied reason="binding">so trat</supplied><lb/> nach und nach die Vergleichung an
-                    die Stelle der Sache selbst <add hand="#major_hand" n="╒" place="margin-left">: das Absolute wurde ihnen<lb/> das <hi
+                    die Stelle der Sache selbst <add hand="#major_hand" n="╒" place="margin(left)">: das Absolute wurde ihnen<lb/> das <hi
                             rend="underline">Urlicht</hi>, die Welt seine ewige<lb/>
                         <hi rend="underline">Ausstrahlung</hi>!</add>
                     <subst hand="#major_hand">
@@ -1407,8 +1414,8 @@
                         >111</hi></del></note>
                 <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" n="2" rend="strikethrough">142</del></note>
                 <note hand="#blue_hand" place="top-right" type="foliation">129</note>
-                <handShift new="#brown_ink"/>
-                <p><supplied reason="binding">92. Den</supplied>noch wurde durch die Emanationstheorie ein großer und wichtiger<lb/>
+                <p>
+                    <handShift new="#brown_ink"/><supplied reason="binding">92. Den</supplied>noch wurde durch die Emanationstheorie ein großer und wichtiger<lb/>
                     <supplied reason="binding">Schritt der</supplied> Wahrheit näher gewon̄en, und sie verdient deswegen allerdings<lb/>
                     <supplied reason="binding">eine Aus</supplied>zeichnung vor den früher erwähnten Vorstellungsarten. Ihr ist<lb/>
                     <supplied reason="binding">das Absol</supplied>ute wenigstens <hi rend="underline">ruhender</hi> und <hi rend="underline"
@@ -1440,7 +1447,7 @@
                     <supplied reason="binding">enge für</supplied> seine umfassenden Ansichten; <hi rend="underline">diese</hi> Welt reicht ihm nicht
                     aus; er er<lb break="no"/><supplied reason="binding">baut sich n</supplied>eue, und schmükt und belebt sie durch seine reiche Einbildungskraft;<lb/>
                     <del hand="#major_hand" rend="strikethrough"><supplied reason="binding">und</supplied></del><add hand="#major_hand" n="╒"
-                        place="margin-right">Alles dies</add> doch keinesweges <add hand="#major_hand" place="above">ohne</add> eine gewisse Methode<lb/>
+                        place="margin(right)">Alles dies</add> doch keinesweges <add hand="#major_hand" place="above">ohne</add> eine gewisse Methode<lb/>
                     <supplied reason="binding">und Syste</supplied>maticität<subst hand="#major_hand">
                         <add place="inline">!</add>
                         <del rend="strikethrough"><unclear cert="medium" reason="strikethrough">absprechen.</unclear></del>
@@ -1452,7 +1459,7 @@
                     <supplied reason="binding">Studium</supplied> für Philosophen aus. Nur Schade, daß dieses durch die elende Beschaffen<lb
                         break="no"/><supplied reason="binding">heit des Te</supplied>xtes, der von Fehlern und Auslassungen wim̄elt, und durch die<lb/>
                     <supplied reason="binding">eigenthüm</supplied>liche Concentration und Dunkelheit <subst hand="#major_hand">
-                        <add n="╒" place="margin-right">seiner</add>
+                        <add n="╒" place="margin(right)">seiner</add>
                         <del rend="strikethrough">der</del>
                     </subst> Schreibart, so sehr erschwert<lb/>
                     <supplied reason="binding">und verk</supplied>üm̄ert wird. Möge auch Ihm unser Zeitalter zu einem vollkom̄nen<lb/>
@@ -1490,9 +1497,9 @@
                         <del rend="overwritten">ü</del>
                         <add place="across">a</add>
                     </subst>ber dieselbe, seiner Meinung nach, nicht lehren, noch sonst <del hand="#major_hand" rend="strikethrough"><add
-                            hand="#major_hand" place="margin-left">Etwas </add></del>mitth<supplied reason="binding">eilen,</supplied><lb/> sondern
-                    ein Jeder muß <hi rend="underline">sich</hi> selbstthätig zu ihr erheben <add hand="#major_hand" n="╒" place="margin-left">muß sie
-                            <hi rend="underline">besitzen</hi>; und</add>
+                            hand="#major_hand" place="margin(left)">Etwas </add></del>mitth<supplied reason="binding">eilen,</supplied><lb/> sondern
+                    ein Jeder muß <hi rend="underline">sich</hi> selbstthätig zu ihr erheben <add hand="#major_hand" n="╒" place="margin(left)">muß
+                        sie <hi rend="underline">besitzen</hi>; und</add>
                     <del hand="#major_hand" rend="strikethrough"><unclear cert="low" reason="strikethrough">Auch auch ist</unclear><gap
                             extent="one to two chars" reason="binding"/></del><supplied reason="binding">in ihr ist die</supplied><lb/> letzte Staffel
                     der Erken̄tniß und der Stetigkeit zugleich, – das Höchste<supplied reason="binding">, was der</supplied><lb/> Mensch besitzen
@@ -1577,7 +1584,7 @@
                         <add place="above">es</add>
                     </subst> in den Thatsachen erblicken, und <subst hand="#major_hand">
                         <del rend="strikethrough">die wir</del>
-                        <add place="margin-right">welches wir</add>
+                        <add place="margin(right)">welches wir</add>
                     </subst><lb/>
                     <supplied reason="binding">auf jene</supplied> Einheit eben zurückzuführen bestrebt sind? <add n="x)" type="footnote"><hi
                             rend="latin"><choice>
@@ -1693,7 +1700,7 @@
                                     μετα</supplied><lb/> τὴν γένεσιν ἂν γίγνοιτο, καὶ οὐ δεύτερον· δεῖ οὖν ἁκινήτου ὄντος εἴ τι<supplied
                                     reason="binding">δευτερον</supplied><lb/> μετ’ αὐτὸ, οὐ προςνεύσαντος, οὐδέ βουληθέντος, οὐδέ ὅλως κινηθέντος
                                     ὑπος<supplied reason="binding">ηναι αυτο</supplied></hi></foreign></add> So verfäh<supplied reason="binding">rt er
-                        nun</supplied><lb/> wenigstens künstlich und scheinbar <add hand="#major_hand" n="╒" place="margin-left">gründlich</add>: um
+                        nun</supplied><lb/> wenigstens künstlich und scheinbar <add hand="#major_hand" n="╒" place="margin(left)">gründlich</add>: um
                     die Frage zu umgehen, wie überh<supplied reason="binding">aupt ein</supplied><lb/> Hervorgehen eines Zweiten aus dem Einen in
                     irgend einem Sinne <hi rend="underline">mög</hi><supplied reason="binding"><hi rend="underline">lich</hi> und</supplied><lb/>
                     denkbar sey, behauptet er ohne weiteres: es ist <hi rend="underline">faktisch</hi> ein solches, und d<supplied reason="binding"
@@ -1734,7 +1741,7 @@
                                     reason="binding"/><lb/> αρχετύπων ὧν εξέφυ· πῦρ μὲν τὴν παρ’ αὐτοῦ θερμότητα, καὶ χιὼν οὐκ εἴσωμ<supplied
                                     extent="one to two words" reason="binding"/><lb/> ψυχρὸν κατέχει, μάλιζα δέ ὅσα εὐώδη μαρτυρεῖ τοῦτο <subst
                                     hand="#major_hand">
-                                    <add n="╒" place="margin-left">– καὶ</add>
+                                    <add n="╒" place="margin(left)">– καὶ</add>
                                     <del rend="strikethrough">καὶ</del>
                                 </subst> πάντα, ὅσα ἤδη<supplied extent="one to two words" reason="binding"/><lb/> γεννᾶ, τό δέ ἄει τέλειον, ἄει καὶ
                                     α<gap extent="one char" reason="illegible"/>διον γεννᾶ, καὶ ἐλαττον <gap extent="two chars" reason="illegible"/>
@@ -1806,7 +1813,7 @@
                     <supplied reason="binding">Jener</supplied>
                     <subst hand="#major_hand">
                         <del rend="strikethrough"><gap extent="one word" reason="illegible"/></del>
-                        <add n="╒" place="margin-right">Gedanke</add>
+                        <add n="╒" place="margin(right)">Gedanke</add>
                     </subst> ist nun sin̄reich genug! Das <hi rend="underline">Nebeneinander</hi> der man̄igfaltigen Objecte,<lb/>
                     <supplied reason="binding">die die</supplied> Vernunft stets denkend (gleichsam sich bewegend) erzeugt, giebt das <hi
                         rend="underline">Vorbild</hi><lb/>
@@ -1826,10 +1833,10 @@
                         <add place="across">;</add>
                     </subst> und daher auch die Vorwürfe, die<lb/>
                     <supplied reason="binding">die Zeit</supplied>genossen dem <persName ref="#p1120" type="bi">Plotin</persName> machten, daß er des
-                        <persName ref="#p3536" type="bi">Numenius</persName> Schriften beraubt habe.<note resp="#eva.schneider">Philosophen
-                        Griechenlands beschuldigten <persName ref="#p1120" type="bi">Plotin</persName>, er habe bei <persName ref="#p3536" type="bi"
-                            >Numenios</persName> abgeschaut. Porphyrios berichtet ausführlich über die Plagiatsvorwürfe in: Vita Plotini, 17, 1–21,
-                        23.</note></p>
+                        <persName ref="#p3536" type="bi">Numenius</persName> Schriften beraubt habe.<note resp="#eva.schneider"><p xml:lang="de"
+                            >Philosophen Griechenlands beschuldigten <persName ref="#p1120" type="bi">Plotin</persName>, er habe bei <persName
+                                ref="#p3536" type="bi">Numenios</persName> abgeschaut. Porphyrios berichtet ausführlich über die Plagiatsvorwürfe in:
+                            Vita Plotini, 17, 1–21, 23.</p><p xml:lang="en"/><p xml:lang="fr"/></note></p>
                 <p><supplied reason="binding">100.</supplied> Die Welt der <hi rend="underline">Vernunft</hi> ist das Muster der sin̄lichen Welt: wir
                     kön̄en drum<lb/>
                     <supplied reason="binding">umge</supplied>kehrt von dem Wesen der letztern auf die Beschaffenheit jener schließen; auch<lb/>
@@ -1842,7 +1849,7 @@
                         rend="underline">Form</hi> unterschieden werden. Wo <hi rend="underline">Form</hi> ist, da be<supplied reason="binding">darf
                         es</supplied><lb/> zuförderst einer durch die Form erst zu gestaltenden Grundlage, ein<supplied reason="binding">es die
                         Form</supplied><lb/> an̄ehmenden <hi rend="underline">Gemeinschaftlichen</hi>. Dies <del hand="#major_hand"
-                        rend="strikethrough">hieß </del><add hand="#major_hand" n="╒" place="margin-left">wäre gleichsam die <hi rend="underline"
+                        rend="strikethrough">hieß </del><add hand="#major_hand" n="╒" place="margin(left)">wäre gleichsam die <hi rend="underline"
                             >Materie</hi><lb/> für die Vernunftwelt; und so <subst>
                             <del rend="overwritten">wäre</del>
                             <add place="across">stim̄</add>
@@ -1976,9 +1983,8 @@
                     <supplied reason="binding">Ruhepunkt fin</supplied>den konnte. Plotinus gewan̄ diese Einsicht nicht; wenigstens vermochte<lb/>
                     <supplied reason="binding">er nicht sich in</supplied> ihr festzusetzen; und so mußte dieser bedeutende Schritt seinen<pb
                         facs="00000280.jpg" n="38"/>
-                    <note hand="#major_hand" place="top-left" type="foliation">36</note>
-                    <p>Nachkom̄en überlassen bleiben.</p>
-                    <hi hand="#major_hand" rend="underline">Anmerkung.</hi>
+                    <note hand="#major_hand" place="top-left" type="foliation">36</note> Nachkom̄en überlassen bleiben. <hi hand="#major_hand"
+                        rend="underline">Anmerkung.</hi>
                     <choice>
                         <abbr>S.</abbr>
                         <expan>Siehe</expan>
@@ -2032,7 +2038,7 @@
                         <del rend="strikethrough">hervorbringt</del>
                         <add place="above">erzeugt</add>
                     </subst>, <supplied reason="binding">und der Mensch</supplied><lb/> freithätig <subst hand="#major_hand">
-                        <add n="╒" place="margin-left">hervorbringt</add>
+                        <add n="╒" place="margin(left)">hervorbringt</add>
                         <del rend="strikethrough">arbeitet</del>
                     </subst>. Diesen Sinn, den der gewöhnliche Verstand <supplied reason="binding">allein mit</supplied><lb/> jenem Worte verbindet,
                     haben wir schon bestim̄t vom Absolu<supplied reason="binding">ten ausge</supplied><lb break="no"/>sondert. Drum bleibt für dieses
@@ -2058,7 +2064,7 @@
                     Die Endlichkeit würde dadurch in̄ig verschmolzen mit dem Absoluten;<lb/> wäre wesentlicher und integrirender Bestandtheil für
                     dasselbe, Bedingung<lb/> ohne welche nicht – für sein Daseyn, denn für <hi rend="underline">seine</hi> Existenz <subst
                         hand="#major_hand">
-                        <add n="╒" place="margin-right">wurde</add>
+                        <add n="╒" place="margin(right)">wurde</add>
                         <del rend="strikethrough">wird</del>
                     </subst> ja zugleich die<lb/> der Endlichkeit gefordert. So wäre jede Trenung, jede Spaltung aufgehoben;<lb/> Alles bildete nur
                     Eines, – Ein <hi rend="underline">organisches Ganze</hi>.</p>
@@ -2076,7 +2082,7 @@
                     wenn<lb/> wir diese Ansicht prüfen, und urtheilen wollten, ob bei ihr die Erken̄tniß sich beru<lb break="no"/>higen, und hier die
                     Akten für geschlossen erklären könne. Sey es damit indeß,<lb/> wie es wolle, so hat sich doch schon gezeigt, daß jene Ansicht,
                     wen̄ vielleicht auch <subst hand="#major_hand">
-                        <add n="╒" place="margin-right">nicht die letzte und Alles vollendende, – </add>
+                        <add n="╒" place="margin(right)">nicht die letzte und Alles vollendende, – </add>
                         <lb/>
                         <del rend="strikethrough"><gap extent="one to two words" reason="illegible"/></del>
                     </subst> den̄och eine von den nothwendig zu ersteigenden Stufen sey, welche die<lb/> Philosophie eine Zeitlang behaupten, oder,
@@ -2096,14 +2102,14 @@
                     <hi rend="underline">Freiheit</hi> als<lb/> Täuschung hinweggeleugnet, Selbständigkeit der Person als Irrthum verworfen<lb/> wird,
                     weil die Idee einer milden väterlichen Weltregierung, die so wohlthätig<lb/> und beruhigend das Gemüth umfängt, in ein unbeugsames
                     Weltgesetz, ein<lb/> unausweichbares Fatum sich verwandelt. Man hat die Erken̄tniß <add hand="#major_hand" n="╒"
-                        place="margin-right">einmal</add> über jene<lb/> Gegenstände befragt, hat sie drum als gültige Richterin, als Klarheit und
+                        place="margin(right)">einmal</add> über jene<lb/> Gegenstände befragt, hat sie drum als gültige Richterin, als Klarheit und
                         Ge<lb break="no"/>wisheit gewähren kön̄end, anerkan̄t, und so ihr versprochen, ihrer unumwundenen<lb/> Antwort mit Resignation
                     entgegen zu sehen. Und wahrlich ein schlechtes Mittel<lb/> ist es, <subst hand="#major_hand">
                         <del rend="strikethrough">vor</del>
                         <add place="above">gegen</add>
                     </subst> unerfreuliche<del hand="#major_hand" rend="strikethrough">n </del>Wahrheiten, <subst hand="#major_hand">
                         <del rend="strikethrough"><gap extent="two to three words" reason="illegible"/></del>
-                        <add n="╒" place="margin-right">vor ihnen</add>
+                        <add n="╒" place="margin(right)">vor ihnen</add>
                     </subst> die Augen zu verschließen;<lb/> als ob aus dem Nichtsehen auch das Nichtseyn erfolge.</p>
                 <pb facs="00000282.jpg" n="40"/>
                 <note hand="#major_hand" place="top-left" type="foliation">38</note>
@@ -2135,7 +2141,7 @@
                                 <abbr><rs ref="#05554" type="bi">Epist.</rs></abbr>
                                 <expan>Epistula</expan>
                             </choice> XXVII. p <choice>
-                                <abb>Opp. posth.</abb>
+                                <abbr>Opp. posth.</abbr>
                                 <expan>Opera posthuma</expan>
                             </choice></hi></foreign> Gerade<lb/>
                     <hi rend="underline">dieses</hi> Verhältniß zu fassen, darauf kom̄t zum richtigen Verständniß dieses Systems<lb/> alles an.</p>
@@ -2151,7 +2157,7 @@
                     </choice> 1., der große Anfechtungen<lb/> erlitten hat, weil man nicht recht einsah, wie er zu verstehen sey, und noch <supplied
                         reason="hole">weniger</supplied><lb/> wie er einen Grundsatz abgeben kön̄e. Wie wir ihn dargestellt haben, wird er mehr<lb/>
                     Eingang finden kön̄en, den̄ er enthält allerdings eine feste, keines weitern Beweises<lb/> bedürfende Wahrheit. <add
-                        hand="#major_hand" n="╒" place="margin-left">(Man könnte ihn auch also ausdrük<lb break="no"/>ken: <hi rend="underline"
+                        hand="#major_hand" n="╒" place="margin(left)">(Man könnte ihn auch also ausdrük<lb break="no"/>ken: <hi rend="underline"
                             >Alles</hi>, <hi rend="underline">was ist</hi>, <hi rend="underline">ist entweder Theil<lb/> eines Ganzen</hi>, <hi
                             rend="underline">oder selbst ein Ganzes</hi>.)</add></p>
                 <p>110. <hi rend="latin">II.</hi>
@@ -2242,10 +2248,10 @@
                     kön̄te man ihm auf den ersten Anblick antworten: nen̄st du<lb/> jenes <foreign xml:lang="la"><hi rend="latin">caussa
                         sui</hi></foreign>, so kan̄ diese Definition durchaus auf kein mögliches Wesen ange<lb break="no"/>wendet werden; denn es
                     existirt schlechthin Nichts, aus dessen bloßem <hi hand="#major_hand" n="2" rend="underline">Begriffe</hi>
-                    <add hand="#major_hand" n="╒" place="margin-right">oder Wesen</add> schon<lb/> das Daseyn nothwendig erfolgte, das nicht auch als
+                    <add hand="#major_hand" n="╒" place="margin(right)">oder Wesen</add> schon<lb/> das Daseyn nothwendig erfolgte, das nicht auch als
                         <hi rend="underline">nicht</hi> seyend gedacht werden<lb/> kön̄te. Doch ohne Zweifel meinte er es anders, und tiefer. Ein
                     Wesen, das da in<lb/> seiner Existenz von keinem andern abhängt, durch ein Anderes in keiner Art bedingt<lb/> seyn kan̄, das <hi
-                        rend="underline">absolut</hi> ist <add hand="#major_hand" n="╒" place="margin-right">mit Einem Worte</add>, ist eben darum zu
+                        rend="underline">absolut</hi> ist <add hand="#major_hand" n="╒" place="margin(right)">mit Einem Worte</add>, ist eben darum zu
                     denken als nicht <hi rend="underline">geworden</hi>, und nicht<lb/>
                     <hi rend="underline">werdend</hi>, als ohne Anfang und ohne Ende in seiner Existenz verharrend: kein<lb/> Zeitmoment, in welchem
                     es nicht als <hi rend="underline">seyend</hi> zu setzen wäre! – Dadurch hat er<lb/> indessen für das <hi rend="underline"
@@ -2253,7 +2259,7 @@
                     berechtigt, daß, <hi rend="underline">falls</hi> ein solches Wesen existire,<lb/> es nothwendig nicht geworden, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> nicht werdend, überhaupt unvergänglich und<lb/> unveränderlich sey. <add hand="#major_hand" n="╒" place="margin-right"
+                    </choice> nicht werdend, überhaupt unvergänglich und<lb/> unveränderlich sey. <add hand="#major_hand" n="╒" place="margin(right)"
                         >Er kann, im <hi rend="underline">Falle</hi> des Daseyns ei<lb break="no" type="none"/>nes solchen, eine gewisse <hi n="2"
                             rend="underline">Beschaffenheit</hi><lb/> seines Seyns (die Ewigkeit) behaupten.</add> Das wirkliche <hi rend="underline"
                         >Daseyn</hi> davon<del hand="#major_hand" rend="strikethrough">, auf welches jener Schluss aufge<lb break="no"/>baut
@@ -2325,7 +2331,7 @@
                     </choice>
                     <hi rend="latin">V</hi>.). Jetzt soll darauf aufmerksam gemacht werden, daß auch <hi rend="underline">verschiedene</hi><lb/>
                     Eigenschaften Einer Substanz zukom̄en kön̄en. Im Gegentheil: Je mehr Realität<lb/> einer Substanz <subst hand="#major_hand">
-                        <add n="╒" place="margin-left">zuzuschreiben ist</add>
+                        <add n="╒" place="margin(left)">zuzuschreiben ist</add>
                         <del rend="strikethrough">zukom̄t</del>
                     </subst>, desto mehr Eigenschaften hat sie auch – als Eine Substanz.<lb/> (<choice>
                         <abbr>S.</abbr>
@@ -2370,7 +2376,7 @@
                     <subst hand="#major_hand">
                         <del rend="overwritten"><gap extent="two chars" reason="illegible"/></del>
                         <add place="across">11</add>
-                    </subst>.). Es war daher auch wohl <add hand="#major_hand" n="╒" place="margin-left">vorzüglich</add> nöthig, daß dieser
+                    </subst>.). Es war daher auch wohl <add hand="#major_hand" n="╒" place="margin(left)">vorzüglich</add> nöthig, daß dieser
                     einträgliche Satz gehörig<lb/> fest <subst hand="#major_hand">
                         <del rend="strikethrough"><unclear cert="medium" reason="strikethrough">werde</unclear></del>
                         <add place="above">stehe</add>
@@ -2447,7 +2453,7 @@
                         >Daseyn</hi>
                     <pb facs="00000286.jpg" n="44"/>
                     <note hand="#major_hand" place="top-left" type="foliation">42</note> der Substanz <add hand="#major_hand" n="╒"
-                        place="margin-left">schon unmittelbar</add> aus ihrem bloßen Wesen; <subst hand="#major_hand">
+                        place="margin(left)">schon unmittelbar</add> aus ihrem bloßen Wesen; <subst hand="#major_hand">
                         <del rend="strikethrough">sie</del>
                         <add place="above">dies</add>
                     </subst> involvirt nehmlich <add hand="#major_hand" place="above">das</add> Daseyn, <choice>
@@ -2513,7 +2519,7 @@
                 <p><hi rend="underline"><choice>
                             <abbr>Anmerk</abbr>
                             <expan>Anmerkung</expan>
-                        </choice></hi>. Ich gestehe, daß ich nicht ohne <add hand="#major_hand" n="╒" place="margin-right">die größte</add>
+                        </choice></hi>. Ich gestehe, daß ich nicht ohne <add hand="#major_hand" n="╒" place="margin(right)">die größte</add>
                     Schüchternheit auf das so eben Geschriebene<lb/> zurückblicke; den̄ es betrifft die Hauptstelle eines Werks, dessen Urheber
                     man<lb/> als den größten Denker und beson̄ensten philosophischen Künstler verehrt. Doch<lb/> habe ich jenen Beweis mehr als einmal
                     mit aller mir möglichen Aufmerk<lb break="no"/>samkeit durchgerechnet, und – ich kan̄ nichts Anderes, als das Angegebene
@@ -2571,7 +2577,7 @@
                         rend="underline">Mangel</hi>, <hi rend="underline">Beraubung</hi>.<lb/> Jenes vorausgesetzt (was aber eben nicht vorausgesetzt
                     werden kan̄, weil es<lb/>
                     <subst hand="#major_hand">
-                        <add n="╒" place="margin-left">sich anders verhält</add>
+                        <add n="╒" place="margin(left)">sich anders verhält</add>
                         <del rend="strikethrough">falsch ist,</del>
                     </subst>) ist der darauf gebaute Schluß ganz richtig; wen̄ einem endlichen<lb/> Dinge eine Realität zukom̄t, darf sie dem
                     allerrealsten Wesen offenbar<lb/> nicht fehlen, das indeß bei diesem Schlusse – wohlgemerkt! – schon als <hi rend="underline"
@@ -2758,7 +2764,7 @@
                 <p>128. Es ist hier zugleich von einem <hi rend="underline">Gesetze</hi> der göttlichen Natur die Rede,<lb/> welches so anstößig
                     geworden ist, zumal, da er im <foreign xml:lang="la"><hi rend="latin">Scholion</hi></foreign> zu diesem Satze<lb/> nachdrücklich
                     und eifrig dagegen protestirt, Gott Freiheit im gewöhnlichen Sinne<lb/> zuzuschreiben<add hand="#major_hand" n="╒"
-                        place="margin-right">, und gar hart diejenigen an<lb break="no"/>redet, die eine solche behaupten.</add> So w<subst
+                        place="margin(right)">, und gar hart diejenigen an<lb break="no"/>redet, die eine solche behaupten.</add> So w<subst
                         hand="#major_hand">
                         <del rend="overwritten"><unclear cert="low" reason="overwritten">a</unclear></del>
                         <add place="across">e</add>
@@ -2808,7 +2814,7 @@
                         </choice></del><subst hand="#major_hand">
                         <del rend="overwritten">n</del>
                         <add place="across">N</add>
-                    </subst>ur durch unmittelbaren göttlichen Beistand <add hand="#major_hand" n="╒" place="margin-left">werden alle Dinge nach <choice>
+                    </subst>ur durch unmittelbaren göttlichen Beistand <add hand="#major_hand" n="╒" place="margin(left)">werden alle Dinge nach <choice>
                             <abbr><persName ref="#p2768" type="bi">Sp.</persName></abbr>
                             <expan>Spinosa</expan>
                         </choice></add> im Daseyn erhalten. Und<lb/> so ist dieser Satz characteristi<subst>
@@ -2820,7 +2826,7 @@
                         <del rend="strikethrough">der</del>
                         <add place="above">eine</add>
                     </subst> ver<lb break="no"/>bessernde<del hand="#major_hand" rend="strikethrough">n</del> Hand Gottes <subst hand="#major_hand">
-                        <add n="╒" place="margin-left">gelten lassen.</add>
+                        <add n="╒" place="margin(left)">gelten lassen.</add>
                         <del rend="strikethrough">bedürfen</del>
                     </subst><del rend="none">.</del> Uebrigens ist hier der Punkt, wo der Zusam̄en<lb break="no"/>hang des <persName ref="#p2768"
                         type="bi">Spinosa</persName> mit seinem Vorgänger <persName ref="#p2772" type="bi"><hi rend="underline">Des <subst
@@ -2831,7 +2837,7 @@
                                     </choice></del>
                                 <add place="across">C</add>
                             </subst>artes</hi></persName>
-                    <add hand="#major_hand" n="┌" place="margin-left">am deutlichsten</add> hervortritt, der zuerst <supplied reason="faded"
+                    <add hand="#major_hand" n="┌" place="margin(left)">am deutlichsten</add> hervortritt, der zuerst <supplied reason="faded"
                         >ein</supplied><lb/>
                     <hi rend="underline">fortdauerndes Schaffen</hi> der Dinge, einen <hi rend="underline">nie aufhörenden göttlichen
                     Beistand</hi><lb/> (<foreign xml:lang="la"><hi rend="latin">assistentia Dei</hi></foreign>) behauptete, und so den Grundstein für
@@ -3024,7 +3030,7 @@
                                 <abbr>Prop.</abbr>
                                 <expan>Propositio</expan>
                             </choice></hi></foreign>
-                    <lb/> 25. 20. <hi rend="">XI.</hi>) <add hand="#major_hand" n="╒" place="margin-right"><choice>
+                    <lb/> 25. 20. XI.) <add hand="#major_hand" n="╒" place="margin(right)"><choice>
                             <abbr>u. s. w.</abbr>
                             <expan>und so weiter.</expan>
                         </choice></add> Um darauf das Corollar zu bauen: daß Gott nicht bloß Ursache<lb/> sey, daß die Dinge zu existiren <hi
@@ -3349,15 +3355,16 @@
                         />geht</hi>, und einem andern <hi rend="underline">Entstehenden</hi> Platz macht, so geschieht dies nach<lb/> demselben
                     Gesetze, und kon̄te nicht unterbleiben: es liegt eben im noth<lb break="no"/>wendigen Werden der göttlichen Natur. So endet dieses
                     System in dem<lb/> vollendetsten Fatalismus; es ist eine <hi rend="underline">vorausbestim̄te Harmonie</hi>
-                    <add hand="#major_hand" n="╒" place="margin-left">im strengsten Sinne</add>, nach<lb/> der Alles einhergeht, eine unendliche Reihe
-                    von Zuständen, wo der eine<lb/> mit absoluter Nothwendigkeit sich stets aus dem andern entwickelt.<lb/> Spinosa stim̄t demnach im
-                    Wesentlichen mit <hi rend="underline"><persName ref="#p2228" type="bi">Leibnitz</persName></hi> überein, wodurch des<lb/>
-                    letzteren berühmter Ausspruch: <hi rend="quoted">Wären keine Monaden, so hätte <choice>
+                    <add hand="#major_hand" n="╒" place="margin(left)">im strengsten Sinne</add>, nach<lb/> der Alles einhergeht, eine unendliche
+                    Reihe von Zuständen, wo der eine<lb/> mit absoluter Nothwendigkeit sich stets aus dem andern entwickelt.<lb/> Spinosa stim̄t
+                    demnach im Wesentlichen mit <hi rend="underline"><persName ref="#p2228" type="bi">Leibnitz</persName></hi> überein, wodurch
+                    des<lb/> letzteren berühmter Ausspruch: <hi rend="quoted">Wären keine Monaden, so hätte <choice>
                             <abbr><persName ref="#p2768" type="bi">Sp.</persName></abbr>
                             <expan>Spinosa</expan>
-                        </choice> Recht</hi><note resp="#eva.schneider">Leibniz, Gottfried Wilhelm: »Aus den Briefen von Leibniz an Bourguet. Leibniz
-                        an Bourguet. Dezember 1714.« In: Ders.: Hauptschriften zur Grundlegung der Philosophie. Bd. 2, Hamburg 1996, S. 639-648; hier:
-                        S. 642.</note><lb/> in sein wahres Licht gestellt wird.</p>
+                        </choice> Recht</hi><note resp="#eva.schneider"><p xml:lang="de">Leibniz, Gottfried Wilhelm: »Aus den Briefen von Leibniz an
+                            Bourguet. Leibniz an Bourguet. Dezember 1714.« In: Ders.: Hauptschriften zur Grundlegung der Philosophie. Bd. 2, Hamburg
+                            1996, S. 639-648; hier: S. 642.</p><p xml:lang="en"/><p xml:lang="fr"/></note><lb/> in sein wahres Licht gestellt
+                    wird.</p>
                 <p>Deswegen treffen aber <del hand="#major_hand" rend="strikethrough">auch </del>alle Einwendungen, die gegen den Fatalismus<lb/>
                     gemacht werden können, auch das System des <persName ref="#p2768" type="bi">Spinosa</persName>. Indessen kan̄ er mit<lb/> Recht
                     auf seine Principien zurückweisen, und behaupten, daß aus ihnen sich<lb/> kein anderes Resultat ergebe, noch ergeben könne; daß
@@ -3379,7 +3386,7 @@
                 <note hand="#pencil_1" place="top-right" type="foliation"><del hand="#pencil_2" rend="strikethrough">157</del></note>
                 <note hand="#blue_hand" place="top-right" type="foliation">143</note>
                 <p>149. Zuförderst ist uns durch obige Auseinandersetzung recht klar geworden das<lb/> eigentliche philosophische <subst>
-                        <add n="╒" place="margin-right">Verfahren</add>
+                        <add n="╒" place="margin(right)">Verfahren</add>
                         <del rend="none">Ver<subst>
                                 <del rend="strikethrough">sehen</del>
                                 <add place="above">fahren</add>
@@ -3412,7 +3419,7 @@
                         <unclear cert="high" reason="illegible">eingelosten</unclear> Bestim̄ungen, die alle lediglich aus<lb/> der Erfahrung durch
                     Abstraktion gefunden werden. <persName ref="#p2768" type="bi">Spinosas</persName> ganzes <subst hand="#major_hand">
                         <del rend="strikethrough">philosophisches</del>
-                        <add place="margin-right">Philosophiren</add>
+                        <add place="margin(right)">Philosophiren</add>
                     </subst><lb/>
                     <del hand="#major_hand" rend="strikethrough">Verfahren</del>, um es mit Einem Worte auszusprechen, ist nichts, <hi
                         rend="underline">als ein nach<lb/> bestimten Grundsätzen einhergehendes, einen gewissen Grundgedanken<lb/> durchführendes
@@ -3463,7 +3470,7 @@
                     </choice> weder der <hi rend="underline">Existenz</hi> noch dem<lb/>
                     <hi>innern Wesen</hi> nach, einem Wandel unterworfen.</p>
                 <p>3.) <hi rend="underline">Es kan̄ in keinem Sinne im ganzen Bereiche des göttlichen Seyns Etwas entstehen<lb/> sich <subst>
-                            <add n="┌" place="margin-left">innerlich</add>
+                            <add n="┌" place="margin(left)">innerlich</add>
                             <del rend="strikethrough"><unclear cert="medium" reason="strikethrough">innerlich</unclear></del>
                         </subst> verändern, oder vergehen.</hi></p>
                 <p>153. Dies vorausgeschickte Allgemeine laßt uns nun anwenden!</p>
@@ -3507,16 +3514,16 @@
                         </subst>d</hi>;), diese mögen abermals andere nothwendige<lb/> Eigenschaften an sich tragen (<foreign xml:lang="grc"><hi
                             rend="greek">αβγ-δεζ</hi></foreign>)<add n="–" type="footnote">Also unter dieser Figur vorzustellen: <hi rend="latin">A-B
                             / ab-cd /</hi>
-                        <foreign xml:lang="grc"><hi rend="greek">αβγ-δεζ</hi></foreign><note resp="#eva.schneider">Die Buchstaben A-B / ab-cd /
-                            αβγ-δεζ stehen im Manuskript untereinander.</note>. Die göttliche Substanz wäre nun<lb/> nicht noch etwas <hi
-                            rend="underline">besonderes</hi>, <hi rend="underline">außer</hi> und <hi rend="underline">neben</hi> dieser
-                        Man̄igfaltigkeit, sondern eben nur<lb/> der <hi rend="underline">Inbegriff</hi>, das <hi rend="underline">organische</hi> und
-                            <hi rend="underline">geschlossene Ganze</hi>, welches diese Theile ausmachen!</add>, und so ist <del hand="#major_hand"
-                        rend="strikethrough">es </del>klar, daß alle diese<lb/> Bestimmungen von <foreign xml:lang="grc"><hi rend="greek">A</hi> bis
-                            <hi rend="greek">Z</hi></foreign>, weil sie insgesamt unmittelbar und mittelbar<lb/> durch Gottes Seyn gesetzt sind, <hi
-                        rend="underline">schlechthin nothwendig</hi>, – <hi rend="underline">ewig</hi>, <hi rend="underline">unveränderlich</hi><lb/>
-                    seyn müssen: ein Wandel irgendeiner Art, und in irgendeinem Sinne<lb/> ist schlechthin unmöglich <hi rend="underline">innerhalb
-                        dieses ganzen Umkreises</hi>.</p>
+                        <foreign xml:lang="grc"><hi rend="greek">αβγ-δεζ</hi></foreign><note resp="#eva.schneider"><p xml:lang="de">Die Buchstaben A-B
+                                / ab-cd / αβγ-δεζ stehen im Manuskript untereinander.</p><p xml:lang="en"/><p xml:lang="fr"/></note>. Die göttliche
+                        Substanz wäre nun<lb/> nicht noch etwas <hi rend="underline">besonderes</hi>, <hi rend="underline">außer</hi> und <hi
+                            rend="underline">neben</hi> dieser Man̄igfaltigkeit, sondern eben nur<lb/> der <hi rend="underline">Inbegriff</hi>, das
+                            <hi rend="underline">organische</hi> und <hi rend="underline">geschlossene Ganze</hi>, welches diese Theile
+                        ausmachen!</add>, und so ist <del hand="#major_hand" rend="strikethrough">es </del>klar, daß alle diese<lb/> Bestimmungen von
+                        <foreign xml:lang="grc"><hi rend="greek">A</hi> bis <hi rend="greek">Z</hi></foreign>, weil sie insgesamt unmittelbar und
+                    mittelbar<lb/> durch Gottes Seyn gesetzt sind, <hi rend="underline">schlechthin nothwendig</hi>, – <hi rend="underline">ewig</hi>,
+                        <hi rend="underline">unveränderlich</hi><lb/> seyn müssen: ein Wandel irgendeiner Art, und in irgendeinem Sinne<lb/> ist
+                    schlechthin unmöglich <hi rend="underline">innerhalb dieses ganzen Umkreises</hi>.</p>
                 <p>157. Wir gewinnen sonach für das <persName ref="#p2768" type="bi">Spinosische</persName> System den allgemeinen Satz:<lb/>
                     <hi rend="underline">Alles aus der Nothwendigkeit der göttlichen Natur unmittelbar oder mittelbar<lb/> folgende schließt jedes
                         Werden aus.</hi></p>
@@ -3638,11 +3645,11 @@
                         <unclear cert="medium" reason="illegibe">ins</unclear>
                         <unclear cert="medium" reason="illegible">ans</unclear>
                     </choice><lb/> Unbedingte fort. So haben wir zwar eine unendliche Reihe auseinanderfolgender<lb/> Endlichkeiten, aber <del
-                        hand="#major_hand" rend="strikethrough">noch ist </del><subst hand="#major_hand"><del rend="strikethrough">k</del>ein<add
-                            place="inline">e</add></subst>
+                        hand="#major_hand" rend="strikethrough">noch ist </del><del rend="strikethrough" hand="#major_hand">k</del>ein<add
+                        place="inline" hand="#major_hand">e</add>
                     <hi rend="underline">Vereinigung<del hand="#major_hand" rend="strikethrough">spunkt </del></hi><del hand="#major_hand"
                         rend="strikethrough">entdeckt</del> mit dem Ewigen<lb/> und Unwandelbaren selbst <add hand="#major_hand" n="╒"
-                        place="margin-right">ist noch nicht endeckt</add>: es wird uns sogar im Gegentheile im̄er schwerer<lb/> einzusehen, wie eine
+                        place="margin(right)">ist noch nicht endeckt</add>: es wird uns sogar im Gegentheile im̄er schwerer<lb/> einzusehen, wie eine
                     solche Vereinigung je zu Stande kom̄en solle. Das Werdende<lb/> kan̄ sich nur aus einem andern Werdenden entwickeln; aus dem
                     Ewigen nim̄er;<pb facs="00000306.jpg" n="64"/>
                     <note hand="#major_hand" place="top-left" type="foliation">62</note> es ist also eine <hi rend="underline">zweite</hi>, von jenem
@@ -3677,7 +3684,7 @@
                                 <del rend="strikethrough">fikationen</del>
                                 <add place="above"> (Affectionen</add>
                             </subst></del>
-                        <add place="margin-left"><hi rend="latin">Modi</hi> (Affektionen</add>
+                        <add place="margin(left)"><hi rend="latin">Modi</hi> (Affektionen</add>
                     </subst>, <del hand="#major_hand" rend="strikethrough">(</del><choice>
                         <abbr>Vgl.</abbr>
                         <expan>Vergleiche</expan>
@@ -3793,7 +3800,7 @@
                         <del rend="strikethrough">widersinnig</del>
                         <add place="above">überflüssig</add>
                     </subst>
-                    <add hand="#major_hand" n="╒" place="margin-left">ja unstatthaft!</add>. So kon̄te <choice>
+                    <add hand="#major_hand" n="╒" place="margin(left)">ja unstatthaft!</add>. So kon̄te <choice>
                         <abbr><persName ref="#p2768" type="bi">Sp.</persName></abbr>
                         <expan>Spinosa</expan>
                     </choice> noch im̄er<lb/> auch ohne apriorischen Beweis durch den <hi rend="underline">Rückschluß vom Faktum aus</hi> seine
@@ -3832,7 +3839,7 @@
                         break="no"/>dern nur ein Denken als <hi rend="underline">Wille</hi> oder als <hi rend="underline">Verstand</hi>, in einer
                     von<lb/> diesen beiden Bestim̄ungen.) Jene <hi rend="underline">endlichen</hi>
                     <hi rend="latin">modi</hi> sonach müß<lb break="no"/>ten auf dieselbe Weise erfolgen aus dem nothwendigen We<lb break="no"/>sen
-                    der Attribute, wären also <hi rend="underline">mittelbar</hi> durch die göttliche Natur<lb/> gesetzt. <add place="margin-left"
+                    der Attribute, wären also <hi rend="underline">mittelbar</hi> durch die göttliche Natur<lb/> gesetzt. <add place="margin(left)"
                         >(Daß dies so seÿ, daß nach <persName ref="#p2768" type="bi">Spinosa</persName><lb/> sich also die Nothwendigkeit der in̄ern
                             Na<lb break="no"/>tur Gottes auch auf die <hi rend="underline">einzelnen</hi> End<lb break="no"/>lichkeiten erstrecke, und
                         daß daher die Ein<lb break="no"/>würfe, die wir darauf bauen, sein Sÿstem<lb/> treffen, darüber verweisen wir der Kür<lb
@@ -3863,7 +3870,7 @@
                     jenes, die endlichen <hi rend="latin">modi</hi> vorausbestim<lb break="no"/>mende Gesetz (167) wäre eben nichts anderes, als die
                         <hi rend="underline">successi<lb break="no"/>ve <subst>
                             <del rend="strikethrough">Veränderung</del>
-                            <add place="margin-right">Veränderlichkeit</add>
+                            <add place="margin(right)">Veränderlichkeit</add>
                         </subst></hi> der innern Beschaffenheit der Attribute selbst. <hi rend="underline">So wäre das innerste und unmittelbarste
                         Wesen Gottes<lb/> selber <add place="above">als</add> dem Wandel unterworfen anzusehen.</hi></p>
                 <p>175. Doch dies widerspricht allen vorhergegangenen Sätzen,<lb/> und ist an sich schon ungereimt.</p>
@@ -3947,7 +3954,7 @@
                         <del rend="strikethrough">die</del>
                         <add place="above">zu</add>
                     </subst> allernächst <del rend="strikethrough">e</del><del rend="strikethrough">Frage</del><del rend="strikethrough"><add
-                            place="margin-right">uns selbst</add></del><add place="margin-right">die Frage entstehen,</add><lb/>
+                            place="margin(right)">uns selbst</add></del><add place="margin(right)">die Frage entstehen,</add><lb/>
                     <del rend="strikethrough">darin bestehen </del><del rend="strikethrough">gefragt werden</del>, woher es kom̄e, daß <persName
                         ref="#p2768" type="bi">Spinosa</persName><lb/> selbst sie nicht auch <subst>
                         <del rend="strikethrough">eingesehen</del>
@@ -3998,7 +4005,7 @@
                                 <abbr>pp</abbr>
                                 <expan>perge perge</expan>
                             </choice></hi></foreign> seÿn müsse, daß ein <hi rend="underline">Werden</hi>
-                    <add n="╒" place="margin-right"><subst>
+                    <add n="╒" place="margin(right)"><subst>
                             <del rend="overwritten">auch</del>
                             <add place="across">nach</add>
                         </subst> diesen Prämissen</add> daher gar nicht Statt<lb/> finden könne? – Er blieb, wie wir wissen, durchaus nur<lb/> beim

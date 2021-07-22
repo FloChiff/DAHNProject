@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -53,8 +54,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country key="DE">Germany</country>
-                        <settlement>Berlin</settlement>
+                        <location>
+                            <address>
+                                <street>Unter den Linden 8</street>
+                                <postCode>10117</postCode>
+                                <settlement>Berlin</settlement>
+                                <country key="DE">Germany</country>
+                            </address>
+                        </location>
                         <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
                         <repository>University archive</repository>
                         <collection>Philosophic Faculty no. 99</collection>
@@ -188,8 +195,9 @@
                 </correspContext>
             </correspDesc>
         </profileDesc>
-        <revisionDesc>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding</change>
+        <revisionDesc status="approved">
+            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
             <change when-iso="2020-08-15" who="#sabine.seifert">Encoding of pages 3 to 7. Publication online. Final corrections.</change>
             <change when-iso="2020-08-14" who="#sabine.seifert">Encoding of page 1 and 2.</change>
             <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
@@ -200,14 +208,14 @@
         <body>
             <div type="transcription">
                 <pb facs="00000225b.jpg" n="1"/>
-                <note place="margin-right" type="foliation">
+                <note place="margin(right)" type="foliation">
                     <subst hand="#blue_pen">
-                        <del rend="overwritten"><seg hand="#pencil">130</seg>
+                        <del rend="overwritten"><add hand="#pencil">130</add>
                         </del>
                         <add place="across">130</add>
                     </subst>
                 </note>
-                <note place="margin-left"><choice>
+                <note place="margin(left)"><choice>
                         <abbr>Hrn</abbr>
                         <expan>Herrn</expan>
                     </choice> Registrator <persName ref="#p3868" type="bi">Wernike</persName> zum Mundiren;<lb/>das Mundum mir zur Unterschrift vor<lb
@@ -220,15 +228,17 @@
                     </choice> Regier<choice>
                         <abbr>gs</abbr>
                         <expan>ungs</expan>
-                    </choice>bevoll<lb break="no"/>mächtigten dem vorgesetzten <orgName ref="#g0064" type="bi">Ministerium</orgName><lb/>einzusenden. <closer><dateline><choice>
-                                <abbr>d.</abbr>
-                                <expan>den</expan>
-                            </choice>
-                            <date when-iso="1821-10-21">12. <choice>
-                                    <abbr>Oct.</abbr>
-                                    <expan>October</expan>
-                                </choice> 21.</date></dateline>
-                        <signed rend="align(right)"><hi rend="latin"><persName ref="#p0178" type="bi">Böckh.</persName></hi></signed></closer></note>
+                    </choice>bevoll<lb break="no"/>mächtigten dem vorgesetzten <orgName ref="#g0064" type="bi"
+                    >Ministerium</orgName><lb/>einzusenden.</note>
+                <opener><dateline><choice>
+                            <abbr>d.</abbr>
+                            <expan>den</expan>
+                        </choice>
+                        <date when-iso="1821-10-21">12. <choice>
+                                <abbr>Oct.</abbr>
+                                <expan>October</expan>
+                            </choice> 21.</date></dateline>
+                    <signed rend="align(right)"><hi rend="latin"><persName ref="#p0178" type="bi">Böckh.</persName></hi></signed></opener>
                 <div>
                     <p>Einem hohen <orgName ref="#g0064" type="bi">Ministerium der geistlichen, Unter<lb break="no"/>richts<pc>=</pc> und
                             Medicinalangelegenheiten</orgName>, Unterrichts<lb break="no" type="sh"/>abtheilung, beehrt sich der <rs ref="#p0178"
@@ -242,7 +252,7 @@
                                 >Jahresberichte</ref> als solche aufge<lb break="no"/>führt worden sind, welche noch in dem <date
                                 when-iso="1820-03/09">zweiten<lb/>halben Jahre</date> Antheil an den Übungen nahmen,<lb/>gingen nach dem Abgange der
                             bereits eben da<lb break="no"/>selbst genan̄ten Studirenden und der zum Studium<lb/>der Theologie übergetretenen <persName
-                                ref="#p1949" type="bi">Ernst Glasewald</persName>, <add n="+" place="margin-left">sowie des <persName ref="#p1494"
+                                ref="#p1949" type="bi">Ernst Glasewald</persName>, <add n="+" place="margin(left)">sowie des <persName ref="#p1494"
                                     type="bi">Alexander Schmidt</persName><lb/>und <persName ref="#p3740" type="bi">Ernst Förster</persName>, welche
                                     eben<lb break="no"/>falls andere Studien erwählten,</add><lb/>folgende in den nächsten <date
                                 when-iso="1820-10/1821-02">Cursus</date> über:<lb rend="both"/>Als <orgName ref="g0051" type="bi">ordentliche
@@ -299,17 +309,19 @@
                         <p>Neu hinzu kamen als <orgName ref="g0051" type="bi">ordentliche Mitglieder</orgName>:<lb rend="both"/>
                             <list>
                                 <label>8)</label>
-                                <item><persName ref="#p1957" type="bi">August Balsam</persName><note resp="#sabine.seifert">Die korrekten Vornamen von
-                                            <persName ref="#p1957" type="bi">Balsam</persName> lauten Christian Adolf. Er stammt aus <placeName
-                                            ref="#l0783" type="bi">Tschenstochau</placeName> in der Nähe von <placeName ref="#l0027" type="bi"
-                                            >Breslau</placeName>.</note> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
+                                <item><persName ref="#p1957" type="bi">August Balsam</persName><note resp="#sabine.seifert"><p xml:lang="de">Die
+                                            korrekten Vornamen von <persName ref="#p1957" type="bi">Balsam</persName> lauten Christian Adolf. Er
+                                            stammt aus <placeName ref="#l0783" type="bi">Tschenstochau</placeName> in der Nähe von <placeName
+                                                ref="#l0027" type="bi">Breslau</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> von
+                                        <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
                                 <lb/>
                                 <label>9)</label>
                                 <item><persName ref="#p1559" type="bi">Bernhard Sökeland</persName> aus <placeName ref="#l0293" type="bi"
-                                        >Münster</placeName>,<note resp="#sabine.seifert"><persName ref="#p1559" type="bi">Sökeland</persName> stammt
-                                        aus <placeName ref="#l0634" type="bi">Darfeld</placeName> in der Nähe von <placeName ref="#l0293" type="bi"
-                                            >Münster</placeName>.</note> welcher<lb/>zwar Anfangs nur als außerordentliches<lb/>Mitglied eintrat,
-                                    nachher aber als ordentliches<lb/>aufgenom̄en und durch eine Prämie auf<lb break="no"/>gemuntert wurde;</item>
+                                        >Münster</placeName>,<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p1559" type="bi"
+                                                >Sökeland</persName> stammt aus <placeName ref="#l0634" type="bi">Darfeld</placeName> in der Nähe von
+                                                <placeName ref="#l0293" type="bi">Münster</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note>
+                                    welcher<lb/>zwar Anfangs nur als außerordentliches<lb/>Mitglied eintrat, nachher aber als
+                                    ordentliches<lb/>aufgenom̄en und durch eine Prämie auf<lb break="no"/>gemuntert wurde;</item>
                             </list><lb rend="both"/> als <orgName ref="#g0102" type="bi">außerordentliche</orgName> aber:<lb rend="both"/>
                             <list>
                                 <label>3)</label>
@@ -326,8 +338,8 @@
                                 <lb/>
                                 <label>6)</label>
                                 <item><hi rend="latin"><persName ref="#p3745" type="bi">August Milo</persName></hi> aus der Mittelmark,<note
-                                        resp="#sabine.seifert"><persName ref="#p3745" type="bi">Milo</persName> stammt aus <placeName ref="#l1150"
-                                            type="bi">Fehrbellin</placeName>.</note></item>
+                                        resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p3745" type="bi">Milo</persName> stammt aus <placeName
+                                                ref="#l1150" type="bi">Fehrbellin</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 <lb/>
                                 <label>7)</label>
                                 <item><persName ref="#p1958" type="bi">Adolph Göschen</persName> von <placeName ref="#l1103" type="bi"
@@ -368,10 +380,11 @@
                                 Antheil:<lb rend="both"/>
                             <hi rend="latin"><list>
                                     <label>1)</label>
-                                    <item><persName ref="#p3749" type="bi">Joseph Schreiner</persName><note resp="#sabine.seifert">Die korrekten
-                                            Vornamen von <persName ref="#p3749" type="bi">Schreiner</persName> lauten Johann Baptist. Er stammt aus
-                                                <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in <placeName ref="#l1200" type="bi"
-                                                >Franken</placeName>.</note> aus <placeName ref="#l1200" type="bi">Franken</placeName>,</item>
+                                    <item><persName ref="#p3749" type="bi">Joseph Schreiner</persName><note resp="#sabine.seifert"><p xml:lang="de"
+                                                >Die korrekten Vornamen von <persName ref="#p3749" type="bi">Schreiner</persName> lauten Johann
+                                                Baptist. Er stammt aus <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in <placeName
+                                                    ref="#l1200" type="bi">Franken</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> aus
+                                            <placeName ref="#l1200" type="bi">Franken</placeName>,</item>
                                     <lb/>
                                     <label>2)</label>
                                     <item><persName ref="#p3751" type="bi"><choice>
@@ -384,8 +397,9 @@
                                                 <abbr>Fr. Aug.</abbr>
                                                 <expan>Friedrich August</expan>
                                             </choice> Schulze</persName> aus <placeName ref="#l1203" type="bi">Westpreussen</placeName>,<note
-                                            resp="#sabine.seifert"><persName ref="#p3750" type="bi">Schulze</persName> stammt aus <placeName
-                                                ref="#l1153" type="bi">Marienburg</placeName>.</note></item>
+                                            resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p3750" type="bi">Schulze</persName> stammt aus
+                                                    <placeName ref="#l1153" type="bi">Marienburg</placeName>.</p><p xml:lang="en"/><p xml:lang="fr"
+                                            /></note></item>
                                     <lb/>
                                     <label>4)</label>
                                     <item><persName ref="#p3747" type="bi"><choice>
@@ -395,9 +409,9 @@
                                     <lb/>
                                     <label>5)</label>
                                     <item><persName ref="#p3752" type="bi">Christian Wilbrandt</persName> aus <placeName ref="#l1139" type="bi"
-                                            >Mecklenburg</placeName>,<note resp="#sabine.seifert"><persName ref="#p3752" type="bi"
-                                                >Wilbrandt</persName> stammt aus <placeName ref="#l0819" type="bi"
-                                        >Neuenkirchen</placeName>.</note></item>
+                                            >Mecklenburg</placeName>,<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p3752" type="bi"
+                                                    >Wilbrandt</persName> stammt aus <placeName ref="#l0819" type="bi">Neuenkirchen</placeName>.</p><p
+                                                xml:lang="en"/><p xml:lang="fr"/></note></item>
                                     <lb/>
                                     <label>6)</label>
                                     <item><persName ref="#p1603" type="bi">Franz Winiewski</persName> von <placeName ref="#l0648" type="bi"
@@ -421,8 +435,9 @@
                                     <lb/>
                                     <label>10)</label>
                                     <item><persName ref="#p1961" type="bi">Carl Wendt</persName> von <placeName ref="#l0091" type="bi"
-                                            >Potsdam</placeName>.<note resp="#sabine.seifert"><persName ref="#p1961" type="bi">Wendt</persName> stammt
-                                            aus <placeName resp="#l0263" type="bi">Königsberg</placeName>.</note></item>
+                                            >Potsdam</placeName>.<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p1961" type="bi"
+                                                    >Wendt</persName> stammt aus <placeName resp="#l0263" type="bi">Königsberg</placeName>.</p><p
+                                                xml:lang="en"/><p xml:lang="fr"/></note></item>
                                 </list></hi></p>
                         <p>Aus diesen Angaben geht hervor, daß im <date when-iso="1820-10/1821-02">ersten<lb/>halben Jahre</date> 9 ordentliche und 9
                             außerordentliche,<lb/>im <date when-iso="1821-03/09">zweiten</date> 10 ordentliche und ebenfalls 10 außer<lb break="no"
@@ -451,9 +466,9 @@
                             den Grundsatz befolgt, keinem der Mit<lb break="no"/>glieder ein Thema vorzuschreiben, sondern mit Rücksicht<lb/>der
                             besondern Richtung und eigenthümlichen Studien ei<lb break="no"/>nes jeden die Wahl des Gegenstandes nur zu
                             leiten<lb/>oder zu billigen, und für die Abfassung Rath im All<lb break="no"/>gemeinen zu geben. Da die Befolgung des
-                                letztern<pb facs="00000227b.jpg" n="3"/><note place="margin-right" type="foliation">
+                                letztern<pb facs="00000227b.jpg" n="3"/><note place="margin(right)" type="foliation">
                                 <subst hand="#blue_pen">
-                                    <del rend="overwritten"><seg hand="#pencil">131</seg>
+                                    <del rend="overwritten"><add hand="#pencil">131</add>
                                     </del>
                                     <add place="across">131</add>
                                 </subst>
@@ -521,12 +536,12 @@
                                         den Regeln der Lateinischen Gram̄atik. Da<lb break="no"/>gegen sind wieder sehr gute Sachen darin; aber
                                         ich<lb/>sehe den gegründeten Verdacht, daß der <rs ref="#p0925" type="bi">Verfasser</rs><lb/>hinterlassene
                                         Papiere seines verstorbenen <rs ref="#p0654" type="bi">Bruders</rs><lb/>benutzte:<note resp="#sabine.seifert"
-                                                ><persName ref="#p0925" type="bi">Julius Wernikes</persName> Bruder <persName ref="#p0654" type="bi"
-                                                >Friedrich August Wernicke</persName> war ebenfalls Mitglied in <persName ref="#p0178" type="bi"
-                                                >Boeckhs</persName>
-                                            <orgName ref="#g0079" type="bi">philologischen Seminar</orgName> gewesen.</note> was ich ihm auch schon
-                                        einmahl verwie<lb break="no"/>sen habe. Doch halte ich ihn der Nachsicht in dieser<lb/>Beziehung
-                                        würdig.</item>
+                                                ><p xml:lang="de"><persName ref="#p0925" type="bi">Julius Wernikes</persName> Bruder <persName
+                                                    ref="#p0654" type="bi">Friedrich August Wernicke</persName> war ebenfalls Mitglied in <persName
+                                                    ref="#p0178" type="bi">Boeckhs</persName>
+                                                <orgName ref="#g0079" type="bi">philologischen Seminar</orgName> gewesen.</p><p xml:lang="en"/><p
+                                                xml:lang="fr"/></note> was ich ihm auch schon einmahl verwie<lb break="no"/>sen habe. Doch halte ich
+                                        ihn der Nachsicht in dieser<lb/>Beziehung würdig.</item>
                                     <pb facs="00000228b.jpg" n="4"/>
                                     <label>11)</label>
                                     <item><hi rend="underline"><persName ref="#p1956" type="bi">Walter</persName></hi>, <title ref="#w05982"
@@ -618,11 +633,11 @@
                                         <label>8)</label>
                                         <item>Proponitur locus <persName ref="#p0034" type="bi">Platonis</persName>
                                             <title ref="#w06069">Charmid.</title> p.59. ed.<lb/><persName ref="#p0484" type="bi"
-                                                >Heindorf</persName>.<note resp="#sabine.seifert">Vermutlich handelt es sich um die Ausgabe von <rs
-                                                    ref="#w00068" type="bi">1802</rs> bzw. die von <rs ref="#w00190" type="bi">1805</rs>, die beide
-                                                Teil von <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek waren ("Katalog meiner
-                                                Bücher", <ref target="Boeckh_Buchkatalog#2">S. 2</ref> und <ref target="Boeckh_Buchkatalog#5">S.
-                                                    5</ref>).</note>
+                                                >Heindorf</persName>.<note resp="#sabine.seifert"><p xml:lang="de">Vermutlich handelt es sich um die
+                                                    Ausgabe von <rs ref="#w00068" type="bi">1802</rs> bzw. die von <rs ref="#w00190" type="bi"
+                                                        >1805</rs>, die beide Teil von <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek
+                                                    waren ("Katalog meiner Bücher", <ref target="Boeckh_Buchkatalog#2">S. 2</ref> und <ref
+                                                        target="Boeckh_Buchkatalog#5">S. 5</ref>).</p><p xml:lang="en"/><p xml:lang="fr"/></note>
                                             <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
                                         <lb/>
                                         <label>9)</label>
@@ -638,9 +653,9 @@
                                         <item>Disputetur de variis lectionibus <persName ref="#p0917" type="bi">Tibulli</persName><lb/><rs
                                                 ref="#w05816" type="bi">I,1,43</rs> sq. <quote>Parva seges satis est</quote> &amp;c.</item>
                                         <pb facs="00000229b.jpg" n="5"/>
-                                        <note place="margin-right" type="foliation">
+                                        <note place="margin(right)" type="foliation">
                                             <subst hand="#blue_pen">
-                                                <del rend="overwritten"><seg hand="#pencil">132</seg>
+                                                <del rend="overwritten"><add hand="#pencil">132</add>
                                                 </del>
                                                 <add place="across">132</add>
                                             </subst>
@@ -788,9 +803,11 @@
                                 >zweiten</date> etliche <title ref="#w05811">Satiren</title> des <hi rend="underline"><persName ref="#p1185" type="bi"
                                     >Juvenal</persName></hi><lb/>erklären; der <rs ref="#p0178" type="bi">Director</rs> ließ in beiden
                             Semestern<lb/>den <hi rend="underline"><persName ref="#p1056" type="bi">Thucÿdides</persName></hi> auslegen,<note
-                                resp="#sabine.seifert">Es handelt sich wahrscheinlich um <persName ref="#p1056" type="bi">Thukydides'</persName>
-                                <title ref="#w05818">Der Peloponnesische Krieg</title>.</note> wobei die Mitglieder großen<lb/>Eifer zeigten. Auch
-                            waren mehrere andere außer den<lb break="no"/>selben Zuhörer bei diesen Übungen.</p>
+                                resp="#sabine.seifert"><p xml:lang="de">Es handelt sich wahrscheinlich um <persName ref="#p1056" type="bi"
+                                        >Thukydides'</persName>
+                                    <title ref="#w05818">Der Peloponnesische Krieg</title>.</p><p xml:lang="en"/><p xml:lang="fr"/></note> wobei die
+                            Mitglieder großen<lb/>Eifer zeigten. Auch waren mehrere andere außer den<lb break="no"/>selben Zuhörer bei diesen
+                            Übungen.</p>
                     </div>
                     <div>
                         <head><label>III.</label>
@@ -874,9 +891,9 @@
                             das Verhältniß umgekehrt, und<lb/>es wäre daher, nachdem die Rückstände fast verbraucht sind,<lb/>sehr wünschenswerth,
                             wen̄ die für das <orgName ref="#g0079" type="bi">Seminar</orgName> ausgesetzte<lb/>Sum̄e etwas vermehrt werden könnte,
                             nicht sowohl in der<pb facs="00000231b.jpg" n="7"/>
-                            <note place="margin-right" type="foliation">
+                            <note place="margin(right)" type="foliation">
                                 <subst hand="#blue_pen">
-                                    <del rend="overwritten"><seg hand="#pencil">133</seg>
+                                    <del rend="overwritten"><add hand="#pencil">133</add>
                                     </del>
                                     <add place="across">133</add>
                                 </subst>
@@ -967,7 +984,7 @@
                             Umständen nach<lb/>jedesmahl möglich ist, durch das <orgName ref="#g0079" type="bi">philologische Semi<lb break="no"
                                 />nar</orgName> zu wirken.</p>
                     </div>
-                    <note hand="#brown_pen" place="margin-left"><choice>
+                    <note hand="#brown_pen" place="margin(left)"><choice>
                             <abbr>mund.</abbr>
                             <expan>mundiert</expan>
                         </choice>
@@ -982,9 +999,9 @@
                                 <expan>den</expan>
                             </choice>
                             <date when-iso="1821-10-12">12. October 1821.</date></dateline><milestone rend="vertical-rule align(center)" unit="none"
-                            /><hi rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi">philologi<lb
-                                    break="no"/>schen Seminars</orgName>.</hi><lb/><signed rend="align(right)"><hi rend="latin"><persName ref="#p0178"
-                                    type="bi">Böckh.</persName></hi></signed>
+                            /><signed rend="align(right)">der <rs ref="#p0178" type="bi">Director</rs> des <orgName ref="#g0079" type="bi"
+                                    >philologi<lb break="no"/>schen Seminars</orgName>.<lb/><hi rend="latin"><persName ref="#p0178" type="bi"
+                                    >Böckh.</persName></hi></signed>
                     </closer>
                 </div>
             </div>
