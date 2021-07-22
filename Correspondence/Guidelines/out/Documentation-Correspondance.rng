@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-07-19T09:36:42Z. .
+Schema generated from ODD source 2021-07-22T15:11:36Z. .
 TEI Edition: Version 3.6.0. Last updated on
 	16th July 2019, revision daa3cc0b9
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -2190,6 +2190,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="tei_model.global.meta">
       <choice>
          <ref name="tei_index"/>
+         <ref name="tei_listTranspose"/>
          <ref name="tei_link"/>
          <ref name="tei_linkGrp"/>
       </choice>
@@ -3400,6 +3401,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_calendarDesc"/>
          <ref name="tei_correspDesc"/>
          <ref name="tei_handNotes"/>
+         <ref name="tei_listTranspose"/>
       </choice>
    </define>
    <define name="tei_model.correspActionPart">
@@ -8943,6 +8945,21 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNu
          <empty/>
       </element>
    </define>
+   <define name="tei_listTranspose">
+      <element name="listTranspose">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a list of transpositions, each of which is indicated at some point in a document typically by means of metamarks. [11.3.4.5. Transpositions]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_desc"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tei_transpose"/>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_metamark">
       <element name="metamark">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains or describes any kind of graphic or written signal within a document the function of which is to determine how it should be read rather than forming part of the actual content of the document. [11.3.4.2. Metamarks]</a:documentation>
@@ -8968,6 +8985,19 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNu
                </list>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_transpose">
+      <element name="transpose">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes a single textual transposition as an ordered list of at least two pointers specifying the order in which the elements indicated should be re-combined. [11.3.4.5. Transpositions]</a:documentation>
+         <group>
+            <ref name="tei_ptr"/>
+            <oneOrMore>
+               <ref name="tei_ptr"/>
+            </oneOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
          <empty/>
       </element>
    </define>
