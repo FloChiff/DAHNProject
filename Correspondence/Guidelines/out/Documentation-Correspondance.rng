@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-07-22T15:11:36Z. .
+Schema generated from ODD source 2021-07-26T08:26:04Z. .
 TEI Edition: Version 3.6.0. Last updated on
 	16th July 2019, revision daa3cc0b9
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -3931,13 +3931,13 @@ Suggested values include: 1] overwritten; 2] strikethrough; 3] erasure; 4] none<
                   <oneOrMore>
                      <choice>
                         <value>overwritten</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a correction has been written over it (used with add place="across")</a:documentation>
                         <value>strikethrough</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">horizontal or vertical line(s) through a word/expression</a:documentation>
                         <value>erasure</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indication of removed word in the text (usually indistinguishable)</a:documentation>
                         <value>none</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">if the deletion is only marked by writing the correct word alongside</a:documentation>
                         <data type="token">
                            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                         </data>

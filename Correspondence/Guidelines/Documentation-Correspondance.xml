@@ -551,16 +551,16 @@
                                             letters before proceeding with the transcription; the text sounds familiar.</change>
                                     </revisionDesc>
                                 </egXML></p>
-                            <p>The <gi>revisionDesc</gi> will also be used, in our documents, to indicate the level of finalization of the
-                                transcription published on the platform of our project. We have three level of transcription : <list>
+                            <p>The <gi>revisionDesc</gi> will also be used, in our documents, to indicate the level of finalization of the encoding
+                                files published on the platform of our project. We have three level of encoding : <list>
                                     <item>raw transcription</item>
                                     <item>annotation in progress</item>
                                     <item>finalized document</item>
                                 </list> Those different steps will be indicated with an attribute <att>status</att> with a value for each of those
                                 steps : <list>
-                                    <item><val>proposed</val>: the document is simply transcribed</item>
-                                    <item><val>unfinished</val>: the transcription is done and the annotation are in progress</item>
-                                    <item><val>approved</val>: the document is fully finalized</item>
+                                    <item><val>raw_transcription</val>: the document is simply transcribed</item>
+                                    <item><val>annotation_in_progress</val>: the transcription is done and the annotation are in progress</item>
+                                    <item><val>final_publication</val>: the document is fully finalized and ready for publication</item>
                                 </list></p>
                         </div>
                     </div>
@@ -568,7 +568,7 @@
                 <div>
                     <head>The body</head>
                     <p> After <gi>teiHeader</gi>, the element <gi>text</gi> follows. It always contains the <gi>body</gi> of the text. It can
-                        sometimes also contains <gi>front</gi> and <gi>back</gi> but it’s not relevant for the egodocuments. Of <gi>body</gi>, the
+                        sometimes also contains <gi>front</gi> and <gi>back</gi> but it’s less relevant for the egodocuments. Of <gi>body</gi>, the
                         only direct sub-element is a <gi>div</gi>: <tag>div type=”transcription”</tag>. Inside of it, the actual body, i. e. the text
                         of the manuscript appears. </p>
                     <div>
@@ -626,11 +626,11 @@
                         </div>
                         <div>
                             <head>Page breaks and facsimilies: <gi>pb</gi></head>
-                            <p> Until the image link is more precise, the only element which refers to the picture is the page break element
-                                    <gi>pb</gi>. Each <gi>pb</gi> has a <att>n</att> attribute which indicates the page number. For technical reasons
-                                it is required to always start with page number 1. The differing page number of an archivist etc. must be marked up as
-                                a note. The <att>facs</att> attribute is used to link to the picture on the server. The first child element of
-                                    <tag>div type=”transcription”</tag> must be <gi>pb</gi>!</p>
+                            <p>The only element which refers to the picture is the page break element <gi>pb</gi>. Each <gi>pb</gi> has a <att>n</att>
+                                attribute which indicates the page number. For technical reasons it is required to always start with page number 1.
+                                The differing page number of an archivist etc. must be marked up as a note. The <att>facs</att> attribute is used to
+                                link to the picture on the server. The first child element of <tag>div type=”transcription”</tag> must be
+                                <gi>pb</gi>!</p>
                             <p>For example: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <body>
                                         <div type="transcription">
@@ -669,14 +669,23 @@
                             </p>
                         </div>
                         <div>
-                            <head>Other text divisions: <gi>milestone</gi></head>
-                            <p> Sometimes, an author has obviously marked a division in the text that, however, does not belong to a logical unit such
-                                as section, subsection and so on, and thus cannot be marked using <gi>div</gi> elements. In these cases, we use the
-                                generic empty element <gi>milestone</gi> with <att>unit</att>=”<val>none</val>” to mark this division. We do not
-                                encode any further assumptions on why the division is there. Often, such divisions are marked in the manuscript using
-                                a horizontal rule. In these cases, <att>rend</att>=”<val>horizontal-rule</val>” may be used with <gi>milestone</gi>.
-                                Other values of <att>rend</att> may be used as appropriate, for example "<val>curved-horizontal-rule</val>" or
-                                    "<val>vertical-rule</val>". </p>
+                            <head>Other text divisions: <gi>metamark</gi></head>
+                            <p>Sometimes, an author has obviously marked a division in the text that, however, does not belong to a logical unit such
+                                as section, subsection and so on, and thus cannot be marked using <gi>div</gi> elements. This division can have
+                                different aspects, such as simple lines between two portions of texts or little crosses. To mark this division, we use
+                                the element <gi>metamark</gi> with two attributes: <att>function</att> and <att>style</att> (occasionally, we also
+                                used the attribute <att>rend</att> to indicate the alignment of the division in the text). The value of
+                                    <att>function</att> will always be <val>separation</val>, but the <att>style</att> will often change, according to
+                                the kind of sign used to mark this division. Here are few examples of values for <att>style</att>: <list>
+                                    <item><val>crosses</val></item>
+                                    <item><val>line</val></item>
+                                    <item><val>double_line</val></item>
+                                    <item><val>dots</val></item>
+                                    <item><val>horizontal-rule</val></item>
+                                    <item><val>curved-horizontal-rule</val></item>
+                                    <item><val>vertical-rule</val></item>
+                                    <item><val>X</val></item>
+                                </list></p>
                         </div>
                     </div>
                     <div>
@@ -1078,7 +1087,7 @@
                             <p>Almost every element may use the <att>rend</att> attribute to denote its horizontal alignment. See these examples:
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples"><dateline rend="align(right)">Dresden den 6t October.
                                         23</dateline>
-                                    <stamp rend="align(center)">Litteraturarchiv Berlin.</stamp></egXML></p>
+                                        <title rend="align(center)">L'ARMÉE de DEMAIN .</title></egXML></p>
                             <p>The following values are used: <list>
                                     <item><val>align(center)</val> (centered text)</item>
                                     <item><val>align(right)</val> (right-aligned text)</item>
@@ -1131,7 +1140,7 @@
                             <head>Dates: <gi>date</gi></head>
                             <p>We place dates in a <gi>date</gi> element and add a standardized form. Two examples: <egXML
                                     xmlns="http://www.tei-c.org/ns/Examples"><date when-iso="1823-10-06">den 6t October. 23</date>
-                                    <date when-iso="1824/1825">1824-1825</date>
+                                    <date notBefore="1824" notAfter="1825">1824-1825</date>
                                 </egXML></p>
                         </div>
                         <div>
@@ -1162,11 +1171,6 @@
                                 case, it usually has only one part—the code of the language according to ISO 639. For example: <egXML
                                     xmlns="http://www.tei-c.org/ns/Examples"><foreign xml:lang="la">malus</foreign></egXML>
                             </p>
-                        </div>
-                        <div>
-                            <head>Stamps: <gi>stamp</gi></head>
-                            <p>The wording of stamps on the document can be marked up with the <gi>stamp</gi> element in the body. For example: <egXML
-                                    xmlns="http://www.tei-c.org/ns/Examples"><stamp>Litteraturarchiv Berlin.</stamp></egXML></p>
                         </div>
                     </div>
                     <div>
@@ -1605,67 +1609,34 @@
                         decided not to use all of them, but always encode dates in this format: <list>
                             <item>We always use the attribute <att>when-iso</att> for singular values and give the dates according to ISO 8601, that
                                 is to say in the following format: yyyy-mm-dd.</item>
-                            <item>For intervals, we use a slash “/”: <att>when-iso</att>=”<val>1824/1825</val>” means “from 1824 until 1825”. We never
-                                use the attributes <att>from-iso</att> nor <att>to-iso</att>.</item>
-                            <item>Intervals within the same year or month are given like this: <att>when-iso</att>=”<val>1824-07/08</val>” means “from
-                                July 1824 until August 1824”, <att>when-iso</att>=”<val>1824-07-01/04</val>” means “from 1 August 1824 until 4 August
-                                1824”, <att>when-iso</att>=”<val>1824-07-01/08-04</val>" means “from 1 July 1824 until 4 August 1824”. As a rule of
-                                thumb, writing intervals like this is only allowed when there are more fields to the left of the slash than to the
-                                right of the slash.</item>
-                            <item><p>Sometimes, there are intervals like “from (some day in) 1824 until 6 June 1825”. It is, however, not allowed to
-                                    have more fields to the right of the slash than to the left. In those cases, we adhere to the extensions of ISO
-                                    8601 given in the EDTF (Extended Date/Time Format) draft<note target="https://www.loc.gov/standards/datetime/"
-                                        >https://www.loc.gov/standards/datetime/</note>. This especially means looking at the following sections.</p>
-                                <p><hi rend="bold">Uncertain/Approximate</hi>: The characters “?” and “~” are used to mean “uncertain” and
-                                    “approximate” respectively, and in combination, i. e. “?~”, to mean “uncertain” as well as “approximate”. These
-                                    characters may occur only at the end of the date string and apply to the entire date. [...]. Exemples : <list>
-                                        <item><val>1984?</val>: uncertain; possibly the year 1984, but not definitely</item>
-                                        <item><val>2004-06?</val></item>
-                                        <item><val>2004-06-11?</val></item>
-                                        <item><val>1984~</val>: “approximately” the year 1984</item>
-                                        <item><val>1984?~</val>: the year is approximately 1984 and even that is uncertain</item>
-                                    </list></p>
-                                <p><hi rend="bold">Unspecified</hi>: The character “u” may be used in place of a digit to indicate that the value of
-                                    that digit is unspecified. It may be substituted for each of multiple digits, however for level 1, only the
-                                    right-most one or two digits may be replaced, for the following cases: <list rend="numbered">
-                                        <item>A year with one or two (rightmost) unspecified digits. </item>
-                                        <item> Year specified but month unspecified.</item>
-                                        <item>Year and month specified, day unspecified.</item>
-                                        <item>Year specified, day and month unspecified.</item>
-                                    </list> Examples:<list>
-                                        <item><val>199u</val>: some unspecified year in the 1990s.</item>
-                                        <item><val>19uu</val>: some unspecified year in the 1900s.</item>
-                                        <item><val>1999-uu</val>: some month in 1999</item>
-                                        <item><val>1999-01-uu</val>: some day in January 1999</item>
-                                        <item><val>1999-uu-uu</val>: some day in 1999</item>
-                                        <item>[...]</item>
-                                    </list></p>
-                                <p>Thus, here are some examples of tricky intervals: <list>
-                                        <item><att>when-iso</att>="<val>1824-uu-uu/1825-06-06</val>" beginning some day in 1824 and ending on 6 June
-                                            1825.</item>
-                                        <item><att>when-iso</att>="<val>1824-05-05?/1825-06-06</val>" beginning possibly on 5 May 1824, ending
-                                            definitely on 6 June 1825.</item>
-                                        <item><att>when-iso</att>="<val>1824-05-uu?/1825-06-06</val>" beginning possible in May 1024, ending
-                                            definitely on 6 June 1825.</item>
-                                    </list>
-                                    <note>Section 5.2.3 of the EDTF draft allows having more fields to the right of the slash than to the left! We,
-                                        however, do not allow this, as stated above! All gaps are filled with “uu”.</note></p></item>
-                            <item><p>Sometimes it might be impossible to give an exact date, but one can guess, e. g. from the content of a
-                                    manuscript, that for example, it cannot be written before a certain date because it refers to something that
-                                    happened on that date. For such open-end or open-start cases, we use the <att>notBefore-iso</att> and
-                                        <att>notAfter-iso</att> attributes. For cases where a date is one of a set of possible dates, we use
-                                        <att>when-iso </att>and adhere to the “One of a Set” proposal in EDTF:</p>
-                                <p><hi rend="bold">One of a Set</hi>: Square brackets wrap a single-choice list. A list is represented using commas
-                                    and double-dots where a double-dot indicates all the values between the two values it separates, inclusive. [...].
-                                    Examples: <list>
-                                        <item><val>[1667,1668,1670..1672]</val>: One of the years 1667, 1668, 1670, 1671, 1672</item>
-                                        <item>[...]</item>
-                                        <item><val>[1667,1760-12]</val>: Either the year 1667 or the month December of 1760.</item>
-                                    </list></p>
-                                <p>Here are two examples that use a combination of the the “u” and square-bracket notation: <list>
-                                        <item><att>when-iso</att>="<val>[-07uu,-06uu]</val>" 6th or 5th century BC</item>
-                                        <item><att>when-iso</att>="<val>[03uu,04uu]</val>" 3rd or 4th century AD</item>
-                                    </list></p></item>
+                            <item>When the only date element provided is a year, we will not use <att>when-iso</att> but simply <att>when</att>. We
+                                can then have two cases for the use of <att>when</att>. When the year is BC or in early century and it is not
+                                completely sure, the date will also have content to indicate approximation. When it is in more recent century, we will
+                                only have the date with the attribute.
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                                <date when="0001">ca. 1 CE</date>
+                                <date when="1622"/>
+                            </egXML></item>
+                            <item>For intervals, we use the attribute <att>notBefore</att> and <att>notAfter</att> or their more specific version
+                                    <att>notBefore-iso</att> and <att>notAfter-iso</att>. It will depends on the accuracy of the dates. When the
+                                interval is two dates in yyyy-mm-dd format, we use the iso form of the attribute and with other cases, we use the
+                                plain format. In any of those cases, we will always have content inside the tag to write exactly what the intervals
+                                means, in order to display the correct information in the web interface. For example:
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                                    <date notAfter="-0420" notBefore="-0430">between 430 and 420 BCE</date>
+                                    <date notAfter="0100" notBefore="0001">2nd century CE</date>
+                                    <date notBefore="1824" notAfter="1825">1824-1825</date>
+                            </egXML></item>
+                            <item>Sometimes, there are also intervals because the encoder is uncertain of the exact date. In those cases, we will used
+                                the <att>notBefore</att> and <att>notAfter</att> attribute or the iso format if the uncertainty is between two exact dates.
+                                The uncertainty or approximation will be established with the content of the tag, by using words like "or, "probably"
+                                or "around". For example:
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                                <date notAfter="-0396" notBefore="-0399">probably between 399 and 396 BCE</date>
+                                <date notAfter-iso="1799-08-15" notBefore-iso="1799-08-10">10 or 15 August 1799</date>
+                                <date notAfter="1805" notBefore="1804">1804 or 1805</date>
+                                <date notAfter="1525-01" notBefore="1524-12">December 1524 or January 1525</date>
+                            </egXML></item>
                             <item><p>Dates may also refer to a different calendar, mainly to the French Revolutionary calendar. The value of
                                         <att>when-iso</att> always has to be in the form of the Gregorian calendar. The <att>calendar</att> attribute
                                     is used to denote that the date refers to another calendar. We use the value <val>“french-rev-cal”</val> for the
@@ -1968,10 +1939,18 @@
                         <attList>
                             <attDef ident="rend" mode="change">
                                 <valList type="semi" mode="replace">
-                                    <valItem ident="overwritten"/>
-                                    <valItem ident="strikethrough"/>
-                                    <valItem ident="erasure"/>
-                                    <valItem ident="none"/>
+                                    <valItem ident="overwritten">
+                                        <desc>a correction has been written over it (used with add place="across")</desc>
+                                    </valItem>
+                                    <valItem ident="strikethrough">
+                                        <desc>horizontal or vertical line(s) through a word/expression</desc>
+                                    </valItem>
+                                    <valItem ident="erasure">
+                                        <desc>indication of removed word in the text (usually indistinguishable)</desc>
+                                    </valItem>
+                                    <valItem ident="none">
+                                        <desc>if the deletion is only marked by writing the correct word alongside</desc>
+                                    </valItem>
                                 </valList>
                             </attDef>
                         </attList>
