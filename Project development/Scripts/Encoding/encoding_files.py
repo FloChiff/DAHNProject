@@ -256,7 +256,7 @@ with open(sys.argv[1], 'r', encoding='UTF-8') as csvfile:
                                 <language ident="fr"/>
                             </langUsage>
                         </profileDesc>
-                        <revisionDesc status="proposed">
+                        <revisionDesc status="raw_transcription">
                             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
                         </revisionDesc>
                     </teiHeader>
