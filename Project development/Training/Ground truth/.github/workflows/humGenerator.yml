@@ -20,7 +20,7 @@ jobs:
         pip install htr-united-metadata-generator
     - name: Run Report
       run: |
-        humGenerator --group **/alto/*.xml --github-envs
+        humGenerator --group **/page/*.xml --github-envs
         cat envs.txt >> $GITHUB_ENV
     - name: Create Awesome Badge
       uses: Schneegans/dynamic-badges-action@v1.1.0
