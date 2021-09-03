@@ -1,5 +1,3 @@
-![Lines Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/FloChiff/896e37370f6345ee2183c7dd9daefd23/raw/lines_dahn.json) ![Chars Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/FloChiff/896e37370f6345ee2183c7dd9daefd23/raw/chars_dahn.json) ![Region Badges](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/FloChiff/896e37370f6345ee2183c7dd9daefd23/raw/regions_dahn.json)
-
 # DAHN Corpus
 ## Description
 Ground Truth dataset for French 20th typewritten OCR
