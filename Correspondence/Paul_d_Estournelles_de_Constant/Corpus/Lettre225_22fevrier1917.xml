@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,56 +227,75 @@
                 <head rend="center underline">LETTRE N° 225.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>VENISE</placeName>, le <date when-iso="1917-02-22">22 Février 1917</date>.</dateline>
-                    <title rend="align(center) underline">MA VISITE AU FRONT ITALIEN .</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <dateline rend="align(right)"><placeName ref="#l0010" type="pec">VENISE</placeName>, le <date when-iso="1917-02-22">22 Février
+                            1917</date>.</dateline>
+                    <title rend="align(center) underline">MA VISITE AU FRONT <placeName ref="#l0254" type="pec">ITALIE</placeName>N .</title>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
-                <p rend="indent"> Voici quelques impressions personnelles de la<lb/> visite que je viens de faire, avec plusieurs de mes collègues
-                    du<lb/> Parlement français, au front italien, viâ Turin, Venise, Udine.<lb/> Je les résume en ces mots ; confiance, organisation ;
-                    grandes ressour-<lb break="no"/>ces morales et matérielles ; succès final assuré.</p>
-                <p rend="indent">L'Italie n'a pas voulu la guerre ; elle a tout<lb/> fait, comme nous, pour la prévenir. La guerre lui a été
-                    imposée:<lb/> elle est maintenant, pour elle, une question de liberté ou de<lb/> servitude, de vie ou de mort. Ce n'est pas
-                    l'esprit de conquête<lb/> qui a poussé l'Italie à la guerre, c'est la nécessité de défendre<lb/> le Droit, sous peine de répudier
-                    son passé et de renoncer à son<lb/> avenir. Devant l'invasion de la Belgique et de la France par<lb/> l'Allemagne, l'Italie n'a
-                    pas eu à choisir le parti à prendre :<lb/> elle a obéi à sa tradition, à sa mi<unclear reason="faded">s</unclear>sion. Ses alliés
-                    d'alors ont<lb/> commis la faute gro<del rend="overwritten"><gap extent="1 character"/></del>ssière de la contraindre d'opter
-                    entre eux<lb/> ou elle-même. Je l'ai dit, en apportant à la Municipalité de<lb/> Venise le salut de notre pays, l'alliance de
-                    l'Italie avec les<lb/> deux empires du Centre impliquait pour elle la paix. L'Italie a<lb/> été la première des grandes puissances
-                    Européennes qui ait offi-<lb break="no"/>ciellement préconisé, non pas seulement le respect, le désir, mais<lb/>
-                    <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> Organisation de la paix. Son traité de 1898 avec la
-                    République<lb/> Argentine f<del> </del>ut une innovation retentissante ; il a servi de<lb/> modèle à la première conférence de La
-                    Haye. Là, que s'est-il<lb/> passé ? L'Allemagne est arrivée, comme on sait, hostile à toute<lb/> organisation de justice
-                    internationale. Elle a, non sans quelque<lb/> peine, associé à cette hostilité sa voisine et alliée l'Autriche ;<lb/> mais elle
-                    n'a pas pu convaincre l'Italie. Ce fait n'est pas assez<lb/> connu. Je n'oublierai jamais, pour ma part, la courageuse
-                    attitude<lb/> du premier délégué de l'Italie à la Conférence, mon ami le Comte<lb/> NIGRA ; elle a été nettement en opposition
-                    avec celle des délé-<lb break="no"/>gués allemands. A la seconde Conférence, même désaccord. Les<lb/> chiffres le prouvent. Dans
-                    la séance du 2 Octobre 1907, la<lb/> Conférence s'est divisés en deux partis. D'un côté, une énorme<lb/> majorité représentant
-                    plus des trois quarts des peuples de la<lb/> terre, - 35 puissances, - 35 voix<del rend="overwritten">(</del> sur 40 suffrages
-                    exprimés et<lb/> quatre abstentions ) en faveur de la justice internationale ; - de<lb/> l'autre, une infime minorité, "dont on
-                    pouvait compter les membres<lb/> avec les doigts d'une seule main", 5 voix, celle de l'Allemagne<lb/> en tête avec l'Autriche, la
-                    Grèce, la Turquie. L'Italie s'est<lb/> placée au premier rang de la majorité, avec la France et ses alliés<lb/> d'aujourd'hui
-                    contre l'Allemagne. Nul n'a donc pu être surpris<lb/> quand elle a répondu hautement à la déclaration allemande de la<lb/> guerre
-                    actuelle, par une déclaration de neutralité. Cette déclat-<lb break="no"/>ration a eu deux effets. Elle fut d'abord pour
-                    l'Allemagne un<lb/> coup terrible, s'ajoutant à la résistance belge et à la protes-<lb break="no"/>tation armée de l'Angleterre ;
-                    elle fut plus qu'une rupture, un<lb/>
-                    <pb facs=".JPG" n="3"/><note place="top" type="foliation">- 3 -</note> désaveu ; "j'ai été votre alliée, déclarait l'Italie ; je
-                    ne serai<lb/> pas votre complice !" Ce fut aussi, pour la France, un secours<lb/> inappréciable qui nous permit de concentrer
-                    toutes nos forces<lb/> pour arreter l'invasion allemande sur la Marne.</p>
-                <p rend="indent">L'Italie, toutefois, ne pouvait pas s'en tenir à<lb/> la neutralité. Là encore l'inqualifiable système de
-                    terrorisation<lb/> et d'espionnage du militarisme allemand devait la contraindre à se<lb/> prononcer pour ou contre elle-même.
-                    L'Italie ne demandait qu'à<lb/> travailler en paix au développement de ses magnifiques ressources.<lb/> Fortifier, dans son
-                    respect du passé, ses germes d'avenir, telle<lb/> était sa mission, son voeu. Et voilà qu'elle est arrachée à ce<lb/> double
-                    devoir par le spectacle de l'universelle destruction, sys-<lb break="no"/>tématiquement poursuivie par l'Etat-Major allemand, en
-                    Belgique,<lb/> en France, partout où il a pu s'imposer. Alors survient le grand<lb/> frémissement de l'âme italienne éveillée à
-                    l'horreur de la guerre<lb/> déchaînée contre son idéal. Alors ce mouvement sublime de protes-<lb break="no"/>tation magnifiquement
-                    interprété et stimulé par le poête d'Annunzio.<lb/> L'Italie ne veut pas, ne peut pas rester spectatrice de cette<lb/> guerre.
-                    Elle y prend part.</p>
-                <p rend="indent">Comment ? Interrogez Venise. J'ai vu la douce<lb/> Venise de notre jeunesse, plus belle, plus touchante que
-                    jamais,<lb/> plus adorable, mais si triste ; pendant des siècles et des siècles<lb/> elle s'est épanouie, fleur du commerce,
-                    patrie de l'art et de<lb/> l'amour. Elle avait survécu à la domination autrichienne ; elle<lb/> était libre ; la civilisation
-                    l'avait adoptée come la merveille<lb/> des merveilles, la perle du ciel et de la mer, - l'oasis ouverte<lb/>
+                <p rend="indent"> Voici quelques impressions personnelles de la<lb/> visite que je viens de faire, avec plusieurs de mes collègues du<lb/>
+                    <orgName ref="#g0050" type="pec">Parlement français</orgName>, au front italien, viâ <placeName ref="#l0524" type="pec"
+                        >Turin</placeName>, <placeName ref="#l0010" type="pec">Venise</placeName>, <placeName ref="#l0526" type="pec"
+                        >Udine</placeName>.<lb/> Je les résume en ces mots ; confiance, organisation ; grandes ressour-<lb break="no"/>ces morales et
+                    matérielles ; succès final assuré.</p>
+                <p rend="indent"><placeName ref="#l0254" type="pec">L'Italie</placeName> n'a pas voulu la guerre ; elle a tout<lb/> fait, comme nous,
+                    pour la prévenir. La guerre lui a été imposée:<lb/> elle est maintenant, pour elle, une question de liberté ou de<lb/> servitude,
+                    de vie ou de mort. Ce n'est pas l'esprit de conquête<lb/> qui a poussé <placeName ref="#l0254" type="pec">l'Italie</placeName> à
+                    la guerre, c'est la nécessité de défendre<lb/> le Droit, sous peine de répudier son passé et de renoncer à son<lb/> avenir. Devant
+                    l'invasion de la <placeName ref="#l0073" type="pec">Belgique</placeName> et de la <placeName ref="#l0207" type="pec"
+                        >France</placeName> par<lb/> l'<placeName ref="#l0028" type="pec">Allemagne</placeName>, <placeName ref="#l0254" type="pec"
+                        >l'Italie</placeName> n'a pas eu à choisir le parti à prendre :<lb/> elle a obéi à sa tradition, à sa mi<unclear
+                        reason="faded">s</unclear>sion. Ses alliés d'alors ont<lb/> commis la faute gro<del rend="overwritten"><gap
+                            extent="1 character"/></del>ssière de la contraindre d'opter entre eux<lb/> ou elle-même. Je l'ai dit, en apportant à la
+                    Municipalité de<lb/>
+                    <placeName ref="#l0010" type="pec">Venise</placeName> le salut de notre pays, l'alliance de <placeName ref="#l0254" type="pec"
+                        >l'Italie</placeName> avec les<lb/> deux empires du Centre impliquait pour elle la paix. <placeName ref="#l0254" type="pec"
+                        >L'Italie</placeName> a<lb/> été la première des grandes puissances Européennes qui ait offi-<lb break="no"/>ciellement
+                    préconisé, non pas seulement le respect, le désir, mais<lb/>
+                    <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> Organisation de la paix. Son traité de 1898 avec la République<lb/>
+                    <placeName ref="#l0041" type="pec">Argentine</placeName> f<del> </del>ut une innovation retentissante ; il a servi de<lb/> modèle
+                    à la première conférence de La <placeName ref="#l0227" type="pec">Haye</placeName>. Là, que s'est-il<lb/> passé ? <placeName
+                        ref="#l0028" type="pec">L'Allemagne</placeName> est arrivée, comme on sait, hostile à toute<lb/> organisation de justice
+                    internationale. Elle a, non sans quelque<lb/> peine, associé à cette hostilité sa voisine et alliée l'<placeName ref="#l0052"
+                        type="pec">Autriche</placeName> ;<lb/> mais elle n'a pas pu convaincre <placeName ref="#l0254" type="pec"
+                    >l'Italie</placeName>. Ce fait n'est pas assez<lb/> connu. Je n'oublierai jamais, pour ma part, la courageuse attitude<lb/> du
+                    premier délégué de <placeName ref="#l0254" type="pec">l'Italie</placeName> à la Conférence, mon ami le Comte<lb/> NIGRA ; elle a
+                    été nettement en opposition avec celle des délé-<lb break="no"/>gués allemands. A la seconde Conférence, même désaccord. Les<lb/>
+                    chiffres le prouvent. Dans la séance du 2 Octobre 1907, la<lb/> Conférence s'est divisés en deux partis. D'un côté, une
+                    énorme<lb/> majorité représentant plus des trois quarts des peuples de la<lb/> terre, - 35 puissances, - 35 voix<del
+                        rend="overwritten">(</del> sur 40 suffrages exprimés et<lb/> quatre abstentions ) en faveur de la justice internationale ; -
+                    de<lb/> l'autre, une infime minorité, "dont on pouvait compter les membres<lb/> avec les doigts d'une seule main", 5 voix, celle
+                    de l'<placeName ref="#l0028" type="pec">Allemagne</placeName><lb/> en tête avec l'<placeName ref="#l0052" type="pec"
+                        >Autriche</placeName>, la <placeName ref="#l0220" type="pec">Grèce</placeName>, la <placeName ref="#l0525" type="pec"
+                        >Turquie</placeName>. <placeName ref="#l0254" type="pec">L'Italie</placeName> s'est<lb/> placée au premier rang de la
+                    majorité, avec la <placeName ref="#l0207" type="pec">France</placeName> et ses alliés<lb/> d'aujourd'hui contre l'<placeName
+                        ref="#l0028" type="pec">Allemagne</placeName>. Nul n'a donc pu être surpris<lb/> quand elle a répondu hautement à la
+                    déclaration allemande de la<lb/> guerre actuelle, par une déclaration de neutralité. Cette déclat-<lb break="no"/>ration a eu deux
+                    effets. Elle fut d'abord pour l'<placeName ref="#l0028" type="pec">Allemagne</placeName> un<lb/> coup terrible, s'ajoutant à la
+                    résistance belge et à la protes-<lb break="no"/>tation armée de l'<placeName ref="#l0037" type="pec">Angleterre</placeName> ; elle
+                    fut plus qu'une rupture, un<lb/>
+                    <pb facs=".JPG" n="3"/><note place="top" type="foliation">- 3 -</note> désaveu ; "j'ai été votre alliée, déclarait <placeName
+                        ref="#l0254" type="pec">l'Italie</placeName> ; je ne serai<lb/> pas votre complice !" Ce fut aussi, pour la <placeName
+                        ref="#l0207" type="pec">France</placeName>, un secours<lb/> inappréciable qui nous permit de concentrer toutes nos forces<lb/>
+                    pour arreter l'invasion allemande sur <placeName ref="#l0305" type="pec">la Marne</placeName>.</p>
+                <p rend="indent"><placeName ref="#l0254" type="pec">L'Italie</placeName>, toutefois, ne pouvait pas s'en tenir à<lb/> la neutralité.
+                    Là encore l'inqualifiable système de terrorisation<lb/> et d'espionnage du militarisme allemand devait la contraindre à se<lb/>
+                    prononcer pour ou contre elle-même. <placeName ref="#l0254" type="pec">L'Italie</placeName> ne demandait qu'à<lb/> travailler en
+                    paix au développement de ses magnifiques ressources.<lb/> Fortifier, dans son respect du passé, ses germes d'avenir, telle<lb/>
+                    était sa mission, son voeu. Et voilà qu'elle est arrachée à ce<lb/> double devoir par le spectacle de l'universelle destruction,
+                        sys-<lb break="no"/>tématiquement poursuivie par l'<orgName ref="#g0035" type="pec">Etat-Major allemand</orgName>, en
+                        <placeName ref="#l0073" type="pec">Belgique</placeName>,<lb/> en <placeName ref="#l0207" type="pec">France</placeName>,
+                    partout où il a pu s'imposer. Alors survient le grand<lb/> frémissement de l'âme italienne éveillée à l'horreur de la guerre<lb/>
+                    déchaînée contre son idéal. Alors ce mouvement sublime de protes-<lb break="no"/>tation magnifiquement interprété et stimulé par
+                    le poête <persName ref="#p0164" type="pec">d'Annunzio</persName>.<lb/>
+                    <placeName ref="#l0254" type="pec">L'Italie</placeName> ne veut pas, ne peut pas rester spectatrice de cette<lb/> guerre. Elle y
+                    prend part.</p>
+                <p rend="indent">Comment ? Interrogez <placeName ref="#l0010" type="pec">Venise</placeName>. J'ai vu la douce<lb/>
+                    <placeName ref="#l0010" type="pec">Venise</placeName> de notre jeunesse, plus belle, plus touchante que jamais,<lb/> plus
+                    adorable, mais si triste ; pendant des siècles et des siècles<lb/> elle s'est épanouie, fleur du commerce, patrie de l'art et
+                    de<lb/> l'amour. Elle avait survécu à la domination autrichienne ; elle<lb/> était libre ; la civilisation l'avait adoptée come la
+                    merveille<lb/> des merveilles, la perle du ciel et de la mer, - l'oasis ouverte<lb/>
                     <pb facs=".JPG" n="4"/><note place="top" type="foliation">- 4 -</note> au pélérinage de l'imagination du monde entier. J'ai eu la
                     joie<lb/> de la survoler, en <subst>
                         <del rend="strikethrough">aéroplane</del>
@@ -286,64 +306,70 @@
                         <add hand="#annotation" place="above">d'aéroplanes</add>
                     </subst> venus de tous les pays pour<lb/> lui jeter des roses, la remercier d'avoir conservé au monde tant<lb/> de charme et tant
                     de beauté..... Mais non ; les Austro-allemands<lb/> ont profité des nuits les plus sombres pour lui jeter des obus<lb/>
-                    incendiaires, pour essuyer, heureusement en vain, de deshonorer<lb/> ou d'anéantir sa basilique de Saint-Marc, son palais des
-                    Doges, <lb/> son palais ducal, ses musées, ses bibliothèques ; j'ai visité<lb/> les ruines qui sont la marque sacrilège du Grand
-                    Etat-Major austro-<lb break="no"/>allemand. J'ai vu les Eglises. Jusqu'alors pieusement conservées<lb/> comme des trésors,
-                    éventrées, j'ai vu les fresques de Tiepolo<lb/> réduites en poussière. Sacrilège stupide ; inutile ? Non. Cette<lb/> population si
-                    douce mais si libre s'est révoltée. Elle, qui n'a<lb/> rien à gagner à la guerre. eet aujourd'hui la plus résolue à<lb/> délivrer
-                    le monde de la menace qui s'est abattue sur elle. Et<lb/> ainsi s'expliquent bien d'autres signes de l'indépendance de l'âme<lb/>
-                    italienne. A mesure que nous approchons du front, c'est-à-dlire<lb/> des provinces italiennes restées, par traité, sous le joug
-                        autri-<lb break="no"/>chien, alors revit le souvenir de l'ancienne domination détestée,<lb/> alors apparaît la volonté de ne
-                    pas la laisser triompher de nou-<lb break="no"/>veau. Alors <subst>
+                    incendiaires, pour essuyer, heureusement en vain, de deshonorer<lb/> ou d'anéantir sa basilique de <placeName ref="#l0447"
+                        type="pec">Saint-Marc</placeName>, son palais des Doges, <lb/> son palais ducal, ses musées, ses bibliothèques ; j'ai
+                    visité<lb/> les ruines qui sont la marque sacrilège du Grand Etat-Major austro-<lb break="no"/>allemand. J'ai vu les Eglises.
+                    Jusqu'alors pieusement conservées<lb/> comme des trésors, éventrées, j'ai vu les fresques de <persName ref="#p0617" type="pec"
+                        >Tiepolo</persName><lb/> réduites en poussière. Sacrilège stupide ; inutile ? Non. Cette<lb/> population si douce mais si
+                    libre s'est révoltée. Elle, qui n'a<lb/> rien à gagner à la guerre. eet aujourd'hui la plus résolue à<lb/> délivrer le monde de la
+                    menace qui s'est abattue sur elle. Et<lb/> ainsi s'expliquent bien d'autres signes de l'indépendance de l'âme<lb/> italienne. A
+                    mesure que nous approchons du front, c'est-à-dlire<lb/> des provinces italiennes restées, par traité, sous le joug autri-<lb
+                        break="no"/>chien, alors revit le souvenir de l'ancienne domination détestée,<lb/> alors apparaît la volonté de ne pas la
+                    laisser triompher de nou-<lb break="no"/>veau. Alors <subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add hand="#annotation" place="across">s</add>
                     </subst>e voient les lignes de chemins de fer, les canaux,<lb/> les fortifications prévues pour la défense. Ainsi s'explique<lb/>
-                    l'enthousiasme des populations d'Udine à notre arrivée ; ainsi la<lb/>
+                    l'enthousiasme des populations d'<placeName ref="#l0526" type="pec">Udine</placeName> à notre arrivée ; ainsi la<lb/>
                     <pb facs=".JPG" n="5"/><note place="top" type="foliation">- 5 -</note> belle tenue des troupes que nous avons vues sur le front
-                    de<lb/> l'Izonso, du Carso, des <subst>
+                    de<lb/> l'<persName ref="#p0330" type="pec">Izonso</persName>, du Carso, des <subst>
                         <del rend="strikethrough"><gap extent="3 words"/></del>
                         <add hand="#annotation" place="above"><gap extent="2 words"/></add>
                     </subst>. Et pourtant les sacri-<lb break="no"/>fices ont été grands ; plus grands qu'on ne croit. C'est par<lb/> vingtaine<add
-                        hand="#annotation" place="inline">s</add> de mille que sont tombés les jeunes soldats italiens<lb/> sur le mont Sabotino, sur
-                    les escarpements <add hand="#annotation" place="above">de</add> Podgora, à St-Martino<lb/> del Carso. Ainsi s'explique la présence
-                    continuelle du Roi parmi<lb/> ses troupes, C'est pourtant lui qui pourrait dire à juste titre,<lb/> en assistant à ces massacres:
-                    "je n'ai pas voulu cela !" C'est<lb/> lui qui avait posé les assises de cet institut international de<lb/> l'agriculture qui fut
-                    une étape sur la voie de l'organisation<lb/> positive de la paix. Aujourd'hui c'est lui qui ne cesse de com-<lb break="no"
-                    />muniquer à tous la feu Sacré le la défenee nationale. On le<lb/> rencontre sur tous les points du front; il est partout, et
-                    si<lb/> simplement ! Nul ne l'accusera de venir en spectateur ou pour se<lb/> montrer. Il est là; il prend part à la guerre. Et,
-                    quand j'en-<lb break="no"/>tends dire par certains que sa place serait mieux à Rome, j'en<lb/> doute. Il est allé au point où bat
-                    le cœeur de la nation, face<lb/> à l'ennemi d'hier, l'ennemi de toujours ; la domination autrichienne.</p>
+                        hand="#annotation" place="inline">s</add> de mille que sont tombés les jeunes soldats italiens<lb/> sur le mont <placeName
+                        ref="#l0434" type="pec">Sabotino</placeName>, sur les escarpements <add hand="#annotation" place="above">de</add>
+                    <placeName ref="#l0399" type="pec">Podgora</placeName>, à <placeName ref="#l0486" type="pec">St-Martino</placeName><lb/> del
+                    Carso. Ainsi s'explique la présence continuelle du Roi parmi<lb/> ses troupes, C'est pourtant lui qui pourrait dire à juste
+                    titre,<lb/> en assistant à ces massacres: "je n'ai pas voulu cela !" C'est<lb/> lui qui avait posé les assises de cet institut
+                    international de<lb/> l'agriculture qui fut une étape sur la voie de l'organisation<lb/> positive de la paix. Aujourd'hui c'est
+                    lui qui ne cesse de com-<lb break="no"/>muniquer à tous la feu Sacré le la défenee nationale. On le<lb/> rencontre sur tous les
+                    points du front; il est partout, et si<lb/> simplement ! Nul ne l'accusera de venir en spectateur ou pour se<lb/> montrer. Il est
+                    là; il prend part à la guerre. Et, quand j'en-<lb break="no"/>tends dire par certains que sa place serait mieux à <placeName
+                        ref="#l0422" type="pec">Rome</placeName>, j'en<lb/> doute. Il est allé au point où bat le cœeur de la nation, face<lb/> à
+                    l'ennemi d'hier, l'ennemi de toujours ; la domination autrichienne.</p>
                 <p rend="indent">Le mot, du<add> </add>matin au soir, chaque jour, à l'impro-<lb break="no"/>viste, tantôt ici, tantôt là, visite les
                     cantonnements, les<lb/> dépôts, les tranchées, les batteries, les magasins. Nous avons fait,<lb/> nécessairement en hâte,
                     quelques-unes de ces visites. L'ordre<lb/> est partout. Ordre admirable. Ici tout est à deux fins ; pour la<lb/> guerre et pour
                     l'après-guerre. Rien n'est perdu. Ce mot:<lb/> "gaspillage", que nous connaissons, n'a pas ici d'embloi. La<lb/> préoccupation
                     générale, unanime, celle des chefs, de leurs officiers<lb/>
                     <pb facs=".JPG" n="6"/><note place="top" type="foliation">- 6 -</note> et de leurs hommes, celle de chacun est de ménager la
-                    dépense, -<lb/>aggravée d'ailleurs par le change si défavorable à l'Italie <add hand="#annotation" place="margin">et par le
-                        prix</add><lb/><add hand="#annotation" place="above">énorme de certains produits importés tels que le charbon.</add> L'argent
-                    étant rare, chacun profite de cette infériorité. - loin<lb/> de se décourager, - pour tirer le meilleur parti des <add
-                        hand="#annotation" place="above">infinies</add> ressources du<lb/> pays. - Nous avons visité des usines où tout est conçu
-                    pour<lb/> aujourd'hui et pour demain. sur le front, les moindres déchets<lb/> sont ramassés, centralisés, utilisés ; jusqu'aux os
-                    de la viande<lb/> de boucherie dont envoyés dans les usines de produits chimiques.<lb/> Pas de déchets. Telle pourrait être la
-                    devise de l'armée italien-<lb break="no"/>ne. Je dirai<add hand="#annotation" place="inline">,</add> un jour. <del
-                        rend="strikethrough">ailleurs</del> les rigoureuses précautions pri-<lb break="no"/>ses, avec quel succès, pour sauvegarder la
-                    santé des hommes, de<lb/> la race. Il faut que le lendemain de la guerre soit la réparation<lb/> et non pas l'aggravation de la
-                    guerre. Voilà le programme.</p>
+                    dépense, -<lb/>aggravée d'ailleurs par le change si défavorable à <placeName ref="#l0254" type="pec">l'Italie</placeName>
+                    <add hand="#annotation" place="margin">et par le prix</add><lb/><add hand="#annotation" place="above">énorme de certains produits
+                        importés tels que le charbon.</add> L'argent étant rare, chacun profite de cette infériorité. - loin<lb/> de se décourager, -
+                    pour tirer le meilleur parti des <add hand="#annotation" place="above">infinies</add> ressources du<lb/> pays. - Nous avons visité
+                    des usines où tout est conçu pour<lb/> aujourd'hui et pour demain. sur le front, les moindres déchets<lb/> sont ramassés,
+                    centralisés, utilisés ; jusqu'aux os de la viande<lb/> de boucherie dont envoyés dans les usines de produits chimiques.<lb/> Pas
+                    de déchets. Telle pourrait être la devise de l'armée italien-<lb break="no"/>ne. Je dirai<add hand="#annotation" place="inline"
+                        >,</add> un jour. <del rend="strikethrough">ailleurs</del> les rigoureuses précautions pri-<lb break="no"/>ses, avec quel
+                    succès, pour sauvegarder la santé des hommes, de<lb/> la race. Il faut que le lendemain de la guerre soit la réparation<lb/> et
+                    non pas l'aggravation de la guerre. Voilà le programme.</p>
                 <p rend="indent">Mon sentiment très net est que le militarisne alle-<lb break="no"/>mand a vécu. Il peut faire, certes, encore
                     beaucoup <del rend="strikethrough">é</del>de mal; mais<lb/> il est perdu. Loin de terroriser, il a <del rend="strikethrough"
                         >éveillé</del> galvanisé l'esprit<lb/> public par son œuvre de barbare destruction. C'est à qui, parmi<lb/> des victimes,
                     donnera sa vie pour contribuer à abattre le monstre<lb/> l'instinct de Conservation est <del rend="strikethrough"
                         >insensiblement</del> devenu l'héroïsme général.<lb/> Ajoutons à cette inépuisable ressource d'ordre moral<lb/> des ressources
-                        <del rend="strikethrough"><gap extent="few characters"/></del> matérielles qui m'ont étonné. Je connais<lb/> bien la France et
-                    l'Angleterre. Je fais la part des jérémi<subst>
+                        <del rend="strikethrough"><gap extent="few characters"/></del> matérielles qui m'ont étonné. Je connais<lb/> bien la
+                        <placeName ref="#l0207" type="pec">France</placeName> et l'<placeName ref="#l0037" type="pec">Angleterre</placeName>. Je fais
+                    la part des jérémi<subst>
                         <del rend="overwritten">d</del>
                         <add place="across">a</add>
                     </subst>des<lb/> de ceux des non-combattants pour lesquels la privation d'un mor-<lb break="no"/>ceau de sucre est une
-                    catastrophe, mais, en fait, la France, à<lb/> l'exception de nos malheureuses provinces envahies, et l'Angleterre<lb/>
+                    catastrophe, mais, en fait, la <placeName ref="#l0207" type="pec">France</placeName>, à<lb/> l'exception de nos malheureuses
+                    provinces envahies, et l'<placeName ref="#l0037" type="pec">Angleterre</placeName><lb/>
                     <pb facs=".JPG" n="7"/><note place="top" type="foliation">- 7 -</note> mangent bien, mangent très bien, mangent trop bien. J'ai
                     fait<lb/> une collection des menus que j'ai vu servir un peu partout, de-<lb break="no"/>puis la guerre, du Nord au Sud, de
                     l'Ouest à l'Est, C'était et<lb/> c'est encore partout l'abondance, quoiqu'on en dise, la surabon-<lb break="no"/>dance. Or, il en
-                    est de même en Italie. Prenez le<add hand="#annotation" place="inline">s</add> menu<add hand="#annotation" place="inline">s</add>
+                    est de même en <placeName ref="#l0254" type="pec">Italie</placeName>. Prenez le<add hand="#annotation" place="inline">s</add>
+                        menu<add hand="#annotation" place="inline">s</add>
                     <add hand="#annotation" place="above">ci-joints</add> de n'im-<lb break="no"/> porte quel restaurant ; vous y trouverez, à bas
                     prix, vingt fois<lb/> plus de plats qu'il n'est possible à un homme bien portant de<lb/> manger ; mais ces noms eux-mêmes ne
                     diront rien ; c'est l'énormité<lb/> de chacune des portions servies qui est signe de surabondance.</p>
@@ -362,27 +388,32 @@
                     des riz succulents, des risottos indéfi-<lb break="no"/>niment variés, qu'on <subst>
                         <del rend="strikethrough">m‘offrait</del>
                         <add hand="#annotation" place="above">apportait</add>
-                    </subst> pour commencer. .... Instinctivement<lb/> j'ai évoqué tout ce que mange, en ce moment, l'Angleterre, tout<lb/> ce que
-                    mange la France et tout ce que mange l'Italie, sans parler<lb/> de la Russie, autour de l'Allemagne affamée. Il est
-                    impossible<lb/> que l'Allemagne résiste à cette différence de régime.</p>
+                    </subst> pour commencer. .... Instinctivement<lb/> j'ai évoqué tout ce que mange, en ce moment, l'<placeName ref="#l0037"
+                        type="pec">Angleterre</placeName>, tout<lb/> ce que mange la <placeName ref="#l0207" type="pec">France</placeName> et tout ce
+                    que mange <placeName ref="#l0254" type="pec">l'Italie</placeName>, sans parler<lb/> de la <placeName ref="#l0432" type="pec"
+                        >Russie</placeName>, autour de l'<placeName ref="#l0028" type="pec">Allemagne</placeName> affamée. Il est impossible<lb/> que
+                        l'<placeName ref="#l0028" type="pec">Allemagne</placeName> résiste à cette différence de régime.</p>
                 <p rend="indent">Mais je n'exagérerai pas l'importance extrême pour<lb/> tant, de cette différence ; l'essentiel est l'incompatibilité
-                        mo-<lb break="no"/>rale que l'Allemagne et ses alliés ont établie entre eux et le<lb/> reste de la civilisation.</p>
-                <p rend="indent"><pb facs=".JPG" n="8"/><note place="top" type="foliation">- 8 -</note> L'Italie, pour ne parler que d'elle, a
-                    littéralement<lb/> été éveillée par la découverte de la menace allemande ; elle est<lb/> unanime à vouloir la repousser ; elle
-                    veut qu'une telle guerre ne<lb/> puisse pas recommencer. Ce que nous, Français, devons particu-<lb break="no"/>lièrement remarquer
-                    dans ce réveil, c'est que l'Italie, avec sa<lb/> grande finesse, a compris qu'il<del rend="strikethrough">s</del> ne lui suffisait
-                    pas de terminer<lb/> la guerre par la victoire ; elle veut, en outre, s'assurer le<lb/> lendemain de la guerre par le travail ;
-                    rien ne la détournera de<lb/> ce double but.</p>
-                <p rend="indent">L'Allemagne, aveuglée par la domination militaire<lb/> prussienne, a cru grossièrement qu'elle tenait le monde à sa
-                    merci ;<lb/> or, c'est la résistance morale et matérielle du monde qui va triom-<lb break="no"/>pher. Je voudrais que beaucoup de
-                    mes compatriotes et de nos<lb/> alliés pûssent venir se convaincre ici de cette vérité.</p>
+                        mo-<lb break="no"/>rale que l'<placeName ref="#l0028" type="pec">Allemagne</placeName> et ses alliés ont établie entre eux et
+                    le<lb/> reste de la civilisation.</p>
+                <p rend="indent"><pb facs=".JPG" n="8"/><note place="top" type="foliation">- 8 -</note>
+                    <placeName ref="#l0254" type="pec">L'Italie</placeName>, pour ne parler que d'elle, a littéralement<lb/> été éveillée par la
+                    découverte de la menace allemande ; elle est<lb/> unanime à vouloir la repousser ; elle veut qu'une telle guerre ne<lb/> puisse
+                    pas recommencer. Ce que nous, Français, devons particu-<lb break="no"/>lièrement remarquer dans ce réveil, c'est que <placeName
+                        ref="#l0254" type="pec">l'Italie</placeName>, avec sa<lb/> grande finesse, a compris qu'il<del rend="strikethrough">s</del> ne
+                    lui suffisait pas de terminer<lb/> la guerre par la victoire ; elle veut, en outre, s'assurer le<lb/> lendemain de la guerre par
+                    le travail ; rien ne la détournera de<lb/> ce double but.</p>
+                <p rend="indent"><placeName ref="#l0028" type="pec">L'Allemagne</placeName>, aveuglée par la domination militaire<lb/> prussienne, a
+                    cru grossièrement qu'elle tenait le monde à sa merci ;<lb/> or, c'est la résistance morale et matérielle du monde qui va triom-<lb
+                        break="no"/>pher. Je voudrais que beaucoup de mes compatriotes et de nos<lb/> alliés pûssent venir se convaincre ici de cette
+                    vérité.</p>
                 <closer>
                     <signed rend="indent">Bien affectueusement à vous,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

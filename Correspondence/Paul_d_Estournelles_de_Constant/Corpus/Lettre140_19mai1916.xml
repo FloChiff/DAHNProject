@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-11-02" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-07-02" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
@@ -232,14 +233,18 @@
                     <pb facs="iiif:10.34847/nkl.df64x0sf/d83a249111f79c62836b4ed89636a33ad9bbe939" n="1"/>
                     <head rend="center underline">LETTRE N° 140</head>
                     <opener>
-                        <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline">SÉNAT</hi></fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1916-05-19">19 Mai 1916</date>.</dateline>
-                        <title rend="align(center) underline">MES LETTRES à la "NOUVELLE GAZETTE de ZURICH"</title>
-                        <salute rend="indent">Mon cher Bultler,</salute></opener>
+                        <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
+                                >SÉNAT</orgName></hi></fw>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1916-05-19">19 Mai
+                                1916</date>.</dateline>
+                        <title rend="align(center) underline">MES LETTRES à la "<title ref="#w0005" type="pec">NOUVELLE GAZETTE de
+                            ZURICH</title>"</title>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Bultler</persName>,</salute></opener>
                     <p rend="indent">Parmi les manifestations encourageantes que m'a<lb/> values la publication de mes deux récentes lettres à la
-                        "Nouvelle<lb/> Gazette de Zurich, j'ai particulièrement remarqué la lettre,ci-<lb break="no"/>jointe en copie, que m'écrit de
-                        Bâle K. Herman FERNAU, sujet<lb/> Allemand, auteur de la brochure si remarquable intitulée : "<hi rend="underline">Préci-<lb
-                                break="no"/>sément parce que je suis Allemand</hi>".</p>
+                            "<title ref="#w0005" type="pec">Nouvelle<lb/> Gazette de Zurich</title>, j'ai particulièrement remarqué la lettre,ci-<lb
+                            break="no"/>jointe en copie, que m'écrit de <placeName ref="#l0060" type="pec">Bâle</placeName>
+                        <persName ref="#p0234" type="pec">K. Herman FERNAU</persName>, sujet<lb/> Allemand, auteur de la brochure si remarquable
+                        intitulée : "<hi rend="underline">Préci-<lb break="no"/>sément parce que je suis Allemand</hi>".</p>
                     <p rend="indent">J'ai lu cette brochure avec la plus grande atten-<lb break="no"/>tion. Elle est à mes yeux, d'une valeur
                         décisive. Je vous en<lb/> fais envoyer par ce même courrier trois exemplaires, pour le cas<lb/> où <subst>
                             <del rend="overwritten">n</del>
@@ -248,8 +253,8 @@
                     <closer><signed rend="align(right)">Votre affectueusement dévoué,</signed>
                         <add hand="#annotation">d'Esstournelles de Constant</add>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
-                            <addrLine rend="indent"><hi rend="underline">NEW-YORK.</hi></addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
+                            <addrLine rend="indent"><hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi></addrLine>
                         </address></closer>
                 </div>
                 <div type="annex">
@@ -257,27 +262,30 @@
                     <head hand="#annotation">Annexe à ma lettre N°140</head>
                     <opener><title rend="align(center) underline">COPIE.</title>
                         <note>FERNAU </note>
-                        <dateline rend="align(right)"><placeName>BALE</placeName>, le <date when-iso="1916-04-18">18 Avril 1916</date>.<lb/>
+                        <dateline rend="align(right)"><placeName ref="#l0060" type="pec">BALE</placeName>, le <date when-iso="1916-04-18">18 Avril
+                                1916</date>.<lb/>
                             <address>
                                 <addrLine rend="align(right)">43 Steinengraben</addrLine>
                             </address>,</dateline>
                         <address>
-                            <addrLine rend="indent">Monsieur le Sénateur d'Estournelles d<subst>
+                            <addrLine rend="indent">Monsieur le <orgName ref="#g0002" type="pec">Sénat</orgName>eur <persName ref="#p0001" type="pec"
+                                    >d'Estournelles</persName> d<subst>
                                     <del rend="overwritten">d</del>
                                     <add place="across">e</add>
                                 </subst> Constant,</addrLine>
-                            <addrLine rend="align(right)">PARIS.</addrLine>
+                            <addrLine rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>.</addrLine>
                         </address>
-                        <salute>Monsieur le Sénateur,</salute></opener>
-                    <p rend="indent">Permettez-moi de vous f<del> </del>éliciter de votre<lb/> article dans la Nouvelle Gazette de Zurich qui montrera
-                        une<lb/> fois de plus à mes collègues pacifistes allemands ce qu'il faut<lb/> leur montrer, à savoir qu'ils n'ont pas le
-                        courage de leurs<lb/> opinion<del> </del>s et qu'ils sont incapables de s'élever au-dessus de<lb/> leure intérêts matériels
-                        immédiats. Ce n'est pas que des hommes<lb/> comme le Dr Fried ne comprendraient pas le point de vue fran-<lb break="no"/>cais.
-                        Ils savent parfaitement que le triomphe de nos idées<lb/> pacifistes ne peut venir que d'une défaite allemande. Mais en<lb/>
-                        public ils parlent tout autrement craignant de se compromettre<lb/> devant ceux à la disparition desquels ils ne peuvent pas
-                        encore<lb/> croire. Demain, quand le sort de ceux-ci se dessinera de plus en<lb/> plus clairement, ils vous approuveront au
-                        fur et à mesure que le<lb/> risques de le dire ouvertement disparaîtront. Pour le moment,<lb/> vous nous faites le plus grand
-                        plaisir, à nous autres démocrates<lb/> et républicains positifs allemands, de venir dire de temps à<lb/> autre leur fait a ceu<subst>
+                        <salute>Monsieur le <orgName ref="#g0002" type="pec">Sénat</orgName>eur,</salute></opener>
+                    <p rend="indent">Permettez-moi de vous f<del> </del>éliciter de votre<lb/> article dans la <title ref="#w0005" type="pec">Nouvelle
+                            Gazette de Zurich</title> qui montrera une<lb/> fois de plus à mes collègues pacifistes allemands ce qu'il faut<lb/> leur
+                        montrer, à savoir qu'ils n'ont pas le courage de leurs<lb/> opinion<del> </del>s et qu'ils sont incapables de s'élever
+                        au-dessus de<lb/> leure intérêts matériels immédiats. Ce n'est pas que des hommes<lb/> comme le <persName ref="#p0256"
+                            type="pec">Dr Fried</persName> ne comprendraient pas le point de vue fran-<lb break="no"/>cais. Ils savent parfaitement
+                        que le triomphe de nos idées<lb/> pacifistes ne peut venir que d'une défaite allemande. Mais en<lb/> public ils parlent tout
+                        autrement craignant de se compromettre<lb/> devant ceux à la disparition desquels ils ne peuvent pas encore<lb/> croire.
+                        Demain, quand le sort de ceux-ci se dessinera de plus en<lb/> plus clairement, ils vous approuveront au fur et à mesure que
+                        le<lb/> risques de le dire ouvertement disparaîtront. Pour le moment,<lb/> vous nous faites le plus grand plaisir, à nous
+                        autres démocrates<lb/> et républicains positifs allemands, de venir dire de temps à<lb/> autre leur fait a ceu<subst>
                             <del rend="overwritten">q u</del>
                             <add place="across">x q</add>
                         </subst>ui, au fond, sont heureux qu' il y a ait<lb/> des "jusqu'auboutistes". puisqu'ils savent aussi bien que vous<lb/> et

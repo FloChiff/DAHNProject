@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -231,15 +232,17 @@
                     <pb facs=".JPG" n="1"/>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SÉNAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-05">5 Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-05">5 Janvier
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">LE JOURNAL FLECHOIS .</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent">Je vous envoie ci-joint le premier muméro du<lb/> Journal Fléchois de 1917; il contient les souhaits que j'a-<lb
-                            break="no"/>dresse chaque année à mes concitoyens qui connaissent ma fa-<lb break="no"/>mille et moi de père en fils et
-                        sont restés fidèlement atta-<lb break="no"/>chés à mes idées, puisque j'ai toujours é<subst>
+                    <p rend="indent">Je vous envoie ci-joint le premier muméro du<lb/>
+                        <title ref="#w0010" type="pec">Journal Fléchois</title> de 1917; il contient les souhaits que j'a-<lb break="no"/>dresse
+                        chaque année à mes concitoyens qui connaissent ma fa-<lb break="no"/>mille et moi de père en fils et sont restés fidèlement
+                            atta-<lb break="no"/>chés à mes idées, puisque j'ai toujours é<subst>
                             <del rend="overwritten"><gap extent="1 character"/></del>
                             <add place="across">t</add>
                         </subst>é réélu par eux de-<lb break="no"/>puis plus de <subst>
@@ -247,9 +250,10 @@
                             <add place="across">v</add>
                         </subst>ingt ans à nos assemblées communales, départe-<lb break="no"/>mentales et nationales.</p>
                     <p rend="indent">Je crois qu'il est bon, nécessaire même, (une<lb/> fois n'est pas coutume à que vous opposiez cet humble
-                        muméro<lb/> d'un misérable journal de province aux journaux mondains de<lb/> Paris qui sont, naturellement, les seuls qu'on
-                        lise et qu'on<lb/> reproduise à l'étrang/er, et d'après lesquels on nous juge.<lb/> Les étrangers sont bien obligés de se
-                        figurer la France<add hand="#annotation">(</add>telle<lb/> qu'elle est dépeinte par ces journaux mondains,<add
+                        muméro<lb/> d'un misérable journal de province aux journaux mondains de<lb/>
+                        <placeName ref="#l0001" type="pec">Paris</placeName> qui sont, naturellement, les seuls qu'on lise et qu'on<lb/> reproduise à
+                        l'étrang/er, et d'après lesquels on nous juge.<lb/> Les étrangers sont bien obligés de se figurer la <placeName ref="#l0207"
+                            type="pec">France</placeName><add hand="#annotation">(</add>telle<lb/> qu'elle est dépeinte par ces journaux mondains,<add
                             hand="#annotation">)</add> divisée en<lb/> deux espèces bien distinctes; en haut l'élite, la richesse,<lb/> l'éducation,
                         le, patriotisme, la morale, la religion, - en bas<add> </add>le<lb/> peuple travaillé par les vils instincts du socialisme,
                         de<lb/> l'anti<subst>
@@ -257,35 +261,40 @@
                             <add place="across">mi</add>
                         </subst>litarismme, de l'antipatriotisme, de l'anticlérica-<lb break="no"/>lisme, etc..etc... A lire ces journaux, le haut
                         conduirait<lb/> le bas, l'élite dirigerait la foule. C'est tout le contraire; <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         </address>
                         <pb facs=".JPG" n="2"/> et le mouvement se précipite. Voilà ce qu'il faut que vous n'i-<lb break="no"/>gnoriez pas
                         complètement.</p>
                     <p rend="indent">En haut les outrages, les calomnies continuent de<lb/> pleuvoir sur les représentants du peuple, sur ceux du
                         moins<lb/> qui sont fidèles à leur mandat. C'est chaque jour contre eux<lb/> une invention nouvelle. Exemple le scandale
-                        Caillaux machiné<lb/> de toutes pièces, à Vichy ; ou hier encore à Rome. - Le mal-<lb break="no"/>heureux ne sait où se
-                        réfugier pour qu'on ne l'accuse pas de<lb/> comploter contre le gouvernement de M. Briand et de M. Poincaré ;<lb/> mais sa
+                            <persName ref="#p0106" type="pec">Caillaux</persName> machiné<lb/> de toutes pièces, à <placeName ref="#l0543" type="pec"
+                            >Vichy</placeName> ; ou hier encore à <placeName ref="#l0422" type="pec">Rome</placeName>. - Le mal-<lb break="no"
+                        />heureux ne sait où se réfugier pour qu'on ne l'accuse pas de<lb/> comploter contre le gouvernement de M.<persName
+                            ref="#p0089" type="pec"> Briand</persName> et de <persName ref="#p0503" type="pec">M. Poincaré</persName> ;<lb/> mais sa
                         retraite même est une menace pire que son activité<add> </add>et<lb/> il faut à tout prix l'abattre et du même coup
                         discréditer le<lb/> parti républicain, la démocratie.</p>
                     <p rend="indent">Nous laissons faire. -. Nous n'avons pas la naïveté<lb/> de croire que nous allons convertir la presse mondaine
-                        payée<lb/> pour combattre la France moderne, par tous les moyens. Nous<lb/> laissons faire, mais si vous vous imaginez que
-                        l'insolence et<lb/> la corruption de cette presse représentent autre chose que la<lb/> surface de la France, vous vous
-                        trompez.</p>
+                        payée<lb/> pour combattre la <placeName ref="#l0207" type="pec">France</placeName> moderne, par tous les moyens. Nous<lb/>
+                        laissons faire, mais si vous vous imaginez que l'insolence et<lb/> la corruption de cette presse représentent autre chose que
+                        la<lb/> surface de la <placeName ref="#l0207" type="pec">France</placeName>, vous vous trompez.</p>
                     <p rend="indent">Après la guerre, peut-être même avant, toute<lb/> cette surface va s'abattre sous le ressentiment des hommes
                         qui<lb/> ont combattu sur le front et des familles qui ont souffert. Le<lb/> châtiment va s'exercer d'abord, comme je vous
                         l'ai dit, par un<lb/> océan d'impôts et puis par un besoin général de justice,<lb/> c'est-à-dire par la recherche des
-                        responsabilités dans toutes<lb/> ces campagnes intéressées d'excitations. On aura fait en vain<lb/> assassiner Jaurès et
-                        d'autres républicains après lui, si on pe<subst>
+                        responsabilités dans toutes<lb/> ces campagnes intéressées d'excitations. On aura fait en vain<lb/> assassiner <persName
+                            ref="#p0335" type="pec">Jaurès</persName> et d'autres républicains après lui, si on pe<subst>
                             <del rend="overwritten"><gap extent="1 character"/></del>
                             <add place="across">u</add>
                         </subst>t:<pb facs=".JPG" n="3"/> il en restera toujours assez pour exprimer le sentiment vrai du<lb/> pays. Au besoin des
                         jeunes gens qui n'étaient pas républicains<lb/> le deviendront après la guerre, le deviennent déjà. <del rend="strikethrough"
-                            >Jamais</del><lb/> J'en ai la preuve tous les jours. Bientôt les lecteurs du<lb/> Figaro et autres Echos<add> </add>de
-                        Paris ne mentiront plus que pour eux-<lb break="no"/>mêmes - et pour l'étranger. Là est le péril que je ne cesse<lb/> de vous
-                        signaler. Dans leur ignorance les étrangers ne peu-<lb break="no"/>vent pas croire que des journaux français soient les
-                        ennemis<lb/> de la France, et qu'en se rangeant de leur Côté on arrive in-<lb break="no"/>failliblement à se ranger contre la
-                        France. C'est pourtant<lb/> ainsi et vous pouvez le comprendre aux Etats-Unis mieux qu'ail-<lb break="no"/>leurs puique vous
-                        avez votre presse jaune, et les journaux de<lb/> M. Hearst.</p>
+                            >Jamais</del><lb/> J'en ai la preuve tous les jours. Bientôt les lecteurs du<lb/>
+                        <title ref="#w0004" type="pec">Figaro</title> et autres Echos<add> </add>de <placeName ref="#l0001" type="pec"
+                            >Paris</placeName> ne mentiront plus que pour eux-<lb break="no"/>mêmes - et pour l'étranger. Là est le péril que je ne
+                        cesse<lb/> de vous signaler. Dans leur ignorance les étrangers ne peu-<lb break="no"/>vent pas croire que des journaux
+                        français soient les ennemis<lb/> de la <placeName ref="#l0207" type="pec">France</placeName>, et qu'en se rangeant de leur
+                        Côté on arrive in-<lb break="no"/>failliblement à se ranger contre la <placeName ref="#l0207" type="pec">France</placeName>.
+                        C'est pourtant<lb/> ainsi et vous pouvez le comprendre aux <placeName ref="#l0184" type="pec">Etats-Unis</placeName> mieux
+                            qu'ail-<lb break="no"/>leurs puique vous avez votre presse jaune, et les journaux de<lb/>
+                        <persName ref="#p0304" type="pec">M. Hearst</persName>.</p>
                     <p rend="indent">Personne ne vous écrit cela. C'est pourquoi j'y<lb/> insiste ; et c'est ainsi que vous serez averti tandis
                         que<lb/> tant d'autres de vos compatriotes seront, à leur insu, entraînés<lb/> dans une campagne française de dénigrement
                         antifrançais. Le<lb/> parti clérical même et a toujours mené chez nous cette campagne<lb/> avec tout ce qu'il y a de snobs, de
@@ -293,29 +302,33 @@
                         tous cas, toute la presse<lb/> mondaine. Grande force, car on a ses relations dans la société,<lb/> et on est plus ou moins
                         obligé de la ménager. N'importe ; la<lb/> société ne tiendra pas contre le pays.</p>
                     <p rend="indent">J'ai pris l'occasion de cette lettre au Fléchois<lb/> pour vous prévenir. Je l'ai écrite à dessein pour
-                            souligner<pb facs=".JPG" n="4"/> publiquement, aux yeux de mes compatriotes de la Sarthe, l'immen-<lb break="no"/>se
-                        évolution déjà franchie par l'opinion en France depuis la<lb/> guerre. Au début, dans mon <del rend="strikethrough"
-                            >paysp</del> propre pays natal, où vraiment<lb/> on ne m'a jamais reproché que mes idées, et où ma vie publique<lb/>
+                            souligner<pb facs=".JPG" n="4"/> publiquement, aux yeux de mes compatriotes de <placeName ref="#l0456" type="pec">la
+                            Sarthe</placeName>, l'immen-<lb break="no"/>se évolution déjà franchie par l'opinion en <placeName ref="#l0207" type="pec"
+                            >France</placeName> depuis la<lb/> guerre. Au début, dans mon <del rend="strikethrough">paysp</del> propre pays natal, où
+                        vraiment<lb/> on ne m'a jamais reproché que mes idées, et où ma vie publique<lb/>
                         <subst>
                             <del rend="overwritten">ou</del>
                             <add hand="#annotation" place="across">et</add>
                         </subst> privée est connue de tous, claire comme de l'eau de roche,-<lb break="no"/>il me fallait quelque audace pour me
-                        montrer à La Flèche. Tous<lb/> nos amis étant aux armées, les hobereaux des environs occu-<lb break="no"/>paient seuls la
-                        ville et la terrorisaient de leurs anathèmes.<lb/> A les entendre, eux et leurs créatures, il fallait mettre<lb/> "le feu à
-                        mon château", "me jeter à l'eau", "me conduire au<lb/> peloton d'exécution", etc...etc... Et les timides, s'ils ne<lb/>
-                        surenchérissaient pas sur les violents, n'osaient plus me<lb/> saluer de peur de se compromettre. Le représentant du
-                        Maire,<lb/> un colonial retraité, des moins exemplaires, jetait dédaigneu-<lb break="no"/>sement son blâme sur le Parlement ;
-                        il posait sa candidature à<lb/> ma succession! !! Ne savait-on pas que j'étais allé à Berlin<lb/> porter les milliards de
-                        Carnegie à l'Empereur d'Allemagne ; que<lb/> ma maison était peuplée d'espions, que j'était l'auteur de la<lb/> guerre ; qu'en
-                        tous cas, j'avais empêché notre Etat<del rend="strikethrough">s</del>-Major de s'y préparer, etc... etc...</p>
+                        montrer à <placeName ref="#l0002" type="pec">La Flèche</placeName>. Tous<lb/> nos amis étant aux armées, les hobereaux des
+                        environs occu-<lb break="no"/>paient seuls la ville et la terrorisaient de leurs anathèmes.<lb/> A les entendre, eux et leurs
+                        créatures, il fallait mettre<lb/> "le feu à mon château", "me jeter à l'eau", "me conduire au<lb/> peloton d'exécution",
+                        etc...etc... Et les timides, s'ils ne<lb/> surenchérissaient pas sur les violents, n'osaient plus me<lb/> saluer de peur de se
+                        compromettre. Le représentant du Maire,<lb/> un colonial retraité, des moins exemplaires, jetait dédaigneu-<lb break="no"
+                        />sement son blâme sur le <orgName ref="#g0050" type="pec">Parlement</orgName> ; il posait sa candidature à<lb/> ma
+                        succession! !! Ne savait-on pas que j'étais allé à <placeName ref="#l0079" type="pec">Berlin</placeName><lb/> porter les
+                        milliards de <persName ref="#p0113" type="pec">Carnegie</persName> à l'Empereur d'<placeName ref="#l0028" type="pec"
+                            >Allemagne</placeName> ; que<lb/> ma maison était peuplée d'espions, que j'était l'auteur de la<lb/> guerre ; qu'en tous
+                        cas, j'avais empêché notre Etat<del rend="strikethrough">s</del>-Major de s'y préparer, etc... etc...</p>
                     <p rend="indent">J'ai patienté, et peu à peu les hobereaux sont<lb/> rentrés sous terre. Je leur ai d'abord servi ma brochure
-                        :<lb/> "M. d'Estournelles devait savoir à laquelle ils ont été, bien<lb/> entendu, incapables de répondre puisqu'ils ne sont
-                        capables<lb/> que de médire ; puis j'ai parlé d'eux, avec le mépris qu'ils<lb/> méritent et sans jamais les ménager. Ils ont
-                        écumé ; mais dans<pb facs=".JPG" n="5"/> une atmosphère de malveillance générale croissante qui les réduit<lb/> au silence.
-                        Leur hypocrisie<add> </add>dexploitation de l'Union Sacrée que<lb/> nous avons, nous, respectée, a tourné contre eux la masse
-                        du<lb/> pays. D'autant plus qu'on a fait le compte, à la longue, de<lb/> ceux qui se sont vraiment dévoués pour la patrie et
-                        de ceux qui<lb/> se sont bornés à dénoncer bruyamment le soi-disant antipatrio-<lb break="no"/>tisme d'autrui ; et il s'est
-                        trouvé que, dans peu de villages,<lb/> le compte a été en faveur des hobereaux.</p>
+                        :<lb/> "<persName ref="#p0001" type="pec">M. d'Estournelles</persName> devait savoir à laquelle ils ont été, bien<lb/>
+                        entendu, incapables de répondre puisqu'ils ne sont capables<lb/> que de médire ; puis j'ai parlé d'eux, avec le mépris
+                        qu'ils<lb/> méritent et sans jamais les ménager. Ils ont écumé ; mais dans<pb facs=".JPG" n="5"/> une atmosphère de
+                        malveillance générale croissante qui les réduit<lb/> au silence. Leur hypocrisie<add> </add>dexploitation de l'Union Sacrée
+                        que<lb/> nous avons, nous, respectée, a tourné contre eux la masse du<lb/> pays. D'autant plus qu'on a fait le compte, à la
+                        longue, de<lb/> ceux qui se sont vraiment dévoués pour la patrie et de ceux qui<lb/> se sont bornés à dénoncer bruyamment le
+                        soi-disant antipatrio-<lb break="no"/>tisme d'autrui ; et il s'est trouvé que, dans peu de villages,<lb/> le compte a été en
+                        faveur des hobereaux.</p>
                     <p rend="indent">Alors leurs journaux ont beau mentir, plus ils<lb/> mentent, plus les faits leur jettent à la face un
                         continuel<lb/> et public démenti ; plus ils mettent en évidence leur rage de<lb/> nuire à la démocratie, au peuple et à notre
                         régime républicain.</p>
@@ -324,7 +337,8 @@
                         <subst>
                             <del rend="overwritten">t</del>
                             <add place="across">v</add>
-                        </subst>ingt ans, le peuple avant raison contre ses prétendus diri-<lb break="no"/>geants, le Fléchois contre le Figaro.</p>
+                        </subst>ingt ans, le peuple avant raison contre ses prétendus diri-<lb break="no"/>geants, le Fléchois contre le <title
+                            ref="#w0004" type="pec">Figaro</title>.</p>
                     <p rend="indent">Mais vous verrez plus.</p>
                     <p rend="indent">Vous verrez le peuple français finissant par diriger lui-<lb break="no"/>m<subst>
                             <del rend="overwritten"><gap extent="2 characters"/></del>
@@ -335,7 +349,8 @@
                         saignée et<lb/> comme un profit, ils ont déchaîné contre eux-mêmes la Révolution<lb/> universelle.</p>
                     <closer>
                         <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
                     </closer>
                 </div>
                 <div type="annex">

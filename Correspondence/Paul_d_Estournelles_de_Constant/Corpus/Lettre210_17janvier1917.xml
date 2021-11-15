@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -232,35 +233,38 @@
                     <head rend="center underline">LETTRE N° 210.</head>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SÉNAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PAU</placeName>, <date when-iso="1917-01-17">17 Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0009" type="pec">PAU</placeName>, <date when-iso="1917-01-17">17 Janvier
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">A PROPOS de VOTRE LETTRE du 20 DECEMBRE 1916.</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent"> J'avais communiqué des extraits de votre lettre<lb/> du 29 Décembre, et notamment les derniers paragraphes,
-                        à<lb/> Clémenceau, Président de la Commission des Affaires Extérieu-<lb break="no"/>res dont je fais partle au Sénat. Je
-                        n'avais pas pris garde<lb/> que Clémenceau est, en même temps, journaliste et, à ma grande<lb/> surprise, je trouve ce matin
-                        dans son "Homme Enchaîné " du <add hand="#annotation" place="inspace">16</add><lb/> la reproduction ci-jointe de mes extraits.
-                        Je m'excuse auprès<lb/> de vous de cette incorrection qui change la nature de la commu-<lb break="no"/>nication que j'avais
-                        faite, à titre privé, et qui la rend<lb/> publique. Clémenceau est incorrigible. J'aurais dû être plus<lb/> défiant. J'avais
-                        pourtant pris mes précautions ; vous l'avez<lb/> vu par la discrétion de la réponse de Bergson. Si j'avais voulu<lb/> que
-                        votre opinion fût publiée, je l'aurais donnée au Temps.<lb/> Encore une fois, je regrette l'incorrection de notre vieil<lb/>
-                        Enfant terrible.</p>
+                    <p rend="indent"> J'avais communiqué des extraits de votre lettre<lb/> du 29 Décembre, et notamment les derniers paragraphes, à<lb/>
+                        <persName ref="#p0142" type="pec">Clémenceau</persName>, Président de la Commission des Affaires Extérieu-<lb break="no"/>res
+                        dont je fais partle au <orgName ref="#g0002" type="pec">Sénat</orgName>. Je n'avais pas pris garde<lb/> que <persName
+                            ref="#p0142" type="pec">Clémenceau</persName> est, en même temps, journaliste et, à ma grande<lb/> surprise, je trouve ce
+                        matin dans son "Homme Enchaîné " du <add hand="#annotation" place="inspace">16</add><lb/> la reproduction ci-jointe de mes
+                        extraits. Je m'excuse auprès<lb/> de vous de cette incorrection qui change la nature de la commu-<lb break="no"/>nication que
+                        j'avais faite, à titre privé, et qui la rend<lb/> publique. <persName ref="#p0142" type="pec">Clémenceau</persName> est
+                        incorrigible. J'aurais dû être plus<lb/> défiant. J'avais pourtant pris mes précautions ; vous l'avez<lb/> vu par la
+                        discrétion de la réponse de <persName ref="#p0055" type="pec">Bergson</persName>. Si j'avais voulu<lb/> que votre opinion fût
+                        publiée, je l'aurais donnée au Temps.<lb/> Encore une fois, je regrette l'incorrection de notre vieil<lb/> Enfant
+                        terrible.</p>
                     <closer>
                         <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles</persName></signed>
                     </closer>
                     <postscript>
                         <label>(1)</label>
-                        <p rend="indent">Je suis venu passer quelques jours à Pau où mon fils parachève<lb/> son expérience de pilote. Je trouve, ici
-                            comme ailleurs, la vie<lb/> large, facile, et à bon marché, la pension, chambre et repas,<lb/> dans un des meilleurs
-                            hôtels de la ville, ne coûte que 10 à<lb/> 12 frs par jour.</p>
+                        <p rend="indent">Je suis venu passer quelques jours à <placeName ref="#l0009" type="pec">Pau</placeName> où mon fils
+                            parachève<lb/> son expérience de pilote. Je trouve, ici comme ailleurs, la vie<lb/> large, facile, et à bon marché, la
+                            pension, chambre et repas,<lb/> dans un des meilleurs hôtels de la ville, ne coûte que 10 à<lb/> 12 frs par jour.</p>
                     </postscript>
                     <closer>
                         <signed hand="#annotation" rend="align(right)">d'E</signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         </address>
                     </closer>
                 </div>

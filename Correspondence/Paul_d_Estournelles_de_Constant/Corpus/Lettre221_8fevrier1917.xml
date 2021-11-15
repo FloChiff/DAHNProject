@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,21 +227,25 @@
                 <head rend="center underline">LETTRE N° 221.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-08">8 février 1917</date>.</dateline>
-                    <title rend="align(center) underline">lA RUPTURE des RELATIONS entre les ETATS-UNIS et l'ALLEMAGNE.</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-08">8 février
+                            1917</date>.</dateline>
+                    <title rend="align(center) underline">lA RUPTURE des RELATIONS entre les <placeName ref="#l0184" type="pec">ETATS-UNIS</placeName>
+                        et l'<placeName ref="#l0028" type="pec">ALLEMAGNE</placeName>.</title>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
-                <p rend="indent">La rupture des relations diplomatiques entre les<lb/> Etats Unis et l'Allemagne fait honneur au Président Wilson:
-                    elle a<lb/> été notifiée par lui dans des termes très élevés, comme une condam-<lb break="no"/>nation depuis longtemps trop
-                    justifiée. Elle ne peut manquer d'agir<lb/> grandement sur le moral de l'opinion allemande ; et c'est ce que<lb/> j'ai toujours
-                    souhaité. Cela fait, la sagesse maintenant consiste-<lb break="no"/>rait à ne pas déclarer la guerre, à moins d'une absolue
-                    nécessité.<lb/> L'état de guerre entraînera pour votre pays, dont la population est<lb/> encore insuffisamment unifiée, de graves
-                    difficultés économiques,<lb/> et sociales. Que ferez-vous de vos Américains-allemands ? Terrible<lb/> prob<del> </del>lème
-                    intérieur et extérieur. D'autre part, continuerez-vous<lb/> d'approvisionner les Alliés de ce qui leur manque? Et encore :
-                    que<lb/> deviendront lee habitants de la Belgique et des départements fran-<lb break="no"/>çais envahis qui ne seront plus
-                    secourus ? Leur détresse devien-<lb break="no"/>dra un moyen d'action diabolique pour le Gouvernement allemand qui<lb/> les
+                <p rend="indent">La rupture des relations diplomatiques entre les<lb/>
+                    <placeName ref="#l0184" type="pec">Etats Unis</placeName> et l'<placeName ref="#l0028" type="pec">Allemagne</placeName> fait
+                    honneur au <persName ref="#p0658" type="pec">Président Wilson</persName>: elle a<lb/> été notifiée par lui dans des termes très
+                    élevés, comme une condam-<lb break="no"/>nation depuis longtemps trop justifiée. Elle ne peut manquer d'agir<lb/> grandement sur
+                    le moral de l'opinion allemande ; et c'est ce que<lb/> j'ai toujours souhaité. Cela fait, la sagesse maintenant consiste-<lb
+                        break="no"/>rait à ne pas déclarer la guerre, à moins d'une absolue nécessité.<lb/> L'état de guerre entraînera pour votre
+                    pays, dont la population est<lb/> encore insuffisamment unifiée, de graves difficultés économiques,<lb/> et sociales. Que
+                    ferez-vous de vos Américains-allemands ? Terrible<lb/> prob<del> </del>lème intérieur et extérieur. D'autre part,
+                    continuerez-vous<lb/> d'approvisionner les Alliés de ce qui leur manque? Et encore : que<lb/> deviendront lee habitants de la
+                        <placeName ref="#l0073" type="pec">Belgique</placeName> et des départements fran-<lb break="no"/>çais envahis qui ne seront
+                    plus secourus ? Leur détresse devien-<lb break="no"/>dra un moyen d'action diabolique pour le Gouvernement allemand qui<lb/> les
                     traitera de plus en plus en otages martyrisés.</p>
                 <p rend="indent">Dès à <del rend="strikethrough"><gap extent="few characters" reason="illegible"/></del> prés<subst>
                         <del rend="overwritten">i</del>
@@ -249,33 +254,35 @@
                     <subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add place="across">s</add>
-                    </subst>ont posés devant le Gouvernement des Etats-Unis, sans parler de<lb/>
+                    </subst>ont posés devant le Gouvernement des <placeName ref="#l0184" type="pec">Etats-Unis</placeName>, sans parler de<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> beaucoup d'autres, <add hand="#annotation" place="above"
-                        >notamment</add> dans l'ordre naval et militaire. J'espère bien<lb/> qu'en aucun cas le Gouvernement des Etats-Unis
-                    n'aventurera ses<lb/> fastueux Dreadnou<subst>
+                        >notamment</add> dans l'ordre naval et militaire. J'espère bien<lb/> qu'en aucun cas le Gouvernement des <placeName
+                        ref="#l0184" type="pec">Etats-Unis</placeName> n'aventurera ses<lb/> fastueux Dreadnou<subst>
                         <del rend="overwritten">r</del>
                         <add place="across">g</add>
                     </subst>hts sur l'Océan ! Leur plus utile rôle est de ne<lb/> servir à rien. Qu'ils restent dans leurs ports plutôt que
                     d'aller<lb/> s'offrir pour cibles aveugles aux torpilles des sous-marins alle-<lb break="no"/>mands. Ne comptez que sur vos
-                    sous-marins et vos croiseurs légers,<lb/> vos bâtiments rapides. Armez vos bateaux de commerce pour leur<lb/> propre défense.
-                    Multipliez le nombre de vos petits bateaux patrouil-<lb break="no"/>leurs. Vous n'en aurez jamais trop. - . Accélérez l'activité
-                    de<lb/> vos transports intérieurs. C'est le système nerveux de la défense<lb/> nationale. Votre armée, jusqu'à nouvel ordre, ne
-                    devra servir qu'à<lb/> l'intérieur, mais là, elle sera pour vous une force de police<lb/> indispensable.</p>
-                <p rend="indent">Des moments difficiles vous attendent. Tout compte<lb/> fait, je crois plus que jamais que le rôle des Etats-Unis
-                    n'était<lb/> pas de rester spectateur indifferent dans la lutte de la civilisa-<lb break="no"/>tion pour la défense du Droit des
-                    peuples. C'eût été l'abdicatio<unclear reason="faded">n</unclear>,<lb/> le suicide de votre pays. Et je crois fermement que vous
-                    vous tire-<lb break="no"/>rez beaucoup mieux de ces difficultés que d'une abstention qui ne<lb/> s'était déjà que trop prolongée
-                    et dont les inconvénients pour<lb/> l'avenir des Etats-Unis étaient immenses.</p>
+                    sous-marins et vos croiseurs légers,<lb/> vos bâtiments rapides. <persName ref="#p0025" type="pec">Armez</persName> vos bateaux de
+                    commerce pour leur<lb/> propre défense. Multipliez le nombre de vos petits bateaux patrouil-<lb break="no"/>leurs. Vous n'en aurez
+                    jamais trop. - . Accélérez l'activité de<lb/> vos transports intérieurs. C'est le système nerveux de la défense<lb/> nationale.
+                    Votre armée, jusqu'à nouvel ordre, ne devra servir qu'à<lb/> l'intérieur, mais là, elle sera pour vous une force de police<lb/>
+                    indispensable.</p>
+                <p rend="indent">Des moments difficiles vous attendent. Tout compte<lb/> fait, je crois plus que jamais que le rôle des <placeName
+                        ref="#l0184" type="pec">Etats-Unis</placeName> n'était<lb/> pas de rester spectateur indifferent dans la lutte de la
+                        civilisa-<lb break="no"/>tion pour la défense du Droit des peuples. C'eût été l'abdicatio<unclear reason="faded"
+                    >n</unclear>,<lb/> le suicide de votre pays. Et je crois fermement que vous vous tire-<lb break="no"/>rez beaucoup mieux de ces
+                    difficultés que d'une abstention qui ne<lb/> s'était déjà que trop prolongée et dont les inconvénients pour<lb/> l'avenir des
+                        <placeName ref="#l0184" type="pec">Etats-Unis</placeName> étaient immenses.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

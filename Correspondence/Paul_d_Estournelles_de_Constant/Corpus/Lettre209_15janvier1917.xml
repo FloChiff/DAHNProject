@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,26 +227,27 @@
                 <head rend="center underline">LETTRE N° 209.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-15">15 Janvier 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-15">15 Janvier
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">PRÉVISIONS pour 1917.</title>
-                    <salute rend="indent">Mon cher Butler.</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>.</salute>
                 </opener>
                 <p rend="indent">J'ai bien reçu votre affectueuse lettre du 29 Dé-<lb break="no"/>cembre, dont j'ai communiqué la fin à mes amis.
                     Puissiez-vous<lb/> ne pas vous tromper ! Dans tous les cas, je suis heureux de<lb/> votre optimisme et je veux espérer, comme
                     vous, que rien n'em-<lb break="no"/>pêchera le militarisme allemand de se reconnaître impuissant<lb/> d'ici peu.</p>
-                <p rend="indent">Les efforts du Président Wilson pour hâter la paix,<lb/> si malheureu<add hand="#annotation" place="inline">x</add>
-                    qu'ils aient été, puisqu'il persiste à confondre,<lb/> depuis le début de la guerre, le Gouvernement allemand et ses<lb/>
-                    victimes, n'en ont pas moins cet effet d'obliger la diplomatie<lb/> allemande à déclarer "ses buts de guerre " ou à les
-                    reconnaître<lb/> inavouables. C'est la mettre en mauvaise posture devant<lb/> l'opinion tandis que c'est nous fournir<add
-                        hand="#annotation" place="inline">,</add> à nous<add hand="#annotation" place="inline">,</add> l'occasion de<lb/> proclamer
-                    que nous ne poursuivons pas de conquêtes.</p>
+                <p rend="indent">Les efforts du <persName ref="#p0658" type="pec">Président Wilson</persName> pour hâter la paix,<lb/> si
+                        malheureu<add hand="#annotation" place="inline">x</add> qu'ils aient été, puisqu'il persiste à confondre,<lb/> depuis le début
+                    de la guerre, le Gouvernement allemand et ses<lb/> victimes, n'en ont pas moins cet effet d'obliger la diplomatie<lb/> allemande à
+                    déclarer "ses buts de guerre " ou à les reconnaître<lb/> inavouables. C'est la mettre en mauvaise posture devant<lb/> l'opinion
+                    tandis que c'est nous fournir<add hand="#annotation" place="inline">,</add> à nous<add hand="#annotation" place="inline">,</add>
+                    l'occasion de<lb/> proclamer que nous ne poursuivons pas de conquêtes.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
                             <hi rend="underline">NEW-YO<subst>
                                     <del rend="overwritten"><gap extent="1 character"/></del>

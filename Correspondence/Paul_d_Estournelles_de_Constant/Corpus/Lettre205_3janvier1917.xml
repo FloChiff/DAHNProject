@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,11 +227,12 @@
                 <head rend="center underline">LETTRE N° 205.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-03">3 Janvier 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-03">3 Janvier
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">LA VICTOIRE de l'UNIVERS .</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
                 <p rend="indent">La réponse des dix Puissances alliées à la note<lb/> au<subst>
                         <del rend="overwritten">x</del>
@@ -244,29 +246,29 @@
                     plus cher au<lb/> monde, il ne nous reste aujourd'hui qu'un immense mépris pour les<lb/> criminels imbéciles qui ont déclaré cette
                     guerre et qu'une volonté<lb/> commune ; les mettre hors d'état de recommencer, cela est beau,<lb/> grand, magnifique.</p>
                 <p rend="indent">Jamais je n'ai mieux mesuré l'orgueilleuse misère<lb/> de ces conquérants qui commencent par mettre le monde à feu et
-                    à<lb/> sang pour finir par composer des hymnes à la paix. "J'ai trop<lb/> aimé la guerre", disait Louis XIV vieilli ; son exemple
-                    n'a instruit<lb/>
+                    à<lb/> sang pour finir par composer des hymnes à la paix. "J'ai trop<lb/> aimé la guerre", disait <persName ref="#p0408"
+                        type="pec">Louis XIV</persName> vieilli ; son exemple n'a instruit<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> et n'instruira jamais aucun souverain absolu.</p>
                 <p rend="indent">J'ai confiance, maintenant. - quelle que soit la<lb/> recrudescence probable des crimes allemands sur terre et sur
-                    mer, -<lb break="no"/>que tout cela finalement nous sert comme je l'ai toujours pensé:<lb/> l'Allemagne tue, assomme, assassine,
-                    c'est entendu, mais elle ne<lb/> pourra pas toujours tuer, assommer, assassiner. Déjà elle ne peut<lb/> plus se déshonorer ; il
-                    n'est plus en son pouvoir de tromper per-<lb break="no"/>sonne. Le moment approche où ceux-là mêmes qui l'ont plus ou<lb/> moins
-                    encouragée par <add hand="#annotation" place="inline">l</add>eur silence ne verront plus en son Gouver-<lb break="no"/>nement
-                    qu'une béte malfaisante dont il faut délivrer le monde;<lb/> et notre victoire sera celle de l'univers. - S'il en est ainsi,<lb/>
-                    que seront nos douleurs passagères aupres du service éterne<subst>
+                    mer, -<lb break="no"/>que tout cela finalement nous sert comme je l'ai toujours pensé:<lb/> l'<placeName ref="#l0028" type="pec"
+                        >Allemagne</placeName> tue, assomme, assassine, c'est entendu, mais elle ne<lb/> pourra pas toujours tuer, assommer,
+                    assassiner. Déjà elle ne peut<lb/> plus se déshonorer ; il n'est plus en son pouvoir de tromper per-<lb break="no"/>sonne. Le
+                    moment approche où ceux-là mêmes qui l'ont plus ou<lb/> moins encouragée par <add hand="#annotation" place="inline">l</add>eur
+                    silence ne verront plus en son Gouver-<lb break="no"/>nement qu'une béte malfaisante dont il faut délivrer le monde;<lb/> et notre
+                    victoire sera celle de l'univers. - S'il en est ainsi,<lb/> que seront nos douleurs passagères aupres du service éterne<subst>
                         <del rend="overwritten">r</del>
                         <add hand="#annotation" place="across">l</add>
-                    </subst> que<lb/> nous aurons rendu à l'Humanité !</p>
+                    </subst> que<lb/> nous aurons rendu à <title ref="#w0013" type="pec">l'Humanité</title> !</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

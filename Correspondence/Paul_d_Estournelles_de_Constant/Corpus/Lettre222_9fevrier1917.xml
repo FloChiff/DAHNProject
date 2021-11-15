@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,34 +227,37 @@
                 <head rend="center underline">LETTRE N° 222.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-09">9 Février 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-09">9 Février
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">L'ARMÉE de DEMAIN .</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
-                <p rend="indent">Vous savez comment on a traité Jaurès et tous les<lb/> Français indépendants qui ont osé dire que la guerre des
-                    temps<lb/> nouveaux ne pouvait plus être préparée comme celle des temps passés .<lb/> L'aéroplane et le sous-marin, la puissance
-                    des explosifs, ete..etc.<lb/> ont bouleversé toutes les données classiques de l'organisation<lb/> militaire. Cela n'empêche que
-                    les théories de Jaurès ne lui sont<lb/> pardonnées que parce qu'il est mort et que tout autre audacieux<lb/> essayant de tenir le
-                    même langage est encore plus ou moins excom-<lb break="no"/>munié, jusqu'à nouvel ordre.</p>
-                <p rend="indent">L'un des boucs émissaires de ces excommunications<lb/> est le Général Percin dont on reconnaît qu'il a rendu à
-                        l'artille-<lb break="no"/>rie frangaise les plus grande services, mais qu'on a pourtant réussi<lb/> à évincer de l'armée. Il
-                    s'en est fallu de peu qu'il soit, lui<lb/> aussi, assassiné. Il a été outragé autant qu'on peut l'être. Il<lb/> l'est encore,
-                    malgré son admirable passé de soldat, malgré son haut<lb/> caractère, tout simplement parce qu'il croit et ose dire que l'ar<gap
-                        extent="few characters"/><lb/> d'une démocratie doit être l'armée d'une démocratie et non la copie<lb/> des armées de Napoléon
-                    I°. <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                <p rend="indent">Vous savez comment on a traité <persName ref="#p0335" type="pec">Jaurès</persName> et tous les<lb/> Français
+                    indépendants qui ont osé dire que la guerre des temps<lb/> nouveaux ne pouvait plus être préparée comme celle des temps passés
+                    .<lb/> L'aéroplane et le sous-marin, la puissance des explosifs, ete..etc.<lb/> ont bouleversé toutes les données classiques de
+                    l'organisation<lb/> militaire. Cela n'empêche que les théories de <persName ref="#p0335" type="pec">Jaurès</persName> ne lui
+                    sont<lb/> pardonnées que parce qu'il est mort et que tout autre audacieux<lb/> essayant de tenir le même langage est encore plus
+                    ou moins excom-<lb break="no"/>munié, jusqu'à nouvel ordre.</p>
+                <p rend="indent">L'un des boucs émissaires de ces excommunications<lb/> est le <persName ref="#p0493" type="pec">Général
+                        Percin</persName> dont on reconnaît qu'il a rendu à l'artille-<lb break="no"/>rie frangaise les plus grande services, mais
+                    qu'on a pourtant réussi<lb/> à évincer de l'armée. Il s'en est fallu de peu qu'il soit, lui<lb/> aussi, assassiné. Il a été
+                    outragé autant qu'on peut l'être. Il<lb/> l'est encore, malgré son admirable passé de soldat, malgré son haut<lb/> caractère, tout
+                    simplement parce qu'il croit et ose dire que l'ar<gap extent="few characters"/><lb/> d'une démocratie doit être l'armée d'une
+                    démocratie et non la copie<lb/> des armées de <persName ref="#p0473" type="pec">Napoléon</persName> I°. <address>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address></p>
                 <pb facs=".JPG" n="2"/>
-                <p rend="indent">Je vous envoie ci-joint le livre qui résume les<lb/> idées du Général Percin et qui vient de paraître à Paris.</p>
+                <p rend="indent">Je vous envoie ci-joint le livre qui résume les<lb/> idées du <persName ref="#p0493" type="pec">Général
+                        Percin</persName> et qui vient de paraître à <placeName ref="#l0001" type="pec">Paris</placeName>.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

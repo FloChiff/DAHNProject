@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,45 +227,50 @@
                 <head rend="center underline">LETTRE N° 218.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-06">6 Février 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-06">6 Février
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">NOUS SOMMES en GUERRE !!!</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
-                <p rend="indent">Les impressions de bien-être général que j'ai re-<lb break="no"/>levées dans toute la France non envahie étaient si
-                    vraies que le<lb/> Gouvernement s'est décidé à les tempérer par quelques mesures de<lb/> modération.</p>
+                <p rend="indent">Les impressions de bien-être général que j'ai re-<lb break="no"/>levées dans toute la <placeName ref="#l0207"
+                        type="pec">France</placeName> non envahie étaient si vraies que le<lb/> Gouvernement s'est décidé à les tempérer par quelques
+                    mesures de<lb/> modération.</p>
                 <p rend="indent">Les gens riches continuent de ne pas s'apercevoir<lb/> matériellement de la guerre, mais les bourgeois et surtout
                     les<lb/> petits ménages souffrent de quelques privations. On n'a plus le<lb/> sucre à discrétion, mais on en a largement. De même
-                    pour le beurre,<lb/> et encore? Ce n'est qu'une question de prix, à Paris. Les pâtis-<lb break="no"/>siers pour économiser les
-                    oeufs, la farine, le lait, le beurre,<lb/> seront fermés deux jours par semaine. C'est une petite révolution !!!<lb/> Sera-t-elle
-                    efficace? J'en doute. En tous cas, jamais on n'avait<lb/> tant mangé de pâtisseries,en France, que depuis la guerre.</p>
+                    pour le beurre,<lb/> et encore? Ce n'est qu'une question de prix, à <placeName ref="#l0001" type="pec">Paris</placeName>. Les
+                        pâtis-<lb break="no"/>siers pour économiser les oeufs, la farine, le lait, le beurre,<lb/> seront fermés deux jours par
+                    semaine. C'est une petite révolution !!!<lb/> Sera-t-elle efficace? J'en doute. En tous cas, jamais on n'avait<lb/> tant mangé de
+                    pâtisseries,en <placeName ref="#l0207" type="pec">France</placeName>, que depuis la guerre.</p>
                 <p rend="indent">La seule privation sérieuse est celle du charbon<lb/> qui coïncide avec une saison exceptionnellement rigoureuse.
-                    Les<lb/> transports par eau, si merveilleusement pourvus <add hand="#annotation" place="above">en France</add> par la nature et
-                    si<lb/> grossièrement négligés par l'administration, sont interrompus par la<lb/>
+                    Les<lb/> transports par eau, si merveilleusement pourvus <add hand="#annotation" place="above">en <placeName ref="#l0207"
+                            type="pec">France</placeName></add> par la nature et si<lb/> grossièrement négligés par l'administration, sont interrompus
+                    par la<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> gelée qui vaut mieux, d'ailleurs, que les inondations. Bref
                     on a<lb/> peine à se chauffer, surtout dans les petits ménages. Le pétrole<lb/> aussi se fait rare. Je me demande, avec ce froid,
-                    ce que doit être<lb/> la vie en Allemagne et comment nos prisonniers, à peine nourris et<lb/> vêtus, depuis trois hivers, y
-                    résisteront. Les Allemands eux-mêmes<lb/> sont malheureux, assure-t-on ; leur Gouvernement ne nourrit plus que<lb/> leur
-                    orgueil.</p>
-                <p rend="indent">Pour la France, la gêne dont je parle est momenta-<lb break="no"/>née, elle accroîtra seulement la rancune populaire
-                    à l'égard de<lb/> tous les bénéficiaires de la guerre. Il y aura des comptes sévères<lb/> à régler entre les privilèges qui ont
-                    souhaité, puis exploité la<lb/> guerre, et entre la masse des Français qui en auront souffert, tant<lb/> au front qu'à l'arrière !
-                    Les priv<subst>
+                    ce que doit être<lb/> la vie en <placeName ref="#l0028" type="pec">Allemagne</placeName> et comment nos prisonniers, à peine
+                    nourris et<lb/> vêtus, depuis trois hivers, y résisteront. Les Allemands eux-mêmes<lb/> sont malheureux, assure-t-on ; leur
+                    Gouvernement ne nourrit plus que<lb/> leur orgueil.</p>
+                <p rend="indent">Pour la <placeName ref="#l0207" type="pec">France</placeName>, la gêne dont je parle est momenta-<lb break="no"/>née,
+                    elle accroîtra seulement la rancune populaire à l'égard de<lb/> tous les bénéficiaires de la guerre. Il y aura des comptes
+                    sévères<lb/> à régler entre les privilèges qui ont souhaité, puis exploité la<lb/> guerre, et entre la masse des Français qui en
+                    auront souffert, tant<lb/> au front qu'à l'arrière ! Les priv<subst>
                         <del rend="overwritten">é</del>
                         <add place="across">i</add>
                     </subst>légiés peuvent s'attendre à<lb/> passer de mauvais quarts d'heure si la Révolution succède à la<lb/> guerre. Puisse-t-elle
-                    commencer d'abord par le grand coupable,<lb/> l'Empire d'Allemagne ! Ce serait le salut.</p>
+                    commencer d'abord par le grand coupable,<lb/> l'Empire d'<placeName ref="#l0028" type="pec">Allemagne</placeName> ! Ce serait le
+                    salut.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin"><persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

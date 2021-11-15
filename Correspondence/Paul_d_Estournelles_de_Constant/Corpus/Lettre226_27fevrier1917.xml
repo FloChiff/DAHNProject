@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -231,9 +232,10 @@
                     <pb facs=".JPG" n="1"/>
                     <head rend="center underline">LETTRE N° 226.</head>
                     <opener>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-27">27 Février 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-27">27 Février
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">LA OUESTION de l'AVIATION MILITAIRE et MARITIME.</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
                     <p rend="indent"> Mes fonctions de rapporteur de la Commission de<lb/> la Marine m'empêchent de vous écrire tout ce que je pense
                         et ce que<lb/> je sais des questions que nous avons à traiter et qui nous préoc-<lb break="no"/>cupent depuis si
@@ -241,17 +243,19 @@
                     <p rend="indent">Il est clair que, là comme ailleurs, le fait<lb/> d'avoir été les précurseurs nous encombre de traditions,
                         d'essais,<lb/> de matériel que le progrès a dépassés. L'idéal est de n'avoir rien<lb/> inventé et d'appliquer les découvertes
                         des autres, en utilisant et<lb/> perfectionnant ce qu'ils ont fait de bon et en évitant leurs écoles.</p>
-                    <p rend="indent">Le Vice-président de mon Groupe de l'Aviation,<lb/> G. Menier, que vous connaissez bien, a publié dans le
-                        "PETIT<lb/> JOURNAL", dirigé par notre collègue Stéphane PICHON, Sénateur,<lb/> deux articles éducatifs qui vous intéresseront
-                        ; les voici. Je vous<lb/> les envoie avec son fidèle souvenir. L'un concerne l'aviation mi-<lb break="no"/>litaire ; l'autre
-                        l'aviation maritime.</p>
+                    <p rend="indent">Le Vice-président de mon Groupe de l'Aviation,<lb/>
+                        <persName ref="#p0445" type="pec">G. Menier</persName>, que vous connaissez bien, a publié dans le "PETIT<lb/> JOURNAL",
+                        dirigé par notre collègue <persName ref="#p0499" type="pec">Stéphane PICHON</persName>, <orgName ref="#g0002" type="pec"
+                            >Sénat</orgName>eur,<lb/> deux articles éducatifs qui vous intéresseront ; les voici. Je vous<lb/> les envoie avec son
+                        fidèle souvenir. L'un concerne l'aviation mi-<lb break="no"/>litaire ; l'autre l'aviation maritime.</p>
                     <closer>
                         <signed rend="align(right)">Affectueusement à vous,</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                             <addrLine rend="indent">
-                                <hi rend="underline">NEW-YORK.</hi>
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                             </addrLine>
                         </address>
                     </closer>

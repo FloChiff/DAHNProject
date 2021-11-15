@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -232,36 +233,41 @@
                     <head rend="center underline">LETTRE N° 228.</head>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SENAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SENAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-03-06">6 Mars 1917</date>.</dateline>
-                        <title rend="align(center) underline">Joseph H. CHOATE .</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-03-06">6 Mars
+                                1917</date>.</dateline>
+                        <title rend="align(center) underline"><persName ref="#p0136" type="pec">Joseph H. CHOATE</persName> .</title>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent">J'ai été heureux de recevoir le charmant menu du<lb/> dîner donné en l'honneur de Joseph Hodges CHOATE par
-                        les<lb/> "Pilgrims of tne United States", le 27 <subst>
+                    <p rend="indent">J'ai été heureux de recevoir le charmant menu du<lb/> dîner donné en l'honneur de <persName ref="#p0315"
+                            type="pec">Joseph Hodges</persName>
+                        <persName ref="#p0136" type="pec">CHOATE</persName> par les<lb/> "Pilgrims of tne United States", le 27 <subst>
                             <del rend="strikethrough">Février</del>
                             <add place="above">Janvier</add>
-                        </subst>, à New-York.</p>
-                    <p rend="indent">Je pense bien souvent à notre admirable collègue<lb/> de la Conférence de La Haye, et je cite fréquemment les
-                        paroles si<lb/> vaillantes, si claires et si pénétrantes que je l'ai entendu<lb/> prononcer et que j'ai eu la joie infinie de
-                        faire entendre en<lb/> Fran<subst>
+                        </subst>, à <placeName ref="#l0003" type="pec">New-York</placeName>.</p>
+                    <p rend="indent">Je pense bien souvent à notre admirable collègue<lb/> de la Conférence de <placeName ref="#l0227" type="pec">La
+                            Haye</placeName>, et je cite fréquemment les paroles si<lb/> vaillantes, si claires et si pénétrantes que je l'ai
+                        entendu<lb/> prononcer et que j'ai eu la joie infinie de faire entendre en<lb/> Fran<subst>
                             <del rend="overwritten">ce</del>
                             <add hand="#annotation" place="across">çais</add>
-                        </subst> représentant de l'Allemagne, le Baron Marshall. Encore<lb/> ces jours-ci, j'ai fait applaudir l'un de ses tra<subst>
+                        </subst> représentant de l'<placeName ref="#l0028" type="pec">Allemagne</placeName>, le <persName ref="#p0434" type="pec"
+                            >Baron Marshall</persName>. Encore<lb/> ces jours-ci, j'ai fait applaudir l'un de ses tra<subst>
                             <del rend="overwritten">c</del>
                             <add place="across">i</add>
-                        </subst>ts de La Haye<lb/> en parlant a la Municipalité de Venise ; (voir l'article ci-joint<lb/> qui résume mon discours ).
-                        Je vous prie de le communiquer à notre<lb/> ami bien cher et de lui dire que je garde sur ma cheminée, comme<lb/> un souvenir
-                        de jeunesse, sa charmante photo jointe au menu. Ainsi<lb/> je me retrouve près de lui par la pensée, mon action plus unie<lb/>
-                        que jamais à la sienne.</p>
+                        </subst>ts de <placeName ref="#l0227" type="pec">La Haye</placeName><lb/> en parlant a la Municipalité de <placeName
+                            ref="#l0010" type="pec">Venise</placeName> ; (voir l'article ci-joint<lb/> qui résume mon discours ). Je vous prie de le
+                        communiquer à notre<lb/> ami bien cher et de lui dire que je garde sur ma cheminée, comme<lb/> un souvenir de jeunesse, sa
+                        charmante photo jointe au menu. Ainsi<lb/> je me retrouve près de lui par la pensée, mon action plus unie<lb/> que jamais à la
+                        sienne.</p>
                     <closer>
                         <signed rend="align(right)">Vo<unclear reason="faded">t</unclear>re affectueusement dévoué,</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                             <addrLine rend="indent">
-                                <hi rend="underline">NEW-YORK.</hi>
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                             </addrLine>
                         </address>
                     </closer>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -235,34 +236,36 @@
                         </subst>.</head>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SÉNAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PAU</placeName>, <date when-iso="1917-01-18">18 Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0009" type="pec">PAU</placeName>, <date when-iso="1917-01-18">18 Janvier
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">LA DICTATURE de la CALOMNIE .</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent">M. Caillaux a saisi l'occasion des attaques du<lb/> "TIMES", que je vous ai signalées par le dernier
-                        courrier,<lb/> pour écrire à Lord Northcliffe une lettre où il aborde un<lb/> sujet dont nous nous sommes préoccupés et dont
-                        nous avons,<lb/> un jour, parlé, vous, Caillaux et moi, à Créans : le danger de<lb/> la presse anti-démocratique et
-                        anti-pacifique.</p>
+                    <p rend="indent">M. <persName ref="#p0106" type="pec">Caillaux</persName> a saisi l'occasion des attaques du<lb/> "TIMES", que je
+                        vous ai signalées par le dernier courrier,<lb/> pour écrire à <persName ref="#p0477" type="pec">Lord Northcliffe</persName>
+                        une lettre où il aborde un<lb/> sujet dont nous nous sommes préoccupés et dont nous avons,<lb/> un jour, parlé, vous,
+                            <persName ref="#p0106" type="pec">Caillaux</persName> et moi, à <placeName ref="#l0006" type="pec">Créans</placeName> : le
+                        danger de<lb/> la presse anti-démocratique et anti-pacifique.</p>
                     <p rend="indent">C'est le prélude d'une protestation bien nécessaire<lb/> contre un mal que tous les pays subissent plus ou moins
                         sans<lb/> s'en rendre compte et qui aboutit fatalement a les jeter<lb/> aveuglément les uns contre les autres. On objectera
-                        que la<lb/> lettre de M. Caillaux n'est pas opportune ; c'est ce qu'on<lb/> objecte à toute vérité inattendue. Je lui reproche
-                        d'être<lb/> à la fois trop longue pour être lue dans un journal quotidien,<lb/> et trop courte pour être comprise. Mais,
-                        n'importe, telle<lb/> qu'elle est, elle éveillera l'idée et répandra peu à peu le<lb/> besoin de mieux connaître le danger.
-                        Elle constitue un élément<lb/> précieux d'éducation générale ; d'autant plus qu'elle ne<lb/> manquera pas d'être complétée. Le
-                        problème est maintenant posé.<lb/>
+                        que la<lb/> lettre de M. <persName ref="#p0106" type="pec">Caillaux</persName> n'est pas opportune ; c'est ce qu'on<lb/>
+                        objecte à toute vérité inattendue. Je lui reproche d'être<lb/> à la fois trop longue pour être lue dans un journal
+                        quotidien,<lb/> et trop courte pour être comprise. Mais, n'importe, telle<lb/> qu'elle est, elle éveillera l'idée et répandra
+                        peu à peu le<lb/> besoin de mieux connaître le danger. Elle constitue un élément<lb/> précieux d'éducation générale ; d'autant
+                        plus qu'elle ne<lb/> manquera pas d'être complétée. Le problème est maintenant posé.<lb/>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         </address><pb facs=".JPG" n="2"/> On ne pourra se dispenser de le résoudre ou, tout au moins,<lb/> de le discuter parmi tant
                         d'autres que la guerre aura mûris<lb/> et révélés.</p>
                     <closer>
                         <signed rend="align(right)">Votre affectueusement dévoué,</signed>
                         <signed hand="#annotation" rend="align(right)">d'E</signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                             <addrLine rend="indent">
-                                <hi rend="underline">NEW-YORK.</hi>
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                             </addrLine>
                         </address>
                     </closer>

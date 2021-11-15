@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -221,6 +221,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -235,26 +236,30 @@
                     <head rend="center underline">LETTRE N° 204.</head>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SÉNAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-03">3 Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-03">3 Janvier
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">LETTRE à nos SECRETAIRES GÉNÉRAUX de la CONCILIATION<lb/> INTERNATIONALE .</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
                     <p rend="indent"> A l'occasion du Nouvel An j'ai tenu à adresser la<lb/> lettre, dont vous trouverez ci-joint copie, à nos quatre
-                            secré-<lb break="no"/>taires généraux de la Conciliation : Giretti, Orlano, Nippold et<lb/> Miyaoka. J'ai envoyé copie de
-                        cette lettre à chacun de nos se-<lb break="no"/>crétaires généraux de l'Amérique du Sud. Nous ne saurions trop<lb/> répéter à
+                            secré-<lb break="no"/>taires généraux de la Conciliation : <persName ref="#p0274" type="pec">Giretti</persName>, Orlano,
+                            <persName ref="#p0475" type="pec">Nippold</persName> et<lb/>
+                        <persName ref="#p0461" type="pec">Miyaoka</persName>. J'ai envoyé copie de cette lettre à chacun de nos se-<lb break="no"
+                        />crétaires généraux de l'<placeName ref="#l0033" type="pec">Amérique du Sud</placeName>. Nous ne saurions trop<lb/> répéter à
                         nos collaborateurs que la lutte que nous soute<unclear reason="faded">n</unclear>ons aujourd,<lb/> hui en repoussant la guerre
                         qui nous est faite est la même que<lb/> celle que nous avons soutenue toute notre vie en défendant le<lb/> Droit, <del
                             rend="strikethrough">aujourd'hui violé</del>. Tout cela est clair pour nous, mais<lb/> pas encore assez pour le
                         public.</p>
                     <closer>
                         <signed rend="align(right)">Votre affectueusement dévoué.</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                             <addrLine rend="indent">
-                                <hi rend="underline">NEW-YORK.</hi>
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                             </addrLine>
                         </address>
                     </closer>
@@ -266,25 +271,26 @@
                         <fw type="letterhead">
                             <address rend="indent">
                                 <addrLine>34TER RUE MOLITOR</addrLine>
-                                <addrLine>PARIS (XVIe)</addrLine>
+                                <addrLine><placeName ref="#l0001" type="pec">PARIS</placeName> (XVIe)</addrLine>
                                 <addrLine rend="align(right)">TELEPHONE PASSY 78.88</addrLine>
-                                <addrLine>??: CONCILIA-PARIS</addrLine>
+                                <addrLine>??: CONCILIA-<placeName ref="#l0001" type="pec">PARIS</placeName></addrLine>
                             </address>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-01">1° Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-01">1° Janvier
+                                1917</date>.</dateline>
                         <salute rend="indent">Cher et fidèle Collaborateur,</salute>
                     </opener>
-                    <p rend="indent">Je me reproche de ne pas vous écrire plus souvent,<lb/> mais la France est fort absorbée par ses devoirs de
-                        résistance et<lb/> ses sacrifices ; et c'est pour moi personnellement une tâche com-<lb break="no"/>plexe que de concilier
-                        notre ferme attachement à la paix et notre<lb/> résolution de repousser la guerre juequ'à ce qu'elle ne puisse plus<lb/>
-                        recommencer. Mes amis et moi, nous n'avons jamais été pacifistes<lb/> au sens fâcheux qu'on donne à ce mot ; jamais nous
-                        n'avons préconisé<lb/> la paix, qui n'est qu'une conséquence ; nous avons préconisé l'es-<lb break="no"/>prit, les moeurs,
-                        c'est-à-dire les moyens, les causes de la paix.<lb/> Sans l'esprit de conciliation et de justice, la paix ne sera ja-<lb
-                            break="no"/>mais qu'un leurre. Toute la différence entre nous et les pacifistes<lb/> est qu'ils réclamaient la paix, ce
-                        qui est trop facile et super-<lb break="no"/>ficiel, tandis que nous recherchions, nous, les conditions de la<lb/> paix. Le
-                        public simpliste n'y a pas vu si loin<del rend="strikethrough">s</del>, et, (la presse<lb/> chauvine de tous les pays ne
-                        cessant de l'enfoncer dans son igno-<lb break="no"/>rance), il a pris notre effort patient et méthodique pour un rêve<lb/> et
-                        pour une manifestation de faiblesse.</p>
+                    <p rend="indent">Je me reproche de ne pas vous écrire plus souvent,<lb/> mais la <placeName ref="#l0207" type="pec"
+                            >France</placeName> est fort absorbée par ses devoirs de résistance et<lb/> ses sacrifices ; et c'est pour moi
+                        personnellement une tâche com-<lb break="no"/>plexe que de concilier notre ferme attachement à la paix et notre<lb/>
+                        résolution de repousser la guerre juequ'à ce qu'elle ne puisse plus<lb/> recommencer. Mes amis et moi, nous n'avons jamais été
+                        pacifistes<lb/> au sens fâcheux qu'on donne à ce mot ; jamais nous n'avons préconisé<lb/> la paix, qui n'est qu'une
+                        conséquence ; nous avons préconisé l'es-<lb break="no"/>prit, les moeurs, c'est-à-dire les moyens, les causes de la paix.<lb/>
+                        Sans l'esprit de conciliation et de justice, la paix ne sera ja-<lb break="no"/>mais qu'un leurre. Toute la différence entre
+                        nous et les pacifistes<lb/> est qu'ils réclamaient la paix, ce qui est trop facile et super-<lb break="no"/>ficiel, tandis que
+                        nous recherchions, nous, les conditions de la<lb/> paix. Le public simpliste n'y a pas vu si loin<del rend="strikethrough"
+                            >s</del>, et, (la presse<lb/> chauvine de tous les pays ne cessant de l'enfoncer dans son igno-<lb break="no"/>rance), il
+                        a pris notre effort patient et méthodique pour un rêve<lb/> et pour une manifestation de faiblesse.</p>
                     <pb facs=".JPG" n="2"/>
                     <note place="top" type="foliation">- 2 -</note>
                     <p rend="indent">Il a fallu, la guerre étant survenue, malgré tout<lb/> malgré nos progrès inespérés, il a fallu réagir contre la ten<subst>
@@ -308,31 +314,35 @@
                     <p rend="indent">Dans cette tâche ingrate d'action national<add hand="#annotation" place="inline">e</add> et d'édu-<lb break="no"
                         />cation internationale contre l'oppression, je ne saurais trop vous<lb/> remercier de m''avoir aidé, comme vous l'avez
                         fait.</p>
-                    <p rend="indent">L'Italie, le Japon sont devenus nos alliés, et nul<lb/> n'a jamais eu un mot de reproche à formuler, dans ces
-                        deux pays,<lb/> contre l'effort de nos secrétaires généraux en vue de prévenir la <pb facs=".JPG" n="3"/><note place="top"
-                            type="foliation">- 3 -</note> guerre. Au contraire. Cet effort passé est devenu, comme le nô-<lb break="no"/>tre, pour
-                        tous les pays actuellement en guerre avec l'Allemagne<lb/> un des arguments que les Gouvernements invoquent à l'appui de
-                        leur<lb/> bonne cause. "Nous avons voulu la paix!" disent-ils tous ; là est<lb/> notre force, là est la faiblesse irrémédiable
-                        du Gouvernement<lb/> allemand.</p>
-                    <p rend="indent">L'Espagne et la Suisse sont restées neutres, mais de<lb/> grands progrès, en partie grâce à vous, ont fini par
-                        éclairer les<lb/> esprits indépendants. Et nul n'a pris cette neutralité gouverne-<lb break="no"/>mentale pour de
-                        l''indifférence. En Espagne le Roi et la diploma-<lb break="no"/>tie ont fait maintes fois preuve d'humanité, de bonté ; nos
-                            pri-<lb break="no"/>sonniers, en Allemagne, ne l'oublieront pas, non plus que leurs<lb/> parents en France. La Suisse a
-                        été le refuge, l'asile pour quan-<lb break="no"/>tité d'infortunés Belges et Français, civils et militaires, indi-<lb
-                            break="no"/>gnement déportés en Allemagne et internée tant qu'ils conservaient<lb/> un reste de force utilisable, puis
-                        rejetée comme des déchets quand<lb/> leur santé avait succombé à l'excès de misère. La g énérosité<lb/> privée aux Etats-Unis
-                        et dans les R<subst>
+                    <p rend="indent"><placeName ref="#l0254" type="pec">L'Italie</placeName>, <placeName ref="#l0256" type="pec">le Japon</placeName>
+                        sont devenus nos alliés, et nul<lb/> n'a jamais eu un mot de reproche à formuler, dans ces deux pays,<lb/> contre l'effort de
+                        nos secrétaires généraux en vue de prévenir la <pb facs=".JPG" n="3"/><note place="top" type="foliation">- 3 -</note> guerre.
+                        Au contraire. Cet effort passé est devenu, comme le nô-<lb break="no"/>tre, pour tous les pays actuellement en guerre avec
+                            l'<placeName ref="#l0028" type="pec">Allemagne</placeName><lb/> un des arguments que les Gouvernements invoquent à l'appui
+                        de leur<lb/> bonne cause. "Nous avons voulu la paix!" disent-ils tous ; là est<lb/> notre force, là est la faiblesse
+                        irrémédiable du Gouvernement<lb/> allemand.</p>
+                    <p rend="indent"><placeName ref="#l0183" type="pec">L'Espagne</placeName> et la <placeName ref="#l0498" type="pec"
+                            >Suisse</placeName> sont restées neutres, mais de<lb/> grands progrès, en partie grâce à vous, ont fini par éclairer
+                        les<lb/> esprits indépendants. Et nul n'a pris cette neutralité gouverne-<lb break="no"/>mentale pour de l''indifférence. En
+                        Espagne le Roi et la diploma-<lb break="no"/>tie ont fait maintes fois preuve d'humanité, de bonté ; nos pri-<lb break="no"
+                        />sonniers, en <placeName ref="#l0028" type="pec">Allemagne</placeName>, ne l'oublieront pas, non plus que leurs<lb/> parents
+                        en <placeName ref="#l0207" type="pec">France</placeName>. La <placeName ref="#l0498" type="pec">Suisse</placeName> a été le
+                        refuge, l'asile pour quan-<lb break="no"/>tité d'infortunés Belges et Français, civils et militaires, indi-<lb break="no"
+                        />gnement déportés en <placeName ref="#l0028" type="pec">Allemagne</placeName> et internée tant qu'ils conservaient<lb/> un
+                        reste de force utilisable, puis rejetée comme des déchets quand<lb/> leur santé avait succombé à l'excès de misère. La g
+                        énérosité<lb/> privée aux <placeName ref="#l0184" type="pec">Etats-Unis</placeName> et dans les R<subst>
                             <del rend="overwritten"><gap extent="1 character"/></del>
                             <add place="across">é</add>
                         </subst>publiques de l'Amérique du<lb/> Sud a également fait des miracles ; sans son secours inlassable,<lb/> régulièrement
                         soutenu et organisé, que seraient aujourd'hui, après<lb/> deux ans et demi d'occupation, les tristes victimes de la
-                        guerre<lb/> dans nos départements du Nord et en Belgique ? On ne peut y penser<lb/> de sang froid. L'excès de la barbarie du
-                        militarisme allemand<lb/> a fait surgir l'intervention active de toute la bienfaisance du<lb/> monde, tout au moins au
-                        bénéfice des pays où la vérité a pu être<lb/> connue et où une intervention était possible. Car c'est à peine<lb/> si quelques
-                        rares initiés soupçonnent ce qu'à la faveur de la <pb facs=".JPG" n="4"/><note place="top" type="foliation">- 4 -</note>
-                        guerre ,- et suivant le mot d'ordre, le plan des Etats-Majors<lb/> allemands, - il s'est commis de massacres en masse,
-                        d'atrocités<lb/> inconcevables parmi les populations chrétiennes de l'Empire Otto-<lb break="no"/>man, et en Pologne, et dans
-                        les Balkans.</p>
+                        guerre<lb/> dans nos départements du Nord et en <placeName ref="#l0073" type="pec">Belgique</placeName> ? On ne peut y
+                        penser<lb/> de sang froid. L'excès de la barbarie du militarisme allemand<lb/> a fait surgir l'intervention active de toute la
+                        bienfaisance du<lb/> monde, tout au moins au bénéfice des pays où la vérité a pu être<lb/> connue et où une intervention était
+                        possible. Car c'est à peine<lb/> si quelques rares initiés soupçonnent ce qu'à la faveur de la <pb facs=".JPG" n="4"/><note
+                            place="top" type="foliation">- 4 -</note> guerre ,- et suivant le mot d'ordre, le plan des Etats-Majors<lb/> allemands, -
+                        il s'est commis de massacres en masse, d'atrocités<lb/> inconcevables parmi les populations chrétiennes de l'Empire Otto-<lb
+                            break="no"/>man, et en <placeName ref="#l0401" type="pec">Pologne</placeName>, et dans <placeName ref="#l0061" type="pec"
+                            >les Balkans</placeName>.</p>
                     <p rend="indent">Vous avez, mon cher Collaborateur, contribué, dans<lb/> la mesure possible, à éclairer les consciences. Vous avez
                             contri-<lb break="no"/>bué à susciter contre les crimes du militarisme allemand la malé-<lb break="no"/>diction
                         universelle. Cette malédiction sera l'une des sanctions<lb/> les plus efficaces de la guerre.</p>
@@ -356,13 +366,14 @@
                     <p rend="indent">En attendant votre bonne réponse, permettez-moi,<lb/> cher collaborateur et ami, de vous adresser pour vous et
                         les<lb/> vôtres, nos souhaits les meilleurs.</p>
                     <closer>
-                        <signed rend="align(right)">Signé : <lb/>d'ESTOURNELLES de CONSTANT.</signed>
+                        <signed rend="align(right)">Signé : <lb/><persName ref="#p0001" type="pec">d'ESTOURNELLES de CONSTANT</persName>.</signed>
                     </closer>
                     <postscript>
                         <label>
                             <hi rend="underline">P.S,-</hi>
                         </label>
-                        <p rend="indent"> J'adresse copie de cette lettre à nos secrétaires<lb/> généraux de l'Amérique du Sud.</p>
+                        <p rend="indent"> J'adresse copie de cette lettre à nos secrétaires<lb/> généraux de l'<placeName ref="#l0033" type="pec"
+                                >Amérique du Sud</placeName>.</p>
                     </postscript>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,31 +227,35 @@
                 <head rend="center underline">LETTRE N° 219.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-07">7 Février 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-07">7 Février
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">LES INDÉSIRÉS</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
-                <p rend="indent"> Je vous ai signalé plus d'une fois <hi rend="underline">LA PAIX par le<lb/> DROIT</hi>. A la différence de Fried,
-                    ses directeurs sont restés fidè-<lb break="no"/>les à leurs principes qui sont les nôtres, ceux-là mêmes que le<lb/> Président
-                    Wilson a fait siens par ses récents messages au Sénat<lb/> américain. Cette revue mérite d'être soutenue. Elle a vraiment,<lb/>
-                    depuis la guerre, représenté l'état d'esprit de tous les pacifiques<lb/> résolus à ne pas sacrifier la paix sous la domination
-                    germanique,<lb/> c'est-à-dire l'immense majorité des adversaires du militarisme<lb/> prussien.</p>
-                <p rend="indent">Vous lirez dans le dernier numéro ci-joint, un ar-<lb break="no"/>ticle de Mme. Puech concernant la situation des
-                    malheureux enfants<lb/> qu'elle appelle les indésirables et qui méritent plutôt la triste<lb/> nom d'indésirés. Ce sont les
-                    enfants nés de mères françaises et de<lb/> soldats allemands dans les pays envahis.</p>
+                <p rend="indent"> Je vous ai signalé plus d'une fois <hi rend="underline">LA PAIX par le<lb/> DROIT</hi>. A la différence de <persName
+                        ref="#p0256" type="pec">Fried</persName>, ses directeurs sont restés fidè-<lb break="no"/>les à leurs principes qui sont les
+                    nôtres, ceux-là mêmes que le<lb/> Président <persName ref="#p0658" type="pec">Wilson</persName> a fait siens par ses récents
+                    messages au <orgName ref="#g0002" type="pec">Sénat</orgName><lb/> américain. Cette revue mérite d'être soutenue. Elle a
+                    vraiment,<lb/> depuis la guerre, représenté l'état d'esprit de tous les pacifiques<lb/> résolus à ne pas sacrifier la paix sous la
+                    domination germanique,<lb/> c'est-à-dire l'immense majorité des adversaires du militarisme<lb/> prussien.</p>
+                <p rend="indent">Vous lirez dans le dernier numéro ci-joint, un ar-<lb break="no"/>ticle de <persName ref="#p0517" type="pec">Mme.
+                        Puech</persName> concernant la situation des malheureux enfants<lb/> qu'elle appelle les indésirables et qui méritent plutôt
+                    la triste<lb/> nom d'indésirés. Ce sont les enfants nés de mères françaises et de<lb/> soldats allemands dans les pays
+                    envahis.</p>
                 <p rend="indent">La nature, malgré tout, réparera peut-être ou<lb/> atténuera ces hontes ; car les enfants meurent partout <subst>
                         <del rend="overwritten">en</del>
                         <add hand="#annotation" place="across">de</add>
-                    </subst> misère en<lb/> Allemagne et dans nos régions envahies. On finira peut-être, après<lb/> les avoir maudits, par se les
-                    disputer.</p>
+                    </subst> misère en<lb/>
+                    <placeName ref="#l0028" type="pec">Allemagne</placeName> et dans nos régions envahies. On finira peut-être, après<lb/> les avoir
+                    maudits, par se les disputer.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
                         <addrLine>à Monsieur le Président</addrLine>
-                        <addrLine>N. Murray BUTLER.</addrLine>
+                        <addrLine><persName ref="#p0002" type="pec">N. Murray BUTLER</persName>.</addrLine>
                     </address>
                 </closer>
             </div>

@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-11-02" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-07-01" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -225,16 +226,17 @@
             <div type="transcription">
                 <pb facs="iiif:10.34847/nkl.3d0f2a8s/b937636361b2c5fe16ae45a3dae97193cb8a6159" n="1"/>
                 <head rend="center">Lettre N° 131.</head>
-                <opener><dateline rend="align(right)"><placeName>Paris</placeName>
+                <opener><dateline rend="align(right)"><placeName ref="#l0001" type="pec">Paris</placeName>
                         <date when-iso="1916-04-19">19 avril 1916</date>.</dateline>
-                    <title rend="align(center)">L'ASSOCIATION DES PARLEMENTS-NOTRE VISITE EN ANGLETERRE ET EN ECOSSE<lb/> ( Suite à ma lettre N° 124
-                        )</title>
+                    <title rend="align(center)">L'ASSOCIATION DES <orgName ref="#g0050" type="pec">PARLEMENT</orgName>S-NOTRE VISITE EN <placeName
+                            ref="#l0037" type="pec">ANGLETERRE</placeName> ET EN ECOSSE<lb/> ( Suite à ma lettre N° 124 )</title>
                     <metamark function="separation" style="line"/>
-                    <salute rend="align(right)">Mon cher Butler,</salute></opener>
-                <p rend="indent">Je reviens d'Aggleterre et d'Ecosse où je suis allé, ave<add hand="#annotation" place="inline">c</add><lb/> 24 de mes
-                    collègues du Parlement Français, rendre à nos collègues<lb/> du Parlement Britannique la visite qu'ils nous avaient faite au
-                    mois<lb/> de février dernier et dont je vous ai parlé.</p>
-                <p rend="indent">Je vous ai envoyé de Glasgow et de Lon<subst>
+                    <salute rend="align(right)">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute></opener>
+                <p rend="indent">Je reviens d'Aggleterre et d'<placeName ref="#l0177" type="pec">Ecosse</placeName> où je suis allé, ave<add
+                        hand="#annotation" place="inline">c</add><lb/> 24 de mes collègues du <orgName ref="#g0050" type="pec">Parlement
+                        Français</orgName>, rendre à nos collègues<lb/> du <orgName ref="#g0050" type="pec">Parlement Britannique</orgName> la visite
+                    qu'ils nous avaient faite au mois<lb/> de février dernier et dont je vous ai parlé.</p>
+                <p rend="indent">Je vous ai envoyé de <placeName ref="#l0216" type="pec">Glasgow</placeName> et de Lon<subst>
                         <del rend="overwritten">f</del>
                         <add place="across">d</add>
                     </subst>res plusieurs journaux<lb/> rendant compte des manifestations tout à fait significatives que<lb/> notre visite a
@@ -248,14 +250,17 @@
                     décider, mais, une fois décidés,rien<lb/> ne les détourne de leur résolution.</p>
                 <p rend="indent">Ils ont voulu la paix comme nous, et, à part quelques chauvins iso-<lb break="no"/>lés,et impuissante, ils ne
                     voulaient pas plus que nous <add place="above">de</add> la guerre. Main<lb break="no"/>tenant leurs yeux se sont ouverts, comme
-                    les nôtres à la vérité que<lb/> nous n'avons cessé de dénoncer,c'est-à-dire le danger du militarisme<lb/> et toute l'Angleterre
-                    est d'accord avec toute la France pour en fini<add hand="#annotation" place="inline">r</add><lb/>
+                    les nôtres à la vérité que<lb/> nous n'avons cessé de dénoncer,c'est-à-dire le danger du militarisme<lb/> et toute l'<placeName
+                        ref="#l0037" type="pec">Angleterre</placeName> est d'accord avec toute la <placeName ref="#l0207" type="pec"
+                        >France</placeName> pour en fini<add hand="#annotation" place="inline">r</add><lb/>
                     <address>
-                        <addrLine>M. le Président Butler. Columbia University.</addrLine>
+                        <addrLine><persName ref="#p0002" type="pec">M. le Président Butler</persName>. <orgName ref="#g0024" type="pec">Columbia
+                                University</orgName>.</addrLine>
                     </address>
                     <pb facs="iiif:10.34847/nkl.3d0f2a8s/5012028b4e7d1d961b01fdc232e31752da904522" n="2"/><note place="top" type="foliation"
-                        >-2-</note> avec le militarisme prussien. C'est toute l'Angleterre pacifique qui<lb/> s'est levée pour accueillir la France
-                    pacifique et organiser la lutte<lb/> commune pour la paix de l'avenir, la vraie paix. Nous aimons trop la<lb/> paix et la justi<subst>
+                        >-2-</note> avec le militarisme prussien. C'est toute l'<placeName ref="#l0037" type="pec">Angleterre</placeName> pacifique
+                    qui<lb/> s'est levée pour accueillir la <placeName ref="#l0207" type="pec">France</placeName> pacifique et organiser la lutte<lb/>
+                    commune pour la paix de l'avenir, la vraie paix. Nous aimons trop la<lb/> paix et la justi<subst>
                         <del rend="overwritten">v</del>
                         <add place="across">c</add>
                     </subst>e pour vouloir d'un semblant de paix. Nous voulons<lb/> que ceux qui resteront de nos enfants ne puissent pas nous
@@ -265,24 +270,28 @@
                     peuple, le peuple lui-même. J'ai assisté<lb/> à bien des manifestations, je n'ai jamais vu accord plus unanime, plus<lb/> enthousia<subst>
                         <del rend="overwritten">te</del>
                         <add place="across">st</add>
-                    </subst>e, que celui de la population de la Grande Bretagne contre<lb/> le militarisme allemand.</p>
+                    </subst>e, que celui de la population de la Grande <placeName ref="#l0101" type="pec">Bretagne</placeName> contre<lb/> le
+                    militarisme allemand.</p>
                 <p rend="indent">Ma conclusion est que,les An<unclear reason="faded">g</unclear>lais éta<subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add place="across">n</add>
                     </subst>t loin certes d'avoir<lb/> donné tout ce qu'on peut attendre de leur puissance et de leur vita-<lb break="no"/>lité, la
-                    guerre se prolongera encore, mais que,quoi qu'il arrive,-en<lb/> admettant même que Verdun finisse par être pris,ce qui ne semble
-                    pas<lb/> probable, -les Allemands sont perdus. Ils n'auront bientôt p<subst>
+                    guerre se prolongera encore, mais que,quoi qu'il arrive,-en<lb/> admettant même que <placeName ref="#l0539" type="pec"
+                        >Verdun</placeName> finisse par être pris,ce qui ne semble pas<lb/> probable, -les Allemands sont perdus. Ils n'auront bientôt p<subst>
                         <del rend="overwritten">o</del>
                         <add place="across">l</add>
                     </subst>us d'au-<lb break="no"/>tre ressource que de répudier eux-mêmes le gouvernement qui les aura<lb/> conduits à la ruine.</p>
                 <p rend="indent">Ma conclusion est fondée<del rend="strikethrough">s</del> sur les symptômes de démoralisation<lb/> qui se trahissent
-                    de toutes parts en Allemagne,et parmi les alliés de<lb/> l'Allepagne,mais aussi sur l'incroyable santé morale et physique qui<lb/>
-                    anime la France et l'Angleterre. Je n'ai jamais vu pour ma part en<lb/> France le moindre symptôme de lassitude ;chacun voudrait
-                    que ce fût<lb/> fini, cela va de soi,mais c'est précisément pourquoi personne ne veut<lb/> entendre parler d'une fin qui ne soit
-                    pas définitive. Et quan<subst>
+                    de toutes parts en <placeName ref="#l0028" type="pec">Allemagne</placeName>,et parmi les alliés de<lb/> l'<placeName ref="#l0028"
+                        type="pec">Allepagne</placeName>,mais aussi sur l'incroyable santé morale et physique qui<lb/> anime la <placeName
+                        ref="#l0207" type="pec">France</placeName> et l'<placeName ref="#l0037" type="pec">Angleterre</placeName>. Je n'ai jamais vu
+                    pour ma part en<lb/>
+                    <placeName ref="#l0207" type="pec">France</placeName> le moindre symptôme de lassitude ;chacun voudrait que ce fût<lb/> fini, cela
+                    va de soi,mais c'est précisément pourquoi personne ne veut<lb/> entendre parler d'une fin qui ne soit pas définitive. Et quan<subst>
                         <del rend="overwritten">d</del>
                         <add place="across">t</add>
-                    </subst> à l'An-<lb break="no"/>gleterre,et à l'Ecosse, et à l'Irlande, et aux colonies de l'Empire.</p>
+                    </subst> à l'An-<lb break="no"/>gleterre,et à l'<placeName ref="#l0177" type="pec">Ecosse</placeName>, et à l'<placeName
+                        ref="#l0250" type="pec">Irlande</placeName>, et aux colonies de l'Empire.</p>
                 <pb facs="iiif:10.34847/nkl.3d0f2a8s/f97b58a24bba61f546a68f68e6b9e5f259fdc7e1" n="3"/>
             </div>
         </body>

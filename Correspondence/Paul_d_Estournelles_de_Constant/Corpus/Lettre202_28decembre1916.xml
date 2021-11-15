@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,17 +227,21 @@
                 <head rend="center underline">LETTRE N° 202.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1916-12-28">28 Décembre 1916</date>.</dateline>
-                    <title rend="align(center) underline">LES SOCIALISTES et la REPONSE à la NOTE du<lb/> Président WILSON .</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1916-12-28">28 Décembre
+                            1916</date>.</dateline>
+                    <title rend="align(center) underline">LES SOCIALISTES et la REPONSE à la NOTE du<lb/>
+                        <persName ref="#p0658" type="pec">Président WILSON</persName> .</title>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
                 <p rend="indent"> Le parti socialiste français vient de voter la<lb/> déclaration suivante en réponse aux notes dérisoires par
-                    lesquelles<lb/> les deux Gouvernements d'Allemagne et d'Autriche ont accueilli<lb/> l'initiative pacifique du Président Wilson.
-                    Ces deux notes ne<lb/> sont qu'une comédie de plus à ajouter à toutes les autres. Loin<lb/> de faire connaître leurs buts de
-                    guerre, comme le Président<lb/> Wilson les y invite, les deux Gouvernements austro-allemand se<lb/> bornent à une formule
-                    dilatoire et proposent des conversations....</p>
+                    lesquelles<lb/> les deux Gouvernements d'<placeName ref="#l0028" type="pec">Allemagne</placeName> et d'<placeName ref="#l0052"
+                        type="pec">Autriche</placeName> ont accueilli<lb/> l'initiative pacifique du <persName ref="#p0658" type="pec">Président
+                        Wilson</persName>. Ces deux notes ne<lb/> sont qu'une comédie de plus à ajouter à toutes les autres. Loin<lb/> de faire
+                    connaître leurs buts de guerre, comme le Président<lb/>
+                    <persName ref="#p0658" type="pec">Wilson</persName> les y invite, les deux Gouvernements austro-allemand se<lb/> bornent à une
+                    formule dilatoire et proposent des conversations....</p>
                 <p rend="indent">Beaucoup plus franc, tout à fait franc, le parti<lb/> socialiste adjure le Gouvernement français et <subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add place="across">d</add>
@@ -247,29 +252,29 @@
                         hand="#annotation" place="inline">s</add> qu'il résume très raisonnablement,<lb/> à mon sens, et clairement, dans la
                     déclaration que voici:<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N. Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N. Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs=".JPG" n="2"/> [coupure de journaux] <pb facs=".JPG" n="3"/> [coupure de journaux] </p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                 </closer>
                 <postscript>
                     <label>
                         <hi rend="underline">P.S, -</hi>
                     </label>
-                    <p rend="indent">Si l'initiative du Président Wilson aboutit à obliger, d'une<lb/> part, le Gouvernement allemand à faire la
-                        preuve de ses ambitions<lb/> de conquête, et d'autre part, les Gouvernements alliés à proclamer<lb/> leur seule volonté
-                        d'obtenir les réparations et les garanties né<lb break="no"/>cessaires, alors elle aura été finalement bienfaisante. C'est
-                        dans <lb/> ce sens que j'ai<subst>
+                    <p rend="indent">Si l'initiative du <persName ref="#p0658" type="pec">Président Wilson</persName> aboutit à obliger, d'une<lb/>
+                        part, le Gouvernement allemand à faire la preuve de ses ambitions<lb/> de conquête, et d'autre part, les Gouvernements alliés
+                        à proclamer<lb/> leur seule volonté d'obtenir les réparations et les garanties né<lb break="no"/>cessaires, alors elle aura
+                        été finalement bienfaisante. C'est dans <lb/> ce sens que j'ai<subst>
                             <del rend="strikethrought">-</del>
                             <add place="across"> </add>
                         </subst>donné diverses interviews à des journaux amé-<lb break="no"/>ricains qui me les ont demandées.</p>
                 </postscript>
                 <closer>
                     <address>
-                        <addrLine>à Monsieur le Président N. Murray BUTLER,</addrLine>
-                        <addrLine rend="indent"><hi rend="underline">NEW-YORK</hi>.</addrLine>
+                        <addrLine>à <persName ref="#p0002" type="pec">Monsieur le Président N. Murray BUTLER</persName>,</addrLine>
+                        <addrLine rend="indent"><hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName></hi>.</addrLine>
                     </address>
                 </closer>
             </div>

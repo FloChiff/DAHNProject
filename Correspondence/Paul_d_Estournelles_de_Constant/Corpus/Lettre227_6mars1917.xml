@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-11" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
         </revisionDesc>
@@ -226,32 +227,37 @@
                 <head rend="center underline">LETTRE N° 227.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-03-16">6 Mars 1917</date>.</dateline>
-                    <title rend="align(center) underline">LA<add> </add>POLITIQUE du JAPON en CHINE .</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-03-16">6 Mars
+                        1917</date>.</dateline>
+                    <title rend="align(center) underline">LA<add> </add>POLITIQUE du JAPON en <placeName ref="#l0141" type="pec">CHINE</placeName>
+                        .</title>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
                 <p rend="indent">J'ai vu, par la réponse de My<del rend="strikethrough">i</del>aoka à ma lettre du<lb/> 24 Octobre, réponse dont il
                     vous aura certainement envoyé copie,<lb/> que mes avertissements n'ont pas été perdus. Il en a même fait<lb/> état un peu trop
-                    officiellement en communiquant copie de ma lettre<lb/> au Ministre des Affaires Etrangères !!! Le <subst>
+                    officiellement en communiquant copie de ma lettre<lb/> au Ministre des <orgName ref="#g0012" type="pec">Affaires
+                        Etrangères</orgName> !!! Le <subst>
                         <del rend="strikethrough">Dr</del>
                         <add hand="#annotation" place="above">Bon</add>
-                    </subst> Motono est heureu-<lb break="no"/> sement trop intelligent et il me connait trop bien, je l' espère<lb/> pour s'offusquer
-                    de mes préoccupations. En tous cas, s'il n'a<lb/> pas besoin d'être converti, car il est plein d'expérience et de<lb/> raison, il
-                    pourra trouver dans ma lettre quelques arguments à<lb/> opposer aux ambitions des chauvins Japonais sur la Chine.</p>
+                    </subst>
+                    <persName ref="#p0470" type="pec">Motono</persName> est heureu-<lb break="no"/> sement trop intelligent et il me connait trop
+                    bien, je l' espère<lb/> pour s'offusquer de mes préoccupations. En tous cas, s'il n'a<lb/> pas besoin d'être converti, car il est
+                    plein d'expérience et de<lb/> raison, il pourra trouver dans ma lettre quelques arguments à<lb/> opposer aux ambitions des
+                    chauvins <placeName ref="#l0256" type="pec">Japon</placeName>ais sur <placeName ref="#l0141" type="pec">la Chine</placeName>.</p>
                 <p rend="indent">Notez bien ceci ; plus l'impérialisme allemand<lb/> sortira confondu de son ab<del> </del>ominable entreprise de la
                     guerre, plus<lb/> son exemple refroidira celles des autres Grandes puissances mili-<lb break="no"/>taires qui auraient pu être
                     tentées, au<del rend="strikethrough">a</del>paravant, de l'imiter.</p>
-                <p rend="indent">Les Etats-Unis, en prenant parti contre l'impéria-<lb break="no"/>lisme allemand, prennent la défense de la
-                    democratie universelle.</p>
+                <p rend="indent">Les <placeName ref="#l0184" type="pec">Etats-Unis</placeName>, en prenant parti contre l'impéria-<lb break="no"
+                    />lisme allemand, prennent la défense de la democratie universelle.</p>
                 <closer>
                     <signed rend="align(right)">Affectueusement à vous,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER,</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

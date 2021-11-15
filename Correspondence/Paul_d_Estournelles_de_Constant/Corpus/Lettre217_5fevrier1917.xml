@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -227,12 +228,13 @@
                 <head rend="center underline">LETTRE N° 217.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline">SÉNAT</hi>
+                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                     </fw>
-                    <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-02-05">5 Février 1917</date>.</dateline>
+                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-02-05">5 Février
+                            1917</date>.</dateline>
                     <title rend="align(center) underline">LA FALLLITE de la GUERRE .<lb/> LE MASSACRE sur TERRE et sur MER . - . LA SYPHILIS. LA
                         TUBERCULOSE.</title>
-                    <salute rend="indent">Mon cher Butler,</salute>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                 </opener>
                 <p rend="indent">Depuis le début de la guerre, j'ai la douloureuse<lb/> ressource de constater chaque jour que tout ce que j'attendais
                     de<lb/> la guerre est dépassé. Je n'ai pèché que par timidité de prévision.<lb/> Les faits dépassent et de beaucoup mes
@@ -240,29 +242,30 @@
                     profite de toute occasion pour relever,<del rend="strikethrough"><add hand="#annotation" place="above"><gap extent="few words"
                             /></add></del> à<lb/> mesure qu'ils s'annoncent, les fruits qui seront demain, pour tous<lb/> les belligérants et
                     indirectement pour les neutres, les conséquences<lb/> de la guerre. J'aurai contribué ainsi à dresser une liste, incom-<lb
-                        break="no"/>plète, certes, mais terrifiante de ces conséquences. Hier j'appe-<lb break="no"/>lais, en douceur, au Sénat,
-                    l'attention du pays, de tous les pays,<lb/> sur ce fait que dix bateaux par j<del> </del>our, en moyenne, étaient coulés<lb/> par
-                    les sous-marins allemands et je démontrais que ce crime n'était<lb/> ni pire ni plus effroyable que les assassinats, les
-                    destructions<lb/> dont le militarisme que nous combattons s'est rendu coupable depuis<lb/> bientôt trois ans sur terre. C'est la
-                    guerre. Il ne faut pas,<lb/> qu'on l'ignore.</p>
+                        break="no"/>plète, certes, mais terrifiante de ces conséquences. Hier j'appe-<lb break="no"/>lais, en douceur, au <orgName
+                        ref="#g0002" type="pec">Sénat</orgName>, l'attention du pays, de tous les pays,<lb/> sur ce fait que dix bateaux par
+                        j<del> </del>our, en moyenne, étaient coulés<lb/> par les sous-marins allemands et je démontrais que ce crime n'était<lb/> ni
+                    pire ni plus effroyable que les assassinats, les destructions<lb/> dont le militarisme que nous combattons s'est rendu coupable
+                    depuis<lb/> bientôt trois ans sur terre. C'est la guerre. Il ne faut pas,<lb/> qu'on l'ignore.</p>
                 <p rend="indent">Aujourd'hui, j'ai obtenu, non sans peine, des<lb/> pudeurs de la revue h<subst>
                         <del rend="overwritten">a</del>
                         <add hand="#annotation" place="across">e</add>
                     </subst>bdomadaire : "LA VIE FEMININE", qu'elle publie<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> un article de moi sur cette autre fleur de la guerre ; la
                     syphilis.<lb/> Voici cet article, simple anneau d'une longue chaîne où figureront<lb/> la suite invraisemblable des ignominies et
                     des inepties nées de la<lb/> guerre. A cette cause infâme ne manquons pas de rattacher ses<lb/> dignes effets.</p>
-                <p rend="indent">Je devrais vous parler aussi de la journée des<lb/> Tuberculeux, organisée, sous le patronage de Léon Bourgeois,
-                    avec<lb/> le concours, encore cette fois, de la générosité américaine. Mais<lb/> le temps me manque et ce fléau de la tuberculose
-                    n'est que trop<lb/> connu. On ne rougit pas de le dénoncer ; on en parle, on sait que<lb/> le Gouvernement allemand et ses
-                    geôliers ont ajouté à toutes les<lb/> horreurs de la captivité qu'ils imposent à nos prisonniers ce sup-<lb break="no"/>plice
-                    nouveau qui les frappe plus ou moins mortellement et, du même<lb/> coup, atteint notre race. Vous êtes edifié sur ce point. Je
-                    vous<lb/> l'ai dit plus d'une fois. Nous rendrons à l'Allemagne ses prison-<lb break="no"/>niers bien nourris, fortifiés, en un
-                    mot des reproducteurs bien à<lb/> point ; tandis qu'ils nous renverront, eux, des affamés, des mori-<lb break="no"/>bonds. Mais
-                    passons ; ces indications sont plus que suffisantes.</p>
+                <p rend="indent">Je devrais vous parler aussi de la journée des<lb/> Tuberculeux, organisée, sous le patronage de <persName
+                        ref="#p0082" type="pec">Léon Bourgeois</persName>, avec<lb/> le concours, encore cette fois, de la générosité américaine.
+                    Mais<lb/> le temps me manque et ce fléau de la tuberculose n'est que trop<lb/> connu. On ne rougit pas de le dénoncer ; on en
+                    parle, on sait que<lb/> le Gouvernement allemand et ses geôliers ont ajouté à toutes les<lb/> horreurs de la captivité qu'ils
+                    imposent à nos prisonniers ce sup-<lb break="no"/>plice nouveau qui les frappe plus ou moins mortellement et, du même<lb/> coup,
+                    atteint notre race. Vous êtes edifié sur ce point. Je vous<lb/> l'ai dit plus d'une fois. Nous rendrons à l'<placeName
+                        ref="#l0028" type="pec">Allemagne</placeName> ses prison-<lb break="no"/>niers bien nourris, fortifiés, en un mot des
+                    reproducteurs bien à<lb/> point ; tandis qu'ils nous renverront, eux, des affamés, des mori-<lb break="no"/>bonds. Mais passons ;
+                    ces indications sont plus que suffisantes.</p>
                 <p rend="indent">Si je le puis, si j'arrive à me réserver un mois<lb/> de méditation et de travail, je veux achever un livre que je
                     prépare<lb/> depuis longtemps sur l'ineptie criminelle de la guerre qui nous a<lb/> été déclarée. Je comptais d'abord donner pour
                     titre à cet ouvrage :<lb/> LE GRAND CRIME &amp; LA GRANDE FAUTE, mais j'ai fini par adopter un<lb/> titre plus général: LA
@@ -270,21 +273,24 @@
                 <p rend="indent">Ce sera l'écrasante justification de tous les<lb/> efforts de notre conciliation avant, pendant et apres cette
                     guerre<lb/> absurde autant qu'odieuse.</p>
                 <pb facs=".JPG" n="3"/>
-                <p rend="indent">Je crois que ce livre intéressera autant que les<lb/> belligérants, les Etats-Unis et les neutres. On me demande de
-                    le<lb/> publier en Angleterre et en anglais ! Avant de répondre, je ne vous<lb/> cache pas que je préférerais qu'il parût aux
-                    Etats-Unis. Il sera<lb/> fini, j'espère, dans deux mois. Quel éditeur américain me con-<lb break="no"/>seillez-vous? Mc.Millan a
-                    été parfait. Notre excellent Keppel<lb/> voudra-t-il lui demander si l'entreprise lui conviendra? Faudra-<lb break="no"/>t-il le
-                    faire traduire à Paris, comme "LES ETATS-UNIS d'AMERIQUE"<lb/> C'est ce que je préférerais.</p>
+                <p rend="indent">Je crois que ce livre intéressera autant que les<lb/> belligérants, les <placeName ref="#l0184" type="pec"
+                        >Etats-Unis</placeName> et les neutres. On me demande de le<lb/> publier en <placeName ref="#l0037" type="pec"
+                        >Angleterre</placeName> et en anglais ! Avant de répondre, je ne vous<lb/> cache pas que je préférerais qu'il parût aux
+                        <placeName ref="#l0184" type="pec">Etats-Unis</placeName>. Il sera<lb/> fini, j'espère, dans deux mois. Quel éditeur américain
+                    me con-<lb break="no"/>seillez-vous? Mc.Millan a été parfait. Notre excellent <persName ref="#p0353" type="pec"
+                    >Keppel</persName><lb/> voudra-t-il lui demander si l'entreprise lui conviendra? Faudra-<lb break="no"/>t-il le faire traduire à
+                        <placeName ref="#l0001" type="pec">Paris</placeName>, comme "LES <placeName ref="#l0184" type="pec">ETATS-UNIS</placeName>
+                    d'AMERIQUE"<lb/> C'est ce que je préférerais.</p>
                 <closer>
                     <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
                     <address>
                         <addrLine rend="margin">Mo<subst>
                                 <del rend="overwritten">s</del>
                                 <add place="across">n</add>
-                            </subst>sieur le Président N.Murray BUTLER,</addrLine>
+                            </subst>sieur <persName ref="#p0002" type="pec">le Président N.Murray BUTLER</persName>,</addrLine>
                         <addrLine rend="indent">
-                            <hi rend="underline">NEW-YORK.</hi>
+                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                         </addrLine>
                     </address>
                 </closer>

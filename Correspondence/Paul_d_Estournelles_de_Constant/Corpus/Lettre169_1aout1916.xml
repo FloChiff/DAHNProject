@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-11-02" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-07-05" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -226,10 +227,12 @@
                 <pb facs="iiif:10.34847/nkl.ef2c9ed3/26b3ca15e449b95f7606e5006702c696ceee5cf6" n="1"/>
                 <head rend="center underline">LETTRE N°169.</head>
                 <opener>
-                    <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline">SÉNAT</hi></fw>
-                    <dateline rend="align(right)"><placeName>PERROS-GUIREC</placeName>, <date when="1916-08">Août 1916</date>.</dateline>
-                    <title rend="align(center) underline">LA FRANCE HABITUÉE à la GUERRE.</title>
-                    <salute rend="indent">Mon cher Butler,</salute></opener>
+                    <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
+                            >SÉNAT</orgName></hi></fw>
+                    <dateline rend="align(right)"><placeName ref="#l0008" type="pec">PERROS-GUIREC</placeName>, <date when="1916-08">Août
+                        1916</date>.</dateline>
+                    <title rend="align(center) underline">LA <placeName ref="#l0207" type="pec">FRANCE</placeName> HABITUÉE à la GUERRE.</title>
+                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute></opener>
                 <p rend="indent">Une guerre prolongée m'avait toujours sem<unclear reason="faded">b</unclear>lé ne<lb/> pouvoir être qu'un mal. Deux
                     années d'expérience m'apprennent<lb/> qu'elle présente aussi beaucoup d'avantages pour bien des gens,<lb/> - (sans parler des
                     neutres) – et pour les seuls pays belligérants.<lb/> Je m'explique maintenant qu'il se soit <subst>
@@ -243,7 +246,7 @@
                     la guerre tout ce qu'ils seront, mais ils<lb/> feront souche ; ils feront école ; leur succès passé orientera<lb/> l'avenir de
                     leurs enfants et de leurs émules. Toute la considé-<lb break="no"/>ration, tous les avantages, tout l'orgueil qu'ils auront gagnés<lb/>
                     <address>
-                        <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
                     <pb facs="iiif:10.34847/nkl.ef2c9ed3/f229be1d1d7a8876e9cdd42715e78329a69b3f46" n="2"/><note place="top" type="foliation">- 2
                         -</note> pendant la guerre feront masse en faveur des guerres futures, en<lb/> faveur des ligues pour la guerre, des journées
@@ -273,7 +276,8 @@
                         <del rend="overwritten">i</del>
                         <add place="across">o</add>
                     </subst>ns–nous allons<add hand="#annotation">,</add> au contraire<add hand="#annotation">,</add> d'une guerre défensive, celle
-                    que sou-<lb break="no"/>tient la France ? <del rend="strikethrough"><gap extent="2 characters"/></del>
+                    que sou-<lb break="no"/>tient la <placeName ref="#l0207" type="pec">France</placeName> ? <del rend="strikethrough"><gap
+                            extent="2 characters"/></del>
                     <subst>
                         <del rend="overwritten">q</del>
                         <add place="across">Q</add>
@@ -286,23 +290,26 @@
                         -</note><lb/> tandis que les moins héroïques constateront que nous ne pouvions<lb/> faire autrement ; qu'il est encore heureux
                     que nos sacrifices<lb/> n'aient pas été faits en pure perte ; que nous aurions pu souf-<lb break="no"/>frir tout autant pour finir
                     par être vaincus. Donc il faut faire,<lb/> dans la guerre actuelle, la part de l'immense soulagement qu'é-<lb break="no"/>prouvera
-                    la France d'avoir échappé au danger en contribuant à<lb/> l'effondrement du militarisme allemand, effondrement d'autant<lb/> plus
-                    précieux qu'il aura coûté plus cher. Ceux qui auront pri<add hand="#annotation" place="inline">s</add><lb/> part à cette victoire
-                    du bien sûr le mal et qui survivront, seront<lb/> grandis, améliorés, à leur propres yeux. Une mère continuera de<lb/> pleurer son
-                    fils tombé sur le champ de bataille, mais elle se<lb/> dira que sa mort à libérer des générations d'autres aux e<unclear
-                        reason="faded">n</unclear>fants...<lb/> Et la nation tout entière se dira cela. Le deuil de tous de-<lb break="no"/>viendra le
-                    sacrifice de tous, la fierté de tous ; la France ac-<lb break="no"/>tuelle sera saignée, affaiblie mais vivifiée dans sa
+                    la <placeName ref="#l0207" type="pec">France</placeName> d'avoir échappé au danger en contribuant à<lb/> l'effondrement du
+                    militarisme allemand, effondrement d'autant<lb/> plus précieux qu'il aura coûté plus cher. Ceux qui auront pri<add
+                        hand="#annotation" place="inline">s</add><lb/> part à cette victoire du bien sûr le mal et qui survivront, seront<lb/>
+                    grandis, améliorés, à leur propres yeux. Une mère continuera de<lb/> pleurer son fils tombé sur le champ de bataille, mais elle
+                    se<lb/> dira que sa mort à libérer des générations d'autres aux e<unclear reason="faded">n</unclear>fants...<lb/> Et la nation
+                    tout entière se dira cela. Le deuil de tous de-<lb break="no"/>viendra le sacrifice de tous, la fierté de tous ; la <placeName
+                        ref="#l0207" type="pec">France</placeName> ac-<lb break="no"/>tuelle sera saignée, affaiblie mais vivifiée dans sa
                         descendan-<lb break="no"/>ce par tout ce qu'elle aura donné d'elle-même, volontaireme<unclear reason="faded"
                     >n</unclear>t.<lb/> Un culte s'établira pour célébrer son sacrifice, culte national<lb/> et universel. Et ce culte deviendra
                     lui-même une compensation et<lb/> une g<del> </del>lorification de la guerre. C'est par centaines et centai-<lb break="no"/>nes de
-                    milliers que les peuples accourront, aussitôt la paix<lb/> rétablie, pour visiter la France et la Belgique sauvées. Nos<lb/>
-                    infortunées régions envahies deviendront un lieu de pèlerinage<lb/> universel. La postérité se déclarera leur débitrice. Et
-                    cette<lb/> dette sacrée, toute idéale, n'en sera pas moins la source d'un<lb/> renouveau prodigieux de vitalité. Dans cette
-                    atmosphère de <pb facs="iiif:10.34847/nkl.ef2c9ed3/a0a17c569921f4c41371e6a2adf307b50e0a823b" n="4"/><note place="top"
-                        type="foliation">- 4 -</note> considération et de gratitude, nous ferons largement la part de<lb/> l'influence qu'exerceront
-                    jusque dans leur descendance tous ceux<lb/> qui auront contribué à la délivrance du pays et du monde ; il<lb/> faudra faire aussi
-                    la part des pensions, - (voyez l'exemple des<lb/> Etats-Unis et le nombre des pensions distribuées aux innombrables<lb/>
-                    descendants des combattants de la Guerre de l'Indépendance ; )- il<lb/> faudra faire la part des situations privilégiées qui le <subst>
+                    milliers que les peuples accourront, aussitôt la paix<lb/> rétablie, pour visiter la <placeName ref="#l0207" type="pec"
+                        >France</placeName> et la <placeName ref="#l0073" type="pec">Belgique</placeName> sauvées. Nos<lb/> infortunées régions
+                    envahies deviendront un lieu de pèlerinage<lb/> universel. La postérité se déclarera leur débitrice. Et cette<lb/> dette sacrée,
+                    toute idéale, n'en sera pas moins la source d'un<lb/> renouveau prodigieux de vitalité. Dans cette atmosphère de <pb
+                        facs="iiif:10.34847/nkl.ef2c9ed3/a0a17c569921f4c41371e6a2adf307b50e0a823b" n="4"/><note place="top" type="foliation">- 4
+                        -</note> considération et de gratitude, nous ferons largement la part de<lb/> l'influence qu'exerceront jusque dans leur
+                    descendance tous ceux<lb/> qui auront contribué à la délivrance du pays et du monde ; il<lb/> faudra faire aussi la part des
+                    pensions, - (voyez l'exemple des<lb/>
+                    <placeName ref="#l0184" type="pec">Etats-Unis</placeName> et le nombre des pensions distribuées aux innombrables<lb/> descendants
+                    des combattants de la Guerre de l'Indépendance ; )- il<lb/> faudra faire la part des situations privilégiées qui le <subst>
                         <del rend="overwritten">d</del>
                         <add hand="#annotation" place="across">r</add>
                     </subst>evien-<lb break="no"/>dront de droit ; la part des mariages…. Toutes nos héritières,<lb/> heureusement, voudront épouser
@@ -325,20 +332,22 @@
                     exploitée, quels qu'<unclear reason="faded">i</unclear>ls soient.</p>
                 <p rend="indent">Si la guerre laisse les belligérants dans un état<lb/> de lassitude matérielle et morale telle qu'il n'y ait pas plus
                     de<lb/> justice après qu'avant la guerre, le grand crime sera couvert et<lb/> par conséquent encouragé.</p>
-                <p rend="indent">En Allemagne, il n'y aura pas de paix possible si,<lb/> par un misérables respect de scrupules dynastiques, le
-                    peuple<lb/> allemand doit conserver le Gouvernement qui l'a sacrifié folle-<lb break="no"/>ment en déclarant la guerre à ses
-                    voisins, s'il est condamné à<lb/> rester dans l'<subst>
+                <p rend="indent">En <placeName ref="#l0028" type="pec">Allemagne</placeName>, il n'y aura pas de paix possible si,<lb/> par un
+                    misérables respect de scrupules dynastiques, le peuple<lb/> allemand doit conserver le Gouvernement qui l'a sacrifié folle-<lb
+                        break="no"/>ment en déclarant la guerre à ses voisins, s'il est condamné à<lb/> rester dans l'<subst>
                         <del rend="overwritten"><gap extent="1 word"/></del>
                         <add place="across">avenir</add>
                     </subst> un troupeau passif, indifféremment victime<lb/> ou bourreau. Que nos alliés ne s'y trompent pas, ce n'est pas<lb/> en
-                    maintenant sur le trône allemand le Kronprinz maudit qu'ils<lb/> soutiendront le prestige du régime impérial. La dynastie des<lb/>
-                    Hohenzollern doit être condamnée moins par ses vainqueurs que<lb/> par des juges ; et de même celle des Habsbourg, celle du
-                    Tzar<lb/> de Bulgarie, du Sultan de Constantinople. Ces condamnations de-<lb break="no"/>vront être prononcées non militairement,
-                    mais par le Tribunal de<lb/> La Haye, création du Tzar de Russie, transformé en haute cour de<lb/> Justice criminelle. Cette
-                    première sanction internationale ob-<lb break="no"/>tenue, la conscience publique, dans chacun des pays qui auront<lb/> souffert
-                    de la guerre, réclamera la seconde sanction d'ordre<lb/> intérieur ; c'est-à-dire le châtiment de quiconque aura fait<lb/>
-                        o<unclear reason="faded">b</unclear>stacle à l'œuvre normale de la paix pour exploiter l'œuvre<lb/> monstrueuse de la
-                    guerre.</p>
+                    maintenant sur le trône allemand le <persName ref="#p0360" type="pec">Kronprinz</persName> maudit qu'ils<lb/> soutiendront le
+                    prestige du régime impérial. La dynastie des<lb/> Hohenzollern doit être condamnée moins par ses vainqueurs que<lb/> par des juges
+                    ; et de même celle des Habsbourg, celle du Tzar<lb/> de <placeName ref="#l0106" type="pec">Bulgarie</placeName>, du Sultan de
+                        <persName ref="#p0150" type="pec">Constantin</persName>ople. Ces condamnations de-<lb break="no"/>vront être prononcées non
+                    militairement, mais par le Tribunal de<lb/>
+                    <placeName ref="#l0227" type="pec">La Haye</placeName>, création du Tzar de <placeName ref="#l0432" type="pec">Russie</placeName>,
+                    transformé en haute cour de<lb/> Justice criminelle. Cette première sanction internationale ob-<lb break="no"/>tenue, la
+                    conscience publique, dans chacun des pays qui auront<lb/> souffert de la guerre, réclamera la seconde sanction d'ordre<lb/>
+                    intérieur ; c'est-à-dire le châtiment de quiconque aura fait<lb/> o<unclear reason="faded">b</unclear>stacle à l'œuvre normale de
+                    la paix pour exploiter l'œuvre<lb/> monstrueuse de la guerre.</p>
                 <pb facs="iiif:10.34847/nkl.ef2c9ed3/9fc26090b67a2ed6833913d61be6cc7e500132e6" n="6"/>
                 <note place="top" type="foliation">- 6 -</note>
                 <p rend="indent">Croire qu'après la guerre les Gouvernements pourro<subst>
@@ -389,19 +398,25 @@
                     beaucoup d'autres sources ; <pb facs="iiif:10.34847/nkl.ef2c9ed3/72f88aa6fb9f458b771bde3196b3e8b67f33f8fc" n="8"/><note
                         place="top" type="foliation">- 8 -</note><lb/> à commencer par la richesse générale et l'activité persistante,<lb/> malgré
                     tout, du pays.</p>
-                <p rend="indent">J'accompagnais récemment au front nos collègues d es<lb/> Parlements coloniaux britanniques, canadiens, australiens,
-                        afri-<lb break="no"/>cains. C'était le mois dernier, en Juillet. Ils étaient stupé-<lb break="no"/>faits de voir, depuis Paris
-                    jusqu'à nos tranchées au nord de<lb/> Compiègne, les récoltes préparées comme en temps de paix, sym-<lb break="no"/>bole de paix
-                    et de prospérité, en pleine guerre ! Je n'oublie pas<lb/> que sur un grand nombre de points du front tout est dévasté,<lb/> par le
-                    bombardement, par le rava<unclear reason="faded">g</unclear>e des explosions, du f<unclear reason="faded">e</unclear>r, du fe<subst>
+                <p rend="indent">J'accompagnais récemment au front nos collègues d es<lb/>
+                    <orgName ref="#g0050" type="pec">Parlement</orgName>s coloniaux britanniques, canadiens, australiens, afri-<lb break="no"/>cains.
+                    C'était le mois dernier, en Juillet. Ils étaient stupé-<lb break="no"/>faits de voir, depuis <placeName ref="#l0001" type="pec"
+                        >Paris</placeName> jusqu'à nos tranchées au nord de<lb/>
+                    <placeName ref="#l0148" type="pec">Compiègne</placeName>, les récoltes préparées comme en temps de paix, sym-<lb break="no"/>bole
+                    de paix et de prospérité, en pleine guerre ! Je n'oublie pas<lb/> que sur un grand nombre de points du front tout est
+                    dévasté,<lb/> par le bombardement, par le rava<unclear reason="faded">g</unclear>e des explosions, du f<unclear reason="faded"
+                        >e</unclear>r, du fe<subst>
                         <del rend="overwritten">r</del>
                         <add place="across">u</add>
                     </subst>,<lb/> du poison ; je ne parle pas, bien entendu, des régions où la ba-<lb break="no"/>taille a fait fureur comme à
-                    Verdun, comme en Champagne, comme à<lb/> Soissons, à Arras, dans le Nord ; mais l'étonnant est que paral-<lb break="no"/>lèlement
-                    à ce formidable service de destruction<add hand="#annotation" place="inline">s</add> de la guerre,<lb/> les chemins de fer
-                    continuent de faire leur service de paix et<lb/> plus que jamais ; double service, pour les soldats et pour les<lb/> voyageurs,
-                    pour les armées et pour l'intérieur du<add> </add>pays. Ces deux<lb/> services, contradictoires au début, se sont conciliés ; les
-                        che-<lb break="no"/>mins de fer assurent à la fois, avec la même régularité, la guerre<lb/> et la paix, la mo<subst>
+                        <placeName ref="#l0539" type="pec">Verdun</placeName>, comme en <placeName ref="#l0125" type="pec">Champagne</placeName>,
+                    comme à<lb/>
+                    <placeName ref="#l0477" type="pec">Soissons</placeName>, à <placeName ref="#l0045" type="pec">Arras</placeName>, dans le Nord ;
+                    mais l'étonnant est que paral-<lb break="no"/>lèlement à ce formidable service de destruction<add hand="#annotation"
+                        place="inline">s</add> de la guerre,<lb/> les chemins de fer continuent de faire leur service de paix et<lb/> plus que jamais
+                    ; double service, pour les soldats et pour les<lb/> voyageurs, pour les armées et pour l'intérieur du<add> </add>pays. Ces
+                    deux<lb/> services, contradictoires au début, se sont conciliés ; les che-<lb break="no"/>mins de fer assurent à la fois, avec la
+                    même régularité, la guerre<lb/> et la paix, la mo<subst>
                         <del rend="overwritten">t</del>
                         <add place="across">r</add>
                     </subst>t et la vie. Leurs recettes dépassent celles<lb/> des années de paix. Il y a deux horaires juxtaposés maintenant,<lb/>
@@ -423,7 +438,8 @@
                         <del rend="overwritten">t</del>
                         <add place="across">n</add>
                     </subst>t de fois rele-<lb break="no"/>vé parce qu'il est très grave, que la grande majorité des sol-<lb break="no"/>dats en
-                    France sont des cultivateurs : ils respectent la terre,<lb/> leur terre sacrée.</p>
+                        <placeName ref="#l0207" type="pec">France</placeName> sont des cultivateurs : ils respectent la terre,<lb/> leur terre
+                    sacrée.</p>
                 <p rend="indent">Même à proximité du front, des consignes très nettes<lb/> sont observées, les quantités les besoins d'y faire
                     exception, des<lb/> mesures spéciales sont prises. A-t-on besoin, pour les troupes,<lb/> de champs d'exercices ou de manœuvres, on
                     réserve expressément<lb/> le terr<del> </del>ain nécessaire et on épargne les alentours. C'est ainsi<lb/> que nous voyons, au
@@ -431,17 +447,18 @@
                         <del rend="overwritten">n</del>
                         <add hand="#annotation" place="across">l</add>
                     </subst>e, d'avoine ou de maïs,<lb/> de pommes de terre ou de betterave, un sentier porter cette<lb/> indication, avec une flèche
-                    : <hi rend="underline">Ecole des Grenadiers</hi>. Ou bien celle –<lb/> ci : <hi rend="underline">Cours d'obusiers</hi>. C'est au
-                    milieu de ces richesses, en<lb/> prenant grand soin de n'y pas toucher, que l'armée procède à ses <pb
-                        facs="iiif:10.34847/nkl.ef2c9ed3/b89928b730a095037b2fd4e9677d30adae05581b" n="10"/><note place="top" type="foliation">- 10
-                        -</note> exercices de dévastation. En fait, chaque parcelle de terre est<lb/> cultivée, à l'exception des tranchées et des
-                    cordons de fils de<lb/> fer de seconde et troisième lignes où les herbes poussent,<lb/> ronces naturelles dans les ronces
-                    artificielles ; mais en dehors<lb/> de ces étroites lignes, volontairement sacrifiées, le pays entier<lb/> n'est que moissons
-                    mûres. Je suis allé, depuis lors, en Bourgo-<lb break="no"/>gne, aux environs de Dijon. Jamais l'aspect de notre vignoble<lb/> n'a
-                    été plus beau. La vendange s'annonce très bien. Le vin sera<lb/> excellent et hors de prix. Les viticulteurs feront des fortu-<lb
-                        break="no"/>nes. J'en dirais autant de la prospérité des campagnes que j'ai<lb/> traversées en allant en Suisse. C'est un
-                    spectacle stupéfiant !<lb/> Quelle leçon pour l'avenir ! Des femmes, des enfants, des vieil-<lb break="no"/>lards ont pur mener à
-                    bien tout ce travail <subst>
+                    : <hi rend="underline"><orgName ref="#g0031" type="pec">Ecole des Grenadiers</orgName></hi>. Ou bien celle –<lb/> ci : <hi
+                        rend="underline">Cours d'obusiers</hi>. C'est au milieu de ces richesses, en<lb/> prenant grand soin de n'y pas toucher, que
+                    l'armée procède à ses <pb facs="iiif:10.34847/nkl.ef2c9ed3/b89928b730a095037b2fd4e9677d30adae05581b" n="10"/><note place="top"
+                        type="foliation">- 10 -</note> exercices de dévastation. En fait, chaque parcelle de terre est<lb/> cultivée, à l'exception
+                    des tranchées et des cordons de fils de<lb/> fer de seconde et troisième lignes où les herbes poussent,<lb/> ronces naturelles
+                    dans les ronces artificielles ; mais en dehors<lb/> de ces étroites lignes, volontairement sacrifiées, le pays entier<lb/> n'est
+                    que moissons mûres. Je suis allé, depuis lors, en Bourgo-<lb break="no"/>gne, aux environs de <placeName ref="#l0170" type="pec"
+                        >Dijon</placeName>. Jamais l'aspect de notre vignoble<lb/> n'a été plus beau. La vendange s'annonce très bien. Le vin
+                    sera<lb/> excellent et hors de prix. Les viticulteurs feront des fortu-<lb break="no"/>nes. J'en dirais autant de la prospérité
+                    des campagnes que j'ai<lb/> traversées en allant en <placeName ref="#l0498" type="pec">Suisse</placeName>. C'est un spectacle
+                    stupéfiant !<lb/> Quelle leçon pour l'avenir ! Des femmes, des enfants, des vieil-<lb break="no"/>lards ont pur mener à bien tout
+                    ce travail <subst>
                         <del rend="overwritten">:</del>
                         <add hand="#annotation" place="across">!</add>
                     </subst> – <subst>
@@ -450,11 +467,13 @@
                     </subst>endant la récolte,<lb/> il est vrai, l'autorité militaire envoie des régiments entiers<lb/> en permission ; ils se
                     succèdent et se relaient, de la fenaison<lb/> aux récoltes, puis aux vendanges. On emploie aussi des prison-<lb break="no"/>niers
                     allemands : terrible problème. Quand on les voit si bien<lb/> portants chez nous et quand on sait que les nôtres meurent de<lb/>
-                    faim et de fatigue en Allemagne, et quand on se dit que nous ren-<lb break="no"/>verrons là-bas, après la guerre, ces hommes
-                    valides en échange des<lb/> nôtres épuisés. Nous aurons préparé ainsi une renaissance alle-<lb break="no"/>mande, tandis que les
-                    Allemands, plus machiavéliques, poursuivent<lb/> ce qu'ils appellent la fin de la France…..</p>
-                <p rend="indent">Quoiqu'il en soit, par un moyen ou par un autre,<lb/> la France continue de p<unclear reason="faded">o</unclear>rter
-                    ses fruits partout où elle n'est<lb/> pas occupée par l'ennemi : là c'est, au contraire, le dépe<subst>
+                    faim et de fatigue en <placeName ref="#l0028" type="pec">Allemagne</placeName>, et quand on se dit que nous ren-<lb break="no"
+                    />verrons là-bas, après la guerre, ces hommes valides en échange des<lb/> nôtres épuisés. Nous aurons préparé ainsi une
+                    renaissance alle-<lb break="no"/>mande, tandis que les Allemands, plus machiavéliques, poursuivent<lb/> ce qu'ils appellent la fin
+                    de la <placeName ref="#l0207" type="pec">France</placeName>…..</p>
+                <p rend="indent">Quoiqu'il en soit, par un moyen ou par un autre,<lb/> la <placeName ref="#l0207" type="pec">France</placeName>
+                    continue de p<unclear reason="faded">o</unclear>rter ses fruits partout où elle n'est<lb/> pas occupée par l'ennemi : là c'est, au
+                    contraire, le dépe<subst>
                         <del rend="overwritten">p</del>
                         <add place="across">u</add>
                     </subst>plement<lb/> systématique, l'anéantissement sauvage et le martyre de tout un<lb/> peuple. Les Allemands prétendent que
@@ -462,32 +481,34 @@
                     <pb facs="iiif:10.34847/nkl.ef2c9ed3/8ce31238d665c74291b612da7d35d3674a9cb2be" n="11"/><note place="top" type="foliation">- 11
                         -</note> ce rêve de détruire <del rend="strikethrough">un peuple</del> leur pays ; c'est un prétexte qu'ils<lb/> invoquent
                     pour détruire réellement une partie du nôtre. Enfin, là<lb/> où ils ne sont pas, tout reste beau, tout reste riche. Je suis<lb/>
-                    et<lb/> allé<add hand="#annotation">,</add> plus d'une fois<add hand="#annotation">,</add> chez moi dans la Sarthe,<add
-                        hand="#annotation" place="above">et</add> en Bretagne où<lb/> sont mes enfants pour quelques semaines. C'est à ne pas
-                    croire<lb/> que nous sommes en guerre. Là aussi, et à plus forte raison, les<lb/> foins ont été coupés, séchés, rentrés, dans les
-                    conditions les<lb/> meilleures ; les blés un peu gâtés par la pluie du printemps n'en<lb/> sont pas moins déjà rangés en gerbes et
-                    en meules. On commence<lb/> à les battre ; la splendeur d'un été brûlant a mûri les épis<lb/> plus rares mais plus gros que
-                    d'habitude. Les premières machi-<lb break="no"/>nes ronflent comme à l'ordinaire dans tout le pays. On trouve,<lb/> je ne sais
-                    comment, la main-d'œuvre. C'est une pitié, il est<lb/> vrai, de voir les enfants chargés de responsabilités et de tra-<lb
-                        break="no"/>vaux bien au-dessus de <unclear reason="faded">l</unclear>eur âge ; je vois un garçon de neuf ans<lb/> conduisant
-                    chaque jour au grand t<unclear reason="faded">r</unclear>ot la carriole de ses parents,<lb/> descendant les côtes à faire frémir,
-                    pour lui, pour le cheval,<lb/> pour les passants…. C'est ainsi partout. Dans bien des fermes,<lb/> heureusement, des
-                    permissionnaires travaillent. A Clermont-Créans<lb/> nous avons depuis longtemps un détachement de chasseurs à pieds :<lb/> c'est
-                    un continuel va-et-vient. Ils viennent de Mamers, puis du<lb/> Mans, où ils se sont exercés au maniement individuel de la mi-<lb
-                        break="no"/>trailleuse et de la grenade ; puis attendent leur tour de départ<lb/> pour le front. Chaque semaine, le Vendredi,
-                    on en voi<subst>
+                    et<lb/> allé<add hand="#annotation">,</add> plus d'une fois<add hand="#annotation">,</add> chez moi dans <placeName ref="#l0456"
+                        type="pec">la Sarthe</placeName>,<add hand="#annotation" place="above">et</add> en <placeName ref="#l0101" type="pec"
+                        >Bretagne</placeName> où<lb/> sont mes enfants pour quelques semaines. C'est à ne pas croire<lb/> que nous sommes en guerre.
+                    Là aussi, et à plus forte raison, les<lb/> foins ont été coupés, séchés, rentrés, dans les conditions les<lb/> meilleures ; les
+                    blés un peu gâtés par la pluie du printemps n'en<lb/> sont pas moins déjà rangés en gerbes et en meules. On commence<lb/> à les
+                    battre ; la splendeur d'un été brûlant a mûri les épis<lb/> plus rares mais plus gros que d'habitude. Les premières machi-<lb
+                        break="no"/>nes ronflent comme à l'ordinaire dans tout le pays. On trouve,<lb/> je ne sais comment, la main-d'œuvre. C'est une
+                    pitié, il est<lb/> vrai, de voir les enfants chargés de responsabilités et de tra-<lb break="no"/>vaux bien au-dessus de <unclear
+                        reason="faded">l</unclear>eur âge ; je vois un garçon de neuf ans<lb/> conduisant chaque jour au grand t<unclear
+                        reason="faded">r</unclear>ot la carriole de ses parents,<lb/> descendant les côtes à faire frémir, pour lui, pour le
+                    cheval,<lb/> pour les passants…. C'est ainsi partout. Dans bien des fermes,<lb/> heureusement, des permissionnaires travaillent. A
+                        <placeName ref="#l0006" type="pec">Clermont-Créans</placeName><lb/> nous avons depuis longtemps un détachement de chasseurs à
+                    pieds :<lb/> c'est un continuel va-et-vient. Ils viennent de <placeName ref="#l0300" type="pec">Mamers</placeName>, puis du<lb/>
+                    <placeName ref="#l0004" type="pec">Mans</placeName>, où ils se sont exercés au maniement individuel de la mi-<lb break="no"
+                    />trailleuse et de la grenade ; puis attendent leur tour de départ<lb/> pour le front. Chaque semaine, le Vendredi, on en voi<subst>
                         <del rend="overwritten">e</del>
                         <add hand="#annotation" place="across">t</add>
-                    </subst> une cin-<lb break="no"/>quantaine prendre le train à La Flèche ; et le lendemain d'autres<lb/> les remplacent. Ainsi le
-                    front s'alimente régulièrement d'une <pb facs="iiif:10.34847/nkl.ef2c9ed3/9b0a2e7706c17c33e4d9a00333d57e06678ca7f2" n="12"/><note
-                        place="top" type="foliation">- 12 -</note> quantité de petits détachements d'hommes arrivant sans bruit,<lb/> comme des vo<subst>
+                    </subst> une cin-<lb break="no"/>quantaine prendre le train à <placeName ref="#l0002" type="pec">La Flèche</placeName> ; et le
+                    lendemain d'autres<lb/> les remplacent. Ainsi le front s'alimente régulièrement d'une <pb
+                        facs="iiif:10.34847/nkl.ef2c9ed3/9b0a2e7706c17c33e4d9a00333d57e06678ca7f2" n="12"/><note place="top" type="foliation">- 12
+                        -</note> quantité de petits détachements d'hommes arrivant sans bruit,<lb/> comme des vo<subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add place="across">y</add>
-                    </subst>ageurs, de tous les dépôts, de tous les villages de<lb/> France, où ceux qui restent, en attendant le retour, font
-                    office<lb/> de soldats laboureurs ; beaucoup aussi sont employés dans des<lb/> ateliers. Mon menuisier est mobilisé ; un chasseur
-                    ou deux, -<lb/> également menuis<unclear reason="faded">i</unclear>ers avant la guerre, - donnent quelques-unes de<lb/> leurs
-                    journées à son vieux père et à la maison et finalement<lb/> le commerce marche ; et de même pour la plupart des autres corps<lb/>
-                    de métier.</p>
+                    </subst>ageurs, de tous les dépôts, de tous les villages de<lb/>
+                    <placeName ref="#l0207" type="pec">France</placeName>, où ceux qui restent, en attendant le retour, font office<lb/> de soldats
+                    laboureurs ; beaucoup aussi sont employés dans des<lb/> ateliers. Mon menuisier est mobilisé ; un chasseur ou deux, -<lb/>
+                    également menuis<unclear reason="faded">i</unclear>ers avant la guerre, - donnent quelques-unes de<lb/> leurs journées à son vieux
+                    père et à la maison et finalement<lb/> le commerce marche ; et de même pour la plupart des autres corps<lb/> de métier.</p>
                 <p rend="indent">Ainsi la fermière continue de gagner sa vie ; elle<lb/> vend sa récolte, ses animaux, ses canards, ses épaules, son
                     beurre,<lb/> son vin, son cidre et tout cela un peu plus cher qu'en temps<lb/> normal, parce qu'elle a beaucoup plus de peine tout
                     de même à<lb/> trouver sa main-d'œuvre et parce que, en général, elle la paie<lb/> aussi plus cher. De même la femme du menuisier,
@@ -500,14 +521,16 @@
                         >c</unclear>tion<lb/> pour gagner prématurément leur vie. C'est tout un monde qui par-<lb break="no"/>ticipe à des
                     distributions de salaires venus d'en haut. Nous<lb/>
                     <pb facs="iiif:10.34847/nkl.ef2c9ed3/f448f657f93983eb5cc379df8e70df798147d3b3" n="13"/><note place="top" type="foliation">- 13
-                        -</note> avons au Mans des usines qui fabriquent des automobiles et, en<lb/> même temps, des obus ; - il y a partout des
-                    meuniers, des fournis-<lb break="no"/>seurs de bois de lits, de sacs, de couvertures, de véhicules<lb/> militaires, etc… etc… ; à
-                    La Flèche un tanneur paie chaque jour<lb/> plusieurs centaines d'ouvriers et d'ouvrières ; - les professeurs,<lb/> régulièrement
-                    payés comme tous les fonctionnaires, ont repris<lb/> leur cours dans les lycées et, par conséquent, gagnent leur vie ; -<lb/> ils
-                    prennent leurs vacances, avec leurs familles.</p>
-                <p rend="indent">Là encore je saisis la preuve de l'incroyable pros-<lb break="no"/>périté qui règne en France après deux années de
-                    guerre. Partout<lb/> la vie a repris son cours. Je ne parle pas de Paris et des toi-<lb break="no"/>lettes et des théâtres ouverts
-                    tous les soirs et pleins de monde ;<lb/> et donnant même des pièces nouvelles, très gaies…. Je fais<lb/> la <subst>
+                        -</note> avons au <placeName ref="#l0004" type="pec">Mans</placeName> des usines qui fabriquent des automobiles et, en<lb/>
+                    même temps, des obus ; - il y a partout des meuniers, des fournis-<lb break="no"/>seurs de bois de lits, de sacs, de couvertures,
+                    de véhicules<lb/> militaires, etc… etc… ; à <placeName ref="#l0002" type="pec">La Flèche</placeName> un tanneur paie chaque
+                    jour<lb/> plusieurs centaines d'ouvriers et d'ouvrières ; - les professeurs,<lb/> régulièrement payés comme tous les
+                    fonctionnaires, ont repris<lb/> leur cours dans les lycées et, par conséquent, gagnent leur vie ; -<lb/> ils prennent leurs
+                    vacances, avec leurs familles.</p>
+                <p rend="indent">Là encore je saisis la preuve de l'incroyable pros-<lb break="no"/>périté qui règne en <placeName ref="#l0207"
+                        type="pec">France</placeName> après deux années de guerre. Partout<lb/> la vie a repris son cours. Je ne parle pas de
+                        <placeName ref="#l0001" type="pec">Paris</placeName> et des toi-<lb break="no"/>lettes et des théâtres ouverts tous les soirs
+                    et pleins de monde ;<lb/> et donnant même des pièces nouvelles, très gaies…. Je fais<lb/> la <subst>
                         <del rend="overwritten">f</del>
                         <add hand="#annotation" place="across">p</add>
                     </subst>art des étrangers qui viennent encore sur nos <subst>
@@ -516,13 +539,14 @@
                     </subst>oule<subst>
                         <del rend="overwritten">v</del>
                         <add place="across">v</add>
-                    </subst>ards et<lb/> des provinciaux et des officiers de passage. On vient à Paris<lb/> pour acheter et ce n'est pas à Paris qu'on
-                    va regarder à la dé-<lb break="no"/>pense : nous sommes bien loin, c'est entendu, des extravagances<lb/> du temps de paix, mais
-                    les magasins de luxe, les fleuristes, les<lb/> couturiers, l<unclear reason="faded">e</unclear>s tapissiers, sont pourtant loin
-                    d'être tous fer-<lb break="no"/>més. Ainsi, les usines d'automobiles s'étant mises à faire des<lb/> obus, on ne devrait plus
-                    trouver d'autos à vendre, sinon à prix<lb/> d'or : quantité de gens, à ma connaissance, trouvent pourtant le<lb/> moyen d'en
-                    acheter ou d'en importer<add hand="#annotation">;</add> et des autos de très grand<lb/> luxe ! Je suis entré, ces jours derniers,
-                    dans un magasin an<unclear reason="faded">g</unclear>lais<lb/> des boulevards qui fournit les équipements militaires en même <pb
+                    </subst>ards et<lb/> des provinciaux et des officiers de passage. On vient à <placeName ref="#l0001" type="pec"
+                    >Paris</placeName><lb/> pour acheter et ce n'est pas à <placeName ref="#l0001" type="pec">Paris</placeName> qu'on va regarder à la
+                        dé-<lb break="no"/>pense : nous sommes bien loin, c'est entendu, des extravagances<lb/> du temps de paix, mais les magasins de
+                    luxe, les fleuristes, les<lb/> couturiers, l<unclear reason="faded">e</unclear>s tapissiers, sont pourtant loin d'être tous
+                        fer-<lb break="no"/>més. Ainsi, les usines d'automobiles s'étant mises à faire des<lb/> obus, on ne devrait plus trouver
+                    d'autos à vendre, sinon à prix<lb/> d'or : quantité de gens, à ma connaissance, trouvent pourtant le<lb/> moyen d'en acheter ou
+                    d'en importer<add hand="#annotation">;</add> et des autos de très grand<lb/> luxe ! Je suis entré, ces jours derniers, dans un
+                    magasin an<unclear reason="faded">g</unclear>lais<lb/> des boulevards qui fournit les équipements militaires en même <pb
                         facs="iiif:10.34847/nkl.ef2c9ed3/7d9f8685149daef069c3d5d51ad543f203b5d436" n="14"/><note place="top" type="foliation">- 14
                         -</note> temps que les vêtements de sport. Je n'ai pu m'empêcher d'expri-<lb break="no"/>mer mon étonnement devant l'élégance
                     de ce magasin, le luxe de<lb/> sa clientèle. "Ne m'en parlez pas", me répond naïvement le com-<lb break="no"/>mis, un homme âgé,
@@ -550,10 +574,11 @@
                     famille. Ma cuisinière dépense <subst>
                         <del rend="overwritten">d</del>
                         <add hand="#annotation" place="across">s</add>
-                    </subst>es éco-<lb break="no"/>nomies en paquets qu'elle expédie à ce qui reste, hélas ! de nos<lb/> anciens blessés de Créans. Je
-                    dirais même qu'en g<del> </del>énéral les pau-<lb break="no"/>vres sont, à proportion, plus généreux que les riches, parmi les-<lb
-                        break="no"/>quels il en est un qui donnent autant en France qu'en Angleterre<lb/> ou en Amérique. Les pauvres ne gardent pas
-                    l'argent qui leur<lb/> arrive comme par hasard : ils se réjouissent de le dépenser comme<lb/> l'avar<subst>
+                    </subst>es éco-<lb break="no"/>nomies en paquets qu'elle expédie à ce qui reste, hélas ! de nos<lb/> anciens blessés de <placeName
+                        ref="#l0006" type="pec">Créans</placeName>. Je dirais même qu'en g<del> </del>énéral les pau-<lb break="no"/>vres sont, à
+                    proportion, plus généreux que les riches, parmi les-<lb break="no"/>quels il en est un qui donnent autant en <placeName
+                        ref="#l0207" type="pec">France</placeName> qu'en <placeName ref="#l0037" type="pec">Angleterre</placeName><lb/> ou en
+                    Amérique. Les pauvres ne gardent pas l'argent qui leur<lb/> arrive comme par hasard : ils se réjouissent de le dépenser comme<lb/> l'avar<subst>
                         <del rend="overwritten">a</del>
                         <add hand="#annotation" place="across">e</add>
                     </subst> de l'accumuler. Les bourgeois mêmes dépensent, raisonna-<lb break="no"/>blement, bien entendu, mais dépensent. Ils se
@@ -567,10 +592,11 @@
                         <del rend="overwritten">.</del>
                         <add hand="#annotation" place="across">!</add>
                     </subst> que d'impôts !<lb/> Mais là encore, on ne se fait pas de mauvais sang, "pas de che-<lb break="no"/>veux" ; "on ne s'en
-                    fait pas !" C'est l'expression à la mode. Un<lb/> économiste de la valeur de M. Gide nous a démontré qu'après tout,<lb/> peu nous
-                    importait d'avoir à payer des impôts, puisque, si une<lb/> partie de la France les paie, l'autre en touchera directement ou<lb/>
-                    indirectement le produit ; cela fera compensation. A part ce que<lb/> nous aurons acheté à l'étranger ou, tout ce qui sera dépensé
-                    en<lb/> France n'aura fait que passer une poche dans l'autre et se <pb
+                    fait pas !" C'est l'expression à la mode. Un<lb/> économiste de la valeur de <persName ref="#p0272" type="pec">M. Gide</persName>
+                    nous a démontré qu'après tout,<lb/> peu nous importait d'avoir à payer des impôts, puisque, si une<lb/> partie de la <placeName
+                        ref="#l0207" type="pec">France</placeName> les paie, l'autre en touchera directement ou<lb/> indirectement le produit ; cela
+                    fera compensation. A part ce que<lb/> nous aurons acheté à l'étranger ou, tout ce qui sera dépensé en<lb/>
+                    <placeName ref="#l0207" type="pec">France</placeName> n'aura fait que passer une poche dans l'autre et se <pb
                         facs="iiif:10.34847/nkl.ef2c9ed3/d01a30f59b8491864b13878329962bb205c20c67" n="16"/><note place="top" type="foliation">- 16
                         -</note> retrouvera dans la fortune publique, sous le nivellement de l'im-<lb break="no"/> pôt. Certains produits se vendront
                     moins, mais d'autres davan-<lb break="no"/> tage. C'est ce qu’une vieille Bretonne m'explique à sa facon:<lb/> "Dieu nous garde
@@ -585,10 +611,10 @@
                     dations du gibier. On trouvera quelque moyen terme pour chasser<lb/> sans avouer qu'on chasse.</p>
                 <p rend="indent">L'innocente pêche à la ligne a été rouverte sans<lb/> discussion et les pêcheurs sont encore, en attendant des
                     trains<lb/> de chasseurs, une clientèle pour les compagnies de chemins de<lb/> fer. Il y a aussi les baigneurs. A la fin de
-                    Juillet 1914 toute<lb/> la France était en vacances ; les uns en voyage, les autres aux<lb/> eaux, aux bains de mer. La
-                    mobilisation déclarée, on est rentré<lb/> chez soi d’urgence comme on a pu. En 1915 on n’est pas parti.<lb/> Mais en 1916 les
-                    enfants ont repris leurs études ; l'été arrive,<lb/> les écoles sont fermées et ils ne peuvent pas voyager à l'étranger<lb/>
-                    Grande privation en France où, passant d'un extrême à l'autre,<lb/>
+                    Juillet 1914 toute<lb/> la <placeName ref="#l0207" type="pec">France</placeName> était en vacances ; les uns en voyage, les autres
+                    aux<lb/> eaux, aux bains de mer. La mobilisation déclarée, on est rentré<lb/> chez soi d’urgence comme on a pu. En 1915 on n’est
+                    pas parti.<lb/> Mais en 1916 les enfants ont repris leurs études ; l'été arrive,<lb/> les écoles sont fermées et ils ne peuvent
+                    pas voyager à l'étranger<lb/> Grande privation en <placeName ref="#l0207" type="pec">France</placeName> où, passant d'un extrême à l'autre,<lb/>
                     <pb facs="iiif:10.34847/nkl.ef2c9ed3/3c83c8842441da9733ff95a8d3c75d799cf6d167" n="17"/><note place="top" type="foliation">- 17
                         -</note> nous commencions à prendre grand goût aux villégiatures et aux<lb/> déplacements. Les pères restent soit au front,
                     soit à leur poste ;<lb/> ou bien ils ne sont plus, ou ils sont en convalescence. Tout<lb/> naturellement les voyages de vacances
@@ -596,15 +622,16 @@
                     de monde, qu'on ne peut pas trouver<lb/> de place. J'ai cru à l'exagération, au hasard d'une région<lb/> exceptionnellement
                     envahie <unclear reason="faded">p</unclear>ar les familles des officiers anglais<lb/> si nombreux sur notre front, ou des Belges,
                     ou des habitants ré-<lb break="no"/>fugiés de nos département occupés. Mais non ; j'ai vérifié le<lb/> fait moi-même. Trois de mes
-                    nièces se sont entendues pour aller<lb/> passer, avec leurs enfants, l'été au bord de la mer, à Perros-<lb/>Guirec, en Bretagne,
-                    d'où je vous écris cette longue lettre ; l'une<lb/> a son mari officier détaché à l'état-major serbe à Salonique ; il<lb/> a
-                    demandé lui-même que ses enfants ne souffrent pas de son absen-<lb break="no"/>ce ; il veut les retrouver bien portants ; l'autre
-                    a son mari<del rend="strikethrough">n</del><lb/> receveur des Finances et quotidiennement bombardé dans la zone des<lb/> armées ;
-                    même raisonnement ; la troisième est veuve et fait comme<lb/> les autres ; finalement j'ai moi-même amené ma petite fille re-<lb
-                        break="no"/>joindre ses cousins. C'est une joie de les voir profiter de<lb/> l'été magnifique dans ce noble et rude pays. Et
-                    c'est une chance<lb/> d’<unclear reason="faded">a</unclear>voir pu trouver à les y installer. Je l'ai vu de mes propres<lb/> yeux
-                    ; des familles sont en panne, sur les routes, avec leurs ba-<lb break="no"/>gages, cherchant vainement une chambre libre dans les
-                    hôtels,<lb/> dans les vill<subst>
+                    nièces se sont entendues pour aller<lb/> passer, avec leurs enfants, l'été au bord de la mer, à <placeName ref="#l0008" type="pec"
+                        >Perros-<lb/>Guirec</placeName>, en <placeName ref="#l0101" type="pec">Bretagne</placeName>, d'où je vous écris cette longue
+                    lettre ; l'une<lb/> a son mari officier détaché à l'état-major serbe à <placeName ref="#l0454" type="pec">Salonique</placeName> ;
+                    il<lb/> a demandé lui-même que ses enfants ne souffrent pas de son absen-<lb break="no"/>ce ; il veut les retrouver bien portants
+                    ; l'autre a son mari<del rend="strikethrough">n</del><lb/> receveur des Finances et quotidiennement bombardé dans la zone des<lb/>
+                    armées ; même raisonnement ; la troisième est veuve et fait comme<lb/> les autres ; finalement j'ai moi-même amené ma petite fille
+                        re-<lb break="no"/>joindre ses cousins. C'est une joie de les voir profiter de<lb/> l'été magnifique dans ce noble et rude
+                    pays. Et c'est une chance<lb/> d’<unclear reason="faded">a</unclear>voir pu trouver à les y installer. Je l'ai vu de mes
+                    propres<lb/> yeux ; des familles sont en panne, sur les routes, avec leurs ba-<lb break="no"/>gages, cherchant vainement une
+                    chambre libre dans les hôtels,<lb/> dans les vill<subst>
                         <del rend="overwritten"><gap extent="1 character"/></del>
                         <add hand="#annotation" place="across">a</add>
                     </subst>s et les maisons particulières. Une moitié du<lb/> principal hôtel de la plage est occupée par les blessés, l'autre<lb/>
@@ -620,23 +647,27 @@
                     les plateaux des quêteuses. <unclear reason="faded">E</unclear>t le soir les principales villas<lb/> sont très éclairées ; on se
                     reçoit ; on donne à dîner ; ce<del rend="strikethrough">s</del> matin<lb/> les loueurs n'ont pas assez d’autos, pas assez de
                     breaks, de chars<lb/> à banc, de victorias pour aller conduire les baigneurs en excur-<lb break="no"/>sion aux environs ! Une
-                    plage entière, Trégastel, a été transfor-<lb break="no"/>mée par la charité privée en colonie de vacances pour les enfants<lb/>
-                    pauvres des quartiers les plus populeux de Paris. Le 15 Août<lb/> il y avait à La Clarté, un pélérinage où les bonnets blancs
-                    des<lb/> Bretonnes se pressaient par milliers autour de l'église. On était<lb/> venu de tous les côtés pour <gap
-                        extent="few words"/> voir défiler la<lb/> procession comme un long ruban sinueux à travers les rochers de<lb/>
+                    plage entière, <placeName ref="#l0517" type="pec">Trégastel</placeName>, a été transfor-<lb break="no"/>mée par la charité privée
+                    en colonie de vacances pour les enfants<lb/> pauvres des quartiers les plus populeux de <placeName ref="#l0001" type="pec"
+                        >Paris</placeName>. Le 15 Août<lb/> il y avait à La Clarté, un pélérinage où les bonnets blancs des<lb/> Bretonnes se
+                    pressaient par milliers autour de l'église. On était<lb/> venu de tous les côtés pour <gap extent="few words"/> voir défiler
+                    la<lb/> procession comme un long ruban sinueux à travers les rochers de<lb/>
                     <pb facs="iiif:10.34847/nkl.ef2c9ed3/1d278f57a13f4a316ff598b516519097494175eb" n="19"/><note place="top" type="foliation">- 19
-                        -</note> Ploumanach, immortalisés par Renan. Personne n’oubliait la guer-<lb break="no"/>re. Et comment l'oublier quand des
-                    blessés en uniformes défraî-<lb break="no"/>chis, avec leurs médailles militaires et leurs croix <del rend="strikethrough">de
-                        guerre</del><lb/> étaient là. comme spectateurs, et aussi de jeunes matelots en<lb/> permission, avec la jeunesse des
-                    environs. Mais dans ce pays<lb/> de rochers et de marins qui, depuis des siècles, subissent sans<lb/> faiblir l'assaut furieux de
-                    l'Océan, dans ce pays ou tout est<lb/> lutte héroïque de l'homme contre la tempête, un malheur de plus<lb/> après tant d'autres ne
-                    peut abattre les courages. La population<lb/> reste ce qu'elle est partout en France, indéfinissable, mais ici<lb/>
-                    particulièrement mystérieuse, triste et gaie, <add hand="#annotation" place="above">rude et fine, généreuse et pauvre</add> avant
-                    tout vivante,<lb/> coûte que coûte. Nul ne pleure, nul ne gémit: les cœurs résis-<lb break="no"/>tent ici à la tourmente comme le
-                    roc, et comme ces plantes obs-<lb break="no"/>tinées qui s’enracinent dans le roc. Le vent, la pluie, la marée,<lb/> le désastre,
-                    rien n'y change, rien n'y peut. Et c'est surtout<lb/> la femme restée au pays, tandis que son mari et ses frères, ses<lb/> fils,
-                    sont à la pêche pendant des mois, à Terre-Neuve ou en Is-<lb break="no"/>lande, c’est la femme qui porte sur elle toute la
-                    responsabilité<lb/> de la résistance ; c’est elle qui tient tout. Aussi est-elle<lb/> fière, indomptable. <subst>
+                        -</note>
+                    <placeName ref="#l0398" type="pec">Ploumanach</placeName>, immortalisés par <persName ref="#p0529" type="pec">Renan</persName>.
+                    Personne n’oubliait la guer-<lb break="no"/>re. Et comment l'oublier quand des blessés en uniformes défraî-<lb break="no"/>chis,
+                    avec leurs médailles militaires et leurs croix <del rend="strikethrough">de guerre</del><lb/> étaient là. comme spectateurs, et
+                    aussi de jeunes matelots en<lb/> permission, avec la jeunesse des environs. Mais dans ce pays<lb/> de rochers et de marins qui,
+                    depuis des siècles, subissent sans<lb/> faiblir l'assaut furieux de l'Océan, dans ce pays ou tout est<lb/> lutte héroïque de
+                    l'homme contre la tempête, un malheur de plus<lb/> après tant d'autres ne peut abattre les courages. La population<lb/> reste ce
+                    qu'elle est partout en <placeName ref="#l0207" type="pec">France</placeName>, indéfinissable, mais ici<lb/> particulièrement
+                    mystérieuse, triste et gaie, <add hand="#annotation" place="above">rude et fine, généreuse et pauvre</add> avant tout
+                    vivante,<lb/> coûte que coûte. Nul ne pleure, nul ne gémit: les cœurs résis-<lb break="no"/>tent ici à la tourmente comme le roc,
+                    et comme ces plantes obs-<lb break="no"/>tinées qui s’enracinent dans le roc. Le vent, la pluie, la marée,<lb/> le désastre, rien
+                    n'y change, rien n'y peut. Et c'est surtout<lb/> la femme restée au pays, tandis que son mari et ses frères, ses<lb/> fils, sont à
+                    la pêche pendant des mois, à <placeName ref="#l0504" type="pec">Terre-Neuve</placeName> ou en Is-<lb break="no"/>lande, c’est la
+                    femme qui porte sur elle toute la responsabilité<lb/> de la résistance ; c’est elle qui tient tout. Aussi est-elle<lb/> fière,
+                    indomptable. <subst>
                         <del rend="overwritten"><gap extent="few words"/></del>
                         <add place="across"> tant qu'elle est</add>
                     </subst> du moins <del rend="strikethrough"><gap extent="few characters"/></del> encore<lb/> jeune et qu’elle a la force de
@@ -663,20 +694,20 @@
                     laisser troubler par nos<lb/> désordres passagers.<lb/> Les femmes répareront les désastres de cette guerre ;<lb/> et ce sont
                     elles déjà qui, pendant la guerre, malgré la guerre, <pb
                         facs="iiif:10.34847/nkl.ef2c9ed3/c48c796e6bca3ac66652097d7848ebd69c96ec6e" n="21"/><note place="top" type="foliation">- 21
-                        -</note> pour mieux supporter la guerre, ont déjà fait reprendre en France<lb/> le cours des choses, et les habitudes de la
-                    paix.</p>
-                <p rend="indent">Quand j'assiste à cette reprise de la vie normale<lb/> en France, à ce retour de notre activité générale, a toutes
-                    ces<lb/> dépenses héroïques ou frivoles de notre énergie, je reste confon-<lb break="no"/>du plus que jamais de l'imbécilité du
-                    Gouvernement allemand que,<lb/>
+                        -</note> pour mieux supporter la guerre, ont déjà fait reprendre en <placeName ref="#l0207" type="pec">France</placeName><lb/>
+                    le cours des choses, et les habitudes de la paix.</p>
+                <p rend="indent">Quand j'assiste à cette reprise de la vie normale<lb/> en <placeName ref="#l0207" type="pec">France</placeName>, à ce
+                    retour de notre activité générale, a toutes ces<lb/> dépenses héroïques ou frivoles de notre énergie, je reste confon-<lb
+                        break="no"/>du plus que jamais de l'imbécilité du Gouvernement allemand que,<lb/>
                     <add hand="#annotation" place="above">vous et moi,</add> nous avons essavé de convaincre et qui n'a rien compris, même<lb/> pas
                     son intérêt. Il s'est figuré que son militarisme féroce et<lb/> sa fourberie réduiraient des peuples libres en esclavage,
                     parce<lb/> que ces peuples voulaient la paix ! Il n'a pas compris qu’un peu-<lb break="no"/>ple libre tient a son idéal plus qu’a
                     la vie <add hand="#annotation" place="inline">qui passe.</add></p>
                 <closer><signed rend="align(right)">Votre <unclear reason="faded">a</unclear>ffectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)">d'Estournelles</signed>
+                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles</persName></signed>
                     <address>
-                        <addrLine>à Monsieur le Président N.Murray BUTLER,</addrLine>
-                        <addrLine rend="indent"><hi rend="underline">NEW-YORK.</hi></addrLine>
+                        <addrLine>à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>,</addrLine>
+                        <addrLine rend="indent"><hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi></addrLine>
                     </address></closer>
             </div>
         </body>

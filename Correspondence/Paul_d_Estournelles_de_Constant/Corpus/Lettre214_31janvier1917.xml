@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-10" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
                 accMat)</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -232,43 +233,48 @@
                     <head rend="center underline">LETTRE N° 214.</head>
                     <opener>
                         <fw corresp="#lh-senat" place="margin" type="letterhead">
-                            <hi rend="underline">SÉNAT</hi>
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
                         </fw>
-                        <dateline rend="align(right)"><placeName>PARIS</placeName>, <date when-iso="1917-01-31">31 Janvier 1917</date>.</dateline>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-01-31">31 Janvier
+                                1917</date>.</dateline>
                         <title rend="align(center) underline">LE TRIOMPHE ALLEMAND sur MER, sur TERRE &amp; dans l'AIR.</title>
-                        <salute rend="indent">Mon cher Butler,</salute>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent">Le "TEMPS" de ce jour revient sur la protestation<lb/> de Columbia University dont je faisais mention, ces jours
-                        derniers,<lb/> dans ma lettre N°213, concernant l'asservissement des infortunés<lb/> Belges par l'Allemagne. Vous trouverez
-                        ci-joint l'article qui rend<lb/> nommage à votre ferme et noble attitude en cette circonstance si<lb/> émouvante.</p>
+                    <p rend="indent">Le "TEMPS" de ce jour revient sur la protestation<lb/> de <orgName ref="#g0024" type="pec">Columbia
+                            University</orgName> dont je faisais mention, ces jours derniers,<lb/> dans ma lettre N°213, concernant l'asservissement
+                        des infortunés<lb/> Belges par l'<placeName ref="#l0028" type="pec">Allemagne</placeName>. Vous trouverez ci-joint l'article
+                        qui rend<lb/> nommage à votre ferme et noble attitude en cette circonstance si<lb/> émouvante.</p>
                     <p rend="indent">Il faut nous attendre à des manifestations déses-<lb break="no"/>pérées de violence et à de nouveaux attentats du
-                        Gouvernement alle-<lb break="no"/>mand. Nous y sommes préparés. J'ai proposé et fait nommer au<lb/> Sénat une commission dont
-                        je suis le rapporteur sur "<hi rend="underline">la navigation<lb/> sous-marine et aérienne</hi>". Ce titre en dit long. On ne
-                        me reproche<lb/> plus aujourd'hui ce qu'on appelait, avant la guerre, mes rêves ; la<lb/> réalité ne leur a que trop donné
-                        raison ! Demain j'interpelle le<lb/> Gouvernement au Sénat et je confirme mon intervention faite en<lb/> Comité secret sur le
-                        développement de la campagne des sous-marins<lb/> allemands. Mon intention est de ne pas laisser s'accréditer cette<lb/> sotte
-                        impression qu'il n'y a qu'a laisser les Allemands redoubler<lb/>
+                        Gouvernement alle-<lb break="no"/>mand. Nous y sommes préparés. J'ai proposé et fait nommer au<lb/>
+                        <orgName ref="#g0002" type="pec">Sénat</orgName> une commission dont je suis le rapporteur sur "<hi rend="underline">la
+                            navigation<lb/> sous-marine et aérienne</hi>". Ce titre en dit long. On ne me reproche<lb/> plus aujourd'hui ce qu'on
+                        appelait, avant la guerre, mes rêves ; la<lb/> réalité ne leur a que trop donné raison ! Demain j'interpelle le<lb/>
+                        Gouvernement au <orgName ref="#g0002" type="pec">Sénat</orgName> et je confirme mon intervention faite en<lb/> Comité secret
+                        sur le développement de la campagne des sous-marins<lb/> allemands. Mon intention est de ne pas laisser s'accréditer
+                        cette<lb/> sotte impression qu'il n'y a qu'a laisser les Allemands redoubler<lb/>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N.Murray BUTLER.</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         </address>
                         <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> d'audace ; et j'espère bien que, u<del> </del>ne fois
                         de plus, ils auront triom-<lb break="no"/>phé trop tôt du succès de leur impudente barbarie. Le triomphe ne<lb/> réussira pas
                         plus aux Allemands sur mer que sur terre.</p>
                     <p rend="indent">A propos de la navigation aérienne, je vous ai<lb/> parlé, au début de la guerre, du plaisir que j'avais à suivre
-                        de ma<lb/> fenêtre. à Paris, le vol des pigeons dont le colombier couronnait<lb/> l'une des villas qui sont devant moi, dans
-                        les jardins. A mon grand<lb/> regret ces pigeons viennent de disparaître. J'en voulais au pro-<lb break="no"/>priétaire qui,
-                        sans doute, pensais-je, ne se souciait pas de payer<lb/> indéfiniment les frais de leur entretien ei de leur nourriture.<lb/>
-                        J'avais tort. Ces pigeons font, eux aussi, de l'aviation. Ils ont<lb/> été mobilisés ; ils appartiennent dorénavant à nos
-                        flottes aériennes.<lb/> Ils ne volent plus pour l'amour de l'art mais, eux aussi, contre<lb/> le militarisme prussien.</p>
+                        de ma<lb/> fenêtre. à <placeName ref="#l0001" type="pec">Paris</placeName>, le vol des pigeons dont le colombier
+                        couronnait<lb/> l'une des villas qui sont devant moi, dans les jardins. A mon grand<lb/> regret ces pigeons viennent de
+                        disparaître. J'en voulais au pro-<lb break="no"/>priétaire qui, sans doute, pensais-je, ne se souciait pas de payer<lb/>
+                        indéfiniment les frais de leur entretien ei de leur nourriture.<lb/> J'avais tort. Ces pigeons font, eux aussi, de l'aviation.
+                        Ils ont<lb/> été mobilisés ; ils appartiennent dorénavant à nos flottes aériennes.<lb/> Ils ne volent plus pour l'amour de
+                        l'art mais, eux aussi, contre<lb/> le militarisme prussien.</p>
                     <p rend="indent">Décidément tout cela finit par faire bien du monde<lb/> contre les Allemands ! Ils ont beau triompher toujours ;
                         leurs<lb/> victoires ne sont ni solides, ni enviables.</p>
                     <closer>
                         <signed rend="indent">Votre affectueusement devoué,</signed>
-                        <signed hand="#annotation" rend="align(right)">d'Estournelles de Constant</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
                         <address>
-                            <addrLine rend="margin">à Monsieur le Président N. Murray BUTLER,</addrLine>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N. Murray BUTLER</persName>,</addrLine>
                             <addrLine rend="indent">
-                                <hi rend="underline">NEW-YORK.</hi>
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
                             </addrLine>
                         </address>
                     </closer>
