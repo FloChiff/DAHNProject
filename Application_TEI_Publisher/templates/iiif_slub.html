@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+
+    <title data-template="config:app-title"/>
+    <meta name="description" content="Documents from SLUB Dresden"/>
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"/>
+    <link rel="stylesheet" href="resources/css/pec.css"/>
+    <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+    <script type="module" src="pb-leaflet-map.js" data-template="pages:load-components"/>
+    <style>
+        body {
+            --pb-view-height: calc(100vh - 220px);
+        }
+
+        pb-view {
+            font: var(--pb-base-font);
+        }
+        
+        #title-view1 {
+                font-size: 20px;
+                margin: 3% 0;
+                text-align: center;
+                }
+        
+        #view1 {
+            flex: 3 0;
+            max-width: 60vw;
+            margin: 8px 16px;
+            height: var(--pb-view-height);
+            overflow: auto;
+        }
+
+        .content-body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0 10px;
+        }
+        
+        .breadcrumbs h5 {
+                    display: inline-block;
+                }
+
+        aside {
+            flex: 1 0;
+            min-width: 360px;
+            max-width: 480px;
+            margin-right: 16px;
+            height: var(--pb-view-height);
+            overflow: auto;
+        }
+
+        aside pb-highlight {
+            display: block;
+            width: 100%;
+            padding: 0 2px;
+        }
+
+        pb-leaflet-map {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" unresolved="unresolved">
+            <pb-document id="document1" data-template="pages:pb-document"/>
+            <app-drawer-layout force-narrow="force-narrow">
+                <app-drawer data-template="templates:include" data-template-path="templates/drawer.html"/>
+                <app-header-layout>
+                    <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall" data-template="browse:fix-links">
+                        <app-toolbar data-template="templates:include" data-template-path="templates/menu.html"/>
+                        <!-- Overwrite toolbar to add metadata toggle -->
+                        <app-toolbar data-template="templates:include" data-template-path="templates/toolbar_letters.html"/>
+                    </app-header>
+                    
+                    <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription">
+                        <div class="drawer-content">
+                            <pb-load id="toc" url="api/document/{doc}/contents?target=transcription&amp;icons=true" expand="expand" src="document1" subscribe="toc" load-once="load-once">
+                                <pb-i18n key="dialogs.loading">Loading</pb-i18n>
+                            </pb-load>
+                        </div>
+                    </pb-drawer>
+                    
+                    <pb-drawer toggle="tocToggle-fr" class="tocDrawer" emit="toc" subscribe="transcription">
+                        <div class="drawer-content">
+                        <!-- Déroule les métadonnées en français -->
+                            <h3>Métadonnées</h3>
+                            <pb-view id="metadata" src="document1" xpath="//teiHeader" view="single" subscribe="toc">
+                                <pb-param name="mode" value="metadata-fr"/>
+                            </pb-view>
+                        </div>
+                    </pb-drawer>
+
+                    <pb-drawer toggle="tocToggle-en" class="tocDrawer" emit="toc" subscribe="transcription">
+                        <div class="drawer-content">
+                        <!-- Déroule les métadonnées en anglais -->
+                            <h3>Metadata</h3>
+                            <pb-view id="metadata" src="document1" xpath="//teiHeader" view="single" subscribe="toc">
+                                <pb-param name="mode" value="metadata-en"/>
+                            </pb-view>
+                        </div>
+                    </pb-drawer>
+
+                    <section class="breadcrumbs">
+                    <h2>
+                             <pb-view id="title-view1" src="document1" xpath="//teiHeader" view="single">
+                                <pb-param name="mode" value="title"/>
+                            </pb-view>
+                            </h2>
+                    </section>
+                    
+                <section class="content-body">
+                <pb-grid id="grid" panels="[0]" subscribe="transcription" emit="transcription">
+                
+                        <template>
+                        <pb-panel emit="transcription">
+                        
+                <pb-grid-action action="add" class="grid-add" grid="#grid">
+                            <paper-button>
+                                <iron-icon icon="icons:view-carousel"/> Add</paper-button>
+                            </pb-grid-action>
+                                <pb-grid-action grid="#grid" slot="toolbar" action="remove">
+                                    <paper-icon-button icon="icons:close"/>
+                                </pb-grid-action>
+                                
+                        <template title="Facsimile">
+                                    <pb-facsimile id="facsimile" base-uri="https://images.iiif.slub-dresden.de/iiif/2/" default-zoom-level="0" show-navigation-control="show-navigation-control" show-navigator="show-navigator" subscribe="transcription"/>
+                                </template>
+                                
+                        <template title="Index">
+                        <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="letter">
+                    <pb-param name="mode" value="facets"/>
+                    </pb-view>
+                    </template>
+                                
+                            <template title="Map">
+                            <aside>
+                        <pb-leaflet-map subscribe="transcription" access-token="pk.eyJ1Ijoid29sZmdhbmdtbSIsImEiOiJjam1kMjVpMnUwNm9wM3JwMzdsNGhhcnZ0In0.v65crewF-dkNsPF3o1Q4uw"/>
+                        </aside>
+                        </template>
+                        
+                        </pb-panel>
+                        </template>
+                            <pb-panel emit="transcription">
+                                <!-- Added to the toolbar -->
+                                
+                                <template title="Reading version with critical annotations">
+                                    <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription">
+                        <pb-param name="mode" value="original"/>
+                        </pb-view>
+                                </template>
+                                <template title="Reading version with named entities">
+                    <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription">
+                    <pb-param name="mode" value="entities"/>
+                    </pb-view>
+                                </template>
+                                <template title="Diplomatic version">
+                                    <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription">
+                        <pb-param name="mode" value="corrections"/>
+                        </pb-view>
+                                </template>
+                            </pb-panel>
+                    </pb-grid>
+                    
+                </section>
+            </app-header-layout>
+        </app-drawer-layout>
+    </pb-page>
+    <div class="splash"/>
+</body>
+
+</html>

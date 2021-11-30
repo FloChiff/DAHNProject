@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+
+    <title>Index of places</title>
+    <meta name="description" content="Index of places"/>
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"/>
+    <link rel="stylesheet" href="resources/css/pec.css"/>
+    <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+    <script type="module" src="pb-leaflet-map.js" data-template="pages:load-components"/>
+    <style>
+        body {
+            --pb-view-height: calc(100vh - 220px);
+        }
+    
+        
+        #view1 {
+            flex: 3 0;
+            max-width: 60vw;
+            margin: 8px 16px;
+            height: calc(100vh - 128px);
+            overflow: auto;
+            columns: 2;
+            font-size: 14px;
+        }
+        
+        #title-view1 {
+                font-size: 18px;
+                margin: 3% 0;
+            }
+            
+        #list {
+                font-size: 14px;
+        }
+        
+        .toc {
+                grid-column: 1 / 1;
+                grid-row: 1 / span 3;
+                overflow: auto;
+                font-size: 18px;
+            }
+
+        .content-body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        aside {
+            flex: 1 0;
+            min-width: 360px;
+            max-width: 480px;
+            margin-right: 16px;
+            overflow: auto;
+        }
+
+        aside pb-highlight {
+            display: block;
+            width: 100%;
+            padding: 0 8px;
+        }
+
+        pb-leaflet-map {
+            width: 100%;
+            height: 100%;
+            height: var(--pb-view-height);
+        }
+
+    </style>
+</head>
+
+<body>
+    <pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" unresolved="unresolved">
+        <pb-document id="document1" data-template="pages:pb-document"/>
+        <app-drawer-layout force-narrow="force-narrow">
+            <app-drawer data-template="templates:include" data-template-path="templates/drawer.html"/>
+            <app-header-layout>
+                <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+                    <app-toolbar data-template="templates:include" data-template-path="templates/menu.html"/>
+                    <app-toolbar data-template="templates:include" data-template-path="templates/toolbar.html"/>
+                </app-header>
+
+                <section class="content-body">
+                <aside>
+                    <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription" max-width="1024px">
+                            <div class="drawer-content">
+                                    <pb-view id="title-view1" src="document1" xpath="//teiHeader" view="single">
+                                        <pb-param name="mode" value="title"/>
+                                    </pb-view>
+                                <pb-view id="list" src="document1" xpath="//body" view="single" subscribe="toc" emit="letter">
+                                    <pb-param name="mode" value="list"/>
+                                </pb-view>
+                            </div>
+                        </pb-drawer>
+                        </aside>
+                    <pb-view id="view1" src="document1" subscribe="transcription" emit="letter" wait-for="pb-leaflet-map">
+                            <pb-param name="mode" value="index"/>
+                        </pb-view>
+                    <aside>
+                        <pb-leaflet-map subscribe="letter" access-token="pk.eyJ1Ijoid29sZmdhbmdtbSIsImEiOiJjam1kMjVpMnUwNm9wM3JwMzdsNGhhcnZ0In0.v65crewF-dkNsPF3o1Q4uw"/>
+                    </aside>
+                </section>
+            </app-header-layout>
+        </app-drawer-layout>
+    </pb-page>
+    <div class="splash"/>
+</body>
+
+</html>

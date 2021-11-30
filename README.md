@@ -10,6 +10,10 @@
   - Paul d'Estournelles de Constant
     - Corpus
     - Indexes
+- Application TEI Publisher
+  - Templates
+  - Documentation
+  - ODD
 - Project Development
   - Documentation
   - Scripts
@@ -45,6 +49,9 @@ This folder contains the two main corpus of our project:
 Finally, the folder also contains encoding guidelines, developed according to the TEI Guidelines and what has be done for the two previously mentioned corpus. Those encoding guidelines are specific to egodocuments and it provides precision sometimes not given in the TEI Guidelines and choices made for the encoding. Those guidelines present both header and body, as well as indexes and specific parts of the encoding (dates, named entities, substitutions, etc.)
 
 The guidelines are available in three formats: XML, HTML and PDF. 
+
+### Application TEI Publisher
+This folder contains elements used in the web application developed with TEI Publisher to display the TEI-XML files stored in the 'Correspondence' folder: the ODD, the templates used for the documents and the indexes, and the documentation for the application.
 
 ### Project development
 This folder contains three elements, essential for the development of the project.
