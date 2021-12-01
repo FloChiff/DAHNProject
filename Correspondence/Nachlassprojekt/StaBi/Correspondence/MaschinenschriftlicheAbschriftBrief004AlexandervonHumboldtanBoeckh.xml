@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="a5" xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- corresp="kalliope#DE-1a-32305" -->
+    <!-- eine XML-Datei für jede Mappe mit eigener Signatur -->
+    <!-- Die Kalliope-ID kommt als Attribut @corresp zum teiHeader des Korpus, mit "kalliope#" als Erkennungsmerkmal (siehe oben). So kann später die Verbindung zu Kalliope
+             einfach hergestellt werden. Die ID steht auf der Korpusseite (z.B. http://tei.ibi.hu-berlin.de/boeckh/corpus?135) unten in grauer Schrift. -->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="de">Maschinenschriftliche Abschrift eines Briefes von Alexander von Humboldt an August Boeckh (o.O., 23. Dezember
+                    1844)</title>
+                <title xml:lang="en">Typewritten copy of a letter from Alexander von Humboldt to August Boeckh (o.O., December 23, 1844)</title>
+                <!-- genaue Zeichenkette der Mappenbezeichnung, z.b. http://tei.ibi.hu-berlin.de/boeckh/corpus?135 -->
+                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+                <principal>
+                    <persName>
+                        <forename>Anne</forename>
+                        <surname>Baillot</surname>
+                    </persName>
+                    <affiliation>
+                        <orgName>Humboldt-Universität zu Berlin</orgName>
+                        <address>
+                            <street>Unter den Linden 6</street>
+                            <postCode>10099</postCode>
+                            <settlement>Berlin</settlement>
+                            <country key="DE">Deutschland</country>
+                        </address>
+                    </affiliation>
+                </principal>
+                <respStmt>
+                    <resp>Encoding by</resp>
+                    <persName ref="#hannes.fischer">
+                        <forename>Hannes</forename>
+                        <surname>Fischer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Humboldt-Universität zu Berlin</authority>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+                </availability>
+                <date when-iso="2015-03">März 2015</date>
+            </publicationStmt>
+            <seriesStmt>
+                <title type="genre">Briefe</title>
+                <title type="topic">Berliner Universität</title>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country key="DE">Deutschland</country>
+                        <settlement>Berlin</settlement>
+                        <institution>Staatsbibliothek zu Berlin – Preußischer Kulturbesitz</institution>
+                        <repository>Nachl. 172 (August Boeckh)/Ergänzung zum Nachlass im Altbestand</repository>
+                        <!-- genaue Zeichenkette, z.b. http://tei.ibi.hu-berlin.de/boeckh/corpora?4 -->
+                        <collection>Kasten 14/Mappe 40</collection>
+                        <!-- genaue Zeichenkette, z.b. http://tei.ibi.hu-berlin.de/boeckh/corpora?4 -->
+                        <idno type="stabi.berlin">1-14</idno>
+                        <!-- hier Blattzahl von allem in der Mappe -->
+                        <idno type="stabi.berlin">10</idno>
+                        <!-- Blattangabe des Briefs, Blatt nicht Seite! -->
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <note n="1" resp="#hannes.fischer">
+                                <note><persName cert="low" ref="#p0639">Johann Peter Müller</persName></note>
+                                <note><persName ref="#p0469">Friedrich Wilhelm IV., König von Preußen</persName></note>
+                            </note>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent><measure type="leaf"><measure xml:lang="de">1 Blatt</measure></measure></extent>
+                            </supportDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote scope="major" scribe="copyist">Abschrift des Briefes A. Boeckhs durch unbekannte Hand per
+                                Schreibmaschine.</handNote>
+                            <!-- nur Haupthand, falls es mehrere Hände geben sollte,  brown_ink, black_ink,red_ink, pencil, (pen)-->
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+                
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <!-- Sprachen: de, fr, grc, en, la -->
+                <language ident="de">Deutsch</language>
+            </langUsage>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#p0276">Alexander von Humboldt</persName>
+                    
+                    <placeName cert="medium" ref="#l1103">Berlin</placeName>
+                    
+                    <date when-iso="1844-12-23"/>
+                </correspAction>
+                <correspAction type="received">
+                    <persName ref="#p0178">August Boeckh</persName>
+                    
+                    <placeName ref="#l1103">Berlin</placeName>
+                </correspAction>
+                
+                
+                
+            </correspDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-02" who="#hannes.fischer">Encoding.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div/>
+        </body>
+    </text>
+</TEI>
+
