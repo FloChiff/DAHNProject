@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
 
     <title data-template="config:app-title"/>
-    <meta name="description" content="Documents"/>
+    <meta name="description" content="Letters"/>
 
     <link rel="stylesheet" type="text/css" href="resources/fonts/font.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"/>
@@ -48,6 +48,7 @@
             margin: 0 10px;
         }
         
+        
         .breadcrumbs h5 {
                     display: inline-block;
                 }
@@ -79,12 +80,12 @@
     <pb-page data-template="pages:pb-page" locales="resources/i18n/{{ns}}/{{lng}}.json" unresolved="unresolved">
             <pb-document id="document1" data-template="pages:pb-document"/>
             <app-drawer-layout force-narrow="force-narrow">
-                <app-drawer data-template="lib:include" data-template-path="templates/drawer.html"/>
+                <app-drawer data-template="templates:include" data-template-path="templates/drawer.html"/>
                 <app-header-layout>
                     <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
-                        <app-toolbar data-template="lib:include" data-template-path="templates/menu.html"/>
+                        <app-toolbar data-template="templates:include" data-template-path="templates/menu.html"/>
                         <!-- Overwrite toolbar to add metadata toggle -->
-                        <app-toolbar data-template="lib:include" data-template-path="templates/toolbar_letters.html"/>
+                        <app-toolbar data-template="templates:include" data-template-path="templates/toolbar_letters.html"/>
                     </app-header>
                     
                     <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription">
@@ -122,6 +123,14 @@
                             </pb-view>
                             </h2>
                             </section>
+                        <section>
+                            <h5 style="text-align:left; padding-left:1em;"> Previous letter:
+                    <pb-view src="document1" xpath="//teiHeader/profileDesc/correspDesc/correspContext/ref[@type='prev'][@target]" not-found="There is no previous letter." view="single"/>
+                    </h5>
+                    <h5 style="text-align:right; padding-right:1em;"> Next letter:
+                    <pb-view src="document1" xpath="//teiHeader/profileDesc/correspDesc/correspContext/ref[@type='next'][@target]" not-found="There is no next letter." view="single"/>
+                        </h5>
+                    </section>
                     
                 <section class="content-body">
                 <pb-grid id="grid" panels="[0]" subscribe="transcription" emit="transcription">

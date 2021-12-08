@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
 
 <head>
@@ -14,7 +15,7 @@
 
     <link rel="stylesheet" type="text/css" href="resources/fonts/font.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap"/>
-    <link rel="stylesheet" href="resources/css/pec.css"/>
+    <link rel="stylesheet" href="resources/css/discholed.css"/>
     <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
     <script type="module" src="pb-leaflet-map.js" data-template="pages:load-components"/>
     <style>
@@ -46,6 +47,7 @@
             justify-content: center;
             margin: 0 10px;
         }
+        
         
         .breadcrumbs h5 {
                     display: inline-block;
@@ -80,7 +82,7 @@
             <app-drawer-layout force-narrow="force-narrow">
                 <app-drawer data-template="templates:include" data-template-path="templates/drawer.html"/>
                 <app-header-layout>
-                    <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall" data-template="browse:fix-links">
+                    <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
                         <app-toolbar data-template="templates:include" data-template-path="templates/menu.html"/>
                         <!-- Overwrite toolbar to add metadata toggle -->
                         <app-toolbar data-template="templates:include" data-template-path="templates/toolbar_letters.html"/>
@@ -123,12 +125,11 @@
                     </section>
                     
                 <section class="content-body">
-                <pb-grid id="grid" panels="[0]" subscribe="transcription" emit="transcription">
-                
-                        <template>
+                    <pb-grid id="grid" panels="[0]" subscribe="transcription" emit="transcription">
+                    
+                    <template>
                         <pb-panel emit="transcription">
-                        
-                <pb-grid-action action="add" class="grid-add" grid="#grid">
+                    <pb-grid-action action="add" class="grid-add" grid="#grid">
                             <paper-button>
                                 <iron-icon icon="icons:view-carousel"/> Add</paper-button>
                             </pb-grid-action>
@@ -136,11 +137,7 @@
                                     <paper-icon-button icon="icons:close"/>
                                 </pb-grid-action>
                                 
-                        <template title="Facsimile">
-                                    <pb-facsimile id="facsimile" base-uri="https://images.iiif.slub-dresden.de/iiif/2/" default-zoom-level="0" show-navigation-control="show-navigation-control" show-navigator="show-navigator" subscribe="transcription"/>
-                                </template>
-                                
-                        <template title="Index">
+                                <template title="Index">
                         <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="letter">
                     <pb-param name="mode" value="facets"/>
                     </pb-view>
@@ -152,9 +149,9 @@
                         </aside>
                         </template>
                         
-                        </pb-panel>
+                                </pb-panel>
                         </template>
-                            <pb-panel emit="transcription">
+                     <pb-panel emit="transcription">
                                 <!-- Added to the toolbar -->
                                 
                                 <template title="Reading version with critical annotations">
@@ -173,8 +170,9 @@
                         </pb-view>
                                 </template>
                             </pb-panel>
-                    </pb-grid>
                     
+                    <pb-facsimile id="facsimile" base-uri="https://images.iiif.slub-dresden.de/iiif/2/" default-zoom-level="0" show-navigation-control="show-navigation-control" show-navigator="show-navigator" subscribe="transcription"/>
+                    </pb-grid>
                 </section>
             </app-header-layout>
         </app-drawer-layout>

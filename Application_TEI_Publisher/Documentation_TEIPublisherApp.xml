@@ -1,5 +1,5 @@
-<?teipublisher depth="3" template="guidelines.html"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?teipublisher depth="3" template="guidelines.html"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -78,7 +78,7 @@
                 <div>
                     <head>The composition of the application's tree</head>
                     <p>The application contains several folders, associated to different functions for each: <figure>
-                            <graphic url="illustrations/application_tree.png" width="200px"/>
+                            <graphic url="illustrations/tree_app.png" width="200px"/>
                             <head>The application's tree</head>
                         </figure>
                         <list>
@@ -106,7 +106,7 @@
                                 (display the letters and other documents), "places.html", "persons.html", "organizations.html", "organizations_nomap.html" and "bibliographies.html" (display the indices) and "guidelines.html" (display the documentation (like this
                                 one)). Finally, it contains two folders "history" and "about", that gathers respectively the templates that informs
                                 about the project and its history, and the context of writing of the corpus. <figure>
-                                    <graphic url="illustrations/application_templates.png" width="200px"/>
+                                    <graphic url="illustrations/templates_app.png" width="200px"/>
                                     <head>The application's templates</head>
                                 </figure>
                             </item>
@@ -130,7 +130,7 @@
                         <head>Navigation within the site</head>
                         <p>
                             <figure>
-                                <graphic url="illustrations/application_menu.png" width="800px"/>
+                                <graphic url="illustrations/menu_app.png" width="800px"/>
                                 <head>Menu of the application</head>
                             </figure>
                             <list>
@@ -165,7 +165,7 @@
                             indexes. Finally, it will also be possible to give additional elements from the project (in this application, history of
                             the project and history of the corpus are an option).</p>
                         <p>Example with d'Estournelles de Constant: <figure>
-                                <graphic url="illustrations/homepage_collection.png" width="700px"/>
+                                <graphic url="illustrations/collection_homepage.png" width="700px"/>
                                 <head>Content of "d'Estournelles de Constant" collection</head>
                             </figure>
                         </p>
@@ -209,7 +209,7 @@
                                 <p>For this website, the images are not directly imported inside the application, because it would become too big as
                                     things progress and more corpus are added. We chose to display the images with the help of NAKALA and its IIIF server, which will insure
                                     a great quality of images and a better sustainability.</p>
-                                <p>The link is put inside the <gi>pb</gi> tag with the attribute <att>facs</att> and with a value that always needs to
+                                <p>The link is put inside the <gi>pb</gi> tag with the attribute <att>facs</att> and with a value that needs to
                                     start with "<val>iiif:</val>", in order to correctly called the image. Consequently, with this configuration,
                                     everytime the reader moves on to the next page from a document, the page will appear with its corresponding
                                     image.</p>
@@ -276,7 +276,7 @@
                                     <item>Bibliographies</item>
                                 </list>
                                 <figure>
-                                    <graphic url="illustrations/application_indexes.png" width="700px"/>
+                                    <graphic url="illustrations/indexes_app.png" width="700px"/>
                                     <head>The indexes</head>
                                 </figure>
                             </p>
@@ -456,7 +456,7 @@
                         <head>Documentation</head>
                         <p>This section contains two files, useful for working with and within the application, because it gives all the general rules
                             needed to perfectly fit your corpus inside the application. <figure>
-                                <graphic url="illustrations/application_documentation.png" width="700px"/>
+                                <graphic url="illustrations/doc_app.png" width="700px"/>
                                 <head>Documentation</head>
                             </figure>
                         </p>
@@ -511,41 +511,41 @@
                                     &lt;ul class="documents"&gt;
                                          &lt;li class="document"&gt;
                                          &lt;div class="thumbnail"&gt;
-                                                 &lt;img src="Destournelles.png" width="128"/&gt;
+                                                 &lt;img src="resources/images/Destournelles.png" title="Paul d'Estournelles de Constant" width="150"/&gt;
                                              &lt;/div&gt;
                                              &lt;div class="document-info"&gt;
                                                  &lt;h3&gt;
-                                                     &lt;a href="#" data-collection="PECcorresp"&gt;
+                                                     &lt;a href="#" data-collection="pec"&gt;
                                                          &lt;pb-i18n key="collection.pec.title"&gt;Correspondence of Paul d'Estournelles de Constant&lt;/pb-i18n&gt;
                                                      &lt;/a&gt;
                                                  &lt;/h3&gt;
                                                  &lt;p&gt;
-                                                     &lt;pb-i18n key="collection.pec.desc"&gt;Folder containing files linked to d'Estournelles correspondence.&lt;/pb-i18n&gt;
+                                                     &lt;pb-i18n key="collection.pec.desc"&gt;This folder contains the corpus and the indexes of Paul d'Estournelles de Constant correspondence, as well as an history of the corpus and information about the project.&lt;/pb-i18n&gt;
                                                  &lt;/p&gt;
                                              &lt;/div&gt;
                                          &lt;/li&gt;
                                          &lt;li class="document"&gt;
                                          &lt;div class="thumbnail"&gt;
-                                                 &lt;img src="boeckh.png" width="128"/&gt;
+                                                 &lt;img src="resources/images/chamisso.png" title="Adelbert von Chamisso" width="150"/&gt;
                                              &lt;/div&gt;
                                              &lt;div class="document-info"&gt;
                                                  &lt;h3&gt;
-                                                     &lt;a href="#" data-collection="IntellectuelsBerlinois"&gt;
-                                                         &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Correspondence of Berlin intellectuals&lt;/pb-i18n&gt;
+                                                     &lt;a href="#" data-collection="bi"&gt;
+                                                         &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Letters and texts: Intellectual Berlin around 1800&lt;/pb-i18n&gt;
                                                      &lt;/a&gt;
                                                  &lt;/h3&gt;
                                                  &lt;p&gt;
-                                                     &lt;pb-i18n key="collection.intellectuelsberlinois.desc"&gt;Folder containing files linked to Berlin intellectuals' correspondence.&lt;/pb-i18n&gt;
+                                                     &lt;pb-i18n key="collection.intellectuelsberlinois.desc"&gt;This folder contains the corpus and the indexes of letters and texts from Berlin intellectuals between 1800 and 1830.&lt;/pb-i18n&gt;
                                                  &lt;/p&gt;
                                              &lt;/div&gt;
                                          &lt;/li&gt;
                                          &lt;li class="document"&gt;
                                          &lt;div class="thumbnail"&gt;
-                                                 &lt;img src="documentation.png"/&gt;
+                                                 &lt;img src="resources/images/documentation.png" title="Documentation" width="150" height="120"/&gt;
                                              &lt;/div&gt;
                                              &lt;div class="document-info"&gt;
                                                  &lt;h3&gt;
-                                                     &lt;a href="#" data-collection="Guidelines"&gt;
+                                                     &lt;a href="#" data-collection="guidelines"&gt;
                                                          &lt;pb-i18n key="collection.guidelines.title"&gt;Documentation&lt;/pb-i18n&gt;
                                                      &lt;/a&gt;
                                                  &lt;/h3&gt;
@@ -563,7 +563,7 @@
                             collection within <att>data-collection</att> and if the file is for a subcollection, it will be essential to mention the
                             collection to have a functionning link:
                             <egXML xml:space="preserve">
-                                &lt;a href="#" data-collection="PECcorresp/Corpus"&gt;
+                                &lt;a href="#" data-collection="pec/corpus"&gt;
                                     &lt;pb-i18n key="collection.corpus.title"&gt;Corpus&lt;/pb-i18n&gt;
                                 &lt;/a&gt;
                             </egXML>
@@ -666,18 +666,18 @@
                             &lt;/a&gt;
                                     &lt;paper-listbox slot="dropdown-content"&gt;
                                                         &lt;paper-item&gt;
-                                                            &lt;a href="${app}/index.html?collection=PECcorresp" data-template="pages:parse-params"&gt;
+                                                            &lt;a href="${app}/index.html?collection=pec" data-template="pages:parse-params"&gt;
                                         &lt;pb-i18n key="collection.pec.title"&gt;Correspondence of Paul d'Estournelles de Constant&lt;/pb-i18n&gt;
                                     &lt;/a&gt;
                                                         &lt;/paper-item&gt;
                                                         &lt;paper-item&gt;
-                                                            &lt;a href="${app}/index.html?collection=IntellectuelsBerlinois" data-template="pages:parse-params"&gt;
-                                        &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Correspondence of Berlin intellectuals&lt;/pb-i18n&gt;
+                                                            &lt;a href="${app}/index.html?collection=bi" data-template="pages:parse-params"&gt;
+                                        &lt;pb-i18n key="collection.intellectuelsberlinois.title"&gt;Letters and texts: Intellectual Berlin around 1800&lt;/pb-i18n&gt;
                                     &lt;/a&gt;
                                                         &lt;/paper-item&gt;
                                                         &lt;paper-item&gt;
                                             &lt;a href="${app}/index.html?collection=NAMEOFTHENEWCOLLECTION" data-template="pages:parse-params"
-                                                &lt;pb-i18n key="collection.NAMEOFTHENEWCOLLECTION.title"&gt;Correspondence of ...&lt;/pb-i18n&gt;
+                                                &lt;pb-i18n key="collection.NAMEOFTHENEWCOLLECTION.title"&gt;...&lt;/pb-i18n&gt;
                                                 &lt;/a&gt;
                                         &lt;/paper-item&gt;
                                                     &lt;/paper-listbox&gt;
@@ -699,33 +699,29 @@
                             <egXML xml:space="preserve">
                                 "collection": {
                                     "corpus" : {
-                                        "title": "Corpus",
-                                        "desc" : "Folder with the corpus' letters."
-                                        },
-                                    "index" : {
-                                        "title": "Indexes",
-                                        "desc" : "Folder with the indexes attached to the corpus."
-                                        },
-                                    "history" : {
-                                        "title": "History",
-                                        "desc" : "History of the correspondents and contextualisation of the exchange."
-                                        },
-                                    "about" : {
-                                        "title": "The project",
-                                        "desc" : "Information about the history and the collaborators of the project."
-                                        },
-                                    "pec" : {
-                                        "title": "Correspondence of d'Estournelles de Constant",
-                                        "desc": "This folder contains the corpus and the indexes of Paul d'Estournelles de Constant correspondence, as well as an history of the corpus and information about the project."
-                                        },
-                                    "intellectuelsberlinois" : {
-                                        "title": "Correspondence of Berlin intellectuals",
-                                        "desc": "This folder contains the corpus and the indexes of Berlin intellectuals correspondence between 1800 and 1830."
-                                        },
-                                    "guidelines" : {
-                                        "title": "Documentation",
-                                        "desc": "Documentation about the encoding rules for ego document corpus and how to operate and manage the application"
-                                        }
+                                		"title": "Corpus",
+                                		"desc" : "Folder with the corpus' letters and texts."
+                                	},
+                                	"index" : {
+                                		"title": "Indexes",
+                                		"desc" : "Folder with the indexes attached to the corpus."
+                                	},
+                                	"history" : {
+                                		"title": "History",
+                                		"desc" : "History of the corpus and contextualisation."
+                                	},
+                                	"about" : {
+                                		"title": "About",
+                                		"desc" : "Information about the history and the collaborators of the project."
+                                	},
+                                	"pec" : {
+                                		"title": "Correspondence of d'Estournelles de Constant",
+                                		"desc": "This folder contains the corpus and the indexes of Paul d'Estournelles de Constant correspondence, as well as an history of the corpus and information about the project."
+                                	},
+                                	"intellectuelsberlinois" : {
+                                		"title": "Letters and texts: Intellectual Berlin around 1800",
+                                		"desc": "This folder contains the corpus and the indexes of letters and texts from Berlin intellectuals between 1800 and 1830."
+                                	},
                                     },
                             </egXML>
                             To add your corpus, you need to follow the example of 'pec' and 'intellectuelsberlinois' by giving an identifier for your
