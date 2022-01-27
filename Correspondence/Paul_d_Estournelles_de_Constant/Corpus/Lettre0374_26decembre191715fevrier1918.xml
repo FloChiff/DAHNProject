@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-25" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -227,7 +228,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J385_lettre0374_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.ace4sysb/84316d1c47e337b99a064ab4eb7b4ff5a623beec" n="1"/>
                 <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
                     >SÉNAT</orgName></hi></fw>
                 <head rend="center underline">LETTRE N° 374. <lb/>(Ancien N° 341).</head>
@@ -252,8 +253,8 @@
                     elle n'est pas sans inquiétudes ; elle voit ses <address>
                         <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
-                    <pb facs="FRAD072_12J385_lettre0374_002" n="2"/><note place="top" type="foliation">- 2 -</note> belles régions envahies, soumises
-                    à un régime d'extermination<lb/> et de dévastation <subst>
+                    <pb facs="iiif:10.34847/nkl.ace4sysb/22245ee492d3caeb6011c6d1d41ca63e3c98fd6c" n="2"/><note place="top" type="foliation">- 2
+                        -</note> belles régions envahies, soumises à un régime d'extermination<lb/> et de dévastation <subst>
                         <del rend="overwritten">r</del>
                         <add place="across">i</add>
                     </subst>rréparable ; elle voit la <placeName ref="#l0073" type="pec">Belgique</placeName> martyre<lb/> depuis bien longtemps.....!
@@ -273,7 +274,7 @@
                     à la prolonger par<lb/> leur influence et par leurs journaux. Et alors ?</p>
                 <p rend="indent">Alors la <placeName ref="#l0207" type="pec">France</placeName> perd son sang, son m<subst>
                         <del rend="overwritten">a</del>
-                        <add place="across" hand="#annotation">e</add>
+                        <add hand="#annotation" place="across">e</add>
                     </subst>illeur sang<lb/> et plus elle le perd moins elle est capable de se rétablir par<lb/> un effort de volonté spontanée ; elle
                     ne réagit<subst>
                         <del rend="strikethrough">e</del>
@@ -281,28 +282,28 @@
                     </subst>pas, elle<lb/> s'habitue à mon mal ; elle laisse faire sa diplomatie secrète ;<lb/> elle s'abandonne à ses Gouvernements
                     successifs, comme le malade.</p>
                 <p rend="indent">à ses différents médecins. Enthousiaste, elle ne peut suivre ses<lb/>
-                    <pb facs="FRAD072_12J385_lettre0374_003" n="3"/><note place="top" type="foliation">- 3 -</note> élans ; elle prend son parti de ce
-                    phénomène ; une guerre d'inac-<lb break="no"/>tion ; elle s'en remet à son armée, qui a sa confiance, mais qui<lb/> s'en remet
-                    elle-même à la <placeName ref="#l0207" type="pec">France</placeName> ; elle voit ses dirigeants s'ef-<lb break="no"/>facer et ses
-                    Gouvernements disparaître, les uns sur les autres ;<lb/> son <orgName ref="#g0050" type="pec">Parlement</orgName> et son
-                    administration terrorisés par une presse<lb/> de chantage irresponsable, de tout temps hostile à la paix,<lb/> vivant de la guerre
-                    ; elle ne comprend pas ; elle n'est pas<lb/> plus renseignée sur la vérité des choses de l'intérieur que sur<lb/> celles de
-                    l'extérieur ; elle n'a d'autres informations générales<lb/> que des communiqués vides et les mensonges de cette presse dont<lb/>
-                    elle se nourrit, faute de mieux. Elle pense dond à son mal le<lb/> moins possible, puisqu'elle sait qu'elle n'y peut rien.
-                    Elle<lb/> n'agit pas ; elle attend... Elle attend le lendemain de la<lb/> guerre pour réclamer des comptes, les terribles
-                    comptes.. Une<lb/> voix confian<subst>
+                    <pb facs="iiif:10.34847/nkl.ace4sysb/6c0bed6aa9bf22dfebd8051633676a8037a9e07d" n="3"/><note place="top" type="foliation">- 3
+                        -</note> élans ; elle prend son parti de ce phénomène ; une guerre d'inac-<lb break="no"/>tion ; elle s'en remet à son armée,
+                    qui a sa confiance, mais qui<lb/> s'en remet elle-même à la <placeName ref="#l0207" type="pec">France</placeName> ; elle voit ses
+                    dirigeants s'ef-<lb break="no"/>facer et ses Gouvernements disparaître, les uns sur les autres ;<lb/> son <orgName ref="#g0050"
+                        type="pec">Parlement</orgName> et son administration terrorisés par une presse<lb/> de chantage irresponsable, de tout temps
+                    hostile à la paix,<lb/> vivant de la guerre ; elle ne comprend pas ; elle n'est pas<lb/> plus renseignée sur la vérité des choses
+                    de l'intérieur que sur<lb/> celles de l'extérieur ; elle n'a d'autres informations générales<lb/> que des communiqués vides et les
+                    mensonges de cette presse dont<lb/> elle se nourrit, faute de mieux. Elle pense dond à son mal le<lb/> moins possible, puisqu'elle
+                    sait qu'elle n'y peut rien. Elle<lb/> n'agit pas ; elle attend... Elle attend le lendemain de la<lb/> guerre pour réclamer des
+                    comptes, les terribles comptes.. Une<lb/> voix confian<subst>
                         <del rend="overwritten">c</del>
                         <add place="across">t</add>
                     </subst>e et ferme, à défaut de celle d'une <persName ref="#p0338" type="pec">Jeanne d'Arc</persName> ou<lb/> d'un Danton,
                     suffirait pour l'exalter, comme au temps des grandes<lb/> épreuves, car elle est toujours <subst>
                         <del rend="overwritten"><gap extent="one character"/></del>
-                        <add place="across" hand="#annotation">p</add>
+                        <add hand="#annotation" place="across">p</add>
                     </subst>rête à l'héroïsme, pourvu qu'<lb/>elle y voie le salut ; le moyen de défendre sa liberté, la liberté.<lb/> Et c'est
                     pourquoi la voix du <persName ref="#p0658" type="pec">Président Wilson</persName> a eu chez nous, comme<lb/> partout, tant d'écho
                     ; mais cette voix ne peut suppléer à une<lb/> direction nationale. En fait, dans le cataclysme universel,<lb/> aveuglément
                     déchaîné, <hi rend="underline">personne n'est en état de penser pour tout<lb/> le monde</hi> ; l'opinion, sans guide, suit les
                     événements à la dérive ;<lb/> là est la faiblesse de cette guerre dont le crime allemand abuse,<lb/> jusqu'à nouvel ordre.</p>
-                <pb facs="FRAD072_12J385_lettre0374_004" n="4"/>
+                <pb facs="iiif:10.34847/nkl.ace4sysb/ba136f93df061fb2a018b6059858e203da0b940f" n="4"/>
                 <note place="top" type="foliation">- 4 -</note>
                 <p rend="indent">En attendant une révolte générale, née de l'hor-<lb break="no"/>reur et de la prolongation du fléau, ou en attendant
                     une victoire<lb/> qui serait la fin du monde, si elle n'était pas <hi rend="underline">notre</hi> victoire,<lb/>
@@ -314,7 +315,7 @@
                         ref="#l0309" type="pec">Marseille</placeName>, St-Etienne, Bourges, etc.. etc. <add hand="#annotation">-</add>je<lb/> ne puis
                     pas les nomme<subst>
                         <del rend="overwritten">s</del>
-                        <add place="across" hand="#annotation">r</add>
+                        <add hand="#annotation" place="across">r</add>
                     </subst> toutes,<add hand="#annotation">-</add> y ont gagné prodigieusement. Et<lb/> on m'assure qu'il en est de même dans la
                     plupart des grandes villes<lb/> des pays ennemis et neutres, quoi qu'en disent nos journaux.</p>
                 <p rend="indent">Il n'y a pas lieu de s'indigner, - pour ne parler<lb/> que de la <placeName ref="#l0207" type="pec"
@@ -329,14 +330,14 @@
                     vérité dont on n'a que trop abusé : Ronsard l'a<lb/> célébrée en ces vers charmants et profonds ;<lb/> Le Gaulois semble au saule verdissant.<lb/>
                     <hi rend="underline">Plus on le coupe et plus il est naissant<lb/> Et rejetonne en branches davantage,<lb/> Prenant vigueur de son
                         propre dommage.</hi>
-                    <pb facs="FRAD072_12J385_lettre0374_005" n="5"/><note place="top" type="foliation">- 5 -</note> Même philosophie dans cette ronde
-                    que les gamins dansaient de<lb/> mon temps et <subst>
+                    <pb facs="iiif:10.34847/nkl.ace4sysb/0b3488940e0843dbcf1447e6c9383177ff82cea0" n="5"/><note place="top" type="foliation">- 5
+                        -</note> Même philosophie dans cette ronde que les gamins dansaient de<lb/> mon temps et <subst>
                         <del rend="overwritten">e</del>
                         <add place="across">d</add>
                     </subst>ansent encore à <placeName ref="#l0002" type="pec">La Flèche</placeName> ; "Dansons la capucine !<lb/> Y a pas de pain
                     chez nous ; y en a chez la voisine, mais ce n'est<lb/> pas pour nous ; You !" Même joyeux parti-pris d'ironie dans <subst>
                         <del rend="strikethrough">ce</del>
-                        <add place="inline" hand="#annotation">nos</add>
+                        <add hand="#annotation" place="inline">nos</add>
                         <lb/>
                     </subst>
                     <subst>
@@ -363,25 +364,26 @@
                     vieillard, et toujours sans en avoir<lb/> l'air. En temps de guerre, c'est bien pire, et cela ne peut dé-<lb break="no"/>passer
                     indéfiniment la mesure des forces humaines. La nature<lb/> elle-même se repose chaque hiver, chaque nuit ; et nous supportons<lb/>
                     cette guerre depuis trois années et demie ! Et puis, les soldats<lb/>
-                    <pb facs="FRAD072_12J385_lettre0374_006" n="6"/><note place="top" type="foliation">- 6 -</note> eux-mêmes viennent du front, - de
-                        <placeName ref="#l0454" type="pec">Salonique</placeName>, de <placeName ref="#l0373" type="pec">Palestine</placeName> ou
-                    de<lb/> nos plus lointaines colonies, en permission de détente ; pourquoi<lb/> faire? Pour oublier, pour avoir un peu de bon
-                    temps. Et nos<lb/> alliés ? tant de jeunes officiers et de soldats de passage, par<lb/> milliers et par milliers, heureux de
-                    vivre, dépensant leur argent<lb/> sans compter, point de mire des sympathies de la population, exhi-<lb break="no"/>bition sans
-                    cesse renouvelée de tous les costumes, toutes les<lb/> races, les Anglais, les Écossais, les Américains, les Italiens,<lb/> les
-                    Portugais, les Belges, les Japonais, les Serbes, les Grecs,<lb/> hier les Russes. Et les neutres? Les étrangers amis et les<lb/>
-                    autres, bons apôtres de la charité bien ordonnée, faiseurs d'af-<lb break="no"/>faires, mercantis, commerçants et entrepreneurs
-                    improvisés. Et<lb/> les travailleurs indigènes d'<placeName ref="#l0017" type="pec">Af<del> </del>rique</placeName>, d'Asie,
-                    chargés de la<lb/> toilette des rues ? Et les ouvriers cosmopolites des usines de<lb/> munitions, partout édifiées en un clin
-                    d'oeil ? Et les femmes,<lb/> presque des enfants, faisant le métier des hommes ? Toute cette<lb/> masse ouvrière gagnant des
-                    salaires imprévus qu'elle dépense<lb/> aussitôt, en plus de ses allocations ? (Un ménage qui gagnait<lb/> à peine huit francs,
-                    avant la guerre, arrive à se faire quarante,<lb/> cinquante francs par jour. Je vois des travailleurs spécialistes<lb/> chinois, pay<subst>
+                    <pb facs="iiif:10.34847/nkl.ace4sysb/abe4db2204ea4e882b8253e695fde501434ee519" n="6"/><note place="top" type="foliation">- 6
+                        -</note> eux-mêmes viennent du front, - de <placeName ref="#l0454" type="pec">Salonique</placeName>, de <placeName
+                        ref="#l0373" type="pec">Palestine</placeName> ou de<lb/> nos plus lointaines colonies, en permission de détente ;
+                    pourquoi<lb/> faire? Pour oublier, pour avoir un peu de bon temps. Et nos<lb/> alliés ? tant de jeunes officiers et de soldats de
+                    passage, par<lb/> milliers et par milliers, heureux de vivre, dépensant leur argent<lb/> sans compter, point de mire des
+                    sympathies de la population, exhi-<lb break="no"/>bition sans cesse renouvelée de tous les costumes, toutes les<lb/> races, les
+                    Anglais, les Écossais, les Américains, les Italiens,<lb/> les Portugais, les Belges, les Japonais, les Serbes, les Grecs,<lb/>
+                    hier les Russes. Et les neutres? Les étrangers amis et les<lb/> autres, bons apôtres de la charité bien ordonnée, faiseurs
+                        d'af-<lb break="no"/>faires, mercantis, commerçants et entrepreneurs improvisés. Et<lb/> les travailleurs indigènes
+                        d'<placeName ref="#l0017" type="pec">Af<del> </del>rique</placeName>, d'Asie, chargés de la<lb/> toilette des rues ? Et les
+                    ouvriers cosmopolites des usines de<lb/> munitions, partout édifiées en un clin d'oeil ? Et les femmes,<lb/> presque des enfants,
+                    faisant le métier des hommes ? Toute cette<lb/> masse ouvrière gagnant des salaires imprévus qu'elle dépense<lb/> aussitôt, en
+                    plus de ses allocations ? (Un ménage qui gagnait<lb/> à peine huit francs, avant la guerre, arrive à se faire quarante,<lb/>
+                    cinquante francs par jour. Je vois des travailleurs spécialistes<lb/> chinois, pay<subst>
                         <del rend="overwritten">sé</del>
                         <add place="across">és</add>
                     </subst> chez eux moins de dix sous, et ici dix francs,<lb/> douze francs, quinze francs). Et les mutilés, les blessés, les<lb/>
                     convalescents, les malades ? ? Et encore, hélas, toute cette<lb/> jeunesse plue ou moins abandonnée, sans foyer, dans nos
-                    faubourgs: <pb facs="FRAD072_12J385_lettre0374_007" n="7"/><note place="top" type="foliation">- 7 -</note> le père au front, ma
-                    mère à l'usine, ou au plaisir, à l'alco<subst>
+                    faubourgs: <pb facs="iiif:10.34847/nkl.ace4sysb/d741a6e1176867710fd03a65169c9f53168d3f3f" n="7"/><note place="top"
+                        type="foliation">- 7 -</note> le père au front, ma mère à l'usine, ou au plaisir, à l'alco<subst>
                         <del rend="overwritten">l</del>
                         <add place="across">o</add>
                     </subst>l,<lb/> à la syphilis.... Oui, cela est parfois charmant, parfois bien<lb/> triste à voir. <placeName ref="#l0001"
@@ -402,19 +404,19 @@
                     Nord....... ni les restaurants de nuit, avec installa-<lb break="no"/>tions confortables dans les caves, pour les soirs de
                     bombardement,<lb/> ni des patisseries où l'on s'étouffe, (en attendant qu'elles<lb/> soient fermées ), ni des Cabarets à la mode :
                     le Perchoir, la Lune<lb/>
-                    <pb facs="FRAD072_12J385_lettre0374_008" n="8"/><note place="top" type="foliation">- 8 -</note> Rousse, la Pie qui Chante,
-                    Médrano, le Moulin de la Chanson.....<lb/> Et combien d'autres dont les affiches multicolores s'étalent, dans<lb/> les galeries du
-                    Métro et sur tous les murs, nonobstant la crise<lb/> du papier, en concurrence avec celles de l'Emprunt, <add place="above"
-                        hand="#annotation">celles des journaux,</add> celles des<lb/> magasins de nouveautés, d'étrennes, de jouets, celles des
-                        confi-<lb break="no"/>seurs, des fabricants de chocolat, de liqueurs, etc..etc....<lb/> Les pièces les plus applaudies dont
-                    les plus étrangères à la<lb/> guerre ; de même que les journaux réduisent de plus en plus, dans<lb/> leurs colonnes, la part des
-                    opérations militaires, pour se consa-<lb break="no"/>crer à la politique, aux scandales, aux modes, aux plaisirs du<lb/> jour, au
-                    fait nouveau. Le "<title ref="#w0019" type="pec">TEMPS</title>" rendait compte, ces jours-ci,<lb/> en première page, de la vente
-                    aux enchères d'une collection<lb/> de livres rares qui avait attiré les bibliophiles et les<lb/> curieux. Il y a eu des ventes
-                    célèbres depuis la guerre : celle<lb/> de la bibliothèque de Jules Lemaître, celle de Jules Claretie,<lb/> etc... etc.. Un petit
-                    volume de Baudelaire, simple in-<subst>
+                    <pb facs="iiif:10.34847/nkl.ace4sysb/6e1a15b044530303c0b4a38119a6c86b487b7c37" n="8"/><note place="top" type="foliation">- 8
+                        -</note> Rousse, la Pie qui Chante, Médrano, le Moulin de la Chanson.....<lb/> Et combien d'autres dont les affiches
+                    multicolores s'étalent, dans<lb/> les galeries du Métro et sur tous les murs, nonobstant la crise<lb/> du papier, en concurrence
+                    avec celles de l'Emprunt, <add hand="#annotation" place="above">celles des journaux,</add> celles des<lb/> magasins de nouveautés,
+                    d'étrennes, de jouets, celles des confi-<lb break="no"/>seurs, des fabricants de chocolat, de liqueurs, etc..etc....<lb/> Les
+                    pièces les plus applaudies dont les plus étrangères à la<lb/> guerre ; de même que les journaux réduisent de plus en plus,
+                    dans<lb/> leurs colonnes, la part des opérations militaires, pour se consa-<lb break="no"/>crer à la politique, aux scandales, aux
+                    modes, aux plaisirs du<lb/> jour, au fait nouveau. Le "<title ref="#w0019" type="pec">TEMPS</title>" rendait compte, ces
+                    jours-ci,<lb/> en première page, de la vente aux enchères d'une collection<lb/> de livres rares qui avait attiré les bibliophiles
+                    et les<lb/> curieux. Il y a eu des ventes célèbres depuis la guerre : celle<lb/> de la bibliothèque de Jules Lemaître, celle de
+                    Jules Claretie,<lb/> etc... etc.. Un petit volume de Baudelaire, simple in-<subst>
                         <del rend="overwritten">l</del>
-                        <add place="across" hand="#annotation">1</add>
+                        <add hand="#annotation" place="across">1</add>
                     </subst>8, :<lb/> "Les Fleurs du Mal", ave<subst>
                         <del rend="overwritten">e</del>
                         <add place="across">c</add>
@@ -428,39 +430,39 @@
                         >Paris</placeName>, les enchères en connaisseurs ; ils me<lb/> disent qu'on n'a jamais, avant la guerre, tant acheté, ni
                     payé<lb/> si cher, - des prix fou<subst>
                         <del rend="overwritten">x</del>
-                        <add place="across" hand="#annotation">s</add>
+                        <add hand="#annotation" place="across">s</add>
                     </subst>,- les table<subst>
                         <del rend="overwritten">ua</del>
                         <add place="across">au</add>
                     </subst>x, les meubles, les pierres<lb/> précieuses. Une gravure du XVIII ème siècle, de de Marteau, qu'on <pb
-                        facs="FRAD072_12J385_lettre0374_009" n="9"/><note place="top" type="foliation">- 9 -</note> payait <unclear reason="faded"
-                        >a</unclear>vant la guerre, quelques centaines de francs, se vendait<lb/> hier 15.000 frs ; un mobilier de poupée <persName
-                        ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis XV</persName></persName> et <persName ref="#p0407" type="pec"
-                            ><persName ref="#p0409" type="pec">Louis XV</persName>I</persName><lb/> 47.272 francs ; un petit canapé-corbeille, en bois
-                    mouluré et<lb/> sculpté, plus cher à lui seul qu'un grand mobilier de salon:<lb/> 6.300 f<del> </del>rancs ; un petit fauteuil,
-                    pièce de maîtrise, par Jacob,<lb/> il est vrai, 3.600 francs ; un petit bureau cylindre <persName ref="#p0407" type="pec"
-                            ><persName ref="#p0409" type="pec">Louis XV</persName></persName><lb/> 2.400 francs : une petite bergère à oreilles. <del
-                        rend="strikethrough"><gap extent="few characters"/></del><lb/> estampille de Bourrault, 2.600 francs etc... etc... etc.. et
-                    c'est<lb/> ainsi couramment. Les nouveaux riches ont hâte de dépenser leur<lb/> argent, de peur sans doute qu'on ne le leur
-                    reprenne. On ne se<lb/> refuse rien. Je vous ai dit l'élégance<del rend="strikethrough">s</del> des femmes, leurs ca-<lb
-                        break="no"/>prices, leurs achats d'autos, d'objets d'art, de toilettes, de<lb/> fleurs, de hideux, de fourrures, de d'importe
-                    quoi, à n'importe<lb/> quel prix. Cela augmente, se généralise, se répand partout. Les<lb/> coiffeurs, les parfumeurs font
-                    fortune. Les ouvrières et les<lb/> midinettes ne vont à l'atelier, à l'usine ou au magasin que<lb/> frisées, ondulées, lustrées,
-                    scintillantes comme des miroirs à<lb/> alouettes. Les dames respectables risquent de multicolores chichis,<lb/> arborent des
-                    postiches à rendre jaloux <persName ref="#p0407" type="pec"><persName ref="#p0408" type="pec">Louis XIV</persName></persName>. Les
-                    chapeaux<lb/> sont à l'avenant, démesurés, énormes ou minuscules, pimpants ou<lb/> majestueux, de toutes les formes, civiles et
-                    militaires ; toques,<lb/> bicornes, bérets, casques, cloches, bonnets de police, képis,<lb/> casquettes nusses, casquettes de
+                        facs="iiif:10.34847/nkl.ace4sysb/39ff1f277152d99c3917fa8b19009e40df0adc81" n="9"/><note place="top" type="foliation">- 9
+                        -</note> payait <unclear reason="faded">a</unclear>vant la guerre, quelques centaines de francs, se vendait<lb/> hier 15.000
+                    frs ; un mobilier de poupée <persName ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis XV</persName></persName> et
+                        <persName ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis XV</persName>I</persName><lb/> 47.272 francs ; un
+                    petit canapé-corbeille, en bois mouluré et<lb/> sculpté, plus cher à lui seul qu'un grand mobilier de salon:<lb/> 6.300
+                        f<del> </del>rancs ; un petit fauteuil, pièce de maîtrise, par Jacob,<lb/> il est vrai, 3.600 francs ; un petit bureau
+                    cylindre <persName ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis XV</persName></persName><lb/> 2.400 francs :
+                    une petite bergère à oreilles. <del rend="strikethrough"><gap extent="few characters"/></del><lb/> estampille de Bourrault, 2.600
+                    francs etc... etc... etc.. et c'est<lb/> ainsi couramment. Les nouveaux riches ont hâte de dépenser leur<lb/> argent, de peur sans
+                    doute qu'on ne le leur reprenne. On ne se<lb/> refuse rien. Je vous ai dit l'élégance<del rend="strikethrough">s</del> des femmes,
+                    leurs ca-<lb break="no"/>prices, leurs achats d'autos, d'objets d'art, de toilettes, de<lb/> fleurs, de hideux, de fourrures, de
+                    d'importe quoi, à n'importe<lb/> quel prix. Cela augmente, se généralise, se répand partout. Les<lb/> coiffeurs, les parfumeurs
+                    font fortune. Les ouvrières et les<lb/> midinettes ne vont à l'atelier, à l'usine ou au magasin que<lb/> frisées, ondulées,
+                    lustrées, scintillantes comme des miroirs à<lb/> alouettes. Les dames respectables risquent de multicolores chichis,<lb/> arborent
+                    des postiches à rendre jaloux <persName ref="#p0407" type="pec"><persName ref="#p0408" type="pec">Louis XIV</persName></persName>.
+                    Les chapeaux<lb/> sont à l'avenant, démesurés, énormes ou minuscules, pimpants ou<lb/> majestueux, de toutes les formes, civiles
+                    et militaires ; toques,<lb/> bicornes, bérets, casques, cloches, bonnets de police, képis,<lb/> casquettes nusses, casquettes de
                     chauffeurs, turbans, sombreros,<lb/> tromblons, champignons, parasols, monuments de plumes et de<lb/> poils ; en contraste, - on
                     ne le remarque même plus,- avec les<lb/> voiles de deuil, toujours plus nombreux, non moins variés,<lb/> lamentables ou
                     fantaisistes.</p>
-                <pb facs="FRAD072_12J385_lettre0374_010" n="10"/>
+                <pb facs="iiif:10.34847/nkl.ace4sysb/598368a22eac3fd58a52ee66f35f4b0e6bdab798" n="10"/>
                 <note place="top" type="foliation">- 10 -</note>
                 <p rend="indent">En ce moment, la mode est aux bottines. Naturel-<lb break="no"/>lement, avec les jupes courtes ! Le Gouvernement a
                     inventé ce<lb/> qu'il appelle "la Chaussure nationale" Je ne sais pas où <add hand="#annotation" place="above">on</add> la<lb/>
                     trouve. En attendant, la moindre petite femme, l'ouvrière, la<lb/> jeune fille tiennent à se sangler le pic, jusqu'au mollet,
                     de<lb/> bottines à quarante, à soixante francs<subst>
                         <del rend="overwritten">;</del>
-                        <add place="across" hand="#annotation">,</add>
+                        <add hand="#annotation" place="across">,</add>
                     </subst> - les plus modestes, - les<lb/> autres vont jusqu'à les payer cent francs, deux cents francs.<lb/> Des officiers que je
                     connais payent leurs bottes trois cents frs.</p>
                 <p rend="indent">Et l'histoire racontera que la guerre faisait<lb/> peser sur toute la terre sa tragique domination ! La vérité
@@ -478,27 +480,28 @@
                     Que lui répondre ? En reviendrons-nous, -<lb break="no"/>comme les Allemands, paraît-il,- à la pol<subst>
                         <del rend="overwritten">u</del>
                         <add place="across">y</add>
-                    </subst>gamie? C'est le recul <pb facs="FRAD072_12J385_lettre0374_011" n="11"/><note place="top" type="foliation">- 11 -</note> de
-                    la civilisation en haut, en bas, jusqu'au tréfond de la vie<lb/> privée, ou même da<unclear reason="faded">n</unclear>s la vte
-                    publique. Avec quel regret vois-je<lb/> souvent à <placeName ref="#l0001" type="pec">Paris</placeName>, <add hand="#annotation"
-                        >-</add><del rend="strikethrough">dans</del> notre doux <placeName ref="#l0001" type="pec">Paris</placeName>, <add
-                        hand="#annotation">-</add>dans les tramways ou<lb/> dans le métro encombrés, le plus brutal se faisant place, les<lb/> femmes
-                    injuriant ou injuriées, bousculant ou bousculées ; les bles-<lb break="no"/>sés, les enfants comptant à peine. La force primant le
-                    droit ;<lb/> voilà la règle en cette guerre. Et pourquoi, encore une fois,<lb/> se gêner : Pourquoi se priver ? Economiser, dans
-                    le gaspillage<lb/> universel ? Quelle dérision ! Appliquons le vieux proverbe du<lb/> régiment: " Cc'est autant de pris sur
-                    l'ennemi !". Et puis, que<lb/> faire de son argent, de son ac<del> </del>tivité ? Que voulez-vous qu'on<lb/> entreprenne à long
-                    terme ? Quand on voit tomber la jeunesse en<lb/> fleur ; quand on n'a pas de lendemain ; quand on sait que les plus<lb/> heureux
-                    ne survivront <del rend="strikethrough">pa</del> à la guerre que pour mener une existence<lb/> surchargée de soupçons, d'impôts,
-                    de soucis, de besognes matériel-<lb break="no"/>les incompatibles avec la liberté decCréer ; quand les études<lb/> déjà
-                    suspendues, seront forcément abrégées, sinon supprimées, pour<lb/> beaucoup. A quoi bon les conceptions lointaines, étrangères
-                    aux<lb/> réalités impérieuses du gagne-pain quotidien ? A quoi bon les<lb/> vues désintéressées au service dé l'avenir ? Chimères,
-                    plus que<lb/> jamais, sottises ; bien plus ; préjudice causé au labeux urgent du<lb/> présent. Visions coupables d'inventeur<del
-                        rend="strikethrough">s</del>, de paresseux ou de<lb/> poètes ! Comment former des projets à longue échéance quand la<lb/>
-                    violence détruit, en germe, ce qu'on pourrait construire? On n'a<lb/> pas le temps ; on n'a pas la confiance ; on se détache de
-                    l'avenir<lb/> comme du passé. On ne vit pas ; on attend. On attend, les uns <pb facs="FRAD072_12J385_lettre0374_012" n="12"/><note
-                        place="top" type="foliation">- 12 -</note> dans le deuil et dans la détresse, <del rend="strikethrough">mais</del> les autres
-                    insouciants,<lb/> répétant d'instinct le mot de <persName ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis
-                            XV</persName></persName>, le mot de tout régime de<lb/> démoralisation"Après moi le déluge !".</p>
+                    </subst>gamie? C'est le recul <pb facs="iiif:10.34847/nkl.ace4sysb/5db64003532f8bafbe3380346f66101b5171a959" n="11"/><note
+                        place="top" type="foliation">- 11 -</note> de la civilisation en haut, en bas, jusqu'au tréfond de la vie<lb/> privée, ou même
+                        da<unclear reason="faded">n</unclear>s la vte publique. Avec quel regret vois-je<lb/> souvent à <placeName ref="#l0001"
+                        type="pec">Paris</placeName>, <add hand="#annotation">-</add><del rend="strikethrough">dans</del> notre doux <placeName
+                        ref="#l0001" type="pec">Paris</placeName>, <add hand="#annotation">-</add>dans les tramways ou<lb/> dans le métro encombrés,
+                    le plus brutal se faisant place, les<lb/> femmes injuriant ou injuriées, bousculant ou bousculées ; les bles-<lb break="no"/>sés,
+                    les enfants comptant à peine. La force primant le droit ;<lb/> voilà la règle en cette guerre. Et pourquoi, encore une fois,<lb/>
+                    se gêner : Pourquoi se priver ? Economiser, dans le gaspillage<lb/> universel ? Quelle dérision ! Appliquons le vieux proverbe
+                    du<lb/> régiment: " Cc'est autant de pris sur l'ennemi !". Et puis, que<lb/> faire de son argent, de son ac<del> </del>tivité ?
+                    Que voulez-vous qu'on<lb/> entreprenne à long terme ? Quand on voit tomber la jeunesse en<lb/> fleur ; quand on n'a pas de
+                    lendemain ; quand on sait que les plus<lb/> heureux ne survivront <del rend="strikethrough">pa</del> à la guerre que pour mener
+                    une existence<lb/> surchargée de soupçons, d'impôts, de soucis, de besognes matériel-<lb break="no"/>les incompatibles avec la
+                    liberté decCréer ; quand les études<lb/> déjà suspendues, seront forcément abrégées, sinon supprimées, pour<lb/> beaucoup. A quoi
+                    bon les conceptions lointaines, étrangères aux<lb/> réalités impérieuses du gagne-pain quotidien ? A quoi bon les<lb/> vues
+                    désintéressées au service dé l'avenir ? Chimères, plus que<lb/> jamais, sottises ; bien plus ; préjudice causé au labeux urgent
+                    du<lb/> présent. Visions coupables d'inventeur<del rend="strikethrough">s</del>, de paresseux ou de<lb/> poètes ! Comment former
+                    des projets à longue échéance quand la<lb/> violence détruit, en germe, ce qu'on pourrait construire? On n'a<lb/> pas le temps ;
+                    on n'a pas la confiance ; on se détache de l'avenir<lb/> comme du passé. On ne vit pas ; on attend. On attend, les uns <pb
+                        facs="iiif:10.34847/nkl.ace4sysb/06bad852cb6ac002d92dd15815e9760cee2c6e95" n="12"/><note place="top" type="foliation">- 12
+                        -</note> dans le deuil et dans la détresse, <del rend="strikethrough">mais</del> les autres insouciants,<lb/> répétant
+                    d'instinct le mot de <persName ref="#p0407" type="pec"><persName ref="#p0409" type="pec">Louis XV</persName></persName>, le mot de
+                    tout régime de<lb/> démoralisation"Après moi le déluge !".</p>
                 <p rend="indent">Mais, en même temps, - ne l'oubliez pas,- pour<lb/> la même raison, la vie perdant ses attaches. Ses raisons de<lb/>
                     vivre, on la sacrifie pour ce qu'elle vaut. Et c'est là ce que les<lb/> Allemands ne comprennent pas. La destruction,- la notre
                     comme la<lb/> leur,- est notre avenir. Destruction matérielle ? C'est trop<lb/> peu dire. Destruction morale surtout ; et celle-là
@@ -510,7 +513,7 @@
                     peuple<lb/> le plus fort, le plus discipliné, le mieux organisé, elle serait<lb/> le triomphe des basses manoeuvres d'une
                     diplomatie éhontée, le<lb/> triomphe <subst>
                         <del rend="overwritten">a</del>
-                        <add place="across" hand="#annotation">d</add>
+                        <add hand="#annotation" place="across">d</add>
                     </subst>u mépris de tout ce que nous apprenons à respecter, à<lb/> commencer par le mépris de l'humanité. Et ce mépris
                     retombera,<lb/> sur eux plus encore que sur leurs victimes ; c'est la loi fatale,<lb/> invariable ; ils n'auront pus impunément
                     tué la confiance, l'hon-<lb break="no"/>neur, les conditions de toute vie internationale, nationale,<lb/> sociale. Ils auront
@@ -519,9 +522,10 @@
                     condamnation, la condamnation du militarisme stupide qui est leur<lb/> Dieu,- le jour où l'humanité clairsemée, en deuil de ses
                     enfants<lb/> les plus généreux, retrouvera la raison dans l'excès de ses maux<subst>
                         <del rend="overwritten">...</del>
-                        <add place="across" hand="#annotation">,</add>
-                    </subst><pb facs="FRAD072_12J385_lettre0374_013" n="13"/><note place="top" type="foliation">- 13 -</note> le jour où l'humanité,
-                    par notre effort inlassable et celui de<lb/> toutes les consciences révoltées, s'éveillera enfin à la vérité <subst>
+                        <add hand="#annotation" place="across">,</add>
+                    </subst><pb facs="iiif:10.34847/nkl.ace4sysb/012dd083e273c460e81166ca6b0970a1418e8fce" n="13"/><note place="top" type="foliation"
+                        >- 13 -</note> le jour où l'humanité, par notre effort inlassable et celui de<lb/> toutes les consciences révoltées,
+                    s'éveillera enfin à la vérité <subst>
                         <del rend="overwritten">!</del>
                         <add place="across">.</add>
                     </subst><lb/>

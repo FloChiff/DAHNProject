@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-24" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -223,7 +224,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J384_lettre0262_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.ce9dp3f8/2fc319a721ee63a588b02eecce731362f60d3f67" n="1"/>
                 <head rend="center underline">LETTRE N° 262.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
@@ -235,11 +236,11 @@
                 </opener>
                 <p rend="indent">Je réponds a votre lettre du <subst>
                         <del rend="strikethrough">d7</del>
-                        <add place="above" hand="#annotation">27</add>
+                        <add hand="#annotation" place="above">27</add>
                     </subst> Avril. Elle m'a<lb/> causé un vif plaisir, le plaisir d'être bien compris, à travers<lb/> le temps et l'espace. Je suis
                     heureux que vous vous soyez aperçu,<lb/> comme moi, de l'erreur qui a fait donner le même N° 242 à deux<lb/> lettres différen<subst>
                         <del rend="overwritten">c</del>
-                        <add place="across" hand="#annotation">t</add>
+                        <add hand="#annotation" place="across">t</add>
                     </subst>es. J'en avais fait l'amère observation !<lb/> L'erreur a été corrigée comme il suit :<lb/>
                     <hi rend="align(center)">N°242 6 Avril 1917 Les <placeName ref="#l0184" type="pec">Etats-Unis</placeName> amis et Alliés.</hi><lb/>
                     <hi rend="align(center)">N° 24° <hi rend="underline">bis</hi>-8 " " Culture de Haine.</hi></p>

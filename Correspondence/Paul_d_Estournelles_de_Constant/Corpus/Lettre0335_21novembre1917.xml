@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-25" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -223,7 +224,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J385_lettre0335_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.9c210k30/aa94f5113d9e82e83a7541ccbf46e9bbe39df1c5" n="1"/>
                 <head rend="center underline">LETTRE N° 335</head>
                 <opener>
                     <note hand="#annotation" place="top(left)">Arch<lb/>
@@ -242,7 +243,7 @@
                     maison, et à<lb/>
                     <placeName ref="#l0001" type="pec">Paris</placeName> et à <placeName ref="#l0006" type="pec">Créans</placeName>, un centre amica<subst>
                         <del rend="overwritten">n</del>
-                        <add place="across" hand="#annotation">l</add>
+                        <add hand="#annotation" place="across">l</add>
                     </subst> où l'on pût grouper l'élite<lb/> des intelligentes et des bonnes volontés humaines, tout en faisant<lb/> connaître la
                         <placeName ref="#l0207" type="pec">France</placeName> telle qu'elle est et non telle que la présen-<lb break="no"/>tent ses
                     journaux, la guerre aurait été sinon évitée du moins<lb/> retardée. Et gagner du temps c'était beaucoup.....</p>
@@ -256,13 +257,14 @@
                     <placeName ref="#l0001" type="pec">Paris</placeName>. Nous avons tenu à le recevoir d'autant plus affectueusement <address>
                         <addrLine rend="margin">àMonsieur le Président, <persName ref="#p0002" type="pec">N Murray BUTLER</persName>.</addrLine>
                     </address>
-                    <pb facs="FRAD072_12J385_lettre0335_002" n="2"/><note place="top" type="foliation">- 2 -</note> que son pays est plus malheureux.
-                    De l'ensemble des conversations<lb/> j'ai retenu ces conclusions, bien d'accord avec ce que je pense.</p>
+                    <pb facs="iiif:10.34847/nkl.9c210k30/6bb75e15eaf65e7e470f94dc5a594526eb0ac57a" n="2"/><note place="top" type="foliation">- 2
+                        -</note> que son pays est plus malheureux. De l'ensemble des conversations<lb/> j'ai retenu ces conclusions, bien d'accord
+                    avec ce que je pense.</p>
                 <p rend="indent">Le Gouvernement allemand peut triompher du mal qu'il<lb/> a déchaîné ; il n'en profitera pas. Il aura fait le mal
                     pour le<lb/> mal" voilà tout. <placeName ref="#l0254" type="pec">L'Italie</placeName> va souffrir dans ses ambitions, dans<lb/>
                     son patriotisme ; <subst>
                         <del rend="overwritten">l</del>
-                        <add place="across" hand="#annotation">s</add>
+                        <add hand="#annotation" place="across">s</add>
                     </subst>a défaite est une grande pitié ! mais l'Alle-<lb break="no"/>magne n'en continuera pas moins d'avancer dans une lutte
                     épuisante<lb/> et sans issue. La <placeName ref="#l0432" type="pec">Russie</placeName> souffrira plus encore ; mais elle conti-<lb
                         break="no"/>nuera de reculer. Comme la marée, pour refluer avec le temps sur<lb/> ses oppresseurs détestés. <placeName
@@ -282,7 +284,7 @@
                     nécessité de nous dé-<lb break="no"/>fendre et, pour cela, de nous organiser. Cela durera longtemps,<lb/> dites-vous ? C'est
                     possible, et je reconnais que c'est très triste,<lb/> pour les Alliés et pour les Russes, mais est-ce gai pour les<lb/> Allemands
                         ?<add hand="#annotation">"</add></p>
-                <pb facs="FRAD072_12J385_lettre0335_003" n="3"/>
+                <pb facs="iiif:10.34847/nkl.9c210k30/d666abbd5933ac8cdae1af2b82843026b6ae9aa6" n="3"/>
                 <note place="top" type="foliation">- 3 -</note>
                 <p rend="indent">Donc je conclus que les Allemands n'ont pas lieu de<lb/> se réjouir. Tout ce qu'ils prétendent avoir conquis à l'Est
                     par<lb/> leurs victoires sur la <placeName ref="#l0432" type="pec">Russie</placeName>, la <placeName ref="#l0472" type="pec"
@@ -302,24 +304,24 @@
                     tout le Gouvernement allemand qui l'a déclarée et qui la recom-<lb break="no"/>mencerait, dans dix ans, s'il n'était pas réduit à
                     l'impuissance.</p>
                 <p rend="indent">On ose invoquer contre la <placeName ref="#l0207" type="pec">France</placeName>
-                    <del rend="strikethrough">et</del> le bruit des <pb facs="FRAD072_12J385_lettre0335_004" n="4"/><note place="top" type="foliation"
-                        >- 4 -</note> soi-disant scandales que vous savez. Qu'est-ce donc que ces<lb/> scandales, nous disait Deschanel, le Président
-                    de la Chambre ? Un<lb/> détail infime dans la grandeur du drame que nous vivons, un détail<lb/> volontairement grossi par les
-                    journaux. La <placeName ref="#l0207" type="pec">France</placeName> n'<unclear reason="faded">a</unclear> pas la<lb/> presse
-                    qu'elle mérite. Et Deschanel continuant, ajoutait en subs-<lb break="no"/>tance ceci: "On parle de la discorde en <placeName
-                        ref="#l0207" type="pec">France</placeName>. Si, depuis trois<lb/> ans et demi que nous supportons cette guerre, le <orgName
-                        ref="#g0050" type="pec">Parlement</orgName> vient<lb/> de voter <hi rend="underline">à l'unanimité</hi>, sans discussion, un
-                    nouvel emprunt de<lb/> douze milliards. Est-ce do<unclear reason="faded">n</unclear>c là de la discorde? Quelle belle<lb/> réponse
-                    les faits donnent à la vanité des campagnes de presse !<lb/> Mais que dire aussi de cette presse qui néglige et passe, pour<lb/>
-                    ainsi dire, sous sil<subst>
+                    <del rend="strikethrough">et</del> le bruit des <pb facs="iiif:10.34847/nkl.9c210k30/c2569a7b12ad51f7f87664f04bc8dd90e1213924"
+                        n="4"/><note place="top" type="foliation">- 4 -</note> soi-disant scandales que vous savez. Qu'est-ce donc que ces<lb/>
+                    scandales, nous disait Deschanel, le Président de la Chambre ? Un<lb/> détail infime dans la grandeur du drame que nous vivons, un
+                    détail<lb/> volontairement grossi par les journaux. La <placeName ref="#l0207" type="pec">France</placeName> n'<unclear
+                        reason="faded">a</unclear> pas la<lb/> presse qu'elle mérite. Et Deschanel continuant, ajoutait en subs-<lb break="no"/>tance
+                    ceci: "On parle de la discorde en <placeName ref="#l0207" type="pec">France</placeName>. Si, depuis trois<lb/> ans et demi que
+                    nous supportons cette guerre, le <orgName ref="#g0050" type="pec">Parlement</orgName> vient<lb/> de voter <hi rend="underline">à
+                        l'unanimité</hi>, sans discussion, un nouvel emprunt de<lb/> douze milliards. Est-ce do<unclear reason="faded">n</unclear>c là
+                    de la discorde? Quelle belle<lb/> réponse les faits donnent à la vanité des campagnes de presse !<lb/> Mais que dire aussi de
+                    cette presse qui néglige et passe, pour<lb/> ainsi dire, sous sil<subst>
                         <del rend="overwritten">a</del>
-                        <add place="across" hand="#annotation">e</add>
+                        <add hand="#annotation" place="across">e</add>
                     </subst>nce de pareils faits pour se consacrer presque<lb/> toute entière à d'ignobles querelles personnelles ? "</p>
                 <p rend="indent">La vérité est q<unclear reason="faded">ue</unclear>, tandis que la nation française<lb/> se bat et que nos
                     représentants travaillent avec leurs défauts,<lb/> sans doute, mais en conscience, la presse, elle, profite du drame<lb/> pour
                     essayer de dominer le pay<subst>
                         <del rend="overwritten">x</del>
-                        <add place="across" hand="#annotation">s</add>
+                        <add hand="#annotation" place="across">s</add>
                     </subst> et elle y réussit trop bien ; et<lb/> c'est pourquoi, au fond, elle a toujours été pour la guerre, plus,<lb/> ou moins,
                     dans tous les pays. La guerre est "<hi rend="underline">le fait divers</hi>"par<lb/> excellence, un fait divers qui dure
                         tr<unclear reason="faded">o</unclear>is ans! C'est l'eau trouble<lb/> et sanglante o<subst>
@@ -330,7 +332,7 @@
                     résiste aux pires abus. Voyez <persName ref="#p0477" type="pec">Lord Northcliffe</persName> et le TIMES,<lb/> en <placeName
                         ref="#l0037" type="pec">Angleterre</placeName>. C'est le même jeu, avec des trahisons en plus, contre<lb/>
                     <persName ref="#p0402" type="pec">Lloyd George</persName>.</p>
-                <pb facs="FRAD072_12J385_lettre0335_005" n="5"/>
+                <pb facs="iiif:10.34847/nkl.9c210k30/83e825f5689cb2b52b5e127ff0a17a301d8d6317" n="5"/>
                 <note place="top" type="foliation">- 5 -</note>
                 <p rend="indent">Mais, encore une fois, toute cette infamie de nos<lb/> journaux, toute cette apparente anarchie n'empèchent pas le
                     pays<lb/> d'être unanime et de rester unanime dans sa volonté d'en finir<lb/> avec le militarisme allemand; cela est si vrai que

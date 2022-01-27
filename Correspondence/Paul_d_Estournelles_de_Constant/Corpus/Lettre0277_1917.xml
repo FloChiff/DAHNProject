@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -214,6 +214,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-24" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -222,7 +223,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J384_lettre0277_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.ab05rcs7/6fa6beeec2abf9f10fdfc96851fa031bb6606e97" n="1"/>
                 <head rend="center underline">LETTRE N° 277</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
@@ -244,11 +245,12 @@
                     familière. Toute la <placeName ref="#l0070" type="pec">Beauce</placeName> verte était un océan de richesse.<address>
                         <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
-                    <pb facs="FRAD072_12J384_lettre0277_002" n="2"/><note place="top" type="foliation">- 2 -</note> La guerre n'a pu décourager ni la
-                    nature ni la persistance<lb/> humaine. Loin des horreurs du front, il semble de haut que<lb/> la guerre soit un mauvais rêve. Le
-                    temps admirable e<del rend="strikethrough">s</del>t plein de<lb/> promesses pour les récoltes <subst>
+                    <pb facs="iiif:10.34847/nkl.ab05rcs7/e4ba41f75024b27e9d35e84e16d54b0546334bc5" n="2"/><note place="top" type="foliation">- 2
+                        -</note> La guerre n'a pu décourager ni la nature ni la persistance<lb/> humaine. Loin des horreurs du front, il semble de
+                    haut que<lb/> la guerre soit un mauvais rêve. Le temps admirable e<del rend="strikethrough">s</del>t plein de<lb/> promesses pour
+                    les récoltes <subst>
                         <del rend="overwritten">et</del>
-                        <add place="across" hand="#annotation">a</add>
+                        <add hand="#annotation" place="across">a</add>
                     </subst> fait de cette journée une fête<lb/> de la conciliation par excellence. J'ai eu la satisfaction de<lb/> voir nos chefs
                     d'écoles et les Anglais qui se regardaient aupa-<lb break="no"/>ravant de loin dans leur attitude classique de chiens de
                     faïence,<lb/> heureux de se connaître et d'agir en commun. Les voilà mainte-<lb break="no"/>nant qui circulent d'une école à

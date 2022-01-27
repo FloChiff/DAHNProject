@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-21" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent, msItem,
                 accMat) and named entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -228,7 +229,7 @@
         <body>
             <div type="transcription">
                 <div type="letter">
-                    <pb facs="FRAD072_12J385_lettre0328_001" n="1"/>
+                    <pb facs="iiif:10.34847/nkl.743876t7/c76f2e00878300dc1cc3cb750bbb4d2a8d03c19b" n="1"/>
                     <note hand="#annotation" place="top(left)"><placeName ref="#l0005" type="pec">Molitor</placeName></note>
                     <head rend="center underline">LETTRE N° 328</head>
                     <opener>
@@ -252,7 +253,7 @@
                         même<lb/> à la paix en préconisant la guerre pour la défense du Droit.<address>
                             <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                         </address>
-                        <pb facs="FRAD072_12J385_lettre0328_002" n="2"/>
+                        <pb facs="iiif:10.34847/nkl.743876t7/770431c134cfe3ec211a336e1ebde36881a64d27" n="2"/>
                         <note place="top" type="foliation">- 2 -</note>Confondre les uns et les autres, ce serait confondre l'injustice<lb/> et la
                         justice, la violation du Droit et le respect du Droit.</p>
                     <p rend="indent">Je n'ignore pas que <persName ref="#p0256" type="pec">Fried</persName> a beaucoup varié dans son<lb/> attitude et
@@ -279,11 +280,11 @@
                         </subst> devoir l'assimiler à <persName ref="#p0256" type="pec">Fried</persName>.<lb/> Cela est regrettable. Cela ne
                         s'explique que par la volonté mal-<lb break="no"/>heureusement naturelle de prévenir toute équivoque. <subst>
                             <del rend="overwritten">U</del>
-                            <add place="across" hand="#annotation">I</add>
+                            <add hand="#annotation" place="across">I</add>
                         </subst>l est diffi-<lb break="no"/>cile, en effet, de subventionner, en temps de guerre, une revue<lb/>
-                        <pb facs="FRAD072_12J385_lettre0328_003" n="3"/><note place="top" type="foliation">- 3 -</note> même française, intitulée :
-                        "LA PAIX". Pourtant, quand cette revue<lb/> s'appelle "LA PAIX <hi rend="underline" n="2">PAR LE DROIT</hi>", elle mérite, à
-                        mon sens, non<lb/> seulement d'être épargnée, mais encouragée.</p>
+                        <pb facs="iiif:10.34847/nkl.743876t7/85a2aece907f04bbef354849e65a34812a09d591" n="3"/><note place="top" type="foliation">- 3
+                            -</note> même française, intitulée : "LA PAIX". Pourtant, quand cette revue<lb/> s'appelle "LA PAIX <hi n="2"
+                            rend="underline">PAR LE DROIT</hi>", elle mérite, à mon sens, non<lb/> seulement d'être épargnée, mais encouragée.</p>
                     <p rend="indent">Je ne puis, à distance, que présumer les difficultés<lb/> de votre tâche, mais je sais qu'elles sont grandes et
                         que vous<lb/> n'avez, pas plus que nous, des rivaux et des adversaires <subst>
                             <del rend="overwritten">o</del>
@@ -307,23 +308,24 @@
                         </subst>sez longtemps.</p>
                     <metamark function="separation" style="crosses"/>
                     <p rend="indent">Quoiqu'il en soit, plus je vais, plus je crois et<lb/>
-                        <pb facs="FRAD072_12J385_lettre0328_004" n="4"/><note place="top" type="foliation">- 4 -</note> plus je constate que la base
-                        essentielle de la paix, c'est l'esprit<lb/> de Conciliation. Ce qui fait aujourd'hui<del rend="strikethrough">e</del> notre
-                        bonne conscience<lb/> et notre force contre l'agression militaire allemande, ce sont les<lb/> efforts que nous avons prodigués
-                        pour la prévenir. Ce qui permettra<lb/> de rétablir la paix, le moment venu, c'est la confiance, les bonnes<lb/> relations
-                        raisonnées que nous avions, bien avant la guerre,<lb/> commencé à établir entre des peuples trop longtemps opposés <subst>
+                        <pb facs="iiif:10.34847/nkl.743876t7/f8b775cd3050b1cfa40cb8cd36c03a60ed926713" n="4"/><note place="top" type="foliation">- 4
+                            -</note> plus je constate que la base essentielle de la paix, c'est l'esprit<lb/> de Conciliation. Ce qui fait
+                            aujourd'hui<del rend="strikethrough">e</del> notre bonne conscience<lb/> et notre force contre l'agression militaire
+                        allemande, ce sont les<lb/> efforts que nous avons prodigués pour la prévenir. Ce qui permettra<lb/> de rétablir la paix, le
+                        moment venu, c'est la confiance, les bonnes<lb/> relations raisonnées que nous avions, bien avant la guerre,<lb/> commencé à
+                        établir entre des peuples trop longtemps opposés <subst>
                             <del rend="overwritten">a</del>
                             <add place="across">l</add>
                         </subst>es<lb/> uns aux autres. Je ne cesse, pendant la guerre, d'inviter chez moi<lb/> et d'encourager, dans leur effort
                         commun à nos côtés pour la défense<lb/> de notre idéal, tout ce que je puis d'Américains, d'<unclear reason="faded"
                             >A</unclear>nglais, d'Ita-<lb break="no"/>liens et même de neutres. Je leur écri<subst>
                             <del rend="overwritten">t</del>
-                            <add place="across" hand="#annotation">s</add>
+                            <add hand="#annotation" place="across">s</add>
                         </subst>. Je persévère dans mon<lb/> effort.... Ne vous y trompez pas, la <orgName ref="#g0060" type="pec">Société des
                             Nations</orgName> ne naîtra<lb/> pas d'un traité ; elle pourra être consacrée, organisée, par une<lb/> quantité de
                         traités, mais elle naîtra de l'esprit de conciliation<lb/> qu'il nous faut généraliser, sans nous lasser et dont les <subst>
                             <del rend="overwritten">c</del>
-                            <add place="across" hand="#annotation">d</add>
+                            <add hand="#annotation" place="across">d</add>
                         </subst>ouleurs<lb/> de la guerre auront démontré, plus que nos adjurations, le bienfait,<lb/> la nécessité.</p>
                     <p rend="indent">Après la guerre, vous aurez besoin de grouper, en<lb/> un seul faiscea<subst>
                             <del rend="overwritten">y</del>
@@ -339,17 +341,17 @@
                         </address></closer>
                 </div>
                 <div type="annex">
-                    <pb facs="FRAD072_12J385_lettre0328_annexe01_001" n="5"/>
+                    <pb facs="iiif:10.34847/nkl.743876t7/35813f264ea7373266e1e3a57a2c3d55f13592cf" n="5"/>
                     <head hand="#annotation" rend="right">Annexe à ma lettre <lb/>n°328</head>
                     <p hand="#annotation">"La Tribune de Genève"<lb/>Le <date when-iso="1917-10-10">10 oct. 1917</date></p>
                 </div>
                 <div type="annex">
-                    <pb facs="FRAD072_12J385_lettre0328_annexe02_001" n="6"/>
+                    <pb facs="iiif:10.34847/nkl.743876t7/992390d38b9c52a7a3b7c29526589225830fa145" n="6"/>
                     <head hand="#annotation" rend="right">Annexe à ma lettre n°328</head>
                     <p hand="#annotation">"La Tribune de Genève"<lb/><date when-iso="1917-10-12">12 oct. 1917</date></p>
                 </div>
                 <div type="annex">
-                    <pb facs="FRAD072_12J385_lettre0328_annexe03_001" n="7"/>
+                    <pb facs="iiif:10.34847/nkl.743876t7/5e2f2c92ed10f7cf793a9f95a74a2ebe9a0b45dc" n="7"/>
                     <head hand="#annotation" rend="right">Annexe à ma lettre <lb/>n°328</head>
                     <p hand="#annotation">"Tribune de Genève"<lb/><date when-iso="1917-10-25">25 oct. 1917</date></p>
                 </div>

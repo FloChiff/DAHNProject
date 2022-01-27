@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-24" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -223,7 +224,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J384_lettre0182_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.bab2xm5f/a043d87d59c79048fc2320d52350627aafd6ed46" n="1"/>
                 <head rend="center underline">LETTRE N° 182.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
@@ -241,7 +242,7 @@
                     coup de fusil tiré par un soldat allemand ivre ou<lb/> fanatique pour accuser toute une population de <hi rend="underline"
                         >trahison</hi>, <subst>
                         <del rend="strikethrough">alors</del>
-                        <add place="inline" hand="#annotation">quand</add>
+                        <add hand="#annotation" place="inline">quand</add>
                     </subst><lb/>
                     <del rend="strikethrough">qu</del>elle était lâchement assaillie et pour la condamner à d'abo-<lb break="no"/>minables représ<subst>
                         <del rend="overwritten"><gap extent="one character"/></del>
@@ -252,9 +253,9 @@
                     <address>
                         <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président N.Murray BUTLER</persName>.</addrLine>
                     </address>
-                    <pb facs="FRAD072_12J384_lettre0182_002" n="2"/><note place="top" type="foliation">- 2 -</note> humaine autre que la soi-disant
-                    loi allemande; c'était le sys-<lb break="no"/>tème de terroriser les populations. "C'était la guerre", disaient<lb/> ces chefs,
-                    pour nous l'apprendre !!!</p>
+                    <pb facs="iiif:10.34847/nkl.bab2xm5f/7b07349fce62c7dd6003630ed25fc7a2f6ca393c" n="2"/><note place="top" type="foliation">- 2
+                        -</note> humaine autre que la soi-disant loi allemande; c'était le sys-<lb break="no"/>tème de terroriser les populations.
+                    "C'était la guerre", disaient<lb/> ces chefs, pour nous l'apprendre !!!</p>
                 <p rend="indent">Eh bien, nous l'avons appris, et il importe que ce<lb/> bel enseignement ne soit pas perdu pour les peuples qui
                     seraient<lb/> tentés de recommencer l'expérience, quand la paix sera rétablie.....</p>
                 <p rend="indent">Je vous envoie quelques exemplaires de cette collec-<lb break="no"/>tion publiée sous le format pratique de cartes

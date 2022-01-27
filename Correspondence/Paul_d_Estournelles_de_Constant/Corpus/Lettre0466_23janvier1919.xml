@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -219,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-25" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent, msItem,
                 accMat) and named entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -228,7 +229,7 @@
         <body>
             <div type="transcription">
                 <div type="letter">
-                    <pb facs="FRAD072_12J386_lettre0466_001" n="1"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/1b7d1a2e51eb2fbe7a89959d8777433a0a3fc3ea" n="1"/>
                     <note hand="#annotation" place="top(left)"><placeName ref="#l0005" type="pec">Molitor</placeName></note>
                     <head rend="center underline">LETTRE N° 466.</head>
                     <opener>
@@ -259,7 +260,7 @@
                             <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président Nicholas Murray
                                 BUTLER</persName>.</addrLine>
                         </address></p>
-                    <pb facs="FRAD072_12J386_lettre0466_002" n="2"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/79e93c0e2f91af98dcf7222f3687df28bf289671" n="2"/>
                     <note place="top" type="foliation">- 2 -</note>
                     <p rend="indent">Vous trouverez également ci-joint une<lb/> proposition de <persName ref="#p0374" type="pec">M.
                             LARNAUDE</persName>, Doyen de la <orgName ref="#g0036" type="pec">Faculté de Droit</orgName> consis-<lb break="no"/>tant à
@@ -272,7 +273,7 @@
                         amis<lb/> de l'étranger qui affluent et vont affluer chaque jour davantage<lb/> à <placeName ref="#l0001" type="pec"
                             >Paris</placeName> dans des propo<subst>
                             <del rend="overwritten">s</del>
-                            <add place="across" hand="#annotation">r</add>
+                            <add hand="#annotation" place="across">r</add>
                         </subst>tions qui dépassent toute prévision.</p>
                     <p rend="indent">Après les administrations militaires, les<lb/> délégation officielles des Alliés ont réquisitionné la
                         plupart<lb/> des hôtels et des édifices ou maisons importants qui répondaient<lb/> à leurs besoins - Et cela partout jusqu'au
@@ -283,12 +284,13 @@
                         apporte<lb/> un embarras insupportable: Celui de ne savoir comment loger et<lb/> nourrir nos hôtes. Je constate cela chaque
                         jour, dix fois par<lb/> jour ; et notamment pour l'installation de l'appartement de notre<lb/> Association Française pour la
                             <orgName ref="#g0060" type="pec">Société des Nations</orgName>, pour le loge-<lb break="no"/>ment des membres qui
-                        répondent de tous côtés à son appel. J'ai <pb facs="FRAD072_12J386_lettre0466_003" n="3"/><note place="top" type="foliation">-
-                            3 -</note> beau mettre à leur service le personnel et les ressources de<lb/> la Dotation, de la Conciliation, sans compter
-                        l'inépuisable<lb/> obligeance pour nous du personnel du <orgName ref="#g0002" type="pec">Sénat</orgName> et de la Chambre
-                        des<lb/> Députés et du <orgName ref="#g0012" type="pec">Ministère des Affaires Etrangères</orgName><subst>
+                        répondent de tous côtés à son appel. J'ai <pb facs="iiif:10.34847/nkl.e247qz60/1f9fffdccc8f627ecd46cabaa08217254ecf348f" n="3"
+                            /><note place="top" type="foliation">- 3 -</note> beau mettre à leur service le personnel et les ressources de<lb/> la
+                        Dotation, de la Conciliation, sans compter l'inépuisable<lb/> obligeance pour nous du personnel du <orgName ref="#g0002"
+                            type="pec">Sénat</orgName> et de la Chambre des<lb/> Députés et du <orgName ref="#g0012" type="pec">Ministère des Affaires
+                            Etrangères</orgName><subst>
                             <del rend="overwritten">. J</del>
-                            <add place="across" hand="#annotation">, j</add>
+                            <add hand="#annotation" place="across">, j</add>
                         </subst>e n'arrive<lb/> pas à résoudre ce problème inextricable. C'est un gros embarras<lb/> pour moi. La <orgName
                             ref="#g0001" type="pec">Dotation</orgName> et son personnel dévoué me sont d'un<lb/> grand secours pour m'en tirer. Je
                         dois vous le dire et je<lb/> désire que M.M. les Trustees le sachent.</p>
@@ -303,10 +305,10 @@
                         sympathies uni-<lb break="no"/>verselles qu'au bénéfice des neutres et de nos ennemis.</p>
                     <p rend="indent">Où logerons-nous les étudiants qui vou-<lb break="no"/>dront venir dans nos Facultés ? Où les professeurs? Où
                         les<lb/> voyageurs<add> </add>a<del> </del>mis ? C'est un problème qui n'est pas seulement <pb
-                            facs="FRAD072_12J386_lettre0466_004" n="4"/><note place="top" type="foliation">- 4 -</note> national et qui vous intéresse
-                        comme nous. Il importe que <placeName ref="#l0001" type="pec">Paris</placeName><lb/> ait matériellement, dès demain, les
-                        moyens de recevoir les amis<lb/> de la <placeName ref="#l0207" type="pec">France</placeName>, et les collaborateurs de la
-                        victoire du Droit.</p>
+                            facs="iiif:10.34847/nkl.e247qz60/ad8d31ee0719971662cf5689be1c13015f21b79c" n="4"/><note place="top" type="foliation">- 4
+                            -</note> national et qui vous intéresse comme nous. Il importe que <placeName ref="#l0001" type="pec"
+                        >Paris</placeName><lb/> ait matériellement, dès demain, les moyens de recevoir les amis<lb/> de la <placeName ref="#l0207"
+                            type="pec">France</placeName>, et les collaborateurs de la victoire du Droit.</p>
                     <p rend="indent">Ce que pourra faire la <orgName ref="#g0001" type="pec">Dotation Carnegie</orgName>,<lb/> d'accord avec la
                         Conciliation, sera beaucoup, parce que nous le<lb/> ferons avec discernement et de grand cœeur, mais il faut que<lb/> nous
                         puissions seconder les entreprises qui pourront nous faci-<lb break="no"/>liter la tâche, et que nous nous app<subst>
@@ -327,13 +329,13 @@
                     </postscript>
                 </div>
                 <div type="annexe">
-                    <pb facs="FRAD072_12J386_lettre0466_annexe01_001" n="5"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/fe78cbbed89ba78b8bc9d48a50b82820e9becaa8" n="5"/>
                     <head rend="underline">Annexe à ma lettre N° 466.</head>
                     <p rend="align(right)">Communication de <persName ref="#p0375" type="pec">M LARNAUDE</persName><lb/> Doyen de la <orgName
                             ref="#g0036" type="pec">Faculté de Droit</orgName><lb/> de <placeName ref="#l0001" type="pec">Paris</placeName>.</p>
                     <metamark function="separation" style="double_line"/>
                     <note hand="#annotation" place="top(left)"><placeName ref="#l0005" type="pec">Molitor</placeName></note>
-                    <note><hi rend="underline" n="2">Très Confidentielle.</hi></note>
+                    <note><hi n="2" rend="underline">Très Confidentielle.</hi></note>
                     <p rend="align(center)"><title>PROJET DE CRÉATION D'UN INSTITUT INTERNATIONAL<lb/> DE DROIT PUBLIC ET DE LEGISLATION .</title></p>
                     <metamark function="separation" style="double_line"/>
                     <p rend="align(center)">I<lb/> Note sur l'objet, l'organisation et le fonctionnement<lb/> de l'Institut .</p>
@@ -351,10 +353,11 @@
                         des pays libres du /monde, qui serait exposée par les hommes les<lb/> plus qualifiés.</p>
                     <p rend="indent">Réunis ainsi pendant un certain temps à<lb/>
                         <placeName ref="#l0001" type="pec">Paris</placeName> ils pourraient échanger leurs idées, se communiquer leurs<lb/>
-                        impressions et créer par là même, une interprétation positive, <pb facs="FRAD072_12J386_lettre0466_annexe01_002" n="6"/><note
-                            place="top" type="foliation">- 2 -</note> pratique de la vie internationale intense qui sera nécessaire-<lb break="no"
-                        />ment celle de la <hi rend="underline"><orgName ref="#g0060" type="pec">Société des Nations</orgName> l<unclear
-                                reason="faded">i</unclear>bres.</hi></p>
+                        impressions et créer par là même, une interprétation positive, <pb
+                            facs="iiif:10.34847/nkl.e247qz60/681fd0cf71c4cd3c2a7997522c00ae3fc591ae79" n="6"/><note place="top" type="foliation">- 2
+                            -</note> pratique de la vie internationale intense qui sera nécessaire-<lb break="no"/>ment celle de la <hi
+                            rend="underline"><orgName ref="#g0060" type="pec">Société des Nations</orgName> l<unclear reason="faded"
+                            >i</unclear>bres.</hi></p>
                     <p rend="indent">Il y aurait aussi des leçons de droit inter-<lb break="no"/>national suivant avec le plus grand soin le mouvement
                         des idées<lb/> et des faits sur ce point.</p>
                     <p rend="indent"><hi rend="underline">2°, -</hi> L'Institut formerait en même temps, et dès<lb/> la deuxième année, un camp<del
@@ -376,14 +379,14 @@
                                 <del rend="overwritten">1</del>
                                 <add place="across">2</add>
                             </subst>°,-</hi> Il y aurait un secrétariat permanent qui,<lb/> outre ses attributions administratives serait
-                        essentiellement <pb facs="FRAD072_12J386_lettre0466_annexe01_003" n="7"/><note place="top" type="foliation">- 3 -</note>
-                        chargé de se tenir en contact constant avec les professeurs,<lb/> hommes d'Etat, publicistes ainsi qu'avec les corps
-                        savants,<lb/> dans les divers pays du monde.</p>
+                        essentiellement <pb facs="iiif:10.34847/nkl.e247qz60/defa7bcc8eb2cccdad90c9f73bea5e8ac714c6f1" n="7"/><note place="top"
+                            type="foliation">- 3 -</note> chargé de se tenir en contact constant avec les professeurs,<lb/> hommes d'Etat, publicistes
+                        ainsi qu'avec les corps savants,<lb/> dans les divers pays du monde.</p>
                     <p rend="indent"><hi rend="underline">3°,-</hi> Un conseil d'administration composé des<lb/> fondateurs, donateurs, délégués des
                         gouvernements, professeurs,<lb/> s'occuperait des intérêts financiers de l'œuvre.</p>
                     <p rend="indent"><hi rend="underline">4°, -</hi> Des congrès seraient organisé<subst>
                             <del rend="overwritten">e</del>
-                            <add place="across" hand="#annotation">s</add>
+                            <add hand="#annotation" place="across">s</add>
                         </subst>- tous les<lb/> trois ans,- pour discuter tous les grands problèmes de science<lb/> politique, de droit
                         constitutionnel, de régine des assemblées de<lb/> législation sociale.</p>
                     <p rend="indent"><hi rend="underline">5°,-</hi> Une bibliothè que où seraient en particu-<lb break="no"/>lier concentrés les
@@ -399,7 +402,7 @@
                     <p rend="indent"><hi rend="underline">8°,-</hi> Une maison ou hôtel particulier serait né-<lb break="no"/>cessaire pour installer
                         tous les services de l'Institut, loger<lb/> le secrétaire général, et renfermant des salles de leçons, de<lb/> conférences, de
                         réunions, la bibliothèque, des petits salons<lb/> d'étude et de réception pour les professeurs, etc...</p>
-                    <pb facs="FRAD072_12J386_lettre0466_annexe01_004" n="8"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/c93115a92e5f58a96059ad3002a301fb02e01a5e" n="8"/>
                     <note place="top" type="foliation">- 4 -</note>
                     <p rend="indent">Mais pour commencer<del rend="strikethrough">é</del> les cours se feraient<lb/> à la <orgName ref="#g0036"
                             type="pec">Faculté de Droit</orgName> ou à <placeName ref="#l0480" type="pec">la Sorbonne</placeName>, qui pourraient
@@ -430,7 +433,7 @@
                             >Angleterre</placeName>, aux <placeName ref="#l0184" type="pec">Etats-Unis</placeName>, en <placeName ref="#l0207"
                             type="pec">France</placeName>, en <placeName ref="#l0073" type="pec">Belgique</placeName>, en<lb/>
                         <placeName ref="#l0254" type="pec">Italie</placeName>.</p>
-                    <pb facs="FRAD072_12J386_lettre0466_annexe01_005" n="9"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/9358824a1143b5b26c118e367bc7ea7118f36426" n="9"/>
                     <note place="top" type="foliation">- 5 -</note>
                     <p rend="indent">Objet des réunions de quinzaine: Causeries<lb/> sur les principales questions à l'ordre du jour dans les
                         mêmes<lb/> pays.</p>
@@ -503,12 +506,12 @@
                     <metamark function="separation" style="horizontale_line"/>
                 </div>
                 <div type="annexe">
-                    <pb facs="FRAD072_12J386_lettre0466_annexe02_001" n="10"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/d6fccdb72f64e2ea042e4ab303f187fceaf20fd6" n="10"/>
                     <head hand="#annotation" rend="right">Annexe à ma Lettre<lb/>
                         <hi rend="underline">N° 466</hi>.</head>
                     <p hand="#annotation">"L'Oeuvre",<lb/>
                         <date when-iso="1919-01-22">22 janvier 1919</date></p>
-                    <pb facs="FRAD072_12J386_lettre0466_annexe02_002" n="11"/>
+                    <pb facs="iiif:10.34847/nkl.e247qz60/7e68e0b5b56455335660a1b14a22ebdf48f8158c" n="11"/>
                 </div>
             </div>
         </body>

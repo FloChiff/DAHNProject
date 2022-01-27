@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -215,6 +215,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="proposed">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-25" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent) and named
                 entities</change>
             <change when-iso="2021-05-19" who="#floriane.chiffoleau">Creation of the file</change>
@@ -223,7 +224,7 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs="FRAD072_12J384_lettre0155_001" n="1"/>
+                <pb facs="iiif:10.34847/nkl.5b56a8z2/7aae9bfd5eff69599d55f5f49ba4e7253ac0b26b" n="1"/>
                 <head rend="center underline">LETTRE N° 155.</head>
                 <opener>
                     <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
@@ -234,7 +235,7 @@
                     <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute></opener>
                 <p rend="indent">Nous entrons dé<subst>
                         <del rend="overwritten">n</del>
-                        <add place="across" hand="#annotation">j</add>
+                        <add hand="#annotation" place="across">j</add>
                     </subst>à dans une ère nouvelle ; avant même<lb/> la fin de la guerre la <placeName ref="#l0207" type="pec">France</placeName>
                     devient féministe. Que sera-<del rend="strikethrough">t</del>-ce<lb/> ap<subst>
                         <del rend="overwritten">a</del>
@@ -248,7 +249,7 @@
                     sera plus grand<lb/> encore dans les conseils départementaux et cantonnaux. Et ce<lb/> n'est qu'un commencement! Après deux années
                     de guerre. Voici l'o-<lb break="no"/>pinion ralliée au féminisme et au pacifisme, tel que nous le con-<lb break="no"/>cevons. La
                     question est de savoir si elle s'en tiendra là et n'ira<lb/> pas jusqu'au socialisme...... Attendons. Ce qui est sûr, c'est
-                    que<lb/> les chauvins paieront partout <hi rend="underline" n="2">terriblement cher</hi> leurs excitations<lb/> belliqueuses. Ce
+                    que<lb/> les chauvins paieront partout <hi n="2" rend="underline">terriblement cher</hi> leurs excitations<lb/> belliqueuses. Ce
                     sera justice.</p>
                 <p rend="indent">Pour ne parler que du succès certain de la cause<lb/>
                     <del rend="strikethrough">cause</del> des femmes, on m'a naturellement demandé de développer mon<lb/> opinion sur son avenir. Je
@@ -259,7 +260,7 @@
                     <address>
                         <addrLine>à Monsieur le Président N. Murray BUTTLER.</addrLine>
                     </address></p>
-                <pb facs="FRAD072_12J384_lettre0155_002" n="2"/>
+                <pb facs="iiif:10.34847/nkl.5b56a8z2/4fc78b081209192f2ac4763e220a49cc277db8d1" n="2"/>
                 <note place="top" type="foliation">- 2 -</note>
                 <p rend="indent">Des temps nouveaux surgiront après la guerre. Des<lb/>
                     <subst>
@@ -268,7 +269,7 @@
                     </subst>roblèmes, restés jusqu'alors soi-disant chimériques, seront posés ;<lb/> la force des choses les répondra. O dérision! Les
                     solutions que<lb/> la guerre aura mûries dans le san<subst>
                         <del rend="overwritten">a</del>
-                        <add place="across" hand="#annotation">g</add>
+                        <add hand="#annotation" place="across">g</add>
                     </subst>, nous auraient, pour la plupart,<lb/> épargné la guerre, si nous avions écouté la simple voix du coeur<lb/> et de la
                     raison ! Nul doute que, si la voix des mères n'avait pas<lb/> été délibérément étouffée dans notre vieux monde par une tradi-<lb
                         break="no"/>tion despotique, le sort de <placeName ref="#l0185" type="pec">l'Europe</placeName> eût été changé ; le
@@ -293,10 +294,11 @@
                         ref="#l0207" type="pec">France</placeName>? Contre l'affaiblissement de<lb/> notre race? Contre l'alcoolisme, la débauche, la
                     tuberculose, la<lb/> maladie, la dépression de nos forces morales et matérielles? Com<lb/> ment lutter, si nous nous privons, dans
                     ce combat, de la collabo-<lb break="no"/>ration d'une moitié de notre population ; si nous continuons à te<unclear reason="faded"
-                        >n</unclear>ir <pb facs="FRAD072_12J384_lettre0155_003" n="3"/><note place="top" type="foliation">- 3 -</note> la femme à
-                    l'écart, alors qu'elle aura fait pendant la guerre ses<lb/> preuves éclatantes, non seulement de dévouement, mais d'efficace<lb/>
-                    capacité? Quelle que soit notre victoire sur l'<placeName ref="#l0028" type="pec">Allemagne</placeName>, nous<lb/> n'en serons pas
-                    moins vaincus par la concurrence universelle, si<lb/> nous devons l'affronter avec la moitié seulement de no<subst>
+                        >n</unclear>ir <pb facs="iiif:10.34847/nkl.5b56a8z2/ff8740f202b4fd122bfeabf11ba8ce03b32645ef" n="3"/><note place="top"
+                        type="foliation">- 3 -</note> la femme à l'écart, alors qu'elle aura fait pendant la guerre ses<lb/> preuves éclatantes, non
+                    seulement de dévouement, mais d'efficace<lb/> capacité? Quelle que soit notre victoire sur l'<placeName ref="#l0028" type="pec"
+                        >Allemagne</placeName>, nous<lb/> n'en serons pas moins vaincus par la concurrence universelle, si<lb/> nous devons
+                    l'affronter avec la moitié seulement de no<subst>
                         <del rend="overwritten">f</del>
                         <add place="across">s</add>
                     </subst> forces.<lb/> Il nous faudra dorénavant, - à nous vieille <placeName ref="#l0185" type="pec">Europe</placeName>, - autant
@@ -321,9 +323,10 @@
                     appelées à participer à toutes nos entreprises de<lb/> rénovation nationale. Qu'elles s'y préparent. Qu'elles s'orga-<lb
                         break="no"/>nisent ! Que leurs associations soient toutes prêtes à nous eton-<lb break="no"/>ner et à désarmer nos dernières
                     objections par la sagesse de leurs<lb/>
-                    <pb facs="FRAD072_12J384_lettre0155_004" n="4"/><note place="top" type="foliation">- 4 -</note> choix. Qu'elles ne se laissent pas
-                    surprendre ou éblouir par l'in-<lb break="no"/>trigue. Af in d'obtenir toute la justice qui leur est que, qu'-<lb break="no"
-                    />elles commencent par se faire justice à elles-mêmess, rigoureu-<lb break="no"/>sement.</p>
+                    <pb facs="iiif:10.34847/nkl.5b56a8z2/8f2c5ddf0ca42bc0a408ca167fe3a5e630040d30" n="4"/><note place="top" type="foliation">- 4
+                        -</note> choix. Qu'elles ne se laissent pas surprendre ou éblouir par l'in-<lb break="no"/>trigue. Af in d'obtenir toute la
+                    justice qui leur est que, qu'-<lb break="no"/>elles commencent par se faire justice à elles-mêmess, rigoureu-<lb break="no"
+                    />sement.</p>
                 <p rend="indent">Je m'explique.</p>
                 <p rend="indent">Qu'elles se défient des arrivistes et dos pontifes! Qu'-<lb break="no"/>elles chois<subst>
                         <del rend="overwritten">si</del>
@@ -342,11 +345,11 @@
                     service. Qu'elles ne choisis-<lb break="no"/>sent pas non plus celles des grandes de ce monde qui croiraient<lb/> condescendre en
                     apportant l'intermittence de leur zèle sans souffle<lb/> à la tâche régulière commune.</p>
                 <p rend="indent">Qu'elles choisissent des femmes de bien éprouvées!<lb/> Elles n'auront que l'embarras du choix, dans la floraison de
-                    toutes <pb facs="FRAD072_12J384_lettre0155_005" n="5"/><note place="top" type="foliation">- 5 -</note> les œuvres qui, depuis ces
-                    dernières années se sont formées spon-<lb break="no"/>tanément et à <placeName ref="#l0001" type="pec">Paris</placeName> et en
-                    Province, avec l'appui de quelques grands<lb/> hommes de bien, leurs associés de la premiere heure. Qu'elles<lb/> choisissent des
-                    mêres ou des anges de bonté, comme chacun de nous<lb/> en connaît ; qu'elles en fassent le premier bataillon sacré de la<lb/>
-                    représentation féminine.</p>
+                    toutes <pb facs="iiif:10.34847/nkl.5b56a8z2/33d15920477a3ecee76a575ce79ff7727700cef9" n="5"/><note place="top" type="foliation">-
+                        5 -</note> les œuvres qui, depuis ces dernières années se sont formées spon-<lb break="no"/>tanément et à <placeName
+                        ref="#l0001" type="pec">Paris</placeName> et en Province, avec l'appui de quelques grands<lb/> hommes de bien, leurs associés
+                    de la premiere heure. Qu'elles<lb/> choisissent des mêres ou des anges de bonté, comme chacun de nous<lb/> en connaît ; qu'elles
+                    en fassent le premier bataillon sacré de la<lb/> représentation féminine.</p>
                 <p rend="indent">Et alors il se produira ce miracle que j'escompte<lb/> depuis toute ma vie:</p>
                 <p rend="indent">l'élite des femmes de <placeName ref="#l0207" type="pec">France</placeName>, entraînant à sa suite,<lb/> non
                     seulement les françaises, mais les français e<subst>
