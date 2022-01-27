@@ -88,7 +88,7 @@
                     <msContents>
                         <msItem>
                             <docDate when="1917-01-20"/>
-                            <note resp="#floriane.chiffoleau"> </note>
+                            <note resp="#floriane.chiffoleau">This letter is joined with an annex.</note>
                             <note resp="#floriane.chiffoleau" type="keyword"> </note>
                         </msItem>
                     </msContents>
@@ -99,8 +99,8 @@
                                     <material/>
                                 </support>
                                 <extent>
-                                    <measure type="folio" xml:lang="fr">13 feuillets de textes</measure>
-                                    <measure type="folio" xml:lang="en">13 text folio</measure>
+                                    <measure type="folio" xml:lang="fr">13 feuillets de textes + 1 feuillet d'annexes</measure>
+                                    <measure type="folio" xml:lang="en">13 text folio + 1 annex folio</measure>
                                     <dimensions unit="cm">
                                         <height/>
                                         <width/>
@@ -147,6 +147,10 @@
                             <p xml:lang="en">The institution that held the collection applied on each folio, usually in the margin, a stamp where it
                                 is written: <stamp resp="#stamp">Archives de la Sarthe <lb/>Propriété publique</stamp></p>
                         </additions>
+                        <accMat>
+                            <p xml:lang="fr">La lettre est accompagnée d'un erratum de d'Estournelles.</p>
+                            <p xml:lang="en">The letter also contains an erratum by d'Estournelles de Constant.</p>
+                        </accMat>
                     </physDesc>
                     <history>
                         <origin>
@@ -215,6 +219,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Encoding of the annexe</change>
             <change when-iso="2022-01-20" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-06-24" who="#floriane.chiffoleau">Encoded the “couillard“</change>
@@ -541,6 +546,12 @@
                 </div>
                 <div type="annexe">
                     <pb facs="iiif:10.34847/nkl.b501512f/9574a17752f7803fe98eb5481c0f27b10a99501c" n="14"/>
+                    <fw corresp="#lh-senat" place="margin" type="letterhead"><hi rend="underline"><orgName ref="#g0002" type="pec"
+                            >SÉNAT</orgName></hi></fw>
+                    <head rend="center underline">Lettre n° 212.</head>
+                    <p><hi rend="underline">ERRATUM</hi>. Page 9, ligne 24, après ces mots "quelques douceurs",<lb/> ajouter en note au bas de la page
+                        ces mots: <lb/> ( 1 ) La production et la fabrication du sucre en France<lb/> étaient centralisés dans nos départements
+                        envahis. Nous sommes<lb/> donc réduits à l'importer, mais il n'en manque pas.</p>
                 </div>
             </div>
         </body>

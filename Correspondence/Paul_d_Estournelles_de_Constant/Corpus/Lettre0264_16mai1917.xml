@@ -99,8 +99,8 @@
                                     <material/>
                                 </support>
                                 <extent>
-                                    <measure type="folio" xml:lang="fr">4 feuillets de textes</measure>
-                                    <measure type="folio" xml:lang="en">4 text folio</measure>
+                                    <measure type="folio" xml:lang="fr">4 feuillets de textes + 1 feuillet d'annexes</measure>
+                                    <measure type="folio" xml:lang="en">4 text folio + 1 annex folio</measure>
                                     <dimensions unit="cm">
                                         <height/>
                                         <width/>
@@ -148,6 +148,10 @@
                             <p xml:lang="en">The institution that held the collection applied on each folio, usually in the margin, a stamp where it
                                 is written: <stamp resp="#stamp">Archives de la Sarthe <lb/>Propriété publique</stamp>.</p>
                         </additions>
+                        <accMat>
+                            <p xml:lang="fr">La lettre est accompagnée d'un message de d'Estournelles de Constant à Butler.</p>
+                            <p xml:lang="en">The letter also contains a message from d'Estournelles de Constant to Butler.</p>
+                        </accMat>
                     </physDesc>
                     <history>
                         <origin>
@@ -216,6 +220,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2022-01-27" who="#floriane.chiffoleau">Encoded the annexe</change>
             <change when-iso="2022-01-21" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2021-02-05" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
@@ -339,6 +344,25 @@
                 </div>
                 <div type="annex">
                     <pb facs="iiif:10.34847/nkl.6ee74ta2/3b4a8d8eb59ef070c76efc4dcb6de877201d3d17" n="5"/>
+                    <head rend="center underline">COPIE.</head>
+                    <opener>
+                        <fw corresp="#lh-senat" place="margin" type="letterhead">
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
+                        </fw>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1917-05-19">19 Mai
+                                1917</date>.</dateline>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
+                    </opener>
+                    <p rend="indent">Je vous prie de communiquer à <persName ref="#p0113" type="pec">M.</persName> et <persName ref="#p0114"
+                            type="pec">Mme. Carnegie</persName><lb/> la dernière partie de ma lettre N°264 intitulée: "<hi rend="underline">La
+                            Dotation<lb/> Carnegie a fait son devoir</hi>".</p>
+                    <p rend="indent">Vous aussi vous faites le vôtre. Je ne vous remer-<lb break="no"/>cierai jamais trop de votre ferme dévouement à
+                        nos idées.</p>
+                    <closer>
+                        <signed rend="align(right)">A vous de coeur,</signed>
+                        <signed rend="align(right)">Signé: <persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
+                    </closer>
+                    <metamark function="separation" style="double_line"/>
                 </div>
             </div>
         </body>
