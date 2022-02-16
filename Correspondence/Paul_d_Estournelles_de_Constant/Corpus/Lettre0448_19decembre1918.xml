@@ -216,6 +216,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc status="raw_transcription">
+            <change when-iso="2022-02-16" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2020-10-23" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent)</change>
             <change when-iso="2020-10-01" who="#floriane.chiffoleau">Creation of the file</change>
@@ -224,72 +225,84 @@
     <text>
         <body>
             <div type="transcription">
-                <pb facs=".JPG" n="1"/>
-                <note hand="#annotation" place="top(left)">
-                    <placeName ref="#l0005">Molitor</placeName>
-                </note>
-                <head rend="center underline">LETTRE N° 448.</head>
-                <opener>
-                    <fw corresp="#lh-senat" place="margin" type="letterhead">
-                        <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
-                    </fw>
-                    <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1918-12-19">19 Décemb,
-                            1918</date></dateline>
-                    <title rend="align(center) underline">SOMBRE TABLEAU DE LA SITUATION FINANCIERE DE LA <placeName ref="#l0207" type="pec"
-                            >FRANCE</placeName>,<lb/> PAR M. A.<persName ref="#p0536" type="pec">RIBOT</persName>.</title>
-                    <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
-                </opener>
-                <p rend="indent">Je vous envoie ci-joint, en vous recommandant<lb/> de le faire traduire, <add hand="#annotation" place="inline"
-                        >(</add>tout au moins quant à la dernière partie,<lb/> depuis la dernière colon<subst>
-                        <del rend="overwritten">e</del>
-                        <add place="across">n</add>
-                    </subst>e de la page 829,-comme je l'ai<lb/> recommandé au <persName ref="#p0318" type="pec">Colonel House</persName> dont la
-                    famille assistait à la<lb/> séance,-<add hand="#annotation" place="inline">)</add> le sombre "coup d'oeil", que vient de jeter
-                        M.<persName ref="#p0536" type="pec">Ribot</persName><lb/> devant le <orgName ref="#g0002" type="pec">Sénat</orgName>, "sur
-                    l'ensemble de notre situation financière".</p>
-                <p rend="indent">J'ai entendu ce discours ; -M.<persName ref="#p0536" type="pec">Ribot</persName> m'en avait<lb/> dit la <subst>
-                        <del rend="overwritten">a</del>
-                        <add place="across">s</add>
-                    </subst>ubstance et je l'attendais ; il mérite d'être médité.<lb/> Il en résulte qu'au lendemain de la <unclear reason="faded"
-                        >g</unclear>uerre, la <placeName ref="#l0207" type="pec">France</placeName>, pour une<lb/> part ruinée, avec une population
-                    diminuée, saignée de son<lb/> meilleur sang et surmenée, devra tripler le chiffre de ses<lb/> dépenses annuelles. Ces dépenses
-                    atteignaient, avant la guerre,<lb/> grâce à nos dettes et à nos dépenses militaires, le chiffre,<lb/> alors jugé formidable, de 6
-                    milliards ; elles s'élèveront désor<lb break="no"/>mais au moins à 18 ou 19 milliards et avec des recettes sen-<lb break="no"
-                    />siblement réduites.</p>
-                <p rend="indent">Comment ferons-nous face à de telles charges, <address>
-                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président Nicholas Murray
-                            BUTLER</persName>.</addrLine>
-                    </address>
-                    <pb facs=".JPG" n="2"/><note place="top" type="foliation">- 2 -</note> sans faire faillite et sans une révolution ? On compte
-                    sur<lb/> l'indemnité allemande. Où en serions-nous si la guerre s'était<lb/> terminée par une victoire moins complète ! Mais cette
-                    indemnité<lb/> le sera pas payée tout de suite, même en admettant, comme il<lb/> est équitable, le <subst>
-                        <del rend="strikethrough">système</del>
-                        <add hand="#annotation" place="above">régime</add>
-                    </subst> de priorité que réclame aux Alliés<del rend="strikethrough">,</del><lb/>
-                    <persName ref="#p0536" type="pec">M. Ribot</persName>, en faveur de la <placeName ref="#l0207" type="pec">France</placeName>. Et
-                    cette indemnité ne sera<lb/> payée, moyennant un accord parfait et durable entre les<lb/> Alliés, que dans la mesure où
-                        l'<placeName ref="#l0028" type="pec">Allemagne</placeName> sera tranquille et<lb/> prospère....</p>
-                <p rend="indent">Décidément, ceux qui refusaient de considérer<lb/> une guerre, même victorieuse, comme un bienfait pour la <subst>
-                        <del rend="overwritten">Fina</del>
-                        <add hand="#annotation" place="across">Fra</add>
-                    </subst>nce<lb/> n'étaient pas de mauvais patriotes.</p>
-                <closer>
-                    <signed rend="align(right)">Votre affectueusement dévoué,</signed>
-                    <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de Constant</persName></signed>
-                    <address>
-                        <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président Nicholas Murray
-                            BUTLER</persName>,</addrLine>
-                        <addrLine rend="indent">
-                            <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
-                        </addrLine>
-                    </address>
-                </closer>
-                <postscript>
-                    <p rend="bottom"><subst>
-                            <del rend="overwritten">I</del>
-                            <add place="across">1</add>
-                        </subst> annexe.</p>
-                </postscript>
+                <div type="letter">
+                    <pb facs="iiif:10.34847/nkl.bdba2176/90c0c0148c81422e4d63ff2dbbdce5f0e4ecf4d2" n="1"/>
+                    <note hand="#annotation" place="top(left)">
+                        <placeName ref="#l0005">Molitor</placeName>
+                    </note>
+                    <head rend="center underline">LETTRE N° 448.</head>
+                    <opener>
+                        <fw corresp="#lh-senat" place="margin" type="letterhead">
+                            <hi rend="underline"><orgName ref="#g0002" type="pec">SÉNAT</orgName></hi>
+                        </fw>
+                        <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1918-12-19">19 Décemb,
+                                1918</date></dateline>
+                        <title rend="align(center) underline">SOMBRE TABLEAU DE LA SITUATION FINANCIERE DE LA <placeName ref="#l0207" type="pec"
+                                >FRANCE</placeName>,<lb/> PAR M. A.<persName ref="#p0536" type="pec">RIBOT</persName>.</title>
+                        <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
+                    </opener>
+                    <p rend="indent">Je vous envoie ci-joint, en vous recommandant<lb/> de le faire traduire, <add hand="#annotation" place="inline"
+                            >(</add>tout au moins quant à la dernière partie,<lb/> depuis la dernière colon<subst>
+                            <del rend="overwritten">e</del>
+                            <add place="across">n</add>
+                        </subst>e de la page 829,-comme je l'ai<lb/> recommandé au <persName ref="#p0318" type="pec">Colonel House</persName> dont la
+                        famille assistait à la<lb/> séance,-<add hand="#annotation" place="inline">)</add> le sombre "coup d'oeil", que vient de jeter
+                            M.<persName ref="#p0536" type="pec">Ribot</persName><lb/> devant le <orgName ref="#g0002" type="pec">Sénat</orgName>, "sur
+                        l'ensemble de notre situation financière".</p>
+                    <p rend="indent">J'ai entendu ce discours ; -M.<persName ref="#p0536" type="pec">Ribot</persName> m'en avait<lb/> dit la <subst>
+                            <del rend="overwritten">a</del>
+                            <add place="across">s</add>
+                        </subst>ubstance et je l'attendais ; il mérite d'être médité.<lb/> Il en résulte qu'au lendemain de la <unclear reason="faded"
+                            >g</unclear>uerre, la <placeName ref="#l0207" type="pec">France</placeName>, pour une<lb/> part ruinée, avec une
+                        population diminuée, saignée de son<lb/> meilleur sang et surmenée, devra tripler le chiffre de ses<lb/> dépenses annuelles.
+                        Ces dépenses atteignaient, avant la guerre,<lb/> grâce à nos dettes et à nos dépenses militaires, le chiffre,<lb/> alors jugé
+                        formidable, de 6 milliards ; elles s'élèveront désor<lb break="no"/>mais au moins à 18 ou 19 milliards et avec des recettes
+                            sen-<lb break="no"/>siblement réduites.</p>
+                    <p rend="indent">Comment ferons-nous face à de telles charges, <address>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président Nicholas Murray
+                                BUTLER</persName>.</addrLine>
+                        </address>
+                        <pb facs="iiif:10.34847/nkl.bdba2176/0c656a57ef73637c5efcbb42d011c2d5ee44abc0" n="2"/><note place="top" type="foliation">- 2
+                            -</note> sans faire faillite et sans une révolution ? On compte sur<lb/> l'indemnité allemande. Où en serions-nous si la
+                        guerre s'était<lb/> terminée par une victoire moins complète ! Mais cette indemnité<lb/> le sera pas payée tout de suite, même
+                        en admettant, comme il<lb/> est équitable, le <subst>
+                            <del rend="strikethrough">système</del>
+                            <add hand="#annotation" place="above">régime</add>
+                        </subst> de priorité que réclame aux Alliés<del rend="strikethrough">,</del><lb/>
+                        <persName ref="#p0536" type="pec">M. Ribot</persName>, en faveur de la <placeName ref="#l0207" type="pec">France</placeName>.
+                        Et cette indemnité ne sera<lb/> payée, moyennant un accord parfait et durable entre les<lb/> Alliés, que dans la mesure où
+                            l'<placeName ref="#l0028" type="pec">Allemagne</placeName> sera tranquille et<lb/> prospère....</p>
+                    <p rend="indent">Décidément, ceux qui refusaient de considérer<lb/> une guerre, même victorieuse, comme un bienfait pour la <subst>
+                            <del rend="overwritten">Fina</del>
+                            <add hand="#annotation" place="across">Fra</add>
+                        </subst>nce<lb/> n'étaient pas de mauvais patriotes.</p>
+                    <closer>
+                        <signed rend="align(right)">Votre affectueusement dévoué,</signed>
+                        <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
+                            Constant</persName></signed>
+                        <address>
+                            <addrLine rend="margin">à <persName ref="#p0002" type="pec">Monsieur le Président Nicholas Murray
+                                BUTLER</persName>,</addrLine>
+                            <addrLine rend="indent">
+                                <hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi>
+                            </addrLine>
+                        </address>
+                    </closer>
+                    <postscript>
+                        <p rend="bottom"><subst>
+                                <del rend="overwritten">I</del>
+                                <add place="across">1</add>
+                            </subst> annexe.</p>
+                    </postscript>
+                </div>
+                <div type="annex">
+                    <pb facs="iiif:10.34847/nkl.bdba2176/fdda158b2e116721147772f82f75e29b176770ac" n="3"/>
+                    <pb facs="iiif:10.34847/nkl.bdba2176/b7d23b154751585c7e6f524d69117e0dbbfbd887" n="4"/>
+                    <pb facs="iiif:10.34847/nkl.bdba2176/07876be501189f7c7fe027be6551fd06729ebbbb" n="5"/>
+                    <pb facs="iiif:10.34847/nkl.bdba2176/383ecbb7c40b7e5d2cfb8454c75310d2082f36d4" n="6"/>
+                    <pb facs="iiif:10.34847/nkl.bdba2176/71eabb635d8c911f2370d2b2e7338351542b9cfa" n="7"/>
+                    <pb facs="iiif:10.34847/nkl.bdba2176/aa322e3b10634abe50380c3d4e893285273ee759" n="8"/>
+                </div>
             </div>
         </body>
     </text>
