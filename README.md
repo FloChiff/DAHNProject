@@ -2,34 +2,39 @@
 
 ## Structure of the repository
 
-- Correspondence
-  - Berlin Intellectuals
-    - Corpus
-    - Indexes
-  - Guidelines
-  - Paul d'Estournelles de Constant
-    - Corpus
-    - Indexes
-- Application TEI Publisher
-  - Templates
-  - Documentation
-  - ODD
-- Project Development
-  - Documentation
-  - Scripts
-    - Correction
-    - Digitization
-    - Encoding
-    - Modification
-    - Transcription
-  - Training
-    - Ground Truth
-    - Segmentation
-      - Logs
-      - Models
-    - Text Recognition
-      - Logs
-      - Models
+- [Correspondence](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence)
+  - [Berlin Intellectuals](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Berlin_Intellectuals)
+    - [Corpus](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Berlin_Intellectuals/Corpus)
+    - [Indexes](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Berlin_Intellectuals/Indexes)
+  - [Guidelines](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Guidelines)
+  - [Nachlassprojekt](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Nachlassprojekt)
+  - [Paul d'Estournelles de Constant](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Paul_d_Estournelles_de_Constant)
+    - [Corpus](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Paul_d_Estournelles_de_Constant/Corpus)
+    - [Indexes](https://github.com/FloChiff/DAHNProject/tree/master/Correspondence/Paul_d_Estournelles_de_Constant/Indexes)
+- [Application TEI Publisher](https://github.com/FloChiff/DAHNProject/tree/master/Application_TEI_Publisher)
+  - [Templates](https://github.com/FloChiff/DAHNProject/tree/master/Application_TEI_Publisher/templates)
+  - [Documentation](https://github.com/FloChiff/DAHNProject/blob/master/Application_TEI_Publisher/Documentation_TEIPublisherApp.xml)
+  - [ODD](https://github.com/FloChiff/DAHNProject/blob/master/Application_TEI_Publisher/myodd.odd.xml)
+- [Project Development](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development)
+  - [Documentation](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Documentation)
+  - [Scripts](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts)
+    - [Correction](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Correction)
+    - [Digitization](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Digitization)
+    - [Encoding](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Encoding)
+    - [Modification](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Modification)
+    - [Named Entities](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Named_Entities)
+    - [Transcription](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Scripts/Transcription)
+  - [Training](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training)
+    - [Ground Truth](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Ground%20truth)
+    - [Segmentation](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Segmentation)
+      - [Logs](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Segmentation/logs)
+      - [Models](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Segmentation/models)
+    - [Text](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Texts)
+      - [BI](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Texts/BI)
+      - [PEC](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Texts/PEC)
+    - [Text Recognition](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Text%20Recognition)
+      - [Logs](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Text%20Recognition/logs)
+      - [Models](https://github.com/FloChiff/DAHNProject/tree/master/Project%20development/Training/Text%20Recognition/models)
 - .gitignore
 - README.md
 
@@ -44,7 +49,7 @@ This repository contains files related to the development of the DAHN project an
 ### Correspondence
 This folder contains the two main corpus of our project: 
 - the **correspondence of Paul d'Estournelles de Constant**, study corpus for the development of our program for digital scientific edition of corpus, with the transcription of the letters and the indexes attached to it.
-- the **correspondence of Berlin intellectuals**, with transcriptions updated to fit the new version of the TEI Guidelines and corrected indexes, that follows what is established on the encoding guidelines.
+- the **correspondence of Berlin intellectuals**, with transcriptions updated to fit the new version of the TEI Guidelines and corrected indexes, that follows what is established on the encoding guidelines, as well as the **papers of August Boeck**, available in its own folder.
 
 Finally, the folder also contains encoding guidelines, developed according to the TEI Guidelines and what has be done for the two previously mentioned corpus. Those encoding guidelines are specific to egodocuments and it provides precision sometimes not given in the TEI Guidelines and choices made for the encoding. Those guidelines present both header and body, as well as indexes and specific parts of the encoding (dates, named entities, substitutions, etc.)
 
