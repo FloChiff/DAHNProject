@@ -218,7 +218,8 @@
                 <language ident="fr"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc status="raw_transcription">
+        <revisionDesc status="annotation_in_progress">
+            <change when-iso="2022-06-09" who="#floriane.chiffoleau">Encoding of named entities</change>
             <change when-iso="2022-01-27" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2022-01-21" who="#floriane.chiffoleau">First encoding of the transcription, some specific metadata (extent, msItem,
                 accMat) and named entities</change>
@@ -245,15 +246,15 @@
                         maritimes.</p>
                     <p rend="indent">Je ne crois pas pouvoir vous communiquer copie de ce<lb/> rapport ; je le regrette, mais il peut risquer de se
                         perdre ; mieux<lb/> vaut attendre.</p>
-                    <p rend="indent">En attendant, voici une copie de la lettre par laquelle<lb/> j'ai fait part à votre ambassadeur à <placeName
-                            ref="#l0001" type="pec">Paris</placeName> de mon impression et<lb/> de celle de mes collègues du <orgName ref="#g0002"
-                            type="pec">Sénat</orgName>, au retour de cette visite.</p>
+                    <p rend="indent">En attendant, voici une copie de la lettre par laquelle<lb/> j'ai fait part à votre <rs ref="#p0586"
+                            type="pec_person">ambassadeur</rs> à <placeName ref="#l0001" type="pec">Paris</placeName> de mon impression et<lb/> de
+                        celle de mes collègues du <orgName ref="#g0002" type="pec">Sénat</orgName>, au retour de cette visite.</p>
                     <closer><signed rend="align(right)">Votre affectueusement dévoué,</signed>
                         <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles</persName></signed>
                         <address>
                             <addrLine>à <persName ref="#p0002" type="pec">M. le Président N. Murray Butler</persName>,</addrLine>
                             <addrLine rend="indent"><hi rend="underline"><placeName ref="#l0003" type="pec">NEW-YORK</placeName>.</hi></addrLine>
-                            <addrLine> U.S.A.</addrLine>
+                            <addrLine><placeName ref="#l0184" type="pec">U.S.A.</placeName></addrLine>
                         </address></closer>
                 </div>
                 <div type="annex">
@@ -264,7 +265,7 @@
                         <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, <date when-iso="1918-07-31">31 Juillet
                                 1918</date>.</dateline>
                         <note hand="#annotation">Copie<lb/> personnelle</note>
-                        <salute rend="indent">Monsieur l'Ambassadeur, </salute></opener>
+                        <salute rend="indent"><rs ref="#p0586" type="pec_person">Monsieur l'Ambassadeur</rs>,</salute></opener>
                     <p rend="indent">En ma qualité de Vice-Président de la Commission<lb/> de la Marine et de Président du Groupe de l'Aviation du
                             <orgName ref="#g0002" type="pec">Sénat</orgName>,<lb/> j'ai eu souvent, vous le savez, l'occasion de constater l'admi-<lb
                             break="no"/>rable effort de l'armée et de la marine américaines, tant dans<lb/> les écoles que vous avez créées, comme par
@@ -273,44 +274,50 @@
                             >Sénat</orgName> l'effica<subst>
                             <del rend="overwritten">t</del>
                             <add place="across">c</add>
-                        </subst>ité<lb/> des services de vos escadrilles d'hydravions sur l'Océan où,<lb/> notamment à l'Ile Tudy, le pilote américain
-                        SMITH vient de rece-<lb break="no"/>voir la Croix de Guerre pour avoir <del rend="strikethrough">pa</del> aperçu, suivi et
-                            contri-<lb break="no"/>bué à couler un sous-marin allemand, au mois d'Avril dernier.</p>
+                        </subst>ité<lb/> des services de vos escadrilles d'hydravions sur l'Océan où,<lb/> notamment à l'<placeName ref="#l0247"
+                            type="pec">Ile Tudy</placeName>, le pilote américain <persName ref="#p0594" type="pec">SMITH</persName> vient de rece-<lb
+                            break="no"/>voir la Croix de Guerre pour avoir <del rend="strikethrough">pa</del> aperçu, suivi et contri-<lb break="no"
+                        />bué à couler un sous-marin allemand, au mois d'Avril dernier.</p>
                     <p rend="indent">Je tiens aujourd'hui à vous faire part des senti-<lb break="no"/>ments d'admiration avec lesquels j'ai visité
                         plusieurs centres<lb/> nouvellement confiés à vos compatriotes, dans la même région,<lb/> notamment celui de Trinité dans la
-                        rade de Quiberon, où le<lb/> Lieutenant de vaisseau JOHNSON, d'accord avec les autorités mari-<lb break="no"/>times
-                        françaises, et particulièrement avec le Capitaine de<lb/> Corvette VASCHALDE, est en train d'improviser, en quelques <address>
+                        rade de <placeName ref="#l0595" type="pec">Quiberon</placeName>, où le<lb/>
+                        <persName ref="#p0746" type="pec">Lieutenant de vaisseau JOHNSON</persName>, d'accord avec les autorités mari-<lb break="no"
+                        />times françaises, et particulièrement avec le <persName ref="#p0635" type="pec">Capitaine de<lb/> Corvette
+                            VASCHALDE</persName>, est en train d'improviser, en quelques <address>
                             <addrLine>à <persName ref="#p0586" type="pec">Monsieur SHARP</persName>, Ambassadeur des <placeName ref="#l0184"
                                     type="pec">Etats-Unis</placeName> à <placeName ref="#l0001" type="pec">Paris</placeName>.</addrLine>
                         </address>
                         <pb facs="iiif:10.34847/nkl.3f8a8mv1/218be4967670fa7effcdb99b4f58f17ae28540ba" n="3"/><note place="top" type="foliation">- 2
-                            -</note> semaines, un centre de ballons captifs ; et encore celui de<lb/> Fromentine, à Noirmoutier, où j'ai vu les
-                        travaux d'organisation,<lb/> commencés depuis quelques semaines seulement, se poursuivre<lb/> avec une rapidité <subst>
+                            -</note> semaines, un centre de ballons captifs ; et encore celui de<lb/>
+                        <placeName ref="#l0596" type="pec">Fromentine</placeName>, à <placeName ref="#l0597" type="pec">Noirmoutier</placeName>, où
+                        j'ai vu les travaux d'organisation,<lb/> commencés depuis quelques semaines seulement, se poursuivre<lb/> avec une rapidité <subst>
                             <del rend="strikethrough">exceptionelle</del>
                             <add place="above">remarquable</add>
-                        </subst> grâce à l'enthousiasme du<lb/> personnel d'élite qui en a été chargé et de son chef, le Lieute-<lb break="no"/>nant
-                        de vaisseau CAPEHART.</p>
-                    <p rend="indent">J'insisterai particulièrement sur le mérite des<lb/> officiers et pilotes qui ont, sous les ordres du
-                        Capitaine<lb/> MAXFIELD, assumé la responsabilité de reprendre et de développer<lb/> notre centre aéronautique de Paimboeuf.
-                        J'avais déjà visité,<lb/> l'an dernier, ce centre. Je l'ai trouvé, cette fois, en très<lb/> grand progrès. La belle tenue, le
-                        feu sacré de tout le person-<lb break="no"/>nel américain qui l'occupe sont d'autant plus dignes d'éloges<lb/> que ses
-                        fonctions sont plus ingrates. Je vous prie de le cons-<lb break="no"/>tater avec moi. Les escadrilles côtières ont fait,
-                        depuis un<lb/> an, si bonne garde que les sous-marins ennemi<del rend="strikethrough">n</del>s ont, pour,<lb/> ainsi dire,
-                        disparu dans la région de l'embouchure de la <placeName ref="#l0277" type="pec">Loire</placeName>.<lb/> Cela est si vrai que
-                        j'ai entendu des officiers américains se<lb/> plaindre de n'avoir plus rien à faire ! Alors au contraire que<lb/> c'est
-                        l'efficacité de leur surveillance qui a contribué, et qui<lb/> contribue plus que jamais, à assurer l'étonnante régularité
-                        et<lb/> l'importance formidable de vos transports en <placeName ref="#l0207" type="pec">France</placeName>. L'organi-<lb
-                            break="no"/>sation d'un centre comme celui de Paimboeuf, entre les mains des<lb/> Américains, ou celui de Guipavas entre
-                        celles des Français, - et<lb/>
+                        </subst> grâce à l'enthousiasme du<lb/> personnel d'élite qui en a été chargé et de son chef, le <persName ref="#p0747"
+                            type="pec">Lieute-<lb break="no"/>nant de vaisseau CAPEHART</persName>.</p>
+                    <p rend="indent">J'insisterai particulièrement sur le mérite des<lb/> officiers et pilotes qui ont, sous les ordres du <persName
+                            ref="#p0748" type="pec">Capitaine<lb/> MAXFIELD</persName>, assumé la responsabilité de reprendre et de développer<lb/>
+                        notre centre aéronautique de <placeName ref="#l0598">Paimboeuf</placeName>. J'avais déjà visité,<lb/> l'an dernier, ce centre.
+                        Je l'ai trouvé, cette fois, en très<lb/> grand progrès. La belle tenue, le feu sacré de tout le person-<lb break="no"/>nel
+                        américain qui l'occupe sont d'autant plus dignes d'éloges<lb/> que ses fonctions sont plus ingrates. Je vous prie de le
+                            cons-<lb break="no"/>tater avec moi. Les escadrilles côtières ont fait, depuis un<lb/> an, si bonne garde que les
+                        sous-marins ennemi<del rend="strikethrough">n</del>s ont, pour,<lb/> ainsi dire, disparu dans la région de l'embouchure de la
+                            <placeName ref="#l0277" type="pec">Loire</placeName>.<lb/> Cela est si vrai que j'ai entendu des officiers américains
+                        se<lb/> plaindre de n'avoir plus rien à faire ! Alors au contraire que<lb/> c'est l'efficacité de leur surveillance qui a
+                        contribué, et qui<lb/> contribue plus que jamais, à assurer l'étonnante régularité et<lb/> l'importance formidable de vos
+                        transports en <placeName ref="#l0207" type="pec">France</placeName>. L'organi-<lb break="no"/>sation d'un centre comme celui
+                        de <placeName ref="#l0598" type="pec">Paimboeuf</placeName>, entre les mains des<lb/> Américains, ou celui de <placeName
+                            ref="#l0599" type="pec">Guipavas</placeName> entre celles des Français, - et<lb/>
                         <pb facs="iiif:10.34847/nkl.3f8a8mv1/37ec07143f9e32ac7fda93f12b4ed46f2352edb9" n="4"/><note place="top" type="foliation">- 3
                             -</note> celle de centres semblables en <placeName ref="#l0037" type="pec">Angleterre</placeName>, permettent
-                        d'étendre<lb/> notre rayon d'action dans des proportions énormes. J'ai<lb/> constaté, - pour ne parler que de Paimboeuf, - que
-                        vos pilotes<lb/> ont fait en mer des raids atteignant jusqu'à la durée de 25 heures<lb/> consécutives, soit un trajet de près
-                        de 1 500 kilomètres. (750<lb/> miles). C'est assez dire que la menace des sous-marins ennemis<lb/> se trouve ainsi de plus en
-                        plus éloignée de nos côtes et par<lb/> conséquent leur action paralysée.</p>
-                    <p rend="indent">J'ai pensé, Monsieur l'Ambassadeur, qu'il ne me<lb/> suffisait pas de rendre compte de ces impressions à mes
-                            collè-<lb break="no"/>gues et à mon Gouvernement,mais que j'avais le devoir de vous<lb/> en faire part, tout au moins à
-                        titre personnel.</p>
+                        d'étendre<lb/> notre rayon d'action dans des proportions énormes. J'ai<lb/> constaté, - pour ne parler que de <placeName
+                            ref="#l0598" type="pec">Paimboeuf</placeName>, - que vos pilotes<lb/> ont fait en mer des raids atteignant jusqu'à la
+                        durée de 25 heures<lb/> consécutives, soit un trajet de près de 1 500 kilomètres. (750<lb/> miles). C'est assez dire que la
+                        menace des sous-marins ennemis<lb/> se trouve ainsi de plus en plus éloignée de nos côtes et par<lb/> conséquent leur action
+                        paralysée.</p>
+                    <p rend="indent">J'ai pensé, <rs ref="#p0586" type="pec_person">Monsieur l'Ambassadeur</rs>, qu'il ne me<lb/> suffisait pas de
+                        rendre compte de ces impressions à mes collè-<lb break="no"/>gues et à mon Gouvernement,mais que j'avais le devoir de
+                        vous<lb/> en faire part, tout au moins à titre personnel.</p>
                     <p rend="indent">Vous ne permettrez d'ajouter que ces manifesta-<lb break="no"/>tions de l'activité de vos armées de terre et de
                         mer, ne sont<lb/> qu'un effet de l'incomparable dévouement qui les anime pour la<lb/> défense d'une cause qui est devenue la
                         leur comme <add place="above">elle</add> est la<lb/> nôtre depuis que nous avons été attaqués en pleine paix, en<lb/> pleine
@@ -320,12 +327,13 @@
                             >France</placeName>, pour le monde entier, le gage<lb/> certain de la victoire prochaine du Droit sur la violence.</p>
                     <p rend="indent">Je vous serai obligé de bien vouloir adresser mes <pb
                             facs="iiif:10.34847/nkl.3f8a8mv1/d5073212c58a0086871aa0f0199b26bc1bd9a7eb" n="5"/><note place="top" type="foliation">- 4
-                            -</note> félicitations à M. le Lieutenant de Vaisseau MAXFIELD, comme<lb/> aux Lieutenants de vaisseau CAPEHART et
-                        JOHNSON, en partageant<lb/> avec eux et leurs dignes camarades l'hommage de ma reconnais-<lb break="no"/>sance et de celle de
-                        tous ceux de mes collègues qui sont les<lb/> témoins émus de la prodigieuse rapidité et de l'efficacité du<lb/> concours que
-                        nous apportent contre les ennemis de la civilisa-<lb break="no"/>tion et de la paix nos alliés américains.</p>
-                    <p rend="indent">Veuillez agréer, Monsieur l'Ambassadeur, l'assu-<lb break="no"/>rance de ma haute considération et de mes
-                        sentiments bien<lb/> fidèlement dévoués.</p>
+                            -</note> félicitations à <persName ref="#p0748" type="pec">M. le Lieutenant de Vaisseau MAXFIELD</persName>, comme<lb/>
+                        aux <persName ref="#p0747" type="pec">Lieutenants de vaisseau CAPEHART</persName> et <persName ref="#p0746" type="pec"
+                            >JOHNSON</persName>, en partageant<lb/> avec eux et leurs dignes camarades l'hommage de ma reconnais-<lb break="no"/>sance
+                        et de celle de tous ceux de mes collègues qui sont les<lb/> témoins émus de la prodigieuse rapidité et de l'efficacité du<lb/>
+                        concours que nous apportent contre les ennemis de la civilisa-<lb break="no"/>tion et de la paix nos alliés américains.</p>
+                    <p rend="indent">Veuillez agréer, <rs ref="#p0586" type="pec_person">Monsieur l'Ambassadeur</rs>, l'assu-<lb break="no"/>rance de
+                        ma haute considération et de mes sentiments bien<lb/> fidèlement dévoués.</p>
                     <closer><signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles de
                             Constant</persName></signed>
                         <address>
