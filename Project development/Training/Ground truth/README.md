@@ -18,8 +18,8 @@ Ground Truth dataset for French 20th typewritten OCR
 *As it is made to train the transcription model on peculiar characters rendition, some images/transcriptions from the extra\_data corpus are common with the other corpus, but the content of the XML files will differ because one will only transcribe special parts while the other will have the whole text transcribed.*
 
 ## Images
-The training has been done with images digitized by the Archives départementales de la Sarthe (where the collection is kept), and then uploaded in NAKALA, which is the IIIF server used for the project that uses this corpus.
-In each folder, a README file gives the link to find the images used for the training, whether it is a unique image link (for the segmentation data) or a link by letter (the name of the image is the same as the XML file).
+The training has been done with images digitized by the Archives départementales de la Sarthe (where the collection is kept), and then uploaded in NAKALA, which is the IIIF server used for the project that uses this corpus.  
+In each folder, a README file gives the link to find the images used for the training, whether it is a unique image link (for the segmentation data) or a link by letter (the name of the image is the same as the XML file).  
 (Some folder in NAKALA can have more documents than what is said in the different tables because the annexes have also been uploaded in NAKALA but were often not used for the training)
 
 ## Annotation system
