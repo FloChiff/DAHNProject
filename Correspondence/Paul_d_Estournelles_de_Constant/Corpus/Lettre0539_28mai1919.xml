@@ -219,7 +219,8 @@
                 <language ident="fr"/>
             </langUsage>
         </profileDesc>
-        <revisionDesc status="raw_transcription">
+        <revisionDesc status="annotation_in_progress">
+            <change when-iso="2022-08-03" who="#floriane.chiffoleau">Encoding of named entities</change>
             <change when-iso="2022-02-18" who="#floriane.chiffoleau">Added the content of the facs to match the IIIF link</change>
             <change when-iso="2021-11-08" who="#floriane.chiffoleau">Encoding of the named entities</change>
             <change when-iso="2020-09-29" who="#floriane.chiffoleau">First encoding of the transcription and some specific metadata (extent, msItem,
@@ -244,9 +245,9 @@
                                 >BALKANS</placeName> .</title>
                         <salute rend="indent">Mon cher <persName ref="#p0002" type="pec">Butler</persName>,</salute>
                     </opener>
-                    <p rend="indent">A l'appui de ma lettre N° 534, je vous envoie<lb/> le rapport ci-joint de Prudhommeaux, dont j'approuve les
-                            con-<lb break="no"/>clusions sous réserve, bien entendu, de votre opinion et de<lb/> celle de M.M. les Trustees. J'en
-                        parlerai avec <persName ref="#p0636" type="pec">M. Venizelos</persName>.</p>
+                    <p rend="indent">A l'appui de ma lettre N° 534, je vous envoie<lb/> le rapport ci-joint de <persName ref="#p0515" type="pec"
+                            >Prudhommeaux</persName>, dont j'approuve les con-<lb break="no"/>clusions sous réserve, bien entendu, de votre opinion et
+                        de<lb/> celle de M.M. les Trustees. J'en parlerai avec <persName ref="#p0636" type="pec">M. Venizelos</persName>.</p>
                     <closer>
                         <signed rend="align(right)">Votre affectueusement dévoué,</signed>
                         <signed hand="#annotation" rend="align(right)"><persName ref="#p0001" type="pec">d'Estournelles</persName></signed>
@@ -266,7 +267,7 @@
                     <pb facs="iiif:10.34847/nkl.79f2eq10/84857db78c6b1c3a24d52ad377d11d81c8ce8ff6" n="2"/>
                     <opener>
                         <dateline rend="align(right)"><placeName ref="#l0001" type="pec">PARIS</placeName>, le 23 mai 1919</dateline>
-                        <salute> Mon cher Président,</salute>
+                        <salute>Mon cher <rs ref="#p0001" type="pec_person">Président</rs>,</salute>
                     </opener>
                     <p rend="indent"> J'espérais vous voir ce matin à la réunion du conseil<lb/> de l'Association pour la <orgName ref="#g0060"
                             type="pec">Société des Nations</orgName>. N'ayant pas eu ce<lb/> plaisir, je me hâte de vous mettre au courant de la
@@ -290,19 +291,18 @@
                         armées Ser<subst>
                             <del rend="overwritten"><gap extent="1 character"/></del>
                             <add place="across">b</add>
-                        </subst>es, a visité toutes les régions<lb/> de la Ma<subst>
-                            <del rend="overwritten">d</del>
-                            <add place="across">c</add>
-                        </subst>édoine, de la <placeName ref="#l0472" type="pec">Serbie</placeName> et de la <placeName ref="#l0507" type="pec"
-                            >Thrace</placeName> ravagée<add hand="#annotation" place="inline">s</add> par les<lb/> Bulgares, et a déjà publié sur ses
-                        enquêtes des raports qui ont <address>
+                        </subst>es, a visité toutes les régions<lb/> de la <placeName ref="#l0293" type="pec">Ma<subst>
+                                <del rend="overwritten">d</del>
+                                <add place="across">c</add>
+                            </subst>édoine</placeName>, de la <placeName ref="#l0472" type="pec">Serbie</placeName> et de la <placeName ref="#l0507"
+                            type="pec">Thrace</placeName> ravagée<add hand="#annotation" place="inline">s</add> par les<lb/> Bulgares, et a déjà
+                        publié sur ses enquêtes des raports qui ont <address>
                             <addrLine>Monsieur la Président <persName ref="#p0001" type="pec">d'ESTOURNELLES de CONSTANT</persName></addrLine>
-                            <addrLine><orgName ref="#g0002" type="pec">Sénat</orgName>eur</addrLine>
+                            <addrLine>Sénateur</addrLine>
                             <addrLine><placeName ref="#l0001" type="pec">PARIS</placeName></addrLine>
                         </address>
                         <pb facs="iiif:10.34847/nkl.79f2eq10/fea03e6d4ab30a995144525492468d40059b7a4d" n="3"/><note place="top" type="foliation">- 2
-                            -</note>
-                        <gap extent="few characters"/>t sensation.</p>
+                            -</note> fait sensation.</p>
                     <p rend="indent">Je me suis rencontré hier avec c<subst>
                             <del rend="overwritten">d</del>
                             <add hand="#annotation" place="across">e</add>
@@ -343,26 +343,28 @@
                         postérieurement. Il y a notamment des documents<lb/> publiés dans le rapport dont on peut établir la fausseté (par exem-<lb
                             break="no"/>ple, les prétendues lettres de soldats Grecs, révéla<unclear reason="faded">n</unclear>t à leurs<lb/> proches
                         les barbaries commises par eux, seraient des <hi rend="underline">faux</hi> bulgares).</p>
-                    <p rend="indent">La Dotation s'honorerait en entreprenant cette mise au<lb/> point. C'est le <subst>
+                    <p rend="indent">La <orgName ref="#g0001" type="pec">Dotation</orgName> s'honorerait en entreprenant cette mise au<lb/> point.
+                        C'est le <subst>
                             <del rend="overwritten">e</del>
                             <add place="across">d</add>
                         </subst>ésir le plus certain de <persName ref="#p0636" type="pec">M. VENIZELOS</persName> de voir <subst>
                             <del rend="overwritten">d</del>
                             <add place="across">c</add>
                         </subst>et<lb/> acte de justice s'accomplir dès le lendemain de la Paix. Mais son<lb/> gouvernement ayant refusé, en 1913, de
-                        reconnaître la mission, en<lb/> raison de la présence de BRAILSFORD, qu'elle tenait pour un hellé-<lb break="no"/>nophobe
-                        indésirable, <hi rend="underline">il ne veut pas, aujourd'hui, paraître sollici-<lb break="no"/>ter lui-même une intervention
-                            qu'il a jadis repoussée</hi>. Mais<lb/>
+                        reconnaître la mission, en<lb/> raison de la présence de <persName ref="#p0813" type="pec">BRAILSFORD</persName>, qu'elle
+                        tenait pour un hellé-<lb break="no"/>nophobe indésirable, <hi rend="underline">il ne veut pas, aujourd'hui, paraître
+                                sollici-<lb break="no"/>ter lui-même une intervention qu'il a jadis repoussée</hi>. Mais<lb/>
                         <persName ref="#p0636" type="pec">M. VENIZELOS</persName> est au courant des démarches de M. <persName ref="#p0350" type="pec"
                             >M. KEBEDGY</persName> et<lb/>
                         <persName ref="#p0019" type="pec">ANTONIADES</persName>; il les approuverait, et serait disposé à en favoriser<lb/> le
                         succès.</p>
                     <p rend="indent">D'autre part. <persName ref="#p0636" type="pec">M. VENIZELOS</persName> a envoyé à <placeName ref="#l0003"
                             type="pec">NEW YORK</placeName> et<lb/>
-                        <placeName ref="#l0555" type="pec">WASHINGTON</placeName>, pour une mission officielle spéciale, le Professeur<lb/> ANDREADES
-                        qui, vous vous en souvenez, l'accompagnait à <placeName ref="#l0278" type="pec">Londres</placeName>.<pb
-                            facs="iiif:10.34847/nkl.79f2eq10/194e5bc5eec9f02088bbd0cb174f6441201b44ee" n="5"/><note place="top" type="foliation">- 4
-                            -</note> M. ANDREADES, m'a-t-on dit, aurait reç<subst>
+                        <placeName ref="#l0555" type="pec">WASHINGTON</placeName>, pour une mission officielle spéciale, le Professeur<lb/>
+                        <persName ref="#p0814" type="pec">ANDREADES</persName> qui, vous vous en souvenez, l'accompagnait à <placeName ref="#l0278"
+                            type="pec">Londres</placeName>.<pb facs="iiif:10.34847/nkl.79f2eq10/194e5bc5eec9f02088bbd0cb174f6441201b44ee" n="5"/><note
+                            place="top" type="foliation">- 4 -</note>
+                        <persName ref="#p0814" type="pec">M. ANDREADES</persName>, m'a-t-on dit, aurait reç<subst>
                             <del rend="overwritten">i</del>
                             <add place="across">u</add>
                         </subst> le mandat de profiter de<lb/> son voyage pour voir M. <persName ref="#p0002" type="pec">M. Murray BUTLER</persName>
@@ -373,11 +375,12 @@
                         relations avec <persName ref="#p0277" type="pec">M. Justin GODART</persName>, l'a mis au courant de ses en-<lb break="no"
                         />quêtes personnelles, et lui a demandé de lui permettre de véri-<lb break="no"/>fier certains des documents reproduits dans
                             <del rend="strikethrough"><gap extent="few characters"/></del> l'enquête,<lb/> en particulier les lettres des soldats
-                        grecs. <persName ref="#p0277" type="pec">M. Justin GODART</persName><lb/> y a consenti, et a promis de rechercher à L<subst>
-                            <del rend="overwritten">n</del>
-                            <add place="across">y</add>
-                        </subst>on, où il a ses pa-<lb break="no"/>piers, les pièces que sollicite <persName ref="#p0535" type="pec">M.
-                            REYSS</persName>. Il approuverait aussi<lb/> l'idée de reprendre l'<subst>
+                        grecs. <persName ref="#p0277" type="pec">M. Justin GODART</persName><lb/> y a consenti, et a promis de rechercher à <placeName
+                            ref="#l0292" type="pec">L<subst>
+                                <del rend="overwritten">n</del>
+                                <add place="across">y</add>
+                            </subst>on</placeName>, où il a ses pa-<lb break="no"/>piers, les pièces que sollicite <persName ref="#p0535" type="pec"
+                            >M. REYSS</persName>. Il approuverait aussi<lb/> l'idée de reprendre l'<subst>
                             <del rend="overwritten">e</del>
                             <add place="across">o</add>
                         </subst>euvre de l'enquête et de la compléter.</p>
@@ -387,7 +390,8 @@
                             <del rend="overwritten">ne</del>
                             <add hand="#annotation" place="across">en</add>
                         </subst>, reprendre l'enquête en la confiant à des<lb/> commissaires vraiment impartiaux plus désintéressé, que ne le fu<lb
-                            break="no"/>rent, disent-ils, <persName ref="#p0455" type="pec">MILIOUKOFF</persName> et BRAILSFORD. A ce point de vue,<lb/>
+                            break="no"/>rent, disent-ils, <persName ref="#p0455" type="pec">MILIOUKOFF</persName> et <persName ref="#p0813" type="pec"
+                            >BRAILSFORD</persName>. A ce point de vue,<lb/>
                         <persName ref="#p0535" type="pec">M. REYSS</persName>, par exemple, se récuse lui-même. Il déclare qu'il a tr<subst>
                             <del rend="overwritten">r</del>
                             <add place="across">o</add>
@@ -453,15 +457,15 @@
                             la<add> </add>table, on pourrait saisir cette unique occasion de profiter de<lb/> la présence de <persName ref="#p0535"
                             type="pec">M. REYSS</persName>, qui partira le soir même, et du retour de<lb/>
                         <persName ref="#p0277" type="pec">GODART</persName>. On pourrait aussi se réunir dans l'après-midi, 24, rue<lb/> Pierre Curie.
-                        M. ANTONI<subst>
-                            <del rend="overwritten">D</del>
-                            <add place="across">A</add>
-                        </subst>DES partira à la fin de la<add> </add>semaine prochaine<lb/> pour <placeName ref="#l0047" type="pec"
-                            >Athènes</placeName> et <placeName ref="#l0150" type="pec">constantinople</placeName>. <persName ref="#p0350" type="pec"
+                            <persName ref="#p0019" type="pec">M. ANTONI<subst>
+                                <del rend="overwritten">D</del>
+                                <add place="across">A</add>
+                            </subst>DES</persName> partira à la fin de la<add> </add>semaine prochaine<lb/> pour <placeName ref="#l0047" type="pec"
+                            >Athènes</placeName> et <placeName ref="#l0150" type="pec">Constantinople</placeName>. <persName ref="#p0350" type="pec"
                             >M. KEBEDGY</persName> fera encore à <placeName ref="#l0001" type="pec">Paris</placeName> un<lb/> séjour d'une certaine
                         durée.</p>
-                    <p rend="indent">Veuillez excuser, mon cher Président, la hâte de ce "rap-<lb break="no"/>port" tout à fait improvisé, et me
-                        croire votre respectueusement<lb/> et cordialement dévoué</p>
+                    <p rend="indent">Veuillez excuser, mon cher <rs ref="#p0001" type="pec_person">Président</rs>, la hâte de ce "rap-<lb break="no"
+                        />port" tout à fait improvisé, et me croire votre respectueusement<lb/> et cordialement dévoué</p>
                     <closer>
                         <signed rend="align(right)">Signé : <persName ref="#p0515" type="pec">J. PRUDHOMMEAUX</persName>
                         </signed>
