@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?teipublisher template="document.html"?>
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -91,13 +88,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><material>
+                                <support>
+                                    <material>
                                         <material xml:lang="de">Sieben Seiten auf zwei Doppelbögen aus sauberem, hellblauen Papier, kaum Korrekturen,
                                             nicht paginiert</material>
                                         <material xml:lang="en">Seven pages on two double sheets of clean, light blue paper, hardly any corrections,
                                             not paginated</material>
                                         <material xml:lang="fr">Sept pages sur deux doubles feuilles de papier propre et bleu clair, pratiquement
-                                            aucune correction, non paginées</material></material></support>
+                                            aucune correction, non paginées</material>
+                                    </material>
+                                </support>
                                 <extent>
                                     <measure type="folio">
                                         <measure xml:lang="de">2 Bögen, 7 Seiten</measure>
@@ -112,11 +112,13 @@
                                 <foliation>
                                     <p xml:lang="de">keine Foliierung vorhanden</p>
                                     <p xml:lang="en">No foliation available.</p>
-                                    <p xml:lang="fr">Pas de numérotation disponible.</p></foliation>
+                                    <p xml:lang="fr">Pas de numérotation disponible.</p>
+                                </foliation>
                                 <condition>
                                     <p xml:lang="de">hellblaues Papier in sehr guten Zustand</p>
                                     <p xml:lang="en">light blue paper in very good condition</p>
-                                    <p xml:lang="fr">papier bleu clair en très bon état</p></condition>
+                                    <p xml:lang="fr">papier bleu clair en très bon état</p>
+                                </condition>
                             </supportDesc>
                         </objectDesc>
                         <handDesc>
@@ -134,12 +136,13 @@
                                 <p xml:lang="en">On the second and fifth page, an unknown hand in pencil was used to put a single word in Latin script
                                     next to a word written in Kurrent to make it easier to read.</p>
                                 <p xml:lang="fr">Sur la deuxième et la cinquième page, une main inconnue au crayon a été utilisée pour mettre un seul
-                                    mot en caractères latins à côté d'un mot écrit en cursive pour en faciliter la lecture.</p></handNote>
+                                    mot en caractères latins à côté d'un mot écrit en cursive pour en faciliter la lecture.</p>
+                            </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
-                        <origin><p xml:lang="de">Das Manuskript wurde vermutlich in <origPlace ref="#l0065">Heidelberg</origPlace> im Sommer <origDate
-                                    when-iso="1844">1844</origDate> geschrieben, nachdem <persName ref="#p0247">Helmina von Chézy</persName> von
+                        <origin>
+                            <p xml:lang="de">Das Manuskript wurde vermutlich in <origPlace ref="#l0065">Heidelberg</origPlace> im Sommer <origDate when-iso="1844">1844</origDate> geschrieben, nachdem <persName ref="#p0247">Helmina von Chézy</persName> von
                                     <persName ref="#p1896">Leonidas Sgoutas</persName> im Mai das <title ref="#w00376">Königsbuch</title> und das
                                 Briefbuch <title ref="#w00375">Die Günderode</title> von <persName ref="#p1212">Bettina von Arnim</persName> erhalten
                                 und davon inspiriert selbst mehrere Texte mit dem Titel "Die Günderode an Bettina" entworfen hatte. Eine Version ließ
@@ -148,29 +151,30 @@
                             <p xml:lang="en">The manuscript is likely to have been written in <origPlace ref="#l0065">Heidelberg</origPlace> in the
                                 summer of <origDate when-iso="1844">1844</origDate> after <persName ref="#p0247">Helmina von Chézy</persName> were
                                 given <persName ref="#p1212">Bettina von Arnim's</persName>
-                                <title ref="#w00376">Königsbuch</title> and <title ref="#w00375">Die Günderode</title> by <persName ref="#p1896"
-                                    >Leonidas Sgoutas</persName> in May of the same year. </p>
+                                <title ref="#w00376">Königsbuch</title> and <title ref="#w00375">Die Günderode</title> by <persName ref="#p1896">Leonidas Sgoutas</persName> in May of the same year. </p>
                             <p xml:lang="fr">Le manuscrit a probablement été écrit à <origPlace ref="#l0065">Heidelberg</origPlace> durant l'été
                                     <origDate when-iso="1844">1844</origDate> après que <persName ref="#p0247">Helmina von Chézy</persName> a reçu
-                                    <title ref="#w00376">Königsbuch</title> de <persName ref="#p1212">Bettina von Arnim</persName> et <title
-                                    ref="#w00375">Die Günderode</title> de <persName ref="#p1896">Leonidas Sgoutas</persName> en mai de la même année.
+                                    <title ref="#w00376">Königsbuch</title> de <persName ref="#p1212">Bettina von Arnim</persName> et <title ref="#w00375">Die Günderode</title> de <persName ref="#p1896">Leonidas Sgoutas</persName> en mai de la même année.
                             </p>
                         </origin>
-                        <acquisition><p xml:lang="de"><persName ref="#p0247">Helmina von Chézy</persName> hat ihren handschriftlichen Nachlass nach
+                        <acquisition>
+                            <p xml:lang="de">
+                                <persName ref="#p0247">Helmina von Chézy</persName> hat ihren handschriftlichen Nachlass nach
                                 ihrem Tod <origDate when-iso="1856">1856</origDate> über ihre Nichte <persName ref="#p1895">Bertha
                                     Borngräber</persName>
                                 <persName ref="#p0249">Karl Varnhagen von Ense</persName> zukommenlassen, der unter anderem diesen Text daraus in
                                 seine Handschriften-Sammlung aufnahm, die von seiner Nichte <persName ref="#p1894">Ludmilla Assing</persName> der
                                 königlich preussischen Bibliothek, heute <orgName ref="#???">Staatsbibliothek</orgName>
                                 <placeName ref="#???">Berlin</placeName> vermacht wurde, von wo sie im zweiten Weltkrieg nach Schlesien evakuiert und
-                                schließlich in die <orgName ref="#???">Biblioteka Jagliellońska</orgName> der Universität <placeName ref="#l0534"
-                                    >Krakau</placeName> aufgenommen wurde.</p>
-                            <p xml:lang="en"><persName ref="#p0247">Helmina von Chézy</persName> asked her niece <persName ref="#p1895">Bertha
+                                schließlich in die <orgName ref="#???">Biblioteka Jagliellońska</orgName> der Universität <placeName ref="#l0534">Krakau</placeName> aufgenommen wurde.</p>
+                            <p xml:lang="en">
+                                <persName ref="#p0247">Helmina von Chézy</persName> asked her niece <persName ref="#p1895">Bertha
                                     Borngräber</persName> to give her papers to <persName ref="#p0249">Karl Varnhagen von Ense</persName> after her
                                 death (in <origDate when-iso="1856">1856</origDate>). Varnhagen added this text to his manuscript collection, which
                                 was later on donated by his niece <persName ref="#p1894">Ludmilla Assing</persName> to the Jagellonian Library of the
                                 University of <placeName ref="#l0534">Krakow</placeName>.</p>
-                            <p xml:lang="fr"><persName ref="#p0247">Helmina von Chézy</persName> a demandé à sa nièce <persName ref="#p1895">Bertha
+                            <p xml:lang="fr">
+                                <persName ref="#p0247">Helmina von Chézy</persName> a demandé à sa nièce <persName ref="#p1895">Bertha
                                     Borngräber</persName> de donner ses papiers à <persName ref="#p0249">Karl Varnhagen von Ense</persName> après sa
                                 mort (en <origDate when-iso="1856">1856</origDate>). Varnhagen a ajouté ce texte à sa collection de manuscrits, qui a
                                 été donné par la suite par sa nièce <persName ref="#p1894">Ludmilla Assing</persName> à la Bibliothèque de
@@ -180,18 +184,20 @@
                     </history>
                     <additional>
                         <listBibl>
-                            <bibl><bibl xml:lang="de"><persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title
-                                        ref="#w01216">Die Günderode an Bettina (1844). Ein unveröffentlichtes Manuskript Helmina von Chézys zur
+                            <bibl>
+                                <bibl xml:lang="de">
+                                    <persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title ref="#w01216">Die Günderode an Bettina (1844). Ein unveröffentlichtes Manuskript Helmina von Chézys zur
                                         Wirkungsgeschichte der "Günderode", des "Königsbuchs" und des "Armenbuch"-Projekts</title>
                                 </bibl>
-                                <bibl xml:lang="en"><persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title
-                                        ref="#w01216">Günderode to Bettina (1844). An unpublished manuscript by Helmina von Chézys on the history of
+                                <bibl xml:lang="en">
+                                    <persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title ref="#w01216">Günderode to Bettina (1844). An unpublished manuscript by Helmina von Chézys on the history of
                                         the impact of the "Günderode", the "Königsbuch" and the "Armenbuch" project</title>
                                 </bibl>
-                                <bibl xml:lang="fr"><persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title
-                                        ref="#w01216">Günderode à Bettina (1844). Un manuscrit inédit d'Helmina von Chézys sur l'histoire de l'impact
+                                <bibl xml:lang="fr">
+                                    <persName ref="#p1855">French</persName>/<persName ref="#p1854">Hundt</persName> (1994): <title ref="#w01216">Günderode à Bettina (1844). Un manuscrit inédit d'Helmina von Chézys sur l'histoire de l'impact
                                         du projet "Günderode", "Königsbuch" et "Armenbuch"</title>
-                                </bibl></bibl>
+                                </bibl>
+                            </bibl>
                         </listBibl>
                     </additional>
                 </msDesc>
@@ -251,26 +257,34 @@
             <div type="transcription">
                 <pb facs="iiif:10.34847/nkl.a65f926p/b8321bae31edf6e25eb3069b4a623d97f1e65ae3" n="1"/>
                 <head rend="align(left)"> Nachschrift zum Briefe der Günderode.</head>
-                <fw><stamp rend="align(center)">Roter Stempel der Preußischen Staatsbibliothek, heute Staatsbibliothek zu Berlin: PR. ST. BIBLIOTHEK
-                        BERLIN</stamp></fw>
-                <p><date when-iso="1844-06-04/1844-06-07">Zwischen <choice>
+                <fw>
+                    <stamp rend="align(center)">Roter Stempel der Preußischen Staatsbibliothek, heute Staatsbibliothek zu Berlin: PR. ST. BIBLIOTHEK
+                        BERLIN</stamp>
+                </fw>
+                <p>
+                    <date when-iso="1844-06-04/1844-06-07">Zwischen <choice>
                             <abbr>d</abbr>
                             <expan>dem</expan>
                         </choice> 4 -7 Junius</date>, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> während in <placeName ref="#l0017" type="bi">Schlesien</placeName> Bluth<lb/> floß,<note resp="#selma.jahnke"><p
-                            xml:lang="de">Der Weberaufstand 1844 in Schlesien erregte großes mediales Interesse und inspirierte diverse poetische
-                            Erzeugnisse, die der politischen Lyrik des Vormärz' zugerechnet werden.</p><p xml:lang="en">The weavers' uprising in
+                    </choice> während in <placeName ref="#l0017" type="bi">Schlesien</placeName> Bluth<lb/> floß,<note resp="#selma.jahnke">
+                        <p xml:lang="de">Der Weberaufstand 1844 in Schlesien erregte großes mediales Interesse und inspirierte diverse poetische
+                            Erzeugnisse, die der politischen Lyrik des Vormärz' zugerechnet werden.</p>
+                        <p xml:lang="en">The weavers' uprising in
                             Silesia in 1844 aroused great media interest and inspired various poetic products that are attributed to the political
-                            poetry of the Vormärz.</p><p xml:lang="fr">Le soulèvement des tisserands en Silésie en 1844 a suscité un grand intérêt
-                            médiatique et a inspiré divers produits poétiques qui sont attribués à la poésie politique du Vormärz.</p></note> wurde
-                    der Brief geschrieben, den Sie gedruckt in einem<lb/> Ihnen zugeeingneten Werke bekom̄en hätten, doch <persName ref="#p1896"
-                        type="bi"><choice>
+                            poetry of the Vormärz.</p>
+                        <p xml:lang="fr">Le soulèvement des tisserands en Silésie en 1844 a suscité un grand intérêt
+                            médiatique et a inspiré divers produits poétiques qui sont attribués à la poésie politique du Vormärz.</p>
+                    </note> wurde
+                    der Brief geschrieben, den Sie gedruckt in einem<lb/> Ihnen zugeeingneten Werke bekom̄en hätten, doch <persName ref="#p1896" type="bi">
+                        <choice>
                             <abbr>H.</abbr>
                             <expan>Herr</expan>
                         </choice>
-                        <hi rend="latin">Sgouta</hi></persName><lb/> hat eine Gelegenheit nach <placeName type="bi">Berlin</placeName>, <choice>
+                        <hi rend="latin">Sgouta</hi>
+                    </persName>
+                    <lb/> hat eine Gelegenheit nach <placeName type="bi">Berlin</placeName>, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> so übertrag ich<lb/> ihm eine Botschaft, <choice>
@@ -281,13 +295,16 @@
                     den Zeitungen stand, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> die im Brief der <hi rend="latin">Gunderode</hi><lb/> gedrängt wiederholt ist: <hi rend="underline">Wo</hi> ist die
+                    </choice> die im Brief der <hi rend="latin">Gunderode</hi>
+                    <lb/> gedrängt wiederholt ist: <hi rend="underline">Wo</hi> ist die
                     Noth? <hi rend="underline">woher</hi> die Noth?<lb/>
                     <choice>
                         <abbr>u. s. w.</abbr>
                         <expan>und so weiter</expan>
-                    </choice><note resp="#selma.jahnke">
-                        <p xml:lang="de"><persName ref="#p1212" type="bi">Bettina von Arnim</persName> ließ im Mai 1844 in mehreren großen Zeitungen
+                    </choice>
+                    <note resp="#selma.jahnke">
+                        <p xml:lang="de">
+                            <persName ref="#p1212" type="bi">Bettina von Arnim</persName> ließ im Mai 1844 in mehreren großen Zeitungen
                             für ihr sogenanntes <title ref="#w00046" type="bi">Armenbuch</title>-Projekt einen Aufruf schalten, <cit>
                                 <quote>"an Alle, welche über den Zustand des Armenwesens in Gemeinden, Kreisen, Bezirken, Provinzen <choice>
                                         <abbr>u.s.w.</abbr>
@@ -296,20 +313,14 @@
                                     Berichte darüber zukommen zu lassen. Besonders wünschenswerth würde es auch seyn, wenn in diesen Berichten
                                     angeführt würde, was bis jetzt zur Abhelfung des Uebels [...] geschehen ist und welche Mittel sich wohl zur
                                     Verminderung des Noth als wirksam erweisen dürften."</quote>
-                            </cit> Der Aufruf erschien am <date when-iso="1844-15-05">15.5.1844</date> in Nr. 113 der <orgName ref="#w02168" type="bi"
-                                >Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">18.5.1844</date> in der <orgName ref="#w02169" type="bi"
-                                >Kölnischen Zeitung</orgName>, <date when-iso="1844-23-05">23.5.1844</date> in Nr. 144 der <orgName ref="#w02170"
-                                type="bi">Augsburger Allgemeinen Zeitung</orgName>, S. 1151 </p>
+                            </cit> Der Aufruf erschien am <date when-iso="1844-15-05">15.5.1844</date> in Nr. 113 der <orgName ref="#w02168" type="bi">Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">18.5.1844</date> in der <orgName ref="#w02169" type="bi">Kölnischen Zeitung</orgName>, <date when-iso="1844-23-05">23.5.1844</date> in Nr. 144 der <orgName ref="#w02170" type="bi">Augsburger Allgemeinen Zeitung</orgName>, S. 1151 </p>
                         <p xml:lang="en">In May 1844, <persName ref="#p1212" type="bi">Bettina von Arnim</persName> placed an appeal in several large
                             newspapers for her so-called <title ref="#w00046" type="bi">Armenbuch</title>-project, <cit>
                                 <quote>"to all who are able to give precise information about the state of the poor in communities, districts,
                                     provinces etc. and so on of the entire German fatherland, [...] to send faithful reports to Frau von Arnim.
                                     Particularly desirable It would also be if these reports stated what has happened so far to remedy the evil [...]
                                     and what means are likely to prove effective in alleviating the distress. "</quote>
-                            </cit> The appeal appeared on <date when-iso="1844-15-05">May 15, 1844</date> in no.113 of the <orgName ref="#w02168"
-                                type="bi">Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">May 18, 1844</date> in the <orgName ref="#w02169"
-                                type="bi">Kölnische Zeitung</orgName>, <date when-iso="1844-23-05">May 23, 1844</date> in no.144 of the <orgName
-                                ref="#w02170" type="bi">Augsburger Allgemeine Zeitung</orgName>, p. 1151</p>
+                            </cit> The appeal appeared on <date when-iso="1844-15-05">May 15, 1844</date> in no.113 of the <orgName ref="#w02168" type="bi">Magdeburger Zeitung</orgName>, <date when-iso="1844-18-05">May 18, 1844</date> in the <orgName ref="#w02169" type="bi">Kölnische Zeitung</orgName>, <date when-iso="1844-23-05">May 23, 1844</date> in no.144 of the <orgName ref="#w02170" type="bi">Augsburger Allgemeine Zeitung</orgName>, p. 1151</p>
                         <p xml:lang="fr">En mai 1844, <persName ref="#p1212" type="bi">Bettina von Arnim</persName> a lancé un appel dans plusieurs
                             grands journaux pour son prétendu <title ref="#w00046" type="bi">Armenbuch</title> projet , <cit>
                                 <quote>"à tous ceux qui sont capables de donner des informations précises sur l'état des pauvres dans les communautés,
@@ -317,97 +328,100 @@
                                     Frau von Arnim. En particulier Il serait également souhaitable que ces rapports indiquent ce qui s'est passé
                                     jusqu'à présent pour remédier au mal [...] et quels moyens sont susceptibles de s'avérer efficaces pour atténuer
                                     la détresse. "</quote>
-                            </cit> L'appel parut le <date when-iso="1844-15-05">15 mai 1844</date> au n°113 du <orgName ref="#w02168" type="bi"
-                                >Magdeburger Zeitung</orgName>, le <date when-iso="1844-18-05">18 mai 1844</date> au <orgName ref="#w02169" type="bi"
-                                >Kölnische Zeitung</orgName>, <date when-iso="1844-23-05">23 mai 1844</date> au n°144 de l'<orgName ref="#w02170"
-                                type="bi">Augsburger Allgemeine Zeitung</orgName>, page 1151</p></note> Der Titel heißt: <hi rend="underline">Dies
-                        Buch gehört Bettinen.</hi><note resp="#selma.jahnke"><p xml:lang="de">Die drei Kapitel, die von diesem Buchprojekt
+                            </cit> L'appel parut le <date when-iso="1844-15-05">15 mai 1844</date> au n°113 du <orgName ref="#w02168" type="bi">Magdeburger Zeitung</orgName>, le <date when-iso="1844-18-05">18 mai 1844</date> au <orgName ref="#w02169" type="bi">Kölnische Zeitung</orgName>, <date when-iso="1844-23-05">23 mai 1844</date> au n°144 de l'<orgName ref="#w02170" type="bi">Augsburger Allgemeine Zeitung</orgName>, page 1151</p>
+                    </note> Der Titel heißt: <hi rend="underline">Dies
+                        Buch gehört Bettinen.</hi>
+                    <note resp="#selma.jahnke">
+                        <p xml:lang="de">Die drei Kapitel, die von diesem Buchprojekt
                             verwirklicht wurden, sind in der vorliegenden Online-Edition unter dem Titel "Bettinen gehört dies Buch! Die Günderode an
-                            Bettina (Buchprojekt)" ediert.</p><p xml:lang="en">The three chapters that have been realized by this book project have
+                            Bettina (Buchprojekt)" ediert.</p>
+                        <p xml:lang="en">The three chapters that have been realized by this book project have
                             been edited in the present online edition under the title "Bettinen belongs to this book! Die Günderode an Bettina (book
-                            project)".</p><p xml:lang="fr">Les trois chapitres qui ont été réalisés par ce projet de livre ont été édités dans la
+                            project)".</p>
+                        <p xml:lang="fr">Les trois chapitres qui ont été réalisés par ce projet de livre ont été édités dans la
                             présente édition en ligne sous le titre "Bettinen appartient à ce livre ! Die Günderode an Bettina (projet de
-                        livre)".</p></note></p>
-                <p>Wie ahnungsvoll ist der Brief der Günderode!<lb/> Wie durchweht von den letzten Seufzern der Opfer<lb/> in <placeName ref="#l0017"
-                        type="bi">Schlesien</placeName>! Liebes gutes <placeName ref="#l0017" type="bi">Schlesien</placeName>! Meiner<lb/>
-                    <persName ref="#p0075" type="bi">Großmutter</persName> und <persName ref="#p0258" type="bi">Mutter</persName> Heimath!<note
-                        resp="#selma.jahnke">Die Großmutter <persName ref="#p0247" type="bi">Helmina von Chézys</persName>, die Dichterin <persName
-                            ref="#p0075" type="bi">Anna Louisa Karsch</persName>, ist in ärmlichen und lieblosen Verhältnissen in <placeName
-                            ref="#l0017" type="bi">Schlesien</placeName> geboren und aufgewachsen. <date when-iso="1761">Im Jahr 1761</date> gelang
+                        livre)".</p>
+                    </note>
+                </p>
+                <p>Wie ahnungsvoll ist der Brief der Günderode!<lb/> Wie durchweht von den letzten Seufzern der Opfer<lb/> in <placeName ref="#l0017" type="bi">Schlesien</placeName>! Liebes gutes <placeName ref="#l0017" type="bi">Schlesien</placeName>! Meiner<lb/>
+                    <persName ref="#p0075" type="bi">Großmutter</persName> und <persName ref="#p0258" type="bi">Mutter</persName> Heimath!<note resp="#selma.jahnke">Die Großmutter <persName ref="#p0247" type="bi">Helmina von Chézys</persName>, die Dichterin <persName ref="#p0075" type="bi">Anna Louisa Karsch</persName>, ist in ärmlichen und lieblosen Verhältnissen in <placeName ref="#l0017" type="bi">Schlesien</placeName> geboren und aufgewachsen. <date when-iso="1761">Im Jahr 1761</date> gelang
                         ihr aufgrund der Aufmerksamkeit, die sie mit ihren Gedichten auf sich gezogen hatte, mit ihrer damals elfjährigen Tochter, der
-                        späteren Schriftstellerin <persName ref="#p0258" type="bi">Caroline von Klencke</persName>, die Übersiedlung nach <placeName
-                            type="bi">Berlin</placeName>.</note></p>
-                <p><persName ref="#p1886" type="bi">Otto Lüning</persName>, so sagen die Zeitungen, hat<lb/> wegen des <title ref="#w00396" type="bi"
-                        >Buches, das <hi rend="underline">dem Volke</hi> gehört</title>, viel<lb/> garstige Unannehmlichkeiten erfahren,<note
-                        resp="#selma.jahnke">Der Armenarzt und Publizist <persName ref="#p1886" type="bi">Otto Lüning</persName> geriet aufgrund
+                        späteren Schriftstellerin <persName ref="#p0258" type="bi">Caroline von Klencke</persName>, die Übersiedlung nach <placeName type="bi">Berlin</placeName>.</note>
+                </p>
+                <p>
+                    <persName ref="#p1886" type="bi">Otto Lüning</persName>, so sagen die Zeitungen, hat<lb/> wegen des <title ref="#w00396" type="bi">Buches, das <hi rend="underline">dem Volke</hi> gehört</title>, viel<lb/> garstige Unannehmlichkeiten erfahren,<note resp="#selma.jahnke">Der Armenarzt und Publizist <persName ref="#p1886" type="bi">Otto Lüning</persName> geriet aufgrund
                         sozialkritischer und demokratiebewegter Aktivitäten <date when-iso="1844">1844</date> ins Visier der Justiz, trotzdem gelang
                         es ihm <date when-iso="1845/1846">1845/46</date> eine Schriftensammlung mit dem Titel <title ref="#w00396" type="bi">Diß Buch
                             gehört dem Volke</title> in drei Bänden herauszugeben.</note> die Zeitungen sagen, <hi rend="underline">Sie</hi> würden
-                    die Beweis<lb break="no" rend="none"/>stücke wegen der Weber-Unruhen <foreign xml:lang="la"><choice>
+                    die Beweis<lb break="no" rend="none"/>stücke wegen der Weber-Unruhen <foreign xml:lang="la">
+                        <choice>
                             <abbr>&amp;c.</abbr>
                             <expan>et cetera</expan>
-                        </choice></foreign> in<lb/> Druck geben, sollten Sie vorziehen dies <pb
-                        facs="iiif:10.34847/nkl.a65f926p/951184719e7c790d820b31baf941da437d149b7c" n="2"/><hi rend="underline">Jenseits</hi> des
+                        </choice>
+                    </foreign> in<lb/> Druck geben, sollten Sie vorziehen dies <pb facs="iiif:10.34847/nkl.a65f926p/951184719e7c790d820b31baf941da437d149b7c" n="2"/>
+                </p>
+                <p><!-- Added tag for the good display of the indexes-->
+                    <hi rend="underline">Jenseits</hi> des
                     Rheins zu bewerkstelligen<lb/> so lassen Sie mir das Manuskript<lb/> zugelangen, wo möglich aber nicht auf<lb/>
                     <hi rend="underline">Postwegen</hi>, sondern durch solche<lb/> Gelegenheit, ich werde es treu <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice><lb/> schnell besorgen. Meine Lebenstage<lb/> sind gezählt, meine Lebensstunden<lb/> gehören der guten Sache. Wie schwer<lb/><choice>
+                    </choice>
+                    <lb/> schnell besorgen. Meine Lebenstage<lb/> sind gezählt, meine Lebensstunden<lb/> gehören der guten Sache. Wie schwer<lb/>
+                    <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> bitter der Kampf habe ich bei den<lb/> Lazaretten<note resp="#selma.jahnke">
-                        <p xml:lang="de"><date notAfter="1816" notBefore="1813">1813 bis 1816</date> engagierte sich <persName ref="#p0247" type="bi"
-                                >Chézy</persName> in Hospitälern für die während der Befreiungskriege verwundeten Soldaten. Als sie auf verschiedenen
+                        <p xml:lang="de">
+                            <date notAfter="1816" notBefore="1813">1813 bis 1816</date> engagierte sich <persName ref="#p0247" type="bi">Chézy</persName> in Hospitälern für die während der Befreiungskriege verwundeten Soldaten. Als sie auf verschiedenen
                             Wegen auf die Missstände dort hinwies, wurde sie im <placeName ref="#l0053" type="bi">Rheinland</placeName> wegen
                             Verleumdung angeklagt und verurteilt. Sie floh nach <placeName type="bi">Berlin</placeName>, wo sie in einem neu
                             angesetzten Prozeß nach dem alten preußischen Gesetz freigesprochen wurde.</p>
-                        <p xml:lang="en"><date notAfter="1816" notBefore="1813">From 1813 to 1816</date>, <persName ref="#p0247" type="bi"
-                                >Chézy</persName> was involved in hospitals for soldiers wounded during the Wars of Liberation. When she pointed out
-                            the abuses there in various ways, she was charged with defamation in the <placeName ref="#l0053" type="bi"
-                                >Rheinland</placeName> and convicted. She fled to <placeName type="bi">Berlin</placeName>, where she was acquitted in
+                        <p xml:lang="en">
+                            <date notAfter="1816" notBefore="1813">From 1813 to 1816</date>, <persName ref="#p0247" type="bi">Chézy</persName> was involved in hospitals for soldiers wounded during the Wars of Liberation. When she pointed out
+                            the abuses there in various ways, she was charged with defamation in the <placeName ref="#l0053" type="bi">Rheinland</placeName> and convicted. She fled to <placeName type="bi">Berlin</placeName>, where she was acquitted in
                             a new trial under the old Prussian law.</p>
-                        <p xml:lang="fr"><date notAfter="1816" notBefore="1813">De 1813 à 1816</date>, <persName ref="#p0247" type="bi"
-                                >Chézy</persName> est impliqué dans les hôpitaux pour soldats blessés pendant les guerres de libération. Lorsqu'elle a
-                            signalé les abus de diverses manières, elle a été inculpée de diffamation et condamnée en <placeName ref="#l0053"
-                                type="bi">Rhénanie</placeName>. Elle s'enfuit à <placeName type="bi">Berlin</placeName>, où elle est acquittée lors
-                            d'un nouveau procès en vertu de l'ancienne loi prussienne.</p></note>
+                        <p xml:lang="fr">
+                            <date notAfter="1816" notBefore="1813">De 1813 à 1816</date>, <persName ref="#p0247" type="bi">Chézy</persName> est impliqué dans les hôpitaux pour soldats blessés pendant les guerres de libération. Lorsqu'elle a
+                            signalé les abus de diverses manières, elle a été inculpée de diffamation et condamnée en <placeName ref="#l0053" type="bi">Rhénanie</placeName>. Elle s'enfuit à <placeName type="bi">Berlin</placeName>, où elle est acquittée lors
+                            d'un nouveau procès en vertu de l'ancienne loi prussienne.</p>
+                    </note>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> in <placeName ref="#l0241" type="bi">Oestreich ob der Enns</placeName>,<note resp="#selma.jahnke">
-                        <p xml:lang="de"><date when-iso="1826">1826</date> unternahm <persName ref="#p0247" type="bi">Chézy</persName> eine Reise mit
+                        <p xml:lang="de">
+                            <date when-iso="1826">1826</date> unternahm <persName ref="#p0247" type="bi">Chézy</persName> eine Reise mit
                             ihren Kindern <persName ref="#p0264" type="bi">Wilhelm</persName> und <persName ref="#p0265" type="bi">Max</persName> zur
                             Luftkur und zum Wandern in <placeName rend="#l0241" type="bi">Oberösterreich</placeName>. Während und nach dieser Reise
-                            setzte sie sich durch Petitionen für die Salinenarbeiter, Weber und verarmten Bergbbewohner ein und veröffentlichte <date
-                                when-iso="1829">1829</date>
-                            <title ref="#w00397" type="bi">Jugendschicksale, Leben und Ansichten eines papierenen Kragens</title> und <date
-                                when-iso="1833">1833</date> den Reiseführer <title rend="#w01156">Norika</title>, die beide sozialkritische Töne
+                            setzte sie sich durch Petitionen für die Salinenarbeiter, Weber und verarmten Bergbbewohner ein und veröffentlichte <date when-iso="1829">1829</date>
+                            <title ref="#w00397" type="bi">Jugendschicksale, Leben und Ansichten eines papierenen Kragens</title> und <date when-iso="1833">1833</date> den Reiseführer <title rend="#w01156">Norika</title>, die beide sozialkritische Töne
                             anschlugen. Nur ihre Kontakte zum kaiserlichen Hof konnten Chézy vor einem Prozeß bewahren. Norika wurde von der Zensur
                             verboten.</p>
                         <p xml:lang="en">In <date when-iso="1826">1826</date>, <persName ref="#p0247" type="bi">Chézy</persName> went on a trip with
                             her children <persName ref="#p0264" type="bi">Wilhelm</persName> and <persName ref="#p0265" type="bi">Max</persName> for
                             an air cure and hiking in <placeName rend="#l0241" type="bi">Upper Austria</placeName>. During and after this trip she
-                            campaigned for the saltworkers, weavers and impoverished mountain dwellers through petitions and in <date when-iso="1829"
-                                >1829</date> published <title ref="#w00397" type="bi">the fates of young people, life and views of a paper
+                            campaigned for the saltworkers, weavers and impoverished mountain dwellers through petitions and in <date when-iso="1829">1829</date> published <title ref="#w00397" type="bi">the fates of young people, life and views of a paper
                                 collar</title> and in <date when-iso="1833">1833</date> the travel guide <title rend="#w01156">Norika</title>, both of
-                            which were socially critical. Only her contacts with the imperial court could save <persName ref="#p0247" type="bi"
-                                >Chézy</persName> from a lawsuit. Norika was banned by the censors.</p>
-                        <p xml:lang="fr">En <date when-iso="1826">1826</date>, Chézy part en voyage avec ses enfants <persName ref="#p0264" type="bi"
-                                >Wilhelm</persName> et <persName ref="#p0265" type="bi">Max</persName> pour une cure d'air et une randonnée en
+                            which were socially critical. Only her contacts with the imperial court could save <persName ref="#p0247" type="bi">Chézy</persName> from a lawsuit. Norika was banned by the censors.</p>
+                        <p xml:lang="fr">En <date when-iso="1826">1826</date>, Chézy part en voyage avec ses enfants <persName ref="#p0264" type="bi">Wilhelm</persName> et <persName ref="#p0265" type="bi">Max</persName> pour une cure d'air et une randonnée en
                                 <placeName rend="#l0241" type="bi">Haute-Autriche</placeName>. Pendant et après ce voyage, elle a fait campagne pour
-                            les sauniers, les tisserands et les montagnards appauvris par le biais de pétitions et en <date when-iso="1829"
-                                >1829</date> a publié <title ref="#w00397" type="bi">le destin des jeunes, la vie et les vues d'un collier de
+                            les sauniers, les tisserands et les montagnards appauvris par le biais de pétitions et en <date when-iso="1829">1829</date> a publié <title ref="#w00397" type="bi">le destin des jeunes, la vie et les vues d'un collier de
                                 papier</title> et en <date when-iso="1833">1833</date> le guide de voyage <title rend="#w01156">Norika</title>, tous
                             deux critiques socialement. . Seuls ses contacts avec la cour impériale pouvaient sauver Chézy d'un procès. Norika a été
-                            interdite par les censeurs.</p></note><lb/> zum Theil auch schon hier erfahren,<lb/> denn wies <hi rend="latin"><persName
-                            ref="#p1865" type="bi">Welcker</persName></hi> in den <choice>
+                            interdite par les censeurs.</p>
+                    </note>
+                    <lb/> zum Theil auch schon hier erfahren,<lb/> denn wies <hi rend="latin">
+                        <persName ref="#p1865" type="bi">Welcker</persName>
+                    </hi> in den <choice>
                         <abbr>Ständeverhandl.</abbr>
                         <expan>Ständeverhandlung</expan>
-                    </choice><lb/> vortrug — ich glaube in der 72. oder sonst einer<lb/> 70sten Sitzung, werden Sie kennen, <choice>
+                    </choice>
+                    <lb/> vortrug — ich glaube in der 72. oder sonst einer<lb/> 70sten Sitzung, werden Sie kennen, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice><lb/> die versteckte Quelle dieser Behandlung<lb/> war die dauernde Verfolgung, die ich <lb/>mir erweckt<add
-                        hand="#unknown_hand" place="margin(left)"> erweckt</add>.<space extent="one word"/> Wie Sie habe ich stets<lb/> mit Vertrauen <choice>
+                    </choice>
+                    <lb/> die versteckte Quelle dieser Behandlung<lb/> war die dauernde Verfolgung, die ich <lb/>mir erweckt<add hand="#unknown_hand" place="margin(left)"> erweckt</add>.<space extent="one word"/> Wie Sie habe ich stets<lb/> mit Vertrauen <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Liebe am Thron Hülfe<lb/> gesucht, <choice>
@@ -418,7 +432,9 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> erhalten — Stehn Sie in keiner Verbindung mit <persName ref="#p1887" type="bi">Prinzeß Marianne<lb/>
-                        <pb facs="iiif:10.34847/nkl.a65f926p/b92741e88293d24648438c66bb64a17f9765e9ac" n="3"/>Wilhelm von Preußen</persName>? Bei der
+                        <pb facs="iiif:10.34847/nkl.a65f926p/b92741e88293d24648438c66bb64a17f9765e9ac" n="3"/>Wilhelm von Preußen</persName>
+                </p>
+                <p><!-- Added tag for the good display of the indexes-->? Bei der
                     Sache der<lb/> Verwundeten <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -428,11 +444,12 @@
                     <persName ref="#p0281" type="bi">König</persName> viel Gutes, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> zum Sieg der<lb/> Wahrheit viel bewirkt — Ich wirke hier<lb/> im Badenschen, wirkte im <placeName rend="#l0018"
-                        type="bi">Caiserthum</placeName> durch gleiche Vermittlung, in <placeName ref="#l0092" type="bi">Preußen</placeName><lb/>
+                    </choice> zum Sieg der<lb/> Wahrheit viel bewirkt — Ich wirke hier<lb/> im Badenschen, wirkte im <placeName rend="#l0018" type="bi">Caiserthum</placeName> durch gleiche Vermittlung, in <placeName ref="#l0092" type="bi">Preußen</placeName>
+                    <lb/>
                     haben wir ja auch die himmlischgute liebe<lb/>
                     <persName ref="#p1889" type="bi">Königin</persName> mit dem vollen tiefen Herzschlag<lb/> für die Menschheit! Das Uebel ist so
-                    gros,<lb/> der Krebsschaden so tief, daß man weder<lb/><hi rend="underline">behutsam</hi> noch <hi rend="underline">kräftig</hi>
+                    gros,<lb/> der Krebsschaden so tief, daß man weder<lb/>
+                    <hi rend="underline">behutsam</hi> noch <hi rend="underline">kräftig</hi>
                     genug zu Werk<lb/> gehen kann. O, wie oft hat mein Herz<lb/> Blut geweint! <space extent="one word"/> Mir kommt es<lb/> vor – es
                     ist aber nur Vermuthung –<lb/> als verlangten viele der freisinnigen<lb/> Männer einen Umsturz, ich war<lb/>
                     <hi rend="underline">nie</hi> dafür, denn ich war lange in<lb/>
@@ -440,38 +457,49 @@
                     nach<lb/> der Erholung <subst>
                         <del rend="overwritten">der</del>
                         <add place="across">von</add>
-                    </subst> den <foreign xml:lang="fr"><hi rend="latin">Temps de la terreur</hi></foreign><lb/>
-                    <pb facs="iiif:10.34847/nkl.a65f926p/de20a9991713583a4226ab447f39a6a7c5b81c1e" n="4"/>reifte, war das Kaiserthum — Despotismus<lb/>
+                    </subst> den <foreign xml:lang="fr">
+                        <hi rend="latin">Temps de la terreur</hi>
+                    </foreign>
+                    <lb/>
+                    <pb facs="iiif:10.34847/nkl.a65f926p/de20a9991713583a4226ab447f39a6a7c5b81c1e" n="4"/>
+                </p>
+                <p><!-- Added tag for the good display of the indexes-->reifte, war das Kaiserthum — Despotismus<lb/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Aristokratie in allerhöchster Potenz — die<lb/> zweite Bourbon Rückkehr<note resp="#selma.jahnke"><p xml:lang="de"
-                            >Gemeint sind <persName ref="#p1890" type="bi">Ludwig XVIII.</persName> und <persName ref="#p1891" type="bi">Karl
+                    </choice> Aristokratie in allerhöchster Potenz — die<lb/> zweite Bourbon Rückkehr<note resp="#selma.jahnke">
+                        <p xml:lang="de">Gemeint sind <persName ref="#p1890" type="bi">Ludwig XVIII.</persName> und <persName ref="#p1891" type="bi">Karl
                                 X.</persName>, die <date notAfter="1830" notBefore="1814">von 1814 bis 1830</date> einer Restauration der
-                            Bourbonen-Dynastie vorstanden.</p><p xml:lang="en">What are meant are <persName ref="#p1890" type="bi">Louis
+                            Bourbonen-Dynastie vorstanden.</p>
+                        <p xml:lang="en">What are meant are <persName ref="#p1890" type="bi">Louis
                                 XVIII</persName>. and <persName ref="#p1891" type="bi">Charles X</persName>, who headed a restoration of the Bourbon
-                            dynasty <date notAfter="1830" notBefore="1814">from 1814 to 1830</date>.</p><p xml:lang="fr">Il s'agit de <persName
-                                ref="#p1890" type="bi">Louis XVIII</persName>. et <persName ref="#p1891" type="bi">Charles X</persName>, qui a dirigé
-                            une restauration de la dynastie des Bourbon <date notAfter="1830" notBefore="1814">de 1814 à 1830</date>.</p></note>
+                            dynasty <date notAfter="1830" notBefore="1814">from 1814 to 1830</date>.</p>
+                        <p xml:lang="fr">Il s'agit de <persName ref="#p1890" type="bi">Louis XVIII</persName>. et <persName ref="#p1891" type="bi">Charles X</persName>, qui a dirigé
+                            une restauration de la dynastie des Bourbon <date notAfter="1830" notBefore="1814">de 1814 à 1830</date>.</p>
+                    </note>
                     <choice>
                         <abbr>u.s.w.</abbr>
                         <expan>und so weiter</expan>
                     </choice>
-                    <hi rend="underline">jetzt</hi><lb/> stehn rund um <placeName ref="#l0044" type="bi">Paris</placeName> her die furchtbarsten<lb/>
-                    Bastillen in Menge statt der am <date when-iso="1791-07-14">14 Juli<lb/> 1791</date><note resp="#selma.jahnke"><p xml:lang="de"
-                            >Gemeint ist der Sturm auf die Bastille <date when-iso="1789">1789</date>.</p><p xml:lang="en">This is the storming of the
-                            Bastille of <date when-iso="1789">1789</date></p><p xml:lang="fr">Il s'agit de la prise de la Bastille de <date
-                                when-iso="1789">1789</date></p></note> niedergerissenen — <choice>
+                    <hi rend="underline">jetzt</hi>
+                    <lb/> stehn rund um <placeName ref="#l0044" type="bi">Paris</placeName> her die furchtbarsten<lb/>
+                    Bastillen in Menge statt der am <date when-iso="1791-07-14">14 Juli<lb/> 1791</date>
+                    <note resp="#selma.jahnke">
+                        <p xml:lang="de">Gemeint ist der Sturm auf die Bastille <date when-iso="1789">1789</date>.</p>
+                        <p xml:lang="en">This is the storming of the
+                            Bastille of <date when-iso="1789">1789</date>
+                        </p>
+                        <p xml:lang="fr">Il s'agit de la prise de la Bastille de <date when-iso="1789">1789</date>
+                        </p>
+                    </note> niedergerissenen — <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> die kampfmüde Masse,<lb/> die ganz Fleisch geworden, fügt sich Allem,<lb/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> vergißt der über sie gebrachten Schmach<lb/> des Hochverraths an <placeName ref="#l0046" type="bi"
-                        >Polen</placeName>,<note resp="#selma.jahnke">
-                        <p xml:lang="de">Nachdem der sogenannte Novemberaufstand <date notAfter="1831" notBefore="1830">1830/1831</date> in <placeName
-                                ref="#l0046" type="bi">Polen</placeName> von der russischen Armee niedergeschlagen worden war, verlor das Königreich
+                    </choice> vergißt der über sie gebrachten Schmach<lb/> des Hochverraths an <placeName ref="#l0046" type="bi">Polen</placeName>,<note resp="#selma.jahnke">
+                        <p xml:lang="de">Nachdem der sogenannte Novemberaufstand <date notAfter="1831" notBefore="1830">1830/1831</date> in <placeName ref="#l0046" type="bi">Polen</placeName> von der russischen Armee niedergeschlagen worden war, verlor das Königreich
                             Polen seine Verfassung. Es folgte eine große Emigrationsbewegung, die viele Polen nach Westeuropa brachte, wo sie im Zuge
                             der Begeisterung für nationale Bewegungen mit viel Sympathie und Anteilnahme aufgenommen wurden.</p>
                         <p xml:lang="en">After the so-called November uprising of <date notAfter="1831" notBefore="1830">1830/1831</date> in
@@ -482,7 +510,8 @@
                                 <placeName ref="#l0046" type="bi">Pologne</placeName> ait été réprimé par l'armée russe, le royaume de Pologne a perdu
                             sa constitution. Un grand mouvement d'émigration s'ensuit, qui amène de nombreux Polonais en Europe occidentale, où ils
                             sont accueillis avec beaucoup de sympathie et d'inquiétude dans le sillage de l'enthousiasme pour les mouvements
-                            nationaux.</p></note> Allem<lb/> was die Welt <date when-iso="1830">1830</date> von ihr verlangt.<lb/> Unheilbar wund ist
+                            nationaux.</p>
+                    </note> Allem<lb/> was die Welt <date when-iso="1830">1830</date> von ihr verlangt.<lb/> Unheilbar wund ist
                         <placeName ref="#l0050" type="bi">Europa</placeName>, wir können<lb/> alle, die wir’s redlich meinen, nur<lb/> Balsam, nur
                     Kühlung <choice>
                         <abbr>u</abbr>
@@ -494,15 +523,15 @@
                     durch <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> durch an, so<lb/> finden wir in seiner eignen – <hi rend="underline">nicht<lb/> angebornen</hi>, sondern <hi
-                        rend="underline">anerzognen,<lb/> eingeimpften</hi> Verderbniß, in der mit der Muttermilch eingesognen<lb/> Knechtung die
+                    </choice> durch an, so<lb/> finden wir in seiner eignen – <hi rend="underline">nicht<lb/> angebornen</hi>, sondern <hi rend="underline">anerzognen,<lb/> eingeimpften</hi> Verderbniß, in der mit der Muttermilch eingesognen<lb/> Knechtung die
                     Ursach daß es gedrückt<lb/> gemißbraucht, ausgesaugt wird, ich<lb/>
                     <pb facs="iiif:10.34847/nkl.a65f926p/a7e627c95cbe834f70856e3be66f7a7bb6c8a3ee" n="5"/>habe darüber die schmerzlichsten
                     begründetsten<lb/> Erfahrungen, es ist auch dem Volke Be<lb break="no"/>dürfnis zu gehorchen, ja es will Glanz<lb/> über sich, wo
                     es hinaufblikken kann, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice><lb/> es bedarf des Glaubens nicht allein, auch<lb/> des Aberglaubens, denn sein niedres<lb/> dunkles, einfaches Loos
+                    </choice>
+                    <lb/> es bedarf des Glaubens nicht allein, auch<lb/> des Aberglaubens, denn sein niedres<lb/> dunkles, einfaches Loos
                     will es nicht, kann<lb/> es nicht so tragen<add hand="#unknown_hand" place="above"> tragen</add>, wie es ist, es verlangt<lb/>
                     Poesie hinein, <choice>
                         <abbr>u</abbr>
@@ -510,17 +539,16 @@
                     </choice> greift sich diese überall<lb/> heraus. In der Gefahr <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> Noth seiner Helfer<lb/> zeigen es alle Zeiten, wie es <persName ref="#p0194" type="bi">Goethe</persName><lb/> im <title
-                        ref="#w00350" type="bi">Egmont</title> geschildert. Ja, es soll<lb/> arbeiten, es soll beten, es soll gehorchen,<lb/> aber
+                    </choice> Noth seiner Helfer<lb/> zeigen es alle Zeiten, wie es <persName ref="#p0194" type="bi">Goethe</persName>
+                    <lb/> im <title ref="#w00350" type="bi">Egmont</title> geschildert. Ja, es soll<lb/> arbeiten, es soll beten, es soll gehorchen,<lb/> aber
                     satt <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> fröhlich soll es seyn!<lb/> O, wer es dahin bringen könnte, wo <lb/>es <persName ref="#p1873" type="bi">Heinrich
                         IV</persName> haben wollte — <cit>
-                        <quote>"<add place="above">der Bauer</add> alle<lb rend='after:"'/>Sonntag sein Huhn im Topf!“</quote>
+                        <quote>"<add place="above">der Bauer</add> alle<lb rend="after:&#34;"/>Sonntag sein Huhn im Topf!“</quote>
                         <note resp="#selma.jahnke">
-                            <p xml:lang="de">Als geflügeltes Wort überliefertes Zitat von Heinrich dem IV., das er im Gespräch mit <persName
-                                    ref="#p1892" type="bi">Karl Emanuel I. von Savoyen</persName> geäußert haben soll: "Si Dieu me donne encore de la
+                            <p xml:lang="de">Als geflügeltes Wort überliefertes Zitat von Heinrich dem IV., das er im Gespräch mit <persName ref="#p1892" type="bi">Karl Emanuel I. von Savoyen</persName> geäußert haben soll: "Si Dieu me donne encore de la
                                 vie, je feray qu’il n’y aura point de laboureur en mon Royaume qui n’ait moyens d’avoir une poule dans son pot!".
                                 Erstmals gedruckt in der <title ref="#w00398" type="bi">Histoire du roy Henry Le Grand composée par Messire Hardouin
                                     de Perefixe, Paris 1662</title>, S. 549.</p>
@@ -533,15 +561,25 @@
                                 conversation avec <persName ref="#p1892" type="bi">Charles Emanuel Ier de Savoie</persName> : "Si Dieu me donne encore
                                 de la vie, je feray qu’il n’y aura point de laboureur en mon Royaume qui n’ait moyens d’avoir une poule dans son
                                 pot!". Imprimé pour la première fois dans <title ref="#w00398" type="bi">Histoire du roy Henry Le Grand composée par
-                                    Messire Hardouin de Perefixe, Paris 1662</title>, Paris 1662, p. 549.</p></note>
-                    </cit><lb/> aber <hi rend="underline"><persName ref="#p1874" type="bi">Ravaillac</persName></hi> senkt den Dolch in<lb/> das wahre
-                    Königsherz, das für<lb/> sein Volk schlug.<note resp="#selma.jahnke"><p xml:lang="de"><persName ref="#p1874" type="bi">François
-                                Ravaillac</persName> ermordete <persName ref="#p1873" type="bi">Heinrich IV. von Frankreich</persName> am <date
-                                when-iso="1610-05-14">14. Mai 1610</date>.</p><p xml:lang="en"><persName ref="#p1874" type="bi">François
-                                Ravaillac</persName> murdered <persName ref="#p1873" type="bi">Henry IV of France</persName> on <date
-                                when-iso="1610-05-14">May 14, 1610</date>.</p><p xml:lang="fr"><persName ref="#p1874" type="bi">François
-                                Ravaillac</persName> assassine <persName ref="#p1873" type="bi">Henri IV de France</persName> le <date
-                                when-iso="1610-05-14">14 mai 1610</date>.</p></note><lb/></p>
+                                    Messire Hardouin de Perefixe, Paris 1662</title>, Paris 1662, p. 549.</p>
+                        </note>
+                    </cit>
+                    <lb/> aber <hi rend="underline">
+                        <persName ref="#p1874" type="bi">Ravaillac</persName>
+                    </hi> senkt den Dolch in<lb/> das wahre
+                    Königsherz, das für<lb/> sein Volk schlug.<note resp="#selma.jahnke">
+                        <p xml:lang="de">
+                            <persName ref="#p1874" type="bi">François
+                                Ravaillac</persName> ermordete <persName ref="#p1873" type="bi">Heinrich IV. von Frankreich</persName> am <date when-iso="1610-05-14">14. Mai 1610</date>.</p>
+                        <p xml:lang="en">
+                            <persName ref="#p1874" type="bi">François
+                                Ravaillac</persName> murdered <persName ref="#p1873" type="bi">Henry IV of France</persName> on <date when-iso="1610-05-14">May 14, 1610</date>.</p>
+                        <p xml:lang="fr">
+                            <persName ref="#p1874" type="bi">François
+                                Ravaillac</persName> assassine <persName ref="#p1873" type="bi">Henri IV de France</persName> le <date when-iso="1610-05-14">14 mai 1610</date>.</p>
+                    </note>
+                    <lb/>
+                </p>
                 <p>Anworten Sie mir <persName ref="#p1212" type="bi">Bettina</persName>! Ich<lb/> habe Sie in Ihrem schönen Wollen<lb/>
                     <choice>
                         <abbr>u</abbr>
@@ -552,16 +590,21 @@
                     </choice> meine Sporen hab ich mir redlich<lb/> verdient, ich mein‘ ich könnte Ihnen<lb/>
                     <pb facs="iiif:10.34847/nkl.a65f926p/146bb51224cb962eb78e432e1429e35f20003389" n="6"/>ein guter Waffenbruder werden. Nach<lb/>
                     <placeName type="bi">Berlin</placeName> kann ich nicht, kom̄en Sie nach<lb/>
-                    <placeName ref="#l0065" type="bi">Heidelberg</placeName>, ist doch <hi rend="latin"><persName ref="#p1865" type="bi"
-                            >Welcker</persName></hi> hier!<lb/></p>
-                <p>Ich lege Ihnen das <hi rend="latin">Concept</hi> einer<lb/> Schrift bei, die ich gleich nach der 59.<lb/> Sitzung der Kam̄er im <hi
-                        rend="underline">Aprill</hi>
-                    <foreign xml:lang="la"><choice>
+                    <placeName ref="#l0065" type="bi">Heidelberg</placeName>, ist doch <hi rend="latin">
+                        <persName ref="#p1865" type="bi">Welcker</persName>
+                    </hi> hier!<lb/>
+                </p>
+                <p>Ich lege Ihnen das <hi rend="latin">Concept</hi> einer<lb/> Schrift bei, die ich gleich nach der 59.<lb/> Sitzung der Kam̄er im <hi rend="underline">Aprill</hi>
+                    <foreign xml:lang="la">
+                        <choice>
                             <abbr>a. c.</abbr>
                             <expan>anni currentis</expan>
-                        </choice></foreign><lb/> schrieb noch eh ich Ihr <title ref="#w00376" type="bi">Buch für<lb/> den König</title> gelesen, <hi
-                        rend="underline">diese</hi> soll<lb/> auch in das Buch, die Abschrift<lb/> habe ich längst machen lassen,<lb/>
-                    <hi rend="latin"><persName ref="#p1865" type="bi">Welcker</persName></hi>
+                        </choice>
+                    </foreign>
+                    <lb/> schrieb noch eh ich Ihr <title ref="#w00376" type="bi">Buch für<lb/> den König</title> gelesen, <hi rend="underline">diese</hi> soll<lb/> auch in das Buch, die Abschrift<lb/> habe ich längst machen lassen,<lb/>
+                    <hi rend="latin">
+                        <persName ref="#p1865" type="bi">Welcker</persName>
+                    </hi>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -572,13 +615,18 @@
                     </choice> leiden, ihn <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice> seine<lb/> edlen Kampfgefährten. In einer der<lb/> letzten Sitzungen nannte <hi rend="latin"><persName ref="#p1859"
-                            type="bi">Hekker</persName></hi><lb/> mit Begeisterung <hi rend="latin"><persName ref="#p1212" type="bi"
-                            >Bettinen</persName></hi>. Haben<lb/> Sie die Berichte von den Sitzungen?</p>
+                    </choice> seine<lb/> edlen Kampfgefährten. In einer der<lb/> letzten Sitzungen nannte <hi rend="latin">
+                        <persName ref="#p1859" type="bi">Hekker</persName>
+                    </hi>
+                    <lb/> mit Begeisterung <hi rend="latin">
+                        <persName ref="#p1212" type="bi">Bettinen</persName>
+                    </hi>. Haben<lb/> Sie die Berichte von den Sitzungen?</p>
                 <pb facs="iiif:10.34847/nkl.a65f926p/26cd63fcbf3b1ff26f5a7e2086843b36b74a0dd7" n="7"/>
                 <p>Ihr <title ref="#w00377" type="bi">Briefwechsel mit Clemens</title> ist hier gleich<lb/> vergriffen worden, ich habe ihn also
-                    nicht<lb/> empfangen. <hi rend="latin"><persName ref="#p1896" type="bi">Sgouta</persName></hi> hat mir Ihre <title ref="#w00375"
-                        type="bi">Gunderode</title><lb/>
+                    nicht<lb/> empfangen. <hi rend="latin">
+                        <persName ref="#p1896" type="bi">Sgouta</persName>
+                    </hi> hat mir Ihre <title ref="#w00375" type="bi">Gunderode</title>
+                    <lb/>
                     <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
@@ -594,38 +642,45 @@
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> Werkthätigkeit<lb/> in <hi rend="underline">dem</hi> Sinn, in welchem Sie schon durch<lb/> den Brief aus dem
-                        Voigtland<note resp="#selma.jahnke"><p xml:lang="de">Den Anhang zu Bettina von Arnims <title ref="#w00376" type="bi"
-                                >Königsbuch</title> bilden die "Erfahrungen eines jungen Schweizers im Vogtlande": Der Schweizer Pädagoge <persName
-                                ref="#p1893" type="bi">Heinrich Grunholzer</persName> dokumentiert im Armenviertel im Norden Berlins vor dem Hamburger
+                        Voigtland<note resp="#selma.jahnke">
+                        <p xml:lang="de">Den Anhang zu Bettina von Arnims <title ref="#w00376" type="bi">Königsbuch</title> bilden die "Erfahrungen eines jungen Schweizers im Vogtlande": Der Schweizer Pädagoge <persName ref="#p1893" type="bi">Heinrich Grunholzer</persName> dokumentiert im Armenviertel im Norden Berlins vor dem Hamburger
                             Tor, dem sogenannten Voigtland, das soziale Elend, indem er minutiös aufführt, wieviele Personen jeweils in einem Zimmer
                             wohnen, wieviel Geld sie monatlich in welchem Beruf verdienen und nach Abzug der Miete zur Verfügung haben und wieviele
-                            Angehörige sie damit versorgen müssen.</p><p xml:lang="en">The appendix to Bettina von Arnim's book of <title
-                                ref="#w00376" type="bi">Königsbuch</title> is the "Experiences of a Young Swiss in Vogtlande": The Swiss pedagogue
+                            Angehörige sie damit versorgen müssen.</p>
+                        <p xml:lang="en">The appendix to Bettina von Arnim's book of <title ref="#w00376" type="bi">Königsbuch</title> is the "Experiences of a Young Swiss in Vogtlande": The Swiss pedagogue
                                 <persName ref="#p1893" type="bi">Heinrich Grunholzer</persName> documents the social misery in the poor district in
                             the north of Berlin in front of the Hamburger Tor, the so-called Voigtland, by listing in detail how many people are in
                             each case Live in a room, how much money they earn monthly in which occupation and have available after deducting the rent
-                            and how many relatives they have to provide for.</p><p xml:lang="fr">L'annexe au livre de <title ref="#w00376" type="bi"
-                                >Königsbuch</title> de Bettina von Arnim est les "Expériences d'un jeune Suisse dans le Vogtlande": Le pédagogue
+                            and how many relatives they have to provide for.</p>
+                        <p xml:lang="fr">L'annexe au livre de <title ref="#w00376" type="bi">Königsbuch</title> de Bettina von Arnim est les "Expériences d'un jeune Suisse dans le Vogtlande": Le pédagogue
                             suisse <persName ref="#p1893" type="bi">Heinrich Grunholzer</persName> documente la misère sociale dans le quartier pauvre
                             du nord de Berlin devant le Hamburger Tor, le so- appelé Voigtland, en énumérant en détail combien de personnes vivent
                             dans chaque cas dans une pièce, combien d'argent ils gagnent mensuellement dans quel métier et ont à disposition après
-                            déduction du loyer et combien de parents ils doivent subvenir aux besoins.</p></note> gehandelt, <choice>
+                            déduction du loyer et combien de parents ils doivent subvenir aux besoins.</p>
+                    </note> gehandelt, <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
-                    </choice><lb/> in noch viel ausgedehnteren <choice>
+                    </choice>
+                    <lb/> in noch viel ausgedehnteren <choice>
                         <abbr>u</abbr>
                         <expan>und</expan>
                     </choice> umfassendern,<lb/> dazu könnte ich Ihnen Wege, die Sie nicht<lb/> ahnen, zeigen, doch mit Briefen geht<lb/> das zu
                     langsam, kom̄en Sie!</p>
-                <closer><salute>Wenn<lb/> Sie aber keines Gefährten bedürfen, oder<lb/> wenn der Gedanke daran Sie gar stören<lb/> sollte, so nehmen
+                <closer>
+                    <salute>Wenn<lb/> Sie aber keines Gefährten bedürfen, oder<lb/> wenn der Gedanke daran Sie gar stören<lb/> sollte, so nehmen
                         Sie doch den Seegen<lb/> meiner Liebesthränen, meiner Muttersorge<lb/>
                         <choice>
                             <abbr>u</abbr>
                             <expan>und</expan>
                         </choice> Zärtlichkeit auf Ihre Bahn mit,<lb/> Gott wird ihn hören!</salute>
-                    <signed rend="align(right)"><persName ref="#p0247" type="bi">Helmina v Chezy</persName></signed>
-                    <dateline><placeName ref="#l0065" type="bi">Heidelberg</placeName>
-                        <date when-iso="1844-07-29">29 Julius 1844</date></dateline></closer>
+                    <signed rend="align(right)">
+                        <persName ref="#p0247" type="bi">Helmina v Chezy</persName>
+                    </signed>
+                    <dateline>
+                        <placeName ref="#l0065" type="bi">Heidelberg</placeName>
+                        <date when-iso="1844-07-29">29 Julius 1844</date>
+                    </dateline>
+                </closer>
             </div>
         </body>
     </text>
