@@ -1,650 +1,758 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Dorothea Tieck to Friedrich von Uechtritz (Dresden, 8 March 1833)</title>
-                <title xml:lang="fr">Lettre de Dorothea Tieck à Friedrich von Uechtritz (Dresden, 8 mars 1833)</title>
-                <title xml:lang="de">Brief von Dorothea Tieck an Friedrich von Uechtritz (Dresden, 8. März 1833)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#sophia.zeil">
-                        <forename>Sophia</forename>
-                        <surname>Zeil</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2014-11">November 2014</date>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="sub">Dorothea Tieck</title>
-                <title type="sub">Briefe von Dorothea Tieck an Friedrich von Uechtritz</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">Translation</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Handwerk 2</street>
-                                <postCode>02826</postCode>
-                                <settlement>Görlitz</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>Nachlass Uechtritz</collection>
-                        <idno type="olb.goerlitz">Letter 6</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1833-03-08"/>
-                            <note resp="#sophia.zeil" type="keyword">Dorothea Tieck (translator)</note>
-                            <note resp="#sophia.zeil" type="keyword">Dorothea Tieck (self-description)</note>
-                            <note resp="#sophia.zeil" type="keyword">Seclusion</note>
-                            <note resp="#sophia.zeil" type="keyword">Depression</note>
-                            <note resp="#sophia.zeil" type="keyword">Home call</note>
-                            <note resp="#sophia.zeil" type="keyword">Illness</note>
-                            <note resp="#sophia.zeil" type="keyword">Ludwig Tieck (novellas)</note>
-                            <note resp="#sophia.zeil" type="keyword">Friedrich von Uechtritz (playwright)</note>
-                            <note resp="#sophia.zeil" type="keyword">Theater (Dresden)</note>
-                            <note resp="#sophia.zeil" type="keyword">Visual arts</note>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Nichtgeripptes Papier.</material>
-                                        <material xml:lang="en">Paper, not laid.</material>
-                                        <material xml:lang="fr">Papier, non côtelé.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">2 Bogen, 4 Blätter</measure>
-                                        <measure xml:lang="en">4 folios</measure>
-                                        <measure xml:lang="fr">4 feuilles</measure>
-                                    </measure>
-                                    <!--<dimensions unit="cm">
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Dorothea Tieck to Friedrich von Uechtritz (Dresden, 8 March 1833)</title>
+				<title xml:lang="fr">Lettre de Dorothea Tieck à Friedrich von Uechtritz (Dresden, 8 mars 1833)</title>
+				<title xml:lang="de">Brief von Dorothea Tieck an Friedrich von Uechtritz (Dresden, 8. März 1833)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#sophia.zeil">
+						<forename>Sophia</forename>
+						<surname>Zeil</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2014-11">November 2014</date>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="sub">Dorothea Tieck</title>
+				<title type="sub">Briefe von Dorothea Tieck an Friedrich von Uechtritz</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">Translation</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Handwerk 2</street>
+								<postCode>02826</postCode>
+								<settlement>Görlitz</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
+						<repository>Manuscripts section</repository>
+						<collection>Nachlass Uechtritz</collection>
+						<idno type="olb.goerlitz">Letter 6</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1833-03-08"/>
+							<note resp="#sophia.zeil" type="keyword">Dorothea Tieck (translator)</note>
+							<note resp="#sophia.zeil" type="keyword">Dorothea Tieck (self-description)</note>
+							<note resp="#sophia.zeil" type="keyword">Seclusion</note>
+							<note resp="#sophia.zeil" type="keyword">Depression</note>
+							<note resp="#sophia.zeil" type="keyword">Home call</note>
+							<note resp="#sophia.zeil" type="keyword">Illness</note>
+							<note resp="#sophia.zeil" type="keyword">Ludwig Tieck (novellas)</note>
+							<note resp="#sophia.zeil" type="keyword">Friedrich von Uechtritz (playwright)</note>
+							<note resp="#sophia.zeil" type="keyword">Theater (Dresden)</note>
+							<note resp="#sophia.zeil" type="keyword">Visual arts</note>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Nichtgeripptes Papier.</material>
+										<material xml:lang="en">Paper, not laid.</material>
+										<material xml:lang="fr">Papier, non côtelé.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">2 Bogen, 4 Blätter</measure>
+										<measure xml:lang="en">4 folios</measure>
+										<measure xml:lang="fr">4 feuilles</measure>
+									</measure>
+									<!--<dimensions unit="cm">
                                         <height>die Höhe</height>
                                         <width>die Breite</width>
                                     </dimensions>-->
-                                </extent>
-                                <foliation>
-                                    <p xml:lang="de">Keine Foliierung vorhanden.</p>
-                                    <p xml:lang="en">No foliation.</p>
-                                    <p xml:lang="fr">Pas de numérotation des pages.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Der Brief ist gut erhalten. Knicke und Verfärbungen.</p>
-                                    <p xml:lang="en">The letter is well-preserved. Some traces of folding, staining.</p>
-                                    <p xml:lang="fr">La lettre est bien conservée. Quelques traces de plis, décoloration.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0217" xml:id="major_hand">
-                                <p xml:lang="de">Hand der Absenderin Dorothea Tieck, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of sender Dorothea Tieck, letter text in black ink, mainly German script.</p>
-                                <p xml:lang="fr">Main de l'expéditrice Dorothea Tieck, corps de la lettre, encre noire, écriture majoritairement
-                                    gothique.</p>
-                            </handNote>
-                            <handNote corresp="#w03300" medium="pencil" scope="minor" scribe="publisher" scribeRef="#p2151" xml:id="pencil">
-                                <p xml:lang="de">Vermutlich Hand von Heinrich von Sybel zur Zeit der Vorbereitung für den Druck, Bleistift.</p>
-                                <p xml:lang="en">Very likely Hand of Heinrich von Sybel at the time when he prepared his edition of this letter,
-                                    pencil.</p>
-                                <p xml:lang="fr">Probablement la main de Heinrich von Sybel lors de sa préparation du manuscrit pour la publication,
-                                    crayon.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
-                                <p xml:lang="de">Unbekannte Hand, dicker Bleistift.</p>
-                                <p xml:lang="en">Unknown hand, thick pencil.</p>
-                                <p xml:lang="fr">Main inconnue, crayon de papier.</p>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde in <origPlace ref="#l0003">Dresden</origPlace> am <origDate when-iso="1833-03-08">8. März
-                                    1833</origDate> verfasst.</p>
-                            <p xml:lang="en">The letter was composed in <origPlace ref="#l0003">Dresden</origPlace> on <origDate when-iso="1833-03-08">March, 8 1833</origDate>.</p>
-                            <p xml:lang="fr">la lettre a été composée à <origPlace ref="#l0003">Dresden</origPlace> le <origDate when-iso="1833-03-08">8 mars 1833</origDate>.</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Die 33 Briefe von <persName ref="#p0217">Dorothea Tieck</persName> an <persName ref="#p0711">Friedrich
-                                    von Uechtritz</persName> befinden sich seit <date when-iso="1900">1900</date> im Besitz der Oberlausitzischen
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. Anlässlich seines 100. Geburtstages wurden
-                                sie, zusammen mit <persName ref="#p0711">Uechtritz</persName>' literarischem Nachlass, durch dessen Neffen, Max von
-                                Balan, der damaligen Oberlausitzischen Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>
-                                übereignet.</p>
-                            <p xml:lang="en">Since <date when-iso="1900">1900</date>, the 33 letters of <persName ref="#p0217">Dorothea
-                                    Tieck</persName> to <persName ref="#p0711">Friedrich von Uechtritz</persName> belong to the Oberlausitzische
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. On the occasion of his 100th birthday,
-                                together with <persName ref="#p0711">Uechtritz</persName>'s literary estate, Max von Balan (his nephew) transfered
-                                them to the former Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
-                            <p xml:lang="fr">Depuis <date when-iso="1900">1900</date>, les 33 lettres de <persName ref="#p0217">Dorothea
-                                    Tieck</persName> à <persName ref="#p0711">Friedrich von Uechtritz</persName> appartiennent à la Oberlausitzische
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. A l'occasion de son 100e anniversaire, avec
-                                    <persName ref="#p0711">Uechtritz</persName>'s fonds littéraire, Max von Balan (son neveu), eux transféré à la
-                                l'ancienne Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl>
-                                <bibl xml:lang="de">
-                                    <persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an
-                                        Friedrich von Uechtritz und seine Zeit in Briefen von ihm and an ihn</title>: S. 172–175. Dieser Druck
-                                    unterscheidet sich bezüglich der Rechtschreibung und Zeichensetzung. Auslassungen werden nicht angezeigt.</bibl>
-                                <bibl xml:lang="en">
-                                    <persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an
-                                        Friedrich von Uechtritz und seine Zeit in Briefen von ihm and an ihn</title>: p. 172–175. This print differs
-                                    in spelling and punctuation. Omissions are not marked.</bibl>
-                                <bibl xml:lang="fr">
-                                    <persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an
-                                        Friedrich von Uechtritz und seine Zeit in Briefen von ihm and an ihn</title>: p. 172–175. Cette édition
-                                    présente des différences concernant l'orthographe et la ponctuation. Les passages supprimés ne sont pas
-                                    signalés.</bibl>
-                            </bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <hyphenation eol="hard" rend="dh">
-                    <p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen doppelten Bindestrich angezeigt.</p>
-                    <p xml:lang="en">Hyphenations at line breaks are generally presented as double hyphen.</p>
-                    <p xml:lang="fr">Les coupures de mots sont représentées le plus souvent par un trait double.</p>
-                </hyphenation>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="100">Deutsch</language>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/54399574/">Dorothea Tieck</persName>
-                    <placeName ref="https://www.geonames.org/2935020">Dresden</placeName>
-                    <date when-iso="1833-03-08"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/77115385/">Friedrich von Uechtritz</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief05DorotheaTieckanUechtritz.xml" type="prev"/>
-                    <ref target="Brief08DorotheaTieckanUechtritz.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-25" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-01-26" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-26" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-20" who="#sophia.zeil">Updated acquisition-Element.</change>
-            <change when-iso="2014-09-30" who="#sophia.zeil">Updated respStmt.</change>
-            <change when-iso="2014-09-05" who="#sophia.zeil">Updated annotations.</change>
-            <change when-iso="2014-09-04" who="#sophia.zeil">Added rs-Element for connected IDs.</change>
-            <change when-iso="2014-07-23" who="#sophia.zeil">Updated annotations.</change>
-            <change when-iso="2014-07-11" who="#sophia.zeil">Finished encoding, updated annotations.</change>
-            <change when-iso="2014-07-02" who="#sophia.zeil">Added typographical correct hyphens.</change>
-            <change when-iso="2014-07-01" who="#sophia.zeil">Added new respStmt.</change>
-            <change when-iso="2014-07-01" who="#sophia.zeil">Corrected bibliographical information concerning Sybel's edition (deleted persName-tag in
-                the title).</change>
-            <change when-iso="2014-04-09" who="#sophia.zeil">Updated annotations.</change>
-            <change when-iso="2014-04-08" who="#sophia.zeil">Detailed encoding, first annotations.</change>
-            <change when-iso="2014-02-02" who="#sophia.zeil">First transcription and encoding. Added metadata.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.8bc1mkrf/8d4bf6cde6ed872b44a4239c30245f35208ea523" n="1"/>
-                <note hand="#pencil_2" place="top-center inline">5</note>
-                <note hand="#pencil" place="top-center inline">6</note>
-                <opener>
-                    <dateline rend="align(right)">
-                        <placeName ref="#l0003" type="bi">
-                            <hi rend="latin">Dresden</hi>
-                        </placeName> den <date when-iso="1833-03-08">8 <hi rend="latin">Merz</hi>
-                            <lb/>1833</date>.</dateline>
-                    <lb/>
-                    <salute>Theuerster Freund</salute>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> (S. 172) fehlt die Anrede.</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (P. 172) the salutation is missing. </p>
-                        <p xml:lang="fr">Dans
-                                <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (P.172) le salut manque.
-                        </p>
-                    </note>
-                </opener>
-                <p>Indem ich eben Ihren letzten Brief wieder<lb/>lese sehe ich daß er schon recht alt ist, und<lb/>ich in eine größere Schuld gegen
-                    Sie ge<lb break="no"/>rathen bin als ich dachte: Es sind aber<lb/>wirklich nur Geschäfte, die mich am Schreiben<lb/>gehindert
-                    haben; denn schriebe ich so oft<lb/>als ich es gern thäte, so würde es Ihnen<lb/>zu viel werden. Wenn Sie es noch nicht ge<lb break="no"/>hört haben daß ich mit an der Ueber<lb break="no"/>setzung des <hi rend="latin">
-                        <persName ref="#p0206" type="bi">Shakespear</persName>
-                    </hi> arbeite, so ver<lb break="no"/>traue ich es Ihnen hiermit als ein Geheim<lb break="no"/>niß
-                        an.<note resp="#sophia.zeil">
-                        <p xml:lang="de">Nachdem <date when-iso="1830">1830</date>
-                            <persName ref="#p0133" type="bi">Ludwig Tieck</persName>s Unternehmen einer Neuauflage der <persName ref="#p0190" type="bi">Schlegel</persName>schen <rs ref="#w04645" type="bi_title">Shakespeare-Übersetzung</rs> nach drei Bänden
-                                (<rs ref="#w04646" type="bi_title">Bd. 1</rs>, <rs ref="#w04647" type="bi_title">2</rs> und <rs ref="#w04648" type="bi_title">4</rs>) ins Stocken geraten war, griff er für die bislang noch nicht von <persName ref="#p0190" type="bi">Schlegel</persName> übersetzten Stücke auf die Hilfe von <persName ref="#p0217" type="bi">Dorothea</persName> und <persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> zurück. Unter <persName ref="#p0217" type="bi">Dorotheas</persName> Feder entstanden seit <date when-iso="1830">1830</date> die Übersetzung
-                            von <title ref="#w04653" type="bi">Coriolanus</title> (Bd. 5, <date when-iso="1831">1831</date>), <title ref="#w04654" type="bi">Die beiden Veroneser</title>, <title ref="#w04655" type="bi">Timon von Athen</title> (beide Bd. 7, <date when-iso="1832">1831</date>), <title ref="#w04656" type="bi">Das Wintermährchen</title> (Bd. 8, <date when-iso="1832">1832</date>), <title ref="#w04657" type="bi">Cymbeline</title> und <title ref="#w04658" type="bi">Macbeth</title>
-                            (beide Bd. 9, <date when-iso="1833">1833</date>). Gemeinsam mit <persName ref="#p2323" type="bi">Baudissin</persName>
-                            übersetzte sie <title ref="#w04660" type="bi">Viel Lärmen um Nichts</title> (Bd. 3, <date when-iso="1830">1830</date>) und
-                                <title ref="#w04661" type="bi">Der Widerspenstigen Zähmung</title> (Bd. 6, <date when-iso="1831">1831</date>). Doch
-                                <persName ref="#p0217" type="bi">Dorothea</persName> und <persName ref="#p2323" type="bi">Baudissin</persName> wurden
-                            an keiner Stelle als Übersetzer genannt; erst im Nachwort zum <rs ref="#w04526" type="bi_title">9. Band</rs> bedankt sich
-                                <persName ref="#p0133" type="bi">Ludwig Tieck</persName> bei seinen "fleißigen Mitarbeiter[n]" (S. 415) und erwähnt
-                            auch <persName ref="#p2323" type="bi">Baudissin</persName> namentlich. <persName ref="#p0217" type="bi">Dorothea</persName> bleibt jedoch als "jüngere[r] Gehülfe" (S. 416) weiterhin ungenannt.</p>
-                        <p xml:lang="en">After <persName ref="#p0133" type="bi">Ludwig Tieck</persName>'s business of a new edition of <persName ref="#p0190" type="bi">Schlegel</persName> 's <rs ref="#w04645" type="bi_title">Shakespeare translation</rs> into
-                            three volumes (<rs ref="#w04646" type="bi_title">Vol. 1</rs>, <rs ref="#w04647" type="bi_title">2</rs> und <rs ref="#w04648" type="bi_title">4</rs>) stalled in <date when-iso="1830">1830</date>, he resorted to the help of
-                                <persName ref="#p0217" type="bi">Dorothea</persName> and <persName ref="#p2323" type="bi">Count Wolf
-                                Baudissin</persName> for the pieces that had not yet been translated by <persName ref="#p0190" type="bi">Schlegel</persName> . Under <persName ref="#p0217" type="bi">Dorothea</persName>'s pen, the translations of <title ref="#w04653" type="bi">Coriolanus</title> (vol. 5, <date when-iso="1831">1831</date>), <title ref="#w04654" type="bi">Die beiden Veroneser</title>, <title ref="#w04655" type="bi">Timon von Athen</title> (both vol. 7, <date when-iso="1832">1831</date>), <title ref="#w04656" type="bi">Das Wintermährchen</title> (vol. 8, <date when-iso="1832">1832</date>), <title ref="#w04657" type="bi">Cymbeline</title> and <title ref="#w04658" type="bi">Macbeth</title>
-                            (both vol . 9, <date when-iso="1833">1833</date>). Together with <persName ref="#p2323" type="bi">Baudissin</persName> she
-                            translated <title ref="#w04660" type="bi">Much Ado About Nothing</title> (Vol. 3, <date when-iso="1830">1830</date>) and
-                                <title ref="#w04661" type="bi">The Taming of the Shrew</title> (Vol. 6, <date when-iso="1831">1831</date>). But
-                                <persName ref="#p0217" type="bi">Dorothea</persName> and <persName ref="#p2323" type="bi">Baudissin</persName> were
-                            never named as translators; Only in the afterword to the <rs ref="#w04526" type="bi_title">9th volume</rs> does <persName ref="#p0133" type="bi">Ludwig Tieck</persName> thank his "hardworking employees" (p. 415) and also mention <persName ref="#p2323" type="bi">Baudissin</persName> by name. <persName ref="#p0217" type="bi">Dorothea</persName>, however,
-                            remains anonymous as a "younger assistant" (p. 416).</p>
-                        <p xml:lang="fr">Après que les affaires de <persName ref="#p0133" type="bi">Ludwig Tieck</persName>d'une nouvelle édition de
-                            la <rs ref="#w04645" type="bi_title">traduction de Shakespeare</rs> de <persName ref="#p0190" type="bi">Schlegel</persName> en trois volumes (<rs ref="#w04646" type="bi_title">Vol. 1</rs>, <rs ref="#w04647" type="bi_title">2</rs> und <rs ref="#w04648" type="bi_title">4</rs>) soient bloquées en <date when-iso="1830">1830</date>, il recourut à l'aide de <persName ref="#p0217" type="bi">Dorothée</persName> et du <persName ref="#p2323" type="bi">comte Wolf Baudissin</persName> pour les pièces qui n'avaient pas encore été traduites par
-                                <persName ref="#p0190" type="bi">Schlegel</persName>. Sous la plume de <persName ref="#p0217" type="bi">Dorothea</persName>, les traductions de <title ref="#w04653" type="bi">Coriolanus</title> (vol. 5, <date when-iso="1831">1831</date>), <title ref="#w04654" type="bi">Die beiden Veroneser</title>, <title ref="#w04655" type="bi">Timon von Athen</title> (tous deux vol. 7, <date when-iso="1832">1831</date>), <title ref="#w04656" type="bi">Das Wintermährchen</title> (vol. 8, <date when-iso="1832">1832</date>), <title ref="#w04657" type="bi">Cymbeline</title> et <title ref="#w04658" type="bi">Macbeth</title> (tous deux vol. 9 , <date when-iso="1833">1833</date>). Avec <persName ref="#p2323" type="bi">Baudissin</persName>, elle a traduit <title ref="#w04660" type="bi">Beaucoup de bruit pour rien</title> (Vol. 3, <date when-iso="1830">1830</date>) et <title ref="#w04661" type="bi">The Taming of the Shrew</title> (Vol. 6, <date when-iso="1831">1831</date>). Mais <persName ref="#p0217" type="bi">Dorothée</persName> et <persName ref="#p2323" type="bi">Baudissin</persName> n'ont jamais été nommés
-                            traducteurs ; Ce n'est que dans la postface du <rs ref="#w04526" type="bi_title">9e volume</rs> que <persName ref="#p0133" type="bi">Ludwig Tieck</persName> remercie ses « employés assidus » (p. 415) et mentionne également <persName ref="#p2323" type="bi">Baudissin</persName> par son nom. <persName ref="#p0217" type="bi">Dorothée</persName>,
-                            cependant, reste anonyme en tant que « jeune assistante » (p. 416).</p>
-                    </note> Leider ist es in <placeName ref="#l1103" type="bi">Berlin</placeName> bekan̄t,<lb/>wie meine <rs ref="#p0218" type="bi_person">Schwester</rs> mir gesagt hat,<lb/>das
-                    ist mir unangenehm, und ich weiß<lb/>auch nicht wie es zugeht; <persName ref="#p0196" type="bi">Reimer</persName>, der<lb/>es
-                    freilich wissen mußte, hat doch wohl<lb/>davon gesprochen. Ich habe es keinem<lb/>Menschen gesagt, und bitte auch Sie
-                    sehr<lb/>ernstlich darum; lassen Sie es sich auch<lb/>nicht gegen meinen <rs ref="#p0133" type="bi_person">Vater</rs> merken,
-                        den̄<pb facs="iiif:10.34847/nkl.8bc1mkrf/87fc6da74f8afa8d7126f207b90244bddc728d0b" n="2"/></p><p><!-- Added tag for the good display of the indexes-->
-                    <note place="margin(left)-vertical">
-                        <p xml:lang="de">Der arme <persName ref="#p2341" type="bi">Sternberg</persName> hatte kürzlich eine Brustentzündung und
-                            war in<lb/>großer Gefahr.</p>
-                        <p xml:lang="en">Poor <persName ref="#p2341" type="bi">Sternberg</persName> recently had a
-                            chest infection and was in great danger.</p>
-                        <p xml:lang="fr">Le pauvre <persName ref="#p2341" type="bi">Sternberg</persName> a récemment eu une infection pulmonaire et était en grand danger.</p>
-                    </note>
-                    <lb/>er würde böse
-                    seyn, daß ich es Ihnen ge<lb break="no"/>sagt habe. Aber es giebt so wenige<lb/>Menschen die wirklich Antheil an mir neh<lb break="no"/>men; ich rechne Sie zu diesen Wenigen, und<lb/>darum ist es mir Bedürfniß<!-- [173] --> Ihnen Alles<lb/>
-                    <del rend="strikethrough">mitzuhe</del> mitzutheilen was ich thue und trei<lb break="no"/>be. Die Arbeit die mich länger als
-                    drei<lb/>Jahre beschäftigt, und mir so viel Freude<lb/>gemacht hat, ist nun bald geendigt.<note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
-                            (S. 173) steht "beendigt" statt "geendigt".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>:
-                                <title ref="#w03300">Memories</title> (S. 173) stands "beendigt" instead of "geendigt". </p>
-                        <p xml:lang="fr">Dans
-                                <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 173) signifie
-                            "beendigt" au lieu de "geendigt". </p>
-                    </note> Seit<lb/>Neujahr bin ich mit dem <title ref="#w00224" type="bi">Macbeth</title> beschäf<lb break="no"/>tigt, das ist das letzte der mir zuge<lb break="no"/>theilten Stücke,<note resp="#sophia.zeil">
-                        <p xml:lang="de">Die Übersetzung des <title ref="#w04658" type="bi">Macbeth</title> erschien im <date when-iso="1833">1833</date> im 9. und letzten Band der <rs ref="#w04645" type="bi_title">Schlegel-Tieck'schen
-                                Shakespeare-Übersetzung</rs>.</p>
-                        <p xml:lang="en">The translation of <title ref="#w04658" type="bi">Macbeth</title>
-                            appeared in <date when-iso="1833">1833</date> in the 9th and last volume of <rs ref="#w04645" type="bi_title">Schlegel-Tieck's Shakespeare translation</rs>.</p>
-                        <p xml:lang="fr">La traduction de <title ref="#w04658" type="bi">Macbeth</title> est apparue en <date when-iso="1833">1833</date> dans le 9e et dernier volume de la <rs ref="#w04645" type="bi_title">traduction de Shakespeare de Schlegel-Tieck</rs>.</p>
-                    </note> ich bin nun schon beim Ab<lb break="no"/>schreiben, und weil ich darin keine große<lb/>Fertigkeit habe, kostet es mir viel Zeit<subst>
-                        <del rend="overwritten">,</del>
-                        <add place="across">.</add>
-                    </subst>
-                    <lb/>
-                    <subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">D</add>
-                    </subst>ies also als Entschuldigung für mein<lb/>langes Schweigen. Ich kann Ihnen nicht<lb/>sagen welche<note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> (S. 173) steht "welch" statt "welche".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 173) stands "welch" instead of "welche". </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 173)
-                            signifie "welch" au lieu de "welche". </p>
-                    </note> großes Vergnügen mir die<lb/>Arbeit gemacht hat; wenn man
-                    selbst<lb/>nichts erschaffen kann ist es doch gewiß<lb/>der größte Genuß sich in die Schöpfung<lb/>eines großen Geistes so ganz zu
-                        ver<lb break="no"/>tiefen, wie man es beim Uebersetzen<lb/>
-                    <pb facs="iiif:10.34847/nkl.8bc1mkrf/6c477c1892f00ee605a5113059bc2536b9eca304" n="3"/></p><p><!-- Added tag for the good display of the indexes-->thun muß: Jedes Stück an dem man
-                    eben<lb/>arbeitet erscheint einem als das schönste<lb/>und jeden Charakter gewinnt man lieb<lb/>als hätte man ihn persönlich
-                    gekannt,<lb/>das ist aber auch die einzige Freude,<lb/>denn gerade wenn man das Original<lb/>so genau kennt kann man nie
-                    glauben<lb/>daß <subst>
-                        <del rend="strikethrough">eine</del>
-                        <add place="above">die</add>
-                    </subst> Uebersetzung eine gelungene<lb/>Arbeit seyn kann<subst>
-                        <del rend="overwritten">.</del>
-                        <add place="across">,</add>
-                    </subst> und man fühlt nur<lb/>wie viel verlohren geht. Erst habe ich<lb/>immer jedes Stück für mich ganz fertig<lb/>gemacht, und
-                    dann meinem Vater vor<lb break="no"/>ge<subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">l</add>
-                    </subst>esen, wobei denn natürlich noch sehr<lb/>vieles verändert ist. Die große Mühe<lb/>die wir angewendet haben wird
-                    wohl<lb/>nie jemand darin wieder finden; <del rend="strikethrough">bei</del>
-                    <lb/>an dem großen Monolog des <title ref="#w00224" type="bi">Macbeth</title>
-                    <lb/>
-                    <choice>
-                        <abbr>z. B.</abbr>
-                        <expan>zum Beispiel</expan>
-                    </choice> haben wir drei Tage corrigirt,<lb/>und jedes mal eine Stunde. Auch bei<lb/>den Stücken<note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> übersetzte <title ref="#w04659" type="bi">König Heinrich VIII.</title>, <title ref="#w04660" type="bi">Viel Lärmen um Nichts</title> (zus. mit <persName ref="#p0217" type="bi">Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius und Cleopatra</title>,
-                                <title ref="#w04663" type="bi">Maaß für Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title ref="#w04661" type="bi">Der Widerspenstigen Zähmung</title> (zus. mit <persName ref="#p0127" type="bi">Dorothea
-                                Tieck</persName>), <title ref="#w04665" type="bi">Die Comödie der Irrungen</title>, <title ref="#w04666" type="bi">Ende gut, Alles gut</title>, <title ref="#w04667" type="bi">Troilus und Cressida</title>, <title ref="#w04668" type="bi">Die lustigen Weiber von Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670" type="bi">König Lear</title> und <title ref="#w04671" type="bi">Liebes Leid und Lust</title>.</p>
-                        <p xml:lang="en">
-                            <persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> translated <title ref="#w04659" type="bi">King Henry VIII</title>, <title ref="#w04660" type="bi">Much Ado About Nothing</title> (together with <persName ref="#p0217" type="bi">Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius and Cleopatra</title>,
-                                <title ref="#w04663" type="bi">Maaß for Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title ref="#w04661" type="bi">The Taming of the Shrew</title> (together with <persName ref="#p0217" type="bi">Dorothea
-                                Tieck</persName>), <title ref="#w04665" type="bi">The Comedy of Errors</title>, <title ref="#w04666" type="bi">that
-                                ends well 'All good</title>, <title ref="#w04667" type="bi">Troilus and Cressida</title>, <title ref="#w04668" type="bi">The merry women of Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670" type="bi">King Lear</title> and dear sorrow and lust.</p>
-                        <p xml:lang="fr">
-                            <persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> a traduit <title ref="#w04659" type="bi">le
-                                roi Henri VIII</title>, <title ref="#w04660" type="bi">Beaucoup de bruit pour rien</title> (avec <persName ref="#p0217" type="bi">Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius et Cleopatra</title>,
-                                <title ref="#w04663" type="bi">Maaß pour Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title ref="#w04661" type="bi">La Mégère apprivoisée</title> (avec <persName ref="#p0217" type="bi">Dorothea
-                            Tieck</persName>), <title ref="#w04665" type="bi">La Comédie des erreurs</title>, <title ref="#w04666" type="bi">ça finit
-                                bien « Très bien</title>, <title ref="#w04667" type="bi">Troilus et Cressida</title>, <title ref="#w04668" type="bi">Les joyeuses femmes de Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670" type="bi">le roi Lear</title> et cher chagrin et luxure.</p>
-                    </note> die <persName ref="#p2323" type="bi">Baudissin</persName> übersetzt<lb/>hat, habe ich fast immer den Corrigir<lb break="no"/>stunden beigewohnt<note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p2323" type="bi">Baudissin</persName> beschreibt den Vorgang in einem
-                            Brief aus dem Jahre <date when-iso="1867">1867</date> rückblickend auf ähnliche Weise: "Tag für Tag von halb zwölf bis Ein
-                            Uhr fanden wir uns in Tiecks Bibliothekszimmer ein: wer ein Stück fertig hatte, las es vor, die zwei anderen Mitglieder
-                            unseres Collegiums verglichen den Vortrag mit dem Original, u. approbirten, schlugen Änderungen vor, oder verwarfen. Mehr
-                            als einmal ward eine halbe Stunde lang über einen einzelnen Ausdruck debattirt;" (<title ref="#w04672" type="bi">Shakespeare-Jahrbuch 71</title>, S. 108.)</p>
-                        <p xml:lang="en">
-                            <persName ref="#p2323" type="bi">Baudissin</persName>
-                            describes the process in a similar way in retrospect in a letter from <date when-iso="1867">1867</date>: "Day after day
-                            from half past eleven to one o'clock we found ourselves in Tieck's library room: whoever had finished a piece read it
-                            aloud, the two other members of our college compared the lecture with the original, and approved, suggested changes or
-                            rejected them. More than once a single expression was debated for half an hour; " (<title ref="#w04672" type="bi">Shakespeare Yearbook 71</title>, p. 108.)</p>
-                        <p xml:lang="fr">
-                            <persName ref="#p2323" type="bi">Baudissin</persName>
-                            décrit rétrospectivement le processus de la même manière dans une lettre de <date when-iso="1867">1867</date> : « Jour
-                            après jour, de onze heures et demie à une heure, nous nous sommes retrouvés dans la salle de bibliothèque de Tieck : celui
-                            qui avait terminé un morceau le lisait à haute voix, les deux autres membres de notre collège a comparé la conférence avec
-                            l'original, et a approuvé, suggéré des modifications ou les a rejetées. Plus d'une fois une seule expression a été
-                            débattue pendant une demi-heure; " (<title ref="#w04672" type="bi">Annuaire de Shakespeare 71</title>, p. 108.)</p>
-                    </note>
-                    und dadurch viel<pb facs="iiif:10.34847/nkl.8bc1mkrf/82e97c47f43522837e78a37fd89d8911207b2e00" n="4"/>
-                    <placeName ref="#l0022" type="bi">Englisch</placeName> gelernt, besonders <hi rend="latin">
-                        <persName ref="#p0206" type="bi">Shakspear</persName>'s</hi>
-                    <lb/>Sprache.</p>
-                <p>Was Sie mir darüber schreiben daß Sie<lb/>sich oft einsam fühlen verstehe ich ganz,<lb/>glauben Sie nicht daß ich darin
-                    Klage<lb/>oder Unzufriedenheit sehe. Auch ich fühle<lb/>mich immer einsamer, je älter ich werde,<lb/>ich habe auch mehr Mißtrauen
-                    gegen die<lb/>Menschen, was mir gar nicht lieb ist, und<lb/>für mich ein quälendes Gefühl, weil es<lb/>gar nicht zu meinem
-                    Charakter paßt<lb/>Mit <rs ref="#p2323 #p2324" type="bi_person">Baudissins</rs> waren wir sonst fast<lb/>täglich, und jetzt sehen
-                    wir uns höchstens<lb/>alle paar Wochen einmal; obgleich wir<lb/>freundlich mit einander sind wie sonst<lb/>und nichts vorgefallen
-                    ist, so ist es doch<lb/><!--[174]-->eine schmerzliche Erfahrung, daß ein<lb/>Verhältniß was man für so fest ge<lb break="no"/>halten hat so locker werden kann.<lb/>Die <persName ref="#p0709" type="bi">Lüttichau</persName> ist die einzige die sich im<lb break="no"/>mer gleich bleibt, und der ich unbedingt<lb/>vertraue, darum will ich auch nicht<pb facs="iiif:10.34847/nkl.8bc1mkrf/dbb6a4a90daedf4b9a201fc3d33e403ef8e8799e" n="5"/>klagen; denn es ist wohl genug im
-                    Leben<lb/>Eine Seele gefunden zu haben, mit der<lb/>man alles theilen kann und von der<lb/>man immer verstanden wird. Daß
-                    Sie<lb/>so fern von Ihren <rs ref="#p2411 #p2412" type="bi_person">Eltern</rs>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p2411" type="bi">Friedrich Joseph Peter von Uechtritz</persName> und seine Frau <persName ref="#p2412" type="bi">Friederike Auguste Charlotte</persName> in <placeName ref="#l0940" type="bi">Heidersdorf
-                                (Niederschlesien)</placeName> bei <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
-                        <p xml:lang="en">
-                            <persName ref="#p2411" type="bi">Friedrich Joseph Peter von Uechtritz</persName> and his wife <persName ref="#p2412" type="bi">Friederike Auguste Charlotte</persName> in <placeName ref="#l0940" type="bi">Heidersdorf (Lower Silesia)</placeName>
-                            near <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
-                        <p xml:lang="fr">
-                            <persName ref="#p2411" type="bi">Friedrich
-                                Joseph Peter von Uechtritz</persName> et son épouse <persName ref="#p2412" type="bi">Friederike Auguste
-                                Charlotte</persName> à <placeName ref="#l0940" type="bi">Heidersdorf (Basse Silésie)</placeName> près de <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
-                    </note> sind muß Ih<lb break="no"/>nen sehr traurig seyn, sie müssen
-                    doch<lb/>auch schon alt seyn, und wenn man so<lb/>sehen muß wie sie schwächer werden, <add place="above">dan̄</add> ist<lb/>die
-                    Liebe zu den Eltern ein wahrhaft<lb/>herzzerreißendes Gefühl. Es ist wohl<lb/>ein großer Mangel an Frömmigkeit und<lb/>Ergebung in
-                    mir, aber ich kann den Ge<lb break="no"/>danken sie je zu verlieren gar nicht<lb/>ertragen, und ich suche mich nur immer<lb/>damit
-                    zu trösten, daß ich doch vielleicht<lb/>eher sterbe.</p>
-                <p>
-                    <persName ref="#p0713" type="bi">Löbel</persName> kommt auf einige Tage her, und<lb/>wird oben in Ihrer kleinen Stube<note resp="#sophia.zeil">
-                        <p xml:lang="de">Die Dachkammer in der 5. Etage, die auch <persName ref="#p0711" type="bi">Uechtritz</persName> (seit <date when-iso="1832">1832</date>) stets bei einem Aufenthalt in <placeName ref="#l0003" type="bi">Dresden</placeName> bewohnte.</p>
-                        <p xml:lang="en">The attic room on the 5th floor, which <persName ref="#p0711" type="bi">Uechtritz</persName> (since <date when-iso="1832">1832</date>) always lived in when he was in
-                                <placeName ref="#l0003" type="bi">Dresden</placeName>.</p>
-                        <p xml:lang="fr">La chambre mansardée au 5ème étage, dans
-                            laquelle <persName ref="#p0711" type="bi">Uechtritz</persName> (depuis <date when-iso="1832">1832</date>) a toujours vécu
-                            lorsqu'il était à <placeName ref="#l0003" type="bi">Dresde</placeName>.</p>
-                    </note> wohnen,<lb/>ich freue mich sehr ihn
-                    einmal wieder zu<lb/>sehn. Gegen Ostern kommt auch <persName ref="#p0187" type="bi">Raumer</persName>,<lb/>dem soll es immer noch
-                    sehr schlecht gehn.<note resp="sophia.zeil">
-                        <p xml:lang="de">Im Juli 1832 waren Raumers Schwestern <persName ref="#p3545" type="bi">Agnes</persName> und <persName ref="#p2961" type="bi">Louise</persName> gestorben. Vgl. den Brief <persName ref="#p0133" type="bi">Ludwig Tiecks</persName> an <persName ref="#p0187" type="bi">Raumer</persName> vom <ref target="Brief26TieckanRaumer.xml">5. oder 7. August 1832</ref>, S. 1 (Bl. 1 recto), bearb. v. Johanna Preusse, in:
-                                <title>Briefe und Texte aus dem intellektuellen Berlin um 1800</title>.</p>
-                        <p xml:lang="en">Raumer's sisters <persName ref="#p3545" type="bi">Agnes</persName> and <persName ref="#p2961" type="bi">Louise</persName> had died in July 1832.
-                            See <persName ref="#p0133" type="bi">Ludwig Tieck</persName>'s letter to <persName ref="#p0187" type="bi">Raumer</persName> dated <ref target="Brief26TieckanRaumer.xml">August 5 or 7, 1832</ref>, p. 1 (p. 1 recto), revised.
-                            v. Johanna Preusse, in: <title>Letters and texts from intellectual Berlin around 1800</title>.</p>
-                        <p xml:lang="fr">Les
-                            sœurs de Raumer, <persName ref="#p3545" type="bi">Agnès</persName> et <persName ref="#p2961" type="bi">Louise</persName>,
-                            étaient décédées en juillet 1832. Voir la lettre de <persName ref="#p0133" type="bi">Ludwig Tieck</persName> à <persName ref="#p0187" type="bi">Raumer</persName> du <ref target="Brief26TieckanRaumer.xml">5 ou 7 août 1832</ref>, page 1 (p.
-                            1 recto), révisée. v. Johanna Preusse, in : <title>Lettres et textes du Berlin intellectuel vers
-                    1800</title>.</p>
-                    </note>
-                    <lb/>Was diesen Sommer über uns bestim̄t<pb facs="iiif:10.34847/nkl.8bc1mkrf/aa6e6ef70e17b8fa06d9a83b89fe1d5b3ebbf1a7" n="6"/></p><p><!-- Added tag for the good display of the indexes-->ist, und ob wir eine Reise<note resp="#sophia.zeil">
-                        <p xml:lang="de">Im <date when-iso="1833-07/08">Juli/August 1833</date> unternahmen <persName ref="#p0233" type="bi">Amalia</persName>, <persName ref="#p0218" type="bi">Agnes</persName> und <persName ref="#p0217" type="bi">Dorothea Tieck</persName> eine Reise nach <placeName ref="#l0017" type="bi">Schlesien</placeName> zu den Verwandten
-                                <persName ref="#p0233" type="bi">Amalia Tiecks</persName>. <persName type="bi">Ludwig Tieck</persName> blieb in
-                                <placeName ref="#l0003" type="bi">Dresden</placeName>, um zu arbeiten. Vgl. <ref target="Brief09DorotheaTieckanUechtritz.xml">Brief vom 22. Juli 1833</ref>, S. 1 (Bl. 1 recto).</p>
-                        <p xml:lang="en">In
-                                <date when-iso="1833-07/08">July/August 1833</date>
-                            <persName ref="#p0233" type="bi">Amalia</persName>, <persName ref="#p0218" type="bi">Agnes</persName> and <persName ref="#p0217" type="bi">Dorothea Tieck</persName> made a trip to <placeName ref="#l0017" type="bi">Silesia</placeName>
-                            to see <persName ref="#p0233" type="bi">Amalia Tieck</persName>'s relatives. <persName type="bi">Ludwig Tieck</persName>
-                            stayed in <placeName ref="#l0003" type="bi">Dresden</placeName> to work. See <ref target="Brief09DorotheaTieckanUechtritz.xml">letter of July 22, 1833</ref>, p. 1 (sheet 1 recto).</p>
-                        <p xml:lang="fr">En <date when-iso="1833-07/08">juillet/août 1833</date>, <persName ref="#p0233" type="bi">Amalia</persName>, <persName ref="#p0218" type="bi">Agnès</persName> et <persName ref="#p0217" type="bi">Dorothea Tieck</persName> font un voyage
-                            en <placeName ref="#l0017" type="bi">Silésie</placeName> pour voir les parents d'<persName ref="#p0233" type="bi">Amalia
-                                Tieck</persName>. <persName type="bi">Ludwig Tieck</persName> est resté à <placeName ref="#l0003" type="bi">Dresde</placeName> pour travailler. Voir <ref target="Brief09DorotheaTieckanUechtritz.xml">lettre du 22 juillet
-                                1833</ref>, p.1 (feuille 1 recto).</p>
-                    </note> machen weiß ich<lb/>noch gar nicht, <rs ref="#p0133" type="bi_person">Vater</rs> spricht von so etwas im<lb break="no"/>mer erst wenn es geschieht; er ist im Ganzen<lb/>den Winter sehr wohl
-                    gewesen, hatte auch<lb/>eine neue Novelle<note resp="#sophia.zeil">
-                        <p xml:lang="de">Vermutlich handelt es sich um die einzige,
-                                <date when-iso="1833">1833</date> veröffentlichte Novelle <title ref="#w04376" type="bi">Eine Sommerreise</title>, die
-                                <persName ref="#p0133" type="bi">Tieck</persName> im <date when-iso="1833-08">August 1833</date> fertigstellte.</p>
-                        <p xml:lang="en">It is probably the only novella <title ref="#w04376" type="bi">Ein Sommerreise</title> published in <date when-iso="1833">1833</date>, which <persName ref="#p0133" type="bi">Tieck</persName> completed in <date when-iso="1833-08">August 1833</date>.</p>
-                        <p xml:lang="fr">C'est probablement la seule nouvelle publiée en <date when-iso="1833">1833</date>, <title ref="#w04376" type="bi">Eine Sommerreise</title>, que <persName ref="#p0133" type="bi">Tieck</persName> acheva en <date when-iso="1833-08">août 1833</date>.</p>
-                    </note> angefangen, da bekam<lb/>er
-                    eine Halskrankheit und heftigen<lb/>Cathar der ihn sehr angriff, nun ist die<lb/>Arbeit wieder unterbrochen. Es ist wohl<lb/>ein
-                    wahres Unglück daß er nicht fleißiger<lb/>seyn kann, wie Vieles wird der Welt dadurch<lb/>entzogen. <persName ref="#p0196" type="bi">Reimer</persName> bekommt die <title ref="#w04329" type="bi">Rosamunde</title>
-                    <lb/>auf keinen Fall, <rs ref="#p0133" type="bi_person">Vater</rs> ist mit <persName ref="#p0188" type="bi">Brockhaus</persName>
-                    <lb/>in Unterhandlungen; sie können
-                    aber<lb/>noch nicht einig werden, weil der gar so<lb/>wenig geben will. Der <title ref="#w04324" type="bi">Alexander</title>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName>' Trauerspiel <title ref="#w04324" type="bi">Alexander und Darius</title> wurde am <date when-iso="1826-02-28">28. Februar 1826</date> am <placeName ref="#l0003" type="bi">Dresdner</placeName> Hoftheater uraufgeführt. Es erlebte 6 weitere Aufführungen.
-                                (Vgl. <persName ref="#p2344" type="bi">Prölß</persName>: <title ref="#w04369" type="bi">Geschichte des Hoftheaters zu
-                                Dresden</title>, S. 616.)</p>
-                        <p xml:lang="en">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName>'s tragedy <title ref="#w04324" type="bi">Alexander and Darius</title> premiered on <date when-iso="1826-02-28">February 28, 1826</date>
-                            at the <placeName ref="#l0003" type="bi">Dresden</placeName> Court Theater. It saw 6 other performances. (See <persName ref="#p2344" type="bi">Prölß</persName>: <title ref="#w04369" type="bi">History of the Court Theater in
-                                Dresden</title>, p. 616.)</p>
-                        <p xml:lang="fr">La tragédie d'<persName ref="#p0711" type="bi">Uechtritz</persName>
-                            <title ref="#w04324" type="bi">Alexandre et Darius</title> a été créée le <date when-iso="1826-02-28">28 février
-                                1826</date> au Théâtre de la Cour de <placeName ref="#l0003" type="bi">Dresde</placeName>. Il a vu 6 autres
-                            représentations. (Voir <persName ref="#p2344" type="bi">Prölß</persName>: <title ref="#w04369" type="bi">History of the
-                                Court Theatre in Dresden</title>, p. 616.)</p>
-                    </note> ist hier<lb/>noch nicht wieder aufgeführt, es wäre
-                    auch<lb/>unpassend ihn ohne die <persName ref="#p0710" type="bi">Gley</persName> einzustudiren<lb/>sobald sie hier ist wird er
-                    gewiß so<lb/>schnell als möglich gegeben, beide <rs ref="#p2300 #p2299" type="bi_person">Devrients</rs>
-                    <lb/>sind sehr dafür. Für
-                    mich ist es eine<lb/>Art von Beruhigung daß Sie den <title ref="#w04372" type="bi">Spar<lb break="no"/>tacus</title> erst
-                        vollenden,<note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> überarbeitete sein
-                                <date when-iso="1823">1823</date> erschienenes Trauerspiel <title ref="#w04372" type="bi">Rom und Spartacus</title>,
-                            stellte diese zweite Fassung jedoch nicht fertig. (Vgl. <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz als dramatischer Dichter</title>, S. 40.)</p>
-                        <p xml:lang="en">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> revised his tragedy <title ref="#w04372" type="bi">Rom und
-                                Spartacus</title>, published in <date when-iso="1823">1823</date>, but did not complete this second version. (See
-                                <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz as
-                                a dramatic poet</title>, p. 40.)</p>
-                        <p xml:lang="fr">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> a révisé sa
-                            tragédie <title ref="#w04372" type="bi">Rom und Spartacus</title>, publiée en <date when-iso="1823">1823</date>, mais n'a
-                            pas achevé cette seconde version. (Voir <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz en tant que poète dramatique</title>, p. 40.)</p>
-                    </note> Sie wissen daß ich<pb facs="iiif:10.34847/nkl.8bc1mkrf/95b68dbf82bbcd96dfa34683c02e6edd2f37349f" n="7"/>ihn<!--[175]--> nicht gleich so auffassen
-                    konnte wie die<lb/>
-                    <title ref="#w04347" type="bi">Chaldäer</title>,<note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> begann die <title ref="#w04347" type="bi">Babylonier in Jerusalem</title>
-                            unter dem Titel "Die Chaldäer in Jerusalem". (Vgl. <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz als dramatischer Dichter</title>, S. 90.)</p>
-                        <p xml:lang="en">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> started the <title ref="#w04347" type="bi">Babylonians in
-                                Jerusalem</title> under the title "The Chaldeans in Jerusalem". (See <persName ref="#p2306" type="bi">Wilhelm
-                                Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz as a dramatic poet</title>, p. 90.)</p>
-                        <p xml:lang="fr">
-                            <persName ref="#p0711" type="bi">Uechtritz</persName> a commencé les <title ref="#w04347" type="bi">Babyloniens à Jérusalem</title> sous le titre « Les Chaldéens à Jérusalem ». (Voir <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz en tant que poète
-                                dramatique</title>, p. 90.)</p>
-                    </note>
-                    <rs ref="#p0133" type="bi_person">Vater</rs> meint Sie möchten sich nicht<lb/>zu sehr mit orientalischen Studien aufhalten<lb/>so
-                    wie Sie das <rs ref="#w04372" type="bi_title">Gedicht</rs> angelegt hätten schie<lb break="no"/>ne ihm dies nicht nothwendig.</p>
-                <p>Neulich habe ich die Zeichnung<note resp="#sophia.zeil">
-                        <p xml:lang="de">
-                            <persName ref="#p0194" type="bi">Goethe</persName> erhielt
-                            am <date when-iso="1832-02-18">18. Februar 1832</date> eine Zeichnung des soeben unter der Leitung von <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> in <placeName ref="#l0928" type="bi">Pompeji</placeName> entdeckten
-                            Mosaiks (vgl. folgende Anmerkung). Das Gebäude wurde ihm zu Ehren "Casa di Goethe" genannt, ist heute jedoch unter dem
-                            Namen "Casa del Fauno" bekannt. Ob es sich um diese Zeichnung handelt, ist unsicher.</p>
-                        <p xml:lang="en">On <date when-iso="1832-02-18">February 18</date>, 1832, <persName ref="#p0194" type="bi">Goethe</persName> received a drawing
-                            of the mosaic that had just been discovered in <placeName ref="#l0928" type="bi">Pompeii</placeName> under the direction
-                            of <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> (see following note). The building was named "Casa di Goethe"
-                            in his honor, but is now known as "Casa del Fauno". It is uncertain whether this is the drawing.</p>
-                        <p xml:lang="fr">Le
-                                <date when-iso="1832-02-18">18 février 1832</date>, <persName ref="#p0194" type="bi">Goethe</persName> reçoit un
-                            dessin de la mosaïque qui vient d'être découverte à <placeName ref="#l0928" type="bi">Pompéi</placeName> sous la direction
-                            de <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> (voir note suivante). Le bâtiment a été nommé "Casa di Goethe"
-                            en son honneur, mais est maintenant connu sous le nom de "Casa del Fauno". Il n'est pas certain qu'il s'agisse du
-                            dessin.</p>
-                    </note> von einem<lb/>neu ausgegrabenen Mosaikbild<note resp="#sophia.zeil">
-                        <p xml:lang="de">Der aus dem <date when-iso="-0200">2. Jh. v. Chr.</date> stammende, als Alexandermosaik bekannte Mosaikfußboden wurde <date when-iso="1831">1831</date> bei Ausgrabungen in <placeName ref="#l0928" type="bi">Pompeji</placeName> entdeckt, er
-                            befindet sich heute im Nationalmuseum in <placeName ref="#l0700" type="bi">Neapel</placeName>.</p>
-                        <p xml:lang="en">From
-                            the <date when-iso="-0200">2nd century BC</date>, The mosaic floor, known as the Alexander mosaic, was discovered in <date when-iso="1831">1831</date> during excavations in <placeName ref="#l0928" type="bi">Pompeii</placeName> and is now in
-                            the National Museum in <placeName ref="#l0700" type="bi">Naples</placeName>.</p>
-                        <p xml:lang="fr">Dès le <date when-iso="-0200">IIe siècle av. JC</date>, Le sol en mosaïque, connu sous le nom de mosaïque d'Alexandre, a été
-                            découvert en <date when-iso="1831">1831</date> lors de fouilles à <placeName ref="#l0928" type="bi">Pompéi</placeName> et
-                            se trouve maintenant au Musée national de <placeName ref="#l0700" type="bi">Naples</placeName>.</p>
-                    </note> in <placeName ref="#l0928" type="bi">Pom<lb break="no"/>peji</placeName> gesehn. Es soll die Schlacht bei <placeName ref="#l0929" type="bi">Arbela</placeName>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bekannt als "Schlacht von Gaugamela", in der <persName ref="#p2289" type="bi">Alexander</persName> der Große den Perserkönig <persName ref="#p2288" type="bi">Dareios</persName> besiegte.</p>
-                        <p xml:lang="en">Known as the "Battle of Gaugamela", in which <persName ref="#p2289" type="bi">Alexander</persName> the Great defeated the Persian king <persName ref="#p2288" type="bi">Darius</persName>.</p>
-                        <p xml:lang="fr">Connue sous le nom de "Bataille de Gaugamela", dans laquelle <persName ref="#p2289" type="bi">Alexandre</persName> le Grand a vaincu le roi perse <persName ref="#p2288" type="bi">Darius</persName>.</p>
-                    </note>
-                    <lb/>vorstellen, in dem Augenblick wo der Sieg<lb/>sich für <persName ref="#p2289" type="bi">Alexander</persName> entscheidet, es ist ein<lb/>ganz herrliches Blatt, Zeichnung und Aus<lb break="no"/>druck wie
-                    in <persName ref="#p2414" type="bi">Raphael</persName>s Constantinschlacht.<note resp="#sophia.zeil">
-                        <p xml:lang="de">Die
-                            Konstantinsschlacht gehört zu den sog. Stanzen des <persName ref="#p2414" type="bi">Raffael</persName> (Fresken in den
-                            Gemächern des Apostolischen Palasts im <placeName ref="#l0932" type="bi">Vatikan</placeName>). Allerdings stammt nur der
-                            Entwurf von <persName ref="#p2414" type="bi">Raffel</persName> selbst, ausgeführt wurde dieser von seinem Schüler
-                                <persName ref="#p2415" type="bi">Giulio Romano</persName>.</p>
-                        <p xml:lang="en">The Battle of Constantine is one of the
-                            so-called <persName ref="#p2414" type="bi">Raphael</persName> rooms (frescoes in the apartments of the Apostolic Palace in
-                            the <placeName ref="#l0932" type="bi">Vatican</placeName>). However, only the design comes from <persName ref="#p2414" type="bi">Raffael</persName> himself, it was carried out by his pupil <persName ref="#p2415" type="bi">Giulio
-                                Romano</persName>.</p>
-                        <p xml:lang="fr">La bataille de Constantin est l'une des salles dites de <persName ref="#p2414" type="bi">Raphaël</persName> (fresques dans les appartements du palais apostolique au <placeName ref="#l0932" type="bi">Vatican</placeName>). Cependant, seul le dessin vient de <persName ref="#p2414" type="bi">Raphaël</persName>
-                            lui-même, il a été réalisé par son élève <persName ref="#p2415" type="bi">Giulio Romano</persName>.</p>
-                    </note>
-                    <lb/>Ich
-                    habe dabei recht lebhaft an Ihr <rs ref="#w04324" type="bi_title">Gedicht</rs>
-                    <lb/>gedacht. Es ist zu verwundern daß nicht
-                    öfter<lb/>Dichter wie bildenke<note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>:
-                                <title ref="#w03300" type="bi">Erinnerungen</title> (S. 175) steht "bildende" statt "bildenke".</p>
-                        <p xml:lang="en">In
-                                <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands "bildende"
-                            instead of "bildenke". </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 175) signifie "bildende" au lieu de "bildenke". </p>
-                    </note> Künstler <persName ref="#p2289" type="bi">Alexander</persName>
-                    <lb/>zu ihrem Gegenstand gewählt haben, mir<lb/>scheint nichts könnte so sehr begeistern,<lb/>da
-                    er so ganz einzig in der Geschichte da<lb break="no"/>steht. Ich möchte nur <persName ref="#p2416" type="bi">Karl den
-                        Großen</persName>
-                    <lb/>mit ihm vergleichen, was jener für die<lb/>Welt war dieser für <placeName ref="#l0001" type="bi">Deutschland</placeName>, und<lb/>beide wirkten wohl in einem ähnlichen<pb facs="iiif:10.34847/nkl.8bc1mkrf/a32f52efd1cbbeb64e1cd2faf1ad21e8503bac52" n="8"/>Sinn. Wenn man bedenkt wie <persName ref="#p2289" type="bi">Alexander</persName>
-                    <lb/>mittelbar durch Verbreitung <placeName ref="#l0323" type="bi">griechischer</placeName>
-                    <lb/>Sprache und Bildung auch auf die Ausbrei<lb break="no"/>tung des Christenthums gewirkt hat,
-                    so<lb/>ist er auch in dem Sinn eine große Erschei<lb break="no"/>nung. Sie haben es für immer fest gestellt<lb/>wie er gedacht und
-                    dargestellt werden<lb/>muß, und ich glaube nicht daß nach Ihnen<lb/>sich noch jemand daran wagen kann.</p>
-                <p>Die Generalin <persName ref="#p2417" type="bi">
-                        <del hand="#pencil" rend="strikethrough">Lüzow</del>
-                    </persName>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> (S. 175) steht "L." statt "Lüzow".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands "kümmern" instead of "bekümmern". </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 175)
-                            signifie "kümmern" au lieu de "bekümmern". </p>
-                    </note> hat sich in einem<lb/>Brief<!--erhalten? XXX--> an die <persName ref="#p0198" type="bi">
-                        <del hand="#pencil" rend="strikethrough">Solger</del>
-                    </persName>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
-                            steht "S." statt "Solger".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> is "S." instead of "Solger". </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> est "S." au lieu de "Solger". </p>
-                    </note> sehr boshaft
-                    über<lb/>unsern Briefwechsel geäußert, und diese<lb/>die die <persName ref="#p2417" type="bi">Lüzow</persName>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> steht "L." statt "Lüzow".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> is "L." instead of "Lüzow". </p>
-                        <p xml:lang="fr">Dans
-                                <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> est "L." au lieu de
-                            "Lüzow". </p>
-                    </note> sehr verehrt, hat gleich in<lb/>demselben Ton gegen unsre <rs ref="#p0232" type="bi_person">Gräfinn</rs> wieder<lb/>davon gesprochen. Meine <rs ref="#p0133 #p0233" type="bi_person">Eltern</rs> sind zum<lb/>Glück zu
-                    vernünftig als daß solche Klat<lb break="no"/>schereien ihnen wichtig seyn könnten; ich<lb/>habe mich aber doch sehr geärgert,
-                    daß<lb/>man auch das Einfachste und Unschuldigste<lb/>nicht thun kann ohne daß andre Leute sich<lb/>darum bekümmern.<note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> (S. 175) steht "kümmern" statt "bekümmern".</p>
-                        <p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands "kümmern" instead of "bekümmern".
-                            </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title>
-                            (S. 175) signifie "kümmern" au lieu de "bekümmern". </p>
-                    </note>
-                    <note hand="#pencil" place="inline">x</note>
-                </p>
-                <closer>
-                    <note resp="#sophia.zeil">
-                        <p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title> folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</p>
-                        <p xml:lang="en">In
-                                <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> an unmarked omission follows
-                            until the end of the letter. </p>
-                        <p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> une omission non marquée suit jusqu'à la fin de la lettre. </p>
-                    </note>Leben Sie nun
-                    wohl, liebster Freund,<lb/>
-                    <salute>tausend Grüße von meinen <rs ref="#p0233 #p0133" type="bi_person">Eltern</rs> und<lb/>
-                        <persName ref="#p0218" type="bi">Agnes</persName>, wir alle haben keinen größeren<lb/>Wunsch als Sie bald wieder zu sehen.</salute>
-                    Ich<lb/>bin heut so eilig und habe alles durch einan<lb break="no"/>der gekritzelt. Ich wollte nur ganz kurz<lb/>schreiben, an Sie
-                    kann ich es aber nicht.<lb/>
-                    <signed rend="align(center)">Ihre treue Freundinn <persName ref="#p0217" type="bi">
-                            <hi rend="latin">Dorothea</hi>
-                        </persName>.</signed>
-                </closer>
-            </div>
-        </body>
-    </text>
+								</extent>
+								<foliation>
+									<p xml:lang="de">Keine Foliierung vorhanden.</p>
+									<p xml:lang="en">No foliation.</p>
+									<p xml:lang="fr">Pas de numérotation des pages.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Der Brief ist gut erhalten. Knicke und Verfärbungen.</p>
+									<p xml:lang="en">The letter is well-preserved. Some traces of folding, staining.</p>
+									<p xml:lang="fr">La lettre est bien conservée. Quelques traces de plis, décoloration.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0217" xml:id="major_hand">
+								<p xml:lang="de">Hand der Absenderin Dorothea Tieck, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of sender Dorothea Tieck, letter text in black ink, mainly German script.</p>
+								<p xml:lang="fr">Main de l'expéditrice Dorothea Tieck, corps de la lettre, encre noire, écriture majoritairement
+									gothique.</p>
+							</handNote>
+							<handNote corresp="#w03300" medium="pencil" scope="minor" scribe="publisher" scribeRef="#p2151" xml:id="pencil">
+								<p xml:lang="de">Vermutlich Hand von Heinrich von Sybel zur Zeit der Vorbereitung für den Druck, Bleistift.</p>
+								<p xml:lang="en">Very likely Hand of Heinrich von Sybel at the time when he prepared his edition of this letter,
+									pencil.</p>
+								<p xml:lang="fr">Probablement la main de Heinrich von Sybel lors de sa préparation du manuscrit pour la publication,
+									crayon.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
+								<p xml:lang="de">Unbekannte Hand, dicker Bleistift.</p>
+								<p xml:lang="en">Unknown hand, thick pencil.</p>
+								<p xml:lang="fr">Main inconnue, crayon de papier.</p>
+							</handNote>
+						</handDesc>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde in <origPlace ref="#l0003">Dresden</origPlace> am <origDate when-iso="1833-03-08">8. März
+									1833</origDate> verfasst.</p>
+							<p xml:lang="en">The letter was composed in <origPlace ref="#l0003">Dresden</origPlace> on <origDate when-iso="1833-03-08"
+									>March, 8 1833</origDate>.</p>
+							<p xml:lang="fr">la lettre a été composée à <origPlace ref="#l0003">Dresden</origPlace> le <origDate when-iso="1833-03-08"
+									>8 mars 1833</origDate>.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Die 33 Briefe von <persName ref="#p0217">Dorothea Tieck</persName> an <persName ref="#p0711">Friedrich
+									von Uechtritz</persName> befinden sich seit <date when-iso="1900">1900</date> im Besitz der Oberlausitzischen
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. Anlässlich seines 100. Geburtstages wurden
+								sie, zusammen mit <persName ref="#p0711">Uechtritz</persName>' literarischem Nachlass, durch dessen Neffen, Max von
+								Balan, der damaligen Oberlausitzischen Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>
+								übereignet.</p>
+							<p xml:lang="en">Since <date when-iso="1900">1900</date>, the 33 letters of <persName ref="#p0217">Dorothea
+									Tieck</persName> to <persName ref="#p0711">Friedrich von Uechtritz</persName> belong to the Oberlausitzische
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. On the occasion of his 100th birthday,
+								together with <persName ref="#p0711">Uechtritz</persName>'s literary estate, Max von Balan (his nephew) transfered
+								them to the former Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
+							<p xml:lang="fr">Depuis <date when-iso="1900">1900</date>, les 33 lettres de <persName ref="#p0217">Dorothea
+									Tieck</persName> à <persName ref="#p0711">Friedrich von Uechtritz</persName> appartiennent à la Oberlausitzische
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. A l'occasion de son 100e anniversaire, avec
+									<persName ref="#p0711">Uechtritz</persName>'s fonds littéraire, Max von Balan (son neveu), eux transféré à la
+								l'ancienne Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de">
+									<persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an Friedrich von Uechtritz
+										und seine Zeit in Briefen von ihm and an ihn</title>: S. 172–175. Dieser Druck unterscheidet sich bezüglich
+									der Rechtschreibung und Zeichensetzung. Auslassungen werden nicht angezeigt.</bibl>
+								<bibl xml:lang="en">
+									<persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an Friedrich von Uechtritz
+										und seine Zeit in Briefen von ihm and an ihn</title>: p. 172–175. This print differs in spelling and
+									punctuation. Omissions are not marked.</bibl>
+								<bibl xml:lang="fr">
+									<persName ref="#p2151">Heinrich von Sybel</persName>: <title ref="#w03300">Erinnerungen an Friedrich von Uechtritz
+										und seine Zeit in Briefen von ihm and an ihn</title>: p. 172–175. Cette édition présente des différences
+									concernant l'orthographe et la ponctuation. Les passages supprimés ne sont pas signalés.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction>
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<hyphenation eol="hard" rend="dh">
+					<p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen doppelten Bindestrich angezeigt.</p>
+					<p xml:lang="en">Hyphenations at line breaks are generally presented as double hyphen.</p>
+					<p xml:lang="fr">Les coupures de mots sont représentées le plus souvent par un trait double.</p>
+				</hyphenation>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="100">Deutsch</language>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/54399574/">Dorothea Tieck</persName>
+					<placeName ref="https://www.geonames.org/2935022">Dresden</placeName>
+					<date when-iso="1833-03-08"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/77115385/">Friedrich von Uechtritz</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief05DorotheaTieckanUechtritz.xml" type="prev"/>
+					<ref target="Brief08DorotheaTieckanUechtritz.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-25" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-19" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-01-26" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-26" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-20" who="#sophia.zeil">Updated acquisition-Element.</change>
+			<change when-iso="2014-09-30" who="#sophia.zeil">Updated respStmt.</change>
+			<change when-iso="2014-09-05" who="#sophia.zeil">Updated annotations.</change>
+			<change when-iso="2014-09-04" who="#sophia.zeil">Added rs-Element for connected IDs.</change>
+			<change when-iso="2014-07-23" who="#sophia.zeil">Updated annotations.</change>
+			<change when-iso="2014-07-11" who="#sophia.zeil">Finished encoding, updated annotations.</change>
+			<change when-iso="2014-07-02" who="#sophia.zeil">Added typographical correct hyphens.</change>
+			<change when-iso="2014-07-01" who="#sophia.zeil">Added new respStmt.</change>
+			<change when-iso="2014-07-01" who="#sophia.zeil">Corrected bibliographical information concerning Sybel's edition (deleted persName-tag in
+				the title).</change>
+			<change when-iso="2014-04-09" who="#sophia.zeil">Updated annotations.</change>
+			<change when-iso="2014-04-08" who="#sophia.zeil">Detailed encoding, first annotations.</change>
+			<change when-iso="2014-02-02" who="#sophia.zeil">First transcription and encoding. Added metadata.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.8bc1mkrf/8d4bf6cde6ed872b44a4239c30245f35208ea523" n="1"/>
+				<note hand="#pencil_2" place="top-center inline">5</note>
+				<note hand="#pencil" place="top-center inline">6</note>
+				<opener>
+					<dateline rend="align(right)">
+						<placeName ref="#l0003" type="bi">
+							<hi rend="latin">Dresden</hi>
+						</placeName> den <date when-iso="1833-03-08">8 <hi rend="latin">Merz</hi>
+							<lb/>1833</date>.</dateline>
+					<lb/>
+					<salute>Theuerster Freund</salute>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 172) fehlt die Anrede.</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (P. 172) the
+							salutation is missing. </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (P.172) le
+							salut manque. </p>
+					</note>
+				</opener>
+				<p>Indem ich eben Ihren letzten Brief wieder<lb/>lese sehe ich daß er schon recht alt ist, und<lb/>ich in eine größere Schuld gegen
+					Sie ge<lb break="no"/>rathen bin als ich dachte: Es sind aber<lb/>wirklich nur Geschäfte, die mich am Schreiben<lb/>gehindert
+					haben; denn schriebe ich so oft<lb/>als ich es gern thäte, so würde es Ihnen<lb/>zu viel werden. Wenn Sie es noch nicht ge<lb
+						break="no"/>hört haben daß ich mit an der Ueber<lb break="no"/>setzung des <hi rend="latin">
+						<persName ref="#p0206" type="bi">Shakespear</persName>
+					</hi> arbeite, so ver<lb break="no"/>traue ich es Ihnen hiermit als ein Geheim<lb break="no"/>niß an.<note resp="#sophia.zeil">
+						<p xml:lang="de">Nachdem <date when-iso="1830">1830</date>
+							<persName ref="#p0133" type="bi">Ludwig Tieck</persName>s Unternehmen einer Neuauflage der <persName ref="#p0190"
+								type="bi">Schlegel</persName>schen <rs ref="#w04645" type="bi_title">Shakespeare-Übersetzung</rs> nach drei Bänden
+								(<rs ref="#w04646" type="bi_title">Bd. 1</rs>, <rs ref="#w04647" type="bi_title">2</rs> und <rs ref="#w04648"
+								type="bi_title">4</rs>) ins Stocken geraten war, griff er für die bislang noch nicht von <persName ref="#p0190"
+								type="bi">Schlegel</persName> übersetzten Stücke auf die Hilfe von <persName ref="#p0217" type="bi"
+								>Dorothea</persName> und <persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> zurück. Unter <persName
+								ref="#p0217" type="bi">Dorotheas</persName> Feder entstanden seit <date when-iso="1830">1830</date> die Übersetzung
+							von <title ref="#w04653" type="bi">Coriolanus</title> (Bd. 5, <date when-iso="1831">1831</date>), <title ref="#w04654"
+								type="bi">Die beiden Veroneser</title>, <title ref="#w04655" type="bi">Timon von Athen</title> (beide Bd. 7, <date
+								when-iso="1832">1831</date>), <title ref="#w04656" type="bi">Das Wintermährchen</title> (Bd. 8, <date when-iso="1832"
+								>1832</date>), <title ref="#w04657" type="bi">Cymbeline</title> und <title ref="#w04658" type="bi">Macbeth</title>
+							(beide Bd. 9, <date when-iso="1833">1833</date>). Gemeinsam mit <persName ref="#p2323" type="bi">Baudissin</persName>
+							übersetzte sie <title ref="#w04660" type="bi">Viel Lärmen um Nichts</title> (Bd. 3, <date when-iso="1830">1830</date>) und
+								<title ref="#w04661" type="bi">Der Widerspenstigen Zähmung</title> (Bd. 6, <date when-iso="1831">1831</date>). Doch
+								<persName ref="#p0217" type="bi">Dorothea</persName> und <persName ref="#p2323" type="bi">Baudissin</persName> wurden
+							an keiner Stelle als Übersetzer genannt; erst im Nachwort zum <rs ref="#w04526" type="bi_title">9. Band</rs> bedankt sich
+								<persName ref="#p0133" type="bi">Ludwig Tieck</persName> bei seinen "fleißigen Mitarbeiter[n]" (S. 415) und erwähnt
+							auch <persName ref="#p2323" type="bi">Baudissin</persName> namentlich. <persName ref="#p0217" type="bi"
+								>Dorothea</persName> bleibt jedoch als "jüngere[r] Gehülfe" (S. 416) weiterhin ungenannt.</p>
+						<p xml:lang="en">After <persName ref="#p0133" type="bi">Ludwig Tieck</persName>'s business of a new edition of <persName
+								ref="#p0190" type="bi">Schlegel</persName> 's <rs ref="#w04645" type="bi_title">Shakespeare translation</rs> into
+							three volumes (<rs ref="#w04646" type="bi_title">Vol. 1</rs>, <rs ref="#w04647" type="bi_title">2</rs> und <rs
+								ref="#w04648" type="bi_title">4</rs>) stalled in <date when-iso="1830">1830</date>, he resorted to the help of
+								<persName ref="#p0217" type="bi">Dorothea</persName> and <persName ref="#p2323" type="bi">Count Wolf
+								Baudissin</persName> for the pieces that had not yet been translated by <persName ref="#p0190" type="bi"
+								>Schlegel</persName> . Under <persName ref="#p0217" type="bi">Dorothea</persName>'s pen, the translations of <title
+								ref="#w04653" type="bi">Coriolanus</title> (vol. 5, <date when-iso="1831">1831</date>), <title ref="#w04654" type="bi"
+								>Die beiden Veroneser</title>, <title ref="#w04655" type="bi">Timon von Athen</title> (both vol. 7, <date
+								when-iso="1832">1831</date>), <title ref="#w04656" type="bi">Das Wintermährchen</title> (vol. 8, <date when-iso="1832"
+								>1832</date>), <title ref="#w04657" type="bi">Cymbeline</title> and <title ref="#w04658" type="bi">Macbeth</title>
+							(both vol . 9, <date when-iso="1833">1833</date>). Together with <persName ref="#p2323" type="bi">Baudissin</persName> she
+							translated <title ref="#w04660" type="bi">Much Ado About Nothing</title> (Vol. 3, <date when-iso="1830">1830</date>) and
+								<title ref="#w04661" type="bi">The Taming of the Shrew</title> (Vol. 6, <date when-iso="1831">1831</date>). But
+								<persName ref="#p0217" type="bi">Dorothea</persName> and <persName ref="#p2323" type="bi">Baudissin</persName> were
+							never named as translators; Only in the afterword to the <rs ref="#w04526" type="bi_title">9th volume</rs> does <persName
+								ref="#p0133" type="bi">Ludwig Tieck</persName> thank his "hardworking employees" (p. 415) and also mention <persName
+								ref="#p2323" type="bi">Baudissin</persName> by name. <persName ref="#p0217" type="bi">Dorothea</persName>, however,
+							remains anonymous as a "younger assistant" (p. 416).</p>
+						<p xml:lang="fr">Après que les affaires de <persName ref="#p0133" type="bi">Ludwig Tieck</persName>d'une nouvelle édition de
+							la <rs ref="#w04645" type="bi_title">traduction de Shakespeare</rs> de <persName ref="#p0190" type="bi"
+								>Schlegel</persName> en trois volumes (<rs ref="#w04646" type="bi_title">Vol. 1</rs>, <rs ref="#w04647"
+								type="bi_title">2</rs> und <rs ref="#w04648" type="bi_title">4</rs>) soient bloquées en <date when-iso="1830"
+								>1830</date>, il recourut à l'aide de <persName ref="#p0217" type="bi">Dorothée</persName> et du <persName
+								ref="#p2323" type="bi">comte Wolf Baudissin</persName> pour les pièces qui n'avaient pas encore été traduites par
+								<persName ref="#p0190" type="bi">Schlegel</persName>. Sous la plume de <persName ref="#p0217" type="bi"
+								>Dorothea</persName>, les traductions de <title ref="#w04653" type="bi">Coriolanus</title> (vol. 5, <date
+								when-iso="1831">1831</date>), <title ref="#w04654" type="bi">Die beiden Veroneser</title>, <title ref="#w04655"
+								type="bi">Timon von Athen</title> (tous deux vol. 7, <date when-iso="1832">1831</date>), <title ref="#w04656"
+								type="bi">Das Wintermährchen</title> (vol. 8, <date when-iso="1832">1832</date>), <title ref="#w04657" type="bi"
+								>Cymbeline</title> et <title ref="#w04658" type="bi">Macbeth</title> (tous deux vol. 9 , <date when-iso="1833"
+								>1833</date>). Avec <persName ref="#p2323" type="bi">Baudissin</persName>, elle a traduit <title ref="#w04660"
+								type="bi">Beaucoup de bruit pour rien</title> (Vol. 3, <date when-iso="1830">1830</date>) et <title ref="#w04661"
+								type="bi">The Taming of the Shrew</title> (Vol. 6, <date when-iso="1831">1831</date>). Mais <persName ref="#p0217"
+								type="bi">Dorothée</persName> et <persName ref="#p2323" type="bi">Baudissin</persName> n'ont jamais été nommés
+							traducteurs ; Ce n'est que dans la postface du <rs ref="#w04526" type="bi_title">9e volume</rs> que <persName ref="#p0133"
+								type="bi">Ludwig Tieck</persName> remercie ses « employés assidus » (p. 415) et mentionne également <persName
+								ref="#p2323" type="bi">Baudissin</persName> par son nom. <persName ref="#p0217" type="bi">Dorothée</persName>,
+							cependant, reste anonyme en tant que « jeune assistante » (p. 416).</p>
+					</note> Leider ist es in <placeName ref="#l1103" type="bi">Berlin</placeName> bekan̄t,<lb/>wie meine <rs ref="#p0218"
+						type="bi_person">Schwester</rs> mir gesagt hat,<lb/>das ist mir unangenehm, und ich weiß<lb/>auch nicht wie es zugeht;
+						<persName ref="#p0196" type="bi">Reimer</persName>, der<lb/>es freilich wissen mußte, hat doch wohl<lb/>davon gesprochen. Ich
+					habe es keinem<lb/>Menschen gesagt, und bitte auch Sie sehr<lb/>ernstlich darum; lassen Sie es sich auch<lb/>nicht gegen meinen
+						<rs ref="#p0133" type="bi_person">Vater</rs> merken, den̄<pb
+						facs="iiif:10.34847/nkl.8bc1mkrf/87fc6da74f8afa8d7126f207b90244bddc728d0b" n="2"/></p>
+				<p><!-- Added tag for the good display of the indexes-->
+					<note place="margin(left)-vertical">
+						<p xml:lang="de">Der arme <persName ref="#p2341" type="bi">Sternberg</persName> hatte kürzlich eine Brustentzündung und war
+							in<lb/>großer Gefahr.</p>
+						<p xml:lang="en">Poor <persName ref="#p2341" type="bi">Sternberg</persName> recently had a chest infection and was in great
+							danger.</p>
+						<p xml:lang="fr">Le pauvre <persName ref="#p2341" type="bi">Sternberg</persName> a récemment eu une infection pulmonaire et
+							était en grand danger.</p>
+					</note>
+					<lb/>er würde böse seyn, daß ich es Ihnen ge<lb break="no"/>sagt habe. Aber es giebt so wenige<lb/>Menschen die wirklich Antheil
+					an mir neh<lb break="no"/>men; ich rechne Sie zu diesen Wenigen, und<lb/>darum ist es mir Bedürfniß<!-- [173] --> Ihnen Alles<lb/>
+					<del rend="strikethrough">mitzuhe</del> mitzutheilen was ich thue und trei<lb break="no"/>be. Die Arbeit die mich länger als
+					drei<lb/>Jahre beschäftigt, und mir so viel Freude<lb/>gemacht hat, ist nun bald geendigt.<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 173) steht "beendigt" statt "geendigt".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 173) stands
+							"beendigt" instead of "geendigt". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 173)
+							signifie "beendigt" au lieu de "geendigt". </p>
+					</note> Seit<lb/>Neujahr bin ich mit dem <title ref="#w00224" type="bi">Macbeth</title> beschäf<lb break="no"/>tigt, das ist das
+					letzte der mir zuge<lb break="no"/>theilten Stücke,<note resp="#sophia.zeil">
+						<p xml:lang="de">Die Übersetzung des <title ref="#w04658" type="bi">Macbeth</title> erschien im <date when-iso="1833"
+								>1833</date> im 9. und letzten Band der <rs ref="#w04645" type="bi_title">Schlegel-Tieck'schen
+								Shakespeare-Übersetzung</rs>.</p>
+						<p xml:lang="en">The translation of <title ref="#w04658" type="bi">Macbeth</title> appeared in <date when-iso="1833"
+								>1833</date> in the 9th and last volume of <rs ref="#w04645" type="bi_title">Schlegel-Tieck's Shakespeare
+								translation</rs>.</p>
+						<p xml:lang="fr">La traduction de <title ref="#w04658" type="bi">Macbeth</title> est apparue en <date when-iso="1833"
+								>1833</date> dans le 9e et dernier volume de la <rs ref="#w04645" type="bi_title">traduction de Shakespeare de
+								Schlegel-Tieck</rs>.</p>
+					</note> ich bin nun schon beim Ab<lb break="no"/>schreiben, und weil ich darin keine große<lb/>Fertigkeit habe, kostet es mir viel Zeit<subst>
+						<del rend="overwritten">,</del>
+						<add place="across">.</add>
+					</subst>
+					<lb/>
+					<subst>
+						<del rend="overwritten">d</del>
+						<add place="across">D</add>
+					</subst>ies also als Entschuldigung für mein<lb/>langes Schweigen. Ich kann Ihnen nicht<lb/>sagen welche<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 173) steht "welch" statt "welche".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 173) stands
+							"welch" instead of "welche". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 173)
+							signifie "welch" au lieu de "welche". </p>
+					</note> großes Vergnügen mir die<lb/>Arbeit gemacht hat; wenn man selbst<lb/>nichts erschaffen kann ist es doch gewiß<lb/>der
+					größte Genuß sich in die Schöpfung<lb/>eines großen Geistes so ganz zu ver<lb break="no"/>tiefen, wie man es beim Uebersetzen<lb/>
+					<pb facs="iiif:10.34847/nkl.8bc1mkrf/6c477c1892f00ee605a5113059bc2536b9eca304" n="3"/></p>
+				<p><!-- Added tag for the good display of the indexes-->thun muß: Jedes Stück an dem man eben<lb/>arbeitet erscheint einem als das
+					schönste<lb/>und jeden Charakter gewinnt man lieb<lb/>als hätte man ihn persönlich gekannt,<lb/>das ist aber auch die einzige
+					Freude,<lb/>denn gerade wenn man das Original<lb/>so genau kennt kann man nie glauben<lb/>daß <subst>
+						<del rend="strikethrough">eine</del>
+						<add place="above">die</add>
+					</subst> Uebersetzung eine gelungene<lb/>Arbeit seyn kann<subst>
+						<del rend="overwritten">.</del>
+						<add place="across">,</add>
+					</subst> und man fühlt nur<lb/>wie viel verlohren geht. Erst habe ich<lb/>immer jedes Stück für mich ganz fertig<lb/>gemacht, und
+					dann meinem Vater vor<lb break="no"/>ge<subst>
+						<del rend="overwritten">s</del>
+						<add place="across">l</add>
+					</subst>esen, wobei denn natürlich noch sehr<lb/>vieles verändert ist. Die große Mühe<lb/>die wir angewendet haben wird
+					wohl<lb/>nie jemand darin wieder finden; <del rend="strikethrough">bei</del>
+					<lb/>an dem großen Monolog des <title ref="#w00224" type="bi">Macbeth</title>
+					<lb/>
+					<choice>
+						<abbr>z. B.</abbr>
+						<expan>zum Beispiel</expan>
+					</choice> haben wir drei Tage corrigirt,<lb/>und jedes mal eine Stunde. Auch bei<lb/>den Stücken<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> übersetzte <title ref="#w04659" type="bi">König Heinrich
+								VIII.</title>, <title ref="#w04660" type="bi">Viel Lärmen um Nichts</title> (zus. mit <persName ref="#p0217" type="bi"
+								>Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius und Cleopatra</title>, <title ref="#w04663"
+								type="bi">Maaß für Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title ref="#w04661"
+								type="bi">Der Widerspenstigen Zähmung</title> (zus. mit <persName ref="#p0127" type="bi">Dorothea Tieck</persName>),
+								<title ref="#w04665" type="bi">Die Comödie der Irrungen</title>, <title ref="#w04666" type="bi">Ende gut, Alles
+								gut</title>, <title ref="#w04667" type="bi">Troilus und Cressida</title>, <title ref="#w04668" type="bi">Die lustigen
+								Weiber von Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670" type="bi">König
+								Lear</title> und <title ref="#w04671" type="bi">Liebes Leid und Lust</title>.</p>
+						<p xml:lang="en">
+							<persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> translated <title ref="#w04659" type="bi">King Henry
+								VIII</title>, <title ref="#w04660" type="bi">Much Ado About Nothing</title> (together with <persName ref="#p0217"
+								type="bi">Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius and Cleopatra</title>, <title
+								ref="#w04663" type="bi">Maaß for Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title
+								ref="#w04661" type="bi">The Taming of the Shrew</title> (together with <persName ref="#p0217" type="bi">Dorothea
+								Tieck</persName>), <title ref="#w04665" type="bi">The Comedy of Errors</title>, <title ref="#w04666" type="bi">that
+								ends well 'All good</title>, <title ref="#w04667" type="bi">Troilus and Cressida</title>, <title ref="#w04668"
+								type="bi">The merry women of Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670"
+								type="bi">King Lear</title> and dear sorrow and lust.</p>
+						<p xml:lang="fr">
+							<persName ref="#p2323" type="bi">Wolf Graf Baudissin</persName> a traduit <title ref="#w04659" type="bi">le roi Henri
+								VIII</title>, <title ref="#w04660" type="bi">Beaucoup de bruit pour rien</title> (avec <persName ref="#p0217"
+								type="bi">Dorothea Tieck</persName>), <title ref="#w04662" type="bi">Antonius et Cleopatra</title>, <title
+								ref="#w04663" type="bi">Maaß pour Maaß</title>, <title ref="#w04664" type="bi">Titus Andronicus</title>, <title
+								ref="#w04661" type="bi">La Mégère apprivoisée</title> (avec <persName ref="#p0217" type="bi">Dorothea
+							Tieck</persName>), <title ref="#w04665" type="bi">La Comédie des erreurs</title>, <title ref="#w04666" type="bi">ça finit
+								bien « Très bien</title>, <title ref="#w04667" type="bi">Troilus et Cressida</title>, <title ref="#w04668" type="bi"
+								>Les joyeuses femmes de Windsor</title>, <title ref="#w04669" type="bi">Othello</title>, <title ref="#w04670"
+								type="bi">le roi Lear</title> et cher chagrin et luxure.</p>
+					</note> die <persName ref="#p2323" type="bi">Baudissin</persName> übersetzt<lb/>hat, habe ich fast immer den Corrigir<lb
+						break="no"/>stunden beigewohnt<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p2323" type="bi">Baudissin</persName> beschreibt den Vorgang in einem Brief aus dem Jahre <date
+								when-iso="1867">1867</date> rückblickend auf ähnliche Weise: "Tag für Tag von halb zwölf bis Ein Uhr fanden wir uns in
+							Tiecks Bibliothekszimmer ein: wer ein Stück fertig hatte, las es vor, die zwei anderen Mitglieder unseres Collegiums
+							verglichen den Vortrag mit dem Original, u. approbirten, schlugen Änderungen vor, oder verwarfen. Mehr als einmal ward
+							eine halbe Stunde lang über einen einzelnen Ausdruck debattirt;" (<title ref="#w04672" type="bi">Shakespeare-Jahrbuch
+								71</title>, S. 108.)</p>
+						<p xml:lang="en">
+							<persName ref="#p2323" type="bi">Baudissin</persName> describes the process in a similar way in retrospect in a letter
+							from <date when-iso="1867">1867</date>: "Day after day from half past eleven to one o'clock we found ourselves in Tieck's
+							library room: whoever had finished a piece read it aloud, the two other members of our college compared the lecture with
+							the original, and approved, suggested changes or rejected them. More than once a single expression was debated for half an
+							hour; " (<title ref="#w04672" type="bi">Shakespeare Yearbook 71</title>, p. 108.)</p>
+						<p xml:lang="fr">
+							<persName ref="#p2323" type="bi">Baudissin</persName> décrit rétrospectivement le processus de la même manière dans une
+							lettre de <date when-iso="1867">1867</date> : « Jour après jour, de onze heures et demie à une heure, nous nous sommes
+							retrouvés dans la salle de bibliothèque de Tieck : celui qui avait terminé un morceau le lisait à haute voix, les deux
+							autres membres de notre collège a comparé la conférence avec l'original, et a approuvé, suggéré des modifications ou les a
+							rejetées. Plus d'une fois une seule expression a été débattue pendant une demi-heure; " (<title ref="#w04672" type="bi"
+								>Annuaire de Shakespeare 71</title>, p. 108.)</p>
+					</note> und dadurch viel<pb facs="iiif:10.34847/nkl.8bc1mkrf/82e97c47f43522837e78a37fd89d8911207b2e00" n="4"/>
+					<placeName ref="#l0022" type="bi">Englisch</placeName> gelernt, besonders <hi rend="latin">
+						<persName ref="#p0206" type="bi">Shakspear</persName>'s</hi>
+					<lb/>Sprache.</p>
+				<p>Was Sie mir darüber schreiben daß Sie<lb/>sich oft einsam fühlen verstehe ich ganz,<lb/>glauben Sie nicht daß ich darin
+					Klage<lb/>oder Unzufriedenheit sehe. Auch ich fühle<lb/>mich immer einsamer, je älter ich werde,<lb/>ich habe auch mehr Mißtrauen
+					gegen die<lb/>Menschen, was mir gar nicht lieb ist, und<lb/>für mich ein quälendes Gefühl, weil es<lb/>gar nicht zu meinem
+					Charakter paßt<lb/>Mit <rs ref="#p2323 #p2324" type="bi_person">Baudissins</rs> waren wir sonst fast<lb/>täglich, und jetzt sehen
+					wir uns höchstens<lb/>alle paar Wochen einmal; obgleich wir<lb/>freundlich mit einander sind wie sonst<lb/>und nichts vorgefallen
+					ist, so ist es doch<lb/><!--[174]-->eine schmerzliche Erfahrung, daß ein<lb/>Verhältniß was man für so fest ge<lb break="no"
+					/>halten hat so locker werden kann.<lb/>Die <persName ref="#p0709" type="bi">Lüttichau</persName> ist die einzige die sich im<lb
+						break="no"/>mer gleich bleibt, und der ich unbedingt<lb/>vertraue, darum will ich auch nicht<pb
+						facs="iiif:10.34847/nkl.8bc1mkrf/dbb6a4a90daedf4b9a201fc3d33e403ef8e8799e" n="5"/>klagen; denn es ist wohl genug im
+					Leben<lb/>Eine Seele gefunden zu haben, mit der<lb/>man alles theilen kann und von der<lb/>man immer verstanden wird. Daß
+					Sie<lb/>so fern von Ihren <rs ref="#p2411 #p2412" type="bi_person">Eltern</rs>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p2411" type="bi">Friedrich Joseph Peter von Uechtritz</persName> und seine Frau <persName ref="#p2412"
+								type="bi">Friederike Auguste Charlotte</persName> in <placeName ref="#l0940" type="bi">Heidersdorf
+								(Niederschlesien)</placeName> bei <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
+						<p xml:lang="en">
+							<persName ref="#p2411" type="bi">Friedrich Joseph Peter von Uechtritz</persName> and his wife <persName ref="#p2412"
+								type="bi">Friederike Auguste Charlotte</persName> in <placeName ref="#l0940" type="bi">Heidersdorf (Lower
+								Silesia)</placeName> near <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
+						<p xml:lang="fr">
+							<persName ref="#p2411" type="bi">Friedrich Joseph Peter von Uechtritz</persName> et son épouse <persName ref="#p2412"
+								type="bi">Friederike Auguste Charlotte</persName> à <placeName ref="#l0940" type="bi">Heidersdorf (Basse
+								Silésie)</placeName> près de <placeName ref="#l0188" type="bi">Görlitz</placeName>.</p>
+					</note> sind muß Ih<lb break="no"/>nen sehr traurig seyn, sie müssen doch<lb/>auch schon alt seyn, und wenn man so<lb/>sehen muß
+					wie sie schwächer werden, <add place="above">dan̄</add> ist<lb/>die Liebe zu den Eltern ein wahrhaft<lb/>herzzerreißendes Gefühl.
+					Es ist wohl<lb/>ein großer Mangel an Frömmigkeit und<lb/>Ergebung in mir, aber ich kann den Ge<lb break="no"/>danken sie je zu
+					verlieren gar nicht<lb/>ertragen, und ich suche mich nur immer<lb/>damit zu trösten, daß ich doch vielleicht<lb/>eher sterbe.</p>
+				<p>
+					<persName ref="#p0713" type="bi">Löbel</persName> kommt auf einige Tage her, und<lb/>wird oben in Ihrer kleinen Stube<note
+						resp="#sophia.zeil">
+						<p xml:lang="de">Die Dachkammer in der 5. Etage, die auch <persName ref="#p0711" type="bi">Uechtritz</persName> (seit <date
+								when-iso="1832">1832</date>) stets bei einem Aufenthalt in <placeName ref="#l0003" type="bi">Dresden</placeName>
+							bewohnte.</p>
+						<p xml:lang="en">The attic room on the 5th floor, which <persName ref="#p0711" type="bi">Uechtritz</persName> (since <date
+								when-iso="1832">1832</date>) always lived in when he was in <placeName ref="#l0003" type="bi">Dresden</placeName>.</p>
+						<p xml:lang="fr">La chambre mansardée au 5ème étage, dans laquelle <persName ref="#p0711" type="bi">Uechtritz</persName>
+							(depuis <date when-iso="1832">1832</date>) a toujours vécu lorsqu'il était à <placeName ref="#l0003" type="bi"
+								>Dresde</placeName>.</p>
+					</note> wohnen,<lb/>ich freue mich sehr ihn einmal wieder zu<lb/>sehn. Gegen Ostern kommt auch <persName ref="#p0187" type="bi"
+						>Raumer</persName>,<lb/>dem soll es immer noch sehr schlecht gehn.<note resp="sophia.zeil">
+						<p xml:lang="de">Im Juli 1832 waren Raumers Schwestern <persName ref="#p3545" type="bi">Agnes</persName> und <persName
+								ref="#p2961" type="bi">Louise</persName> gestorben. Vgl. den Brief <persName ref="#p0133" type="bi">Ludwig
+								Tiecks</persName> an <persName ref="#p0187" type="bi">Raumer</persName> vom <ref target="Brief26TieckanRaumer.xml">5.
+								oder 7. August 1832</ref>, S. 1 (Bl. 1 recto), bearb. v. Johanna Preusse, in: <title>Briefe und Texte aus dem
+								intellektuellen Berlin um 1800</title>.</p>
+						<p xml:lang="en">Raumer's sisters <persName ref="#p3545" type="bi">Agnes</persName> and <persName ref="#p2961" type="bi"
+								>Louise</persName> had died in July 1832. See <persName ref="#p0133" type="bi">Ludwig Tieck</persName>'s letter to
+								<persName ref="#p0187" type="bi">Raumer</persName> dated <ref target="Brief26TieckanRaumer.xml">August 5 or 7,
+								1832</ref>, p. 1 (p. 1 recto), revised. v. Johanna Preusse, in: <title>Letters and texts from intellectual Berlin
+								around 1800</title>.</p>
+						<p xml:lang="fr">Les sœurs de Raumer, <persName ref="#p3545" type="bi">Agnès</persName> et <persName ref="#p2961" type="bi"
+								>Louise</persName>, étaient décédées en juillet 1832. Voir la lettre de <persName ref="#p0133" type="bi">Ludwig
+								Tieck</persName> à <persName ref="#p0187" type="bi">Raumer</persName> du <ref target="Brief26TieckanRaumer.xml">5 ou 7
+								août 1832</ref>, page 1 (p. 1 recto), révisée. v. Johanna Preusse, in : <title>Lettres et textes du Berlin
+								intellectuel vers 1800</title>.</p>
+					</note>
+					<lb/>Was diesen Sommer über uns bestim̄t<pb facs="iiif:10.34847/nkl.8bc1mkrf/aa6e6ef70e17b8fa06d9a83b89fe1d5b3ebbf1a7" n="6"/></p>
+				<p><!-- Added tag for the good display of the indexes-->ist, und ob wir eine Reise<note resp="#sophia.zeil">
+						<p xml:lang="de">Im <date when-iso="1833-07/08">Juli/August 1833</date> unternahmen <persName ref="#p0233" type="bi"
+								>Amalia</persName>, <persName ref="#p0218" type="bi">Agnes</persName> und <persName ref="#p0217" type="bi">Dorothea
+								Tieck</persName> eine Reise nach <placeName ref="#l0017" type="bi">Schlesien</placeName> zu den Verwandten <persName
+								ref="#p0233" type="bi">Amalia Tiecks</persName>. <persName type="bi">Ludwig Tieck</persName> blieb in <placeName
+								ref="#l0003" type="bi">Dresden</placeName>, um zu arbeiten. Vgl. <ref target="Brief09DorotheaTieckanUechtritz.xml"
+								>Brief vom 22. Juli 1833</ref>, S. 1 (Bl. 1 recto).</p>
+						<p xml:lang="en">In <date when-iso="1833-07/08">July/August 1833</date>
+							<persName ref="#p0233" type="bi">Amalia</persName>, <persName ref="#p0218" type="bi">Agnes</persName> and <persName
+								ref="#p0217" type="bi">Dorothea Tieck</persName> made a trip to <placeName ref="#l0017" type="bi">Silesia</placeName>
+							to see <persName ref="#p0233" type="bi">Amalia Tieck</persName>'s relatives. <persName type="bi">Ludwig Tieck</persName>
+							stayed in <placeName ref="#l0003" type="bi">Dresden</placeName> to work. See <ref
+								target="Brief09DorotheaTieckanUechtritz.xml">letter of July 22, 1833</ref>, p. 1 (sheet 1 recto).</p>
+						<p xml:lang="fr">En <date when-iso="1833-07/08">juillet/août 1833</date>, <persName ref="#p0233" type="bi">Amalia</persName>,
+								<persName ref="#p0218" type="bi">Agnès</persName> et <persName ref="#p0217" type="bi">Dorothea Tieck</persName> font
+							un voyage en <placeName ref="#l0017" type="bi">Silésie</placeName> pour voir les parents d'<persName ref="#p0233"
+								type="bi">Amalia Tieck</persName>. <persName type="bi">Ludwig Tieck</persName> est resté à <placeName ref="#l0003"
+								type="bi">Dresde</placeName> pour travailler. Voir <ref target="Brief09DorotheaTieckanUechtritz.xml">lettre du 22
+								juillet 1833</ref>, p.1 (feuille 1 recto).</p>
+					</note> machen weiß ich<lb/>noch gar nicht, <rs ref="#p0133" type="bi_person">Vater</rs> spricht von so etwas im<lb break="no"
+					/>mer erst wenn es geschieht; er ist im Ganzen<lb/>den Winter sehr wohl gewesen, hatte auch<lb/>eine neue Novelle<note
+						resp="#sophia.zeil">
+						<p xml:lang="de">Vermutlich handelt es sich um die einzige, <date when-iso="1833">1833</date> veröffentlichte Novelle <title
+								ref="#w04376" type="bi">Eine Sommerreise</title>, die <persName ref="#p0133" type="bi">Tieck</persName> im <date
+								when-iso="1833-08">August 1833</date> fertigstellte.</p>
+						<p xml:lang="en">It is probably the only novella <title ref="#w04376" type="bi">Ein Sommerreise</title> published in <date
+								when-iso="1833">1833</date>, which <persName ref="#p0133" type="bi">Tieck</persName> completed in <date
+								when-iso="1833-08">August 1833</date>.</p>
+						<p xml:lang="fr">C'est probablement la seule nouvelle publiée en <date when-iso="1833">1833</date>, <title ref="#w04376"
+								type="bi">Eine Sommerreise</title>, que <persName ref="#p0133" type="bi">Tieck</persName> acheva en <date
+								when-iso="1833-08">août 1833</date>.</p>
+					</note> angefangen, da bekam<lb/>er eine Halskrankheit und heftigen<lb/>Cathar der ihn sehr angriff, nun ist die<lb/>Arbeit wieder
+					unterbrochen. Es ist wohl<lb/>ein wahres Unglück daß er nicht fleißiger<lb/>seyn kann, wie Vieles wird der Welt
+					dadurch<lb/>entzogen. <persName ref="#p0196" type="bi">Reimer</persName> bekommt die <title ref="#w04329" type="bi"
+						>Rosamunde</title>
+					<lb/>auf keinen Fall, <rs ref="#p0133" type="bi_person">Vater</rs> ist mit <persName ref="#p0188" type="bi">Brockhaus</persName>
+					<lb/>in Unterhandlungen; sie können aber<lb/>noch nicht einig werden, weil der gar so<lb/>wenig geben will. Der <title
+						ref="#w04324" type="bi">Alexander</title>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p0711" type="bi">Uechtritz</persName>' Trauerspiel <title ref="#w04324" type="bi">Alexander und
+								Darius</title> wurde am <date when-iso="1826-02-28">28. Februar 1826</date> am <placeName ref="#l0003" type="bi"
+								>Dresdner</placeName> Hoftheater uraufgeführt. Es erlebte 6 weitere Aufführungen. (Vgl. <persName ref="#p2344"
+								type="bi">Prölß</persName>: <title ref="#w04369" type="bi">Geschichte des Hoftheaters zu Dresden</title>, S. 616.)</p>
+						<p xml:lang="en">
+							<persName ref="#p0711" type="bi">Uechtritz</persName>'s tragedy <title ref="#w04324" type="bi">Alexander and
+								Darius</title> premiered on <date when-iso="1826-02-28">February 28, 1826</date> at the <placeName ref="#l0003"
+								type="bi">Dresden</placeName> Court Theater. It saw 6 other performances. (See <persName ref="#p2344" type="bi"
+								>Prölß</persName>: <title ref="#w04369" type="bi">History of the Court Theater in Dresden</title>, p. 616.)</p>
+						<p xml:lang="fr">La tragédie d'<persName ref="#p0711" type="bi">Uechtritz</persName>
+							<title ref="#w04324" type="bi">Alexandre et Darius</title> a été créée le <date when-iso="1826-02-28">28 février
+								1826</date> au Théâtre de la Cour de <placeName ref="#l0003" type="bi">Dresde</placeName>. Il a vu 6 autres
+							représentations. (Voir <persName ref="#p2344" type="bi">Prölß</persName>: <title ref="#w04369" type="bi">History of the
+								Court Theatre in Dresden</title>, p. 616.)</p>
+					</note> ist hier<lb/>noch nicht wieder aufgeführt, es wäre auch<lb/>unpassend ihn ohne die <persName ref="#p0710" type="bi"
+						>Gley</persName> einzustudiren<lb/>sobald sie hier ist wird er gewiß so<lb/>schnell als möglich gegeben, beide <rs
+						ref="#p2300 #p2299" type="bi_person">Devrients</rs>
+					<lb/>sind sehr dafür. Für mich ist es eine<lb/>Art von Beruhigung daß Sie den <title ref="#w04372" type="bi">Spar<lb break="no"
+						/>tacus</title> erst vollenden,<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> überarbeitete sein <date when-iso="1823">1823</date> erschienenes
+							Trauerspiel <title ref="#w04372" type="bi">Rom und Spartacus</title>, stellte diese zweite Fassung jedoch nicht fertig.
+								(Vgl. <persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von
+								Uechtritz als dramatischer Dichter</title>, S. 40.)</p>
+						<p xml:lang="en">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> revised his tragedy <title ref="#w04372" type="bi">Rom und
+								Spartacus</title>, published in <date when-iso="1823">1823</date>, but did not complete this second version. (See
+								<persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz as
+								a dramatic poet</title>, p. 40.)</p>
+						<p xml:lang="fr">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> a révisé sa tragédie <title ref="#w04372" type="bi">Rom und
+								Spartacus</title>, publiée en <date when-iso="1823">1823</date>, mais n'a pas achevé cette seconde version. (Voir
+								<persName ref="#p2306" type="bi">Wilhelm Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz en
+								tant que poète dramatique</title>, p. 40.)</p>
+					</note> Sie wissen daß ich<pb facs="iiif:10.34847/nkl.8bc1mkrf/95b68dbf82bbcd96dfa34683c02e6edd2f37349f" n="7"/>ihn<!--[175]-->
+					nicht gleich so auffassen konnte wie die<lb/>
+					<title ref="#w04347" type="bi">Chaldäer</title>,<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> begann die <title ref="#w04347" type="bi">Babylonier in
+								Jerusalem</title> unter dem Titel "Die Chaldäer in Jerusalem". (Vgl. <persName ref="#p2306" type="bi">Wilhelm
+								Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz als dramatischer Dichter</title>,
+							S. 90.)</p>
+						<p xml:lang="en">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> started the <title ref="#w04347" type="bi">Babylonians in
+								Jerusalem</title> under the title "The Chaldeans in Jerusalem". (See <persName ref="#p2306" type="bi">Wilhelm
+								Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz as a dramatic poet</title>, p. 90.)</p>
+						<p xml:lang="fr">
+							<persName ref="#p0711" type="bi">Uechtritz</persName> a commencé les <title ref="#w04347" type="bi">Babyloniens à
+								Jérusalem</title> sous le titre « Les Chaldéens à Jérusalem ». (Voir <persName ref="#p2306" type="bi">Wilhelm
+								Steitz</persName>: <title ref="#w04348" type="bi">Friedrich von Uechtritz en tant que poète dramatique</title>, p.
+							90.)</p>
+					</note>
+					<rs ref="#p0133" type="bi_person">Vater</rs> meint Sie möchten sich nicht<lb/>zu sehr mit orientalischen Studien aufhalten<lb/>so
+					wie Sie das <rs ref="#w04372" type="bi_title">Gedicht</rs> angelegt hätten schie<lb break="no"/>ne ihm dies nicht nothwendig.</p>
+				<p>Neulich habe ich die Zeichnung<note resp="#sophia.zeil">
+						<p xml:lang="de">
+							<persName ref="#p0194" type="bi">Goethe</persName> erhielt am <date when-iso="1832-02-18">18. Februar 1832</date> eine
+							Zeichnung des soeben unter der Leitung von <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> in <placeName
+								ref="#l0928" type="bi">Pompeji</placeName> entdeckten Mosaiks (vgl. folgende Anmerkung). Das Gebäude wurde ihm zu
+							Ehren "Casa di Goethe" genannt, ist heute jedoch unter dem Namen "Casa del Fauno" bekannt. Ob es sich um diese Zeichnung
+							handelt, ist unsicher.</p>
+						<p xml:lang="en">On <date when-iso="1832-02-18">February 18</date>, 1832, <persName ref="#p0194" type="bi">Goethe</persName>
+							received a drawing of the mosaic that had just been discovered in <placeName ref="#l0928" type="bi">Pompeii</placeName>
+							under the direction of <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> (see following note). The building was
+							named "Casa di Goethe" in his honor, but is now known as "Casa del Fauno". It is uncertain whether this is the
+							drawing.</p>
+						<p xml:lang="fr">Le <date when-iso="1832-02-18">18 février 1832</date>, <persName ref="#p0194" type="bi">Goethe</persName>
+							reçoit un dessin de la mosaïque qui vient d'être découverte à <placeName ref="#l0928" type="bi">Pompéi</placeName> sous la
+							direction de <persName ref="#p2413" type="bi">Wilhelm Zahn</persName> (voir note suivante). Le bâtiment a été nommé "Casa
+							di Goethe" en son honneur, mais est maintenant connu sous le nom de "Casa del Fauno". Il n'est pas certain qu'il s'agisse
+							du dessin.</p>
+					</note> von einem<lb/>neu ausgegrabenen Mosaikbild<note resp="#sophia.zeil">
+						<p xml:lang="de">Der aus dem <date when-iso="-0200">2. Jh. v. Chr.</date> stammende, als Alexandermosaik bekannte
+							Mosaikfußboden wurde <date when-iso="1831">1831</date> bei Ausgrabungen in <placeName ref="#l0928" type="bi"
+								>Pompeji</placeName> entdeckt, er befindet sich heute im Nationalmuseum in <placeName ref="#l0700" type="bi"
+								>Neapel</placeName>.</p>
+						<p xml:lang="en">From the <date when-iso="-0200">2nd century BC</date>, The mosaic floor, known as the Alexander mosaic, was
+							discovered in <date when-iso="1831">1831</date> during excavations in <placeName ref="#l0928" type="bi"
+								>Pompeii</placeName> and is now in the National Museum in <placeName ref="#l0700" type="bi">Naples</placeName>.</p>
+						<p xml:lang="fr">Dès le <date when-iso="-0200">IIe siècle av. JC</date>, Le sol en mosaïque, connu sous le nom de mosaïque
+							d'Alexandre, a été découvert en <date when-iso="1831">1831</date> lors de fouilles à <placeName ref="#l0928" type="bi"
+								>Pompéi</placeName> et se trouve maintenant au Musée national de <placeName ref="#l0700" type="bi"
+							>Naples</placeName>.</p>
+					</note> in <placeName ref="#l0928" type="bi">Pom<lb break="no"/>peji</placeName> gesehn. Es soll die Schlacht bei <placeName
+						ref="#l0929" type="bi">Arbela</placeName>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bekannt als "Schlacht von Gaugamela", in der <persName ref="#p2289" type="bi">Alexander</persName> der Große
+							den Perserkönig <persName ref="#p2288" type="bi">Dareios</persName> besiegte.</p>
+						<p xml:lang="en">Known as the "Battle of Gaugamela", in which <persName ref="#p2289" type="bi">Alexander</persName> the Great
+							defeated the Persian king <persName ref="#p2288" type="bi">Darius</persName>.</p>
+						<p xml:lang="fr">Connue sous le nom de "Bataille de Gaugamela", dans laquelle <persName ref="#p2289" type="bi"
+								>Alexandre</persName> le Grand a vaincu le roi perse <persName ref="#p2288" type="bi">Darius</persName>.</p>
+					</note>
+					<lb/>vorstellen, in dem Augenblick wo der Sieg<lb/>sich für <persName ref="#p2289" type="bi">Alexander</persName> entscheidet, es
+					ist ein<lb/>ganz herrliches Blatt, Zeichnung und Aus<lb break="no"/>druck wie in <persName ref="#p2414" type="bi"
+						>Raphael</persName>s Constantinschlacht.<note resp="#sophia.zeil">
+						<p xml:lang="de">Die Konstantinsschlacht gehört zu den sog. Stanzen des <persName ref="#p2414" type="bi">Raffael</persName>
+							(Fresken in den Gemächern des Apostolischen Palasts im <placeName ref="#l0932" type="bi">Vatikan</placeName>). Allerdings
+							stammt nur der Entwurf von <persName ref="#p2414" type="bi">Raffel</persName> selbst, ausgeführt wurde dieser von seinem
+							Schüler <persName ref="#p2415" type="bi">Giulio Romano</persName>.</p>
+						<p xml:lang="en">The Battle of Constantine is one of the so-called <persName ref="#p2414" type="bi">Raphael</persName> rooms
+							(frescoes in the apartments of the Apostolic Palace in the <placeName ref="#l0932" type="bi">Vatican</placeName>).
+							However, only the design comes from <persName ref="#p2414" type="bi">Raffael</persName> himself, it was carried out by his
+							pupil <persName ref="#p2415" type="bi">Giulio Romano</persName>.</p>
+						<p xml:lang="fr">La bataille de Constantin est l'une des salles dites de <persName ref="#p2414" type="bi">Raphaël</persName>
+							(fresques dans les appartements du palais apostolique au <placeName ref="#l0932" type="bi">Vatican</placeName>).
+							Cependant, seul le dessin vient de <persName ref="#p2414" type="bi">Raphaël</persName> lui-même, il a été réalisé par son
+							élève <persName ref="#p2415" type="bi">Giulio Romano</persName>.</p>
+					</note>
+					<lb/>Ich habe dabei recht lebhaft an Ihr <rs ref="#w04324" type="bi_title">Gedicht</rs>
+					<lb/>gedacht. Es ist zu verwundern daß nicht öfter<lb/>Dichter wie bildenke<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 175) steht "bildende" statt "bildenke".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands
+							"bildende" instead of "bildenke". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 175)
+							signifie "bildende" au lieu de "bildenke". </p>
+					</note> Künstler <persName ref="#p2289" type="bi">Alexander</persName>
+					<lb/>zu ihrem Gegenstand gewählt haben, mir<lb/>scheint nichts könnte so sehr begeistern,<lb/>da er so ganz einzig in der
+					Geschichte da<lb break="no"/>steht. Ich möchte nur <persName ref="#p2416" type="bi">Karl den Großen</persName>
+					<lb/>mit ihm vergleichen, was jener für die<lb/>Welt war dieser für <placeName ref="#l0001" type="bi">Deutschland</placeName>,
+					und<lb/>beide wirkten wohl in einem ähnlichen<pb facs="iiif:10.34847/nkl.8bc1mkrf/a32f52efd1cbbeb64e1cd2faf1ad21e8503bac52" n="8"
+					/>Sinn. Wenn man bedenkt wie <persName ref="#p2289" type="bi">Alexander</persName>
+					<lb/>mittelbar durch Verbreitung <placeName ref="#l0323" type="bi">griechischer</placeName>
+					<lb/>Sprache und Bildung auch auf die Ausbrei<lb break="no"/>tung des Christenthums gewirkt hat, so<lb/>ist er auch in dem Sinn
+					eine große Erschei<lb break="no"/>nung. Sie haben es für immer fest gestellt<lb/>wie er gedacht und dargestellt werden<lb/>muß,
+					und ich glaube nicht daß nach Ihnen<lb/>sich noch jemand daran wagen kann.</p>
+				<p>Die Generalin <persName ref="#p2417" type="bi">
+						<del hand="#pencil" rend="strikethrough">Lüzow</del>
+					</persName>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 175) steht "L." statt "Lüzow".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands
+							"kümmern" instead of "bekümmern". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 175)
+							signifie "kümmern" au lieu de "bekümmern". </p>
+					</note> hat sich in einem<lb/>Brief<!--erhalten? XXX--> an die <persName ref="#p0198" type="bi">
+						<del hand="#pencil" rend="strikethrough">Solger</del>
+					</persName>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							steht "S." statt "Solger".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> is "S." instead
+							of "Solger". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> est "S." au
+							lieu de "Solger". </p>
+					</note> sehr boshaft über<lb/>unsern Briefwechsel geäußert, und diese<lb/>die die <persName ref="#p2417" type="bi"
+						>Lüzow</persName>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							steht "L." statt "Lüzow".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> is "L." instead
+							of "Lüzow". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> est "L." au
+							lieu de "Lüzow". </p>
+					</note> sehr verehrt, hat gleich in<lb/>demselben Ton gegen unsre <rs ref="#p0232" type="bi_person">Gräfinn</rs> wieder<lb/>davon
+					gesprochen. Meine <rs ref="#p0133 #p0233" type="bi_person">Eltern</rs> sind zum<lb/>Glück zu vernünftig als daß solche Klat<lb
+						break="no"/>schereien ihnen wichtig seyn könnten; ich<lb/>habe mich aber doch sehr geärgert, daß<lb/>man auch das Einfachste
+					und Unschuldigste<lb/>nicht thun kann ohne daß andre Leute sich<lb/>darum bekümmern.<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							(S. 175) steht "kümmern" statt "bekümmern".</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> (S. 175) stands
+							"kümmern" instead of "bekümmern". </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> (S. 175)
+							signifie "kümmern" au lieu de "bekümmern". </p>
+					</note>
+					<note hand="#pencil" place="inline">x</note>
+				</p>
+				<closer>
+					<note resp="#sophia.zeil">
+						<p xml:lang="de">Bei <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300" type="bi">Erinnerungen</title>
+							folgt eine unmarkierte Auslassung bis zum Ende des Briefs.</p>
+						<p xml:lang="en">In <persName ref="#p2151" type="bi">Sybel</persName>: <title ref="#w03300">Memories</title> an unmarked
+							omission follows until the end of the letter. </p>
+						<p xml:lang="fr">Dans <persName ref="#p2151" type="bi">Sybel</persName> : <title ref="#w03300">Souvenirs</title> une omission
+							non marquée suit jusqu'à la fin de la lettre. </p>
+					</note>Leben Sie nun wohl, liebster Freund,<lb/>
+					<salute>tausend Grüße von meinen <rs ref="#p0233 #p0133" type="bi_person">Eltern</rs> und<lb/>
+						<persName ref="#p0218" type="bi">Agnes</persName>, wir alle haben keinen größeren<lb/>Wunsch als Sie bald wieder zu
+						sehen.</salute> Ich<lb/>bin heut so eilig und habe alles durch einan<lb break="no"/>der gekritzelt. Ich wollte nur ganz
+					kurz<lb/>schreiben, an Sie kann ich es aber nicht.<lb/>
+					<signed rend="align(center)">Ihre treue Freundinn <persName ref="#p0217" type="bi">
+							<hi rend="latin">Dorothea</hi>
+						</persName>.</signed>
+				</closer>
+			</div>
+		</body>
+	</text>
 </TEI>

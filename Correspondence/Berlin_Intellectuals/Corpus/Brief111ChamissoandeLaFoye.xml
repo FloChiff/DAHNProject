@@ -1,525 +1,730 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (Schaffhausen, 27 August 1812)</title>
-                <title xml:lang="fr">Lettre de Adelbert von Chamisso à Louis de La Foye (Schaffhouse, 27 août 1812)</title>
-                <title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (Schaffhausen, 27. August 1812)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#lena.ebert">
-                        <forename>Lena</forename>
-                        <surname>Ebert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by-nc/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2012-12"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">French culture</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
-                        <repository>Handschriftenabteilung</repository>
-                        <collection>Sammlung Autographen: Chamisso, Adalbert</collection>
-                        <idno type="stabi.berlin">Blatt 9 und 10</idno>
-                        <idno type="kalliope">DE-611-HS-1551138</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1812-08-27"/>
-                            <!--<note type="keyword" resp="#lena.ebert"></note>-->
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">Zwei Blätter.</measure>
-                                        <measure xml:lang="en">2 folios</measure>
-                                        <measure xml:lang="fr">2 feuillets</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#pencil_1">
-                                    <p xml:lang="de">Foliierung mit Bleistift.</p>
-                                    <p xml:lang="en">Foliation in pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Ordentlicher Erhaltungszustand, kleinere Einrisse und Knicke. Die Schrift ist kaum
-                                        beeinträchtigt.</p>
-                                    <p xml:lang="en">Neat condition, minor tears and creases. The writing is hardly affected.</p>
-                                    <p xml:lang="fr">Etat soigné, petites déchirures et plis. L'écriture n'est guère affectée.</p></condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Adelbert von Chamisso, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of Adelbert von Chamisso, text of letter in black ink, mainly German script.</p>
-                                <p xml:lang="fr">Main d'Adelbert von Chamisso, corps de la lettre, encre noire, écriture majoritairement gothique.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_3">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="red_pencil" scope="minor" scribe="unknown" xml:id="red_pencil_unknown">
-                                <p xml:lang="de">Hand mit unbekannter Funktion, in rotem Buntstift.</p>
-                                <p xml:lang="en">Hand with unknown function, in red pencil.</p>
-                                <p xml:lang="fr">Main avec fonction inconnue, au crayon rouge.</p></handNote>
-                            <handNote medium="black_ink" scope="minor" scribe="unknown" xml:id="postman">
-                                <p xml:lang="de">Hand eines Postbeamten, in schwarzer Tinte.</p>
-                                <p xml:lang="en">Hand of a postman, in black ink.</p>
-                                <p xml:lang="fr">Main d'un postier, à l'encre noire.</p>
-                            </handNote>
-                        </handDesc>
-                        <sealDesc>
-                            <p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen (Reste des roten Siegels).</p>
-                            <p xml:lang="en">The letter was closed with a red seal (Remnants of the red seal.).</p>
-                            <p xml:lang="fr">La lettre était fermée par un sceau rouge (Vestiges du sceau rouge.)</p>
-                        </sealDesc>
-                        <accMat><p xml:lang="de"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Blatt 10v</ref> dient als Briefumschlag.</p>
-                            <p xml:lang="en"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Page 10v</ref> is being used as envelope.</p>
-                            <p xml:lang="fr"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Le feuillet 10v</ref> sert d'enveloppe.</p></accMat>
-                    </physDesc>
-                    <history>
-                        <origin><p xml:lang="de">Dieser Brief enstand in <origPlace ref="#l0130">Schaffhausen</origPlace> am <origDate when-iso="1812-08-27">27. August 1812</origDate>. Schaffhausen war ein Zwischenstopp auf <persName ref="#p0237">Chamissos</persName> Reise von <placeName ref="#l0127">Coppet</placeName> (dort hatte er sich ab Frühling <date when-iso="1811">1811</date> bei <persName ref="#p0255">Madame de Staël</persName> aufgehalten) nach <placeName ref="#l1103">Berlin</placeName>, wo er sein Studium aufnehmen wollte. <persName ref="#p0261">Riegel</persName>
-                                ordnet den Brief in der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                                chronologisch zwischen dem Brief von <persName ref="#p0248">de La Foye</persName> an Chamisso vom <date when-iso="1812-07-28">28. Juli 1812</date> und dem ersten Brief von Chamisso an de La Foye aus Berlin ein, den er
-                                auf <date when-iso="1812-11">November 1812</date> datiert.</p>
-                            <p xml:lang="en">This letter was written in <origPlace ref="#l0130">Schaffhausen</origPlace> on <origDate when-iso="1812-08-27">August 27th, 1812</origDate>. Schaffhausen was a stopover in <persName ref="#p0237">Chamisso's</persName> trip from <placeName ref="#l0127">Coppet</placeName> (where he had been staying from the
-                                Spring of <date when-iso="1811">1811</date> on at <persName ref="#p0255">Madame de Staël's</persName>) to <placeName ref="#l1103">Berlin</placeName>, where he intended to start studying.</p>
-                            <p xml:lang="fr">Cette lettre a été écrite à <origPlace ref="#l0130">Schaffhausen</origPlace> le <origDate when-iso="1812-08-27">27 août 1812</origDate>. Schaffhausen était une escale du voyage de <persName ref="#p0237">Chamisso</persName> de <placeName ref="#l0127">Coppet</placeName> (où il est resté pendant le printemps <date when-iso="1811">1811</date> chez <persName ref="#p0255">Madame de Staël's</persName>) à <placeName ref="#l1103">Berlin</placeName>, où il avait l'intention de commencer à étudier.</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Der Brief befindet sich in Besitz der Staatsbibliothek zu Berlin und wird in der Autographensammlung
-                                Chamisso aufbewahrt. Zur Geschichte des Chamisso-Nachlasses siehe die <ref target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/">Informationen der Staatsbibliothek zu Berlin</ref> [Zugriff 07.12.2012] über die Erschließung.</p>
-                            <p xml:lang="en">The letter is in the possession of the Berlin State Library and is kept in the Chamisso collection of
-                                autographs. For the history of the Chamisso estate, see <ref target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/">Information from the Berlin State Library</ref> [Accessed December 07, 2012] on the indexing.</p>
-                            <p xml:lang="fr">La lettre est possédée par la Bibliothèque d'État de Berlin et est conservée dans la collection
-                                d'autographes Chamisso. Pour l'histoire du domaine Chamisso, voir <ref target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/">Informations de la Bibliothèque d'État de Berlin</ref> [Consulté le 7 décembre 2012] sur
-                            l'indexation.</p></acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl><bibl xml:lang="de"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert
-                                        de Chamisso, Fragments inédits</title>, Brief 109, S. 200-202. Dieser Druck unterscheidet sich bezüglich der
-                                    Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
-                                    Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, von z.B. der
-                                    ausführlichen Beschreibung von <persName ref="#p0237">Chamissos</persName> Reiseroute durch die <placeName ref="#l0068">Schweiz</placeName> und einer Aufzählung von Pflanzen, werden nicht gekennzeichnet.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
-                                        Chamisso, Fragments inédits</title>, Letter 109, pp. 200-202. This printing differs in terms of spelling,
-                                    punctuation, upper and lower case and the correction of small grammatical errors. The change between current
-                                    script and Latin script is ignored. Omissions, e.g. from the detailed description of <persName ref="#p0237">
-                                        Chamissos </persName> route through <placeName ref="#l0068">Switzerland</placeName> and a list of plants, are
-                                    not marked.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
-                                        Chamisso, Fragments inédits</title>, Lettre 109, pp. 200-202. Cette impression diffère en termes
-                                    d'orthographe, de ponctuation, de majuscules et minuscules et de correction de petites erreurs grammaticales. Le
-                                    changement entre le script actuel et le script latin est ignoré. Les omissions, par exemple dans la description
-                                    détaillée de l'itinéraire de <persName ref="#p0237">Chamissos</persName> via la <placeName ref="#l0068">Suisse
-                                    </placeName> et une liste de plantes, ne sont pas signalées.</bibl></bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="90"/>
-                <language ident="fr" usage="3"/>
-                <language ident="la" usage="7"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
-                    <placeName ref="https://www.geonames.org/7287070">Schaffhausen</placeName>
-                    <date when-iso="1812-08-27"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief039ChamissoandeLaFoye.xml" type="prev"/>
-                    <ref target="Brief053ChamissoandeLaFoye.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-03" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
-            <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
-            <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
-            <change when-iso="2013-11-23" who="#sabine.seifert">Updates seriesStmt.</change>
-            <change when-iso="2013-11-22" who="#sabine.seifert">Changed references from photos to facsimile by Stabi.</change>
-            <change when-iso="2012-07-15" who="#lena.ebert">Transcription, encoding of text and metadata.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.acdf30kn/9c0118788f169930b49a5e88231f4d061de78625" n="1"/>
-                <note hand="#pencil_1" place="margin(left)"><hi rend="underline">1812</hi></note>
-                <note hand="#pencil_2" place="margin(right)" type="foliation">9</note>
-                <p>Doch biß zum <unclear cert="medium" reason="illegible">Verschneiden</unclear><note resp="#lena.ebert"><p xml:lang="de">Im <ref target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden">Deutschen Wörterbuch von Jacob Grimm und Wilhelm
-                                Grimm</ref> [Zugriff 17.07.2012] findet man unter "Verschneiden" sowohl die Bedeutungen "durch schneiden kürzen", was
-                            man auf Pflanzen beziehen könnte, als auch "vernichten, hinwegnehmen". Schließlich könnte <persName ref="#p0237" type="bi">Chamisso</persName> auch "Verschneiden" und "Verscheiden" verwechselt haben.</p><p xml:lang="en">In the <ref target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden">German dictionary by Jacob Grimm and Wilhelm Grimm</ref>
-                            [accessed on July 17, 2012] you can find under "blending" both the meanings "shorten by cutting", which could be related
-                            to plants, and "destroy, take away". Finally, <persName ref="#p0237" type="bi">Chamisso</persName> could have confused
-                            "blending" and "differing".</p><p xml:lang="fr">Dans le <ref target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden">dictionnaire allemand de Jacob Grimm et Wilhelm Grimm</ref> [consulté le 17 juillet 2012], vous pouvez trouver sous
-                            « mélange » à la fois les significations « raccourcir en coupant », qui pourraient être liées aux plantes, et « détruire,
-                            emporter ». Enfin, <persName ref="#p0237" type="bi">Chamisso</persName> aurait pu confondre « mélange » et « différer
-                            ».</p></note>
-                    <foreign xml:lang="fr"><hi rend="latin">Exclusive</hi></foreign>, hoffentlich!<note resp="#lena.ebert"><p xml:lang="de">Im Druck
-                            der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieser erste
-                            Satz. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> this first sentence is missing. The gap
-                            is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert
-                                de Chamisso, Fragments inédits</title> cette première phrase est manquante. L'espace n'est pas marqué par une ellipse.
-                        </p>
-                    </note></p>
-                <p>– aus <hi rend="latin"><placeName ref="#l0130" type="bi">Schafhausen</placeName></hi> schon, mein lieber, den <date when-iso="1812-08-27">27 <choice>
-                            <abbr>Aug.</abbr>
-                            <expan>August</expan>
-                        </choice></date><lb/> den <date when-iso="1812-08-29">29.</date> in <hi rend="latin"><placeName ref="#l0102" type="bi">Ulm</placeName></hi> also vor dem <date when-iso="1812-09-15">15.<hi rend="superscript">t</hi> 7.</date><note resp="#lena.ebert"><p xml:lang="de">Die Sieben (lat. <foreign xml:lang="la">septem</foreign>) steht für September.</p>
-                        <p xml:lang="en">The seven (lat. <foreign xml:lang="la">septem</foreign>) stands for September.</p><p xml:lang="fr">Le sept
-                            (lat. <foreign xml:lang="la">septem</foreign>) signifie septembre.</p></note> in <hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi>. –</p>
-                <p>am Tage meiner Abreise, – <date when-iso="1812-08-11">11.</date><hi rend="superscript">ten</hi> glaub‘ ich – hab‘ ich<lb/> die
-                    Pflanzen die den ersten <foreign xml:lang="fr"><hi rend="latin">Envois</hi></foreign> an dich ausmachen<lb/> sollen in ordnung
-                    gebracht, und mit unlust bemerkt,<lb/>
-                    <add place="margin">daß</add> manches, was ich dir bestim̄te oder noch hätte schicken<lb/>
-                    <subst>
-                        <del rend="strikethrough"><unclear cert="medium" reason="illegible">wollen</unclear></del>
-                        <add place="above">konnen</add>
-                    </subst>, hatte sich anders wohin verkrochen. – doch sind<lb/> bereits gute und schöne Sachen dabei<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            steht "darin" statt "dabei".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> stands "in" instead of "with". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "dans" au lieu de "avec". </p>
-                    </note> und ich habe<lb/>
-                    <persName ref="#p0257" type="bi">augusten</persName> auf die Seele gebunden, <del rend="strikethrough">aus dem<lb/> Herbario</del>
-                    noch das Herbarium nach möglichkeit<lb/> für dich auszu<unclear cert="high" reason="illegible">p</unclear>lündern – aus den
-                    Pressen, die<lb/> ich noch schwanger ließ, muß dir vieles zufliessen<lb/> und manches aus den 3 <foreign xml:lang="fr"><hi rend="latin">envois</hi></foreign> die ich <del rend="strikethrough"><unclear cert="low" reason="illegible">von</unclear></del><note resp="#lena.ebert" subtype="1"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird diese Streichung nicht wiedergegeben.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            this deletion is not reflected. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert
-                                de Chamisso, Fragments inédits</title> cette suppression n'est pas reflétée. </p>
-                    </note>
-                    <note resp="#lena.ebert" subtype="2"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> bleibt das von <persName ref="#p0237" type="bi">Chamisso</persName> gestrichene
-                            "von" stehen.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                Fragments inédits</title> the "from" deleted by <persName ref="#p0237" type="bi"> Chamisso </persName> remains. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            le "from" supprimé par <persName ref="#p0237" type="bi">Chamisso</persName> reste. </p>
-                    </note><lb/> der Reise aus<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieses "aus".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> this "off" is missing. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            ce "off" est manquant. </p>
-                    </note> an <hi rend="latin"><persName ref="#p0257" type="bi">August</persName></hi> gethan. –</p>
-                <p>Ein schönes Land, <hi rend="latin">Louis</hi>, ein schönes Land – und<lb/> andiesem Berggerippe des verschollenen <hi rend="latin"><placeName ref="#l0050" type="bi">Europa</placeName></hi><lb/> gleichsam noch etwas lebendiges von der alten<lb/>
-                    angeklebt geblieben – aber auf wie lange – man<lb/> mögte bluth weinen! – So klingt die alte<lb/> Inschrift der <hi rend="latin">Capelle</hi> in der Hohlen Gaß zu <placeName ref="#l0132" type="bi">Küssnacht</placeName>:</p>
-                <p rend="align(center)"><quote><l><hi rend="latin"><subst>
-                                    <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                                    <add place="across">H</add>
-                                </subst>ier</hi> ist Geißlers Hochmuoth vom <hi rend="latin">Thäll</hi> erschoßen</l>
-                        <l>Und die Schweizer edle Freiheit entsprossen.</l>
-                        <l>Wie lang wird aber solche währen</l>
-                        <l>Noch lang wenn<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                        d'Adalbert de Chamisso, Fragments inédits</title> steht "wann" statt "wenn".</p><p xml:lang="en">In the print
-                                    of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands "when" instead
-                                    of "if". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                        Fragments inédits</title> signifie "quand" au lieu de "si". </p>
-                            </note> wir die Alte währen.</l></quote><note resp="#lena.ebert"><p xml:lang="de">Der Sage nach wurde der Habsburger Vogt
-                            Gessler vom Schweizer Freiheitskämpfer Wilhelm Tell in der Hohlen Gasse ermordet (<title ref="#w00327" type="bi">Reinhardt
-                                2011</title>: 33–35).</p><p xml:lang="en">According to legend, the Habsburg Vogt Gessler was murdered by the Swiss
-                            freedom fighter William Tell in Hohlen Gasse (<title ref="#w00327" type="bi">Reinhardt 2011</title>: 33–35).</p><p xml:lang="fr">Selon la légende, le Habsbourg Vogt Gessler a été assassiné par le combattant de la liberté suisse Guillaume
-                            Tell à Hohlen Gasse (<title ref="#w00327" type="bi">Reinhardt 2011</title> : 33-35).</p></note></p>
-                <pb facs="iiif:10.34847/nkl.acdf30kn/b8e73aadccd6bcbc165babb790782ca048224bf5" n="2"/>
-                <p><choice>
-                        <unclear cert="high" reason="illegible">Solte</unclear>
-                        <unclear cert="low" reason="illegible">Solle</unclear>
-                    </choice> man nicht die Mahnung von Heute wähnen.<lb/> – lieber <hi rend="latin">Louis</hi>, die Alten nicht mehr! – auf<lb/> den
-                    Bergen und in den Sennhütten wohl noch<lb/> zur Noth – aber nicht in den Thalen und Winter<lb/> Haüser – .<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> fehlt der Textabschnitt ab diesem Punkt bis "kennst mich". Die Lücke ist mit Auslassungspunkten
-                            gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                Fragments inédits</title> the text section is missing from this point up to "know me". The gap is marked with an
-                            ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> la section de texte est manquante à partir de ce point jusqu'à "connais-moi". L'espace est marqué par
-                            une ellipse. </p>
-                    </note> Du wilst doch nicht den <placeName ref="#l0198" type="bi">Montblanc</placeName><lb/> oder den <choice>
-                        <unclear cert="high" reason="illegible">Riesigen</unclear>
-                        <unclear cert="low" reason="illegible">Hiesigen</unclear>
-                    </choice> Rheinfall an mich meßen – und<lb/> mich an sie zu messen, kennst du sie nicht und<lb/> kennst mich – doch doch <hi rend="latin">Louis</hi>,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht "Doch, lieber Louis" statt "doch doch Louis".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> it
-                            says "Yes, dear Louis" instead of "Yes, but Louis". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> il dit "Oui, cher Louis" au lieu de "Oui, mais
-                            Louis". </p>
-                    </note> eine her̄liche<lb/> Reise – schön sind die Schneegipfeln <del rend="strikethrough"><unclear cert="low" reason="illegible">von</unclear></del><lb/>
-                    <del rend="strikethrough">weitem</del> im abend scheine, <del rend="strikethrough">über</del> von weitem über<lb/>
-                    <del rend="strikethrough"><gap extent="1 word" reason="illegible"/></del> laubwälder zu sehen, die schon in der Nacht<lb/> ruhn – her<subst>
-                        <del rend="none">l</del>
-                        <add place="inline">r</add>
-                    </subst>lich der aufgang des mondes über<lb/> die <placeName ref="#l0177" type="bi">Grindelwald</placeName> glätscher, her̄lich
-                    die erhabene<lb/> Ruhe des hiesigen R<add place="inline">h</add>einfalls.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der
-                                <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der
-                            Textabschnitt ab diesem Punkt bis "ebenfals mehr als genug" auf der folgenden Seite. Die Lücke ist mit Auslassungspunkten
-                            gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                Fragments inédits</title> the text section is missing from this point until "also more than enough" on the following
-                            page. The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est manquante à partir de ce point jusqu'à
-                            "également plus que suffisant" sur la page suivante. L'espace est marqué par une ellipse. </p>
-                    </note> – sonst will ich<lb/> dir meinen weg sagen – – schlage bücher und<lb/> Charten nach – <foreign xml:lang="fr"><hi rend="latin"><placeName ref="#l0079" type="bi">geneve</placeName></hi>, <hi rend="latin"><placeName ref="#l0180" type="bi">le col du bonhom̄e</placeName></hi>, <hi rend="latin"><placeName ref="#l0181" type="bi">le col d<unclear cert="medium" reason="illegible">e</unclear> la Seigne</placeName></hi></foreign><lb/>
-                    <hi rend="latin"><placeName ref="#l0133" type="bi">Cormayeur</placeName></hi>. (Italiänische Zunge<subst>
-                        <del rend="none">,</del>
-                        <add place="inline">)</add>
-                    </subst>
-                    <foreign xml:lang="fr"><hi rend="latin">le <subst>
-                                <del rend="overwritten"><gap extent="1 word" reason="illegible"/></del>
-                                <add place="across"><placeName ref="#l0172" type="bi"><unclear cert="high" reason="illegible">val</unclear></placeName></add>
-                            </subst> et le <placeName ref="#l0182" type="bi">col Ferret</placeName>, le<lb/> col <choice>
-                                <abbr>d.</abbr>
-                                <expan>de</expan>
-                            </choice>
-                            <unclear cert="low" reason="illegible">Tonestre</unclear></hi></foreign>,<note resp="#lena.ebert"><p xml:lang="de">Dieser
-                            Pass konnte nicht identifiziert werden.</p><p xml:lang="en">This pass could not be identified.</p><p xml:lang="fr">Ce
-                            laissez-passer n'a pas pu être identifié.</p></note>
-                    <foreign xml:lang="fr"><hi rend="latin"><unclear cert="high" reason="illegible">lhospice</unclear></hi></foreign>
-                    <foreign xml:lang="fr"><hi rend="latin">du <placeName ref="#l0183" type="bi">grand S<hi rend="superscript">t</hi>.
-                                bernard</placeName></hi></foreign>. (von<lb/>
-                    <hi rend="latin"><placeName ref="#l0133" type="bi">Cormayeur</placeName></hi> dahin, zweimal aus dem Som̄er in den Winter<lb/> in
-                    einem Tag, man kriegt auf hohen Bergen Gemsen<lb/> natur, müde zu werden <subst>
-                        <del rend="strikethrough">ist</del>
-                        <add place="inline">wird</add>
-                    </subst>
-                    <subst>
-                        <del rend="overwritten">ü</del>
-                        <add place="across">u</add>
-                    </subst>nmöglich, und besonders<lb/> das <subst>
-                        <del rend="strikethrough">hin<unclear cert="medium" reason="illegible">steigen</unclear></del>
-                        <add place="below">auf steigen</add>
-                    </subst> wird leich<subst>
-                        <del rend="overwritten"><gap extent="2 characters" reason="illegible"/></del>
-                        <add place="across">te</add>
-                    </subst>r als das absteigen.)<lb/>
-                    <hi rend="latin"><placeName ref="#l0142" type="bi">Martigni</placeName></hi>
-                    <hi rend="latin"><placeName ref="#l0143" type="bi">Sion</placeName></hi>, <foreign xml:lang="fr"><hi rend="latin">les bas de
-                                <placeName ref="#l0144" type="bi">Leuck</placeName></hi></foreign>. <foreign xml:lang="fr"><hi rend="latin">la
-                                <placeName ref="#l0174" type="bi">gem̄i</placeName></hi></foreign><note resp="#lena.ebert"><p xml:lang="de">Ein
-                            Pass.</p><p xml:lang="en">A pass.</p><p xml:lang="fr">Une passe.</p></note><lb/> Das Herrliche <hi rend="latin"><placeName ref="#l0176" type="bi">Kandergrund</placeName></hi>, <placeName ref="#l0200" type="bi">Thuner See</placeName>, <del rend="strikethrough">unter <unclear cert="low" reason="illegible"><del rend="overwritten">laken</del>
-                            <add place="across">seen</add></unclear></del><lb/>
-                    <hi rend="latin"><placeName ref="#l0138" type="bi">Unterseen</placeName></hi>, und <placeName ref="#l0139" type="bi">Hinterla<unclear cert="medium" reason="illegible">k</unclear>en</placeName>. <hi rend="latin"><placeName ref="#l0140" type="bi">Lauterbrunn</placeName></hi>,<lb/> da der <hi rend="latin">Staubbach</hi><note resp="#lena.ebert"><p xml:lang="de">Der Staubbachfall ist ein Wasserfall in der Nähe von <placeName ref="#l0140" type="bi">Lauterbrunnen</placeName>.</p><p xml:lang="en">The Staubbachfall is a waterfall near <placeName ref="#l0140" type="bi">Lauterbrunnen</placeName>.</p><p xml:lang="fr">Le Staubbachfall est une cascade près de <placeName ref="#l0140" type="bi">Lauterbrunnen</placeName>.</p></note> – an der <placeName ref="#l0175" type="bi">Jungfrau</placeName>
-                    <choice>
-                        <unclear cert="high" reason="illegible">den</unclear>
-                        <unclear cert="low" reason="illegible">dem</unclear>
-                    </choice>
-                    <placeName ref="#l0199" type="bi">Mönch</placeName>
-                    <choice>
-                        <abbr>usw</abbr>
-                        <expan>und so weiter</expan>
-                    </choice>
-                </p>
-                <pb facs="iiif:10.34847/nkl.acdf30kn/6ae9b2e90456bdba22073b6a55e6a27ad40b0f13" n="3"/>
-                <note hand="#pencil_2" place="margin(right)" type="foliation">10</note>
-                <p>fort vorbei, nach <placeName ref="#l0177" type="bi">Grindelwald</placeName>, <del rend="strikethrough"><gap extent="3 characters" reason="illegible"/></del> über die<lb/>
-                    <hi rend="latin"><placeName ref="#l0186" type="bi">Scheidec<supplied cert="high" reason="damage">k</supplied></placeName></hi><note resp="#lena.ebert"><p xml:lang="de">Eigentlich "Große Scheidegg", ein Pass.</p><p xml:lang="en">Actually "Große Scheidegg", a pass.</p><p xml:lang="fr">En fait "Große Scheidegg", un
-                        laissez-passer.</p></note> nach <hi rend="latin"><placeName ref="#l0147" type="bi">Meiringen</placeName></hi>, – (das
-                        <placeName ref="#l0173" type="bi">Thal Ha<subst>
-                            <del rend="overwritten">l</del>
-                            <add place="across">s</add>
-                        </subst>li</placeName>,<lb/> wo Die schönsten Weiber sind, – der Regenbach.)<lb/> Die <placeName ref="#l0184" type="bi">Grimsel</placeName><note resp="#lena.ebert"><p xml:lang="de">Ein weiterer Pass.</p><p xml:lang="en">Another pass.</p><p xml:lang="fr">Une autre passe.</p></note> d<unclear cert="medium" reason="illegible"><subst>
-                            <del rend="overwritten">ie</del>
-                            <add place="across">en</add>
-                        </subst></unclear>
-                    <del rend="strikethrough"><hi rend="latin">Fourca</hi></del>
-                    <hi rend="latin">Rhone</hi>glätscher, die <hi rend="latin"><placeName ref="#l0185" type="bi">Fourca</placeName></hi><note resp="#lena.ebert">Ebenfalls ein Pass.</note><lb/> am Fuße des <hi rend="latin"><placeName ref="#l0197" type="bi">Gotard</placeName></hi>. – den <hi rend="latin"><placeName ref="#l0197" type="bi">Gotard</placeName></hi> hinauf<lb/>
-                    hinab, durchs Urseler loch<note resp="#lena.ebert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> meint
-                            vermutlich das "Urnerloch", es handelt sich um einen Bergtunnel (<ref target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">Eintrag im HLS</ref> [Zugriff 17.07.2012]).</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> probably means the "Urnerloch", it is a mountain tunnel (<ref target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">entry in HLS</ref> [accessed on July 17, 2012]).</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> signifie probablement le « Urnerloch », c'est un tunnel
-                            de montagne (<ref target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">entrée en HLS</ref> [consulté le 17 juillet
-                            2012]).</p></note> über die Teufels Brücke<lb/> hinab nach <hi rend="latin"><placeName ref="#l0134" type="bi">Altorf</placeName></hi>, nur zur <hi rend="latin"><unclear cert="medium" reason="illegible">Seé</unclear>
-                        tellscapelle</hi>,<note resp="#lena.ebert"><p xml:lang="de">Die Tellskapelle steht am <placeName ref="#l0171" type="bi">Vierwaldstätter See</placeName>, in dessen Gebiet sich <placeName ref="#l0134" type="bi">Altdorf</placeName> und
-                                <placeName ref="#l0135" type="bi">Schwyz</placeName> befinden.</p><p xml:lang="en">The Tell Chapel stands on
-                                <placeName ref="#l0171" type="bi">Lake Lucerne</placeName>, in whose area <placeName ref="#l0134" type="bi">Altdorf</placeName> and <placeName ref="#l0135" type="bi">Schwyz</placeName> are located.</p><p xml:lang="fr">La
-                            chapelle Tell se dresse sur <placeName ref="#l0171" type="bi">le lac des Quatre-Cantons</placeName>, dans la région duquel
-                            se trouvent <placeName ref="#l0134" type="bi">Altdorf</placeName> et <placeName ref="#l0135" type="bi">Schwyz</placeName>.</p></note><lb/>
-                    <hi rend="latin"><placeName ref="#l0135" type="bi">Schwiz</placeName></hi>, der <hi rend="latin">bergfall</hi> der <hi rend="latin"><placeName ref="#l0136" type="bi">Goldau</placeName></hi> verschüttete<note resp="#lena.ebert"><p xml:lang="de">Am <date when-iso="1806-09-02">2. September 1806</date> wurde der gesamte Ort <placeName ref="#l0136" type="bi">Goldau</placeName> bei einem Bergsturz begraben (<ref target="http://hls-dhs-dss.ch/textes/d/D7436.php">Eintrag im
-                                HLS</ref> [Zugriff 17.07.2012]).</p><p xml:lang="en">On <date when-iso="1806-09-02">September 2, 1806</date>, the
-                            entire village of <placeName ref="#l0136" type="bi">Goldau</placeName> was buried in a landslide (<ref target="http://hls-dhs-dss.ch/textes/d/D7436.php">entry in HLS</ref> [accessed on July 17, 2012]).</p><p xml:lang="fr">Le <date when-iso="1806-09-02">2 septembre 1806</date>, tout le village de <placeName ref="#l0136" type="bi">Goldau</placeName> est enseveli dans un glissement de terrain (<ref target="http://hls-dhs-dss.ch/textes/d/D7436.php">entrée dans HLS</ref> [consulté le 17 juillet 2012]).</p></note><lb/> der <hi rend="latin"><placeName ref="#l0201" type="bi">Rigi</placeName></hi>,<note resp="#lena.ebert"><p xml:lang="de">Ein Berg in der Nähe von <placeName ref="#l0132" type="bi">Küssnacht</placeName> und dem <placeName ref="#l0171" type="bi">Vierwaldstätter See</placeName>.</p>
-                        <p xml:lang="en">A mountain near <placeName ref="#l0132" type="bi">Küssnacht</placeName> and <placeName ref="#l0171" type="bi">Lake Lucerne</placeName>.</p><p xml:lang="fr">Une montagne près de <placeName ref="#l0132" type="bi">Küssnacht</placeName> et du <placeName ref="#l0171" type="bi">lac des Quatre-Cantons</placeName>.</p></note>
-                    <hi rend="latin"><placeName ref="#l0132" type="bi">Küssnacht</placeName></hi>, <hi rend="latin"><placeName ref="#l0137" type="bi">Zug</placeName></hi>, <hi rend="latin"><placeName ref="#l0089" type="bi">Zürig</placeName></hi>, <hi rend="latin"><placeName ref="#l0130" type="bi">Schafhausen</placeName></hi>. <add place="below">–</add></p>
-                <p><hi rend="latin">adressen</hi> – beim Buchhändler <hi rend="latin"><persName ref="#p0239" type="bi">Hitzig</persName></hi> in <hi rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi><lb/> mehr als genug – <foreign xml:lang="fr"><hi rend="latin">le Baron <persName ref="#p0257" type="bi">auguste de<lb/> Sta<subst>
-                                    <del rend="overwritten">l</del>
-                                    <add place="across">e</add>
-                                </subst>l</persName> à <placeName ref="#l0079" type="bi">Genève</placeName></hi></foreign>, ebenfals mehr als
-                    genug.</p>
-                <p>– lebe wohl junge – ich kenne nun so<lb/> ziemlich die alpinische Pflanzen welt<lb/> ohne sagen zu wollen daß ich alle<lb/>
-                    Alpenpflanzen kenne –<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis "Tage besucht". Die
-                            Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point up to
-                            "days visited". The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est manquante à partir de ce
-                            point jusqu'à "jours visités". L'espace est marqué par une ellipse. </p>
-                    </note> die schönen<lb/>
-                    <foreign xml:lang="la"><hi rend="latin">Pediculares</hi></foreign><note resp="#lena.ebert"><p xml:lang="de">Läusekraut.</p><p xml:lang="en">Pedicularis</p><p xml:lang="fr">Pedicularis</p></note> des <hi rend="latin"><placeName ref="#l0183" type="bi">S. Bernhard</placeName></hi>! –<lb/> die schönen <hi rend="latin">Ranunkeln</hi>! . – <foreign xml:lang="la"><hi rend="latin underline">glacialis</hi></foreign>,<note resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la">Ranunculus glacialis</foreign> – Gletscher-Hahnenfuß.</p><p xml:lang="en">Ranunculus glacialis</p><p xml:lang="fr">Ranunculus glacialis</p></note><lb/>
-                    <foreign xml:lang="la"><hi rend="latin">alpina</hi></foreign><note resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la">Ranunculus alpestris</foreign> – Alpen-Hahnenfuß.</p><p xml:lang="en">Ranunculus alpestris</p><p xml:lang="fr">Renoncule alpestre</p></note>
-                    <foreign xml:lang="la"><hi rend="latin">pyr<unclear cert="high" reason="illegible">e</unclear>naica</hi></foreign>.<note resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la">Ranunculus pyrenaicus</foreign> (auch <foreign xml:lang="la">pyrenaeus</foreign>) – Pyrenäen-Hahnenfuß.</p><p xml:lang="en">Ranunculus pyrenaeus</p><p xml:lang="fr">Ranunculus
-                            pyrenaeus</p></note> – die <foreign xml:lang="la"><hi rend="latin">glacialis</hi></foreign><lb/> hat mich im<supplied cert="high" reason="illegible">me</supplied>r kindisch gefreut, – ich<lb/> habe mehr mals in ihrer <hi rend="latin">Region</hi> übernachtet,<lb/> mehrmals sie öfters in einem Tage<lb/> besucht. zum beschluß – (<foreign xml:lang="fr"><hi rend="latin">la petite piece</hi></foreign>)<lb/> eine Insch<supplied cert="high" reason="damage">r</supplied>ift die ich
-                    unter den <hi rend="latin">antiquiteten</hi></p>
-                <pb facs="iiif:10.34847/nkl.acdf30kn/f72e7dc5a1dd8daf73e29febfaa4f88d26f12d28" n="4" xml:id="Brief111ChamissoandeLaFoye-Blatt4v"/>
-                <note hand="#pencil_3" place="margin-vertical" type="signature">acc.ms.1991.36.</note>
-                <p>des Tempels <hi rend="latin">Jovis</hi> auf dem <hi rend="latin"><placeName ref="#l0183" type="bi">S<hi rend="superscript">t</hi>.
-                            Brernard</placeName></hi><note resp="#lena.ebert"><p xml:lang="de">Die Funde aus dem antiken Tempel, der sich auf dem
-                                <placeName ref="#l0183" type="bi">Großen Sankt Bernhard</placeName> befunden hatte, wurden teilweise im (auf der
-                            zweiten Briefseite erwähnten) Hospiz aufbewahrt, wie im fast zeitgenössischen Reiseführer <title ref="#w00331" type="bi">Die Schweiz. Ein Handbuch zunächst für Reisende</title> beschrieben wird (von Bollmann 1837: 789).</p><p xml:lang="en">The finds from the ancient temple, which was located on the <placeName ref="#l0183" type="bi">Great Saint
-                                Bernard</placeName>, were partly kept in the hospice (mentioned on the second page of the letter), as in the almost
-                            contemporary travel guide <title ref="#w00331" type="bi">Switzerland. A manual</title> is first described for travelers
-                            (von Bollmann 1837: 789).</p><p xml:lang="fr">Les trouvailles de l'ancien temple, situé sur le <placeName ref="#l0183" type="bi">Grand-Saint-Bernard</placeName>, étaient en partie conservées dans l'hospice (mentionné en deuxième page de
-                            la lettre), comme dans le guide de voyage presque contemporain <title ref="#w00331" type="bi">Suisse. Un manuel</title>
-                            est d'abord décrit pour les voyageurs (von Bollmann 1837 : 789).</p></note>
-                    <foreign xml:lang="fr"><hi rend="latin"><choice>
-                                <abbr>Dept</abbr>
-                                <expan>Departement</expan>
-                            </choice> du <placeName ref="#l0178" type="bi">Simplom</placeName></hi></foreign><note resp="#lena.ebert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamissos</persName> Angabe <placeName ref="#l0178" type="bi">Simplon</placeName>
-                            kann nicht zutreffen – der <placeName ref="#l0183" type="bi">Große Sankt Bernhard</placeName> befindet sich über hundert
-                            Kilometer entfernt von der Gemeinde Simplon.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName>'s
-                            statement <placeName ref="#l0178" type="bi">Simplon</placeName> cannot apply - the <placeName ref="#l0183" type="bi">Great
-                                Saint Bernard</placeName> is located over a hundred kilometers from the municipality of Simplon.</p><p xml:lang="fr">La déclaration de <persName ref="#p0237" type="bi">Chamisso</persName>
-                            <placeName ref="#l0178" type="bi">Simplon</placeName> ne peut pas s'appliquer - le <placeName ref="#l0183" type="bi">Grand
-                                Saint Bernard</placeName> est situé à plus d'une centaine de kilomètres de la commune de Simplon.</p></note>
-                    <del rend="strikethrough"><unclear cert="medium" reason="illegible">ge</unclear></del>
-                    <subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">h</add>
-                    </subst>eraus bemerk<unclear cert="high" reason="damage">t</unclear><lb/> habe – schöne goldene Buchstaben auf schwarzem
-                    Marmor.</p>
-                <p rend="align(center)"><quote><l><foreign xml:lang="la"><hi rend="latin">Napoleoni primo Francorum Imperatori semper august<unclear cert="medium" reason="illegible">o</unclear></hi></foreign></l>
-                        <l><foreign xml:lang="la"><hi rend="latin">Reipublicae valesianae restoratori semper optimo</hi></foreign></l>
-                        <l><foreign xml:lang="la"><hi rend="latin">Aegyptiaco, bis italico, semper invicto</hi></foreign></l>
-                        <l><foreign xml:lang="la"><hi rend="latin">In monte Jovis et semproni semper memorand<unclear cert="medium" reason="illegible">o</unclear></hi></foreign></l>
-                        <l><foreign xml:lang="la"><hi rend="latin">Res p<del rend="strikethrough">l</del>ublica valesiae</hi></foreign><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso,
-                                        Fragments inédits</title> steht <foreign xml:lang="la">"valesiana"</foreign> statt <foreign xml:lang="la">"valesiae"</foreign>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert
-                                        de Chamisso, Fragments inédits</title> stands <foreign xml:lang="la">"valesiana"</foreign> instead of <foreign xml:lang="la">"valesiae"</foreign>. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie <foreign xml:lang="la">"valesiana"</foreign> au lieu de <foreign xml:lang="la">"valesiae"</foreign>. </p>
-                            </note>
-                            <foreign xml:lang="la"><hi rend="latin">grata <hi rend="majuscule">II</hi> decembri anni <hi rend="majuscule">MDCCCIV</hi></hi></foreign></l></quote><note resp="#lena.ebert"><p xml:lang="de"><persName ref="#p0282" type="bi">Napoleon</persName> hatte den <placeName ref="#l0183" type="bi">Großen Sankt Bernhard</placeName> im Jahr <date when-iso="1800">1800</date> überquert. Im <title ref="#w00337" type="bi">Geographischen Lexikon der Schweiz</title>
-                            findet sich folgender, leicht abweichender Text der Inschrift: <foreign xml:lang="la">"Napoleoni Primo Francorum
-                                Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper Augusto, Aegyptiaco, bis Italico, semper
-                                invicto, In monte Jovis et Sempronii semper memorando Respublica Valesiae grata. 11 Decembris Anno MDCCCIV"</foreign>
-                            (Bd. 4, 1906: 390). <hi rend="latin">Eigene Übersetzung</hi>: Dem Kaiser Napoleon, Erster der Franzosen, der
-                            Unübertroffene, der den Wohlstand der <placeName ref="#l0124" type="bi">wallisischen Republik</placeName> erneuerte. Der
-                            ewige Kaiser, gegen <placeName ref="#l0168" type="bi">Ägypten</placeName> und zweimal <placeName ref="#l0072" type="bi">Italien</placeName> immer unbesiegt, auf dem Berge des Jovis [ein alter Name für den <placeName ref="#l0183" type="bi">Großen Sankt Bernhard</placeName>] und des Sempronius zur immerwährenden Erinnerung der dankbaren Republik
-                            Wallis. <date when-iso="1804-12-11">11. Dezember des Jahres 1804</date>.</p><p xml:lang="en"><persName ref="#p0282" type="bi">Napoleon</persName> crossed the <placeName ref="#l0183" type="bi">Great Saint Bernard</placeName> in <date when-iso="1800">1800</date>. In the <title ref="#w00337" type="bi">Geographical Lexicon of Switzerland</title> the
-                            following, slightly different text of the inscription can be found: "<foreign xml:lang="la">Napoleoni Primo Francorum
-                                Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper Augusto, Aegyptiaco, to Italico, semper
-                                invicto, In monte Jovis et Sempronii semper memorando grata Respublica Valesiae. 11 Decembris Anno MDCCCIV
-                            </foreign>"(Vol. 4, 1906: 390). <hi rend="latin">Own translation</hi>: To the Emperor Napoleon, first of the French, the
-                            unsurpassed who renewed the prosperity of the <placeName ref="#l0124" type="bi">Valais republic</placeName>. The eternal
-                            emperor, always undefeated against <placeName ref="#l0168" type="bi">Egypt</placeName> and twice <placeName ref="#l0072" type="bi">Italy</placeName>, on the mountains of Jovis [an old name for the Great Saint Bernard] and Sempronius as a
-                            permanent reminder of the grateful Republic of Valais. December 11, 1804.</p><p xml:lang="fr"><persName ref="#p0282" type="bi">Napoléon</persName> franchit le <placeName ref="#l0183" type="bi">Grand Saint-Bernard</placeName> en <date when-iso="1800">1800</date>. Dans le <title ref="#w00337" type="bi">Lexique géographique de la Suisse</title>, on
-                            trouve le texte suivant, légèrement différent de l'inscription : "<foreign xml:lang="la">Napoleoni Primo Francorum
-                                Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper Augusto, Aegyptiaco, to Italico, semper
-                                invicto, In monte Jovis et Sempronii semper memorando grata Respublica Valesiae. 11 Decembris Anno MDCCCIV
-                            </foreign>"(Vol. 4, 1906 : 390). <hi rend="latin">Traduction propre</hi> : A l'Empereur Napoléon, premier des Français,
-                            l'inégalable qui renouvela la prospérité de la <placeName ref="#l0124" type="bi">république valaisanne</placeName>.
-                            L'empereur éternel, toujours invaincu contre l'<placeName ref="#l0168" type="bi">Egypte</placeName> et deux fois
-                                l'<placeName ref="#l0072" type="bi">Italie</placeName>, sur les montagnes de Jovis [ancien nom du Grand Saint Bernard]
-                            et Sempronius en souvenir permanent de la reconnaissante République du Valais. 11 décembre 1804.</p></note></p>
-                <p>Die Monchen<note resp="#lena.ebert"><p xml:lang="de">Das Hospiz auf dem <placeName ref="#l0183" type="bi">Großen Sankt
-                                Bernhard</placeName> wird von den Augustiner Chorherren betrieben (<ref target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">Eintrag im HLS</ref> [Zugriff 03.12.2012]).</p><p xml:lang="en">The hospice on the <placeName ref="#l0183" type="bi">Great St. Bernard</placeName> is run by the Augustinian Canons (<ref target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">entry in HLS</ref> [accessed on December 3rd, 2012]).</p><p xml:lang="fr">L'hospice du <placeName ref="#l0183" type="bi">Grand Saint-Bernard</placeName> est dirigé par les chanoines
-                            augustins (<ref target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">entrée dans HLS</ref> [consulté le 3 décembre
-                            2012]).</p></note> dort sind menschen v<supplied cert="high" reason="stain">o</supplied>n der aller kleinsten Gattung.
-                    –</p>
-                <closer rend="align(center)">
-                    <stamp rend="align(center)">Schwarzer Poststempel, verwischt und etwas unleserlich. Er besagt "<placeName ref="#l0130" type="bi">Schafhouse</placeName>".</stamp>
-                    <stamp rend="align(center)">Ein weiterer Poststempel, der vertikal zur Adresse steht. Er besagt "<foreign xml:lang="fr"><placeName ref="#l0068" type="bi">Suisse</placeName> par <placeName ref="#l0141" type="bi">Huningue</placeName></foreign>".</stamp>
-                    <address rend="align(center)">
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">A Monsieur</hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">Monsieur <persName ref="#p0248" type="bi">Louis de la
-                                Foye</persName></hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">Professeur de Mathematiques</hi></foreign></addrLine>
-                        <note hand="#red_pencil_unknown" place="across">4</note>
-                        <lb/>
-                        <note hand="#postman" place="across"><unclear cert="low" reason="illegible">2</unclear></note>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">au college</hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin underline">de <placeName ref="#l0129" type="bi">Bayeux</placeName></hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin"><choice>
-                                        <abbr>Dpt</abbr>
-                                        <expan>Département</expan>
-                                    </choice> de <placeName ref="#l0108" type="bi">Calvados.</placeName></hi></foreign></addrLine>
-                    </address>
-                </closer>
-            </div>
-        </body>
-    </text>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (Schaffhausen, 27 August 1812)</title>
+				<title xml:lang="fr">Lettre de Adelbert von Chamisso à Louis de La Foye (Schaffhouse, 27 août 1812)</title>
+				<title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (Schaffhausen, 27. August 1812)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Prepared by</resp>
+					<persName ref="#lena.ebert">
+						<forename>Lena</forename>
+						<surname>Ebert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by-nc/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2012-12"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">French culture</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
+						<repository>Handschriftenabteilung</repository>
+						<collection>Sammlung Autographen: Chamisso, Adalbert</collection>
+						<idno type="stabi.berlin">Blatt 9 und 10</idno>
+						<idno type="kalliope">DE-611-HS-1551138</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1812-08-27"/>
+							<!--<note type="keyword" resp="#lena.ebert"></note>-->
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">Zwei Blätter.</measure>
+										<measure xml:lang="en">2 folios</measure>
+										<measure xml:lang="fr">2 feuillets</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#pencil_1">
+									<p xml:lang="de">Foliierung mit Bleistift.</p>
+									<p xml:lang="en">Foliation in pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Ordentlicher Erhaltungszustand, kleinere Einrisse und Knicke. Die Schrift ist kaum
+										beeinträchtigt.</p>
+									<p xml:lang="en">Neat condition, minor tears and creases. The writing is hardly affected.</p>
+									<p xml:lang="fr">Etat soigné, petites déchirures et plis. L'écriture n'est guère affectée.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
+								<p xml:lang="de">Hand des Adelbert von Chamisso, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of Adelbert von Chamisso, text of letter in black ink, mainly German script.</p>
+								<p xml:lang="fr">Main d'Adelbert von Chamisso, corps de la lettre, encre noire, écriture majoritairement gothique.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_3">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="red_pencil" scope="minor" scribe="unknown" xml:id="red_pencil_unknown">
+								<p xml:lang="de">Hand mit unbekannter Funktion, in rotem Buntstift.</p>
+								<p xml:lang="en">Hand with unknown function, in red pencil.</p>
+								<p xml:lang="fr">Main avec fonction inconnue, au crayon rouge.</p>
+							</handNote>
+							<handNote medium="black_ink" scope="minor" scribe="unknown" xml:id="postman">
+								<p xml:lang="de">Hand eines Postbeamten, in schwarzer Tinte.</p>
+								<p xml:lang="en">Hand of a postman, in black ink.</p>
+								<p xml:lang="fr">Main d'un postier, à l'encre noire.</p>
+							</handNote>
+						</handDesc>
+						<sealDesc>
+							<p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen (Reste des roten Siegels).</p>
+							<p xml:lang="en">The letter was closed with a red seal (Remnants of the red seal.).</p>
+							<p xml:lang="fr">La lettre était fermée par un sceau rouge (Vestiges du sceau rouge.)</p>
+						</sealDesc>
+						<accMat>
+							<p xml:lang="de"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Blatt 10v</ref> dient als Briefumschlag.</p>
+							<p xml:lang="en"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Page 10v</ref> is being used as envelope.</p>
+							<p xml:lang="fr"><ref target="#Brief111ChamissoandeLaFoye-Blatt4v">Le feuillet 10v</ref> sert d'enveloppe.</p>
+						</accMat>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Dieser Brief enstand in <origPlace ref="#l0130">Schaffhausen</origPlace> am <origDate
+									when-iso="1812-08-27">27. August 1812</origDate>. Schaffhausen war ein Zwischenstopp auf <persName ref="#p0237"
+									>Chamissos</persName> Reise von <placeName ref="#l0127">Coppet</placeName> (dort hatte er sich ab Frühling <date
+									when-iso="1811">1811</date> bei <persName ref="#p0255">Madame de Staël</persName> aufgehalten) nach <placeName
+									ref="#l1103">Berlin</placeName>, wo er sein Studium aufnehmen wollte. <persName ref="#p0261">Riegel</persName>
+								ordnet den Brief in der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+								chronologisch zwischen dem Brief von <persName ref="#p0248">de La Foye</persName> an Chamisso vom <date
+									when-iso="1812-07-28">28. Juli 1812</date> und dem ersten Brief von Chamisso an de La Foye aus Berlin ein, den er
+								auf <date when-iso="1812-11">November 1812</date> datiert.</p>
+							<p xml:lang="en">This letter was written in <origPlace ref="#l0130">Schaffhausen</origPlace> on <origDate
+									when-iso="1812-08-27">August 27th, 1812</origDate>. Schaffhausen was a stopover in <persName ref="#p0237"
+									>Chamisso's</persName> trip from <placeName ref="#l0127">Coppet</placeName> (where he had been staying from the
+								Spring of <date when-iso="1811">1811</date> on at <persName ref="#p0255">Madame de Staël's</persName>) to <placeName
+									ref="#l1103">Berlin</placeName>, where he intended to start studying.</p>
+							<p xml:lang="fr">Cette lettre a été écrite à <origPlace ref="#l0130">Schaffhausen</origPlace> le <origDate
+									when-iso="1812-08-27">27 août 1812</origDate>. Schaffhausen était une escale du voyage de <persName ref="#p0237"
+									>Chamisso</persName> de <placeName ref="#l0127">Coppet</placeName> (où il est resté pendant le printemps <date
+									when-iso="1811">1811</date> chez <persName ref="#p0255">Madame de Staël's</persName>) à <placeName ref="#l1103"
+									>Berlin</placeName>, où il avait l'intention de commencer à étudier.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Der Brief befindet sich in Besitz der Staatsbibliothek zu Berlin und wird in der Autographensammlung
+								Chamisso aufbewahrt. Zur Geschichte des Chamisso-Nachlasses siehe die <ref
+									target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/"
+									>Informationen der Staatsbibliothek zu Berlin</ref> [Zugriff 07.12.2012] über die Erschließung.</p>
+							<p xml:lang="en">The letter is in the possession of the Berlin State Library and is kept in the Chamisso collection of
+								autographs. For the history of the Chamisso estate, see <ref
+									target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/"
+									>Information from the Berlin State Library</ref> [Accessed December 07, 2012] on the indexing.</p>
+							<p xml:lang="fr">La lettre est possédée par la Bibliothèque d'État de Berlin et est conservée dans la collection
+								d'autographes Chamisso. Pour l'histoire du domaine Chamisso, voir <ref
+									target="http://staatsbibliothek-berlin.de/die-staatsbibliothek/abteilungen/handschriften/aufgaben-profil/projekte/nachlaesse-und-autographen/nachlass-adelbert-von-chamisso/"
+									>Informations de la Bibliothèque d'État de Berlin</ref> [Consulté le 7 décembre 2012] sur l'indexation.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
+										Chamisso, Fragments inédits</title>, Brief 109, S. 200-202. Dieser Druck unterscheidet sich bezüglich der
+									Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
+									Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, von z.B. der
+									ausführlichen Beschreibung von <persName ref="#p0237">Chamissos</persName> Reiseroute durch die <placeName
+										ref="#l0068">Schweiz</placeName> und einer Aufzählung von Pflanzen, werden nicht gekennzeichnet.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
+										Chamisso, Fragments inédits</title>, Letter 109, pp. 200-202. This printing differs in terms of spelling,
+									punctuation, upper and lower case and the correction of small grammatical errors. The change between current
+									script and Latin script is ignored. Omissions, e.g. from the detailed description of <persName ref="#p0237">
+										Chamissos </persName> route through <placeName ref="#l0068">Switzerland</placeName> and a list of plants, are
+									not marked.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
+										Chamisso, Fragments inédits</title>, Lettre 109, pp. 200-202. Cette impression diffère en termes
+									d'orthographe, de ponctuation, de majuscules et minuscules et de correction de petites erreurs grammaticales. Le
+									changement entre le script actuel et le script latin est ignoré. Les omissions, par exemple dans la description
+									détaillée de l'itinéraire de <persName ref="#p0237">Chamissos</persName> via la <placeName ref="#l0068">Suisse
+									</placeName> et une liste de plantes, ne sont pas signalées.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction>
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="90"/>
+				<language ident="fr" usage="3"/>
+				<language ident="la" usage="7"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
+					<placeName ref="https://www.geonames.org/2658761">Schaffhausen</placeName>
+					<date when-iso="1812-08-27"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief039ChamissoandeLaFoye.xml" type="prev"/>
+					<ref target="Brief053ChamissoandeLaFoye.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-03" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
+			<change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
+			<change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
+			<change when-iso="2013-11-23" who="#sabine.seifert">Updates seriesStmt.</change>
+			<change when-iso="2013-11-22" who="#sabine.seifert">Changed references from photos to facsimile by Stabi.</change>
+			<change when-iso="2012-07-15" who="#lena.ebert">Transcription, encoding of text and metadata.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.acdf30kn/9c0118788f169930b49a5e88231f4d061de78625" n="1"/>
+				<note hand="#pencil_1" place="margin(left)">
+					<hi rend="underline">1812</hi>
+				</note>
+				<note hand="#pencil_2" place="margin(right)" type="foliation">9</note>
+				<p>Doch biß zum <unclear cert="medium" reason="illegible">Verschneiden</unclear><note resp="#lena.ebert"><p xml:lang="de">Im <ref
+								target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden">Deutschen Wörterbuch von Jacob Grimm und Wilhelm
+								Grimm</ref> [Zugriff 17.07.2012] findet man unter "Verschneiden" sowohl die Bedeutungen "durch schneiden kürzen", was
+							man auf Pflanzen beziehen könnte, als auch "vernichten, hinwegnehmen". Schließlich könnte <persName ref="#p0237" type="bi"
+								>Chamisso</persName> auch "Verschneiden" und "Verscheiden" verwechselt haben.</p><p xml:lang="en">In the <ref
+								target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden">German dictionary by Jacob Grimm and Wilhelm Grimm</ref>
+							[accessed on July 17, 2012] you can find under "blending" both the meanings "shorten by cutting", which could be related
+							to plants, and "destroy, take away". Finally, <persName ref="#p0237" type="bi">Chamisso</persName> could have confused
+							"blending" and "differing".</p><p xml:lang="fr">Dans le <ref target="http://www.woerterbuchnetz.de/DWB?lemma=verschneiden"
+								>dictionnaire allemand de Jacob Grimm et Wilhelm Grimm</ref> [consulté le 17 juillet 2012], vous pouvez trouver sous
+							« mélange » à la fois les significations « raccourcir en coupant », qui pourraient être liées aux plantes, et « détruire,
+							emporter ». Enfin, <persName ref="#p0237" type="bi">Chamisso</persName> aurait pu confondre « mélange » et « différer
+							».</p></note>
+					<foreign xml:lang="fr"><hi rend="latin">Exclusive</hi></foreign>, hoffentlich!<note resp="#lena.ebert"><p xml:lang="de">Im Druck
+							der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieser erste
+							Satz. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> this first sentence is missing. The gap
+							is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert
+								de Chamisso, Fragments inédits</title> cette première phrase est manquante. L'espace n'est pas marqué par une ellipse.
+						</p>
+					</note></p>
+				<p>– aus <hi rend="latin"><placeName ref="#l0130" type="bi">Schafhausen</placeName></hi> schon, mein lieber, den <date
+						when-iso="1812-08-27">27 <choice>
+							<abbr>Aug.</abbr>
+							<expan>August</expan>
+						</choice></date><lb/> den <date when-iso="1812-08-29">29.</date> in <hi rend="latin"><placeName ref="#l0102" type="bi"
+							>Ulm</placeName></hi> also vor dem <date when-iso="1812-09-15">15.<hi rend="superscript">t</hi> 7.</date><note
+						resp="#lena.ebert"><p xml:lang="de">Die Sieben (lat. <foreign xml:lang="la">septem</foreign>) steht für September.</p>
+						<p xml:lang="en">The seven (lat. <foreign xml:lang="la">septem</foreign>) stands for September.</p><p xml:lang="fr">Le sept
+							(lat. <foreign xml:lang="la">septem</foreign>) signifie septembre.</p></note> in <hi rend="latin"><placeName ref="#l1103"
+							type="bi">Berlin</placeName></hi>. –</p>
+				<p>am Tage meiner Abreise, – <date when-iso="1812-08-11">11.</date><hi rend="superscript">ten</hi> glaub‘ ich – hab‘ ich<lb/> die
+					Pflanzen die den ersten <foreign xml:lang="fr"><hi rend="latin">Envois</hi></foreign> an dich ausmachen<lb/> sollen in ordnung
+					gebracht, und mit unlust bemerkt,<lb/>
+					<add place="margin">daß</add> manches, was ich dir bestim̄te oder noch hätte schicken<lb/>
+					<subst>
+						<del rend="strikethrough"><unclear cert="medium" reason="illegible">wollen</unclear></del>
+						<add place="above">konnen</add>
+					</subst>, hatte sich anders wohin verkrochen. – doch sind<lb/> bereits gute und schöne Sachen dabei<note resp="#lena.ebert"><p
+							xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							steht "darin" statt "dabei".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> stands "in" instead of "with". </p><p xml:lang="fr">Dans l'imprimé de la <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "dans" au lieu de "avec". </p>
+					</note> und ich habe<lb/>
+					<persName ref="#p0257" type="bi">augusten</persName> auf die Seele gebunden, <del rend="strikethrough">aus dem<lb/> Herbario</del>
+					noch das Herbarium nach möglichkeit<lb/> für dich auszu<unclear cert="high" reason="illegible">p</unclear>lündern – aus den
+					Pressen, die<lb/> ich noch schwanger ließ, muß dir vieles zufliessen<lb/> und manches aus den 3 <foreign xml:lang="fr"><hi
+							rend="latin">envois</hi></foreign> die ich <del rend="strikethrough"><unclear cert="low" reason="illegible"
+						>von</unclear></del><note resp="#lena.ebert" subtype="1"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> wird diese Streichung nicht wiedergegeben.</p><p
+							xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							this deletion is not reflected. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert
+								de Chamisso, Fragments inédits</title> cette suppression n'est pas reflétée. </p>
+					</note>
+					<note resp="#lena.ebert" subtype="2"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> bleibt das von <persName ref="#p0237" type="bi">Chamisso</persName> gestrichene
+							"von" stehen.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+								Fragments inédits</title> the "from" deleted by <persName ref="#p0237" type="bi"> Chamisso </persName> remains. </p><p
+							xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							le "from" supprimé par <persName ref="#p0237" type="bi">Chamisso</persName> reste. </p>
+					</note><lb/> der Reise aus<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+								d'Adalbert de Chamisso, Fragments inédits</title> fehlt dieses "aus".</p><p xml:lang="en">In the print of the <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> this "off" is missing. </p><p
+							xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							ce "off" est manquant. </p>
+					</note> an <hi rend="latin"><persName ref="#p0257" type="bi">August</persName></hi> gethan. –</p>
+				<p>Ein schönes Land, <hi rend="latin">Louis</hi>, ein schönes Land – und<lb/> andiesem Berggerippe des verschollenen <hi rend="latin"
+							><placeName ref="#l0050" type="bi">Europa</placeName></hi><lb/> gleichsam noch etwas lebendiges von der alten<lb/>
+					angeklebt geblieben – aber auf wie lange – man<lb/> mögte bluth weinen! – So klingt die alte<lb/> Inschrift der <hi rend="latin"
+						>Capelle</hi> in der Hohlen Gaß zu <placeName ref="#l0132" type="bi">Küssnacht</placeName>:</p>
+				<p rend="align(center)">
+					<quote>
+						<l><hi rend="latin"><subst>
+									<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+									<add place="across">H</add>
+								</subst>ier</hi> ist Geißlers Hochmuoth vom <hi rend="latin">Thäll</hi> erschoßen</l>
+						<l>Und die Schweizer edle Freiheit entsprossen.</l>
+						<l>Wie lang wird aber solche währen</l>
+						<l>Noch lang wenn<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+										d'Adalbert de Chamisso, Fragments inédits</title> steht "wann" statt "wenn".</p><p xml:lang="en">In the print
+									of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands "when" instead
+									of "if". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+										Fragments inédits</title> signifie "quand" au lieu de "si". </p>
+							</note> wir die Alte währen.</l>
+					</quote>
+					<note resp="#lena.ebert">
+						<p xml:lang="de">Der Sage nach wurde der Habsburger Vogt Gessler vom Schweizer Freiheitskämpfer Wilhelm Tell in der Hohlen
+							Gasse ermordet (<title ref="#w00327" type="bi">Reinhardt 2011</title>: 33–35).</p>
+						<p xml:lang="en">According to legend, the Habsburg Vogt Gessler was murdered by the Swiss freedom fighter William Tell in
+							Hohlen Gasse (<title ref="#w00327" type="bi">Reinhardt 2011</title>: 33–35).</p>
+						<p xml:lang="fr">Selon la légende, le Habsbourg Vogt Gessler a été assassiné par le combattant de la liberté suisse Guillaume
+							Tell à Hohlen Gasse (<title ref="#w00327" type="bi">Reinhardt 2011</title> : 33-35).</p>
+					</note>
+				</p>
+				<pb facs="iiif:10.34847/nkl.acdf30kn/b8e73aadccd6bcbc165babb790782ca048224bf5" n="2"/>
+				<p><choice>
+						<unclear cert="high" reason="illegible">Solte</unclear>
+						<unclear cert="low" reason="illegible">Solle</unclear>
+					</choice> man nicht die Mahnung von Heute wähnen.<lb/> – lieber <hi rend="latin">Louis</hi>, die Alten nicht mehr! – auf<lb/> den
+					Bergen und in den Sennhütten wohl noch<lb/> zur Noth – aber nicht in den Thalen und Winter<lb/> Haüser – .<note resp="#lena.ebert"
+							><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments
+								inédits</title> fehlt der Textabschnitt ab diesem Punkt bis "kennst mich". Die Lücke ist mit Auslassungspunkten
+							gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+								Fragments inédits</title> the text section is missing from this point up to "know me". The gap is marked with an
+							ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+								inédits</title> la section de texte est manquante à partir de ce point jusqu'à "connais-moi". L'espace est marqué par
+							une ellipse. </p>
+					</note> Du wilst doch nicht den <placeName ref="#l0198" type="bi">Montblanc</placeName><lb/> oder den <choice>
+						<unclear cert="high" reason="illegible">Riesigen</unclear>
+						<unclear cert="low" reason="illegible">Hiesigen</unclear>
+					</choice> Rheinfall an mich meßen – und<lb/> mich an sie zu messen, kennst du sie nicht und<lb/> kennst mich – doch doch <hi
+						rend="latin">Louis</hi>,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+								d'Adalbert de Chamisso, Fragments inédits</title> steht "Doch, lieber Louis" statt "doch doch Louis".</p><p
+							xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> it
+							says "Yes, dear Louis" instead of "Yes, but Louis". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> il dit "Oui, cher Louis" au lieu de "Oui, mais
+							Louis". </p>
+					</note> eine her̄liche<lb/> Reise – schön sind die Schneegipfeln <del rend="strikethrough"><unclear cert="low" reason="illegible"
+							>von</unclear></del><lb/>
+					<del rend="strikethrough">weitem</del> im abend scheine, <del rend="strikethrough">über</del> von weitem über<lb/>
+					<del rend="strikethrough"><gap extent="1 word" reason="illegible"/></del> laubwälder zu sehen, die schon in der Nacht<lb/> ruhn – her<subst>
+						<del rend="none">l</del>
+						<add place="inline">r</add>
+					</subst>lich der aufgang des mondes über<lb/> die <placeName ref="#l0177" type="bi">Grindelwald</placeName> glätscher, her̄lich
+					die erhabene<lb/> Ruhe des hiesigen R<add place="inline">h</add>einfalls.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der
+								<title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt der
+							Textabschnitt ab diesem Punkt bis "ebenfals mehr als genug" auf der folgenden Seite. Die Lücke ist mit Auslassungspunkten
+							gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+								Fragments inédits</title> the text section is missing from this point until "also more than enough" on the following
+							page. The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance
+								d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est manquante à partir de ce point jusqu'à
+							"également plus que suffisant" sur la page suivante. L'espace est marqué par une ellipse. </p>
+					</note> – sonst will ich<lb/> dir meinen weg sagen – – schlage bücher und<lb/> Charten nach – <foreign xml:lang="fr"><hi
+							rend="latin"><placeName ref="#l0079" type="bi">geneve</placeName></hi>, <hi rend="latin"><placeName ref="#l0180" type="bi"
+								>le col du bonhom̄e</placeName></hi>, <hi rend="latin"><placeName ref="#l0181" type="bi">le col d<unclear
+									cert="medium" reason="illegible">e</unclear> la Seigne</placeName></hi></foreign><lb/>
+					<hi rend="latin"><placeName ref="#l0133" type="bi">Cormayeur</placeName></hi>. (Italiänische Zunge<subst>
+						<del rend="none">,</del>
+						<add place="inline">)</add>
+					</subst>
+					<foreign xml:lang="fr"><hi rend="latin">le <subst>
+								<del rend="overwritten"><gap extent="1 word" reason="illegible"/></del>
+								<add place="across"><placeName ref="#l0172" type="bi"><unclear cert="high" reason="illegible"
+										>val</unclear></placeName></add>
+							</subst> et le <placeName ref="#l0182" type="bi">col Ferret</placeName>, le<lb/> col <choice>
+								<abbr>d.</abbr>
+								<expan>de</expan>
+							</choice>
+							<unclear cert="low" reason="illegible">Tonestre</unclear></hi></foreign>,<note resp="#lena.ebert"><p xml:lang="de">Dieser
+							Pass konnte nicht identifiziert werden.</p><p xml:lang="en">This pass could not be identified.</p><p xml:lang="fr">Ce
+							laissez-passer n'a pas pu être identifié.</p></note>
+					<foreign xml:lang="fr"><hi rend="latin"><unclear cert="high" reason="illegible">lhospice</unclear></hi></foreign>
+					<foreign xml:lang="fr"><hi rend="latin">du <placeName ref="#l0183" type="bi">grand S<hi rend="superscript">t</hi>.
+								bernard</placeName></hi></foreign>. (von<lb/>
+					<hi rend="latin"><placeName ref="#l0133" type="bi">Cormayeur</placeName></hi> dahin, zweimal aus dem Som̄er in den Winter<lb/> in
+					einem Tag, man kriegt auf hohen Bergen Gemsen<lb/> natur, müde zu werden <subst>
+						<del rend="strikethrough">ist</del>
+						<add place="inline">wird</add>
+					</subst>
+					<subst>
+						<del rend="overwritten">ü</del>
+						<add place="across">u</add>
+					</subst>nmöglich, und besonders<lb/> das <subst>
+						<del rend="strikethrough">hin<unclear cert="medium" reason="illegible">steigen</unclear></del>
+						<add place="below">auf steigen</add>
+					</subst> wird leich<subst>
+						<del rend="overwritten"><gap extent="2 characters" reason="illegible"/></del>
+						<add place="across">te</add>
+					</subst>r als das absteigen.)<lb/>
+					<hi rend="latin"><placeName ref="#l0142" type="bi">Martigni</placeName></hi>
+					<hi rend="latin"><placeName ref="#l0143" type="bi">Sion</placeName></hi>, <foreign xml:lang="fr"><hi rend="latin">les bas de
+								<placeName ref="#l0144" type="bi">Leuck</placeName></hi></foreign>. <foreign xml:lang="fr"><hi rend="latin">la
+								<placeName ref="#l0174" type="bi">gem̄i</placeName></hi></foreign><note resp="#lena.ebert"><p xml:lang="de">Ein
+							Pass.</p><p xml:lang="en">A pass.</p><p xml:lang="fr">Une passe.</p></note><lb/> Das Herrliche <hi rend="latin"><placeName
+							ref="#l0176" type="bi">Kandergrund</placeName></hi>, <placeName ref="#l0200" type="bi">Thuner See</placeName>, <del
+						rend="strikethrough">unter <unclear cert="low" reason="illegible"><del rend="overwritten">laken</del>
+							<add place="across">seen</add></unclear></del><lb/>
+					<hi rend="latin"><placeName ref="#l0138" type="bi">Unterseen</placeName></hi>, und <placeName ref="#l0139" type="bi"
+							>Hinterla<unclear cert="medium" reason="illegible">k</unclear>en</placeName>. <hi rend="latin"><placeName ref="#l0140"
+							type="bi">Lauterbrunn</placeName></hi>,<lb/> da der <hi rend="latin">Staubbach</hi><note resp="#lena.ebert"><p
+							xml:lang="de">Der Staubbachfall ist ein Wasserfall in der Nähe von <placeName ref="#l0140" type="bi"
+								>Lauterbrunnen</placeName>.</p><p xml:lang="en">The Staubbachfall is a waterfall near <placeName ref="#l0140"
+								type="bi">Lauterbrunnen</placeName>.</p><p xml:lang="fr">Le Staubbachfall est une cascade près de <placeName
+								ref="#l0140" type="bi">Lauterbrunnen</placeName>.</p></note> – an der <placeName ref="#l0175" type="bi"
+						>Jungfrau</placeName>
+					<choice>
+						<unclear cert="high" reason="illegible">den</unclear>
+						<unclear cert="low" reason="illegible">dem</unclear>
+					</choice>
+					<placeName ref="#l0199" type="bi">Mönch</placeName>
+					<choice>
+						<abbr>usw</abbr>
+						<expan>und so weiter</expan>
+					</choice>
+				</p>
+				<pb facs="iiif:10.34847/nkl.acdf30kn/6ae9b2e90456bdba22073b6a55e6a27ad40b0f13" n="3"/>
+				<note hand="#pencil_2" place="margin(right)" type="foliation">10</note>
+				<p>fort vorbei, nach <placeName ref="#l0177" type="bi">Grindelwald</placeName>, <del rend="strikethrough"><gap extent="3 characters"
+							reason="illegible"/></del> über die<lb/>
+					<hi rend="latin"><placeName ref="#l0186" type="bi">Scheidec<supplied cert="high" reason="damage"
+						>k</supplied></placeName></hi><note resp="#lena.ebert"><p xml:lang="de">Eigentlich "Große Scheidegg", ein Pass.</p><p
+							xml:lang="en">Actually "Große Scheidegg", a pass.</p><p xml:lang="fr">En fait "Große Scheidegg", un
+						laissez-passer.</p></note> nach <hi rend="latin"><placeName ref="#l0147" type="bi">Meiringen</placeName></hi>, – (das
+						<placeName ref="#l0173" type="bi">Thal Ha<subst>
+							<del rend="overwritten">l</del>
+							<add place="across">s</add>
+						</subst>li</placeName>,<lb/> wo Die schönsten Weiber sind, – der Regenbach.)<lb/> Die <placeName ref="#l0184" type="bi"
+						>Grimsel</placeName><note resp="#lena.ebert"><p xml:lang="de">Ein weiterer Pass.</p><p xml:lang="en">Another pass.</p><p
+							xml:lang="fr">Une autre passe.</p></note> d<unclear cert="medium" reason="illegible"><subst>
+							<del rend="overwritten">ie</del>
+							<add place="across">en</add>
+						</subst></unclear>
+					<del rend="strikethrough"><hi rend="latin">Fourca</hi></del>
+					<hi rend="latin">Rhone</hi>glätscher, die <hi rend="latin"><placeName ref="#l0185" type="bi">Fourca</placeName></hi><note
+						resp="#lena.ebert">Ebenfalls ein Pass.</note><lb/> am Fuße des <hi rend="latin"><placeName ref="#l0197" type="bi"
+							>Gotard</placeName></hi>. – den <hi rend="latin"><placeName ref="#l0197" type="bi">Gotard</placeName></hi> hinauf<lb/>
+					hinab, durchs Urseler loch<note resp="#lena.ebert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> meint
+							vermutlich das "Urnerloch", es handelt sich um einen Bergtunnel (<ref
+								target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">Eintrag im HLS</ref> [Zugriff 17.07.2012]).</p><p xml:lang="en"
+								><persName ref="#p0237" type="bi">Chamisso</persName> probably means the "Urnerloch", it is a mountain tunnel (<ref
+								target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">entry in HLS</ref> [accessed on July 17, 2012]).</p><p
+							xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> signifie probablement le « Urnerloch », c'est un tunnel
+							de montagne (<ref target="http://www.hls-dhs-dss.ch/textes/d/D8796.php">entrée en HLS</ref> [consulté le 17 juillet
+							2012]).</p></note> über die Teufels Brücke<lb/> hinab nach <hi rend="latin"><placeName ref="#l0134" type="bi"
+							>Altorf</placeName></hi>, nur zur <hi rend="latin"><unclear cert="medium" reason="illegible">Seé</unclear>
+						tellscapelle</hi>,<note resp="#lena.ebert"><p xml:lang="de">Die Tellskapelle steht am <placeName ref="#l0171" type="bi"
+								>Vierwaldstätter See</placeName>, in dessen Gebiet sich <placeName ref="#l0134" type="bi">Altdorf</placeName> und
+								<placeName ref="#l0135" type="bi">Schwyz</placeName> befinden.</p><p xml:lang="en">The Tell Chapel stands on
+								<placeName ref="#l0171" type="bi">Lake Lucerne</placeName>, in whose area <placeName ref="#l0134" type="bi"
+								>Altdorf</placeName> and <placeName ref="#l0135" type="bi">Schwyz</placeName> are located.</p><p xml:lang="fr">La
+							chapelle Tell se dresse sur <placeName ref="#l0171" type="bi">le lac des Quatre-Cantons</placeName>, dans la région duquel
+							se trouvent <placeName ref="#l0134" type="bi">Altdorf</placeName> et <placeName ref="#l0135" type="bi"
+							>Schwyz</placeName>.</p></note><lb/>
+					<hi rend="latin"><placeName ref="#l0135" type="bi">Schwiz</placeName></hi>, der <hi rend="latin">bergfall</hi> der <hi
+						rend="latin"><placeName ref="#l0136" type="bi">Goldau</placeName></hi> verschüttete<note resp="#lena.ebert"><p xml:lang="de"
+							>Am <date when-iso="1806-09-02">2. September 1806</date> wurde der gesamte Ort <placeName ref="#l0136" type="bi"
+								>Goldau</placeName> bei einem Bergsturz begraben (<ref target="http://hls-dhs-dss.ch/textes/d/D7436.php">Eintrag im
+								HLS</ref> [Zugriff 17.07.2012]).</p><p xml:lang="en">On <date when-iso="1806-09-02">September 2, 1806</date>, the
+							entire village of <placeName ref="#l0136" type="bi">Goldau</placeName> was buried in a landslide (<ref
+								target="http://hls-dhs-dss.ch/textes/d/D7436.php">entry in HLS</ref> [accessed on July 17, 2012]).</p><p xml:lang="fr"
+							>Le <date when-iso="1806-09-02">2 septembre 1806</date>, tout le village de <placeName ref="#l0136" type="bi"
+								>Goldau</placeName> est enseveli dans un glissement de terrain (<ref target="http://hls-dhs-dss.ch/textes/d/D7436.php"
+								>entrée dans HLS</ref> [consulté le 17 juillet 2012]).</p></note><lb/> der <hi rend="latin"><placeName ref="#l0201"
+							type="bi">Rigi</placeName></hi>,<note resp="#lena.ebert"><p xml:lang="de">Ein Berg in der Nähe von <placeName ref="#l0132"
+								type="bi">Küssnacht</placeName> und dem <placeName ref="#l0171" type="bi">Vierwaldstätter See</placeName>.</p>
+						<p xml:lang="en">A mountain near <placeName ref="#l0132" type="bi">Küssnacht</placeName> and <placeName ref="#l0171" type="bi"
+								>Lake Lucerne</placeName>.</p><p xml:lang="fr">Une montagne près de <placeName ref="#l0132" type="bi"
+								>Küssnacht</placeName> et du <placeName ref="#l0171" type="bi">lac des Quatre-Cantons</placeName>.</p></note>
+					<hi rend="latin"><placeName ref="#l0132" type="bi">Küssnacht</placeName></hi>, <hi rend="latin"><placeName ref="#l0137" type="bi"
+							>Zug</placeName></hi>, <hi rend="latin"><placeName ref="#l0089" type="bi">Zürig</placeName></hi>, <hi rend="latin"
+							><placeName ref="#l0130" type="bi">Schafhausen</placeName></hi>. <add place="below">–</add></p>
+				<p><hi rend="latin">adressen</hi> – beim Buchhändler <hi rend="latin"><persName ref="#p0239" type="bi">Hitzig</persName></hi> in <hi
+						rend="latin"><placeName ref="#l1103" type="bi">Berlin</placeName></hi><lb/> mehr als genug – <foreign xml:lang="fr"><hi
+							rend="latin">le Baron <persName ref="#p0257" type="bi">auguste de<lb/> Sta<subst>
+									<del rend="overwritten">l</del>
+									<add place="across">e</add>
+								</subst>l</persName> à <placeName ref="#l0079" type="bi">Genève</placeName></hi></foreign>, ebenfals mehr als
+					genug.</p>
+				<p>– lebe wohl junge – ich kenne nun so<lb/> ziemlich die alpinische Pflanzen welt<lb/> ohne sagen zu wollen daß ich alle<lb/>
+					Alpenpflanzen kenne –<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+								d'Adalbert de Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis "Tage besucht". Die
+							Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point up to
+							"days visited". The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est manquante à partir de ce
+							point jusqu'à "jours visités". L'espace est marqué par une ellipse. </p>
+					</note> die schönen<lb/>
+					<foreign xml:lang="la"><hi rend="latin">Pediculares</hi></foreign><note resp="#lena.ebert"><p xml:lang="de">Läusekraut.</p><p
+							xml:lang="en">Pedicularis</p><p xml:lang="fr">Pedicularis</p></note> des <hi rend="latin"><placeName ref="#l0183"
+							type="bi">S. Bernhard</placeName></hi>! –<lb/> die schönen <hi rend="latin">Ranunkeln</hi>! . – <foreign xml:lang="la"><hi
+							rend="latin underline">glacialis</hi></foreign>,<note resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la"
+								>Ranunculus glacialis</foreign> – Gletscher-Hahnenfuß.</p><p xml:lang="en">Ranunculus glacialis</p><p xml:lang="fr"
+							>Ranunculus glacialis</p></note><lb/>
+					<foreign xml:lang="la"><hi rend="latin">alpina</hi></foreign><note resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la"
+								>Ranunculus alpestris</foreign> – Alpen-Hahnenfuß.</p><p xml:lang="en">Ranunculus alpestris</p><p xml:lang="fr"
+							>Renoncule alpestre</p></note>
+					<foreign xml:lang="la"><hi rend="latin">pyr<unclear cert="high" reason="illegible">e</unclear>naica</hi></foreign>.<note
+						resp="#lena.ebert"><p xml:lang="de"><foreign xml:lang="la">Ranunculus pyrenaicus</foreign> (auch <foreign xml:lang="la"
+								>pyrenaeus</foreign>) – Pyrenäen-Hahnenfuß.</p><p xml:lang="en">Ranunculus pyrenaeus</p><p xml:lang="fr">Ranunculus
+							pyrenaeus</p></note> – die <foreign xml:lang="la"><hi rend="latin">glacialis</hi></foreign><lb/> hat mich im<supplied
+						cert="high" reason="illegible">me</supplied>r kindisch gefreut, – ich<lb/> habe mehr mals in ihrer <hi rend="latin"
+						>Region</hi> übernachtet,<lb/> mehrmals sie öfters in einem Tage<lb/> besucht. zum beschluß – (<foreign xml:lang="fr"><hi
+							rend="latin">la petite piece</hi></foreign>)<lb/> eine Insch<supplied cert="high" reason="damage">r</supplied>ift die ich
+					unter den <hi rend="latin">antiquiteten</hi></p>
+				<pb facs="iiif:10.34847/nkl.acdf30kn/f72e7dc5a1dd8daf73e29febfaa4f88d26f12d28" n="4" xml:id="Brief111ChamissoandeLaFoye-Blatt4v"/>
+				<note hand="#pencil_3" place="margin-vertical" type="signature">acc.ms.1991.36.</note>
+				<p>des Tempels <hi rend="latin">Jovis</hi> auf dem <hi rend="latin"><placeName ref="#l0183" type="bi">S<hi rend="superscript">t</hi>.
+							Brernard</placeName></hi><note resp="#lena.ebert"><p xml:lang="de">Die Funde aus dem antiken Tempel, der sich auf dem
+								<placeName ref="#l0183" type="bi">Großen Sankt Bernhard</placeName> befunden hatte, wurden teilweise im (auf der
+							zweiten Briefseite erwähnten) Hospiz aufbewahrt, wie im fast zeitgenössischen Reiseführer <title ref="#w00331" type="bi"
+								>Die Schweiz. Ein Handbuch zunächst für Reisende</title> beschrieben wird (von Bollmann 1837: 789).</p><p
+							xml:lang="en">The finds from the ancient temple, which was located on the <placeName ref="#l0183" type="bi">Great Saint
+								Bernard</placeName>, were partly kept in the hospice (mentioned on the second page of the letter), as in the almost
+							contemporary travel guide <title ref="#w00331" type="bi">Switzerland. A manual</title> is first described for travelers
+							(von Bollmann 1837: 789).</p><p xml:lang="fr">Les trouvailles de l'ancien temple, situé sur le <placeName ref="#l0183"
+								type="bi">Grand-Saint-Bernard</placeName>, étaient en partie conservées dans l'hospice (mentionné en deuxième page de
+							la lettre), comme dans le guide de voyage presque contemporain <title ref="#w00331" type="bi">Suisse. Un manuel</title>
+							est d'abord décrit pour les voyageurs (von Bollmann 1837 : 789).</p></note>
+					<foreign xml:lang="fr"><hi rend="latin"><choice>
+								<abbr>Dept</abbr>
+								<expan>Departement</expan>
+							</choice> du <placeName ref="#l0178" type="bi">Simplom</placeName></hi></foreign><note resp="#lena.ebert"><p xml:lang="de"
+								><persName ref="#p0237" type="bi">Chamissos</persName> Angabe <placeName ref="#l0178" type="bi">Simplon</placeName>
+							kann nicht zutreffen – der <placeName ref="#l0183" type="bi">Große Sankt Bernhard</placeName> befindet sich über hundert
+							Kilometer entfernt von der Gemeinde Simplon.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName>'s
+							statement <placeName ref="#l0178" type="bi">Simplon</placeName> cannot apply - the <placeName ref="#l0183" type="bi">Great
+								Saint Bernard</placeName> is located over a hundred kilometers from the municipality of Simplon.</p><p xml:lang="fr"
+							>La déclaration de <persName ref="#p0237" type="bi">Chamisso</persName>
+							<placeName ref="#l0178" type="bi">Simplon</placeName> ne peut pas s'appliquer - le <placeName ref="#l0183" type="bi">Grand
+								Saint Bernard</placeName> est situé à plus d'une centaine de kilomètres de la commune de Simplon.</p></note>
+					<del rend="strikethrough"><unclear cert="medium" reason="illegible">ge</unclear></del>
+					<subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">h</add>
+					</subst>eraus bemerk<unclear cert="high" reason="damage">t</unclear><lb/> habe – schöne goldene Buchstaben auf schwarzem
+					Marmor.</p>
+				<p rend="align(center)">
+					<quote>
+						<l>
+							<foreign xml:lang="la">
+								<hi rend="latin">Napoleoni primo Francorum Imperatori semper august<unclear cert="medium" reason="illegible"
+										>o</unclear></hi>
+							</foreign>
+						</l>
+						<l>
+							<foreign xml:lang="la">
+								<hi rend="latin">Reipublicae valesianae restoratori semper optimo</hi>
+							</foreign>
+						</l>
+						<l>
+							<foreign xml:lang="la">
+								<hi rend="latin">Aegyptiaco, bis italico, semper invicto</hi>
+							</foreign>
+						</l>
+						<l>
+							<foreign xml:lang="la">
+								<hi rend="latin">In monte Jovis et semproni semper memorand<unclear cert="medium" reason="illegible">o</unclear></hi>
+							</foreign>
+						</l>
+						<l>
+							<foreign xml:lang="la">
+								<hi rend="latin">Res p<del rend="strikethrough">l</del>ublica valesiae</hi>
+							</foreign>
+							<note resp="#lena.ebert">
+								<p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments
+										inédits</title> steht <foreign xml:lang="la">"valesiana"</foreign> statt <foreign xml:lang="la"
+										>"valesiae"</foreign>.</p>
+								<p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+										inédits</title> stands <foreign xml:lang="la">"valesiana"</foreign> instead of <foreign xml:lang="la"
+										>"valesiae"</foreign>. </p>
+								<p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+										inédits</title> signifie <foreign xml:lang="la">"valesiana"</foreign> au lieu de <foreign xml:lang="la"
+										>"valesiae"</foreign>. </p>
+							</note>
+							<foreign xml:lang="la">
+								<hi rend="latin">grata <hi rend="majuscule">II</hi> decembri anni <hi rend="majuscule">MDCCCIV</hi></hi>
+							</foreign>
+						</l>
+					</quote>
+					<note resp="#lena.ebert">
+						<p xml:lang="de"><persName ref="#p0282" type="bi">Napoleon</persName> hatte den <placeName ref="#l0183" type="bi">Großen Sankt
+								Bernhard</placeName> im Jahr <date when-iso="1800">1800</date> überquert. Im <title ref="#w00337" type="bi"
+								>Geographischen Lexikon der Schweiz</title> findet sich folgender, leicht abweichender Text der Inschrift: <foreign
+								xml:lang="la">"Napoleoni Primo Francorum Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper
+								Augusto, Aegyptiaco, bis Italico, semper invicto, In monte Jovis et Sempronii semper memorando Respublica Valesiae
+								grata. 11 Decembris Anno MDCCCIV"</foreign> (Bd. 4, 1906: 390). <hi rend="latin">Eigene Übersetzung</hi>: Dem Kaiser
+							Napoleon, Erster der Franzosen, der Unübertroffene, der den Wohlstand der <placeName ref="#l0124" type="bi">wallisischen
+								Republik</placeName> erneuerte. Der ewige Kaiser, gegen <placeName ref="#l0168" type="bi">Ägypten</placeName> und
+							zweimal <placeName ref="#l0072" type="bi">Italien</placeName> immer unbesiegt, auf dem Berge des Jovis [ein alter Name für
+							den <placeName ref="#l0183" type="bi">Großen Sankt Bernhard</placeName>] und des Sempronius zur immerwährenden Erinnerung
+							der dankbaren Republik Wallis. <date when-iso="1804-12-11">11. Dezember des Jahres 1804</date>.</p>
+						<p xml:lang="en"><persName ref="#p0282" type="bi">Napoleon</persName> crossed the <placeName ref="#l0183" type="bi">Great
+								Saint Bernard</placeName> in <date when-iso="1800">1800</date>. In the <title ref="#w00337" type="bi">Geographical
+								Lexicon of Switzerland</title> the following, slightly different text of the inscription can be found: "<foreign
+								xml:lang="la">Napoleoni Primo Francorum Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper
+								Augusto, Aegyptiaco, to Italico, semper invicto, In monte Jovis et Sempronii semper memorando grata Respublica
+								Valesiae. 11 Decembris Anno MDCCCIV </foreign>"(Vol. 4, 1906: 390). <hi rend="latin">Own translation</hi>: To the
+							Emperor Napoleon, first of the French, the unsurpassed who renewed the prosperity of the <placeName ref="#l0124" type="bi"
+								>Valais republic</placeName>. The eternal emperor, always undefeated against <placeName ref="#l0168" type="bi"
+								>Egypt</placeName> and twice <placeName ref="#l0072" type="bi">Italy</placeName>, on the mountains of Jovis [an old
+							name for the Great Saint Bernard] and Sempronius as a permanent reminder of the grateful Republic of Valais. December 11,
+							1804.</p>
+						<p xml:lang="fr"><persName ref="#p0282" type="bi">Napoléon</persName> franchit le <placeName ref="#l0183" type="bi">Grand
+								Saint-Bernard</placeName> en <date when-iso="1800">1800</date>. Dans le <title ref="#w00337" type="bi">Lexique
+								géographique de la Suisse</title>, on trouve le texte suivant, légèrement différent de l'inscription : "<foreign
+								xml:lang="la">Napoleoni Primo Francorum Imperatori, semper optimo, Reipublicae Valesianae Restauratori, semper
+								Augusto, Aegyptiaco, to Italico, semper invicto, In monte Jovis et Sempronii semper memorando grata Respublica
+								Valesiae. 11 Decembris Anno MDCCCIV </foreign>"(Vol. 4, 1906 : 390). <hi rend="latin">Traduction propre</hi> : A
+							l'Empereur Napoléon, premier des Français, l'inégalable qui renouvela la prospérité de la <placeName ref="#l0124"
+								type="bi">république valaisanne</placeName>. L'empereur éternel, toujours invaincu contre l'<placeName ref="#l0168"
+								type="bi">Egypte</placeName> et deux fois l'<placeName ref="#l0072" type="bi">Italie</placeName>, sur les montagnes de
+							Jovis [ancien nom du Grand Saint Bernard] et Sempronius en souvenir permanent de la reconnaissante République du Valais.
+							11 décembre 1804.</p>
+					</note>
+				</p>
+				<p>Die Monchen<note resp="#lena.ebert"><p xml:lang="de">Das Hospiz auf dem <placeName ref="#l0183" type="bi">Großen Sankt
+								Bernhard</placeName> wird von den Augustiner Chorherren betrieben (<ref
+								target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">Eintrag im HLS</ref> [Zugriff 03.12.2012]).</p><p xml:lang="en"
+							>The hospice on the <placeName ref="#l0183" type="bi">Great St. Bernard</placeName> is run by the Augustinian Canons (<ref
+								target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">entry in HLS</ref> [accessed on December 3rd, 2012]).</p><p
+							xml:lang="fr">L'hospice du <placeName ref="#l0183" type="bi">Grand Saint-Bernard</placeName> est dirigé par les chanoines
+							augustins (<ref target="http://www.hls-dhs-dss.ch/textes/d/D11407.php">entrée dans HLS</ref> [consulté le 3 décembre
+							2012]).</p></note> dort sind menschen v<supplied cert="high" reason="stain">o</supplied>n der aller kleinsten Gattung.
+					–</p>
+				<closer rend="align(center)">
+					<stamp rend="align(center)">Schwarzer Poststempel, verwischt und etwas unleserlich. Er besagt "<placeName ref="#l0130" type="bi"
+							>Schafhouse</placeName>".</stamp>
+					<stamp rend="align(center)">Ein weiterer Poststempel, der vertikal zur Adresse steht. Er besagt "<foreign xml:lang="fr"><placeName
+								ref="#l0068" type="bi">Suisse</placeName> par <placeName ref="#l0141" type="bi"
+						>Huningue</placeName></foreign>".</stamp>
+					<address rend="align(center)">
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">A Monsieur</hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">Monsieur <persName ref="#p0248" type="bi">Louis de la Foye</persName></hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">Professeur de Mathematiques</hi>
+							</foreign>
+						</addrLine>
+						<note hand="#red_pencil_unknown" place="across">4</note>
+						<lb/>
+						<note hand="#postman" place="across">
+							<unclear cert="low" reason="illegible">2</unclear>
+						</note>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">au college</hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin underline">de <placeName ref="#l0129" type="bi">Bayeux</placeName></hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin"><choice>
+										<abbr>Dpt</abbr>
+										<expan>Département</expan>
+									</choice> de <placeName ref="#l0108" type="bi">Calvados.</placeName></hi>
+							</foreign>
+						</addrLine>
+					</address>
+				</closer>
+			</div>
+		</body>
+	</text>
 </TEI>

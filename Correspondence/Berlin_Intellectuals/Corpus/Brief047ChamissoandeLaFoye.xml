@@ -1,418 +1,507 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (Geneva, at the beginning of 1812)</title>
-                <title xml:lang="fr">Lettre de Adelbert von Chamisso à Louis de La Foye (Genève, au début de 1812)</title>
-                <title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (Genf, Anfang 1812)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#lena.ebert">
-                        <forename>Lena</forename>
-                        <surname>Ebert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by-nc/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2012-07"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">French culture</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
-                        <repository>Handschriftenabteilung</repository>
-                        <collection>Nachlass de La Foye</collection>
-                        <idno type="stabi.berlin">Nachlass 239, Blatt 85 und 86</idno>
-                        <idno type="kalliope">DE-611-HS-1791297</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1812"/>
-                            <!--<note type="keyword" resp="#lena.ebert"></note>-->
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">Zwei Blätter.</measure>
-                                        <measure xml:lang="en">2 folios</measure>
-                                        <measure xml:lang="fr">2 feuillets</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#pencil_1">
-                                    <p xml:lang="de">Foliierung mit Bleistift.</p>
-                                    <p xml:lang="en">Foliation in pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
-                                </foliation>
-                                <foliation corresp="#pencil_2">
-                                    <p xml:lang="de">Foliierung mit Bleistift.</p>
-                                    <p xml:lang="en">Foliation in pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Guter Erhaltungszustand. Der Brief weist kleine Knicke, Einrisse und Falten auf, die Schrift ist
-                                        unbeeinträchtigt.</p>
-                                    <p xml:lang="en">Good state of preservation. The letter has small creases, tears and folds, the writing is
-                                        unimpaired.</p>
-                                    <p xml:lang="fr">Bon état de conservation. La lettre a de petits plis, des déchirures et des plis, l'écriture est
-                                        intacte.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Adelbert von Chamisso, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of Adelbert von Chamisso, text of letter in black ink, mainly German script.</p>
-                                <p xml:lang="fr">Main d'Adelbert von Chamisso, corps de la lettre, encre noire, écriture majoritairement
-                                gothique.</p></handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="black_ink" scope="minor" scribe="unknown" xml:id="postman">
-                                <p xml:lang="de">Hand eines Postbeamten, in schwarzer Tinte.</p>
-                                <p xml:lang="en">Hand of a postman, in black ink.</p>
-                                <p xml:lang="fr">Main d'un postier, à l'encre noire.</p>
-                            </handNote>
-                        </handDesc>
-                        <sealDesc>
-                            <p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen, von denen Reste vorhanden sind..</p>
-                            <p xml:lang="en">The letter was closed with a red seal, of which there are remains. .</p>
-                            <p xml:lang="fr">La lettre a été fermée par un sceau rouge, dont il y a des restes.</p>
-                        </sealDesc>
-                        <accMat><p xml:lang="de"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Blatt 4v</ref> dient als Briefumschlag.</p>
-                            <p xml:lang="en"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Page 4v</ref> is being used as envelope.</p>
-                            <p xml:lang="fr"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Le feuillet 4v</ref> sert d'enveloppe.</p></accMat>
-                    </physDesc>
-                    <history>
-                        <origin><p xml:lang="de">Dieser Brief entstand in <origPlace ref="#l0079">Genf</origPlace> zu <origDate notAfter-iso="1812-03" notBefore-iso="1812-01">Beginn des Jahres 1812</origDate>. Der Brief wurde in Genf gestempelt, außerdem schreibt
-                                    <persName ref="#p0237">Chamisso</persName>, dass sie erst demnächst zum <quote>Landgut</quote> zurückkehren
-                                werden, wobei es sich um <placeName ref="#l0127">Coppet</placeName> handeln müsste. <persName ref="#p0261">Riegel</persName> ordnet den Brief in der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                    inédits</title> chronologisch zwischen dem Brief von <persName ref="#p0248">de La Foye</persName> an Chamisso vom
-                                    <date when-iso="1812-01-06">6. Januar 1812</date> und dem Brief von de La Foye an Chamisso vom <date when-iso="1812-03-12">12. März 1812</date> ein und datiert ihn auf den Frühling <date when-iso="1812">1812</date>.</p>
-                            <p xml:lang="en">This letter was written either in <origPlace ref="#10079">Geneva</origPlace> at the <origDate notAfter-iso="1812-03" notBefore-iso="1812-01">beginning of the year 1812</origDate>.</p>
-                            <p xml:lang="fr">Cette lettre a été écrite soit à <origPlace ref="#10079">Genève</origPlace> au <origDate notAfter-iso="1812-03" notBefore-iso="1812-01">début de l'année 1812</origDate>.</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
-                                    1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
-                                Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
-                                Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
-                            <p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
-                                    <date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
-                                and loaned to the State Library.</p>
-                            <p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
-                                allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
-                                prêt durable à la Librairie d'État de Berlin.</p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl><bibl xml:lang="de">
-                                    <persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
-                                        Fragments inédits</title>, Brief 103, S. 194-195. Dieser Druck unterscheidet sich bezüglich der
-                                    Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
-                                    Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen werden z.T.
-                                    nicht gekennzeichnet.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
-                                        Chamisso, Fragments inédits</title>, Letter 103, pp. 194-195. This printing differs in terms of spelling,
-                                    punctuation, upper and lower case and the correction of small grammatical errors. The change between current
-                                    script and Latin script is ignored. Omissions are not marked.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
-                                        Chamisso, Fragments inédits</title>, Lettre 103, pp. 194-195. Cette impression diffère en termes
-                                    d'orthographe, de ponctuation, de majuscules et minuscules et de correction de petites erreurs grammaticales. Le
-                                    changement entre le script actuel et le script latin est ignoré. Les omissions ne sont pas marquées.</bibl></bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="95"/>
-                <language ident="fr" usage="5"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
-                    <placeName ref="https://www.geonames.org/7285902">Genf</placeName>
-                    <date when-iso="1812-01-01"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief049ChamissoandeLaFoye.xml" type="prev"/>
-                    <ref target="Brief050ChamissoandeLaFoye.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-26" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
-            <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
-            <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
-            <change when-iso="2013-05-02" who="#sabine.seifert">Added new elements title mit @type according to new structure of corpora.</change>
-            <change when-iso="2012-10-12" who="#anne.baillot">Modified file name and seriesStmt.</change>
-            <change when-iso="2012-07-15" who="#lena.ebert">First encoding and commenting </change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.5c0dh971/2015a2cb1694e26eee0727f16106b4e261be9c7e" n="1"/>
-                <note hand="#pencil_1" place="margin(left)">1811 ou 1812</note>
-                <note hand="#pencil_1" place="margin-top" type="foliation"><hi rend="underline">114</hi></note>
-                <note hand="#pencil_2" place="margin(right)" type="foliation">85</note>
-                <p>Ich will dir nur einen papiernen Kuß<lb/> Brüderlich zu werfen, Geschichte w<subst>
-                        <del rend="overwritten">u</del>
-                        <add place="across">ü</add>
-                    </subst>rde lang<lb/> und schal ausfallen – nur so viel, ich habe<lb/> den Winter auf die alte weise verbracht,<lb/> am alten
-                    Joche gottweißwie gebunden. Ich<lb/> war noch dazu <del rend="strikethrough"><unclear cert="medium" reason="illegible">verdam̄t</unclear></del> mit dem zweiten<lb/>
-                    <rs ref="#???" type="bi"><subst>
-                            <del rend="overwritten">
-                                <gap extent="1 word" reason="illegible"/>
-                            </del>
-                            <add place="across">Sohn<unclear cert="low" reason="illegible">e</unclear></add>
-                        </subst></rs> im selben Rauchfang weit ab selb ander<lb/> einquatiert, da hab ich von ihm und dessen<lb/>
-                    <rs ref="#???" type="bi">Freunde</rs> sehr schöne Dinge von <hi rend="latin"><persName ref="#???" type="bi">Quinte</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Da Quintus ein sehr häufig vorkommender lateinischer Vorname
-                            ist, kann man kaum rekonstruieren, welchen Text <persName ref="#p0237" type="bi">Chamisso</persName> gelesen hat.</p><p xml:lang="en">Since Quintus is a very common Latin given name, it is difficult to reconstruct which text <persName ref="#p0237" type="bi">Chamisso</persName> read.</p><p xml:lang="fr">Comme Quintus est un prénom latin très courant,
-                            il est difficile de reconstituer le texte lu par <persName ref="#p0237" type="bi">Chamisso</persName>.</p></note> und<lb/>
-                    zur abwechselung von der <foreign xml:lang="fr"><hi rend="latin">Chasse aux becasses</hi></foreign><lb/> gelernt – nun ist er
-                    Krank gewesen,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"ansteckenden Masern"</quote>.
-                            Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point up to
-                                <quote>"contagious measles"</quote>. The gap is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la
-                                <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est
-                            manquante à partir de ce point jusqu'à <quote>"rougeole contagieuse"</quote>. L'espace n'est pas marqué par une ellipse.
-                        </p>
-                    </note> erst<lb/> die gebenedeite Venerika, so dann die<lb/> gefürchteten ansteckenden Masern,<note resp="#lena.ebert"><p xml:lang="de">In einem Kommentar in der <title ref="#???">Correspondance Générale</title> der <persName ref="#p0255" type="bi">Madame de Staël</persName> wird vermutet, dass <persName ref="#???" type="bi">Albert de Staël</persName> an
-                            einer Geschlechtskrankheit litt (2008: 548, Kommentar 4), auch wenn in ihren Briefen aus dieser Zeit keine bestimmte
-                            Krankheit genannt wird. Tatsächlich wurde die Bezeichnung "venerica" in Zusammenhang mit der Syphillis verwendet, es ist
-                            aber auch nicht ausgeschlossen, dass <persName ref="#p0237" type="bi">Chamisso</persName> damit den Hautausschlag der
-                            Masern meint.<!--Quellenangabe fehlt.--></p><p xml:lang="en">In a comment in <persName ref="#p0255" type="bi">Madame de
-                                Staël</persName>'s <title ref="#???">Correspondance Générale</title>, it is assumed that <persName ref="#???" type="bi">Albert de Staël</persName> suffered from a venereal disease (2008: 548, comment 4), even if her letters from
-                            this period do not mention any specific disease. In fact, the term "venerica" was used in connection with syphilis, but it
-                            cannot be ruled out that Chamisso is referring to the measles rash.</p><p xml:lang="fr">Dans un commentaire de la <title ref="#???">Correspondance Générale</title> de <persName ref="#p0255" type="bi">Madame de Staël</persName>, on suppose
-                                qu'<persName ref="#???" type="bi">Albert de Staël</persName> souffrait d'une maladie vénérienne (2008 : 548,
-                            commentaire 4), même si ses lettres de cette période ne mentionnent aucune maladie spécifique. En fait, le terme
-                            "venerica" ​​a été utilisé à propos de la syphilis, mais il n'est pas exclu que Chamisso fasse référence à l'éruption
-                            rougeoleuse.</p></note> da<lb/> bin ich mit von der menschlichen gesellschaft<lb/> abgesondert worden, <subst>
-                        <del rend="strikethrough"><unclear cert="medium" reason="illegible">mit</unclear></del>
-                        <add place="above">von</add>
-                    </subst> guten freuden<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Freunden"</quote> statt
-                            <quote>"freuden"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> stands for <quote>"friends"</quote> instead of <quote>"joy"</quote>. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            signifie <quote>"amis"</quote> au lieu de <quote>"joie"</quote>. </p>
-                    </note><lb/> war indessen dies Loch nicht leer. –<lb/> auch einen Duel hat er gehabt, das<lb/> vertreibt alles die Zeit – ich
-                    habe<lb/> bei dem allen <hi rend="latin"><title ref="#???">Conaxa</title></hi>, das mir in die<lb/> Hand fiel und <del rend="strikethrough">
-                        <gap extent="1 word" reason="illegible"/>
-                    </del> das ich wohl mochte<lb/> in sehr schöne<del rend="strikethrough">n</del> Jamben für die <del rend="strikethrough">Bün</del><lb/> deutsche Büne <del rend="strikethrough">üb<unclear cert="medium" reason="illegible">er</unclear></del> übersetzt,
-                        <del rend="strikethrough">und</del> zwei abschrifften<lb/> verfertiget die eine an <hi rend="latin"><persName ref="#p0239" type="bi">Eduard</persName></hi> die<lb/> andere an <persName ref="#p0247" type="bi">Helmina</persName> geschickt:<note resp="#lena.ebert"><p xml:lang="de"><title ref="#???">Conaxa ou les Gendres dupés</title> wurde vermutlich Anfang <date when-iso="1700">1700</date> anonym verfasst. Es gelangte zu Bekanntheit, als <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> vorgeworfen wurde, dass sein Stück <title ref="#???">Les deux gendres</title>
-                                (<date when-iso="1810">1810</date>) ein Plagiat von Conaxa sei (<ref target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">Eintrag zu Etienne</ref> der
-                            Académie Française [Zugriff 15.07.2012]). Vgl. auch <persName ref="#p0237" type="bi">Chamissos</persName> Brief an
-                                <persName ref="#p0239" type="bi">Eduard Hitzig</persName>, den er der Übersetzung beilegte (in: <title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title>, Brief 131). Chamissos Conaxa-Fassung wurde nicht
-                            gespielt und ist verlorengegangen (<title ref="#???">Feudel 1988</title>: 64).</p><p xml:lang="en"><title ref="#???">Conaxa ou les Gendres dupés</title> was probably written anonymously at the beginning of <date when-iso="1700">1700</date>. It became known when <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> was accused
-                            that his play <title ref="#???">Les deux gendres</title> (<date when-iso="1810">1810</date>) was a plagiarism by Conaxa
-                                (<ref target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">entry on Etienne</ref>
-                            of the Académie Française [accessed July 15, 2012]). See also <persName ref="#p0237" type="bi">Chamisso</persName>'s
-                            letter to <persName ref="#p0239" type="bi">Eduard Hitzig</persName>, which he enclosed with the translation (in: <title ref="#w00277" type="bi">Life and Briefe von Adelbert von Chamisso</title>, Letter 131). Chamisso's Conaxa version was
-                            not played and has been lost (<title ref="#???">Feudel 1988</title>: 64).</p><p xml:lang="fr"><title ref="#???">Conaxa ou
-                                les Gendres dupés</title> a probablement été écrit de façon anonyme au début de <date when-iso="1700">1700</date>. Il
-                            est devenu connu lorsque <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> a été accusé que sa pièce
-                                <title ref="#???">Les deux gendres</title> (<date when-iso="1810">1810</date>) était un plagiat par Conaxa (<ref target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">entrée sur Etienne</ref> de
-                            l'Académie Française [consulté le 15 juillet 2012]). Voir aussi la lettre de <persName ref="#p0237" type="bi">Chamisso</persName> à <persName ref="#p0239" type="bi">Eduard Hitzig</persName>, qu'il a jointe à la traduction (in:
-                                <title ref="#w00277" type="bi">Life and Briefe von Adelbert von Chamisso</title>, Letter 131). La version Conaxa de
-                            Chamisso n'a pas été jouée et a été perdue (<title ref="#???">Feudel 1988</title>: 64).</p></note> – von<lb/> der
-                    letzteren hab ich noch nur Nachricht,<lb/> – sie versichert mich nehmlich das <add place="above">Ding</add> wäre<lb/> keines weges
-                    des Porto wehrt und ich hätte<lb/>
-                    <del rend="strikethrough"><unclear cert="low" reason="illegible">sie</unclear> ihr die Kosten wohl <gap extent="1 word" reason="illegible"/>
-                        <add place="above">weislich</add> sparen können</del><lb/> sie weislich damit verschonen können</p>
-                <pb facs="iiif:10.34847/nkl.5c0dh971/390ea65d3a999ff70909adaf10985581aef1e4d3" n="2"/>
-                <p>nun lern ich Englisch – siehe so weit<lb/> bin ich – <del rend="strikethrough">Ich g</del> die <rs ref="#p0255" type="bi_person">Herrin</rs> ist an Leib<lb/> und Seele Krank, elend, elend – ich wollte<lb/> nach meinem Norden, wo nun,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso,
-                                Fragments inédits</title> fehlt dieses <quote>"nun"</quote></p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> is missing this <quote>"now"</quote>.
-                            </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> il manque ce <quote>"maintenant"</quote>. </p>
-                    </note> nachden<lb/> lezten berichten, alles ruhig <del rend="strikethrough">
-                        <gap extent="2 characters" reason="illegible"/>
-                    </del> bleiben<lb/> wird mich sachte zurücke ziehen. Die<lb/> vorlesungen fangen April an – ich<lb/> kann diese Frau so nicht
-                    verlassen, <add place="inline">ich bleibe.</add><lb/> Die Tage gehen wir nach unserem<lb/> Landgut<note resp="#lena.ebert"><p xml:lang="de">Hiermit ist vermutlich <placeName ref="#l0127" type="bi">Coppet</placeName> gemeint.</p><p xml:lang="en">This probably means <placeName ref="#l0127" type="bi">Coppet</placeName>.</p><p xml:lang="fr">Cela signifie probablement
-                                <placeName ref="#l0127" type="bi">Coppet</placeName>.</p></note> zurüke und das weitere weiß<lb/> gott, ich bin müde
-                    über alle massen, <add place="inline">ich</add><lb/>
-                    <del rend="strikethrough">und</del> habe keinen willen mehr <del rend="strikethrough">
-                        <gap extent="3 characters" reason="illegible"/>
-                    </del> ich<lb/> sehe es noch mit an, daß mir die Beine<lb/> vom Leibe weg abfaulen <unclear cert="medium" reason="illegible">.</unclear> in Gottes<lb/> nahmen.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Namen"</quote> statt
-                                <quote>"nahmen"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> stands <quote>"Namen"</quote> instead of <quote>"nahmen"</quote>. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            signifie <quote>"Namen"</quote> au lieu de <quote>"nahmen"</quote>. </p>
-                    </note> Ich sitze hier biß zum jüngsten<lb/> Ge<subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">r</add>
-                    </subst>icht,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> steht <quote>"Tage"</quote> statt <quote>"Gericht"</quote>.</p><p xml:lang="en">In
-                            the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands for
-                                <quote>"days"</quote> instead of <quote>"judgment"</quote>. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie <quote>"jours"</quote> au lieu
-                            de <quote>"jugement"</quote>. </p>
-                    </note> das beste ist daß ich nicht mehr geld<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Gold"</quote> statt
-                                <quote>"geld"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> stands "gold" instead of "money". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "l'or" au lieu de "l'argent".
-                        </p>
-                    </note><lb/> brauche als ich habe, aber mit der so genannten<lb/> menschen bestimmung siehts erbärmlich aus.<lb/> Den Sommer werd
-                    ich wohl nicht einmal<lb/> dazu kommen, einen Spa<subst>
-                        <del rend="overwritten">
-                            <gap extent="1 character" reason="illegible"/>
-                        </del>
-                        <add place="across">z</add>
-                    </subst>iergang ins<lb/> Gebürg zu unter nehmen, ich seh‘ es kommen.<lb/> ich weiß schon wie das alles hier geht.<lb/><note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso,
-                                Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"auch gut"</quote> auf der folgenden
-                            Seite. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point to
-                                <quote>"also good"</quote> on the following page. The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans
-                            l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte
-                            est manquante de ce point à <quote>"aussi bien"</quote> sur la page suivante. L'espace est marqué par une ellipse. </p>
-                    </note> Ich bin mit <persName ref="#p0190" type="bi"><choice>
-                            <abbr>W. A. Sch.</abbr>
-                            <expan>Wilhelm August Schlegel</expan>
-                        </choice></persName> sehr mißvergnügt<lb/> wenn wir zusam̄en im selben Loche<lb/> eingesperrt sind weiß ich eben nicht<lb/>
-                    wie es gehen wird – vielleicht schnellt</p>
-                <pb facs="iiif:10.34847/nkl.5c0dh971/97ab87907668246eb62038a2fea2e40ff79227e5" n="3"/>
-                <note hand="#pencil_2" place="margin(right)" type="foliation">86</note>
-                <p>mich das weiter. <choice>
-                        <unclear cert="high" reason="illegible">auch</unclear>
-                        <unclear cert="low" reason="illegible">auf</unclear>
-                    </choice> gut. – das sind<lb/> ungefähr zwei Jahre die mir die Leute<lb/> wegfressen – gi<del rend="strikethrough"><unclear cert="high" reason="illegible">e</unclear></del>b mir immer hie<lb/> und da <subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">T</add>
-                    </subst>elegrafische Zeichen deiner<lb/> Freund<unclear cert="high" reason="illegible">sch</unclear>aft, guter, wenn, <subst>
-                        <del rend="strikethrough"><gap extent="3 characters" reason="illegible"/></del>
-                        <add place="above">(wozu</add>
-                    </subst> ich alle<lb/> Hoffnung aufgegeben habe<subst>
-                        <del rend="overwritten">,</del>
-                        <add place="above">)</add>
-                    </subst>
-                    <del rend="strikethrough">ich</del> wenn<lb/> ich doch mich fortbewegen <subst>
-                        <del rend="strikethrough">müßt</del>
-                        <add place="inline">sollte</add>
-                    </subst>,<lb/> so werd ich nicht er<subst>
-                        <del rend="overwritten">l</del>
-                        <add place="across">m</add>
-                    </subst>angeln es dir<lb/> zu berichten. – und in welche Richtung</p>
-                <closer>
-                    <salute>lebe wohl, ich lebe immer mit dir,<lb/> deiner liebe,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt <quote>"deiner
-                                    liebe"</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the
-                                    <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> is missing <quote>"your
-                                    love"</quote>. The gap is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> il manque <quote>"ton
-                                    amour"</quote>. L'espace n'est pas marqué par une ellipse. </p>
-                        </note> deinen Jungen, <del rend="strikethrough">und</del><lb/> und deinen Rauch wolken. lebe wohl<lb/> und mögen die Türken
-                        die Schwere noht<lb/> kriegen!<note resp="#lena.ebert"><p xml:lang="de">Eventuell gibt es hier einen Bezug auf <persName ref="#???" type="bi">Kleists</persName>
-                                <title ref="#???">Anekdote aus dem letzten preußischen Kriege</title>
-                                <date when-iso="1810">(1810)</date>, in der der folgende Satz vorkommt: <quote>"Na!" sagt der Kerl, die Pfeife, die er
-                                    sich angeschmaucht, im Maul: "nun sollen doch die Franzosen die Schwerenot kriegen!" In: <title ref="#???">Sämtliche Erzählungen und Anekdoten</title>, S. 264 f.</quote></p><p xml:lang="en">There may be a reference
-                                to <persName ref="#???" type="bi">Kleist</persName>'s <title ref="#???">anecdote from the last Prussian war</title>
-                                    (<date when-iso="1810">(1810)</date>), in which the following sentence occurs: <quote>"N / A!" says the guy with
-                                    the pipe he smoked on himself in his mouth: "Now the French are supposed to get into trouble!" In: <title ref="#???">All stories and anecdotes</title>, p. 264 f.</quote></p><p xml:lang="fr">Il peut y avoir une
-                                référence à <title ref="#???">l'anecdote de la dernière guerre prussienne</title> (<date when-iso="1810">(1810)</date>) de <persName ref="#???" type="bi">Kleist</persName>, dans laquelle la phrase suivante apparaît :
-                                    <quote>"N / A!" dit le gars avec la pipe qu'il a fumé sur lui-même dans la bouche : "Maintenant, les Français
-                                    devraient avoir de sérieux ennuis !" Dans : <title ref="#???">Toutes les histoires et anecdotes</title>, p.264
-                                    s.</quote></p></note> - </salute>
-                    <pb facs="iiif:10.34847/nkl.5c0dh971/12070a19170a00cdcb446a1e7010ed8ba65b914e" n="4" xml:id="Brief006ChamissoandeLaFoye-Blatt4v"/>
-                    <stamp rend="align(center)">Schwarzer Poststempel, der "99 <placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
-                    <address rend="align(center)">
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">Monsieur</hi></foreign></addrLine>
-                        <addrLine><hi rend="latin"><persName ref="#p0248" type="bi">Louis de la foye</persName></hi></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">professeur de Mathematique</hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">au college</hi></foreign></addrLine>
-                        <note hand="#postman" place="across"><unclear cert="medium" reason="illegible">9</unclear></note>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin">de <placeName ref="#l0129" type="bi">Bayeux</placeName></hi></foreign></addrLine>
-                        <addrLine><foreign xml:lang="fr"><hi rend="latin"><choice>
-                                        <abbr>Dept</abbr>
-                                        <expan>Departement</expan>
-                                    </choice> de <placeName ref="#l0108" type="bi">Calvados.</placeName></hi></foreign></addrLine>
-                    </address>
-                </closer>
-            </div>
-        </body>
-    </text>
-</TEI><!--Für Kommentierung:
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (Geneva, at the beginning of 1812)</title>
+				<title xml:lang="fr">Lettre de Adelbert von Chamisso à Louis de La Foye (Genève, au début de 1812)</title>
+				<title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (Genf, Anfang 1812)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Prepared by</resp>
+					<persName ref="#lena.ebert">
+						<forename>Lena</forename>
+						<surname>Ebert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by-nc/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2012-07"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">French culture</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
+						<repository>Handschriftenabteilung</repository>
+						<collection>Nachlass de La Foye</collection>
+						<idno type="stabi.berlin">Nachlass 239, Blatt 85 und 86</idno>
+						<idno type="kalliope">DE-611-HS-1791297</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1812"/>
+							<!--<note type="keyword" resp="#lena.ebert"></note>-->
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">Zwei Blätter.</measure>
+										<measure xml:lang="en">2 folios</measure>
+										<measure xml:lang="fr">2 feuillets</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#pencil_1">
+									<p xml:lang="de">Foliierung mit Bleistift.</p>
+									<p xml:lang="en">Foliation in pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
+								</foliation>
+								<foliation corresp="#pencil_2">
+									<p xml:lang="de">Foliierung mit Bleistift.</p>
+									<p xml:lang="en">Foliation in pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Guter Erhaltungszustand. Der Brief weist kleine Knicke, Einrisse und Falten auf, die Schrift ist
+										unbeeinträchtigt.</p>
+									<p xml:lang="en">Good state of preservation. The letter has small creases, tears and folds, the writing is
+										unimpaired.</p>
+									<p xml:lang="fr">Bon état de conservation. La lettre a de petits plis, des déchirures et des plis, l'écriture est
+										intacte.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
+								<p xml:lang="de">Hand des Adelbert von Chamisso, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of Adelbert von Chamisso, text of letter in black ink, mainly German script.</p>
+								<p xml:lang="fr">Main d'Adelbert von Chamisso, corps de la lettre, encre noire, écriture majoritairement gothique.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="black_ink" scope="minor" scribe="unknown" xml:id="postman">
+								<p xml:lang="de">Hand eines Postbeamten, in schwarzer Tinte.</p>
+								<p xml:lang="en">Hand of a postman, in black ink.</p>
+								<p xml:lang="fr">Main d'un postier, à l'encre noire.</p>
+							</handNote>
+						</handDesc>
+						<sealDesc>
+							<p xml:lang="de">Der Brief war durch ein rotes Siegel verschlossen, von denen Reste vorhanden sind..</p>
+							<p xml:lang="en">The letter was closed with a red seal, of which there are remains. .</p>
+							<p xml:lang="fr">La lettre a été fermée par un sceau rouge, dont il y a des restes.</p>
+						</sealDesc>
+						<accMat>
+							<p xml:lang="de"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Blatt 4v</ref> dient als Briefumschlag.</p>
+							<p xml:lang="en"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Page 4v</ref> is being used as envelope.</p>
+							<p xml:lang="fr"><ref target="#Brief006ChamissoandeLaFoye-Blatt4v">Le feuillet 4v</ref> sert d'enveloppe.</p>
+						</accMat>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Dieser Brief entstand in <origPlace ref="#l0079">Genf</origPlace> zu <origDate notAfter-iso="1812-03"
+									notBefore-iso="1812-01">Beginn des Jahres 1812</origDate>. Der Brief wurde in Genf gestempelt, außerdem schreibt
+									<persName ref="#p0237">Chamisso</persName>, dass sie erst demnächst zum <quote>Landgut</quote> zurückkehren
+								werden, wobei es sich um <placeName ref="#l0127">Coppet</placeName> handeln müsste. <persName ref="#p0261"
+									>Riegel</persName> ordnet den Brief in der <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+									inédits</title> chronologisch zwischen dem Brief von <persName ref="#p0248">de La Foye</persName> an Chamisso vom
+									<date when-iso="1812-01-06">6. Januar 1812</date> und dem Brief von de La Foye an Chamisso vom <date
+									when-iso="1812-03-12">12. März 1812</date> ein und datiert ihn auf den Frühling <date when-iso="1812"
+								>1812</date>.</p>
+							<p xml:lang="en">This letter was written either in <origPlace ref="#10079">Geneva</origPlace> at the <origDate
+									notAfter-iso="1812-03" notBefore-iso="1812-01">beginning of the year 1812</origDate>.</p>
+							<p xml:lang="fr">Cette lettre a été écrite soit à <origPlace ref="#10079">Genève</origPlace> au <origDate
+									notAfter-iso="1812-03" notBefore-iso="1812-01">début de l'année 1812</origDate>.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
+									1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
+								Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
+								Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
+							<p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
+									<date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date
+									when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
+								and loaned to the State Library.</p>
+							<p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
+								allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date
+									when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04"
+									>2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
+								prêt durable à la Librairie d'État de Berlin.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de">
+									<persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de Chamisso,
+										Fragments inédits</title>, Brief 103, S. 194-195. Dieser Druck unterscheidet sich bezüglich der
+									Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
+									Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen werden z.T.
+									nicht gekennzeichnet.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
+										Chamisso, Fragments inédits</title>, Letter 103, pp. 194-195. This printing differs in terms of spelling,
+									punctuation, upper and lower case and the correction of small grammatical errors. The change between current
+									script and Latin script is ignored. Omissions are not marked.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adelbert de
+										Chamisso, Fragments inédits</title>, Lettre 103, pp. 194-195. Cette impression diffère en termes
+									d'orthographe, de ponctuation, de majuscules et minuscules et de correction de petites erreurs grammaticales. Le
+									changement entre le script actuel et le script latin est ignoré. Les omissions ne sont pas marquées.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction>
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="95"/>
+				<language ident="fr" usage="5"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
+					<placeName ref="https://www.geonames.org/2660646">Genf</placeName>
+					<date when-iso="1812-01-01"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief049ChamissoandeLaFoye.xml" type="prev"/>
+					<ref target="Brief050ChamissoandeLaFoye.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-26" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
+			<change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
+			<change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
+			<change when-iso="2013-05-02" who="#sabine.seifert">Added new elements title mit @type according to new structure of corpora.</change>
+			<change when-iso="2012-10-12" who="#anne.baillot">Modified file name and seriesStmt.</change>
+			<change when-iso="2012-07-15" who="#lena.ebert">First encoding and commenting </change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.5c0dh971/2015a2cb1694e26eee0727f16106b4e261be9c7e" n="1"/>
+				<note hand="#pencil_1" place="margin(left)">1811 ou 1812</note>
+				<note hand="#pencil_1" place="margin-top" type="foliation">
+					<hi rend="underline">114</hi>
+				</note>
+				<note hand="#pencil_2" place="margin(right)" type="foliation">85</note>
+				<p>Ich will dir nur einen papiernen Kuß<lb/> Brüderlich zu werfen, Geschichte w<subst>
+						<del rend="overwritten">u</del>
+						<add place="across">ü</add>
+					</subst>rde lang<lb/> und schal ausfallen – nur so viel, ich habe<lb/> den Winter auf die alte weise verbracht,<lb/> am alten
+					Joche gottweißwie gebunden. Ich<lb/> war noch dazu <del rend="strikethrough"><unclear cert="medium" reason="illegible"
+							>verdam̄t</unclear></del> mit dem zweiten<lb/>
+					<rs ref="#???" type="bi"><subst>
+							<del rend="overwritten">
+								<gap extent="1 word" reason="illegible"/>
+							</del>
+							<add place="across">Sohn<unclear cert="low" reason="illegible">e</unclear></add>
+						</subst></rs> im selben Rauchfang weit ab selb ander<lb/> einquatiert, da hab ich von ihm und dessen<lb/>
+					<rs ref="#???" type="bi">Freunde</rs> sehr schöne Dinge von <hi rend="latin"><persName ref="#???" type="bi"
+						>Quinte</persName></hi><note resp="#lena.ebert"><p xml:lang="de">Da Quintus ein sehr häufig vorkommender lateinischer Vorname
+							ist, kann man kaum rekonstruieren, welchen Text <persName ref="#p0237" type="bi">Chamisso</persName> gelesen hat.</p><p
+							xml:lang="en">Since Quintus is a very common Latin given name, it is difficult to reconstruct which text <persName
+								ref="#p0237" type="bi">Chamisso</persName> read.</p><p xml:lang="fr">Comme Quintus est un prénom latin très courant,
+							il est difficile de reconstituer le texte lu par <persName ref="#p0237" type="bi">Chamisso</persName>.</p></note> und<lb/>
+					zur abwechselung von der <foreign xml:lang="fr"><hi rend="latin">Chasse aux becasses</hi></foreign><lb/> gelernt – nun ist er
+					Krank gewesen,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"ansteckenden Masern"</quote>.
+							Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point up to
+								<quote>"contagious measles"</quote>. The gap is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la
+								<title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte est
+							manquante à partir de ce point jusqu'à <quote>"rougeole contagieuse"</quote>. L'espace n'est pas marqué par une ellipse.
+						</p>
+					</note> erst<lb/> die gebenedeite Venerika, so dann die<lb/> gefürchteten ansteckenden Masern,<note resp="#lena.ebert"><p
+							xml:lang="de">In einem Kommentar in der <title ref="#???">Correspondance Générale</title> der <persName ref="#p0255"
+								type="bi">Madame de Staël</persName> wird vermutet, dass <persName ref="#???" type="bi">Albert de Staël</persName> an
+							einer Geschlechtskrankheit litt (2008: 548, Kommentar 4), auch wenn in ihren Briefen aus dieser Zeit keine bestimmte
+							Krankheit genannt wird. Tatsächlich wurde die Bezeichnung "venerica" in Zusammenhang mit der Syphillis verwendet, es ist
+							aber auch nicht ausgeschlossen, dass <persName ref="#p0237" type="bi">Chamisso</persName> damit den Hautausschlag der
+							Masern meint.<!--Quellenangabe fehlt.--></p><p xml:lang="en">In a comment in <persName ref="#p0255" type="bi">Madame de
+								Staël</persName>'s <title ref="#???">Correspondance Générale</title>, it is assumed that <persName ref="#???"
+								type="bi">Albert de Staël</persName> suffered from a venereal disease (2008: 548, comment 4), even if her letters from
+							this period do not mention any specific disease. In fact, the term "venerica" was used in connection with syphilis, but it
+							cannot be ruled out that Chamisso is referring to the measles rash.</p><p xml:lang="fr">Dans un commentaire de la <title
+								ref="#???">Correspondance Générale</title> de <persName ref="#p0255" type="bi">Madame de Staël</persName>, on suppose
+								qu'<persName ref="#???" type="bi">Albert de Staël</persName> souffrait d'une maladie vénérienne (2008 : 548,
+							commentaire 4), même si ses lettres de cette période ne mentionnent aucune maladie spécifique. En fait, le terme
+							"venerica" ​​a été utilisé à propos de la syphilis, mais il n'est pas exclu que Chamisso fasse référence à l'éruption
+							rougeoleuse.</p></note> da<lb/> bin ich mit von der menschlichen gesellschaft<lb/> abgesondert worden, <subst>
+						<del rend="strikethrough"><unclear cert="medium" reason="illegible">mit</unclear></del>
+						<add place="above">von</add>
+					</subst> guten freuden<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+								d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Freunden"</quote> statt
+							<quote>"freuden"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> stands for <quote>"friends"</quote> instead of <quote>"joy"</quote>. </p><p
+							xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							signifie <quote>"amis"</quote> au lieu de <quote>"joie"</quote>. </p>
+					</note><lb/> war indessen dies Loch nicht leer. –<lb/> auch einen Duel hat er gehabt, das<lb/> vertreibt alles die Zeit – ich
+					habe<lb/> bei dem allen <hi rend="latin"><title ref="#???">Conaxa</title></hi>, das mir in die<lb/> Hand fiel und <del
+						rend="strikethrough">
+						<gap extent="1 word" reason="illegible"/>
+					</del> das ich wohl mochte<lb/> in sehr schöne<del rend="strikethrough">n</del> Jamben für die <del rend="strikethrough"
+					>Bün</del><lb/> deutsche Büne <del rend="strikethrough">üb<unclear cert="medium" reason="illegible">er</unclear></del> übersetzt,
+						<del rend="strikethrough">und</del> zwei abschrifften<lb/> verfertiget die eine an <hi rend="latin"><persName ref="#p0239"
+							type="bi">Eduard</persName></hi> die<lb/> andere an <persName ref="#p0247" type="bi">Helmina</persName> geschickt:<note
+						resp="#lena.ebert"><p xml:lang="de"><title ref="#???">Conaxa ou les Gendres dupés</title> wurde vermutlich Anfang <date
+								when-iso="1700">1700</date> anonym verfasst. Es gelangte zu Bekanntheit, als <persName ref="#???" type="bi"
+								>Charles-Gauillaume Étienne</persName> vorgeworfen wurde, dass sein Stück <title ref="#???">Les deux gendres</title>
+								(<date when-iso="1810">1810</date>) ein Plagiat von Conaxa sei (<ref
+								target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">Eintrag zu Etienne</ref> der
+							Académie Française [Zugriff 15.07.2012]). Vgl. auch <persName ref="#p0237" type="bi">Chamissos</persName> Brief an
+								<persName ref="#p0239" type="bi">Eduard Hitzig</persName>, den er der Übersetzung beilegte (in: <title ref="#w00277"
+								type="bi">Leben und Briefe von Adelbert von Chamisso</title>, Brief 131). Chamissos Conaxa-Fassung wurde nicht
+							gespielt und ist verlorengegangen (<title ref="#???">Feudel 1988</title>: 64).</p><p xml:lang="en"><title ref="#???"
+								>Conaxa ou les Gendres dupés</title> was probably written anonymously at the beginning of <date when-iso="1700"
+								>1700</date>. It became known when <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> was accused
+							that his play <title ref="#???">Les deux gendres</title> (<date when-iso="1810">1810</date>) was a plagiarism by Conaxa
+								(<ref target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">entry on Etienne</ref>
+							of the Académie Française [accessed July 15, 2012]). See also <persName ref="#p0237" type="bi">Chamisso</persName>'s
+							letter to <persName ref="#p0239" type="bi">Eduard Hitzig</persName>, which he enclosed with the translation (in: <title
+								ref="#w00277" type="bi">Life and Briefe von Adelbert von Chamisso</title>, Letter 131). Chamisso's Conaxa version was
+							not played and has been lost (<title ref="#???">Feudel 1988</title>: 64).</p><p xml:lang="fr"><title ref="#???">Conaxa ou
+								les Gendres dupés</title> a probablement été écrit de façon anonyme au début de <date when-iso="1700">1700</date>. Il
+							est devenu connu lorsque <persName ref="#???" type="bi">Charles-Gauillaume Étienne</persName> a été accusé que sa pièce
+								<title ref="#???">Les deux gendres</title> (<date when-iso="1810">1810</date>) était un plagiat par Conaxa (<ref
+								target="http://www.academie-francaise.fr/immortels/base/academiciens/fiche.asp?param=321">entrée sur Etienne</ref> de
+							l'Académie Française [consulté le 15 juillet 2012]). Voir aussi la lettre de <persName ref="#p0237" type="bi"
+								>Chamisso</persName> à <persName ref="#p0239" type="bi">Eduard Hitzig</persName>, qu'il a jointe à la traduction (in:
+								<title ref="#w00277" type="bi">Life and Briefe von Adelbert von Chamisso</title>, Letter 131). La version Conaxa de
+							Chamisso n'a pas été jouée et a été perdue (<title ref="#???">Feudel 1988</title>: 64).</p></note> – von<lb/> der
+					letzteren hab ich noch nur Nachricht,<lb/> – sie versichert mich nehmlich das <add place="above">Ding</add> wäre<lb/> keines weges
+					des Porto wehrt und ich hätte<lb/>
+					<del rend="strikethrough"><unclear cert="low" reason="illegible">sie</unclear> ihr die Kosten wohl <gap extent="1 word"
+							reason="illegible"/>
+						<add place="above">weislich</add> sparen können</del><lb/> sie weislich damit verschonen können</p>
+				<pb facs="iiif:10.34847/nkl.5c0dh971/390ea65d3a999ff70909adaf10985581aef1e4d3" n="2"/>
+				<p>nun lern ich Englisch – siehe so weit<lb/> bin ich – <del rend="strikethrough">Ich g</del> die <rs ref="#p0255" type="bi_person"
+						>Herrin</rs> ist an Leib<lb/> und Seele Krank, elend, elend – ich wollte<lb/> nach meinem Norden, wo nun,<note
+						resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso,
+								Fragments inédits</title> fehlt dieses <quote>"nun"</quote></p><p xml:lang="en">In the print of the <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> is missing this <quote>"now"</quote>.
+							</p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+								inédits</title> il manque ce <quote>"maintenant"</quote>. </p>
+					</note> nachden<lb/> lezten berichten, alles ruhig <del rend="strikethrough">
+						<gap extent="2 characters" reason="illegible"/>
+					</del> bleiben<lb/> wird mich sachte zurücke ziehen. Die<lb/> vorlesungen fangen April an – ich<lb/> kann diese Frau so nicht
+					verlassen, <add place="inline">ich bleibe.</add><lb/> Die Tage gehen wir nach unserem<lb/> Landgut<note resp="#lena.ebert"><p
+							xml:lang="de">Hiermit ist vermutlich <placeName ref="#l0127" type="bi">Coppet</placeName> gemeint.</p><p xml:lang="en"
+							>This probably means <placeName ref="#l0127" type="bi">Coppet</placeName>.</p><p xml:lang="fr">Cela signifie probablement
+								<placeName ref="#l0127" type="bi">Coppet</placeName>.</p></note> zurüke und das weitere weiß<lb/> gott, ich bin müde
+					über alle massen, <add place="inline">ich</add><lb/>
+					<del rend="strikethrough">und</del> habe keinen willen mehr <del rend="strikethrough">
+						<gap extent="3 characters" reason="illegible"/>
+					</del> ich<lb/> sehe es noch mit an, daß mir die Beine<lb/> vom Leibe weg abfaulen <unclear cert="medium" reason="illegible"
+						>.</unclear> in Gottes<lb/> nahmen.<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Namen"</quote> statt
+								<quote>"nahmen"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> stands <quote>"Namen"</quote> instead of <quote>"nahmen"</quote>. </p><p
+							xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							signifie <quote>"Namen"</quote> au lieu de <quote>"nahmen"</quote>. </p>
+					</note> Ich sitze hier biß zum jüngsten<lb/> Ge<subst>
+						<del rend="overwritten">s</del>
+						<add place="across">r</add>
+					</subst>icht,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> steht <quote>"Tage"</quote> statt <quote>"Gericht"</quote>.</p><p xml:lang="en">In
+							the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands for
+								<quote>"days"</quote> instead of <quote>"judgment"</quote>. </p><p xml:lang="fr">Dans l'imprimé de la <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie <quote>"jours"</quote> au lieu
+							de <quote>"jugement"</quote>. </p>
+					</note> das beste ist daß ich nicht mehr geld<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> steht <quote>"Gold"</quote> statt
+								<quote>"geld"</quote>.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> stands "gold" instead of "money". </p><p xml:lang="fr">Dans l'imprimé de la <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "l'or" au lieu de "l'argent".
+						</p>
+					</note><lb/> brauche als ich habe, aber mit der so genannten<lb/> menschen bestimmung siehts erbärmlich aus.<lb/> Den Sommer werd
+					ich wohl nicht einmal<lb/> dazu kommen, einen Spa<subst>
+						<del rend="overwritten">
+							<gap extent="1 character" reason="illegible"/>
+						</del>
+						<add place="across">z</add>
+					</subst>iergang ins<lb/> Gebürg zu unter nehmen, ich seh‘ es kommen.<lb/> ich weiß schon wie das alles hier geht.<lb/><note
+						resp="#lena.ebert"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso,
+								Fragments inédits</title> fehlt der Textabschnitt ab diesem Punkt bis <quote>"auch gut"</quote> auf der folgenden
+							Seite. Die Lücke ist mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the <title ref="#w00253"
+								>Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the text section is missing from this point to
+								<quote>"also good"</quote> on the following page. The gap is marked with an ellipsis. </p><p xml:lang="fr">Dans
+							l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> la section de texte
+							est manquante de ce point à <quote>"aussi bien"</quote> sur la page suivante. L'espace est marqué par une ellipse. </p>
+					</note> Ich bin mit <persName ref="#p0190" type="bi"><choice>
+							<abbr>W. A. Sch.</abbr>
+							<expan>Wilhelm August Schlegel</expan>
+						</choice></persName> sehr mißvergnügt<lb/> wenn wir zusam̄en im selben Loche<lb/> eingesperrt sind weiß ich eben nicht<lb/>
+					wie es gehen wird – vielleicht schnellt</p>
+				<pb facs="iiif:10.34847/nkl.5c0dh971/97ab87907668246eb62038a2fea2e40ff79227e5" n="3"/>
+				<note hand="#pencil_2" place="margin(right)" type="foliation">86</note>
+				<p>mich das weiter. <choice>
+						<unclear cert="high" reason="illegible">auch</unclear>
+						<unclear cert="low" reason="illegible">auf</unclear>
+					</choice> gut. – das sind<lb/> ungefähr zwei Jahre die mir die Leute<lb/> wegfressen – gi<del rend="strikethrough"><unclear
+							cert="high" reason="illegible">e</unclear></del>b mir immer hie<lb/> und da <subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">T</add>
+					</subst>elegrafische Zeichen deiner<lb/> Freund<unclear cert="high" reason="illegible">sch</unclear>aft, guter, wenn, <subst>
+						<del rend="strikethrough"><gap extent="3 characters" reason="illegible"/></del>
+						<add place="above">(wozu</add>
+					</subst> ich alle<lb/> Hoffnung aufgegeben habe<subst>
+						<del rend="overwritten">,</del>
+						<add place="above">)</add>
+					</subst>
+					<del rend="strikethrough">ich</del> wenn<lb/> ich doch mich fortbewegen <subst>
+						<del rend="strikethrough">müßt</del>
+						<add place="inline">sollte</add>
+					</subst>,<lb/> so werd ich nicht er<subst>
+						<del rend="overwritten">l</del>
+						<add place="across">m</add>
+					</subst>angeln es dir<lb/> zu berichten. – und in welche Richtung</p>
+				<closer>
+					<salute>lebe wohl, ich lebe immer mit dir,<lb/> deiner liebe,<note resp="#lena.ebert"><p xml:lang="de">Im Druck der <title
+									ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> fehlt <quote>"deiner
+									liebe"</quote>. Die Lücke ist nicht mit Auslassungspunkten gekennzeichnet.</p><p xml:lang="en">In the print of the
+									<title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> is missing <quote>"your
+									love"</quote>. The gap is not marked with an ellipsis. </p><p xml:lang="fr">Dans l'imprimé de la <title
+									ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> il manque <quote>"ton
+									amour"</quote>. L'espace n'est pas marqué par une ellipse. </p>
+						</note> deinen Jungen, <del rend="strikethrough">und</del><lb/> und deinen Rauch wolken. lebe wohl<lb/> und mögen die Türken
+						die Schwere noht<lb/> kriegen!<note resp="#lena.ebert"><p xml:lang="de">Eventuell gibt es hier einen Bezug auf <persName
+									ref="#???" type="bi">Kleists</persName>
+								<title ref="#???">Anekdote aus dem letzten preußischen Kriege</title>
+								<date when-iso="1810">(1810)</date>, in der der folgende Satz vorkommt: <quote>"Na!" sagt der Kerl, die Pfeife, die er
+									sich angeschmaucht, im Maul: "nun sollen doch die Franzosen die Schwerenot kriegen!" In: <title ref="#???"
+										>Sämtliche Erzählungen und Anekdoten</title>, S. 264 f.</quote></p><p xml:lang="en">There may be a reference
+								to <persName ref="#???" type="bi">Kleist</persName>'s <title ref="#???">anecdote from the last Prussian war</title>
+									(<date when-iso="1810">(1810)</date>), in which the following sentence occurs: <quote>"N / A!" says the guy with
+									the pipe he smoked on himself in his mouth: "Now the French are supposed to get into trouble!" In: <title
+										ref="#???">All stories and anecdotes</title>, p. 264 f.</quote></p><p xml:lang="fr">Il peut y avoir une
+								référence à <title ref="#???">l'anecdote de la dernière guerre prussienne</title> (<date when-iso="1810"
+								>(1810)</date>) de <persName ref="#???" type="bi">Kleist</persName>, dans laquelle la phrase suivante apparaît :
+									<quote>"N / A!" dit le gars avec la pipe qu'il a fumé sur lui-même dans la bouche : "Maintenant, les Français
+									devraient avoir de sérieux ennuis !" Dans : <title ref="#???">Toutes les histoires et anecdotes</title>, p.264
+									s.</quote></p></note> - </salute>
+					<pb facs="iiif:10.34847/nkl.5c0dh971/12070a19170a00cdcb446a1e7010ed8ba65b914e" n="4" xml:id="Brief006ChamissoandeLaFoye-Blatt4v"/>
+					<stamp rend="align(center)">Schwarzer Poststempel, der "99 <placeName ref="#l0079" type="bi">Genève</placeName>" besagt.</stamp>
+					<address rend="align(center)">
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">Monsieur</hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<hi rend="latin">
+								<persName ref="#p0248" type="bi">Louis de la foye</persName>
+							</hi>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">professeur de Mathematique</hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">au college</hi>
+							</foreign>
+						</addrLine>
+						<note hand="#postman" place="across">
+							<unclear cert="medium" reason="illegible">9</unclear>
+						</note>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin">de <placeName ref="#l0129" type="bi">Bayeux</placeName></hi>
+							</foreign>
+						</addrLine>
+						<addrLine>
+							<foreign xml:lang="fr">
+								<hi rend="latin"><choice>
+										<abbr>Dept</abbr>
+										<expan>Departement</expan>
+									</choice> de <placeName ref="#l0108" type="bi">Calvados.</placeName></hi>
+							</foreign>
+						</addrLine>
+					</address>
+				</closer>
+			</div>
+		</body>
+	</text>
+</TEI>
+<!--Für Kommentierung:
 	- „Von Januar bis März 1812 hält sich Germaine de Staël in Genf auf, um ihre Memoiren zu schreiben.“ (Feudel)
 	- Dezember 1811: Chamisso geht mit Mme de Staël nach Genf. (Riegel, 385)
 	- März 1812: Mme de Staël kommt von Genf nach Coppet zurück. (Riegel, 391)

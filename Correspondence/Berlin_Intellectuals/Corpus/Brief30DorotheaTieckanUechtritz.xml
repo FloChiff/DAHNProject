@@ -1,285 +1,324 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Dorothea Tieck to Friedrich von Uechtritz (Dresden, 25 September 1837)</title>
-                <title xml:lang="fr">Lettre de Dorothea Tieck à Friedrich von Uechtritz (Dresden, 25 septembre 1837)</title>
-                <title xml:lang="de">Brief von Dorothea Tieck an Friedrich von Uechtritz (Dresden, 25. September 1837)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#sophia.zeil">
-                        <forename>Sophia</forename>
-                        <surname>Zeil</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2014-11">November 2014</date>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="sub">Dorothea Tieck</title>
-                <title type="sub">Briefe von Dorothea Tieck an Friedrich von Uechtritz</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">Translation</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Handwerk 2</street>
-                                <postCode>02826</postCode>
-                                <settlement>Görlitz</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>Nachlass Uechtritz</collection>
-                        <idno type="olb.goerlitz">Letter 28</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1837-09-25"/>
-                            <note resp="#sophia.zeil" type="keyword">Dorothea Tieck (translator)</note>
-                            <note resp="#sophia.zeil" type="keyword">Seclusion</note>
-                            <note resp="#sophia.zeil" type="keyword">Home call</note>
-                            <note resp="#sophia.zeil" type="keyword">Dorothea Tieck (self-description)</note>
-                            <note resp="#sophia.zeil" type="keyword">Depression</note>
-                            <note resp="#sophia.zeil" type="keyword">Religion</note>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Nichtgeripptes Papier.</material>
-                                        <material xml:lang="en">Paper, not laid.</material>
-                                        <material xml:lang="fr">Papier, non côtelé.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="leaf">
-                                        <seg xml:lang="de">1 Bogen, 2 Blätter</seg>
-                                        <seg xml:lang="en">2 folios</seg>
-                                        <seg xml:lang="fr">2 feuilles</seg>
-                                    </measure>
-                                    <!--<dimensions unit="cm">
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Dorothea Tieck to Friedrich von Uechtritz (Dresden, 25 September 1837)</title>
+				<title xml:lang="fr">Lettre de Dorothea Tieck à Friedrich von Uechtritz (Dresden, 25 septembre 1837)</title>
+				<title xml:lang="de">Brief von Dorothea Tieck an Friedrich von Uechtritz (Dresden, 25. September 1837)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#sophia.zeil">
+						<forename>Sophia</forename>
+						<surname>Zeil</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2014-11">November 2014</date>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="sub">Dorothea Tieck</title>
+				<title type="sub">Briefe von Dorothea Tieck an Friedrich von Uechtritz</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">Translation</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Handwerk 2</street>
+								<postCode>02826</postCode>
+								<settlement>Görlitz</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#olb.goerlitz">Oberlausitzische Bibliothek der Wissenschaften Görlitz</institution>
+						<repository>Manuscripts section</repository>
+						<collection>Nachlass Uechtritz</collection>
+						<idno type="olb.goerlitz">Letter 28</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1837-09-25"/>
+							<note resp="#sophia.zeil" type="keyword">Dorothea Tieck (translator)</note>
+							<note resp="#sophia.zeil" type="keyword">Seclusion</note>
+							<note resp="#sophia.zeil" type="keyword">Home call</note>
+							<note resp="#sophia.zeil" type="keyword">Dorothea Tieck (self-description)</note>
+							<note resp="#sophia.zeil" type="keyword">Depression</note>
+							<note resp="#sophia.zeil" type="keyword">Religion</note>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Nichtgeripptes Papier.</material>
+										<material xml:lang="en">Paper, not laid.</material>
+										<material xml:lang="fr">Papier, non côtelé.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="leaf">
+										<seg xml:lang="de">1 Bogen, 2 Blätter</seg>
+										<seg xml:lang="en">2 folios</seg>
+										<seg xml:lang="fr">2 feuilles</seg>
+									</measure>
+									<!--<dimensions unit="cm">
                                         <height>die Höhe</height>
                                         <width>die Breite</width>
                                     </dimensions>-->
-                                </extent>
-                                <condition>
-                                    <p xml:lang="de">Der Brief ist gut erhalten, einige Knicke, Einrisse.</p>
-                                    <p xml:lang="en">The letter is well-preserved, some traces of folding, torn paper.</p>
-                                    <p xml:lang="fr">La lettre est bien conservée, quelques traces de plis, coupure.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0217" xml:id="major_hand">
-                                <p xml:lang="de">Hand der Absenderin Dorothea Tieck, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of sender Dorothea Tieck, letter text in black ink, mainly German script.</p>
-                                <p xml:lang="fr">Main de l'expéditrice Dorothea Tieck, corps de la lettre, encre noire, écriture majoritairement
-                                    gothique.</p>
-                            </handNote>
-                            <handNote medium="blue_ink" scope="minor" scribe="archivist" xml:id="blue_ink">
-                                <p xml:lang="de">Vermutlich Hand eines Archivars, der die Zählung der Briefe mit blauer Tinte vorgenommen hat.</p>
-                                <p xml:lang="en">Probable hand of the archivist in charge of numbering the letters.</p>
-                                <p xml:lang="fr">Probable main de l'archiviste qui a numéroté les lettres.</p>
-                            </handNote>
-                        </handDesc>
-                        <sealDesc>
-                            <p xml:lang="de">Der Brief ist mit einem roten Siegel versehen.</p>
-                            <p xml:lang="en">The letter contains a red seal.</p>
-                            <p xml:lang="fr">La lettre présente un sceau rouge.</p>
-                        </sealDesc>
-                        <accMat>
-                            <p xml:lang="de"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">S. 4 (Bl. 2 verso)</ref> dient als
-                                Briefumschlag.</p>
-                            <p xml:lang="en"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">P. 4 (Fol. 2 verso)</ref> is being used as
-                                envelope.</p>
-                            <p xml:lang="fr"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">P. 4 (feuillet 2 verso)</ref> sert
-                                d'enveloppe.</p>
-                        </accMat>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde in <origPlace ref="#l0003">Dresden</origPlace> am <origDate when-iso="1837-09-25">25.
-                                    September 1837</origDate> verfasst. Die Datierung auf <date when-iso="1837">1837</date> erfolgte aufgrund der im
-                                Brief erwähnten Veröffentlichung des <title ref="#w05514">Persiles und der Sigismunda</title>. Auch der Besuch
-                                    <persName ref="#p0713">Loebells</persName>, den <persName ref="#p0217">Dorothea</persName> im darauffolgenden <ref target="Brief29DorotheaTieckanUechtritz">Brief vom 1. November 1837</ref>, S. 2, ebenfalls beschreibt, gibt zu
-                                dieser Datierung Veranlassung.</p>
-                            <p xml:lang="en">The letter was composed in <origPlace ref="#l0003">Dresden</origPlace> on <origDate when-iso="1837-09-25">September, 25 1837</origDate>. The dating to the year <date when-iso="1837">1837</date> was based both on the
-                                publication of <title ref="#w05514">Persiles und der Sigismunda</title>, mentioned in the letter and on the visit of
-                                    <persName ref="#p0713">Loebell</persName>, which is described in the following <ref target="Brief29DorotheaTieckanUechtritz">letter of 1 November 1837</ref>, p. 2, as well.</p>
-                            <p xml:lang="fr">La lettre a été composée à <origPlace ref="#l0003">Dresden</origPlace> le <origDate when-iso="1837-09-25">25 septembre 1837</origDate>. La datation de l'année <date when-iso="1837">1837</date> a été fondée à la fois sur
-                                la publication de <title ref="#w05514">Persiles und der Sigismunda</title>, mentionné dans la lettre, et aussi sur la
-                                visite de <persName ref="#p0713">Loebell</persName>, qui est décrit dans la <ref target="Brief29DorotheaTieckanUechtritz">lettre suivante de 1 novembre 1837</ref>, p. 2.</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Die 33 Briefe von <persName ref="#p0217">Dorothea Tieck</persName> an <persName ref="#p0711">Friedrich
-                                    von Uechtritz</persName> befinden sich seit <date when-iso="1900">1900</date> im Besitz der Oberlausitzischen
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. Anlässlich seines 100. Geburtstages wurden
-                                sie, zusammen mit <persName ref="#p0711">Uechtritz</persName>' literarischem Nachlass, durch dessen Neffen, Max von
-                                Balan, der damaligen Oberlausitzischen Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>
-                                übereignet.</p>
-                            <p xml:lang="en">Since <date when-iso="1900">1900</date>, the 33 letters of <persName ref="#p0217">Dorothea
-                                    Tieck</persName> to <persName ref="#p0711">Friedrich von Uechtritz</persName> belong to the Oberlausitzische
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. On the occasion of his 100th birthday,
-                                together with <persName ref="#p0711">Uechtritz</persName>'s literary estate, Max von Balan (his nephew) transfered
-                                them to the former Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
-                            <p xml:lang="fr">Depuis <date when-iso="1900">1900</date>, les 33 lettres de <persName ref="#p0217">Dorothea
-                                    Tieck</persName> à <persName ref="#p0711">Friedrich von Uechtritz</persName> appartiennent à la Oberlausitzische
-                                Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. A l'occasion de son 100e anniversaire, avec
-                                    <persName ref="#p0711">Uechtritz</persName>'s fonds littéraire, Max von Balan (son neveu), eux transféré à la
-                                l'ancienne Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl><bibl xml:lang="de">Es handelt sich hierbei um die Erstveröffentlichung des Briefs.</bibl>
-                                <bibl xml:lang="en">This is the first publication of the letter.</bibl>
-                                <bibl xml:lang="fr">Ceci est la première publication de la lettre.</bibl>
-                            </bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <hyphenation eol="hard" rend="dh">
-                    <p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen doppelten Bindestrich angezeigt.</p>
-                    <p xml:lang="en">Hyphenations at line breaks are generally presented as double hyphen.</p>
-                    <p xml:lang="fr">Les coupures de mots sont représentées le plus souvent par un trait double.</p>
-                </hyphenation>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="100">Deutsch</language>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/54399574/">Dorothea Tieck</persName>
-                    <placeName ref="https://www.geonames.org/2935020">Dresden</placeName>
-                    <date when-iso="1837-09-25"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/77115385/">Friedrich von Uechtritz</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief28DorotheaTieckanUechtritz.xml" type="prev"/>
-                    <ref target="Brief29DorotheaTieckanUechtritz.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-03" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-19" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
-            <change when-iso="2014-11-20" who="#sophia.zeil">Small changes.</change>
-            <change when-iso="2014-11-07" who="#sophia.zeil">Updated annotations.</change>
-            <change when-iso="2014-11-06" who="#sophia.zeil">Updated encoding, first annotations. Revised header.</change>
-            <change when-iso="2014-09-30" who="#sophia.zeil">Updated respStmt.</change>
-            <change when-iso="2014-07-02" who="#sophia.zeil">Added typographical correct hyphens.</change>
-            <change when-iso="2014-07-01" who="#sophia.zeil">Added new respStmt.</change>
-            <change when-iso="2014-07-01" who="#sophia.zeil">Corrected bibliographical information concerning Sybel's edition (deleted persName-tag in
-                the title).</change>
-            <change when-iso="2014-03-12" who="#sophia.zeil">First transcription and encoding. Added metadata.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.ebca7ucj/39d0d4056c63ee71946f7b710677110a78531927" n="1"/>
-                <note hand="#blue_ink" place="top-margin-center inline">28</note>
-                <opener><dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date when-iso="--09-25">25<hi rend="underline superscript">tn</hi>
-                            <hi rend="latin"><choice>
-                                    <abbr>Sept.</abbr>
-                                    <expan>September</expan>
-                                </choice></hi></date></dateline></opener>
-                <p>Endlich, mein theuerster Freund, habe<lb/>ich die Exemplare des <title ref="#w05514" type="bi">Persiles</title> erhalten,<lb/>und
-                    schicke Ihnen hier eins davon, Sie<lb/>müssen aber auch Ihr Versprechen halten<lb/>und es lesen. Ich hätte Ihnen schon zu
-                        Ihrem<lb/><date when-iso="1837-09-12">Geburtstag</date><note resp="#sophia.zeil"><persName ref="#p0711" type="bi">Uechtritz</persName> war am <date when-iso="1837-09-12">12. September 1837</date> 37 Jahre alt geworden.</note>
-                    geschrieben, ich dachte aber<lb/>immer es könne ein Brief von Ihnen<lb/>sich mit dem meinigen kreuzen. Von<lb/>Ihrer lieben <rs ref="#p3493" type="bi_person">Frau</rs> wissen wir,<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName> und <persName ref="#p0218" type="bi">Agnes Tieck</persName> unterhielten einen
-                            freundschaftlichen Briefverkehr; vgl. <ref target="Brief25DorotheaTieckanUechtritz.xml">Brief vom 1. November 1836</ref>,
-                            S. 1 (Bl. 1 recto).</p><p xml:lang="en"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName> and <persName ref="#p0218" type="bi">Agnes Tieck</persName> maintained a friendly correspondence; See <ref target="Brief25DorotheaTieckanUechtritz.xml">letter of November 1, 1836</ref>, p. 1 (sheet 1 recto).</p><p xml:lang="fr"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName>et <persName ref="#p0218" type="bi">Agnes
-                                Tieck</persName> entretenaient une correspondance amicale ; Voir <ref target="Brief25DorotheaTieckanUechtritz.xml">lettre du 1er novembre 1836</ref>, p.1 (feuille 1 recto).</p></note> daß Sie<lb/>glücklich angekommen<note resp="#sophia.zeil"><p xml:lang="de">Anlässlich seiner Hochzeit am <date when-iso="1837-05-18">18. Mai 1837</date> hatte
-                                <persName ref="#p0711" type="bi">Uechtritz</persName> auch in <placeName ref="#l0003" type="bi">Dresden</placeName>
-                            einen Besuch abgestattet.</p><p xml:lang="en">On the occasion of his wedding on <date when-iso="1837-05-18">May 18,
-                                1837</date>, <persName ref="#p0711" type="bi">Uechtritz</persName> had also paid a visit to <placeName ref="#l0003" type="bi">Dresden</placeName>.</p><p xml:lang="fr">A l'occasion de son mariage le <date when-iso="1837-05-18">18 mai
-                                1837</date>, <persName ref="#p0711" type="bi">Uechtritz</persName> s'était également rendu à <placeName ref="#l0003" type="bi">Dresde</placeName>.</p></note> und die erste<lb/>Zeit beide wohl gewesen sind.</p>
-                <p>Ich hoffte <persName ref="#p0713" type="bi">Loebell</persName> der <date when-iso="1837-09-27">übermorgen</date><lb/>wieder abreist
-                    sollte das <rs ref="#w05514" type="bi_title">Buch</rs> mitneh<lb break="no"/>men,<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p0713" type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für
-                            Geschichte in <placeName ref="#l0205" type="bi">Bonn</placeName>.</p><p xml:lang="en"><persName ref="#p0713" type="bi">Loebell</persName> had been a professor of history in <placeName ref="#l0205" type="bi">Bonn</placeName> since <date when-iso="1829">1829</date>.</p><p xml:lang="fr"><persName ref="#p0713" type="bi">Loebell</persName> était professeur
-                            d'histoire à <placeName ref="#l0205" type="bi">Bonn</placeName> depuis <date when-iso="1829">1829</date>.</p></note> er
-                    hat aber keinen Platz, nun<lb/>muß ich es mit einer Gelegenheit<lb/>schicken wo ich es nicht versiegeln darf,<lb/>und kann also
-                    nicht viel schreiben. Von<lb/>uns läßt sich auch wenig erzählen,<lb/><rs ref="#p0133" type="bi_person">Vater</rs> ist munter und
-                        <persName ref="#p0713" type="bi">Loebells</persName> Besuch<lb/>hat ihn auch aufgeheitert. Bei mir<lb/>ist alles beim Alten.
-                    Ich kann mich<lb/>so gar nicht im Leben zurecht finden,<lb/>daß ich oft denke, es dauert vielleicht<lb/>nicht mehr lange, denn
-                    ohne krank<lb/>zu seyn fühle ich mich oft eben so<lb/>kraft als machtlos. Ich nehme an Al<pb break="no" facs="iiif:10.34847/nkl.ebca7ucj/f916ca7554891a25a59c1a2e1875211b77269b27" n="2"/>lem Theil, doch ohne die geringste in<lb break="no"/>nere Theilnahme. Ich bin wirklich schwach<lb/>und elend, und wenn die Menschen in<lb/>mein Inneres sehen könnten,
-                    würden<lb/>sie mich sehr verachten. Es rührt mich<lb/>dann immer recht, wie unendlich viel Ge<lb break="no"/>duld Gott mit
-                    Menschen meiner Art<lb/>hat, die Er so ganz trägt, die nichts<lb/>aus sich selbst wollen und thun.</p>
-                <p>Wenn Sie Zeit haben lassen Sie ein<lb break="no"/>mal wieder etwas von sich hören,<lb/>dann schreibe ich auch
-                        ausführlicher.<lb/><date when-iso="1837-09-25">Heute</date> kann ich nicht, denn ich bin<lb/>recht unwohl<subst>
-                        <del rend="overwritten">.</del>
-                        <add place="across">,</add>
-                    </subst> so daß mir die Hand<lb/>zittert, auch muß das Paket gleich<lb/>fort.</p>
-                <closer><salute>Grüßen Sie <persName ref="#p3493" type="bi">Marie</persName> herzlich und<lb/>vergessen Sie nicht ganz Ihre
-                        alte<lb/>Freundinn</salute><signed rend="latin align(center)"><persName ref="#p0217" type="bi">Dorothea</persName></signed></closer>
-                <pb facs="iiif:10.34847/nkl.ebca7ucj/67b8c39e298854af917e89e88576a6d56ea781c1" n="3"/>
-                <note resp="#sophia.zeil"><p xml:lang="de">Vacat.</p><p xml:lang="en">Vacat.</p><p xml:lang="fr">Vacat.</p></note>
-                <pb facs="iiif:10.34847/nkl.ebca7ucj/0f47d65010725632255a034543770597a894f479" n="4" xml:id="Brief30DorotheaTieckanUechtritz-Blatt2v"/>
-                <note resp="#sophia.zeil"><p xml:lang="de">Vacat.</p><p xml:lang="en">Vacat.</p><p xml:lang="fr">Vacat.</p></note>
-            </div>
-        </body>
-    </text>
+								</extent>
+								<condition>
+									<p xml:lang="de">Der Brief ist gut erhalten, einige Knicke, Einrisse.</p>
+									<p xml:lang="en">The letter is well-preserved, some traces of folding, torn paper.</p>
+									<p xml:lang="fr">La lettre est bien conservée, quelques traces de plis, coupure.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p0217" xml:id="major_hand">
+								<p xml:lang="de">Hand der Absenderin Dorothea Tieck, Brieftext in schwarzer Tinte, vorwiegend in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of sender Dorothea Tieck, letter text in black ink, mainly German script.</p>
+								<p xml:lang="fr">Main de l'expéditrice Dorothea Tieck, corps de la lettre, encre noire, écriture majoritairement
+									gothique.</p>
+							</handNote>
+							<handNote medium="blue_ink" scope="minor" scribe="archivist" xml:id="blue_ink">
+								<p xml:lang="de">Vermutlich Hand eines Archivars, der die Zählung der Briefe mit blauer Tinte vorgenommen hat.</p>
+								<p xml:lang="en">Probable hand of the archivist in charge of numbering the letters.</p>
+								<p xml:lang="fr">Probable main de l'archiviste qui a numéroté les lettres.</p>
+							</handNote>
+						</handDesc>
+						<sealDesc>
+							<p xml:lang="de">Der Brief ist mit einem roten Siegel versehen.</p>
+							<p xml:lang="en">The letter contains a red seal.</p>
+							<p xml:lang="fr">La lettre présente un sceau rouge.</p>
+						</sealDesc>
+						<accMat>
+							<p xml:lang="de"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">S. 4 (Bl. 2 verso)</ref> dient als
+								Briefumschlag.</p>
+							<p xml:lang="en"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">P. 4 (Fol. 2 verso)</ref> is being used as
+								envelope.</p>
+							<p xml:lang="fr"><ref target="#Brief30DorotheaTieckanUechtritz-Blatt2v">P. 4 (feuillet 2 verso)</ref> sert
+								d'enveloppe.</p>
+						</accMat>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde in <origPlace ref="#l0003">Dresden</origPlace> am <origDate when-iso="1837-09-25">25.
+									September 1837</origDate> verfasst. Die Datierung auf <date when-iso="1837">1837</date> erfolgte aufgrund der im
+								Brief erwähnten Veröffentlichung des <title ref="#w05514">Persiles und der Sigismunda</title>. Auch der Besuch
+									<persName ref="#p0713">Loebells</persName>, den <persName ref="#p0217">Dorothea</persName> im darauffolgenden <ref
+									target="Brief29DorotheaTieckanUechtritz">Brief vom 1. November 1837</ref>, S. 2, ebenfalls beschreibt, gibt zu
+								dieser Datierung Veranlassung.</p>
+							<p xml:lang="en">The letter was composed in <origPlace ref="#l0003">Dresden</origPlace> on <origDate when-iso="1837-09-25"
+									>September, 25 1837</origDate>. The dating to the year <date when-iso="1837">1837</date> was based both on the
+								publication of <title ref="#w05514">Persiles und der Sigismunda</title>, mentioned in the letter and on the visit of
+									<persName ref="#p0713">Loebell</persName>, which is described in the following <ref
+									target="Brief29DorotheaTieckanUechtritz">letter of 1 November 1837</ref>, p. 2, as well.</p>
+							<p xml:lang="fr">La lettre a été composée à <origPlace ref="#l0003">Dresden</origPlace> le <origDate when-iso="1837-09-25"
+									>25 septembre 1837</origDate>. La datation de l'année <date when-iso="1837">1837</date> a été fondée à la fois sur
+								la publication de <title ref="#w05514">Persiles und der Sigismunda</title>, mentionné dans la lettre, et aussi sur la
+								visite de <persName ref="#p0713">Loebell</persName>, qui est décrit dans la <ref
+									target="Brief29DorotheaTieckanUechtritz">lettre suivante de 1 novembre 1837</ref>, p. 2.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Die 33 Briefe von <persName ref="#p0217">Dorothea Tieck</persName> an <persName ref="#p0711">Friedrich
+									von Uechtritz</persName> befinden sich seit <date when-iso="1900">1900</date> im Besitz der Oberlausitzischen
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. Anlässlich seines 100. Geburtstages wurden
+								sie, zusammen mit <persName ref="#p0711">Uechtritz</persName>' literarischem Nachlass, durch dessen Neffen, Max von
+								Balan, der damaligen Oberlausitzischen Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>
+								übereignet.</p>
+							<p xml:lang="en">Since <date when-iso="1900">1900</date>, the 33 letters of <persName ref="#p0217">Dorothea
+									Tieck</persName> to <persName ref="#p0711">Friedrich von Uechtritz</persName> belong to the Oberlausitzische
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. On the occasion of his 100th birthday,
+								together with <persName ref="#p0711">Uechtritz</persName>'s literary estate, Max von Balan (his nephew) transfered
+								them to the former Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
+							<p xml:lang="fr">Depuis <date when-iso="1900">1900</date>, les 33 lettres de <persName ref="#p0217">Dorothea
+									Tieck</persName> à <persName ref="#p0711">Friedrich von Uechtritz</persName> appartiennent à la Oberlausitzische
+								Bibliothek der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>. A l'occasion de son 100e anniversaire, avec
+									<persName ref="#p0711">Uechtritz</persName>'s fonds littéraire, Max von Balan (son neveu), eux transféré à la
+								l'ancienne Oberlausitzische Gesellschaft der Wissenschaften <placeName ref="#l0188">Görlitz</placeName>.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de">Es handelt sich hierbei um die Erstveröffentlichung des Briefs.</bibl>
+								<bibl xml:lang="en">This is the first publication of the letter.</bibl>
+								<bibl xml:lang="fr">Ceci est la première publication de la lettre.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction>
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<hyphenation eol="hard" rend="dh">
+					<p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen doppelten Bindestrich angezeigt.</p>
+					<p xml:lang="en">Hyphenations at line breaks are generally presented as double hyphen.</p>
+					<p xml:lang="fr">Les coupures de mots sont représentées le plus souvent par un trait double.</p>
+				</hyphenation>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="100">Deutsch</language>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/54399574/">Dorothea Tieck</persName>
+					<placeName ref="https://www.geonames.org/2935022">Dresden</placeName>
+					<date when-iso="1837-09-25"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/77115385/">Friedrich von Uechtritz</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief28DorotheaTieckanUechtritz.xml" type="prev"/>
+					<ref target="Brief29DorotheaTieckanUechtritz.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-03" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-19" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-13" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2014-12-19" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-24" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-23" who="#sophia.zeil">Updated acquisition-Element and keywords.</change>
+			<change when-iso="2014-11-20" who="#sophia.zeil">Small changes.</change>
+			<change when-iso="2014-11-07" who="#sophia.zeil">Updated annotations.</change>
+			<change when-iso="2014-11-06" who="#sophia.zeil">Updated encoding, first annotations. Revised header.</change>
+			<change when-iso="2014-09-30" who="#sophia.zeil">Updated respStmt.</change>
+			<change when-iso="2014-07-02" who="#sophia.zeil">Added typographical correct hyphens.</change>
+			<change when-iso="2014-07-01" who="#sophia.zeil">Added new respStmt.</change>
+			<change when-iso="2014-07-01" who="#sophia.zeil">Corrected bibliographical information concerning Sybel's edition (deleted persName-tag in
+				the title).</change>
+			<change when-iso="2014-03-12" who="#sophia.zeil">First transcription and encoding. Added metadata.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.ebca7ucj/39d0d4056c63ee71946f7b710677110a78531927" n="1"/>
+				<note hand="#blue_ink" place="top-margin-center inline">28</note>
+				<opener>
+					<dateline rend="align(right)"><placeName ref="#l0003" type="bi"><hi rend="latin">Dresden</hi></placeName> den <date
+							when-iso="--09-25">25<hi rend="underline superscript">tn</hi>
+							<hi rend="latin"><choice>
+									<abbr>Sept.</abbr>
+									<expan>September</expan>
+								</choice></hi></date></dateline>
+				</opener>
+				<p>Endlich, mein theuerster Freund, habe<lb/>ich die Exemplare des <title ref="#w05514" type="bi">Persiles</title> erhalten,<lb/>und
+					schicke Ihnen hier eins davon, Sie<lb/>müssen aber auch Ihr Versprechen halten<lb/>und es lesen. Ich hätte Ihnen schon zu
+						Ihrem<lb/><date when-iso="1837-09-12">Geburtstag</date><note resp="#sophia.zeil"><persName ref="#p0711" type="bi"
+							>Uechtritz</persName> war am <date when-iso="1837-09-12">12. September 1837</date> 37 Jahre alt geworden.</note>
+					geschrieben, ich dachte aber<lb/>immer es könne ein Brief von Ihnen<lb/>sich mit dem meinigen kreuzen. Von<lb/>Ihrer lieben <rs
+						ref="#p3493" type="bi_person">Frau</rs> wissen wir,<note resp="#sophia.zeil"><p xml:lang="de"><persName ref="#p3493" type="bi"
+								>Marie von Uechtritz</persName> und <persName ref="#p0218" type="bi">Agnes Tieck</persName> unterhielten einen
+							freundschaftlichen Briefverkehr; vgl. <ref target="Brief25DorotheaTieckanUechtritz.xml">Brief vom 1. November 1836</ref>,
+							S. 1 (Bl. 1 recto).</p><p xml:lang="en"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName> and <persName
+								ref="#p0218" type="bi">Agnes Tieck</persName> maintained a friendly correspondence; See <ref
+								target="Brief25DorotheaTieckanUechtritz.xml">letter of November 1, 1836</ref>, p. 1 (sheet 1 recto).</p><p
+							xml:lang="fr"><persName ref="#p3493" type="bi">Marie von Uechtritz</persName>et <persName ref="#p0218" type="bi">Agnes
+								Tieck</persName> entretenaient une correspondance amicale ; Voir <ref target="Brief25DorotheaTieckanUechtritz.xml"
+								>lettre du 1er novembre 1836</ref>, p.1 (feuille 1 recto).</p></note> daß Sie<lb/>glücklich angekommen<note
+						resp="#sophia.zeil"><p xml:lang="de">Anlässlich seiner Hochzeit am <date when-iso="1837-05-18">18. Mai 1837</date> hatte
+								<persName ref="#p0711" type="bi">Uechtritz</persName> auch in <placeName ref="#l0003" type="bi">Dresden</placeName>
+							einen Besuch abgestattet.</p><p xml:lang="en">On the occasion of his wedding on <date when-iso="1837-05-18">May 18,
+								1837</date>, <persName ref="#p0711" type="bi">Uechtritz</persName> had also paid a visit to <placeName ref="#l0003"
+								type="bi">Dresden</placeName>.</p><p xml:lang="fr">A l'occasion de son mariage le <date when-iso="1837-05-18">18 mai
+								1837</date>, <persName ref="#p0711" type="bi">Uechtritz</persName> s'était également rendu à <placeName ref="#l0003"
+								type="bi">Dresde</placeName>.</p></note> und die erste<lb/>Zeit beide wohl gewesen sind.</p>
+				<p>Ich hoffte <persName ref="#p0713" type="bi">Loebell</persName> der <date when-iso="1837-09-27">übermorgen</date><lb/>wieder abreist
+					sollte das <rs ref="#w05514" type="bi_title">Buch</rs> mitneh<lb break="no"/>men,<note resp="#sophia.zeil"><p xml:lang="de"
+								><persName ref="#p0713" type="bi">Loebell</persName> war seit <date when-iso="1829">1829</date> Professor für
+							Geschichte in <placeName ref="#l0205" type="bi">Bonn</placeName>.</p><p xml:lang="en"><persName ref="#p0713" type="bi"
+								>Loebell</persName> had been a professor of history in <placeName ref="#l0205" type="bi">Bonn</placeName> since <date
+								when-iso="1829">1829</date>.</p><p xml:lang="fr"><persName ref="#p0713" type="bi">Loebell</persName> était professeur
+							d'histoire à <placeName ref="#l0205" type="bi">Bonn</placeName> depuis <date when-iso="1829">1829</date>.</p></note> er
+					hat aber keinen Platz, nun<lb/>muß ich es mit einer Gelegenheit<lb/>schicken wo ich es nicht versiegeln darf,<lb/>und kann also
+					nicht viel schreiben. Von<lb/>uns läßt sich auch wenig erzählen,<lb/><rs ref="#p0133" type="bi_person">Vater</rs> ist munter und
+						<persName ref="#p0713" type="bi">Loebells</persName> Besuch<lb/>hat ihn auch aufgeheitert. Bei mir<lb/>ist alles beim Alten.
+					Ich kann mich<lb/>so gar nicht im Leben zurecht finden,<lb/>daß ich oft denke, es dauert vielleicht<lb/>nicht mehr lange, denn
+					ohne krank<lb/>zu seyn fühle ich mich oft eben so<lb/>kraft als machtlos. Ich nehme an Al<pb break="no"
+						facs="iiif:10.34847/nkl.ebca7ucj/f916ca7554891a25a59c1a2e1875211b77269b27" n="2"/>lem Theil, doch ohne die geringste in<lb
+						break="no"/>nere Theilnahme. Ich bin wirklich schwach<lb/>und elend, und wenn die Menschen in<lb/>mein Inneres sehen könnten,
+					würden<lb/>sie mich sehr verachten. Es rührt mich<lb/>dann immer recht, wie unendlich viel Ge<lb break="no"/>duld Gott mit
+					Menschen meiner Art<lb/>hat, die Er so ganz trägt, die nichts<lb/>aus sich selbst wollen und thun.</p>
+				<p>Wenn Sie Zeit haben lassen Sie ein<lb break="no"/>mal wieder etwas von sich hören,<lb/>dann schreibe ich auch
+						ausführlicher.<lb/><date when-iso="1837-09-25">Heute</date> kann ich nicht, denn ich bin<lb/>recht unwohl<subst>
+						<del rend="overwritten">.</del>
+						<add place="across">,</add>
+					</subst> so daß mir die Hand<lb/>zittert, auch muß das Paket gleich<lb/>fort.</p>
+				<closer>
+					<salute>Grüßen Sie <persName ref="#p3493" type="bi">Marie</persName> herzlich und<lb/>vergessen Sie nicht ganz Ihre
+						alte<lb/>Freundinn</salute>
+					<signed rend="latin align(center)">
+						<persName ref="#p0217" type="bi">Dorothea</persName>
+					</signed>
+				</closer>
+				<pb facs="iiif:10.34847/nkl.ebca7ucj/67b8c39e298854af917e89e88576a6d56ea781c1" n="3"/>
+				<note resp="#sophia.zeil">
+					<p xml:lang="de">Vacat.</p>
+					<p xml:lang="en">Vacat.</p>
+					<p xml:lang="fr">Vacat.</p>
+				</note>
+				<pb facs="iiif:10.34847/nkl.ebca7ucj/0f47d65010725632255a034543770597a894f479" n="4" xml:id="Brief30DorotheaTieckanUechtritz-Blatt2v"/>
+				<note resp="#sophia.zeil">
+					<p xml:lang="de">Vacat.</p>
+					<p xml:lang="en">Vacat.</p>
+					<p xml:lang="fr">Vacat.</p>
+				</note>
+			</div>
+		</body>
+	</text>
 </TEI>

@@ -1,333 +1,356 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from John Albert Euler to Jean Henri Samuel Formey (Saint Petersburg, 16 April 1768)</title>
-                <title xml:lang="fr">Lettre de Jean Albert Euler à Jean Henri Samuel Formey (Saint Pétersbourg, 16 avril 1768)</title>
-                <title xml:lang="de">Brief von Johann Albrecht Euler an Jean Henri Samuel Formey (Sankt Petersburg, 16. April 1768)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt University in Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Encoding by</resp>
-                    <persName ref="#emmanuelle.chaze">
-                        <forename>Emmanuelle</forename>
-                        <surname>Chaze</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Transcription by</resp>
-                    <persName ref="#emmanuelle.chaze">
-                        <forename>Emmanuelle</forename>
-                        <surname>Chaze</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Annotations by</resp>
-                    <persName ref="#emmanuelle.chaze">
-                        <forename>Emmanuelle</forename>
-                        <surname>Chaze</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when="2012-09">September 2012</date>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="topic">French culture</title>
-                <title type="genre">Letters</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>Formey Papers</collection>
-                        <idno type="stabi.berlin">Box 43 (40-41-42)</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1768-04-16"/>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <!--  <support><material>Art des Papiers, Qualität
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from John Albert Euler to Jean Henri Samuel Formey (Saint Petersburg, 16 April 1768)</title>
+				<title xml:lang="fr">Lettre de Jean Albert Euler à Jean Henri Samuel Formey (Saint Pétersbourg, 16 avril 1768)</title>
+				<title xml:lang="de">Brief von Johann Albrecht Euler an Jean Henri Samuel Formey (Sankt Petersburg, 16. April 1768)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt University in Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Encoding by</resp>
+					<persName ref="#emmanuelle.chaze">
+						<forename>Emmanuelle</forename>
+						<surname>Chaze</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Transcription by</resp>
+					<persName ref="#emmanuelle.chaze">
+						<forename>Emmanuelle</forename>
+						<surname>Chaze</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Annotations by</resp>
+					<persName ref="#emmanuelle.chaze">
+						<forename>Emmanuelle</forename>
+						<surname>Chaze</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when="2012-09">September 2012</date>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="topic">French culture</title>
+				<title type="genre">Letters</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library</institution>
+						<repository>Manuscripts section</repository>
+						<collection>Formey Papers</collection>
+						<idno type="stabi.berlin">Box 43 (40-41-42)</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1768-04-16"/>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<!--  <support><material>Art des Papiers, Qualität
                                     usw.</material></support> -->
-                                <extent>
-                                    <measure type="leaf">
-                                        <measure xml:lang="de">3 Blätter</measure>
-                                        <measure xml:lang="en">3 folios</measure>
-                                        <measure xml:lang="fr">3 feuillets</measure>
-                                    </measure>
-                                    <!--  <dimensions unit="cm">
+								<extent>
+									<measure type="leaf">
+										<measure xml:lang="de">3 Blätter</measure>
+										<measure xml:lang="en">3 folios</measure>
+										<measure xml:lang="fr">3 feuillets</measure>
+									</measure>
+									<!--  <dimensions unit="cm">
                                     <height>die Höhe</height>
                                         <width>die Breite</width>
                                         </dimensions> -->
-                                </extent>
-                                <foliation corresp="#pencil">
-                                    <p xml:lang="de">Foliierung in Bleistift, oben rechts der jeweiligen Vorderseiten durch das Archiv.</p>
-                                    <p xml:lang="en">Numbering in pencil by the archive in the right-hand top corner.</p>
-                                    <p xml:lang="fr">Numérotation par les archives en haut à droite au crayon.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Der Brief ist gut erhalten.</p>
-                                    <p xml:lang="en">The letter is well preserved.</p>
-                                    <p xml:lang="fr">La lettre est en bon état de conservation.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p2284" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Absenders Johann Albrecht Euler, Brieftext in schwarzer Tinte, in lateinischer Schrift
-                                    (französische Sprache).</p>
-                                <p xml:lang="en">Hand of sender John Albert Euler, body text in black ink, in latin script (language: French).</p>
-                                <p xml:lang="fr">Main de l'expéditeur Jean Albert Euler, texte à l'encre noire, en écriture latine (langue:
-                                    français).</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
-                                <p xml:lang="de">Hand des Archivars, der die Foliierung des Konvoluts in Bleistift vorgenommen hat.</p>
-                                <p xml:lang="en">Hand of the archivist who numbered the bundle (pencil).</p>
-                                <p xml:lang="fr">Main de l'archiviste ayant numéroté la liasse (crayon).</p>
-                            </handNote>
-                        </handDesc>
-                        <!--  <sealDesc></sealDesc> -->
-                        <!-- <accMat></accMat>  -->
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde in <origPlace ref="#l0020">Sankt-Petersburg</origPlace> am <origDate when-iso="1768-04-16">16. April 1768</origDate> verfasst.</p>
-                            <p xml:lang="en">The letter was written in <origPlace ref="#l0020">Saint Petersburg</origPlace> on <origDate when-iso="1768-04-16">16 April 1768</origDate>.</p>
-                            <p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l0020">Saint-Pétersbourg</origPlace> le <origDate when-iso="1768-04-16">16 avril 1768</origDate>.</p>
-                        </origin>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <hyphenation eol="hard" rend="sh">
-                    <p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen einfachen Bindestrich angezeigt.</p>
-                    <p xml:lang="en">Line breaks will normally be shown by a hyphen.</p>
-                    <p xml:lang="fr">Les coupures en fin de ligne sont signalées par des tirets simples.</p>
-                </hyphenation>
-                <correction>
-                    <p xml:lang="fr">Aucune correction</p>
-                    <p xml:lang="en">No correction</p>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                </correction>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="fr"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/10601695/">Johann Albrecht Euler</persName>
-                    <placeName ref="https://www.geonames.org/498817">Sankt-Petersburg</placeName>
-                    <date when-iso="1768-04-16"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/51703551/">Jean-Henri Samuel Formey</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief23vonJAEuleranJHSFormey.xml" type="prev"/>
-                    <ref target="Brief25vonJAEuleranJHSFormey.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-07-13" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
-            <change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and strikethroughs.</change>
-            <change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
-            <change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
-            <change when-iso="2014-04-16" who="#emmanuelle.chaze">Edited metadata and body.</change>
-            <change when-iso="2014-04-08" who="#emmanuelle.chaze">Edited metadata and body.</change>
-            <change when-iso="2014-03-16" who="#emmanuelle.chaze">Entered metadata and body.</change>
-            <change when-iso="2014-03-21" who="#emmanuelle.chaze">Edited layout.</change>
-            <change when-iso="2014-03-22" who="#emmanuelle.chaze">Edited layout and body.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.93dacs70/e22e704c48db8f086e7fb8a798da42d45af23932" n="1"/>
-                <note hand="#pencil" place="margin(right)" type="foliation">40</note>
-                <opener>
-                    <dateline rend="align(right)">à <placeName ref="#l0020" type="bi">St : Petersbourg</placeName> ce <date when-iso="1768-04-16">16/27 Avril 1768</date>.</dateline>
-                    <salute rend="align(left)">Monsieur mon très-chèr et très honoré Oncle,</salute>
-                </opener>
-                <lb/>
-                <p>Je reprens la plume au bout de 5 semaines, Vous ayant <lb/>ecrit ma derniere, Monsieur et très honoré Oncle, le <lb/>14 du mois
-                    passé : je commence par répondre aux <lb/>trois dernieres lettres du 14, 27 Mars et du 8 Avril, <lb/>que Vous m’avez fait
-                    l’honneur de m’ecrire. <lb/>
-                    <persName ref="#p2465" type="bi">Mr. Guldenstädt</persName> m’a écrit de Riga, et demandé qu’on
-                    <lb/>l’y laisse encore pendant quatre semaines, l’Academie <lb/>vient de le lui accorder et le <persName ref="#p2462" type="bi">Prof. Pallas</persName> se charge <lb/>de l’achât de tout ce que <persName ref="#p2465" type="bi">Guldenstädt</persName> aura
-                    besoin pour <lb/>le voiage. Le pere du Pasteur <persName ref="#p2546" type="bi">Brounne</persName> qui va à <lb/>
-                    <placeName ref="#l0439" type="bi">Moscou</placeName> est sans doute le même que j’ai connû à <lb/>
-                    <placeName ref="#l1103" type="bi">Berlin</placeName> ; il est anglois, savoit beaucoup de Secrets, et <lb/>comme le grand directoire, qui l’a fait venir de
-                        <placeName ref="#l0089" type="bi">Zuric</placeName>, ne <lb/>l’emploioit pas comme il voulût, il entra en service chez <lb/>le
-                        <persName ref="#p2540" type="bi">Comte de Kamke</persName>. Il y a long tems que je n’ai pas <lb/>vû le <persName ref="#p2397" type="bi">Comte de Gollovin</persName> ; il me chargea de faire des <lb/>propositions à <persName ref="#p2530" type="bi">Mr.
-                        de Zollikoffre</persName> pour prendre la place <lb/>de Gouverneur auprès <add place="above">de</add>
-                    <rs ref="#p2501" type="bi_person">son fils</rs>, mais comme celui-ci <lb/>l’a refusé, il a pris le partis de faire revenir <rs ref="#p2501" type="bi_person">ce fils</rs>, <lb/>et de lui faire faire ses études ici. Je felicite <lb/>l’<orgName ref="#g0120" type="bi">Academie de Berlin</orgName> de ce que <rs ref="#p0081" type="bi_person">S.M.I.</rs> vient d’accepter
-                        <lb/>
-                    <del rend="strikethrough">l’aggregation</del> l’association qu’elle Lui avoit offert. <lb/>Ici on n’en sait rien et le
-                        <persName ref="#2340" type="bi">Comte Orlov</persName> garde la dessus <lb/>un profond silence. L’Epicier <persName ref="#p2547" type="bi">Bouc</persName> est ici et loge <lb/>à <placeName type="bi">Wasiliostrov</placeName> avec un Officier
-                    hollandois ; il se porte <lb/>bien à ce qu’on m’a dit ; je n’ai pas encore pû le <lb/>voir, et m’informer de son état et de ce
-                    qu’il fait. </p>
-                <pb facs="iiif:10.34847/nkl.93dacs70/3200a898623ba2d421c83797a7196f3ab7250888" n="2"/>
-                <p>
-                    <rs ref="#p0037" type="bi_person">Mon père</rs> vient de recevoir par le <persName ref="#p2508" type="bi">Prince
-                        Dolgorouki</persName>
-                    <lb/>une Seconde requète des Mssrs. <persName ref="#p2509" type="bi">Huggenin</persName>, <persName ref="#p2548" type="bi">Tournon</persName>, <lb/>
-                    <persName ref="#p2511" type="bi">Castillon</persName> pere et fils. Le Prince s’étoit trompé
-                        <persName ref="#p2510" type="bi">Sulzer</persName>
-                    <lb/>et <persName ref="#p2360" type="bi">Lambert</persName> n’ont jamais été de ce complot. Mais <persName ref="#p2511" type="bi">Castillon</persName>
-                    <lb/>le père ecrit à <rs ref="#p0037" type="bi_person">mon pere</rs>, que lui et son fils possedoient <lb/>des Secrets importans
-                    et comme <placeName ref="#l1103" type="bi">Berlin</placeName> est pour eux un <lb/>
-                    <hi rend="underlined">vrai enfer</hi> il
-                    supplie qu’on leur procure ici de bonnes <lb/>places etc. <rs ref="#p0037" type="bi_person">mon pere</rs> a envoié leur requete au
-                        <persName ref="#2340" type="bi">comte <lb/>d’Orlov</persName> mais je doute qu’on y fasse réflexion. Le <persName ref="#p2485" type="bi">Prof. Lowitz</persName>
-                    <lb/>est arrivé le 7 de ce mois ; il a bien passé par <placeName ref="#l1103" type="bi">Berlin</placeName>
-                    <lb/>mais il ne s’y est pas arreté. Aujourd’hui il a diné chez <lb/>
-                    <rs ref="#p0037" type="bi_person">mon pere</rs> avec son fils,
-                    un aimable enfant de 10 ans, <lb/>nous y étions aussi tous et mon pere celebra mon <lb/>jour de noces. Quant à Votre manuscrit,
-                    Monsieur <lb/>et très-honoré Oncle, je suis très mortifié que je ne <lb/>puis pas Vous servir en Votre demande. Notre cher
-                        <lb/>
-                    <persName ref="#2340" type="bi">Comte d’Oxxx</persName> est un brâve Seigneur, mais il n’aime <lb/>pas les dépenses. Je
-                    me connois – je me facherois s’il <lb/>me réfusoit quelque chose qui Vous regarde, très chèr <lb/>Oncle, et le <rs ref="#p2340" type="bi_person">Comte</rs> pourroit bien prendre mauvais si je me <lb/>fachois. De pareilles scenes m’ont appris à le
-                    connoître <lb/>de ce coté là. Le <persName ref="#p2527" type="bi">Pasteur La Vigne</persName> doit avoir reçû sla <lb/>Vocation
-                    formelle, que nous avons dressée dans une <lb/>assemblée génerale de tous les pères de famille tenue <lb/>le 7 de ce mois.
-                    Quelques membres de notre commun<lb break="no"/>eauté l’ont connû en Suede et ceux-ci louent <lb/>beaucoup ses sermons tant
-                    françois qu’allemands. <lb/>Craignant que la distribution du prix oeconomique <lb/>ne causasse plusieures disputes, où je
-                    risquerois <lb/>d’être impliqué, je me suis heureusement tiré de tout, <lb/>soux prétexte que je ne connois pas suffisamment
-                    <lb/>de quoi il s’agit. et que également l’état de la <pb facs="iiif:10.34847/nkl.93dacs70/fdace1b035dbffd4dbfa810fad03d9424025667d" n="3"/></p><p><!-- Added tag for the good display of the indexes-->
-                    <note hand="#pencil" place="margin(right)" type="foliation">41</note>rivière m’empecheroit d’assister aux assemblées. <lb/>Effectivement depuis le 6 de ce mois on ne
-                    pouvoit plus <lb/>passer la riviere en carosse, et hier lesa glaces s’en est <lb/>allé tout à fait ; de sorte que pour aller de
-                    l’autre <lb/>coté il faut avoir double équipageF. Le prix sera <lb/>distribué mecredi prochain. C’est le fils du Jardinier
-                        <lb/>
-                    <persName ref="#p2549" type="bi">Neumann</persName> qui veut venir ici, et j’ai été chargé de lui pro<lb break="no"/>curer une bonne condition dans un comptoire d’ici. J’ai <lb/>d’abord communiqué l’échantillon typographique à nos
-                    <lb/>Imprimeurs pour qu’ils tâchent de l’imiter : d’ailleurs <lb/>je me remercie très humblement de cette communication <lb/>et je
-                    souhaite du fond de mon cœur, mon très-honoré <lb/>oncle, que Vous continuissiez encore pendant une longue <lb/>suite d’années à
-                    donner au respectable <persName ref="#p2550" type="bi">C.P. de Uhden</persName>
-                    <lb/>de ces marques de Votre tendre amitié pour lui : car <lb/>
-                    <del rend="strikethrough">tant que</del> elles supposent Votre vie
-                    et cette vie fait mes <lb/>délices. Je réprends le fils de mon journal. le 15 <lb/>Mars je fis une visite chez le <persName ref="#p2407" type="bi">General Pohlmann</persName> et chez <lb/>
-                    <rs type="bi">mon frere</rs>. le 16 à l’Eglise reformée et
-                    ensuite plusieures <lb/>visites. le 17 je dinai chez <rs ref="#2340" type="bi">mon chef</rs> et <rs ref="#p2328" type="bi_person">ma femme</rs> eut <lb/>la visite de <persName ref="#p2551" type="bi">Mad. Berlon</persName>. le 18 rien d’extraordinaire
-                    <lb/>car mes occupations journalieres Vous sont connues. <lb/>le 19. je dinai chez <rs ref="#p2340" type="bi_person">mon Chef</rs>
-                    et ensuite à la <orgName ref="#g0124" type="bi">Societé <lb/>oeconomique</orgName>. le 23 Dimanche des rameaux à l’église
-                    <lb/>reformée. le 25 grande nouvelle ; <del rend="strikethrough">
-                        <rs ref="#p2331" type="bi_person">ma sœur</rs>
-                    </del>
-                    <lb/>la femme de <rs ref="#p2330" type="bi_person">mon frere</rs> le medecin accoucha d’un <lb/>fils, et nous l’allions voir. le
-                    27 quelques visites. <lb/>le 28 à l’église reformée. le 29 on nous invitâ <lb/>pour entendre la messe à la Chapelle de <rs ref="#p0081" type="bi_person">S.M.I</rs>, <lb/>qui se lisoit dans la nuit entre <add place="above">le</add> 29 et le 30. Mais
-                    <lb/>Vous jugerez aisement, que ce n’étoit pas là mon <lb/>
-                    <hi rend="align(right)">affaire</hi>. [en marge]F c’est-à-dire jusqu’à ce que le pont sera rémis. <pb facs="iiif:10.34847/nkl.93dacs70/2dfe1cdda6c4761bcbc6e297770ff98709c83c2d" n="4"/>affaire, que je n’y ai pas été et que
-                    personne n’étoit force non <lb/>plus. le 30 jour de Pâques, à l’église ensuite chez <rs ref="#2340" type="bi">mon chef</rs> et
-                    <lb/>en retournant chez <rs ref="#p2330" type="bi_person">mon frere</rs> qui fut obligé de prendre une <lb/>nourrice pour son
-                    enfant. L’après diné nous eumes plusieures <lb/>visites ; et plusieurs vinrent aussi nous presenter des œufs <lb/>en nous
-                    felicitant, auxquels il falloit payer les œufs au-delà <lb/>du quadruple. Le 31 encore quelques visites ; j’allois vers le
-                    <lb/>soir à la cour, mais <rs ref="#p0081" type="bi_person">S.M.I.</rs> n’étoit pas visible, je fis donc <lb/>ma cour à la belle
-                    sœur l’accouchée. Le 1 Avril chez le <persName ref="#p2335" type="bi">Comte <lb/>Alexis Rasumovski</persName>, qui alloit diner
-                    chez <rs ref="#p0081" type="bi_person">S.M.I.</rs> je dinai donc chez <lb/>
-                    <rs ref="#2340" type="bi">mon chef</rs>, et après diner
-                    nous eumes quelques visites ; le 2 et 3 <lb/>rien_le 4 jours de naissance de <rs ref="#p0037" type="bi_person">mon père</rs> et le
-                    5 celui de <lb/>
-                    <rs ref="#p2329" type="bi_person">ma mère</rs>. <rs ref="#p0037" type="bi_person">Mon pere</rs> fit assembler la
-                    commission academique <lb/>extraordinairement pour refler les voyages de <persName ref="#p2462" type="bi">Pallas</persName>,
-                        <persName ref="#p2405" type="bi">Gmelin</persName>, <lb/>
-                    <persName ref="#p2552" type="bi">Falck</persName>, <persName ref="#p2465" type="bi">Güldenstadt</persName> et <persName ref="#p2518" type="bi">Lepechin</persName>, qui partiront vers la
-                    fin du <lb/>mois prochain. Le <persName ref="#p2494" type="bi">Comte de Fermov</persName> me vint voir et nous <lb/>raconta que Le
-                        <persName ref="#p2350" type="bi">Comte Panin</persName> Grand Gouverneur de <rs type="bi">S.A.I.</rs>
-                    <lb/>avoit reçû à paques de <rs ref="#p0081" type="bi_person">S.M.</rs> un présent de 50000 Roubles ; <lb/>le <persName ref="#p2553" type="bi">Prince Repnin</persName> Ambassadeur à <placeName ref="#l0221" type="bi">Warsovie</placeName> autant
-                        <del rend="strikethrough">avec l’ord</del>
-                    <lb/>et encore le Cordon bleu de St : André. Le Comte <persName ref="#p2338" type="bi">Alexis Orlov</persName>
-                    <lb/>que tous les médecins de l’Europe <add place="above">avoient abandonné</add>, car on avoit consulté <lb/>les plus celebres en
-                    leurs faisant des grands présent ; eh bien <lb/>ce Seigneur est aprésant parfaitement bien rétabli : il vient <lb/>de commander
-                    les Gardes à cheval et faire tous les exercices <lb/>comme auparavant. C’est un Chirurgien russe, qui a été long <lb/>tems à la
-                    chine, mais que tous les médecins meprisèrent comme <lb/>le plus grand ignorant, de sorte que ce pauvre diable perdit <lb/>
-                    <add place="margin">et</add> sa place et ses pratiques : mais àprésent qu’il a si bien gueri <lb/>le <persName ref="#p2338" type="bi">Comte Alexis</persName>, et ayant fait encore d’autres cures surpren<lb break="no"/>nantes, on ne lui a non
-                    seulement rendû sa place, mais S.M.<lb/>I. a encore accordé sa protection particulière : il est obligé <lb/>de demeurer au Palais
-                    imperial, et entreprend à présent à <lb/>guerir les maladies les plus obstinées. Pourvû que ce bon <lb/>homme ne fasse pas une
-                    terrible chûte : il me semble qu’il <lb/>vaudroit mieux qu’il cessât de guerir.</p>
-                <pb facs="iiif:10.34847/nkl.93dacs70/1cb8a9ff88d4d30068adedd183f1debce0e672e9" n="5"/>
-                <note hand="#pencil" place="margin(right)" type="foliation">42</note>
-                <p rend="align(center)">Continuation.</p>
-                <p>le 6 Avril. A l’église mais en retournant, les sentinelles <lb/>placées au rivage ne voulurent plus nous permettre de <lb/>répasser
-                    en voiture la riviere. Nous étions bien embar<lb break="no"/>rassés. Heureusement arrivâ un <rs type="bi">Lieutenant General</rs>
-                    <lb/>qui nous permît de passer encore cette fois ci, mais de <lb/>ne pas nous écarter du chemin. En effet la glace com<lb break="no"/>mençoit dejà à s’affoiblir, et l’après diner, nous fûmes <lb/>contraint de passer la riviere à pied, pour aller
-                    chez <lb/>
-                    <rs ref="#p2330" type="bi_person">mon frère</rs> qui fit baptiser et qui nous envoia son <lb/>carosse à la rencontre. Je
-                    tins l’enfant sur le baptême. <lb/>
-                    <persName ref="#p2390" type="bi">Mll. Winterstadt</persName>, <rs type="bi">ma sœur</rs> ainée,
-                    mon beau frère <persName ref="#p2453" type="bi">Delen</persName> et <lb/>
-                    <rs ref="#p0037" type="bi_person">Papa</rs> et <rs ref="#p2329" type="bi_person">Mama</rs> furent les comperes et maraines : on <lb/>donnâ à l’enfant les noms Leonhard André
-                    Charles. <lb/>Le 7 fut l’assemblée génerale dans l’église dont je Vous <lb/>ai dejà parlé, Monsieur et très-honoré Oncle. Le 9
-                    j’eus <lb/>la Visite du <persName ref="#p2485" type="bi">Prof. Lowitz</persName>. Le 10 j’achetai un garçon <lb/>pour 30 Roubles,
-                    avec plusieurs milliers de poux : j’espère <lb/>avoir fait un bon achat ; je le ferai apprendre à friser. <lb/>Le <subst>
-                        <del rend="strikethrough">13</del>
-                        <add place="above">12</add>
-                    </subst> je fis quelques visites et ensuite à l’Assemblée qui <lb/>se tient tous les Samdis au corps de cadèts. Le 13 à l’église
-                    <lb/>lutherienne. <rs ref="#p0081" type="bi_person">S.M.I.</rs> partirent pour <placeName type="bi">Sarskoe Selo</placeName>.</p>
-                <p>Voilà tout mon sac vuidé. Cette lettre partira après <lb/>demain : s’il se passe encore quelque chose qui mérite <lb/>d’être
-                    indiquée, je l’ajouterai. Mille et mille civilités <lb/>de <rs ref="#p0037" type="bi_person">mon père</rs> et de <rs ref="#p2329" type="bi_person">ma mère</rs> : nos respects à <rs type="bi">Mad. Votre <lb/>épouse</rs>, bien de complimens aux
-                    Mesdemoiselles Vos <lb/>filles et de tendres amities aux petits. <rs ref="#p2328" type="bi_person">Ma femme</rs>, et <lb/>tous se
-                    récommandent à Votre bienveuillance et amitiés. <lb/>Nos civilités à MM. <persName ref="#p2554" type="bi">Pegâ</persName>, la
-                    maison Labaume, Mrs <lb/>
-                    <persName ref="#p2452" type="bi">Handreich</persName> etc etc je suis avec beaucoup de respect </p>
-                <closer>
-                    <salute rend="align(center)">Monsieur et très honoré Oncle<lb/> Votre très […] et très obeïssant Serviteur</salute>
-                    <signed>[J.] Albert Euler.</signed>
-                </closer>
-                <note>[trou au bas de la page au milieu]</note>
-            </div>
-        </body>
-    </text>
+								</extent>
+								<foliation corresp="#pencil">
+									<p xml:lang="de">Foliierung in Bleistift, oben rechts der jeweiligen Vorderseiten durch das Archiv.</p>
+									<p xml:lang="en">Numbering in pencil by the archive in the right-hand top corner.</p>
+									<p xml:lang="fr">Numérotation par les archives en haut à droite au crayon.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Der Brief ist gut erhalten.</p>
+									<p xml:lang="en">The letter is well preserved.</p>
+									<p xml:lang="fr">La lettre est en bon état de conservation.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="black_ink" scope="major" scribe="author" scribeRef="#p2284" xml:id="major_hand">
+								<p xml:lang="de">Hand des Absenders Johann Albrecht Euler, Brieftext in schwarzer Tinte, in lateinischer Schrift
+									(französische Sprache).</p>
+								<p xml:lang="en">Hand of sender John Albert Euler, body text in black ink, in latin script (language: French).</p>
+								<p xml:lang="fr">Main de l'expéditeur Jean Albert Euler, texte à l'encre noire, en écriture latine (langue:
+									français).</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
+								<p xml:lang="de">Hand des Archivars, der die Foliierung des Konvoluts in Bleistift vorgenommen hat.</p>
+								<p xml:lang="en">Hand of the archivist who numbered the bundle (pencil).</p>
+								<p xml:lang="fr">Main de l'archiviste ayant numéroté la liasse (crayon).</p>
+							</handNote>
+						</handDesc>
+						<!--  <sealDesc></sealDesc> -->
+						<!-- <accMat></accMat>  -->
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde in <origPlace ref="#l0020">Sankt-Petersburg</origPlace> am <origDate
+									when-iso="1768-04-16">16. April 1768</origDate> verfasst.</p>
+							<p xml:lang="en">The letter was written in <origPlace ref="#l0020">Saint Petersburg</origPlace> on <origDate
+									when-iso="1768-04-16">16 April 1768</origDate>.</p>
+							<p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l0020">Saint-Pétersbourg</origPlace> le <origDate
+									when-iso="1768-04-16">16 avril 1768</origDate>.</p>
+						</origin>
+						<acquisition/>
+					</history>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<hyphenation eol="hard" rend="sh">
+					<p xml:lang="de">Worttrennungen an Zeilenumbrüchen werden in der Regel durch einen einfachen Bindestrich angezeigt.</p>
+					<p xml:lang="en">Line breaks will normally be shown by a hyphen.</p>
+					<p xml:lang="fr">Les coupures en fin de ligne sont signalées par des tirets simples.</p>
+				</hyphenation>
+				<correction>
+					<p xml:lang="fr">Aucune correction</p>
+					<p xml:lang="en">No correction</p>
+					<p xml:lang="de">Keine Korrekturen.</p>
+				</correction>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="fr"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/10601695/">Johann Albrecht Euler</persName>
+					<placeName ref="https://www.geonames.org/498817">Sankt-Petersburg</placeName>
+					<date when-iso="1768-04-16"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/51703551/">Jean-Henri Samuel Formey</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief23vonJAEuleranJHSFormey.xml" type="prev"/>
+					<ref target="Brief25vonJAEuleranJHSFormey.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-07-13" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-05-12" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-10" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2014-05-12" who="#emmanuelle.chaze">Edited persName Orlov.</change>
+			<change when-iso="2014-05-09" who="#emmanuelle.chaze">Edited lb and strikethroughs.</change>
+			<change when-iso="2014-05-03" who="#emmanuelle.chaze">Edited body.</change>
+			<change when-iso="2014-05-02" who="#emmanuelle.chaze">Edited metadata.</change>
+			<change when-iso="2014-04-16" who="#emmanuelle.chaze">Edited metadata and body.</change>
+			<change when-iso="2014-04-08" who="#emmanuelle.chaze">Edited metadata and body.</change>
+			<change when-iso="2014-03-16" who="#emmanuelle.chaze">Entered metadata and body.</change>
+			<change when-iso="2014-03-21" who="#emmanuelle.chaze">Edited layout.</change>
+			<change when-iso="2014-03-22" who="#emmanuelle.chaze">Edited layout and body.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.93dacs70/e22e704c48db8f086e7fb8a798da42d45af23932" n="1"/>
+				<note hand="#pencil" place="margin(right)" type="foliation">40</note>
+				<opener>
+					<dateline rend="align(right)">à <placeName ref="#l0020" type="bi">St : Petersbourg</placeName> ce <date when-iso="1768-04-16"
+							>16/27 Avril 1768</date>.</dateline>
+					<salute rend="align(left)">Monsieur mon très-chèr et très honoré Oncle,</salute>
+				</opener>
+				<lb/>
+				<p>Je reprens la plume au bout de 5 semaines, Vous ayant <lb/>ecrit ma derniere, Monsieur et très honoré Oncle, le <lb/>14 du mois
+					passé : je commence par répondre aux <lb/>trois dernieres lettres du 14, 27 Mars et du 8 Avril, <lb/>que Vous m’avez fait
+					l’honneur de m’ecrire. <lb/>
+					<persName ref="#p2465" type="bi">Mr. Guldenstädt</persName> m’a écrit de Riga, et demandé qu’on <lb/>l’y laisse encore pendant
+					quatre semaines, l’Academie <lb/>vient de le lui accorder et le <persName ref="#p2462" type="bi">Prof. Pallas</persName> se charge
+					<lb/>de l’achât de tout ce que <persName ref="#p2465" type="bi">Guldenstädt</persName> aura besoin pour <lb/>le voiage. Le pere du
+					Pasteur <persName ref="#p2546" type="bi">Brounne</persName> qui va à <lb/>
+					<placeName ref="#l0439" type="bi">Moscou</placeName> est sans doute le même que j’ai connû à <lb/>
+					<placeName ref="#l1103" type="bi">Berlin</placeName> ; il est anglois, savoit beaucoup de Secrets, et <lb/>comme le grand
+					directoire, qui l’a fait venir de <placeName ref="#l0089" type="bi">Zuric</placeName>, ne <lb/>l’emploioit pas comme il voulût, il
+					entra en service chez <lb/>le <persName ref="#p2540" type="bi">Comte de Kamke</persName>. Il y a long tems que je n’ai pas <lb/>vû
+					le <persName ref="#p2397" type="bi">Comte de Gollovin</persName> ; il me chargea de faire des <lb/>propositions à <persName
+						ref="#p2530" type="bi">Mr. de Zollikoffre</persName> pour prendre la place <lb/>de Gouverneur auprès <add place="above"
+						>de</add>
+					<rs ref="#p2501" type="bi_person">son fils</rs>, mais comme celui-ci <lb/>l’a refusé, il a pris le partis de faire revenir <rs
+						ref="#p2501" type="bi_person">ce fils</rs>, <lb/>et de lui faire faire ses études ici. Je felicite <lb/>l’<orgName
+						ref="#g0120" type="bi">Academie de Berlin</orgName> de ce que <rs ref="#p0081" type="bi_person">S.M.I.</rs> vient d’accepter <lb/>
+					<del rend="strikethrough">l’aggregation</del> l’association qu’elle Lui avoit offert. <lb/>Ici on n’en sait rien et le <persName
+						ref="#2340" type="bi">Comte Orlov</persName> garde la dessus <lb/>un profond silence. L’Epicier <persName ref="#p2547"
+						type="bi">Bouc</persName> est ici et loge <lb/>à <placeName type="bi">Wasiliostrov</placeName> avec un Officier hollandois ;
+					il se porte <lb/>bien à ce qu’on m’a dit ; je n’ai pas encore pû le <lb/>voir, et m’informer de son état et de ce qu’il fait. </p>
+				<pb facs="iiif:10.34847/nkl.93dacs70/3200a898623ba2d421c83797a7196f3ab7250888" n="2"/>
+				<p>
+					<rs ref="#p0037" type="bi_person">Mon père</rs> vient de recevoir par le <persName ref="#p2508" type="bi">Prince
+						Dolgorouki</persName>
+					<lb/>une Seconde requète des Mssrs. <persName ref="#p2509" type="bi">Huggenin</persName>, <persName ref="#p2548" type="bi"
+						>Tournon</persName>, <lb/>
+					<persName ref="#p2511" type="bi">Castillon</persName> pere et fils. Le Prince s’étoit trompé <persName ref="#p2510" type="bi"
+						>Sulzer</persName>
+					<lb/>et <persName ref="#p2360" type="bi">Lambert</persName> n’ont jamais été de ce complot. Mais <persName ref="#p2511" type="bi"
+						>Castillon</persName>
+					<lb/>le père ecrit à <rs ref="#p0037" type="bi_person">mon pere</rs>, que lui et son fils possedoient <lb/>des Secrets importans
+					et comme <placeName ref="#l1103" type="bi">Berlin</placeName> est pour eux un <lb/>
+					<hi rend="underlined">vrai enfer</hi> il supplie qu’on leur procure ici de bonnes <lb/>places etc. <rs ref="#p0037"
+						type="bi_person">mon pere</rs> a envoié leur requete au <persName ref="#2340" type="bi">comte <lb/>d’Orlov</persName> mais je
+					doute qu’on y fasse réflexion. Le <persName ref="#p2485" type="bi">Prof. Lowitz</persName>
+					<lb/>est arrivé le 7 de ce mois ; il a bien passé par <placeName ref="#l1103" type="bi">Berlin</placeName>
+					<lb/>mais il ne s’y est pas arreté. Aujourd’hui il a diné chez <lb/>
+					<rs ref="#p0037" type="bi_person">mon pere</rs> avec son fils, un aimable enfant de 10 ans, <lb/>nous y étions aussi tous et mon
+					pere celebra mon <lb/>jour de noces. Quant à Votre manuscrit, Monsieur <lb/>et très-honoré Oncle, je suis très mortifié que je ne
+					<lb/>puis pas Vous servir en Votre demande. Notre cher <lb/>
+					<persName ref="#2340" type="bi">Comte d’Oxxx</persName> est un brâve Seigneur, mais il n’aime <lb/>pas les dépenses. Je me connois
+					– je me facherois s’il <lb/>me réfusoit quelque chose qui Vous regarde, très chèr <lb/>Oncle, et le <rs ref="#p2340"
+						type="bi_person">Comte</rs> pourroit bien prendre mauvais si je me <lb/>fachois. De pareilles scenes m’ont appris à le
+					connoître <lb/>de ce coté là. Le <persName ref="#p2527" type="bi">Pasteur La Vigne</persName> doit avoir reçû sla <lb/>Vocation
+					formelle, que nous avons dressée dans une <lb/>assemblée génerale de tous les pères de famille tenue <lb/>le 7 de ce mois.
+					Quelques membres de notre commun<lb break="no"/>eauté l’ont connû en Suede et ceux-ci louent <lb/>beaucoup ses sermons tant
+					françois qu’allemands. <lb/>Craignant que la distribution du prix oeconomique <lb/>ne causasse plusieures disputes, où je
+					risquerois <lb/>d’être impliqué, je me suis heureusement tiré de tout, <lb/>soux prétexte que je ne connois pas suffisamment
+					<lb/>de quoi il s’agit. et que également l’état de la <pb
+						facs="iiif:10.34847/nkl.93dacs70/fdace1b035dbffd4dbfa810fad03d9424025667d" n="3"/></p>
+				<p><!-- Added tag for the good display of the indexes-->
+					<note hand="#pencil" place="margin(right)" type="foliation">41</note>rivière m’empecheroit d’assister aux assemblées.
+					<lb/>Effectivement depuis le 6 de ce mois on ne pouvoit plus <lb/>passer la riviere en carosse, et hier lesa glaces s’en est
+					<lb/>allé tout à fait ; de sorte que pour aller de l’autre <lb/>coté il faut avoir double équipageF. Le prix sera <lb/>distribué
+					mecredi prochain. C’est le fils du Jardinier <lb/>
+					<persName ref="#p2549" type="bi">Neumann</persName> qui veut venir ici, et j’ai été chargé de lui pro<lb break="no"/>curer une
+					bonne condition dans un comptoire d’ici. J’ai <lb/>d’abord communiqué l’échantillon typographique à nos <lb/>Imprimeurs pour
+					qu’ils tâchent de l’imiter : d’ailleurs <lb/>je me remercie très humblement de cette communication <lb/>et je souhaite du fond de
+					mon cœur, mon très-honoré <lb/>oncle, que Vous continuissiez encore pendant une longue <lb/>suite d’années à donner au respectable
+						<persName ref="#p2550" type="bi">C.P. de Uhden</persName>
+					<lb/>de ces marques de Votre tendre amitié pour lui : car <lb/>
+					<del rend="strikethrough">tant que</del> elles supposent Votre vie et cette vie fait mes <lb/>délices. Je réprends le fils de mon
+					journal. le 15 <lb/>Mars je fis une visite chez le <persName ref="#p2407" type="bi">General Pohlmann</persName> et chez <lb/>
+					<rs type="bi">mon frere</rs>. le 16 à l’Eglise reformée et ensuite plusieures <lb/>visites. le 17 je dinai chez <rs ref="#2340"
+						type="bi">mon chef</rs> et <rs ref="#p2328" type="bi_person">ma femme</rs> eut <lb/>la visite de <persName ref="#p2551"
+						type="bi">Mad. Berlon</persName>. le 18 rien d’extraordinaire <lb/>car mes occupations journalieres Vous sont connues. <lb/>le
+					19. je dinai chez <rs ref="#p2340" type="bi_person">mon Chef</rs> et ensuite à la <orgName ref="#g0124" type="bi">Societé
+						<lb/>oeconomique</orgName>. le 23 Dimanche des rameaux à l’église <lb/>reformée. le 25 grande nouvelle ; <del
+						rend="strikethrough">
+						<rs ref="#p2331" type="bi_person">ma sœur</rs>
+					</del>
+					<lb/>la femme de <rs ref="#p2330" type="bi_person">mon frere</rs> le medecin accoucha d’un <lb/>fils, et nous l’allions voir. le
+					27 quelques visites. <lb/>le 28 à l’église reformée. le 29 on nous invitâ <lb/>pour entendre la messe à la Chapelle de <rs
+						ref="#p0081" type="bi_person">S.M.I</rs>, <lb/>qui se lisoit dans la nuit entre <add place="above">le</add> 29 et le 30. Mais
+					<lb/>Vous jugerez aisement, que ce n’étoit pas là mon <lb/>
+					<hi rend="align(right)">affaire</hi>. [en marge]F c’est-à-dire jusqu’à ce que le pont sera rémis. <pb
+						facs="iiif:10.34847/nkl.93dacs70/2dfe1cdda6c4761bcbc6e297770ff98709c83c2d" n="4"/>affaire, que je n’y ai pas été et que
+					personne n’étoit force non <lb/>plus. le 30 jour de Pâques, à l’église ensuite chez <rs ref="#2340" type="bi">mon chef</rs> et
+					<lb/>en retournant chez <rs ref="#p2330" type="bi_person">mon frere</rs> qui fut obligé de prendre une <lb/>nourrice pour son
+					enfant. L’après diné nous eumes plusieures <lb/>visites ; et plusieurs vinrent aussi nous presenter des œufs <lb/>en nous
+					felicitant, auxquels il falloit payer les œufs au-delà <lb/>du quadruple. Le 31 encore quelques visites ; j’allois vers le
+					<lb/>soir à la cour, mais <rs ref="#p0081" type="bi_person">S.M.I.</rs> n’étoit pas visible, je fis donc <lb/>ma cour à la belle
+					sœur l’accouchée. Le 1 Avril chez le <persName ref="#p2335" type="bi">Comte <lb/>Alexis Rasumovski</persName>, qui alloit diner
+					chez <rs ref="#p0081" type="bi_person">S.M.I.</rs> je dinai donc chez <lb/>
+					<rs ref="#2340" type="bi">mon chef</rs>, et après diner nous eumes quelques visites ; le 2 et 3 <lb/>rien_le 4 jours de naissance
+					de <rs ref="#p0037" type="bi_person">mon père</rs> et le 5 celui de <lb/>
+					<rs ref="#p2329" type="bi_person">ma mère</rs>. <rs ref="#p0037" type="bi_person">Mon pere</rs> fit assembler la commission
+					academique <lb/>extraordinairement pour refler les voyages de <persName ref="#p2462" type="bi">Pallas</persName>, <persName
+						ref="#p2405" type="bi">Gmelin</persName>, <lb/>
+					<persName ref="#p2552" type="bi">Falck</persName>, <persName ref="#p2465" type="bi">Güldenstadt</persName> et <persName
+						ref="#p2518" type="bi">Lepechin</persName>, qui partiront vers la fin du <lb/>mois prochain. Le <persName ref="#p2494"
+						type="bi">Comte de Fermov</persName> me vint voir et nous <lb/>raconta que Le <persName ref="#p2350" type="bi">Comte
+						Panin</persName> Grand Gouverneur de <rs type="bi">S.A.I.</rs>
+					<lb/>avoit reçû à paques de <rs ref="#p0081" type="bi_person">S.M.</rs> un présent de 50000 Roubles ; <lb/>le <persName
+						ref="#p2553" type="bi">Prince Repnin</persName> Ambassadeur à <placeName ref="#l0221" type="bi">Warsovie</placeName> autant
+						<del rend="strikethrough">avec l’ord</del>
+					<lb/>et encore le Cordon bleu de St : André. Le Comte <persName ref="#p2338" type="bi">Alexis Orlov</persName>
+					<lb/>que tous les médecins de l’Europe <add place="above">avoient abandonné</add>, car on avoit consulté <lb/>les plus celebres en
+					leurs faisant des grands présent ; eh bien <lb/>ce Seigneur est aprésant parfaitement bien rétabli : il vient <lb/>de commander
+					les Gardes à cheval et faire tous les exercices <lb/>comme auparavant. C’est un Chirurgien russe, qui a été long <lb/>tems à la
+					chine, mais que tous les médecins meprisèrent comme <lb/>le plus grand ignorant, de sorte que ce pauvre diable perdit <lb/>
+					<add place="margin">et</add> sa place et ses pratiques : mais àprésent qu’il a si bien gueri <lb/>le <persName ref="#p2338"
+						type="bi">Comte Alexis</persName>, et ayant fait encore d’autres cures surpren<lb break="no"/>nantes, on ne lui a non
+					seulement rendû sa place, mais S.M.<lb/>I. a encore accordé sa protection particulière : il est obligé <lb/>de demeurer au Palais
+					imperial, et entreprend à présent à <lb/>guerir les maladies les plus obstinées. Pourvû que ce bon <lb/>homme ne fasse pas une
+					terrible chûte : il me semble qu’il <lb/>vaudroit mieux qu’il cessât de guerir.</p>
+				<pb facs="iiif:10.34847/nkl.93dacs70/1cb8a9ff88d4d30068adedd183f1debce0e672e9" n="5"/>
+				<note hand="#pencil" place="margin(right)" type="foliation">42</note>
+				<p rend="align(center)">Continuation.</p>
+				<p>le 6 Avril. A l’église mais en retournant, les sentinelles <lb/>placées au rivage ne voulurent plus nous permettre de <lb/>répasser
+					en voiture la riviere. Nous étions bien embar<lb break="no"/>rassés. Heureusement arrivâ un <rs type="bi">Lieutenant General</rs>
+					<lb/>qui nous permît de passer encore cette fois ci, mais de <lb/>ne pas nous écarter du chemin. En effet la glace com<lb
+						break="no"/>mençoit dejà à s’affoiblir, et l’après diner, nous fûmes <lb/>contraint de passer la riviere à pied, pour aller
+					chez <lb/>
+					<rs ref="#p2330" type="bi_person">mon frère</rs> qui fit baptiser et qui nous envoia son <lb/>carosse à la rencontre. Je tins
+					l’enfant sur le baptême. <lb/>
+					<persName ref="#p2390" type="bi">Mll. Winterstadt</persName>, <rs type="bi">ma sœur</rs> ainée, mon beau frère <persName
+						ref="#p2453" type="bi">Delen</persName> et <lb/>
+					<rs ref="#p0037" type="bi_person">Papa</rs> et <rs ref="#p2329" type="bi_person">Mama</rs> furent les comperes et maraines : on
+					<lb/>donnâ à l’enfant les noms Leonhard André Charles. <lb/>Le 7 fut l’assemblée génerale dans l’église dont je Vous <lb/>ai dejà
+					parlé, Monsieur et très-honoré Oncle. Le 9 j’eus <lb/>la Visite du <persName ref="#p2485" type="bi">Prof. Lowitz</persName>. Le 10
+					j’achetai un garçon <lb/>pour 30 Roubles, avec plusieurs milliers de poux : j’espère <lb/>avoir fait un bon achat ; je le ferai
+					apprendre à friser. <lb/>Le <subst>
+						<del rend="strikethrough">13</del>
+						<add place="above">12</add>
+					</subst> je fis quelques visites et ensuite à l’Assemblée qui <lb/>se tient tous les Samdis au corps de cadèts. Le 13 à l’église
+					<lb/>lutherienne. <rs ref="#p0081" type="bi_person">S.M.I.</rs> partirent pour <placeName type="bi">Sarskoe Selo</placeName>.</p>
+				<p>Voilà tout mon sac vuidé. Cette lettre partira après <lb/>demain : s’il se passe encore quelque chose qui mérite <lb/>d’être
+					indiquée, je l’ajouterai. Mille et mille civilités <lb/>de <rs ref="#p0037" type="bi_person">mon père</rs> et de <rs ref="#p2329"
+						type="bi_person">ma mère</rs> : nos respects à <rs type="bi">Mad. Votre <lb/>épouse</rs>, bien de complimens aux
+					Mesdemoiselles Vos <lb/>filles et de tendres amities aux petits. <rs ref="#p2328" type="bi_person">Ma femme</rs>, et <lb/>tous se
+					récommandent à Votre bienveuillance et amitiés. <lb/>Nos civilités à MM. <persName ref="#p2554" type="bi">Pegâ</persName>, la
+					maison Labaume, Mrs <lb/>
+					<persName ref="#p2452" type="bi">Handreich</persName> etc etc je suis avec beaucoup de respect </p>
+				<closer>
+					<salute rend="align(center)">Monsieur et très honoré Oncle<lb/> Votre très […] et très obeïssant Serviteur</salute>
+					<signed>[J.] Albert Euler.</signed>
+				</closer>
+				<note>[trou au bas de la page au milieu]</note>
+			</div>
+		</body>
+	</text>
 </TEI>

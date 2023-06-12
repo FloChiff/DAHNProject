@@ -1,349 +1,372 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Anthology of 1804</title>
-                <title xml:lang="fr">Anthologie de 1804</title>
-                <title xml:lang="de">Blumen lese von 1804</title>
-                <author>
-                    <persName ref="#p0237">Adelbert von Chamisso</persName>
-                </author>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#janine.katins">
-                        <forename>Janine</forename>
-                        <surname>Katins</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>In collaboration with</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                    <persName ref="#sophia.zeil">
-                        <forename>Sophia</forename>
-                        <surname>Zeil</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2013-11"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">French culture</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>De La Foye papers</collection>
-                        <idno type="stabi.berlin">Nachlass 239, folio 3</idno>
-                        <idno type="kalliope">DE-611-HS-1790738</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <note resp="#janine.katins" type="keyword">Chamisso (lyric poet)</note>
-                            <note resp="#janine.katins" type="keyword">Sonnet</note>
-                            <note resp="#anna.busch" type="keyword">Musenalmanach</note>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Feingeripptes Papier mit Wasserzeichen.</material>
-                                        <material xml:lang="en">Laid paper with water mark.</material>
-                                        <material xml:lang="fr">Papier finement côtelé comportant un filigrane.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">1 Blatt</measure>
-                                        <measure xml:lang="en">1 folio</measure>
-                                        <measure xml:lang="fr">1 feuillet</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#brown_ink">
-                                    <p xml:lang="de">Foliierung in brauner Tinte.</p>
-                                    <p xml:lang="en">Foliation in brown ink.</p>
-                                    <p xml:lang="fr">Numérotation des pages à l'encre marron.</p>
-                                </foliation>
-                                <foliation corresp="#pencil">
-                                    <p xml:lang="de">Foliierung mit Bleistift eines Archivars.</p>
-                                    <p xml:lang="en">Foliation in pencil by the archive.</p>
-                                    <p xml:lang="fr">Numérotation des pages par les archives, crayon de papier.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Mittlerer Erhaltungszustand, Stockflecken, Faltspuren und Knicke.</p>
-                                    <p xml:lang="en">Medium condition, mould spots, traces of folding and creases.</p>
-                                    <p xml:lang="fr">En état moyen, taches d'humidité et traces de plis.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Verfassers Adelbert von Chamisso, Text in brauner Tinte, in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of the author Adelbert von Chamisso, text in brown ink, in German script.</p>
-                                <p xml:lang="fr">Main de l'auteur Adelbert de Chamisso, encre marron, écriture gothique.</p></handNote>
-                            <handNote medium="ink" scope="minor" scribe="unknown" xml:id="brown_ink">
-                                <p xml:lang="de">Unbekannte Hand, in brauner Tinte.</p>
-                                <p xml:lang="en">Unknown hand, in brown ink.</p>
-                                <p xml:lang="fr">Main inconnue, à l'encre marron.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Die beiden Sonette waren ursprünglich Teil des Briefes <persName ref="#p0237">Chamissos</persName> an
-                                    <persName ref="#p0248">de La Foye</persName>, den <persName ref="#p0375">Geiger</persName> in seiner Edition
-                                    <title ref="#w00282">Aus Chamissos Frühzeit</title> (S. 31-38, Nennung der Gedichte S. 36) dem Zeitraum vor <date notAfter-iso="1804-07">Juli 1804</date> zuordnete. Bereits Geiger vermutet den Verlust eines letzten Blatts, auf
-                                dem womöglich das Datum verzeichnet war. Der hier vorliegende, einzig überlieferte Bogen mit den beiden Sonetten
-                                verzeichnet das Jahr <origDate when-iso="1804">1804</origDate>. Der Titel und die Foliierung könnten darauf verweisen,
-                                dass es sich dabei ursprünglich um eine Anthologie, die eine größere Zahl lyrischer Beiträge umfasste oder umfassen
-                                sollte, gehandelt haben könnte.</p>
-                            <p xml:lang="en">Both sonetts were part of a letter from <persName ref="#p0237">Chamisso</persName> to <persName ref="#p0248">de La Foye</persName> that <persName ref="#p0375">Geiger</persName> dates in his edition <title ref="#w00282">Aus Chamissos Frühzeit</title> (pp. 31-38) to before <date notAfter-iso="1804-07">July
-                                1804</date>.</p>
-                            <p xml:lang="fr">Les deux sonnets faisaient initialement partie d'une lettre de <persName ref="#p0237">Chamisso</persName>
-                                à <persName ref="#p0248">de La Foye</persName> que <persName ref="#p0375">Geiger</persName> date <date notAfter-iso="1804-07">d'avant juillet 1804</date> (dans son édition <title ref="#w00282">Aus Chamissos
-                                    Frühzeit</title>, p. 31-38).</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
-                                    1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
-                                Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
-                                Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
-                            <p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
-                                    <date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
-                                and loaned to the State Library.</p>
-                            <p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
-                                allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
-                                prêt durable à la Librairie d'État de Berlin.</p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl>
-                                <bibl xml:lang="de"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
-                                        <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f. Die Sonette sind hier unter dem Titel
-                                        <title ref="#w00297">Sie und Er</title> abgedruckt. Dieser Druck unterscheidet sich bezüglich der
-                                    Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
-                                    Fehler.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
-                                        <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, pp. 70-71. Both sonnets are published under the
-                                    title <title ref="#w00297">Sie und Er</title>. This print differs in spelling, punctuation, upper and lower
-                                    case.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
-                                        <title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, p. 70-71. Publié sous le titre <title ref="#w00297">Sie und Er</title>. Cette édition présente des différences concernant l'orthographe, la
-                                    ponctuation, l'usage des majuscules et des minuscules.</bibl>
-                            </bibl>
-                            <bibl>
-                                <bibl xml:lang="de"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
-                                        Frühzeit</title>, S. 31-38. Abdruck des Briefes, dem das Blatt mit den Sonetten vermutlich beigelegen
-                                    hat.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
-                                        Frühzeit</title>, pp. 31-38. Publication of the letter that probably contained this folio with the two
-                                    sonnets.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
-                                        Frühzeit</title>, p. 31-38. Copie de la lettre à laquelle était probablement jointe le feuillet comportant les
-                                    sonnets.</bibl>
-                            </bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <hyphenation eol="hard" rend="dh">
-                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
-                </hyphenation>
-                <correction method="markup">
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="100"/>
-            </langUsage>
-            <creation>
-                <date when-iso="1804-12-31"/>
-            </creation>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-07-26" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Modified the tag milestone to put metamark</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
-            <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
-            <change when-iso="2013-12-24" who="#sabine.seifert">Re-organized information in first footnote and bibl element.</change>
-            <change when-iso="2013-11-19" who="#sabine.seifert">Corrections within header and body.</change>
-            <change when-iso="2013-03-07" who="#sophia.zeil">Corrections within header and body.</change>
-            <change notAfter-iso="2013-03-06" who="janine.katins">Transcription, encoding and annotation.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.29c3e31o/984e27a5594eed8fc732ee8c8c633864981ba403" n="1"/>
-                <note hand="#pencil" place="top-margin(right)" type="foliation">3</note>
-                <note hand="#brown_ink" place="top-margin(right)" type="foliation">33</note>
-                <head rend="align(center)">Blumen lese von 1804<note resp="#janine.katins">
-                        <p xml:lang="de">"Blumenlese" ist das deutsche Synonym für den griechischen Terminus "Anthologie". Dieses Sonett bildet das
-                            Pendant zu dem Sonett "An mich" auf der Rückseite der Handschrift. Beide Gedichte sind unter dem Titel <title ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> und <persName ref="#p0249" type="bi">Varnhagens</persName>
-                            <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p>
-                        <p xml:lang="en">"Blumenlese" is the German synonym for the Greek term "anthology". This sonnet is the counterpart to the
-                            sonnet "An mich" on the back of the manuscript. Both poems are printed under the title <title ref="#w00297" type="bi">Sie
-                                und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> and <persName ref="#p0249" type="bi">Varnhagens</persName>' <title ref="#w00257" type="bi">Musenalmanach for the year 1805</title>, pp. 70 f.</p>
-                        <p xml:lang="fr">« Blumenlese » est le synonyme allemand du terme grec « anthologie ». Ce sonnet est le pendant du sonnet « An
-                            mich » au dos du manuscrit. Les deux poèmes sont imprimés sous le titre <title ref="#w00297" type="bi">Sie und Er</title>
-                            de <persName ref="#p0237" type="bi">Chamissos</persName> et <persName ref="#p0249" type="bi">Varnhagens</persName> avec
-                                <title ref="#w00257" type="bi">Musenalmanach pour l'année 1805</title>, pp. 70 f.</p></note></head>
-                <div type="poem">
-                    <metamark function="separation" style="horizontal-rule"/>
-                    <lg type="poem">
-                        <l>Ob ich es soll im raschen Wahne wagen</l>
-                        <l>Von deinem Arm umfangen mich zu laßen?</l>
-                        <l>Ganz mich hingebend, stark dich zu umfaßen?</l>
-                        <l>Ob nun der Liebe Sonne mir soll tagen?</l>
-                        <lb/>
-                        <l>Ob ich den Schwachen Mächten soll entsagen</l>
-                        <l><subst>
-                                <del rend="overwritten">d</del>
-                                <add place="across">D</add>
-                            </subst>ie, schürrend sie, der Liebe Flammen hassen;</l>
-                        <l>Ob Ehre Tugend, dich, ich soll verlaßen?</l>
-                        <l>Es will die angst bestürmte Brust verzagen.</l>
-                        <lb/>
-                        <l>So. Sturmgeschlagen rauschen auf die Wogen</l>
-                        <l>doch ihr <subst>
-                                <del rend="overwritten">e</del>
-                                <add place="across">E</add>
-                            </subst>rkosen klaget meinem Trauer:</l>
-                        <l>„In unsern Tiefen wohnt ein nächt’ger Schlummer.</l>
-                        <lb/>
-                        <l>Und abwarts ist mein Sehnen ernst gezogen</l>
-                        <l>Den Kampf entweichend dort mit Hoffnungsschauer</l>
-                        <l>Erhoff ich Rast von meinem heißen Kummer.</l>
-                    </lg>
-                    <signed rend="align(right) latin"><persName ref="#p0237" type="bi"><choice>
-                                <abbr>v</abbr>
-                                <expan>von </expan>
-                            </choice>Chamisso.</persName></signed>
-                </div>
-                <div type="poem">
-                    <pb facs="iiif:10.34847/nkl.29c3e31o/54ed641c3c702e046c4d5b5a59235ac9d556f499" n="2"/>
-                    <note hand="#brown_ink" place="top-margin(left)" type="foliation">34</note>
-                    <metamark function="separation" style="horizontal-rule"/>
-                    <lg type="poem">
-                        <head rend="align(center)">An mich<note resp="#anna.busch">
-                                <p xml:lang="de">Dieses Sonett bildet das Pendant zu dem Sonett auf der Vorderseite der Handschrift. Beide Gedichte
-                                    sind unter dem Titel <title ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> und <persName ref="#p0249" type="bi">Varnhagens</persName>
-                                    <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p>
-                                <p xml:lang="en">This sonnet is the counterpart to the sonnet on the front of the manuscript. Both poems are printed
-                                    under the title <title ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> and <persName ref="#p0249" type="bi">Varnhagens</persName>' <title ref="#w00257" type="bi">Musenalmanach for the year 1805</title>, pp. 70 f.</p>
-                                <p xml:lang="fr">Ce sonnet est le pendant du sonnet au recto du manuscrit. Les deux poèmes sont imprimés sous le titre
-                                        <title ref="#w00297" type="bi">Sie und Er</title> de <persName ref="#p0237" type="bi">Chamissos</persName> et
-                                        <persName ref="#p0249" type="bi">Varnhagens</persName> avec <title ref="#w00257" type="bi">Musenalmanach pour
-                                        l'année 1805</title>, pp. 70 f.</p></note></head>
-                        <l>Die zarten Saiten stark erschüttert laßen,</l>
-                        <l>Umleuchten nicht von Himmlischen Ackorden</l>
-                        <l>Der Harmonien Kelch. Vom rauhen Norden</l>
-                        <l>Erbrausen Stürme die das schöne haßen.</l>
-                        <lb/>
-                        <l>Auf raffe dich und wiße dich zu faßen,</l>
-                        <l>Des Himmels götterkraft ist dir geworden,</l>
-                        <l>Des Himmels Feuer soll das irrd’sche Morden,</l>
-                        <l>Das Schreckbild de<supplied cert="high" extent="1 character" reason="damage">r</supplied> Gewöhnlichkeit erblaßen.</l>
-                        <lb/>
-                        <l>Die Kraft der Liebe walle unbestritten,</l>
-                        <l>Im Flammen Fluten tauch'<add place="inline">,</add> und neugebohren</l>
-                        <l>Entschwinge stark dich ja der blauen Klarheit.</l>
-                        <lb/>
-                        <l>Die Afterwelt entsinkt den Flammen tritten,</l>
-                        <l>Wir fanden uns, die wollend sich erkohren</l>
-                        <l>Dem doppel Todt erstand das uns in Wahrheit</l>
-                    </lg>
-                    <signed rend="align(right) latin"><hi rend="underline"><persName ref="#p0237" type="bi"><choice>
-                                    <abbr>v</abbr>
-                                    <expan>von </expan>
-                                </choice>Chamisso</persName></hi></signed>
-                </div>
-            </div>
-        </body>
-    </text>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Anthology of 1804</title>
+				<title xml:lang="fr">Anthologie de 1804</title>
+				<title xml:lang="de">Blumen lese von 1804</title>
+				<author>
+					<persName ref="#p0237">Adelbert von Chamisso</persName>
+				</author>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Prepared by</resp>
+					<persName ref="#janine.katins">
+						<forename>Janine</forename>
+						<surname>Katins</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>In collaboration with</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+					<persName ref="#sophia.zeil">
+						<forename>Sophia</forename>
+						<surname>Zeil</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2013-11"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">French culture</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
+						<repository>Manuscripts section</repository>
+						<collection>De La Foye papers</collection>
+						<idno type="stabi.berlin">Nachlass 239, folio 3</idno>
+						<idno type="kalliope">DE-611-HS-1790738</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<note resp="#janine.katins" type="keyword">Chamisso (lyric poet)</note>
+							<note resp="#janine.katins" type="keyword">Sonnet</note>
+							<note resp="#anna.busch" type="keyword">Musenalmanach</note>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Feingeripptes Papier mit Wasserzeichen.</material>
+										<material xml:lang="en">Laid paper with water mark.</material>
+										<material xml:lang="fr">Papier finement côtelé comportant un filigrane.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">1 Blatt</measure>
+										<measure xml:lang="en">1 folio</measure>
+										<measure xml:lang="fr">1 feuillet</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#brown_ink">
+									<p xml:lang="de">Foliierung in brauner Tinte.</p>
+									<p xml:lang="en">Foliation in brown ink.</p>
+									<p xml:lang="fr">Numérotation des pages à l'encre marron.</p>
+								</foliation>
+								<foliation corresp="#pencil">
+									<p xml:lang="de">Foliierung mit Bleistift eines Archivars.</p>
+									<p xml:lang="en">Foliation in pencil by the archive.</p>
+									<p xml:lang="fr">Numérotation des pages par les archives, crayon de papier.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Mittlerer Erhaltungszustand, Stockflecken, Faltspuren und Knicke.</p>
+									<p xml:lang="en">Medium condition, mould spots, traces of folding and creases.</p>
+									<p xml:lang="fr">En état moyen, taches d'humidité et traces de plis.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
+								<p xml:lang="de">Hand des Verfassers Adelbert von Chamisso, Text in brauner Tinte, in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of the author Adelbert von Chamisso, text in brown ink, in German script.</p>
+								<p xml:lang="fr">Main de l'auteur Adelbert de Chamisso, encre marron, écriture gothique.</p>
+							</handNote>
+							<handNote medium="ink" scope="minor" scribe="unknown" xml:id="brown_ink">
+								<p xml:lang="de">Unbekannte Hand, in brauner Tinte.</p>
+								<p xml:lang="en">Unknown hand, in brown ink.</p>
+								<p xml:lang="fr">Main inconnue, à l'encre marron.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+						</handDesc>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Die beiden Sonette waren ursprünglich Teil des Briefes <persName ref="#p0237">Chamissos</persName> an
+									<persName ref="#p0248">de La Foye</persName>, den <persName ref="#p0375">Geiger</persName> in seiner Edition
+									<title ref="#w00282">Aus Chamissos Frühzeit</title> (S. 31-38, Nennung der Gedichte S. 36) dem Zeitraum vor <date
+									notAfter-iso="1804-07">Juli 1804</date> zuordnete. Bereits Geiger vermutet den Verlust eines letzten Blatts, auf
+								dem womöglich das Datum verzeichnet war. Der hier vorliegende, einzig überlieferte Bogen mit den beiden Sonetten
+								verzeichnet das Jahr <origDate when-iso="1804">1804</origDate>. Der Titel und die Foliierung könnten darauf verweisen,
+								dass es sich dabei ursprünglich um eine Anthologie, die eine größere Zahl lyrischer Beiträge umfasste oder umfassen
+								sollte, gehandelt haben könnte.</p>
+							<p xml:lang="en">Both sonetts were part of a letter from <persName ref="#p0237">Chamisso</persName> to <persName
+									ref="#p0248">de La Foye</persName> that <persName ref="#p0375">Geiger</persName> dates in his edition <title
+									ref="#w00282">Aus Chamissos Frühzeit</title> (pp. 31-38) to before <date notAfter-iso="1804-07">July
+								1804</date>.</p>
+							<p xml:lang="fr">Les deux sonnets faisaient initialement partie d'une lettre de <persName ref="#p0237">Chamisso</persName>
+								à <persName ref="#p0248">de La Foye</persName> que <persName ref="#p0375">Geiger</persName> date <date
+									notAfter-iso="1804-07">d'avant juillet 1804</date> (dans son édition <title ref="#w00282">Aus Chamissos
+									Frühzeit</title>, p. 31-38).</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
+									1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
+								Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
+								Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
+							<p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
+									<date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date
+									when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
+								and loaned to the State Library.</p>
+							<p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
+								allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date
+									when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04"
+									>2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
+								prêt durable à la Librairie d'État de Berlin.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
+										<title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, S. 70 f. Die Sonette sind hier unter dem Titel
+										<title ref="#w00297">Sie und Er</title> abgedruckt. Dieser Druck unterscheidet sich bezüglich der
+									Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
+									Fehler.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
+										<title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, pp. 70-71. Both sonnets are published under the
+									title <title ref="#w00297">Sie und Er</title>. This print differs in spelling, punctuation, upper and lower
+									case.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0237">Chamisso</persName>, <persName ref="#p0249">Varnhagen</persName> (1805):
+										<title ref="#w00257">Musenalmanach auf das Jahr 1805</title>, p. 70-71. Publié sous le titre <title
+										ref="#w00297">Sie und Er</title>. Cette édition présente des différences concernant l'orthographe, la
+									ponctuation, l'usage des majuscules et des minuscules.</bibl>
+							</bibl>
+							<bibl>
+								<bibl xml:lang="de"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
+										Frühzeit</title>, S. 31-38. Abdruck des Briefes, dem das Blatt mit den Sonetten vermutlich beigelegen
+									hat.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
+										Frühzeit</title>, pp. 31-38. Publication of the letter that probably contained this folio with the two
+									sonnets.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0375">Geiger</persName> (1905): <title ref="#w00282">Aus Chamissos
+										Frühzeit</title>, p. 31-38. Copie de la lettre à laquelle était probablement jointe le feuillet comportant les
+									sonnets.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<hyphenation eol="hard" rend="dh">
+					<p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
+						enlevées.</p>
+					<p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
+				</hyphenation>
+				<correction method="markup">
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="100"/>
+			</langUsage>
+			<creation>
+				<date when-iso="1804-12-31"/>
+			</creation>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-07-26" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-22" who="#floriane.chiffoleau">Modified the tag milestone to put metamark</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-01" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
+			<change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
+			<change when-iso="2013-12-24" who="#sabine.seifert">Re-organized information in first footnote and bibl element.</change>
+			<change when-iso="2013-11-19" who="#sabine.seifert">Corrections within header and body.</change>
+			<change when-iso="2013-03-07" who="#sophia.zeil">Corrections within header and body.</change>
+			<change notAfter-iso="2013-03-06" who="janine.katins">Transcription, encoding and annotation.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.29c3e31o/984e27a5594eed8fc732ee8c8c633864981ba403" n="1"/>
+				<note hand="#pencil" place="top-margin(right)" type="foliation">3</note>
+				<note hand="#brown_ink" place="top-margin(right)" type="foliation">33</note>
+				<head rend="align(center)">Blumen lese von 1804<note resp="#janine.katins">
+						<p xml:lang="de">"Blumenlese" ist das deutsche Synonym für den griechischen Terminus "Anthologie". Dieses Sonett bildet das
+							Pendant zu dem Sonett "An mich" auf der Rückseite der Handschrift. Beide Gedichte sind unter dem Titel <title
+								ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> und <persName
+								ref="#p0249" type="bi">Varnhagens</persName>
+							<title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p>
+						<p xml:lang="en">"Blumenlese" is the German synonym for the Greek term "anthology". This sonnet is the counterpart to the
+							sonnet "An mich" on the back of the manuscript. Both poems are printed under the title <title ref="#w00297" type="bi">Sie
+								und Er</title> in <persName ref="#p0237" type="bi">Chamissos</persName> and <persName ref="#p0249" type="bi"
+								>Varnhagens</persName>' <title ref="#w00257" type="bi">Musenalmanach for the year 1805</title>, pp. 70 f.</p>
+						<p xml:lang="fr">« Blumenlese » est le synonyme allemand du terme grec « anthologie ». Ce sonnet est le pendant du sonnet « An
+							mich » au dos du manuscrit. Les deux poèmes sont imprimés sous le titre <title ref="#w00297" type="bi">Sie und Er</title>
+							de <persName ref="#p0237" type="bi">Chamissos</persName> et <persName ref="#p0249" type="bi">Varnhagens</persName> avec
+								<title ref="#w00257" type="bi">Musenalmanach pour l'année 1805</title>, pp. 70 f.</p></note></head>
+				<div type="poem">
+					<metamark function="separation" style="horizontal-rule"/>
+					<lg type="poem">
+						<l>Ob ich es soll im raschen Wahne wagen</l>
+						<l>Von deinem Arm umfangen mich zu laßen?</l>
+						<l>Ganz mich hingebend, stark dich zu umfaßen?</l>
+						<l>Ob nun der Liebe Sonne mir soll tagen?</l>
+						<lb/>
+						<l>Ob ich den Schwachen Mächten soll entsagen</l>
+						<l><subst>
+								<del rend="overwritten">d</del>
+								<add place="across">D</add>
+							</subst>ie, schürrend sie, der Liebe Flammen hassen;</l>
+						<l>Ob Ehre Tugend, dich, ich soll verlaßen?</l>
+						<l>Es will die angst bestürmte Brust verzagen.</l>
+						<lb/>
+						<l>So. Sturmgeschlagen rauschen auf die Wogen</l>
+						<l>doch ihr <subst>
+								<del rend="overwritten">e</del>
+								<add place="across">E</add>
+							</subst>rkosen klaget meinem Trauer:</l>
+						<l>„In unsern Tiefen wohnt ein nächt’ger Schlummer.</l>
+						<lb/>
+						<l>Und abwarts ist mein Sehnen ernst gezogen</l>
+						<l>Den Kampf entweichend dort mit Hoffnungsschauer</l>
+						<l>Erhoff ich Rast von meinem heißen Kummer.</l>
+					</lg>
+					<signed rend="align(right) latin">
+						<persName ref="#p0237" type="bi"><choice>
+								<abbr>v</abbr>
+								<expan>von </expan>
+							</choice>Chamisso.</persName>
+					</signed>
+				</div>
+				<div type="poem">
+					<pb facs="iiif:10.34847/nkl.29c3e31o/54ed641c3c702e046c4d5b5a59235ac9d556f499" n="2"/>
+					<note hand="#brown_ink" place="top-margin(left)" type="foliation">34</note>
+					<metamark function="separation" style="horizontal-rule"/>
+					<lg type="poem">
+						<head rend="align(center)">An mich<note resp="#anna.busch">
+								<p xml:lang="de">Dieses Sonett bildet das Pendant zu dem Sonett auf der Vorderseite der Handschrift. Beide Gedichte
+									sind unter dem Titel <title ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi"
+										>Chamissos</persName> und <persName ref="#p0249" type="bi">Varnhagens</persName>
+									<title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title>, S. 70 f., abgedruckt.</p>
+								<p xml:lang="en">This sonnet is the counterpart to the sonnet on the front of the manuscript. Both poems are printed
+									under the title <title ref="#w00297" type="bi">Sie und Er</title> in <persName ref="#p0237" type="bi"
+										>Chamissos</persName> and <persName ref="#p0249" type="bi">Varnhagens</persName>' <title ref="#w00257"
+										type="bi">Musenalmanach for the year 1805</title>, pp. 70 f.</p>
+								<p xml:lang="fr">Ce sonnet est le pendant du sonnet au recto du manuscrit. Les deux poèmes sont imprimés sous le titre
+										<title ref="#w00297" type="bi">Sie und Er</title> de <persName ref="#p0237" type="bi">Chamissos</persName> et
+										<persName ref="#p0249" type="bi">Varnhagens</persName> avec <title ref="#w00257" type="bi">Musenalmanach pour
+										l'année 1805</title>, pp. 70 f.</p></note></head>
+						<l>Die zarten Saiten stark erschüttert laßen,</l>
+						<l>Umleuchten nicht von Himmlischen Ackorden</l>
+						<l>Der Harmonien Kelch. Vom rauhen Norden</l>
+						<l>Erbrausen Stürme die das schöne haßen.</l>
+						<lb/>
+						<l>Auf raffe dich und wiße dich zu faßen,</l>
+						<l>Des Himmels götterkraft ist dir geworden,</l>
+						<l>Des Himmels Feuer soll das irrd’sche Morden,</l>
+						<l>Das Schreckbild de<supplied cert="high" extent="1 character" reason="damage">r</supplied> Gewöhnlichkeit erblaßen.</l>
+						<lb/>
+						<l>Die Kraft der Liebe walle unbestritten,</l>
+						<l>Im Flammen Fluten tauch'<add place="inline">,</add> und neugebohren</l>
+						<l>Entschwinge stark dich ja der blauen Klarheit.</l>
+						<lb/>
+						<l>Die Afterwelt entsinkt den Flammen tritten,</l>
+						<l>Wir fanden uns, die wollend sich erkohren</l>
+						<l>Dem doppel Todt erstand das uns in Wahrheit</l>
+					</lg>
+					<signed rend="align(right) latin">
+						<hi rend="underline">
+							<persName ref="#p0237" type="bi"><choice>
+									<abbr>v</abbr>
+									<expan>von </expan>
+								</choice>Chamisso</persName>
+						</hi>
+					</signed>
+				</div>
+			</div>
+		</body>
+	</text>
 </TEI>

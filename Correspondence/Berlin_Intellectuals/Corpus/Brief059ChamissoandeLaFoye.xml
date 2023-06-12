@@ -1,425 +1,487 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Adelbert von Chamisso to Louis de la Foye (probably Berlin, 23 January 1815)</title>
-                <title xml:lang="fr">Lettre d'Adelbert de Chamisso à Louis de la Foye (probablement Berlin, 23 janvier 1815)</title>
-                <title xml:lang="de">Brief von Adelbert von Chamisso an Louis de la Foye (wahrscheinlich Berlin, 23. Januar 1815)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal><persName ref="anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#stefanie.hasler">
-                        <forename>Stefanie</forename>
-                        <surname>Hasler</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>In collaboration with</resp>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin – Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2013-07"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">French culture</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>de La Foye papers</collection>
-                        <idno type="stabi.berlin">Nachlass 239, folios 108-109</idno>
-                        <idno type="kalliope">DE-611-HS-1791382</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1815-01-23"/>
-                            <note resp="#julia.theus" type="keyword">Chamisso (botanist)</note>
-                            <note resp="#stefanie.hasler" type="keyword">Chamisso (Schlemihl)</note>
-                            <note resp="#sabine.seifert" type="keyword">Chamisso (studies)</note>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Feingeripptes Papier mit Wasserzeichen.</material>
-                                        <material xml:lang="en">Laid paper with water mark.</material>
-                                        <material xml:lang="fr">Papier finement côtelé comportant un filigrane.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">2 Blätter</measure>
-                                        <measure xml:lang="en">2 folios</measure>
-                                        <measure xml:lang="fr">2 feuillets</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#pencil_1">
-                                    <p xml:lang="de">Foliierung mit dickem Bleistift.</p>
-                                    <p xml:lang="en">Foliation in thick pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier épais.</p>
-                                </foliation>
-                                <foliation corresp="#pencil_2">
-                                    <p xml:lang="de">Foliierung mit dünnem Bleistift eines Archivars.</p>
-                                    <p xml:lang="en">Foliation in fine pencil by the archive.</p>
-                                    <p xml:lang="fr">Numérotation des pages par les archives, crayon de papier fin.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Guter Erhaltungszustand, vereinzelt Faltspuren und Knicke.</p>
-                                    <p xml:lang="en">In a good state of preservation. Some traces of folding and creases. </p>
-                                    <p xml:lang="fr">En bon état. Quelques traces de plis.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#0237" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Verfassers Adelbert von Chamisso, Brieftext in brauner Tinte, vorwiegend in
-                                    Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of the sender Adelbert von Chamisso, text of letter in brown ink, mainly German script.</p>
-                                <p xml:lang="fr">Main de l'expéditeur Adelbert de Chamisso, corps de la lettre, encre marron, écriture majoritairement
-                                    gothique.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
-                                <p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
-                                <p xml:lang="en">Unknown hand, with pencil.</p>
-                                <p xml:lang="fr">Main inconnue, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil_2">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, with pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="red_pen" scope="minor" scribe="publisher" scribeRef="#0239" xml:id="red_hand">
-                                <p xml:lang="de">Hand des Herausgebers Julius Eduard Hitzig, mit rotem Stift in Kurrentschrift, vorwiegend für
-                                    Markierung von Streichungen.</p>
-                                <p xml:lang="en">Hand of publisher Julius Eduard Hitzig, in red pencil and German script, mainly for marking
-                                    omissions.</p>
-                                <p xml:lang="fr">Main de l'éditeur Julius Eduard Hitzig, au crayon rouge, écriture gothique.</p>
-                            </handNote>
-                            <handNote medium="black_ink" scope="minor" scribe="publisher" scribeRef="#0239" xml:id="editor">
-                                <p xml:lang="de">Hand des Herausgebers Julius Eduard Hitzig, mit schwarzer Tinte in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of publisher Julius Eduard Hitzig, in black ink and German script.</p>
-                                <p xml:lang="fr">Main de l'éditeur Julius Eduard Hitzig, encre noire, écriture gothique.</p>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde am <origDate when-iso="1815-01-23">23. Januar 1815</origDate> vermutlich in <origPlace ref="#l1103">Berlin</origPlace> verfasst. <persName ref="#p0239">Hitzig</persName> gibt in <title ref="#w00277">Leben und Briefe von Adelbert von Chamisso</title>, S. 355, an, der Brief enthalte keine Zeitangabe. Er sieht
-                                diesen Brief als Fortsetzung des auf S. 352 abgedruckten Briefes.<!-- Sabine: Zuordnung unklar. Hasler: Brief Nr. 55 vom Frühjahr 1814 -->
-                                <persName ref="#p0326">Palm</persName> datiert vorliegenden Brief in <title ref="#w00333">Leben und Briefe von
-                                    Adelbert von Chamisso</title>, Bd. 6,1, S. 393, auf Anfang 1815 und ordnet ihn dem bei Hitzig auf S. 349
-                                gedruckten Brief zu.<!-- Sabine: Brief Nr. 58 --> Als Entstehungsort gibt er Berlin an.</p>
-                            <p xml:lang="en">The letter was composed on <origDate when-iso="1815-01-23">23th January 1815</origDate>, probably in
-                                    <origPlace ref="#l1103">Berlin</origPlace>. In <title ref="#w00277">Leben und Briefe von Adelbert von
-                                    Chamisso</title>, p. 355, <persName ref="#p0239">Hitzig</persName> states that the letter does not contain
-                                information on when it was written. He understands it as continuing the letter on p. 352.<!-- Hasler: Brief Nr. 55 vom Frühjahr 1814 -->
-                                <persName ref="#p0326">Palm</persName> dates the letter to the beginning of 1815 and understands it as continuing the
-                                letter printed in Hitzig on p. 349.<!-- Sabine: Brief Nr. 58 --> He mentions Berlin as point of origin in <title ref="#w00333">Leben und Briefe von Adelbert von Chamisso</title>, vol. 6,1, p. 393.</p>
-                            <p xml:lang="fr">La lettre a été composée le <origDate when-iso="1815-01-23">23 janvier 1815</origDate>, probablement à
-                                    <origPlace ref="#l1103">Berlin</origPlace>. Dans <title ref="#w00277">Leben und Briefe von Adelbert von
-                                    Chamisso</title>, p.355, <persName ref="#p0239">Hitzig</persName> admet que la lettre ne contient pas
-                                d'informations sur la période d'écriture. Il la considère comme une continuité à la lettre p.352. <persName ref="#p0326">Palm</persName> date la lettre à début 1815 et la considère comme une continuité de la lettre imprimé
-                                p.349 dans Hitzig. Il mentionne Berlin comme point d'origine dans <title ref="#w00333">Leben und Briefe von Adelbert
-                                    von Chamisso</title>, vol. 6,1, p. 393.</p>
-                        </origin>
-                        <acquisition>
-                            <p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
-                                    1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
-                                Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
-                                Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
-                            <p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
-                                    <date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
-                                and loaned to the State Library.</p>
-                            <p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
-                                allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
-                                prêt durable à la Librairie d'État de Berlin. </p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl>
-                                <bibl xml:lang="de"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
-                                        Adelbert von Chamisso</title>, Brief 153, Bd. 1, S. 355. Dieser Druck unterscheidet sich bezüglich der
-                                    Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
-                                    Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, z.B. bezüglich
-                                    der botanischen Ausführungen, werden nicht gekennzeichnet.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
-                                        Adelbert von Chamisso</title>, letter 153, vol. 1, p. 355. This print differs in spelling, punctuation, upper
-                                    and lower case and in correcting minor grammatical mistakes. Changes between Latin and German script
-                                    (Kurrentschrift) are being ignored. Omissions, e.g. concerning botanical aspects, are not marked.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
-                                        Adelbert von Chamisso</title>, lettre 153, vol. 1, p. 355. Cette édition présente des différences concernant
-                                    l'orthographe, la ponctuation, l'usage des majuscules et des minuscules, ainsi qu'en ce qui concerne la correction
-                                    de faute de grammaire mineures. Pas de prise en compte des changements entre écriture gothique et écriture latine.
-                                    Les passages supprimés ne sont pas signalés.</bibl>
-                            </bibl>
-                            <bibl>
-                                <seg xml:lang="de"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
-                                        von Chamisso</title>, Bd. 6,1, S. 393. Dieser Druck unterscheidet sich bezüglich der Rechtschreibung,
-                                    Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer Fehler. Der Wechsel
-                                    zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, z.B. bezüglich der botanischen
-                                    Ausführungen, werden nicht gekennzeichnet.</seg>
-                                <seg xml:lang="en"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
-                                        von Chamisso</title>, vol. 6,1, p. 393. This print differs in spelling, punctuation, upper and lower case and
-                                    in correcting minor grammatical mistakes. Changes between Latin and German script (Kurrentschrift) are being
-                                    ignored. Omissions, e.g. concerning botanical aspects, are not marked.</seg>
-                                <seg xml:lang="fr"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
-                                        von Chamisso</title>, vol. 6,1, p. 393. Cette édition présente des différences concernant l'orthographe, la
-                                    ponctuation, l'usage des majuscules et des minuscules, ainsi qu'en ce qui concerne la correction de faute de
-                                    grammaire mineures. Pas de prise en compte des changements entre écriture gothique et écriture latine. Les
-                                    passages supprimés ne sont pas signalés.</seg>
-                            </bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <hyphenation eol="hard">
-                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
-                </hyphenation>
-                <correction>
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="92"/>
-                <language ident="la" usage="6"/>
-                <language ident="fr" usage="1"/>
-                <language ident="grc" usage="1"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
-                    <placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
-                    <date when-iso="1815-01-23"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief053ChamissoandeLaFoye.xml" type="prev"/>
-                    <ref target="Brief060ChamissoandeLaFoye.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-27" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
-            <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
-            <change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
-            <change when-iso="2013-08-01" who="#sabine.seifert">Put closer into paragraph, correction of French translation.</change>
-            <change when-iso="2013-06-29" who="#sabine.seifert">Correction of some typos.</change>
-            <change when-iso="2013-06-26" who="#sabine.seifert">Correction of transcription and encoding of rest of manuscript.</change>
-            <change when-iso="2013-06-25" who="#sabine.seifert">Corrections of minor mistakes in metadata and of transcription as well as encoding of
-                first page of manuscript.</change>
-            <change when-iso="2013-06-22" who="#stefanie.hasler">Finished transcription, encoding and annotation of letter.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.0736iv01/fd0e7682ef61388ed25608f7fc0d3ab3338e79a2" n="1"/>
-                <opener><dateline rend="align(right)"><add hand="editor" place="top"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date when-iso="1815-01-23">23. Januar 1815</date></add></dateline></opener>
-                <note hand="#pencil_1" place="margin(left)" type="foliation">20</note>
-                <note hand="#pencil_2" place="margin(right)" type="foliation">108</note>
-                <note hand="#major_hand" place="margin(left)-vertical"><add hand="red_hand" place="inline margin(left)-vertical">[</add><hi rend="latin"><foreign xml:lang="la">Le<subst>
-                                <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                                <add place="across">d</add>
-                            </subst>um palustre,<note resp="#stefanie.hasler"><p xml:lang="de">Sumpfporst bzw. Wilder Rosmarin</p><p xml:lang="en">Swamp porst or wild rosemary</p><p xml:lang="fr">Porst des marais ou romarin sauvage</p></note> A<subst>
-                                <del rend="overwritten">d</del>
-                                <add place="across">n</add>
-                            </subst>dromeda polifolia,<note resp="#stefanie.hasler"><p xml:lang="de">Rosmarin- oder auch Lavendelheide</p><p xml:lang="en">Rosemary or lavender heather</p><p xml:lang="fr">Bruyère de romarin ou de lavande</p></note>
-                            Stratiotes aloides.<note resp="#stefanie.hasler">Krebsschere</note> |trientalis Europaea<note resp="#stefanie.hasler"><p xml:lang="de">Siebenstern</p><p xml:lang="en">Lysimachia europaea</p><p xml:lang="fr">Trientale
-                                d'Europe</p></note></foreign></hi> wachst<lb/>nicht bei uns. –<add hand="red_hand" place="inline margin(left)-vertical">]</add></note>
-                <p>Ich will diesen Brief erfrischen, der Monathe<lb/>gelegen hat, und mag ihn dennoch nicht wieder<lb/>lesen, wie er Dir bestim̄t
-                    gewesen, magst<lb/>du ihn auch erhalten, er ist dein und nicht mehr<lb/>mein, zu wehmüthig sehen einen so ver<subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">a</add>
-                    </subst>ltete<lb/>Züge wieder an. – mir gehts leidlich –<lb/>ich hohre fast keine <foreign xml:lang="la"><hi rend="latin">Collegia</hi></foreign> und bin lediglich<lb/>mit meinem <foreign xml:lang="la">Herbario</foreign> beschäftigt, der
-                        <unclear cert="high" extent="1 word" reason="illegible">mir</unclear><lb/>unter der Hand wachst und gedeiht so daß<lb/>der
-                    Arbeit immer mehr wird. –</p>
-                <p>in diesem künftigen Sommer will ich,<lb/>so gott will auf den Tausch sam̄eln,<lb/>ich sehe daß es doch nichts ist mit
-                    dem<lb/>Tausch der Catalogen,<note resp="#stefanie.hasler"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
-                            Edition <title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle
-                            "Kataloge".</p><p xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277">Life and Letters of Adelbert von Chamisso</title>, "Catalogs" is written at this point. </p><p xml:lang="fr">Dans
-                            l'imprimé de la <title ref="#w00277">Vie et Lettres d'Adelbert von Chamisso</title> de <persName ref="#p0239" type="bi">Hitzig</persName>, "Catalogues" est écrit à ce stade.</p></note> ich werde für<lb/>dich eine Sendung nordischer
-                    pflanzen<lb/>bereiten als da sind. <add hand="#red_hand" place="inline">[</add><note resp="#stefanie.hasler" subtype="1"><p xml:lang="de">Die von <persName ref="#p0239" type="bi">Hitzig</persName> gesetzten roten Klammern markieren Streichungen
-                            für den Druck. Die hier markierte, von Blatt 1 bis Blatt 3 reichende Passage fehlt demnach im Druck von Hitzig und
-                                <persName ref="#p0326" type="bi">Palm</persName>.</p><p xml:lang="en">The red brackets set by <persName ref="#p0239" type="bi">Hitzig</persName> mark deletions for printing. The passage marked here, extending from sheet 1 to sheet 3,
-                            is therefore missing in the print by Hitzig and <persName ref="#p0326" type="bi">Palm</persName>.</p><p xml:lang="fr">Les
-                            parenthèses rouges fixées par <persName ref="#p0239" type="bi">Hitzig</persName> marquent les suppressions pour
-                            l'impression. Le passage marqué ici, s'étendant de la feuille 1 à la feuille 3, est donc absent de l'estampe de Hitzig et
-                                <persName ref="#p0326" type="bi">Palm</persName>.</p></note><add hand="#red_hand" place="above"><choice>
-                            <abbr>u.s.w.</abbr>
-                            <expan>und so weiter</expan>
-                        </choice></add>
-                    <foreign xml:lang="la"><hi rend="latin">Carex chondor<subst>
-                                <del rend="overwritten">iz</del>
-                                <add place="across">h</add>
-                            </subst>iza<note resp="#stefanie.hasler"><p xml:lang="de">Fadenwurzelige Segge</p><p xml:lang="en">Carex
-                                    chordorrhiza</p><p xml:lang="fr">Carex chordorrhiza</p></note><lb/><choice>
-                                <abbr>li<del rend="overwritten">l</del><add place="across">m</add>osa</abbr>
-                                <expan>Carex limosa</expan>
-                            </choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Schlamm-Segge</p><p xml:lang="en">Carex limosa</p><p xml:lang="fr">Carex limosa</p></note>
-                            <choice>
-                                <abbr>dioica</abbr>
-                                <expan>Carex dioica</expan>
-                            </choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Zweihäusige Segge</p><p xml:lang="en">Carex dioica</p><p xml:lang="fr">Carex dioica</p></note> Calla pallustris,<note resp="#stefanie.hasler"><p xml:lang="de">Drachenwurz
-                                    oder auch Sumpfkalla</p><p xml:lang="en">Dragon arum or marsh cala</p><p xml:lang="fr">Racine de dragon ou cala
-                                    des marais</p></note> potamogeton<lb/><subst>
-                                <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                                <add place="across">z</add>
-                            </subst>osteri folium,<note resp="#stefanie.hasler"><p xml:lang="de">Flachstängeliges Laichkraut</p><p xml:lang="en">Potamogeton compressus</p><p xml:lang="fr">Potamogeton compressus</p></note><choice>
-                                <abbr>praelungum <persName ref="#p1721" type="bi">Wulfen</persName></abbr>
-                                <expan>potamogeton praelongum <persName ref="#p1721" type="bi">Wulfen</persName></expan>
-                            </choice>.<note resp="#stefanie.hasler"><p xml:lang="de">Eigentlich "praelongum Wulfen": Gestrecktes Laichkraut</p><p xml:lang="en">Actually "praelongum Wulfen": stretched pondweed</p><p xml:lang="fr">En fait "praelongum Wulfen":
-                                    potamot étiré</p></note></hi></foreign>
-                    <choice>
-                        <abbr>u.s.w.</abbr>
-                        <expan>und so weiter.</expan>
-                    </choice><lb/>vielleicht auch einige <hi rend="latin">al<subst>
-                            <del rend="overwritten">l</del>
-                            <add place="across">p</add>
-                        </subst>en</hi> pflanzen aufs<lb/>gerathe wohl hinzu fügen, und wenn du<lb/>botanische verbindungen besonders
-                        mit<lb/><placeName ref="#l0684" type="bi">Südfrankreich</placeName> hast, so bereite uns dagegen<lb/>eine Sendung solcher
-                    guten Pflanzen und<lb/><subst>
-                        <del rend="overwritten">b</del>
-                        <add place="across">s</add>
-                    </subst>orge daß besonders der Standort<pb facs="iiif:10.34847/nkl.0736iv01/6cc32a21a93aacb498ced0c9cb48c654cf960c74" n="2"/>so
-                    wohl <del rend="strikethrough">G</del> nach der Natur des erzeugenden<lb/>Bodens als nach der Gegend bezeichnet<lb/>werde. – auch
-                        <hi rend="latin">algen</hi> werden willkom̄en<lb/>sein, mit diesen habe ich mir hier<lb/>Freünde gemacht und manches
-                    gute<lb/>bekom̄en. – <hi rend="latin">Orchideen</hi> und <hi rend="latin">Najaden</hi><note resp="#stefanie.hasler"><p xml:lang="de">Dies ist eine alte Bezeichnung für die Pflanzengattung der Najas (Nixenkräuter). Es handelt sich hierbei um
-                            Wasserpflanzen.</p><p xml:lang="en">This is an old name for the plant genus of the Najas (mermaid herbs). These are
-                            aquatic plants.</p><p xml:lang="fr">Il s'agit d'un ancien nom pour le genre végétal des Najas (herbes de sirène). Ce sont
-                            des plantes aquatiques.</p></note><lb/>werden erwünscht sein, auch gebe<lb/>die <hi rend="latin">Autorität</hi> an für die
-                    Bestimmung,<lb/>nach welchem <hi rend="latin">Autor</hi> und nach welchem<lb/>Buch sie vorgenommen. – Deine<lb/>Bestimmungen sind
-                    auch nicht immer<lb/>die richtigsten – <hi rend="latin"><foreign xml:lang="la">Salsola soda</foreign></hi><note resp="#stefanie.hasler"><p xml:lang="de">Mönchsbart</p><p xml:lang="en">Salsola soda</p><p xml:lang="fr">Soude
-                        commune</p></note> wird wohl<lb/>nichts anders sein als <hi rend="latin"><foreign xml:lang="la">Chenopodium<lb/>Marinum</foreign></hi>. –</p>
-                <p>vielleicht arbeite ich noch in diesem<lb/><del rend="strikethrough">som̄er</del> winter einen Auszug meiner<lb/><hi rend="latin"><foreign xml:lang="la">Desiderata</foreign></hi> aus der <hi rend="latin"><title ref="#w00326" type="bi">flo<del rend="overwritten">l</del><add place="across">r</add>e francaise</title> de<lb/><persName ref="#p0385" type="bi">De<subst>
-                                <del rend="overwritten">d</del>
-                                <add place="across">c</add>
-                            </subst>andole</persName></hi>. – und lasse dir solchen<lb/>zukom̄en, der <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">S</add>
-                    </subst>tam̄ meines <foreign xml:lang="la">Herbarii</foreign><lb/>besteht aus der fast v<subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">o</add>
-                    </subst>llstandigen<lb/>flora der <placeName ref="#l0685" type="bi">Helvetischen Al<subst>
-                            <del rend="overwritten">l</del>
-                            <add place="across">p</add>
-                        </subst>en</placeName> – der<lb/>Berliner flora, ein paar Tausend<lb/>Garten Pflanzen, deine Algen und<lb/><hi rend="latin">Littoralen</hi>,<note resp="stefanie.hasler"><p xml:lang="de">Uferpflanzen</p><p xml:lang="en">Shore plants</p><p xml:lang="fr">Plantes riveraines</p></note> 1 Hundert Capische einige<lb/>Hundert sudfranzösche süddeutsche<pb facs="iiif:10.34847/nkl.0736iv01/8fcdeb02b64f445bb21a019c02a8f9503c2c56ff" n="3"/>Asiatische, Lapponische und andere
-                    ausgetauschte<lb/>Pflanzen – ein guter Freund<note resp="#stefanie.hasler"><p xml:lang="de">Vermutlich ist mit diesem Freund
-                                <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName> gemeint.</p><p xml:lang="en">Probably this friend
-                            meant <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName>.</p><p xml:lang="fr">Cet ami voulait probablement
-                            dire <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName>.</p></note> sammelt<lb/>am <placeName ref="#ll0227" type="bi">Cap</placeName> für mich.<add hand="#red_hand">]</add> –</p>
-                <note hand="#pencil_2" place="inline margin(right)" type="foliation">109</note>
-                <p>Lieber Freund ich lie<del rend="overwritten">l</del><add place="across">g</add>e auf meinem <lb/>Heu in <gap extent="1 character" reason="illegible"/>erwartung des frischen Grasses<lb/>lasse die welt gehn und ziehe einen<lb/>fuß nach dem andern aus ihr
-                    heraus<lb/>niemand und nichts fesselt mich recht<lb/>mehr und ich glaube man mögte fast<lb/>so ein<del rend="strikethrough"><gap extent="1-2 characters" reason="illegible"/></del> abgekühltes Thier einen Philosophen<lb/>nennen, ware nicht grade das
-                    erste was<lb/>ich hasse und verachte die Philosophie –</p>
-                <p>Mein <rs ref="#w00339" type="bi_title"><hi rend="underline">Sieben</hi>meilig gestie<subst>
-                            <del rend="overwritten">g</del>
-                            <add place="across">f</add>
-                        </subst>elt Freund</rs><lb/>geht indessen ganz gut<note resp="#sabine.seifert"><p xml:lang="de"><title ref="#w00339" type="bi">Peter Schlemihl's wundersame Geschichte</title> ist im Herbst <date when-iso="1814">1814</date> erschienen. Innerhalb
-                            kurzer Zeit folgten Nachdrucke des außerordentlich erfolgreichen Werkes.</p><p xml:lang="en"><title ref="#w00339" type="bi">Peter Schlemihl's Miraculous story</title> appeared in the autumn of <date when-iso="1814">1814</date>.
-                            Reprints of the extraordinarily successful work followed within a short time.</p><p xml:lang="fr"><title ref="#w00339" type="bi">L'Etrange histoire de Peter Schlemihl</title> parut à l'automne <date when-iso="1814">1814</date>. Des
-                            réimpressions de l'œuvre extraordinairement réussie ont suivi en peu de temps.</p></note>, und hat was<lb/>man sagen
-                    konnte ein ausgezeichnet<add place="inline">es</add> Glück<lb/>gemacht. <foreign xml:lang="la"><hi rend="latin">Habeat Sibi<gap extent="1 character" reason="illegible"/></hi></foreign>.<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung
-                            (lat.): Er habe seinen Willen.</p><p xml:lang="en">Translation (lat.): He has his own way.</p><p xml:lang="fr">Traduction
-                            (lat.): Il a sa propre voie.</p></note> wird <del rend="strikethrough">es</del><note resp="#sabine.seifert"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
-                            <title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "es".</p><p xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277">Life and Letters
-                                of Adelbert von Chamisso</title> at this point is "it". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00277">Vie et Lettres d'Adelbert von Chamisso</title> de <persName ref="#p0239" type="bi">Hitzig</persName> à ce stade,
-                            c'est "ça".</p></note> wohl<lb/>einmal <del rend="strikethrough">n<gap extent="1-2 characters" reason="illegible"/>ch</del>zu den Franzosen übersetzen,<lb/>ich glaube nicht, er komme wenigstens<lb/>nur mit den Stiefeln hin nicht mit
-                        dem<lb/>Herzen.<note resp="#stefanie.hasler"><p xml:lang="de">Die erste französische Übersetzung des <title ref="#w00339" type="bi">Schlemihl</title>, von <persName ref="#p0237" type="bi">Chamissos</persName> Bruder <persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, wurde <date when-iso="1822">1822</date> veröffentlicht.</p><p xml:lang="en">The first French translation of <title ref="#w00339" type="bi">Schlemihl</title>, by <persName ref="#p0237" type="bi">Chamisso</persName>'s brother <persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, was
-                            published in <date when-iso="1822">1822</date>.</p><p xml:lang="fr">La première traduction française de <title ref="#w00339" type="bi">Schlemihl</title>, par le frère de <persName ref="#p0237" type="bi">Chamisso</persName>
-                            <persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, a été publiée en <date when-iso="1822">1822</date>.</p></note> –</p>
-                <closer>
-                    <salute>lebe so wohl du kannst<lb/>lieber junge, und <foreign xml:lang="grc"><hi rend="greek">Χαιρε</hi></foreign>
-                        <note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (lat.): Sei gegrüßt.</p><p xml:lang="en">Translation (lat.):
-                                Greetings.</p><p xml:lang="fr">Traduction (lat.): Salutations.</p></note> wenn du es<lb/>vermagst, – wir werden
-                        allmälig<lb/>schon alt <foreign xml:lang="fr"><hi rend="latin">et le plus fort en est fait:<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (frz.): Und der größte Teil [i.e. des Lebens] ist schon geschafft.</p><p xml:lang="en">Translation (French): And the greater part [i.e. of life] is already done.</p><p xml:lang="fr">Traduction (français) : Et la plus grande partie [c'est-à-dire de la vie] est déjà
-                            fait.</p></note></hi></foreign></salute><lb/>
-                    <date when-iso="1815-01-23">23. <hi rend="latin">Januar</hi> 1815</date><note resp="#sabine.seifert"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
-                            <title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> wird das Datum ausgelassen und die
-                            Initiale "A." als Unterschrift hinzugefügt.</p><p xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277">Life and Letters of Adelbert von Chamisso</title> the date is omitted and
-                            the initial "A." added as signature. </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00277">Vie et Lettres
-                                d'Adelbert von Chamisso</title> de <persName ref="#p0239" type="bi">Hitzig</persName> la date est omise et l'initiale
-                            "A." ajouté comme signature.</p></note>
-                </closer>
-                <pb facs="iiif:10.34847/nkl.0736iv01/3acb6bcfb21dabf0d3f7cbfb8b4f1290eeea639e" n="4"/>
-            </div>
-        </body>
-    </text>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Adelbert von Chamisso to Louis de la Foye (probably Berlin, 23 January 1815)</title>
+				<title xml:lang="fr">Lettre d'Adelbert de Chamisso à Louis de la Foye (probablement Berlin, 23 janvier 1815)</title>
+				<title xml:lang="de">Brief von Adelbert von Chamisso an Louis de la Foye (wahrscheinlich Berlin, 23. Januar 1815)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Prepared by</resp>
+					<persName ref="#stefanie.hasler">
+						<forename>Stefanie</forename>
+						<surname>Hasler</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>In collaboration with</resp>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin – Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2013-07"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">French culture</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
+						<repository>Manuscripts section</repository>
+						<collection>de La Foye papers</collection>
+						<idno type="stabi.berlin">Nachlass 239, folios 108-109</idno>
+						<idno type="kalliope">DE-611-HS-1791382</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1815-01-23"/>
+							<note resp="#julia.theus" type="keyword">Chamisso (botanist)</note>
+							<note resp="#stefanie.hasler" type="keyword">Chamisso (Schlemihl)</note>
+							<note resp="#sabine.seifert" type="keyword">Chamisso (studies)</note>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Feingeripptes Papier mit Wasserzeichen.</material>
+										<material xml:lang="en">Laid paper with water mark.</material>
+										<material xml:lang="fr">Papier finement côtelé comportant un filigrane.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">2 Blätter</measure>
+										<measure xml:lang="en">2 folios</measure>
+										<measure xml:lang="fr">2 feuillets</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#pencil_1">
+									<p xml:lang="de">Foliierung mit dickem Bleistift.</p>
+									<p xml:lang="en">Foliation in thick pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier épais.</p>
+								</foliation>
+								<foliation corresp="#pencil_2">
+									<p xml:lang="de">Foliierung mit dünnem Bleistift eines Archivars.</p>
+									<p xml:lang="en">Foliation in fine pencil by the archive.</p>
+									<p xml:lang="fr">Numérotation des pages par les archives, crayon de papier fin.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Guter Erhaltungszustand, vereinzelt Faltspuren und Knicke.</p>
+									<p xml:lang="en">In a good state of preservation. Some traces of folding and creases. </p>
+									<p xml:lang="fr">En bon état. Quelques traces de plis.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#0237" xml:id="major_hand">
+								<p xml:lang="de">Hand des Verfassers Adelbert von Chamisso, Brieftext in brauner Tinte, vorwiegend in
+									Kurrentschrift.</p>
+								<p xml:lang="en">Hand of the sender Adelbert von Chamisso, text of letter in brown ink, mainly German script.</p>
+								<p xml:lang="fr">Main de l'expéditeur Adelbert de Chamisso, corps de la lettre, encre marron, écriture majoritairement
+									gothique.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_1">
+								<p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
+								<p xml:lang="en">Unknown hand, with pencil.</p>
+								<p xml:lang="fr">Main inconnue, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil_2">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, with pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="red_pen" scope="minor" scribe="publisher" scribeRef="#0239" xml:id="red_hand">
+								<p xml:lang="de">Hand des Herausgebers Julius Eduard Hitzig, mit rotem Stift in Kurrentschrift, vorwiegend für
+									Markierung von Streichungen.</p>
+								<p xml:lang="en">Hand of publisher Julius Eduard Hitzig, in red pencil and German script, mainly for marking
+									omissions.</p>
+								<p xml:lang="fr">Main de l'éditeur Julius Eduard Hitzig, au crayon rouge, écriture gothique.</p>
+							</handNote>
+							<handNote medium="black_ink" scope="minor" scribe="publisher" scribeRef="#0239" xml:id="editor">
+								<p xml:lang="de">Hand des Herausgebers Julius Eduard Hitzig, mit schwarzer Tinte in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of publisher Julius Eduard Hitzig, in black ink and German script.</p>
+								<p xml:lang="fr">Main de l'éditeur Julius Eduard Hitzig, encre noire, écriture gothique.</p>
+							</handNote>
+						</handDesc>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde am <origDate when-iso="1815-01-23">23. Januar 1815</origDate> vermutlich in <origPlace
+									ref="#l1103">Berlin</origPlace> verfasst. <persName ref="#p0239">Hitzig</persName> gibt in <title ref="#w00277"
+									>Leben und Briefe von Adelbert von Chamisso</title>, S. 355, an, der Brief enthalte keine Zeitangabe. Er sieht
+								diesen Brief als Fortsetzung des auf S. 352 abgedruckten Briefes.<!-- Sabine: Zuordnung unklar. Hasler: Brief Nr. 55 vom Frühjahr 1814 -->
+								<persName ref="#p0326">Palm</persName> datiert vorliegenden Brief in <title ref="#w00333">Leben und Briefe von
+									Adelbert von Chamisso</title>, Bd. 6,1, S. 393, auf Anfang 1815 und ordnet ihn dem bei Hitzig auf S. 349
+								gedruckten Brief zu.<!-- Sabine: Brief Nr. 58 --> Als Entstehungsort gibt er Berlin an.</p>
+							<p xml:lang="en">The letter was composed on <origDate when-iso="1815-01-23">23th January 1815</origDate>, probably in
+									<origPlace ref="#l1103">Berlin</origPlace>. In <title ref="#w00277">Leben und Briefe von Adelbert von
+									Chamisso</title>, p. 355, <persName ref="#p0239">Hitzig</persName> states that the letter does not contain
+								information on when it was written. He understands it as continuing the letter on p. 352.<!-- Hasler: Brief Nr. 55 vom Frühjahr 1814 -->
+								<persName ref="#p0326">Palm</persName> dates the letter to the beginning of 1815 and understands it as continuing the
+								letter printed in Hitzig on p. 349.<!-- Sabine: Brief Nr. 58 --> He mentions Berlin as point of origin in <title
+									ref="#w00333">Leben und Briefe von Adelbert von Chamisso</title>, vol. 6,1, p. 393.</p>
+							<p xml:lang="fr">La lettre a été composée le <origDate when-iso="1815-01-23">23 janvier 1815</origDate>, probablement à
+									<origPlace ref="#l1103">Berlin</origPlace>. Dans <title ref="#w00277">Leben und Briefe von Adelbert von
+									Chamisso</title>, p.355, <persName ref="#p0239">Hitzig</persName> admet que la lettre ne contient pas
+								d'informations sur la période d'écriture. Il la considère comme une continuité à la lettre p.352. <persName
+									ref="#p0326">Palm</persName> date la lettre à début 1815 et la considère comme une continuité de la lettre imprimé
+								p.349 dans Hitzig. Il mentionne Berlin comme point d'origine dans <title ref="#w00333">Leben und Briefe von Adelbert
+									von Chamisso</title>, vol. 6,1, p. 393.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
+									1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
+								Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
+								Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
+							<p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
+									<date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date
+									when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
+								and loaned to the State Library.</p>
+							<p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
+								allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date
+									when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04"
+									>2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
+								prêt durable à la Librairie d'État de Berlin. </p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
+										Adelbert von Chamisso</title>, Brief 153, Bd. 1, S. 355. Dieser Druck unterscheidet sich bezüglich der
+									Rechtschreibung, Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer
+									Fehler. Der Wechsel zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, z.B. bezüglich
+									der botanischen Ausführungen, werden nicht gekennzeichnet.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
+										Adelbert von Chamisso</title>, letter 153, vol. 1, p. 355. This print differs in spelling, punctuation, upper
+									and lower case and in correcting minor grammatical mistakes. Changes between Latin and German script
+									(Kurrentschrift) are being ignored. Omissions, e.g. concerning botanical aspects, are not marked.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0239">Hitzig</persName> (1839): <title ref="#w00277">Leben und Briefe von
+										Adelbert von Chamisso</title>, lettre 153, vol. 1, p. 355. Cette édition présente des différences concernant
+									l'orthographe, la ponctuation, l'usage des majuscules et des minuscules, ainsi qu'en ce qui concerne la correction
+									de faute de grammaire mineures. Pas de prise en compte des changements entre écriture gothique et écriture latine.
+									Les passages supprimés ne sont pas signalés.</bibl>
+							</bibl>
+							<bibl>
+								<seg xml:lang="de"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
+										von Chamisso</title>, Bd. 6,1, S. 393. Dieser Druck unterscheidet sich bezüglich der Rechtschreibung,
+									Zeichensetzung, Groß- u. Kleinschreibung sowie in der Berichtigung kleiner grammatikalischer Fehler. Der Wechsel
+									zwischen Kurrentschrift und lateinischer Schrift wird ignoriert. Auslassungen, z.B. bezüglich der botanischen
+									Ausführungen, werden nicht gekennzeichnet.</seg>
+								<seg xml:lang="en"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
+										von Chamisso</title>, vol. 6,1, p. 393. This print differs in spelling, punctuation, upper and lower case and
+									in correcting minor grammatical mistakes. Changes between Latin and German script (Kurrentschrift) are being
+									ignored. Omissions, e.g. concerning botanical aspects, are not marked.</seg>
+								<seg xml:lang="fr"><persName ref="#p0326">Palm</persName> (1864), <title ref="#w00333">Leben und Briefe von Adelbert
+										von Chamisso</title>, vol. 6,1, p. 393. Cette édition présente des différences concernant l'orthographe, la
+									ponctuation, l'usage des majuscules et des minuscules, ainsi qu'en ce qui concerne la correction de faute de
+									grammaire mineures. Pas de prise en compte des changements entre écriture gothique et écriture latine. Les
+									passages supprimés ne sont pas signalés.</seg>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<hyphenation eol="hard">
+					<p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
+						enlevées.</p>
+					<p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
+				</hyphenation>
+				<correction>
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="92"/>
+				<language ident="la" usage="6"/>
+				<language ident="fr" usage="1"/>
+				<language ident="grc" usage="1"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
+					<placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
+					<date when-iso="1815-01-23"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief053ChamissoandeLaFoye.xml" type="prev"/>
+					<ref target="Brief060ChamissoandeLaFoye.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-27" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-22" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-20" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
+			<change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
+			<change when-iso="2013-12-24" who="#sabine.seifert">Deleted first footnote and put information in bibl element.</change>
+			<change when-iso="2013-08-01" who="#sabine.seifert">Put closer into paragraph, correction of French translation.</change>
+			<change when-iso="2013-06-29" who="#sabine.seifert">Correction of some typos.</change>
+			<change when-iso="2013-06-26" who="#sabine.seifert">Correction of transcription and encoding of rest of manuscript.</change>
+			<change when-iso="2013-06-25" who="#sabine.seifert">Corrections of minor mistakes in metadata and of transcription as well as encoding of
+				first page of manuscript.</change>
+			<change when-iso="2013-06-22" who="#stefanie.hasler">Finished transcription, encoding and annotation of letter.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.0736iv01/fd0e7682ef61388ed25608f7fc0d3ab3338e79a2" n="1"/>
+				<opener>
+					<dateline rend="align(right)">
+						<add hand="editor" place="top"><placeName ref="#l1103" type="bi">Berlin</placeName> am <date when-iso="1815-01-23">23. Januar
+								1815</date></add>
+					</dateline>
+				</opener>
+				<note hand="#pencil_1" place="margin(left)" type="foliation">20</note>
+				<note hand="#pencil_2" place="margin(right)" type="foliation">108</note>
+				<note hand="#major_hand" place="margin(left)-vertical"><add hand="red_hand" place="inline margin(left)-vertical">[</add><hi
+						rend="latin"><foreign xml:lang="la">Le<subst>
+								<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+								<add place="across">d</add>
+							</subst>um palustre,<note resp="#stefanie.hasler"><p xml:lang="de">Sumpfporst bzw. Wilder Rosmarin</p><p xml:lang="en"
+									>Swamp porst or wild rosemary</p><p xml:lang="fr">Porst des marais ou romarin sauvage</p></note> A<subst>
+								<del rend="overwritten">d</del>
+								<add place="across">n</add>
+							</subst>dromeda polifolia,<note resp="#stefanie.hasler"><p xml:lang="de">Rosmarin- oder auch Lavendelheide</p><p
+									xml:lang="en">Rosemary or lavender heather</p><p xml:lang="fr">Bruyère de romarin ou de lavande</p></note>
+							Stratiotes aloides.<note resp="#stefanie.hasler">Krebsschere</note> |trientalis Europaea<note resp="#stefanie.hasler"><p
+									xml:lang="de">Siebenstern</p><p xml:lang="en">Lysimachia europaea</p><p xml:lang="fr">Trientale
+								d'Europe</p></note></foreign></hi> wachst<lb/>nicht bei uns. –<add hand="red_hand"
+						place="inline margin(left)-vertical">]</add></note>
+				<p>Ich will diesen Brief erfrischen, der Monathe<lb/>gelegen hat, und mag ihn dennoch nicht wieder<lb/>lesen, wie er Dir bestim̄t
+					gewesen, magst<lb/>du ihn auch erhalten, er ist dein und nicht mehr<lb/>mein, zu wehmüthig sehen einen so ver<subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">a</add>
+					</subst>ltete<lb/>Züge wieder an. – mir gehts leidlich –<lb/>ich hohre fast keine <foreign xml:lang="la"><hi rend="latin"
+							>Collegia</hi></foreign> und bin lediglich<lb/>mit meinem <foreign xml:lang="la">Herbario</foreign> beschäftigt, der
+						<unclear cert="high" extent="1 word" reason="illegible">mir</unclear><lb/>unter der Hand wachst und gedeiht so daß<lb/>der
+					Arbeit immer mehr wird. –</p>
+				<p>in diesem künftigen Sommer will ich,<lb/>so gott will auf den Tausch sam̄eln,<lb/>ich sehe daß es doch nichts ist mit
+					dem<lb/>Tausch der Catalogen,<note resp="#stefanie.hasler"><p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+							Edition <title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle
+							"Kataloge".</p><p xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277"
+								>Life and Letters of Adelbert von Chamisso</title>, "Catalogs" is written at this point. </p><p xml:lang="fr">Dans
+							l'imprimé de la <title ref="#w00277">Vie et Lettres d'Adelbert von Chamisso</title> de <persName ref="#p0239" type="bi"
+								>Hitzig</persName>, "Catalogues" est écrit à ce stade.</p></note> ich werde für<lb/>dich eine Sendung nordischer
+					pflanzen<lb/>bereiten als da sind. <add hand="#red_hand" place="inline">[</add><note resp="#stefanie.hasler" subtype="1"><p
+							xml:lang="de">Die von <persName ref="#p0239" type="bi">Hitzig</persName> gesetzten roten Klammern markieren Streichungen
+							für den Druck. Die hier markierte, von Blatt 1 bis Blatt 3 reichende Passage fehlt demnach im Druck von Hitzig und
+								<persName ref="#p0326" type="bi">Palm</persName>.</p><p xml:lang="en">The red brackets set by <persName ref="#p0239"
+								type="bi">Hitzig</persName> mark deletions for printing. The passage marked here, extending from sheet 1 to sheet 3,
+							is therefore missing in the print by Hitzig and <persName ref="#p0326" type="bi">Palm</persName>.</p><p xml:lang="fr">Les
+							parenthèses rouges fixées par <persName ref="#p0239" type="bi">Hitzig</persName> marquent les suppressions pour
+							l'impression. Le passage marqué ici, s'étendant de la feuille 1 à la feuille 3, est donc absent de l'estampe de Hitzig et
+								<persName ref="#p0326" type="bi">Palm</persName>.</p></note><add hand="#red_hand" place="above"><choice>
+							<abbr>u.s.w.</abbr>
+							<expan>und so weiter</expan>
+						</choice></add>
+					<foreign xml:lang="la"><hi rend="latin">Carex chondor<subst>
+								<del rend="overwritten">iz</del>
+								<add place="across">h</add>
+							</subst>iza<note resp="#stefanie.hasler"><p xml:lang="de">Fadenwurzelige Segge</p><p xml:lang="en">Carex
+									chordorrhiza</p><p xml:lang="fr">Carex chordorrhiza</p></note><lb/><choice>
+								<abbr>li<del rend="overwritten">l</del><add place="across">m</add>osa</abbr>
+								<expan>Carex limosa</expan>
+							</choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Schlamm-Segge</p><p xml:lang="en">Carex limosa</p><p
+									xml:lang="fr">Carex limosa</p></note>
+							<choice>
+								<abbr>dioica</abbr>
+								<expan>Carex dioica</expan>
+							</choice>,<note resp="#stefanie.hasler"><p xml:lang="de">Zweihäusige Segge</p><p xml:lang="en">Carex dioica</p><p
+									xml:lang="fr">Carex dioica</p></note> Calla pallustris,<note resp="#stefanie.hasler"><p xml:lang="de">Drachenwurz
+									oder auch Sumpfkalla</p><p xml:lang="en">Dragon arum or marsh cala</p><p xml:lang="fr">Racine de dragon ou cala
+									des marais</p></note> potamogeton<lb/><subst>
+								<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+								<add place="across">z</add>
+							</subst>osteri folium,<note resp="#stefanie.hasler"><p xml:lang="de">Flachstängeliges Laichkraut</p><p xml:lang="en"
+									>Potamogeton compressus</p><p xml:lang="fr">Potamogeton compressus</p></note><choice>
+								<abbr>praelungum <persName ref="#p1721" type="bi">Wulfen</persName></abbr>
+								<expan>potamogeton praelongum <persName ref="#p1721" type="bi">Wulfen</persName></expan>
+							</choice>.<note resp="#stefanie.hasler"><p xml:lang="de">Eigentlich "praelongum Wulfen": Gestrecktes Laichkraut</p><p
+									xml:lang="en">Actually "praelongum Wulfen": stretched pondweed</p><p xml:lang="fr">En fait "praelongum Wulfen":
+									potamot étiré</p></note></hi></foreign>
+					<choice>
+						<abbr>u.s.w.</abbr>
+						<expan>und so weiter.</expan>
+					</choice><lb/>vielleicht auch einige <hi rend="latin">al<subst>
+							<del rend="overwritten">l</del>
+							<add place="across">p</add>
+						</subst>en</hi> pflanzen aufs<lb/>gerathe wohl hinzu fügen, und wenn du<lb/>botanische verbindungen besonders
+						mit<lb/><placeName ref="#l0684" type="bi">Südfrankreich</placeName> hast, so bereite uns dagegen<lb/>eine Sendung solcher
+					guten Pflanzen und<lb/><subst>
+						<del rend="overwritten">b</del>
+						<add place="across">s</add>
+					</subst>orge daß besonders der Standort<pb facs="iiif:10.34847/nkl.0736iv01/6cc32a21a93aacb498ced0c9cb48c654cf960c74" n="2"/>so
+					wohl <del rend="strikethrough">G</del> nach der Natur des erzeugenden<lb/>Bodens als nach der Gegend bezeichnet<lb/>werde. – auch
+						<hi rend="latin">algen</hi> werden willkom̄en<lb/>sein, mit diesen habe ich mir hier<lb/>Freünde gemacht und manches
+					gute<lb/>bekom̄en. – <hi rend="latin">Orchideen</hi> und <hi rend="latin">Najaden</hi><note resp="#stefanie.hasler"><p
+							xml:lang="de">Dies ist eine alte Bezeichnung für die Pflanzengattung der Najas (Nixenkräuter). Es handelt sich hierbei um
+							Wasserpflanzen.</p><p xml:lang="en">This is an old name for the plant genus of the Najas (mermaid herbs). These are
+							aquatic plants.</p><p xml:lang="fr">Il s'agit d'un ancien nom pour le genre végétal des Najas (herbes de sirène). Ce sont
+							des plantes aquatiques.</p></note><lb/>werden erwünscht sein, auch gebe<lb/>die <hi rend="latin">Autorität</hi> an für die
+					Bestimmung,<lb/>nach welchem <hi rend="latin">Autor</hi> und nach welchem<lb/>Buch sie vorgenommen. – Deine<lb/>Bestimmungen sind
+					auch nicht immer<lb/>die richtigsten – <hi rend="latin"><foreign xml:lang="la">Salsola soda</foreign></hi><note
+						resp="#stefanie.hasler"><p xml:lang="de">Mönchsbart</p><p xml:lang="en">Salsola soda</p><p xml:lang="fr">Soude
+						commune</p></note> wird wohl<lb/>nichts anders sein als <hi rend="latin"><foreign xml:lang="la"
+							>Chenopodium<lb/>Marinum</foreign></hi>. –</p>
+				<p>vielleicht arbeite ich noch in diesem<lb/><del rend="strikethrough">som̄er</del> winter einen Auszug meiner<lb/><hi rend="latin"
+							><foreign xml:lang="la">Desiderata</foreign></hi> aus der <hi rend="latin"><title ref="#w00326" type="bi">flo<del
+								rend="overwritten">l</del><add place="across">r</add>e francaise</title> de<lb/><persName ref="#p0385" type="bi">De<subst>
+								<del rend="overwritten">d</del>
+								<add place="across">c</add>
+							</subst>andole</persName></hi>. – und lasse dir solchen<lb/>zukom̄en, der <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">S</add>
+					</subst>tam̄ meines <foreign xml:lang="la">Herbarii</foreign><lb/>besteht aus der fast v<subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">o</add>
+					</subst>llstandigen<lb/>flora der <placeName ref="#l0685" type="bi">Helvetischen Al<subst>
+							<del rend="overwritten">l</del>
+							<add place="across">p</add>
+						</subst>en</placeName> – der<lb/>Berliner flora, ein paar Tausend<lb/>Garten Pflanzen, deine Algen und<lb/><hi rend="latin"
+						>Littoralen</hi>,<note resp="stefanie.hasler"><p xml:lang="de">Uferpflanzen</p><p xml:lang="en">Shore plants</p><p
+							xml:lang="fr">Plantes riveraines</p></note> 1 Hundert Capische einige<lb/>Hundert sudfranzösche süddeutsche<pb
+						facs="iiif:10.34847/nkl.0736iv01/8fcdeb02b64f445bb21a019c02a8f9503c2c56ff" n="3"/>Asiatische, Lapponische und andere
+					ausgetauschte<lb/>Pflanzen – ein guter Freund<note resp="#stefanie.hasler"><p xml:lang="de">Vermutlich ist mit diesem Freund
+								<persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName> gemeint.</p><p xml:lang="en">Probably this friend
+							meant <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName>.</p><p xml:lang="fr">Cet ami voulait probablement
+							dire <persName ref="#p0428" type="bi">Karl Heinrich Bergius</persName>.</p></note> sammelt<lb/>am <placeName ref="#ll0227"
+						type="bi">Cap</placeName> für mich.<add hand="#red_hand">]</add> –</p>
+				<note hand="#pencil_2" place="inline margin(right)" type="foliation">109</note>
+				<p>Lieber Freund ich lie<del rend="overwritten">l</del><add place="across">g</add>e auf meinem <lb/>Heu in <gap extent="1 character"
+						reason="illegible"/>erwartung des frischen Grasses<lb/>lasse die welt gehn und ziehe einen<lb/>fuß nach dem andern aus ihr
+					heraus<lb/>niemand und nichts fesselt mich recht<lb/>mehr und ich glaube man mögte fast<lb/>so ein<del rend="strikethrough"><gap
+							extent="1-2 characters" reason="illegible"/></del> abgekühltes Thier einen Philosophen<lb/>nennen, ware nicht grade das
+					erste was<lb/>ich hasse und verachte die Philosophie –</p>
+				<p>Mein <rs ref="#w00339" type="bi_title"><hi rend="underline">Sieben</hi>meilig gestie<subst>
+							<del rend="overwritten">g</del>
+							<add place="across">f</add>
+						</subst>elt Freund</rs><lb/>geht indessen ganz gut<note resp="#sabine.seifert"><p xml:lang="de"><title ref="#w00339" type="bi"
+								>Peter Schlemihl's wundersame Geschichte</title> ist im Herbst <date when-iso="1814">1814</date> erschienen. Innerhalb
+							kurzer Zeit folgten Nachdrucke des außerordentlich erfolgreichen Werkes.</p><p xml:lang="en"><title ref="#w00339"
+								type="bi">Peter Schlemihl's Miraculous story</title> appeared in the autumn of <date when-iso="1814">1814</date>.
+							Reprints of the extraordinarily successful work followed within a short time.</p><p xml:lang="fr"><title ref="#w00339"
+								type="bi">L'Etrange histoire de Peter Schlemihl</title> parut à l'automne <date when-iso="1814">1814</date>. Des
+							réimpressions de l'œuvre extraordinairement réussie ont suivi en peu de temps.</p></note>, und hat was<lb/>man sagen
+					konnte ein ausgezeichnet<add place="inline">es</add> Glück<lb/>gemacht. <foreign xml:lang="la"><hi rend="latin">Habeat Sibi<gap
+								extent="1 character" reason="illegible"/></hi></foreign>.<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung
+							(lat.): Er habe seinen Willen.</p><p xml:lang="en">Translation (lat.): He has his own way.</p><p xml:lang="fr">Traduction
+							(lat.): Il a sa propre voie.</p></note> wird <del rend="strikethrough">es</del><note resp="#sabine.seifert"><p
+							xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+							<title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> steht an dieser Stelle "es".</p><p
+							xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277">Life and Letters
+								of Adelbert von Chamisso</title> at this point is "it". </p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00277"
+								>Vie et Lettres d'Adelbert von Chamisso</title> de <persName ref="#p0239" type="bi">Hitzig</persName> à ce stade,
+							c'est "ça".</p></note> wohl<lb/>einmal <del rend="strikethrough">n<gap extent="1-2 characters" reason="illegible"
+						/>ch</del>zu den Franzosen übersetzen,<lb/>ich glaube nicht, er komme wenigstens<lb/>nur mit den Stiefeln hin nicht mit
+						dem<lb/>Herzen.<note resp="#stefanie.hasler"><p xml:lang="de">Die erste französische Übersetzung des <title ref="#w00339"
+								type="bi">Schlemihl</title>, von <persName ref="#p0237" type="bi">Chamissos</persName> Bruder <persName ref="#p0280"
+								type="bi">Hippolyte de Chamisso</persName>, wurde <date when-iso="1822">1822</date> veröffentlicht.</p><p
+							xml:lang="en">The first French translation of <title ref="#w00339" type="bi">Schlemihl</title>, by <persName ref="#p0237"
+								type="bi">Chamisso</persName>'s brother <persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, was
+							published in <date when-iso="1822">1822</date>.</p><p xml:lang="fr">La première traduction française de <title
+								ref="#w00339" type="bi">Schlemihl</title>, par le frère de <persName ref="#p0237" type="bi">Chamisso</persName>
+							<persName ref="#p0280" type="bi">Hippolyte de Chamisso</persName>, a été publiée en <date when-iso="1822"
+						>1822</date>.</p></note> –</p>
+				<closer>
+					<salute>lebe so wohl du kannst<lb/>lieber junge, und <foreign xml:lang="grc"><hi rend="greek">Χαιρε</hi></foreign>
+						<note resp="#stefanie.hasler"><p xml:lang="de">Übersetzung (lat.): Sei gegrüßt.</p><p xml:lang="en">Translation (lat.):
+								Greetings.</p><p xml:lang="fr">Traduction (lat.): Salutations.</p></note> wenn du es<lb/>vermagst, – wir werden
+						allmälig<lb/>schon alt <foreign xml:lang="fr"><hi rend="latin">et le plus fort en est fait:<note resp="#stefanie.hasler"><p
+										xml:lang="de">Übersetzung (frz.): Und der größte Teil [i.e. des Lebens] ist schon geschafft.</p><p
+										xml:lang="en">Translation (French): And the greater part [i.e. of life] is already done.</p><p xml:lang="fr"
+										>Traduction (français) : Et la plus grande partie [c'est-à-dire de la vie] est déjà
+							fait.</p></note></hi></foreign></salute>
+					<lb/>
+					<date when-iso="1815-01-23">23. <hi rend="latin">Januar</hi> 1815</date>
+					<note resp="#sabine.seifert">
+						<p xml:lang="de">In <persName ref="#p0239" type="bi">Hitzigs</persName>
+							<title ref="#w00277" type="bi">Leben und Briefe von Adelbert von Chamisso</title> wird das Datum ausgelassen und die
+							Initiale "A." als Unterschrift hinzugefügt.</p>
+						<p xml:lang="en">In the print of <persName ref="#p0239" type="bi">Hitzig</persName>’s <title ref="#w00277">Life and Letters of
+								Adelbert von Chamisso</title> the date is omitted and the initial "A." added as signature. </p>
+						<p xml:lang="fr">Dans l'imprimé de la <title ref="#w00277">Vie et Lettres d'Adelbert von Chamisso</title> de <persName
+								ref="#p0239" type="bi">Hitzig</persName> la date est omise et l'initiale "A." ajouté comme signature.</p>
+					</note>
+				</closer>
+				<pb facs="iiif:10.34847/nkl.0736iv01/3acb6bcfb21dabf0d3f7cbfb8b4f1290eeea639e" n="4"/>
+			</div>
+		</body>
+	</text>
 </TEI>

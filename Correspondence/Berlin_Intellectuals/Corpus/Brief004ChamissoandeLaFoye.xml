@@ -1,831 +1,1010 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (probably Berlin, probably spring 1805)</title>
-                <title xml:lang="fr">Lettre d'Adelbert de Chamisso à Louis de La Foye (probablement Berlin, probablement au printemps 1805)</title>
-                <title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (wahrscheinlich Berlin, wahrscheinlich Frühling 1805)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Prepared by</resp>
-                    <persName ref="#janine.katins">
-                        <forename>Janine</forename>
-                        <surname>Katins</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>In collaboration with</resp>
-                    <persName ref="#anna.busch">
-                        <forename>Anna</forename>
-                        <surname>Busch</surname>
-                    </persName>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                    <persName ref="#sophia.zeil">
-                        <forename>Sophia</forename>
-                        <surname>Zeil</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2013-11"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Literary Romanticism</title>
-                <title type="topic">French culture</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
-                        <repository>Manuscripts section</repository>
-                        <collection>De La Foye papers</collection>
-                        <idno type="stabi.berlin">Nachlass 239, folio 9 and folios 4-5</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1805"/>
-                            <note resp="#janine.katins" type="keyword">History (Prussia)</note>
-                            <note resp="#janine.katins" type="keyword">Literaturee market (Paris)</note>
-                            <note resp="#janine.katins" type="keyword">Chamisso (studies)</note>
-                            <note resp="#janine.katins" type="keyword">North Star Alliance</note>
-                            <note resp="#janine.katins" type="keyword">Musenalmanach</note>
-                            <note resp="#janine.katins" type="keyword">de La Foye (Reviewer)</note>
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Feingeripptes Papier.</material>
-                                        <material xml:lang="en">Laid paper.</material>
-                                        <material xml:lang="fr">Papier finement côtelé.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">1 Bogen, 2 Blätter plus 1 weiteres Blatt</measure>
-                                        <measure xml:lang="en">1 sheet of paper, 2 folios plus another folio</measure>
-                                        <measure xml:lang="fr">2 feuillets et 1 feuillet</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#pencil_1">
-                                    <p xml:lang="de">Foliierung mit dünnem Bleistift.</p>
-                                    <p xml:lang="en">Foliation in fine pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier fin.</p>
-                                </foliation>
-                                <foliation corresp="#pencil_2">
-                                    <p xml:lang="de">Foliierung mit dickem Bleistift.</p>
-                                    <p xml:lang="en">Foliation in thick pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages, crayon de papier épais.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Blatt 9 in gutem Erhaltungszustand. Faltspuren und Knicke. Blatt 4-5 in mittlerem
-                                        Erhaltungszustand. Faltspuren und Knicke. Siegelausrisse, die für Textverlust verantwortlich sind.</p>
-                                    <p xml:lang="en">Folio 9 in a good state of preservation. Traces of folding and creases. Folios 4-5 in a medium
-                                        state of preservation. Traces of folding and creases. Tear by seal causing missing text.</p>
-                                    <p xml:lang="fr">Feuillet 9 en bon état. Traces de plis. Feuillets 4-5 en état moyen. Traces de plis. Déchirure au
-                                        niveau du sceau.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Absenders Adelbert von Chamisso, Brieftext in brauner Tinte, vorwiegend in
-                                    Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of the sender Adelbert von Chamisso, text of letter in brown ink, mainly German script.</p>
-                                <p xml:lang="fr">Main de l'expéditeur Adelbert von Chamisso, corps de la lettre, encre marron, écriture
-                                    majoritairement gothique.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil_1">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
-                                <p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
-                                <p xml:lang="en">Unkown hand, in pencil.</p>
-                                <p xml:lang="fr">Main inconnue, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_3">
-                                <p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
-                                <p xml:lang="en">Unkown hand, in pencil.</p>
-                                <p xml:lang="fr">Main inconnue, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="brown_ink" scope="minor" scribe="unknown" xml:id="ink_1">
-                                <p xml:lang="de">Unbekannte Hand, in brauner Tinte.</p>
-                                <p xml:lang="en">Unkown hand, in brown ink.</p>
-                                <p xml:lang="fr">Main inconnue, encre marron.</p>
-                            </handNote>
-                            <handNote medium="brown_ink" scope="minor" scribe="unknown" xml:id="ink_2">
-                                <p xml:lang="de">Postvermerk, in brauner Tinte.</p>
-                                <p xml:lang="en">Postal message, in brown ink.</p>
-                                <p xml:lang="fr">Note de la poste, à l'encre marron.</p>
-                            </handNote>
-                            <handNote medium="red_ink" scope="minor" scribe="unknown" xml:id="ink_3">
-                                <p xml:lang="de">Postvermerk, in roter Tinte.</p>
-                                <p xml:lang="en">Postal message, in red ink.</p>
-                                <p xml:lang="fr">Note de la poste, à l'encre rouge.</p>
-                            </handNote>
-                        </handDesc>
-                        <sealDesc>
-                            <p xml:lang="de">Reste zweier Siegel des <orgName ref="#g0031">Nordsternbundes</orgName> mit dem Bundeszeichen <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign> in schwarzem Siegellack auf der
-                                Umschlagseite.</p>
-                            <p xml:lang="en">Remnants of black sealing wax on envelope with the motto of the <orgName ref="#g0031">Nordsternbund</orgName>: <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign>.</p>
-                            <p xml:lang="fr">Restes de cire noire du côté de l'enveloppe avec la devise de <orgName ref="#g0031">Nordsternbund</orgName>: <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign>.</p>
-                        </sealDesc>
-                        <accMat>
-                            <p xml:lang="de"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Blatt 5v</ref> dient als Briefumschlag.</p>
-                            <p xml:lang="en"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Page 5v</ref> is being used as envelope.</p>
-                            <p xml:lang="fr"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Le feuillet 5v</ref> sert d'enveloppe.</p>
-                        </accMat>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde wahrscheinlich im <origDate notAfter-iso="1805-05" notBefore-iso="1805-03-01">Frühling
-                                    1805</origDate> wahrscheinlich in <origPlace ref="#l1103">Berlin</origPlace> verfasst. Er muss nach <persName ref="#p0237">Chamissos</persName> Brief an <persName ref="#p0248">de La Foye</persName> vom <origDate notBefore-iso="1805-03-01">1. März 1805</origDate> (in <persName ref="#p0261">Riegels</persName>
-                                <rs ref="#w00253">Edition</rs> Brief 24, S. 68-78) entstanden sein, wie sich aus inhaltlichen Bezügen (Erwähnung der
-                                Person <persName ref="#p0351">Krüteners</persName>) ergibt. Riegel datiert ihn auf <date when-iso="1805-03/05">Frühling 1805</date> und ordnet ihn zwischen zwei Briefe de La Foyes vom <date when-iso="1805-03-17">17.
-                                    März</date> und vom <date when-iso="1805-04-7/28">7. bzw. 28. April 1805</date> ein.</p>
-                            <p xml:lang="en">The letter probably was composed in <origPlace ref="#l1103">Berlin</origPlace> in <origDate notAfter-iso="1805-04" notBefore-iso="1805-03">spring 1805</origDate>. It must have been written after <persName ref="#p0237">Chamissos</persName> letter to <persName ref="#p0248">de La Foye</persName> from <origDate notBefore-iso="1805-03-01">1 March 1805</origDate> (in <persName ref="#p0261">Riegels</persName>
-                                <rs ref="#w00253">edition</rs> letter 24, pp. 68-78), due to mentioning of <persName ref="#p0351">Krütener</persName>.
-                                Riegel dates the letter to <date when-iso="1805-03/05">spring 1805</date> and puts it between two letters by de La
-                                Foye from <date when-iso="1805-03-17">17 March</date> and <date when-iso="1805-04-7/28">7/28 April 1805</date>.</p>
-                            <p xml:lang="fr">La lettre a probablement été composée à <origPlace ref="#l1103">Berlin</origPlace> au <origDate notAfter-iso="1805-04" notBefore-iso="1805-03">printemps 1805</origDate>. Cela a dû être écrit après la lettre de
-                                    <persName ref="#p0237">Chamissos</persName> à <persName ref="#p0248">de La Foye</persName> de <origDate notBefore-iso="1805-03-01">1 March 1805</origDate> (dans l'<rs ref="#w00253">édition</rs> de <persName ref="#p0261">Riegels</persName> lettre 24, pp. 68-78), dû à la mention de <persName ref="#p0351">Krütener</persName>. Riegel date la lettre de <date when-iso="1805-03/05">printemps 1805</date> et la met entre
-                                deux lettres par de La Foye du <date when-iso="1805-03-17">17 mars</date> et du <date when-iso="1805-04-7/28">7/28
-                                    avril 1805</date>.</p>
-                        </origin>
-                        <acquisition><p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai 1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie
-                                Gerda Bassenge (Berlin, Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er
-                                ist Eigentum der Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
-                            <p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
-                                    <date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
-                                and loaned to the State Library.</p>
-                            <p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
-                                allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
-                                prêt durable à la Librairie d'État de Berlin.</p>
-                        </acquisition>
-                    </history>
-                    <additional>
-                        <listBibl>
-                            <bibl>
-                                <bibl xml:lang="de"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
-                                        Chamisso. Fragments inédits</title>, Brief 26, S. 83-87. Abdruck des Briefes mit Kürzungen.</bibl>
-                                <bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
-                                        Chamisso, Fragments inédits</title>, letter 26, pp. 83-87. The letter is printed with omissions.</bibl>
-                                <bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
-                                        Chamisso, Fragments inédits</title>, lettre 26, p. 83-87. Des extraits de la lettre ont été publiés.</bibl>
-                            </bibl>
-                        </listBibl>
-                    </additional>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction method="markup">
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <hyphenation eol="hard" rend="sh">
-                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been removed.</p>
-                </hyphenation>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="97"/>
-                <language ident="fr" usage="2"/>
-                <language ident="grc" usage="1"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
-                    <placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
-                    <date when-iso="1805-03-01"/>
-                </correspAction>
-                <correspAction type="received">
-                    <persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief011ChamissoandeLaFoye.xml" type="prev"/>
-                    <ref target="Brief026ChamissoandeLaFoye.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-08-02" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2015-12-17" who="#sabine.seifert">Changed deleted ID for entry p0397 into ID p0361.</change>
-            <change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
-            <change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
-            <change when-iso="2013-12-11" who="sabine.seifert">Corrected some IDs.</change>
-            <change when-iso="2013-11-27" who="#sabine.seifert">Correction concerning dating.</change>
-            <change when-iso="2013-11-22" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation. Added several
-                information.</change>
-            <change when-iso="2013-11-21" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation of second half of
-                letter. Added hands and several information.</change>
-            <change when-iso="2013-11-20" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation of first half of
-                letter.</change>
-            <change when-iso="2013-04-03" who="#sophia.zeil">Corrections within header.</change>
-            <change when-iso="2013-03-15" who="#sophia.zeil">Corrections within body.</change>
-            <change notAfter-iso="2013-03-15" who="janine.katins">Transcription, encoding and annotation.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.9d4e62py/e155f2ee6621dc00308c0dd8ecc23f58a7aca9ed" n="1"/>
-                <!-- An dieser Stelle hat die Staatsbibliothek falsch foliiert. Blatt 9 (iiif:10.34847/nkl.9d4e62py/e155f2ee6621dc00308c0dd8ecc23f58a7aca9ed und iiif:10.34847/nkl.9d4e62py/3b3ab45924c906d613eab2a7554023028582a06f)
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Letter from Adelbert von Chamisso to Louis de La Foye (probably Berlin, probably spring 1805)</title>
+				<title xml:lang="fr">Lettre d'Adelbert de Chamisso à Louis de La Foye (probablement Berlin, probablement au printemps 1805)</title>
+				<title xml:lang="de">Brief von Adelbert von Chamisso an Louis de La Foye (wahrscheinlich Berlin, wahrscheinlich Frühling 1805)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Prepared by</resp>
+					<persName ref="#janine.katins">
+						<forename>Janine</forename>
+						<surname>Katins</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>In collaboration with</resp>
+					<persName ref="#anna.busch">
+						<forename>Anna</forename>
+						<surname>Busch</surname>
+					</persName>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+					<persName ref="#sophia.zeil">
+						<forename>Sophia</forename>
+						<surname>Zeil</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#stabi.berlin">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2013-11"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Literary Romanticism</title>
+				<title type="topic">French culture</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#stabi.berlin">Berlin State Library - Prussian Cultural Heritage</institution>
+						<repository>Manuscripts section</repository>
+						<collection>De La Foye papers</collection>
+						<idno type="stabi.berlin">Nachlass 239, folio 9 and folios 4-5</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1805"/>
+							<note resp="#janine.katins" type="keyword">History (Prussia)</note>
+							<note resp="#janine.katins" type="keyword">Literaturee market (Paris)</note>
+							<note resp="#janine.katins" type="keyword">Chamisso (studies)</note>
+							<note resp="#janine.katins" type="keyword">North Star Alliance</note>
+							<note resp="#janine.katins" type="keyword">Musenalmanach</note>
+							<note resp="#janine.katins" type="keyword">de La Foye (Reviewer)</note>
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Feingeripptes Papier.</material>
+										<material xml:lang="en">Laid paper.</material>
+										<material xml:lang="fr">Papier finement côtelé.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">1 Bogen, 2 Blätter plus 1 weiteres Blatt</measure>
+										<measure xml:lang="en">1 sheet of paper, 2 folios plus another folio</measure>
+										<measure xml:lang="fr">2 feuillets et 1 feuillet</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#pencil_1">
+									<p xml:lang="de">Foliierung mit dünnem Bleistift.</p>
+									<p xml:lang="en">Foliation in fine pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier fin.</p>
+								</foliation>
+								<foliation corresp="#pencil_2">
+									<p xml:lang="de">Foliierung mit dickem Bleistift.</p>
+									<p xml:lang="en">Foliation in thick pencil.</p>
+									<p xml:lang="fr">Numérotation des pages, crayon de papier épais.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Blatt 9 in gutem Erhaltungszustand. Faltspuren und Knicke. Blatt 4-5 in mittlerem
+										Erhaltungszustand. Faltspuren und Knicke. Siegelausrisse, die für Textverlust verantwortlich sind.</p>
+									<p xml:lang="en">Folio 9 in a good state of preservation. Traces of folding and creases. Folios 4-5 in a medium
+										state of preservation. Traces of folding and creases. Tear by seal causing missing text.</p>
+									<p xml:lang="fr">Feuillet 9 en bon état. Traces de plis. Feuillets 4-5 en état moyen. Traces de plis. Déchirure au
+										niveau du sceau.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0237" xml:id="major_hand">
+								<p xml:lang="de">Hand des Absenders Adelbert von Chamisso, Brieftext in brauner Tinte, vorwiegend in
+									Kurrentschrift.</p>
+								<p xml:lang="en">Hand of the sender Adelbert von Chamisso, text of letter in brown ink, mainly German script.</p>
+								<p xml:lang="fr">Main de l'expéditeur Adelbert von Chamisso, corps de la lettre, encre marron, écriture
+									majoritairement gothique.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil_1">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_2">
+								<p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
+								<p xml:lang="en">Unkown hand, in pencil.</p>
+								<p xml:lang="fr">Main inconnue, crayon de papier.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="unknown" xml:id="pencil_3">
+								<p xml:lang="de">Unbekannte Hand, in Bleistift.</p>
+								<p xml:lang="en">Unkown hand, in pencil.</p>
+								<p xml:lang="fr">Main inconnue, crayon de papier.</p>
+							</handNote>
+							<handNote medium="brown_ink" scope="minor" scribe="unknown" xml:id="ink_1">
+								<p xml:lang="de">Unbekannte Hand, in brauner Tinte.</p>
+								<p xml:lang="en">Unkown hand, in brown ink.</p>
+								<p xml:lang="fr">Main inconnue, encre marron.</p>
+							</handNote>
+							<handNote medium="brown_ink" scope="minor" scribe="unknown" xml:id="ink_2">
+								<p xml:lang="de">Postvermerk, in brauner Tinte.</p>
+								<p xml:lang="en">Postal message, in brown ink.</p>
+								<p xml:lang="fr">Note de la poste, à l'encre marron.</p>
+							</handNote>
+							<handNote medium="red_ink" scope="minor" scribe="unknown" xml:id="ink_3">
+								<p xml:lang="de">Postvermerk, in roter Tinte.</p>
+								<p xml:lang="en">Postal message, in red ink.</p>
+								<p xml:lang="fr">Note de la poste, à l'encre rouge.</p>
+							</handNote>
+						</handDesc>
+						<sealDesc>
+							<p xml:lang="de">Reste zweier Siegel des <orgName ref="#g0031">Nordsternbundes</orgName> mit dem Bundeszeichen <foreign
+									xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign> in schwarzem Siegellack auf der
+								Umschlagseite.</p>
+							<p xml:lang="en">Remnants of black sealing wax on envelope with the motto of the <orgName ref="#g0031"
+									>Nordsternbund</orgName>: <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign>.</p>
+							<p xml:lang="fr">Restes de cire noire du côté de l'enveloppe avec la devise de <orgName ref="#g0031"
+									>Nordsternbund</orgName>: <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου αστρον</hi></foreign>.</p>
+						</sealDesc>
+						<accMat>
+							<p xml:lang="de"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Blatt 5v</ref> dient als Briefumschlag.</p>
+							<p xml:lang="en"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Page 5v</ref> is being used as envelope.</p>
+							<p xml:lang="fr"><ref target="#Brief004ChamissoandeLaFoye-Blatt5v">Le feuillet 5v</ref> sert d'enveloppe.</p>
+						</accMat>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde wahrscheinlich im <origDate notAfter-iso="1805-05" notBefore-iso="1805-03-01">Frühling
+									1805</origDate> wahrscheinlich in <origPlace ref="#l1103">Berlin</origPlace> verfasst. Er muss nach <persName
+									ref="#p0237">Chamissos</persName> Brief an <persName ref="#p0248">de La Foye</persName> vom <origDate
+									notBefore-iso="1805-03-01">1. März 1805</origDate> (in <persName ref="#p0261">Riegels</persName>
+								<rs ref="#w00253">Edition</rs> Brief 24, S. 68-78) entstanden sein, wie sich aus inhaltlichen Bezügen (Erwähnung der
+								Person <persName ref="#p0351">Krüteners</persName>) ergibt. Riegel datiert ihn auf <date when-iso="1805-03/05"
+									>Frühling 1805</date> und ordnet ihn zwischen zwei Briefe de La Foyes vom <date when-iso="1805-03-17">17.
+									März</date> und vom <date when-iso="1805-04-7/28">7. bzw. 28. April 1805</date> ein.</p>
+							<p xml:lang="en">The letter probably was composed in <origPlace ref="#l1103">Berlin</origPlace> in <origDate
+									notAfter-iso="1805-04" notBefore-iso="1805-03">spring 1805</origDate>. It must have been written after <persName
+									ref="#p0237">Chamissos</persName> letter to <persName ref="#p0248">de La Foye</persName> from <origDate
+									notBefore-iso="1805-03-01">1 March 1805</origDate> (in <persName ref="#p0261">Riegels</persName>
+								<rs ref="#w00253">edition</rs> letter 24, pp. 68-78), due to mentioning of <persName ref="#p0351">Krütener</persName>.
+								Riegel dates the letter to <date when-iso="1805-03/05">spring 1805</date> and puts it between two letters by de La
+								Foye from <date when-iso="1805-03-17">17 March</date> and <date when-iso="1805-04-7/28">7/28 April 1805</date>.</p>
+							<p xml:lang="fr">La lettre a probablement été composée à <origPlace ref="#l1103">Berlin</origPlace> au <origDate
+									notAfter-iso="1805-04" notBefore-iso="1805-03">printemps 1805</origDate>. Cela a dû être écrit après la lettre de
+									<persName ref="#p0237">Chamissos</persName> à <persName ref="#p0248">de La Foye</persName> de <origDate
+									notBefore-iso="1805-03-01">1 March 1805</origDate> (dans l'<rs ref="#w00253">édition</rs> de <persName
+									ref="#p0261">Riegels</persName> lettre 24, pp. 68-78), dû à la mention de <persName ref="#p0351"
+									>Krütener</persName>. Riegel date la lettre de <date when-iso="1805-03/05">printemps 1805</date> et la met entre
+								deux lettres par de La Foye du <date when-iso="1805-03-17">17 mars</date> et du <date when-iso="1805-04-7/28">7/28
+									avril 1805</date>.</p>
+						</origin>
+						<acquisition>
+							<p xml:lang="de">Der Nachlass 239 (<persName ref="#p0248">L. de La Foye</persName>) wurde im <date when-iso="1990-05">Mai
+									1990</date> als Teilnachlass mit Mitteln des Bundesministeriums des Innern von der Galerie Gerda Bassenge (Berlin,
+								Auktion 55, Teil 1, <date when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009) erworben. Er ist Eigentum der
+								Bundesrepublik Deutschland und als Dauerleihgabe der Staatsbibliothek zu Berlin übergeben worden.</p>
+							<p xml:lang="en">The <persName ref="#p0248">de La Foye</persName> papers (NL 239) were acquired by the State Library in
+									<date when-iso="1990-05">May 1990</date> (auction 55 of the Galerie Gerda Bassenge, Berlin, part 1, <date
+									when-iso="1990-05-02/04">2.-4.5.1990</date>, Nr. 3009). They were funded by the German Ministry of Inner Affairs
+								and loaned to the State Library.</p>
+							<p xml:lang="fr">Les papiers <persName ref="#p0248">de La Foye</persName> (NL 239) ont été acquis par le ministère
+								allemand de l'intérieur lors de la vente aux enchères organisée par la Galerie Gerda Bassenge en <date
+									when-iso="1990-05">mai 1990</date> (Berlin, enchère 55, partie 1, <date when-iso="1990-05-02/04"
+									>2.-4.5.1990</date>, No. 3009). Ils sont la propriété de l'État allemand, qui les a confiés sous la forme d'une
+								prêt durable à la Librairie d'État de Berlin.</p>
+						</acquisition>
+					</history>
+					<additional>
+						<listBibl>
+							<bibl>
+								<bibl xml:lang="de"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
+										Chamisso. Fragments inédits</title>, Brief 26, S. 83-87. Abdruck des Briefes mit Kürzungen.</bibl>
+								<bibl xml:lang="en"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
+										Chamisso, Fragments inédits</title>, letter 26, pp. 83-87. The letter is printed with omissions.</bibl>
+								<bibl xml:lang="fr"><persName ref="#p0261">Riegel</persName> (1934): <title ref="#w00253">Correspondance d'Adalbert de
+										Chamisso, Fragments inédits</title>, lettre 26, p. 83-87. Des extraits de la lettre ont été publiés.</bibl>
+							</bibl>
+						</listBibl>
+					</additional>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction method="markup">
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<hyphenation eol="hard" rend="sh">
+					<p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un tiret simple) ont été
+						enlevées.</p>
+					<p xml:lang="en">All the end-of-line hyphenation (made with a single hyphen) have been removed.</p>
+				</hyphenation>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="97"/>
+				<language ident="fr" usage="2"/>
+				<language ident="grc" usage="1"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/4927907/">Adelbert von Chamisso</persName>
+					<placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
+					<date when-iso="1805-03-01"/>
+				</correspAction>
+				<correspAction type="received">
+					<persName ref="https://viaf.org/viaf/10588048/">Louis de La Foye</persName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief011ChamissoandeLaFoye.xml" type="prev"/>
+					<ref target="Brief026ChamissoandeLaFoye.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-08-02" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-21" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-02" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2015-12-17" who="#sabine.seifert">Changed deleted ID for entry p0397 into ID p0361.</change>
+			<change when-iso="2015-04-27" who="#anna.busch">Change of extent.</change>
+			<change when-iso="2015-03-13" who="#anna.busch">Change of respStmt.</change>
+			<change when-iso="2013-12-11" who="sabine.seifert">Corrected some IDs.</change>
+			<change when-iso="2013-11-27" who="#sabine.seifert">Correction concerning dating.</change>
+			<change when-iso="2013-11-22" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation. Added several
+				information.</change>
+			<change when-iso="2013-11-21" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation of second half of
+				letter. Added hands and several information.</change>
+			<change when-iso="2013-11-20" who="#sabine.seifert">Corrections concerning encoding, transcription and annotation of first half of
+				letter.</change>
+			<change when-iso="2013-04-03" who="#sophia.zeil">Corrections within header.</change>
+			<change when-iso="2013-03-15" who="#sophia.zeil">Corrections within body.</change>
+			<change notAfter-iso="2013-03-15" who="janine.katins">Transcription, encoding and annotation.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.9d4e62py/e155f2ee6621dc00308c0dd8ecc23f58a7aca9ed" n="1"/>
+				<!-- An dieser Stelle hat die Staatsbibliothek falsch foliiert. Blatt 9 (iiif:10.34847/nkl.9d4e62py/e155f2ee6621dc00308c0dd8ecc23f58a7aca9ed und iiif:10.34847/nkl.9d4e62py/3b3ab45924c906d613eab2a7554023028582a06f)
                     gehört zu diesem Brief und muss den Blättern 4 und 5 (00000009.jpb bis iiif:10.34847/nkl.9d4e62py/2275b59d60391374ea254c6c67c6929c5a5c6517) vorangestellt werden.-->
-                <note hand="#pencil_1" place="top-margin(right)" type="foliation">9</note>
-                <p>Du hast dich nicht wacker auf der Schule gehalten und ich muß dich schelten. – ich habe zwar mein Ehrenwort<lb/>geschworen, aber
-                    ich breche ihn nicht gegen dir, du aber mußt ihn gegen keinen <add place="above">der</add> Leuten, auch <subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">n</add>
-                    </subst>icht der<lb/>unsern <del rend="strikethrough">nicht</del> brechen. – <cit>
-                        <quote>„<hi rend="underline">Wenn dir das innre Götter <hi rend="underline">W</hi>ort wird spruchlos</hi>“ <note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert den Anfangsvers des Gedichts
-                                    <title ref="#w00301" type="bi">Sonett</title> von <persName ref="#p0251" type="bi">Fichte</persName>. Alle in
-                                diesem Brief erwähnten Gedichte wurden von <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0249" type="bi">Varnhagen</persName> im <title ref="#w00257" type="bi">Musenalmanach auf das Jahr
-                                    1805</title> veröffentlicht.</note>
-                        </quote>
-                    </cit> ist ein wunderherrliches<lb/>nicht gefä<add place="inline">l</add>liges aber Mar<subst>
-                        <del rend="overwritten"><gap extent="1-2 characters" reason="illegible"/></del>
-                        <add place="across">k</add>
-                    </subst>- und Kraf<add place="inline">t</add><subst>
-                        <del rend="overwritten">l</del>
-                        <add place="across">v</add>
-                    </subst>olles Sonnet von <hi rend="underline"><persName ref="#p0251" type="bi">Fichte</persName></hi>. wunder<subst>
-                        <del rend="strikethrough">volleres</del>
-                        <add place="above">herlicheres</add>
-                    </subst> – noch soll sein<lb/>von dem du nicht spricht, <cit>
-                        <quote>„<hi rend="underline">was meinem Auge diese Kraft gegeben</hi>“</quote>
-                        <note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert den Anfangsvers
-                                eines ebenfalls <title ref="#w00300" type="bi">Sonett</title> betitelten Gedichtes von <persName ref="#p0251" type="bi">Fichte</persName>.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes the
-                                opening verse of a poem by <persName ref="#p0251" type="bi">Fichte</persName>, also called a <title ref="#w00300" type="bi">sonnet</title>.</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite le vers
-                                d'ouverture d'un poème de <persName ref="#p0251" type="bi">Fichte</persName>, également appelé <title ref="#w00300" type="bi">sonnet</title>.</p></note>
-                    </cit> von dem selben <hi rend="underline"><persName ref="#p0251" type="bi">Fichte</persName></hi><lb/>es erfasset die ganze Wissenschaftle<subst>
-                        <del rend="overwritten">e</del>
-                        <add place="across">h</add>
-                    </subst>re, und ich gestehe daß ich die Tiefe der Terzete<lb/>nicht <subst>
-                        <del rend="overwritten">g</del>
-                        <add place="across">l</add>
-                    </subst>eichtdurchdringenden Blickes erschöpfe, von <persName ref="#p0251" type="bi">fichte</persName> sind auch. <hi rend="underline latin"><title ref="#w00298" type="bi"><del rend="strikethrough">Num</del><add place="above">O
-                            </add>quam<lb/>Decora</title></hi>, und <hi rend="underline latin"><title ref="#w00299" type="bi">Num Quam
-                            Serenior</title></hi>. da<del rend="strikethrough">ß</del> du aber diesen <subst>
-                        <del rend="overwritten">ü</del>
-                        <add place="across">Ü</add>
-                    </subst>bersetzun<subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">g</add>
-                    </subst>en<lb/>die meine des <hi rend="underline latin"><title ref="#w00302" type="bi">Stabat Mater</title></hi> vorziehest <subst>
-                        <del rend="overwritten">bist</del>
-                        <add place="across">stehst</add>
-                    </subst> du <subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">n</add>
-                    </subst>icht allein deiner <subst>
-                        <del rend="overwritten">m</del>
-                        <add place="across">M</add>
-                    </subst>einung da,<lb/>und ich will sie nicht bestreiten, nur sprichst du schlecht von dieser dichtungs<lb break="no"/>art, du
-                    mußt nicht mit den Klassichen Dichtungen der Rö<subst>
-                        <del rend="overwritten"><unclear cert="high" extent="1 character">h</unclear></del>
-                        <add place="across">m</add>
-                    </subst>er, die ganz –<lb/>verschieden artigen <del rend="strikethrough">des Kirchen</del> Romantischen der <subst>
-                        <del rend="overwritten">G</del>
-                        <add place="across">Ch</add>
-                    </subst>risten im Kirchenlatein vergleichen<lb/>wollen. – eher noch mit <persName ref="#p0360" type="bi"><hi rend="latin">Petrarcas</hi></persName> Liedern von dem auch einige dieser Hymnen<lb/>sein sollen. und so konnen sie sein, und sind
-                        <add place="above">wirklig</add> zum öftern sehr schön. —<lb/><choice>
-                        <abbr>z. B.</abbr>
-                        <expan>zum Beispiel</expan>
-                    </choice> an <persName ref="#p2064" type="bi">Johannes</persName>, dieses hohe loblied des Geliebten Jüngers <persName ref="#p0030" type="bi">Christi</persName> mit<lb/>inniger Religion und hohem <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">S</add>
-                    </subst>chwunge gesungen, hast du nicht zu würdigen gewust<lb/>lese es in deinem Kirchenbuche, – mir hättest du da sta<subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">t</add>
-                    </subst>t ausgerufenen <hi rend="latin">Complimenten</hi><lb/>trocken gesagt: wie ich denn unverständlich geworden war im Verse, <cit>
-                        <quote>„<hi rend="underline">Welch ein Loos<lb/>wird dir gespendet, dem, der Jungfrau zugewendet seine <persName ref="#p2065" type="bi">Jungfrau Mutter</persName> er</hi>“</quote>
-                        <note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus seinem Gedicht
-                                    <title ref="#w03291" type="bi">Hymne an Johannes</title>.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes from his poem <title ref="#w03291" type="bi">Hymne to Johannes</title>.</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite son poème <title ref="#w03291" type="bi">Hymne
-                                    à Johannes</title>.</p></note>
-                    </cit> dann<lb/>hätte ich dir klein mütig haarklein vorgespalten, wie <subst>
-                        <del rend="overwritten"><gap extent="1 word" reason="illegible"/></del>
-                        <add rend="across"><unclear cert="medium" reason="illegible">schwer</unclear></add>
-                    </subst> es war in so wen'gen<lb/>Silben mit <subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">3</add>
-                    </subst>
-                    <subst>
-                        <del rend="overwritten">z</del>
-                        <add place="across">r</add>
-                    </subst>eime zu sagen, <hi rend="underline">welch ein Los wird dir gespendet, dir, welcher<lb/>du selber Jungfrau bist, und dem
-                            <persName ref="#p0030" type="bi">Christus</persName> seine <persName ref="#p2065" type="bi">Jungfrau mutter</persName> zu
-                        gewendet<lb/>hat</hi>. du hättest mir auch sagen können daß <hi rend="underline">„<cit>
-                            <quote>Schriftverkünder Ewigkeiten</quote>
-                            <note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert erneut aus
-                                    seinem Gedicht <title ref="#w03291" type="bi">Hymne an Johannes</title>.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes again from his poem <title ref="#w03291" type="bi">Hymne to
-                                        Johannes</title>.</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite encore son
-                                    poème <title ref="#w03291" type="bi">Hymne à Johannes</title>.</p></note>
-                        </cit></hi><lb/>für <hi rend="underline">von den Ewigkeiten</hi> nicht Deutsch sei, wozu ich zu spät der schweren<lb/>Schuld
-                    bewust geschwiegen hätte. — mein Sonnet an dich lobend, <del rend="strikethrough">dieses</del><lb/>hättest du mich gefreut, — überha<subst>
-                        <del rend="overwritten"><gap extent="2 characters" reason="illegible"/></del>
-                        <add place="across">up</add>
-                    </subst>t in einem Kunsturtheile – keine<lb/>ausrufungen. – kalt und unbestochen richte der Richter. — das Ende <pb facs="iiif:10.34847/nkl.9d4e62py/3b3ab45924c906d613eab2a7554023028582a06f" n="2"/> der anbetung sinckt. –<note hand="#pencil_2" place="top-inline" type="foliation"><hi rend="underline">4</hi></note> das Sonnet <subst>
-                        <del rend="strikethrough"><rs ref="#w00297" type="bi_title">Sie</rs></del>
-                        <add place="across"><rs ref="#w00297" type="bi_title">Er</rs></add>
-                    </subst> ist ambarassirt<note resp="#sabine.seifert"><p xml:lang="de">Wahrscheinlich ist hier "embarassieren" gemeint: in
-                            Verlegenheit, Verwirrung bringen.</p><p xml:lang="en">Probably "embarassing" is meant here: embarrassing, confusing.</p><p xml:lang="fr">On entend probablement ici « embarrassant » : embarrassant, déroutant.</p></note> und schlechter<lb/><subst>
-                        <del rend="strikethrough">wie</del>
-                        <add place="above">als</add>
-                    </subst> das erste <hi rend="underline"><rs ref="#w00297" type="bi_title">Sie</rs></hi>.<note resp="#sabine.seifert"><p xml:lang="de">Die hier erwähnten Sonette bilden zusammen das Gedicht <title ref="#w00297" type="bi">Sie und Er</title>.
-                            Beide Sonette von <persName ref="#p0237" type="bi">Chamissos</persName> Hand finden sich auf <ref target="Brief003ChamissoandeLaFoye.xml">Blatt 3</ref> im Nachlass 239 (<persName ref="#p0248" type="bi">Louis de La
-                                Foye</persName>).</p><p xml:lang="en">The sonnets mentioned here together form the poem <title ref="#w00297" type="bi">You and He</title>. Both sonnets by <persName ref="#p0237" type="bi">Chamisso</persName>'s hand can be found on <ref target="Brief003ChamissoandeLaFoye.xml">sheet 3</ref> in the estate 239 (<persName ref="#p0248" type="bi">Louis de La
-                                Foye</persName>).</p><p xml:lang="fr">Les sonnets mentionnés ici forment ensemble le poème <title ref="#w00297" type="bi">Toi et Lui</title>. Les deux sonnets de la main de <persName ref="#p0237" type="bi">Chamisso</persName> se
-                            trouvent sur la <ref target="Brief003ChamissoandeLaFoye.xml">feuille 3</ref> du domaine 239 (<persName ref="#p0248" type="bi">Louis de La Foye</persName>).</p></note> — den Uebersetzer <persName ref="#p0291" type="bi">Koreff</persName> lob<subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">s</add>
-                    </subst>t du mir zu sehr.<lb/><hi rend="underline"><rs ref="#w00305" type="bi_title">aus dem Ovid</rs></hi><note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um eine Teilübersetzung Koreffs von <persName ref="#p0070" type="bi">Ovids</persName> zweitem Buch der <title ref="#w03292" type="bi">Fasti</title>.</p><p xml:lang="en">This is
-                            a partial translation by Koreff of <persName ref="#p0070" type="bi">Ovid's</persName> second book of <title ref="#w03292" type="bi">Fasti</title>.</p><p xml:lang="fr">Il s'agit d'une traduction partielle par Koreff du deuxième livre
-                                d'<persName ref="#p0070" type="bi">Ovide</persName> des <title ref="#w03292" type="bi">Fasti</title>.</p></note> ist
-                    leicht und gut, aber ein Fragment von geringer bedeutung<lb/>und Seine Verse die zwar der untadlige <subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">V</add>
-                    </subst>ers Künstler <persName ref="#p0249" type="bi">Var<subst>
-                            <del rend="overwritten">h</del>
-                            <add place="across">n</add>
-                        </subst>hagen</persName> edwas<lb/>gefeilt hat, sollst du nicht zu <subst>
-                        <del rend="overwritten">m</del>
-                        <add place="across">le</add>
-                    </subst>icht mit den dir fast noch unbeckanten<lb/>des Meisters der Versifikazions Kunst <persName ref="#p0361" type="bi">Voss</persName> vergleichen oder <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">g</add>
-                    </subst>ar sie<lb/>über diese erheben, ich will nur das wahrlig lieblige <rs ref="#w00306" type="bi_title">Gedicht</rs><note resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus <persName ref="#p0291" type="bi">Koreffs</persName> Gedicht <title ref="#w00306" type="bi">An M....</title>.</note> an <hi rend="latin"><persName ref="#p0398" type="bi">Mariane<lb/>Salomon</persName></hi> in dieser Rücksicht durchgehen. ‒ <cit>
-                        <quote>Steinchen s<hi rend="underline">o</hi>ll</quote>
-                    </cit> ‒⏑⏑ <cit>
-                        <quote>konnten w<hi rend="underline">o</hi>hl</quote>
-                    </cit><lb/>‒⏑⏑ <cit>
-                        <quote>zieren gl<hi rend="underline">ei</hi>ch</quote>
-                    </cit> ‒⏑⏑ <cit>
-                        <quote>schmuckl<hi rend="underline">o</hi>s be-</quote>
-                    </cit> ‒⏑⏑ <cit>
-                        <quote>Niem<hi rend="underline">a</hi>ls v<hi rend="underline">o</hi>ll</quote>
-                    </cit> ‒⏑⏑ sind wenigstens<lb/>schwere füsse. und <cit>
-                        <quote><hi rend="underline">laß deine</hi></quote>
-                    </cit> ‒⏑⏑ ein ganz fehlerhafter, den nur itzt ein<lb/><persName ref="#p0332" type="bi">Robert</persName> sich erfrechen würde zu
-                    sagen. Dieses <del rend="strikethrough">s<gap extent="1 character" reason="illegible"/></del>Mannes M<subst>
-                        <del rend="overwritten">i</del>
-                        <add place="across">e</add>
-                    </subst>trische Verse sind<lb/>dir geliefert. sein <title ref="#w00307" type="bi">Promemoria</title> gefällt mir unter seinen <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">S</add>
-                    </subst>achen weil<lb/>er sich darin <del rend="strikethrough">am beste</del><del rend="none">n</del> am treusten ausspricht.
-                        <persName ref="#p0291" type="bi">Korefs</persName> Epigram̄e aber<lb/>scheinen mir <add place="above">nur</add> Mittelmässig <subst>
-                        <add place="above">zu sein,</add>
-                        <del rend="none">,</del>
-                    </subst> die 2 ersten sind die besten. — die<lb/><rs ref="#w00308" type="bi_title">Verse</rs><note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um <persName ref="#p0399" type="bi">Paalzows</persName> Gedicht <title ref="#w00308" type="bi">Geburt des Pan</title>.</p><p xml:lang="en">This is <persName ref="#p0399" type="bi">Paalzov</persName>'s
-                            poem <title ref="#w00308" type="bi">Birth of Pan</title>.</p><p xml:lang="fr">C'est le poème de <persName ref="#p0399" type="bi">Paalzov</persName>
-                            <title ref="#w00308" type="bi">Naissance de Pan</title>.</p></note> von <rs ref="#p0399" type="bi_person"><hi rend="latin">P</hi>....</rs> sind durchaus gut, nur sind die <del rend="strikethrough">Er</del> ersten <del rend="strikethrough">besser</del> schöner<lb/><subst>
-                        <del rend="strikethrough">wie</del>
-                        <add place="above">als</add>
-                    </subst> die letzten, welches ein <subst>
-                        <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">U</add>
-                    </subst>nglück ist, sein <subst>
-                        <del rend="overwritten"><unclear cert="medium" reason="illegible">J</unclear></del>
-                        <add place="across">g</add>
-                    </subst>edichtgen ist nicht zu verachten.<lb/><hi rend="underline"><persName ref="#p0400" type="bi">Wolfart</persName></hi> ist
-                    ein magerer Hund<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0400" type="bi">Wolfart</persName> trug insgesamt
-                            vier Gedichte zum <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title> bei.</p><p xml:lang="en"><persName ref="#p0400" type="bi">Wolfart</persName> contributed a total of four poems to the <title ref="#w00257" type="bi">Musenalmanach for the year 1805</title>.</p><p xml:lang="fr"><persName ref="#p0400" type="bi">Wolfart</persName> a contribué un total de quatre poèmes au <title ref="#w00257" type="bi">Musenalmanach pour l'année
-                                1805</title>.</p></note> und <hi rend="underline latin"><persName ref="#p0401" type="bi">Diel<unclear cert="medium" reason="illegible">h</unclear></persName></hi> nun vollends ein <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">S</add>
-                    </subst>chweinhund,<note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um <persName ref="#p0401" type="bi">Diehls</persName> Gedicht <title ref="#w00309" type="bi">Räthsel</title>.</p><p xml:lang="en">This is <persName ref="#p0401" type="bi">Diehls</persName>'s poem <title ref="#w00309" type="bi">Räthsel</title>.</p><p xml:lang="fr">C'est le poème <title ref="#w00309" type="bi">Räthsel</title> de <persName ref="#p0401" type="bi">Diehls</persName>.</p></note> – von <persName ref="#p0345" type="bi"><subst>
-                            <del rend="overwritten">a</del>
-                            <add place="across">A</add>
-                        </subst>ugusta</persName><lb/>aber schätz ich am mehrsten die Zwei Sonnete <hi rend="underline"><title ref="#w00310" type="bi">Frühling</title></hi> und <hi rend="underline latin"><title ref="#w00311" type="bi">Sonnet</title></hi> worin
-                    eine<lb/>schone Weibligkeit <add place="above">doch</add> leise erblüht, <title ref="#w00312" type="bi">Variazion</title> bleibt
-                    ganz auf dem flecke stehen.<lb/>ich <del rend="strikethrough">meine</del> frage, mein' ich, nach einem <subst>
-                        <del rend="overwritten"><unclear cert="medium" reason="illegible">V</unclear></del>
-                        <add place="across">F</add>
-                    </subst>ortgang des Gedichtes un<subst>
-                        <del rend="overwritten">n</del>
-                        <add place="across">d</add>
-                    </subst> einem<lb/>hin̄reichenden Grunde warum die Verse gemacht worden sind, und weiß<lb/>nicht recht welcherlei Andwort mir <del rend="strikethrough">b<gap extent="several characters" reason="strikethrough"/>h</del> abs<subst>
-                        <del rend="overwritten">ch</del>
-                        <add place="across">p</add>
-                    </subst>eisen <del rend="strikethrough">zu</del> lassen. <title ref="#w00313" type="bi">Gebeth.</title> von <hi rend="latin"><persName ref="#p0262" type="bi">Neuman</persName></hi> – und von <hi rend="latin"><persName ref="#p0249" type="bi">Vanhagen</persName></hi> das freche Sonnet das 5.<hi rend="superscript">te</hi>,<note resp="#sabine.seifert"><p xml:lang="de">Es ist unklar, auf welches Gedicht sich <persName ref="#p0237" type="bi">Chamisso</persName> hier
-                            bezieht.</p><p xml:lang="en">It is unclear which poem <persName ref="#p0237" type="bi">Chamisso</persName> is referring to
-                            here.</p><p xml:lang="fr">On ne sait pas à quel poème <persName ref="#p0237" type="bi">Chamisso</persName> fait référence
-                            ici.</p></note> und die zwei<lb/>Blumen Romanzen<note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um
-                                <persName ref="#p0249" type="bi">Varnhagens</persName> Gedichte <title ref="#w00315" type="bi">Romanze [Auf der hellen
-                                grünen Wiese]</title> und <title ref="#w00316" type="bi">Romanze [Liebesschmachtend blüht entgegen]</title>.</p><p xml:lang="en">These are <persName ref="#p0249" type="bi">Varnhagen</persName>'s poems <title ref="#w00315" type="bi">Romance [On the bright green meadow]</title> and <title ref="#w00316" type="bi">Romance [Liebesschmachtend blooms
-                                towards]</title>.</p><p xml:lang="fr">Ce sont les poèmes de <persName ref="#p0249" type="bi">Varnhagen</persName>
-                            <title ref="#w00315" type="bi">Romance [Sur le pré vert clair]</title> et <title ref="#w00316" type="bi">Romance
-                                [Liebesschmachtend fleurit vers]</title>.</p></note> mögte ich hervortreten lassen, aber dieser Dinge genuch –<lb/>nur
-                    eine <subst>
-                        <del rend="strikethrough">Ermahnung</del>
-                        <add place="above">Bemerkung</add>
-                    </subst>
-                    <persName ref="#p0251" type="bi">Fichtens</persName>. mehrere der Gedichte dieser <subst>
-                        <del rend="overwritten">s</del>
-                        <add place="across">S</add>
-                    </subst>am̄lung errinnern<lb/>an früher da gewesene. dieser Vorwurf trift auch wohl unsern <hi rend="latin"><persName ref="#p0360" type="bi">Petrarca</persName>=<persName ref="#p0133" type="bi">Tieck</persName></hi><note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist vermutlich <persName ref="#p0300" type="bi">Franz Theremin</persName>, dessen drei Gedichte für
-                            den <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title> einen <persName ref="#p0360" type="bi">Petrarca</persName>-Bezug aufweisen. Die Stelle „dieser Vorwurf [...] Petrarca=Tieck“ wird in <persName ref="#p0261" type="bi">Riegels</persName>
-                            <title ref="#w00253" type="bi">Edition</title> ausgelassen.</p><p xml:lang="en">What is probably meant is <persName ref="#p0300" type="bi">Franz Theremin</persName>, whose three poems for the <title ref="#w00257" type="bi">musenalmanac refer to the year 1805</title> to <persName ref="#p0360" type="bi">Petrarch</persName>. The passage
-                            "this reproach [...] Petrarca=Tieck" is omitted in <persName ref="#p0261" type="bi">Riegel</persName>'s <title ref="#w00253" type="bi">edition</title>.</p><p xml:lang="fr">Il s'agit probablement de <persName ref="#p0300" type="bi">Franz Theremin</persName>, dont les trois poèmes pour le <title ref="#w00257" type="bi">musenalmanac se
-                                réfèrent à l'année 1805</title> à <persName ref="#p0360" type="bi">Pétrarque</persName>. Le passage « ce reproche
-                            [...] Petrarca=Tieck » est omis dans l'<title ref="#w00253" type="bi">édition</title> de <persName ref="#p0261" type="bi">Riegel</persName>.</p></note><lb/>mir aber gab er das negative <subst>
-                        <del rend="overwritten">l</del>
-                        <add place="across">L</add>
-                    </subst>ob daß er <del rend="strikethrough">mich</del> am wenigsten an mich gerichtet<lb/>sei und ich müßte vorthin dieses Lob behau<subst>
-                        <del rend="overwritten">b</del>
-                        <add place="across">p</add>
-                    </subst>ten. —</p>
-                <p><note place="margin(left)-vertical"><hi rend="latin"><title ref="#w03290" type="bi">an Fichte</title>
-                            <persName ref="#p0262" type="bi"><choice>
-                                    <abbr>N.</abbr>
-                                    <expan>Neumann</expan>
-                                </choice></persName>
-                            <choice>
-                                <abbr>u.</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <persName ref="#p0237" type="bi"><choice>
-                                    <abbr>Ch.</abbr>
-                                    <expan>Chamisso</expan>
-                                </choice></persName>
-                            <persName ref="#p0262" type="bi">Neumann</persName> und <persName ref="#p0237" type="bi">Chamisso</persName></hi><note resp="#sabine.seifert">Hierbei handelt es sich um das <persName ref="#p0251" type="bi">Fichte</persName> gewidmete Gedicht
-                            von <persName ref="#p0262" type="bi">Neumann</persName> und <persName ref="#p0237" type="bi">Chamisso</persName>.</note></note></p>
-                <pb facs="iiif:10.34847/nkl.9d4e62py/4ed9bdbb3e28dccae77f6679783bbdcc41a3559c" n="3"/>
-                <note hand="#pencil_3" place="top-margin(left) inline"><hi rend="underline">1804 <unclear cert="medium" reason="illegible">?</unclear></hi></note>
-                <note hand="#pencil_2" place="top-center" type="foliation"><hi rend="underline">97</hi></note>
-                <note hand="#pencil_1" place="top-margin(right)" type="foliation">4</note>
-                <p>nicht werd’ ich diese Einlage dir zusend<unclear cert="high" reason="stain">en</unclear>, <rs ref="#p0248" type="bi_person">Adelf</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs ref="#p0248" type="bi_person">Freund</rs> mit dem griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> addresses his <rs ref="#p0248" type="bi_person">friend</rs> with the Greek word for brother, "Adelf" (αδελφός).</p>
-                        <p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> s'adresse à son <rs ref="#p0248" type="bi_person">ami</rs> avec le mot grec pour frère, « Adelf » (αδελφός).</p></note>, ohne sie mit einigen Zeilen zu
-                    begleiten,<lb/>sei’s auch nur das <subst>
-                        <del rend="overwritten">a</del>
-                        <add place="across">A</add>
-                    </subst>lte beckan<subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">t</add>
-                    </subst>e dir zu wiederholen, da<subst>
-                        <del rend="overwritten">ß</del>
-                        <add place="across">s</add>
-                    </subst> einzige Wort: daß ich dich liebe,<lb/>übrigens kann mein Brief wie ein früh Rapport lauten.<lb/>
-                    <hi rend="align(center)">Nichts neues.</hi></p>
-                <p>Ein Heft hast du diese Tage <add place="above">von mir</add> erhalten, und Hefte erwart’ich wiederum,<lb/>gierig ungeduldig täglig
-                    von deiner lieben Hand.</p>
-                <p>De<subst>
-                        <del rend="overwritten">n</del>
-                        <add place="across">r</add>
-                    </subst>
-                    <hi rend="latin"><persName ref="#p0351" type="bi">Krutener</persName></hi> von dem ich dir sprach, <subst>
-                        <del rend="overwritten">h</del>
-                        <add place="across">H</add>
-                    </subst>eute spricht die ganze Welt<del rend="strikethrough">,</del> von ihm,<lb/>und böse Stunden mag ihn sein Ruf kosten. gerei<subst>
-                        <del rend="overwritten">t</del>
-                        <add place="across">z</add>
-                    </subst>t auf einem Ball, durch einen<lb/>nicht wohlgeborenen <hi rend="latin">Referendarius <persName ref="#p0349" type="bi">Mursena</persName></hi>, ein Beckanter Kreckler<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "Krakeeler" statt
-                            "Kreckler".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                inédits</title> stands "Krakeeler" instead of "Kreckler".</p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "Krakeeler" au lieu de
-                            "Kreckler".</p>
-                    </note>, ward er dazu gebracht<lb/>ihm Ohrfeigen anzubieben<note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist:
-                            anzubieten.</p><p xml:lang="en">What is meant is: to offer.</p><p xml:lang="fr">Ce que l'on veut dire, c'est :
-                        offrir.</p></note> oder zu geben, und wurde selber, <add place="above">von ihm</add> mit füssen getreten,<lb/>im angesichte
-                    aller, und <add place="above">selbst</add> von Prinzen des Hauses. <del rend="strikethrough">Dieses geschehen</del><del rend="none">, </del>am Morgen<lb/>des Zweiten Tages ging auf die Saat des Blutes, und <del rend="strikethrough">es geschah
-                        das</del> von dem<lb/>was geschehen konnte, geschah das günstigste, der Kampf auf Todt, <persName ref="#p0351" type="bi">Krütener</persName><lb/>Jung, gut, und noch nicht abgestumpfenen Gefühls, selber den Todt im Herzen<lb/>schritt hin den Todt
-                    zu geben, si<subst>
-                        <del rend="opverwritten"><gap extent="1 character" reason="illegible"/></del>
-                        <add place="across">e</add>
-                    </subst> avoncirten auf einander von edwa<lb/><supplied cert="high" reason="overlapping_folio">4</supplied>0 Schritte und durften
-                    schissen nach willkühr. die Zwei ersten Schüsse<lb/><supplied cert="high" reason="overlapping_folio">f</supplied>ielen zugleich.
-                        <persName ref="#p0349" type="bi"><hi rend="latin">Murcena</hi></persName> blutete an der Lende, er erbot sich zur
-                        Abbitte,<lb/><persName ref="#p0351" type="bi">Krüteners</persName>
-                    <hi rend="latin">Secondant</hi> ein jüngerer <subst>
-                        <del rend="overwritten">m</del>
-                        <add place="across">M</add>
-                    </subst>ensch denn er sprach rasch aus die<lb/>unzulässigkeit <del rend="strikethrough">zu</del>derselben, da fühlte <hi rend="latin"><persName ref="#p0351" type="bi">Krütener</persName></hi>
-                    <add place="above">mitleidsvoll</add> den Zorn des Nothwendigen,<lb/>un<subst>
-                        <del rend="overwritten"><unclear cert="low" reason="incomplete">f</unclear></del>
-                        <add place="across">v</add>
-                    </subst>eränderten Antlizes aber schritt er zur Vollendung, die Schüsse der sich entgegen<lb break="no"/>kommenden fiel<subst>
-                        <del rend="overwritten"><unclear cert="low" reason="incomplete">l</unclear></del>
-                        <add place="across">e</add>
-                    </subst>n aberma<subst>
-                        <del rend="overwritten">h</del>
-                        <add place="across">l</add>
-                    </subst>s zugleich, und <hi rend="latin"><persName ref="#p0351" type="bi">Krutener</persName></hi> wandte mit Schrecken<lb/>das
-                        Antlitz<del rend="strikethrough">es</del> von der Leiche. — er <subst>
-                        <del rend="strikethrough">war</del>
-                        <add place="above">ist</add>
-                    </subst> kein geübter Schütze, aber<lb/>die Hand hat ihm nicht gezittert<subst>
-                        <del rend="none">,</del>
-                        <add place="across">.</add>
-                    </subst>
-                    <subst>
-                        <del rend="overwritten">a</del>
-                        <add place="across">A</add>
-                    </subst>lsobald erscholl die Nachricht durch allen<lb/>Strassen, und auch ich erfur sie <seg xml:id="Brief004ChamissoandeLaFoye02">dann</seg>
-                    <seg xml:id="Brief004ChamissoandeLaFoye01">erst</seg><listTranspose>
-                        <transpose>
-                            <ptr target="#Brief004ChamissoandeLaFoye01"/>
-                            <ptr target="#Brief004ChamissoandeLaFoye02"/>
-                        </transpose>
-                    </listTranspose>. ich wollte da meinen ge<subst>
-                        <del rend="overwritten"><unclear cert="medium" reason="incomplete">s</unclear></del>
-                        <add place="across">w</add>
-                    </subst>esenen<lb/>Freund <del rend="strikethrough">wieder</del>
-                    <subst>
-                        <del rend="overwritten">um</del>
-                        <add place="across">vor</add>
-                    </subst> seiner Flucht umarmen, <del rend="strikethrough"><gap extent="1 character" reason="strikethrough"/></del>ich konnte nicht
-                    biß zu ihm<lb/>dringen, er ließ mich mit innigkeit danken und nun ist er fern<lb/>und ich erzäle dir dieses weil es <subst>
-                        <del rend="overwritten">e</del>
-                        <add place="across">E</add>
-                    </subst>indruk auf mich gemacht hat.<lb/>Das meine <hi rend="underline"><rs ref="#p0402" type="bi_person">Königin</rs></hi><note resp="janine.katins">Durch die Initiative seines Bruders <persName ref="#p0403" type="bi">Prudent</persName> trat <persName ref="#p0237" type="bi">Chamisso</persName>
-                        <date when-iso="1796">1796</date> als Page in die Dienste der Königin <persName ref="#p0402" type="bi">Friederike Luise von
-                            Preußen</persName>, der Gemahlin <persName ref="#p0404" type="bi">Friedrich Wilhelms II</persName>, im Schloß <placeName ref="#l0211" type="bi">Monbijou</placeName> ein. Die Königin starb am <date when-iso="1805-02-25">25. Februar
-                        1805</date>.</note> Todt ist wirdst du dur<add place="inline">c</add>h öffentlige blätter<lb/>bereits erfahren haben,</p>
-                <pb facs="iiif:10.34847/nkl.9d4e62py/4dac83a4b4fa2912633431dfeee97309b36f6c75" n="4"/>
-                <p>Ich empfehle dir, sobald du es nur wirdst kriegen können<lb/>Die <hi rend="latin">Metris<add place="inline">c</add>he</hi>
-                    franzosche Verse, (<hi rend="latin"><foreign xml:lang="fr">Didon poeme en 3 chants<lb/>traduit du 4 livre de
-                        leneiïde)</foreign></hi><note resp="#janine.katins">
-                        <p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> verweist hier auf die Didotragödie im vierten Gesang der
-                                <title ref="#w00317" type="bi">Aeneis</title>
-                            <persName ref="#p0174" type="bi">Vergils</persName>. Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert
-                                de Chamisso. Fragments inédits</title> wurden die Klammern an dieser Stelle nicht wiedergebenen, dafür um "dans [...]
-                            volumes" gesetzt.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> refers here to the Didotragedy
-                            in the fourth song of <persName ref="#p0174" type="bi">Virgil</persName>'s <title ref="#w00317" type="bi">Aeneid</title>.
-                            In the print of the <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>, the
-                            brackets are not shown here, but are set around "dans [...] volumes".</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> fait ici référence à la Didotragédie dans le quatrième chant de l'<title ref="#w00317" type="bi">Énéide</title> de <persName ref="#p0174" type="bi">Virgile</persName>. Dans l'imprimé de la <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>, les parenthèses ne sont pas représentées
-                            ici, mais s'articulent autour de "dans [...] volumes".</p></note>
-                    <subst>
-                        <del rend="overwritten">d</del>
-                        <add place="across">v</add>
-                    </subst>on <hi rend="latin"><foreign xml:id="fr"><del rend="strikethrough"><gap extent="1 word" reason="strikethrough"/><add place="above"><gap extent="3 words" reason="stain"/></add></del> dans le <title ref="#w00320" type="bi">Conservateur</title><lb/>espece de journal de <persName ref="#p0366" type="bi"><add place="above">Franois de
-                                    Neuf</add> Chateau</persName>
-                            <del rend="strikesthrough">Neuf</del> dont il n'y a que deux volumes</foreign></hi>,<lb/>zu lesen, und ohne zu lachen zu
-                    lesen und studiren, biß du<lb/>sie für rigtige, gute <subst>
-                        <del rend="strikethrough">E Meter</del>
-                        <add place="above">Hexameter</add>
-                    </subst> erklärt hast. so viel sag ich<lb/>dir daß du sie nicht wie deutsche, sondern wie griechische<lb/>oder <del rend="strikethrough">deudsche</del> l<subst>
-                        <del rend="overwritten">e</del>
-                        <add place="across">a</add>
-                    </subst>teinische lesen solst.</p>
-                <p>nun kannst du zu d<del rend="none">i</del>er folgenden Nach<subst>
-                        <del rend="overwritten">t</del>
-                        <add place="across">r</add>
-                    </subst>icht, lachen, die Exerzierheit<lb/>ist im Schonsten Blühendesten flor der <hi rend="latin">Rec<subst>
-                            <del rend="overwritten">k</del>
-                            <add place="across">r</add>
-                        </subst>uten</hi> zeit. —<lb/><subst>
-                        <del rend="overwritten">l</del>
-                        <add place="across">T</add>
-                    </subst>rozt alle dem<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
-                                d'Adalbert de Chamisso. Fragments inédits</title> steht "trotzdem" statt "Trozt alle dem".</p><p xml:lang="en">In the
-                            print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands "Nevertheless"
-                            instead of "In spite of all".</p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de
-                                Chamisso, Fragments inédits</title> signifie "néanmoins" au lieu de "en dépit de tout".</p>
-                    </note> lern ich griechisch. — 11 Gesänge hab ich durch und<lb/>bald den <persName ref="#p0343" type="bi"><hi rend="latin">Anacreon</hi></persName>. und es fängt an zu gehen. 4 biß 6 Stunden<lb/>a<subst>
-                        <del rend="overwritten">b</del>
-                        <add place="across">r</add>
-                    </subst>beit' ich angestrengt.</p>
-                <p>Der <rs ref="#w00258" type="bi_title"><subst>
-                            <del rend="overwritten">d</del>
-                            <add place="across">3</add>
-                        </subst>te Grüne</rs><note resp="#sabine.seifert"><p xml:lang="de">Aufgrund der grünen Einbandfarbe wurden die <title ref="#w00255" type="bi">Musenalmanache</title> als "Grüne" bezeichnet.</p><p xml:lang="en">Because of the green cover
-                            color, the <title ref="#w00255" type="bi">Musenalmanacs</title> were called "green".</p><p xml:lang="fr">En raison de la
-                            couleur verte de la couverture, les <title ref="#w00255" type="bi">Musenalmanacs</title> étaient appelés
-                        « verts ».</p></note>
-                    <hi n="2" rend="underline">muß</hi>, muß müßen erscheinen,<lb/>Herlige Beiträge lassen sich von vielen ecken ersehen.<lb/>und ich
-                    werde mit<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
-                                Chamisso. Fragments inédits</title> wurde das Wort "mit" ausgelassen.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the word "with" was omitted.</p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
-                            le mot "avec" a été omis.</p>
-                    </note> nächstens dir mehreres <del rend="strikethrough">günstige</del> zu<lb/>seinem Gunsten zu sagen ha<subst>
-                        <del rend="overwritten">g</del>
-                        <add place="across">b</add>
-                    </subst>en. <persName ref="#p0239" type="bi"><hi rend="latin">Eduard</hi></persName> trit auf<lb/>mit einer Samlung Spanischer
-                    Romanzen.</p>
-                <p><persName ref="#p0239" type="bi">Eduard</persName> ist sehr glücklig und wohl itzt Hausvater, welches<lb/>er bei seinem letztem
-                    trauten lieben Briefen stündlig erwartete.<lb/><persName ref="#p0262" type="bi"><hi rend="latin">Neuman</hi></persName> ist noch
-                    Hier, <persName ref="#p0407" type="bi"><subst>
-                            <del rend="overwritten">u</del>
-                            <add place="across">U</add>
-                        </subst>tmann</persName> grüßt dich. <persName ref="#p0345" type="bi">Augusta</persName><lb/>seh' ich nicht und nichts nichts
-                    in der welt hat mich<lb/>getrofen daß ich in deine Se<subst>
-                        <del rend="overwritten">h</del>
-                        <add place="across">l</add>
-                    </subst>e ergiesen <del rend="strikethrough"><gap extent="2 characters" reason="strikethrough"/></del> konnte – heute<lb/>bin ich
-                    auch dum̄ und abgespannt wie ein Exameter von <pb facs="iiif:10.34847/nkl.9d4e62py/24720c4a88380048af85007ac4e5f92ed0c76bf5" n="5"/>
-                    <note hand="#pencil_1" place="top-margin(right)" type="foliation">5</note>
-                    <persName ref="#p2066" type="bi">Anterino <choice>
-                            <abbr>v.</abbr>
-                            <expan>von</expan>
-                        </choice>
-                        <hi rend="latin">Agaroton</hi></persName>. ich muß nur machen daß<lb/>
-                    <persName ref="#p0249" type="bi"><choice>
-                            <abbr>K A.</abbr>
-                            <expan>Karl Augusts</expan>
-                        </choice></persName> Brief zu dir kom̄e.</p>
-                <closer>
-                    <signed rend="align(right)"><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi>.<lb/><foreign xml:lang="grc"><hi rend="greek"><choice>
-                                    <abbr>τ.τ.π.α.</abbr>
-                                    <expan>τò τоυ πόλου αστρον</expan>
-                                </choice><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc"><hi rend="greek">τ.τ.π.α.</hi></foreign> steht für <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου
-                                            αστρον</hi></foreign> ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi">Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und <persName ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
-                                        jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en">The abbreviation <hi rend="greek"><foreign xml:lang="grc">τ.τ.π.α.</foreign></hi> stands for <hi rend="greek"><foreign xml:lang="grc">τò τоυ
-                                                πόλου αστρον </foreign></hi>("Pole Star") and was the hallmark of the <orgName ref="#g0031" type="bi">Northern Star Alliance</orgName>, to which <persName ref="#p0237" type="bi">Chamisso</persName> and
-                                            <persName ref="#p0248" type="bi">de La Foye</persName> belonged since <date when-iso="1804">1804</date>,
-                                        along with other young poets and scholars.</p><p xml:lang="fr">L'abréviation <hi rend="greek"><foreign xml:lang="grc">τ.τ.π.α.</foreign></hi> signifie <hi rend="greek"><foreign xml:lang="grc">τò τоυ πόλου
-                                                αστρον</foreign></hi> ("Pole Star") et était la marque de fabrique de la <orgName ref="#g0031" type="bi">Northern Star Alliance</orgName>, à laquelle <persName ref="#p0237" type="bi">Chamisso</persName> et <persName ref="#p0248" type="bi">de La Foye</persName> appartenaient depuis <date when-iso="1804">1804</date>, avec d'autres jeunes poètes et érudits.</p>
-                                </note></hi></foreign></signed>
-                </closer>
-                <epigraph>
-                    <bibl><title ref="#w03289" type="bi">Die Flüsse</title>
-                        <choice>
-                            <abbr>v.</abbr>
-                            <expan>von</expan>
-                        </choice>
-                        <author><persName ref="#p0249" type="bi"><choice>
-                                    <abbr>K. A. V.</abbr>
-                                    <expan>Karl August Varnhagen</expan>
-                                </choice></persName></author></bibl>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0344" type="bi">Klaproth</persName>.</author></bibl>
-                    <label>6</label>
-                    <cit>
-                        <quote>Große Wasser rollen daher auf felsigem Grunde<lb/>Aber in Mitte des Laufs winden sie oft sich zurück.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0249" type="bi">Varnhagen</persName>.</author></bibl>
-                    <label>7</label>
-                    <cit>
-                        <quote>Friedlich ist er, der <subst>
-                                <del rend="overwritten"><unclear cert="medium" reason="illegible">Strom</unclear></del>
-                                <add place="across">Fluß</add>
-                            </subst>, doch hat er seichte und falsche<lb/>Stellen, meidet ihr die, fahrt ihr gemächlich hinab.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0338" type="bi"><choice>
-                                    <abbr>H.</abbr>
-                                    <expan>H.</expan>
-                                </choice> Efraim</persName>.</author></bibl>
-                    <label>8</label>
-                    <cit>
-                        <quote><supplied cert="high" reason="damage">N</supplied>icht an der Quelle <subst>
-                                <del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
-                                <add place="across">k</add>
-                            </subst>ennt man genug ihn, nicht an dem Ausfluß<lb/>hier in der Mitte, da fließt langsam und lieblig er fort.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0332" type="bi">Robert</persName>.</author></bibl>
-                    <label>9</label>
-                    <cit>
-                        <quote>Unter allen der breitste doch meist in blumigen Ufern,<lb/>Wollt ihr was nützliges draus, freunde so rath ich euch <gap extent="1-2 words" reason="crease"/></quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0239" type="bi">Eduard</persName></author></bibl>
-                    <label>10</label>
-                    <cit>
-                        <quote>Lieblige, klare flut: gesellig und freundlig durchfahren<lb/>Herrtiche<note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist: herrliche.</p><p xml:lang="en">What is meant is: wonderful.</p><p xml:lang="fr">Ce que l'on veut
-                                    dire, c'est : merveilleux.</p></note> Schiffe den fluß, fahren um Lust und Gewinn</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0291" type="bi">Koreff</persName>.</author></bibl>
-                    <cit>
-                        <quote><supplied cert="medium" reason="damage"><label>1</label> bra</supplied>usend <del rend="strikethrough"><unclear cert="medium" reason="illegible">er</unclear> got</del> und Kühn entstürzt in das Thal von den Höhen<lb/>der W<gap extent="1 word" reason="damage"/><lb/>Tief ist sein Wasser, und ftrömt<note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist: strömt.</p><p xml:lang="en">What is meant is: flows.</p><p xml:lang="fr">Ce que l'on veut dire,
-                                    c'est : les flux.</p></note> weit zum unendligen Meer</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0248" type="bi">Lafoye</persName></author></bibl>
-                    <label>2</label>
-                    <cit>
-                        <quote>Lieblig ergötzt dich die frische des munter fliessenden Baches<lb/>Aber dem kundigen nur bringet er Körner von
-                                Go<unclear cert="high" reason="illegible">ld</unclear>.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0237" type="bi">Chamisso</persName></author></bibl>
-                    <label>3</label>
-                    <cit>
-                        <quote>felsen stehn ihm entgegen, und <gap extent="1 character" reason="illegible"/>and wie die <unclear cert="medium" reason="illegible">Mark</unclear> ihn nur haben<lb/>mag doch der Schiffer vertraut ruich dem Sicheren fluß.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0300" type="bi">Theremin</persName>.</author></bibl>
-                    <label>4</label>
-                    <cit>
-                        <quote>Glänzend wallet die flut durch gesegnete Ebnen des Südens<lb/>und gen Osten ergießt sie sich i<subst>
-                                <del rend="overwritten">m</del>
-                                <add place="across">n</add>
-                            </subst> Himmlisches Blau.</quote>
-                    </cit>
-                </epigraph>
-                <epigraph>
-                    <bibl><author><persName ref="#p0262" type="bi">Neumann</persName></author></bibl>
-                    <label>5</label>
-                    <cit>
-                        <quote>frisch! die Se<del rend="strikethrough"><gap extent="1-2 characters" reason="illegible"/></del>gel gespannt, und die
-                            Ruder mutig geschlagen<lb/>So gelangen wir noch schneller dem Strome zum meer.</quote>
-                        <note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
-                                    Chamisso. Fragments inédits</title> fehlt der letzte Satz der zweiten sowie die folgende Umschlagseite.</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
-                                    inédits</title> the last sentence of the second and the following cover page are missing.</p><p xml:lang="fr">Dans
-                                l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> il manque la
-                                dernière phrase de la deuxième page de couverture et la suivante.</p>
-                        </note>
-                    </cit>
-                </epigraph>
-                <pb facs="iiif:10.34847/nkl.9d4e62py/2275b59d60391374ea254c6c67c6929c5a5c6517" n="6" xml:id="Brief004ChamissoandeLaFoye-Blatt5v"/>
-                <closer rend="vertical">
-                    <note hand="#ink_1" place="top-margin(right) inline">54</note>
-                    <note hand="pencil_3" place="top-margin(right) inline"><hi rend="underline"><date when-iso="1804">1804</date></hi></note>
-                    <stamp rend="align(center)">Poststempel: <foreign xml:lang="fr"><hi rend="latin majuscule"><placeName ref="#l0092" type="bi">PRUSSE</placeName><lb/>PAR <placeName ref="#l0833" type="bi">MAASEYCK</placeName></hi></foreign>
-                    </stamp>
-                    <foreign xml:lang="fr"><hi rend="latin"><address>
-                                <addrLine rend="align(center)">Monsieur <persName ref="#0248" type="bi">L<supplied cert="high" reason="crease">o</supplied>uis de La Foÿe</persName></addrLine>
-                                <addrLine rend="align(center)">au <placeName ref="#l0148" type="bi">Vange<supplied cert="high" reason="crease">ux</supplied></placeName> à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
-                                <addrLine rend="align(right)"><choice>
-                                        <abbr>Dept</abbr>
-                                        <expan>Département</expan>
-                                    </choice>: du <placeName ref="#l0108" type="bi">Calvados</placeName></addrLine>
-                            </address></hi></foreign>
-                    <note hand="#ink_2" place="align(center)"><g type="unknown"/> 30</note>
-                    <note hand="#ink_3" place="align(center)">10</note>
-                    <lb/>
-                    <note hand="#ink_1" place="bottom-center inline"><unclear cert="medium" reason="stain">31</unclear><gap extent="1 character" reason="illegible"/></note>
-                </closer>
-            </div>
-        </body>
-    </text>
+				<note hand="#pencil_1" place="top-margin(right)" type="foliation">9</note>
+				<p>Du hast dich nicht wacker auf der Schule gehalten und ich muß dich schelten. – ich habe zwar mein Ehrenwort<lb/>geschworen, aber
+					ich breche ihn nicht gegen dir, du aber mußt ihn gegen keinen <add place="above">der</add> Leuten, auch <subst>
+						<del rend="overwritten">d</del>
+						<add place="across">n</add>
+					</subst>icht der<lb/>unsern <del rend="strikethrough">nicht</del> brechen. – <cit>
+						<quote>„<hi rend="underline">Wenn dir das innre Götter <hi rend="underline">W</hi>ort wird spruchlos</hi>“ <note
+								resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert den Anfangsvers des Gedichts
+									<title ref="#w00301" type="bi">Sonett</title> von <persName ref="#p0251" type="bi">Fichte</persName>. Alle in
+								diesem Brief erwähnten Gedichte wurden von <persName ref="#p0237" type="bi">Chamisso</persName> und <persName
+									ref="#p0249" type="bi">Varnhagen</persName> im <title ref="#w00257" type="bi">Musenalmanach auf das Jahr
+									1805</title> veröffentlicht.</note>
+						</quote>
+					</cit> ist ein wunderherrliches<lb/>nicht gefä<add place="inline">l</add>liges aber Mar<subst>
+						<del rend="overwritten"><gap extent="1-2 characters" reason="illegible"/></del>
+						<add place="across">k</add>
+					</subst>- und Kraf<add place="inline">t</add><subst>
+						<del rend="overwritten">l</del>
+						<add place="across">v</add>
+					</subst>olles Sonnet von <hi rend="underline"><persName ref="#p0251" type="bi">Fichte</persName></hi>. wunder<subst>
+						<del rend="strikethrough">volleres</del>
+						<add place="above">herlicheres</add>
+					</subst> – noch soll sein<lb/>von dem du nicht spricht, <cit>
+						<quote>„<hi rend="underline">was meinem Auge diese Kraft gegeben</hi>“</quote>
+						<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert den Anfangsvers
+								eines ebenfalls <title ref="#w00300" type="bi">Sonett</title> betitelten Gedichtes von <persName ref="#p0251"
+									type="bi">Fichte</persName>.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> quotes the
+								opening verse of a poem by <persName ref="#p0251" type="bi">Fichte</persName>, also called a <title ref="#w00300"
+									type="bi">sonnet</title>.</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite le vers
+								d'ouverture d'un poème de <persName ref="#p0251" type="bi">Fichte</persName>, également appelé <title ref="#w00300"
+									type="bi">sonnet</title>.</p></note>
+					</cit> von dem selben <hi rend="underline"><persName ref="#p0251" type="bi">Fichte</persName></hi><lb/>es erfasset die ganze Wissenschaftle<subst>
+						<del rend="overwritten">e</del>
+						<add place="across">h</add>
+					</subst>re, und ich gestehe daß ich die Tiefe der Terzete<lb/>nicht <subst>
+						<del rend="overwritten">g</del>
+						<add place="across">l</add>
+					</subst>eichtdurchdringenden Blickes erschöpfe, von <persName ref="#p0251" type="bi">fichte</persName> sind auch. <hi
+						rend="underline latin"><title ref="#w00298" type="bi"><del rend="strikethrough">Num</del><add place="above">O
+							</add>quam<lb/>Decora</title></hi>, und <hi rend="underline latin"><title ref="#w00299" type="bi">Num Quam
+							Serenior</title></hi>. da<del rend="strikethrough">ß</del> du aber diesen <subst>
+						<del rend="overwritten">ü</del>
+						<add place="across">Ü</add>
+					</subst>bersetzun<subst>
+						<del rend="overwritten">d</del>
+						<add place="across">g</add>
+					</subst>en<lb/>die meine des <hi rend="underline latin"><title ref="#w00302" type="bi">Stabat Mater</title></hi> vorziehest <subst>
+						<del rend="overwritten">bist</del>
+						<add place="across">stehst</add>
+					</subst> du <subst>
+						<del rend="overwritten">d</del>
+						<add place="across">n</add>
+					</subst>icht allein deiner <subst>
+						<del rend="overwritten">m</del>
+						<add place="across">M</add>
+					</subst>einung da,<lb/>und ich will sie nicht bestreiten, nur sprichst du schlecht von dieser dichtungs<lb break="no"/>art, du
+					mußt nicht mit den Klassichen Dichtungen der Rö<subst>
+						<del rend="overwritten"><unclear cert="high" extent="1 character">h</unclear></del>
+						<add place="across">m</add>
+					</subst>er, die ganz –<lb/>verschieden artigen <del rend="strikethrough">des Kirchen</del> Romantischen der <subst>
+						<del rend="overwritten">G</del>
+						<add place="across">Ch</add>
+					</subst>risten im Kirchenlatein vergleichen<lb/>wollen. – eher noch mit <persName ref="#p0360" type="bi"><hi rend="latin"
+							>Petrarcas</hi></persName> Liedern von dem auch einige dieser Hymnen<lb/>sein sollen. und so konnen sie sein, und sind
+						<add place="above">wirklig</add> zum öftern sehr schön. —<lb/><choice>
+						<abbr>z. B.</abbr>
+						<expan>zum Beispiel</expan>
+					</choice> an <persName ref="#p2064" type="bi">Johannes</persName>, dieses hohe loblied des Geliebten Jüngers <persName
+						ref="#p0030" type="bi">Christi</persName> mit<lb/>inniger Religion und hohem <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">S</add>
+					</subst>chwunge gesungen, hast du nicht zu würdigen gewust<lb/>lese es in deinem Kirchenbuche, – mir hättest du da sta<subst>
+						<del rend="overwritten">d</del>
+						<add place="across">t</add>
+					</subst>t ausgerufenen <hi rend="latin">Complimenten</hi><lb/>trocken gesagt: wie ich denn unverständlich geworden war im Verse, <cit>
+						<quote>„<hi rend="underline">Welch ein Loos<lb/>wird dir gespendet, dem, der Jungfrau zugewendet seine <persName ref="#p2065"
+									type="bi">Jungfrau Mutter</persName> er</hi>“</quote>
+						<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus seinem Gedicht
+									<title ref="#w03291" type="bi">Hymne an Johannes</title>.</p><p xml:lang="en"><persName ref="#p0237" type="bi"
+									>Chamisso</persName> quotes from his poem <title ref="#w03291" type="bi">Hymne to Johannes</title>.</p><p
+								xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite son poème <title ref="#w03291" type="bi">Hymne
+									à Johannes</title>.</p></note>
+					</cit> dann<lb/>hätte ich dir klein mütig haarklein vorgespalten, wie <subst>
+						<del rend="overwritten"><gap extent="1 word" reason="illegible"/></del>
+						<add rend="across"><unclear cert="medium" reason="illegible">schwer</unclear></add>
+					</subst> es war in so wen'gen<lb/>Silben mit <subst>
+						<del rend="overwritten">d</del>
+						<add place="across">3</add>
+					</subst>
+					<subst>
+						<del rend="overwritten">z</del>
+						<add place="across">r</add>
+					</subst>eime zu sagen, <hi rend="underline">welch ein Los wird dir gespendet, dir, welcher<lb/>du selber Jungfrau bist, und dem
+							<persName ref="#p0030" type="bi">Christus</persName> seine <persName ref="#p2065" type="bi">Jungfrau mutter</persName> zu
+						gewendet<lb/>hat</hi>. du hättest mir auch sagen können daß <hi rend="underline">„<cit>
+							<quote>Schriftverkünder Ewigkeiten</quote>
+							<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert erneut aus
+									seinem Gedicht <title ref="#w03291" type="bi">Hymne an Johannes</title>.</p><p xml:lang="en"><persName
+										ref="#p0237" type="bi">Chamisso</persName> quotes again from his poem <title ref="#w03291" type="bi">Hymne to
+										Johannes</title>.</p><p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> cite encore son
+									poème <title ref="#w03291" type="bi">Hymne à Johannes</title>.</p></note>
+						</cit></hi><lb/>für <hi rend="underline">von den Ewigkeiten</hi> nicht Deutsch sei, wozu ich zu spät der schweren<lb/>Schuld
+					bewust geschwiegen hätte. — mein Sonnet an dich lobend, <del rend="strikethrough">dieses</del><lb/>hättest du mich gefreut, — überha<subst>
+						<del rend="overwritten"><gap extent="2 characters" reason="illegible"/></del>
+						<add place="across">up</add>
+					</subst>t in einem Kunsturtheile – keine<lb/>ausrufungen. – kalt und unbestochen richte der Richter. — das Ende <pb
+						facs="iiif:10.34847/nkl.9d4e62py/3b3ab45924c906d613eab2a7554023028582a06f" n="2"/> der anbetung sinckt. –<note
+						hand="#pencil_2" place="top-inline" type="foliation"><hi rend="underline">4</hi></note> das Sonnet <subst>
+						<del rend="strikethrough"><rs ref="#w00297" type="bi_title">Sie</rs></del>
+						<add place="across"><rs ref="#w00297" type="bi_title">Er</rs></add>
+					</subst> ist ambarassirt<note resp="#sabine.seifert"><p xml:lang="de">Wahrscheinlich ist hier "embarassieren" gemeint: in
+							Verlegenheit, Verwirrung bringen.</p><p xml:lang="en">Probably "embarassing" is meant here: embarrassing, confusing.</p><p
+							xml:lang="fr">On entend probablement ici « embarrassant » : embarrassant, déroutant.</p></note> und schlechter<lb/><subst>
+						<del rend="strikethrough">wie</del>
+						<add place="above">als</add>
+					</subst> das erste <hi rend="underline"><rs ref="#w00297" type="bi_title">Sie</rs></hi>.<note resp="#sabine.seifert"><p
+							xml:lang="de">Die hier erwähnten Sonette bilden zusammen das Gedicht <title ref="#w00297" type="bi">Sie und Er</title>.
+							Beide Sonette von <persName ref="#p0237" type="bi">Chamissos</persName> Hand finden sich auf <ref
+								target="Brief003ChamissoandeLaFoye.xml">Blatt 3</ref> im Nachlass 239 (<persName ref="#p0248" type="bi">Louis de La
+								Foye</persName>).</p><p xml:lang="en">The sonnets mentioned here together form the poem <title ref="#w00297" type="bi"
+								>You and He</title>. Both sonnets by <persName ref="#p0237" type="bi">Chamisso</persName>'s hand can be found on <ref
+								target="Brief003ChamissoandeLaFoye.xml">sheet 3</ref> in the estate 239 (<persName ref="#p0248" type="bi">Louis de La
+								Foye</persName>).</p><p xml:lang="fr">Les sonnets mentionnés ici forment ensemble le poème <title ref="#w00297"
+								type="bi">Toi et Lui</title>. Les deux sonnets de la main de <persName ref="#p0237" type="bi">Chamisso</persName> se
+							trouvent sur la <ref target="Brief003ChamissoandeLaFoye.xml">feuille 3</ref> du domaine 239 (<persName ref="#p0248"
+								type="bi">Louis de La Foye</persName>).</p></note> — den Uebersetzer <persName ref="#p0291" type="bi"
+						>Koreff</persName> lob<subst>
+						<del rend="overwritten">s</del>
+						<add place="across">s</add>
+					</subst>t du mir zu sehr.<lb/><hi rend="underline"><rs ref="#w00305" type="bi_title">aus dem Ovid</rs></hi><note
+						resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um eine Teilübersetzung Koreffs von <persName ref="#p0070"
+								type="bi">Ovids</persName> zweitem Buch der <title ref="#w03292" type="bi">Fasti</title>.</p><p xml:lang="en">This is
+							a partial translation by Koreff of <persName ref="#p0070" type="bi">Ovid's</persName> second book of <title ref="#w03292"
+								type="bi">Fasti</title>.</p><p xml:lang="fr">Il s'agit d'une traduction partielle par Koreff du deuxième livre
+								d'<persName ref="#p0070" type="bi">Ovide</persName> des <title ref="#w03292" type="bi">Fasti</title>.</p></note> ist
+					leicht und gut, aber ein Fragment von geringer bedeutung<lb/>und Seine Verse die zwar der untadlige <subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">V</add>
+					</subst>ers Künstler <persName ref="#p0249" type="bi">Var<subst>
+							<del rend="overwritten">h</del>
+							<add place="across">n</add>
+						</subst>hagen</persName> edwas<lb/>gefeilt hat, sollst du nicht zu <subst>
+						<del rend="overwritten">m</del>
+						<add place="across">le</add>
+					</subst>icht mit den dir fast noch unbeckanten<lb/>des Meisters der Versifikazions Kunst <persName ref="#p0361" type="bi"
+						>Voss</persName> vergleichen oder <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">g</add>
+					</subst>ar sie<lb/>über diese erheben, ich will nur das wahrlig lieblige <rs ref="#w00306" type="bi_title">Gedicht</rs><note
+						resp="#sabine.seifert"><persName ref="#p0237" type="bi">Chamisso</persName> zitiert aus <persName ref="#p0291" type="bi"
+							>Koreffs</persName> Gedicht <title ref="#w00306" type="bi">An M....</title>.</note> an <hi rend="latin"><persName
+							ref="#p0398" type="bi">Mariane<lb/>Salomon</persName></hi> in dieser Rücksicht durchgehen. ‒ <cit>
+						<quote>Steinchen s<hi rend="underline">o</hi>ll</quote>
+					</cit> ‒⏑⏑ <cit>
+						<quote>konnten w<hi rend="underline">o</hi>hl</quote>
+					</cit><lb/>‒⏑⏑ <cit>
+						<quote>zieren gl<hi rend="underline">ei</hi>ch</quote>
+					</cit> ‒⏑⏑ <cit>
+						<quote>schmuckl<hi rend="underline">o</hi>s be-</quote>
+					</cit> ‒⏑⏑ <cit>
+						<quote>Niem<hi rend="underline">a</hi>ls v<hi rend="underline">o</hi>ll</quote>
+					</cit> ‒⏑⏑ sind wenigstens<lb/>schwere füsse. und <cit>
+						<quote><hi rend="underline">laß deine</hi></quote>
+					</cit> ‒⏑⏑ ein ganz fehlerhafter, den nur itzt ein<lb/><persName ref="#p0332" type="bi">Robert</persName> sich erfrechen würde zu
+					sagen. Dieses <del rend="strikethrough">s<gap extent="1 character" reason="illegible"/></del>Mannes M<subst>
+						<del rend="overwritten">i</del>
+						<add place="across">e</add>
+					</subst>trische Verse sind<lb/>dir geliefert. sein <title ref="#w00307" type="bi">Promemoria</title> gefällt mir unter seinen <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">S</add>
+					</subst>achen weil<lb/>er sich darin <del rend="strikethrough">am beste</del><del rend="none">n</del> am treusten ausspricht.
+						<persName ref="#p0291" type="bi">Korefs</persName> Epigram̄e aber<lb/>scheinen mir <add place="above">nur</add> Mittelmässig <subst>
+						<add place="above">zu sein,</add>
+						<del rend="none">,</del>
+					</subst> die 2 ersten sind die besten. — die<lb/><rs ref="#w00308" type="bi_title">Verse</rs><note resp="#sabine.seifert"><p
+							xml:lang="de">Hierbei handelt es sich um <persName ref="#p0399" type="bi">Paalzows</persName> Gedicht <title ref="#w00308"
+								type="bi">Geburt des Pan</title>.</p><p xml:lang="en">This is <persName ref="#p0399" type="bi">Paalzov</persName>'s
+							poem <title ref="#w00308" type="bi">Birth of Pan</title>.</p><p xml:lang="fr">C'est le poème de <persName ref="#p0399"
+								type="bi">Paalzov</persName>
+							<title ref="#w00308" type="bi">Naissance de Pan</title>.</p></note> von <rs ref="#p0399" type="bi_person"><hi rend="latin"
+							>P</hi>....</rs> sind durchaus gut, nur sind die <del rend="strikethrough">Er</del> ersten <del rend="strikethrough"
+						>besser</del> schöner<lb/><subst>
+						<del rend="strikethrough">wie</del>
+						<add place="above">als</add>
+					</subst> die letzten, welches ein <subst>
+						<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">U</add>
+					</subst>nglück ist, sein <subst>
+						<del rend="overwritten"><unclear cert="medium" reason="illegible">J</unclear></del>
+						<add place="across">g</add>
+					</subst>edichtgen ist nicht zu verachten.<lb/><hi rend="underline"><persName ref="#p0400" type="bi">Wolfart</persName></hi> ist
+					ein magerer Hund<note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0400" type="bi">Wolfart</persName> trug insgesamt
+							vier Gedichte zum <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title> bei.</p><p xml:lang="en"
+								><persName ref="#p0400" type="bi">Wolfart</persName> contributed a total of four poems to the <title ref="#w00257"
+								type="bi">Musenalmanach for the year 1805</title>.</p><p xml:lang="fr"><persName ref="#p0400" type="bi"
+								>Wolfart</persName> a contribué un total de quatre poèmes au <title ref="#w00257" type="bi">Musenalmanach pour l'année
+								1805</title>.</p></note> und <hi rend="underline latin"><persName ref="#p0401" type="bi">Diel<unclear cert="medium"
+								reason="illegible">h</unclear></persName></hi> nun vollends ein <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">S</add>
+					</subst>chweinhund,<note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um <persName ref="#p0401" type="bi"
+								>Diehls</persName> Gedicht <title ref="#w00309" type="bi">Räthsel</title>.</p><p xml:lang="en">This is <persName
+								ref="#p0401" type="bi">Diehls</persName>'s poem <title ref="#w00309" type="bi">Räthsel</title>.</p><p xml:lang="fr"
+							>C'est le poème <title ref="#w00309" type="bi">Räthsel</title> de <persName ref="#p0401" type="bi"
+						>Diehls</persName>.</p></note> – von <persName ref="#p0345" type="bi"><subst>
+							<del rend="overwritten">a</del>
+							<add place="across">A</add>
+						</subst>ugusta</persName><lb/>aber schätz ich am mehrsten die Zwei Sonnete <hi rend="underline"><title ref="#w00310" type="bi"
+							>Frühling</title></hi> und <hi rend="underline latin"><title ref="#w00311" type="bi">Sonnet</title></hi> worin
+					eine<lb/>schone Weibligkeit <add place="above">doch</add> leise erblüht, <title ref="#w00312" type="bi">Variazion</title> bleibt
+					ganz auf dem flecke stehen.<lb/>ich <del rend="strikethrough">meine</del> frage, mein' ich, nach einem <subst>
+						<del rend="overwritten"><unclear cert="medium" reason="illegible">V</unclear></del>
+						<add place="across">F</add>
+					</subst>ortgang des Gedichtes un<subst>
+						<del rend="overwritten">n</del>
+						<add place="across">d</add>
+					</subst> einem<lb/>hin̄reichenden Grunde warum die Verse gemacht worden sind, und weiß<lb/>nicht recht welcherlei Andwort mir <del
+						rend="strikethrough">b<gap extent="several characters" reason="strikethrough"/>h</del> abs<subst>
+						<del rend="overwritten">ch</del>
+						<add place="across">p</add>
+					</subst>eisen <del rend="strikethrough">zu</del> lassen. <title ref="#w00313" type="bi">Gebeth.</title> von <hi rend="latin"
+							><persName ref="#p0262" type="bi">Neuman</persName></hi> – und von <hi rend="latin"><persName ref="#p0249" type="bi"
+							>Vanhagen</persName></hi> das freche Sonnet das 5.<hi rend="superscript">te</hi>,<note resp="#sabine.seifert"><p
+							xml:lang="de">Es ist unklar, auf welches Gedicht sich <persName ref="#p0237" type="bi">Chamisso</persName> hier
+							bezieht.</p><p xml:lang="en">It is unclear which poem <persName ref="#p0237" type="bi">Chamisso</persName> is referring to
+							here.</p><p xml:lang="fr">On ne sait pas à quel poème <persName ref="#p0237" type="bi">Chamisso</persName> fait référence
+							ici.</p></note> und die zwei<lb/>Blumen Romanzen<note resp="#sabine.seifert"><p xml:lang="de">Hierbei handelt es sich um
+								<persName ref="#p0249" type="bi">Varnhagens</persName> Gedichte <title ref="#w00315" type="bi">Romanze [Auf der hellen
+								grünen Wiese]</title> und <title ref="#w00316" type="bi">Romanze [Liebesschmachtend blüht entgegen]</title>.</p><p
+							xml:lang="en">These are <persName ref="#p0249" type="bi">Varnhagen</persName>'s poems <title ref="#w00315" type="bi"
+								>Romance [On the bright green meadow]</title> and <title ref="#w00316" type="bi">Romance [Liebesschmachtend blooms
+								towards]</title>.</p><p xml:lang="fr">Ce sont les poèmes de <persName ref="#p0249" type="bi">Varnhagen</persName>
+							<title ref="#w00315" type="bi">Romance [Sur le pré vert clair]</title> et <title ref="#w00316" type="bi">Romance
+								[Liebesschmachtend fleurit vers]</title>.</p></note> mögte ich hervortreten lassen, aber dieser Dinge genuch –<lb/>nur
+					eine <subst>
+						<del rend="strikethrough">Ermahnung</del>
+						<add place="above">Bemerkung</add>
+					</subst>
+					<persName ref="#p0251" type="bi">Fichtens</persName>. mehrere der Gedichte dieser <subst>
+						<del rend="overwritten">s</del>
+						<add place="across">S</add>
+					</subst>am̄lung errinnern<lb/>an früher da gewesene. dieser Vorwurf trift auch wohl unsern <hi rend="latin"><persName ref="#p0360"
+							type="bi">Petrarca</persName>=<persName ref="#p0133" type="bi">Tieck</persName></hi><note resp="#sabine.seifert"><p
+							xml:lang="de">Gemeint ist vermutlich <persName ref="#p0300" type="bi">Franz Theremin</persName>, dessen drei Gedichte für
+							den <title ref="#w00257" type="bi">Musenalmanach auf das Jahr 1805</title> einen <persName ref="#p0360" type="bi"
+								>Petrarca</persName>-Bezug aufweisen. Die Stelle „dieser Vorwurf [...] Petrarca=Tieck“ wird in <persName ref="#p0261"
+								type="bi">Riegels</persName>
+							<title ref="#w00253" type="bi">Edition</title> ausgelassen.</p><p xml:lang="en">What is probably meant is <persName
+								ref="#p0300" type="bi">Franz Theremin</persName>, whose three poems for the <title ref="#w00257" type="bi"
+								>musenalmanac refer to the year 1805</title> to <persName ref="#p0360" type="bi">Petrarch</persName>. The passage
+							"this reproach [...] Petrarca=Tieck" is omitted in <persName ref="#p0261" type="bi">Riegel</persName>'s <title
+								ref="#w00253" type="bi">edition</title>.</p><p xml:lang="fr">Il s'agit probablement de <persName ref="#p0300"
+								type="bi">Franz Theremin</persName>, dont les trois poèmes pour le <title ref="#w00257" type="bi">musenalmanac se
+								réfèrent à l'année 1805</title> à <persName ref="#p0360" type="bi">Pétrarque</persName>. Le passage « ce reproche
+							[...] Petrarca=Tieck » est omis dans l'<title ref="#w00253" type="bi">édition</title> de <persName ref="#p0261" type="bi"
+								>Riegel</persName>.</p></note><lb/>mir aber gab er das negative <subst>
+						<del rend="overwritten">l</del>
+						<add place="across">L</add>
+					</subst>ob daß er <del rend="strikethrough">mich</del> am wenigsten an mich gerichtet<lb/>sei und ich müßte vorthin dieses Lob behau<subst>
+						<del rend="overwritten">b</del>
+						<add place="across">p</add>
+					</subst>ten. —</p>
+				<p>
+					<note place="margin(left)-vertical">
+						<hi rend="latin"><title ref="#w03290" type="bi">an Fichte</title>
+							<persName ref="#p0262" type="bi"><choice>
+									<abbr>N.</abbr>
+									<expan>Neumann</expan>
+								</choice></persName>
+							<choice>
+								<abbr>u.</abbr>
+								<expan>und</expan>
+							</choice>
+							<persName ref="#p0237" type="bi"><choice>
+									<abbr>Ch.</abbr>
+									<expan>Chamisso</expan>
+								</choice></persName>
+							<persName ref="#p0262" type="bi">Neumann</persName> und <persName ref="#p0237" type="bi">Chamisso</persName></hi>
+						<note resp="#sabine.seifert">Hierbei handelt es sich um das <persName ref="#p0251" type="bi">Fichte</persName> gewidmete
+							Gedicht von <persName ref="#p0262" type="bi">Neumann</persName> und <persName ref="#p0237" type="bi"
+							>Chamisso</persName>.</note>
+					</note>
+				</p>
+				<pb facs="iiif:10.34847/nkl.9d4e62py/4ed9bdbb3e28dccae77f6679783bbdcc41a3559c" n="3"/>
+				<note hand="#pencil_3" place="top-margin(left) inline">
+					<hi rend="underline">1804 <unclear cert="medium" reason="illegible">?</unclear></hi>
+				</note>
+				<note hand="#pencil_2" place="top-center" type="foliation">
+					<hi rend="underline">97</hi>
+				</note>
+				<note hand="#pencil_1" place="top-margin(right)" type="foliation">4</note>
+				<p>nicht werd’ ich diese Einlage dir zusend<unclear cert="high" reason="stain">en</unclear>, <rs ref="#p0248" type="bi_person"
+						>Adelf</rs><note resp="#sabine.seifert"><p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> redet seinen <rs
+								ref="#p0248" type="bi_person">Freund</rs> mit dem griechischen Wort für Bruder, "Adelf" (αδελφός), an. </p><p
+							xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> addresses his <rs ref="#p0248" type="bi_person"
+								>friend</rs> with the Greek word for brother, "Adelf" (αδελφός).</p>
+						<p xml:lang="fr"><persName ref="#p0237" type="bi">Chamisso</persName> s'adresse à son <rs ref="#p0248" type="bi_person"
+								>ami</rs> avec le mot grec pour frère, « Adelf » (αδελφός).</p></note>, ohne sie mit einigen Zeilen zu
+					begleiten,<lb/>sei’s auch nur das <subst>
+						<del rend="overwritten">a</del>
+						<add place="across">A</add>
+					</subst>lte beckan<subst>
+						<del rend="overwritten">d</del>
+						<add place="across">t</add>
+					</subst>e dir zu wiederholen, da<subst>
+						<del rend="overwritten">ß</del>
+						<add place="across">s</add>
+					</subst> einzige Wort: daß ich dich liebe,<lb/>übrigens kann mein Brief wie ein früh Rapport lauten.<lb/>
+					<hi rend="align(center)">Nichts neues.</hi></p>
+				<p>Ein Heft hast du diese Tage <add place="above">von mir</add> erhalten, und Hefte erwart’ich wiederum,<lb/>gierig ungeduldig täglig
+					von deiner lieben Hand.</p>
+				<p>De<subst>
+						<del rend="overwritten">n</del>
+						<add place="across">r</add>
+					</subst>
+					<hi rend="latin"><persName ref="#p0351" type="bi">Krutener</persName></hi> von dem ich dir sprach, <subst>
+						<del rend="overwritten">h</del>
+						<add place="across">H</add>
+					</subst>eute spricht die ganze Welt<del rend="strikethrough">,</del> von ihm,<lb/>und böse Stunden mag ihn sein Ruf kosten. gerei<subst>
+						<del rend="overwritten">t</del>
+						<add place="across">z</add>
+					</subst>t auf einem Ball, durch einen<lb/>nicht wohlgeborenen <hi rend="latin">Referendarius <persName ref="#p0349" type="bi"
+							>Mursena</persName></hi>, ein Beckanter Kreckler<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title
+								ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title> steht "Krakeeler" statt
+							"Kreckler".</p><p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+								inédits</title> stands "Krakeeler" instead of "Kreckler".</p><p xml:lang="fr">Dans l'imprimé de la <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> signifie "Krakeeler" au lieu de
+							"Kreckler".</p>
+					</note>, ward er dazu gebracht<lb/>ihm Ohrfeigen anzubieben<note resp="#sabine.seifert"><p xml:lang="de">Gemeint ist:
+							anzubieten.</p><p xml:lang="en">What is meant is: to offer.</p><p xml:lang="fr">Ce que l'on veut dire, c'est :
+						offrir.</p></note> oder zu geben, und wurde selber, <add place="above">von ihm</add> mit füssen getreten,<lb/>im angesichte
+					aller, und <add place="above">selbst</add> von Prinzen des Hauses. <del rend="strikethrough">Dieses geschehen</del><del
+						rend="none">, </del>am Morgen<lb/>des Zweiten Tages ging auf die Saat des Blutes, und <del rend="strikethrough">es geschah
+						das</del> von dem<lb/>was geschehen konnte, geschah das günstigste, der Kampf auf Todt, <persName ref="#p0351" type="bi"
+						>Krütener</persName><lb/>Jung, gut, und noch nicht abgestumpfenen Gefühls, selber den Todt im Herzen<lb/>schritt hin den Todt
+					zu geben, si<subst>
+						<del rend="opverwritten"><gap extent="1 character" reason="illegible"/></del>
+						<add place="across">e</add>
+					</subst> avoncirten auf einander von edwa<lb/><supplied cert="high" reason="overlapping_folio">4</supplied>0 Schritte und durften
+					schissen nach willkühr. die Zwei ersten Schüsse<lb/><supplied cert="high" reason="overlapping_folio">f</supplied>ielen zugleich.
+						<persName ref="#p0349" type="bi"><hi rend="latin">Murcena</hi></persName> blutete an der Lende, er erbot sich zur
+						Abbitte,<lb/><persName ref="#p0351" type="bi">Krüteners</persName>
+					<hi rend="latin">Secondant</hi> ein jüngerer <subst>
+						<del rend="overwritten">m</del>
+						<add place="across">M</add>
+					</subst>ensch denn er sprach rasch aus die<lb/>unzulässigkeit <del rend="strikethrough">zu</del>derselben, da fühlte <hi
+						rend="latin"><persName ref="#p0351" type="bi">Krütener</persName></hi>
+					<add place="above">mitleidsvoll</add> den Zorn des Nothwendigen,<lb/>un<subst>
+						<del rend="overwritten"><unclear cert="low" reason="incomplete">f</unclear></del>
+						<add place="across">v</add>
+					</subst>eränderten Antlizes aber schritt er zur Vollendung, die Schüsse der sich entgegen<lb break="no"/>kommenden fiel<subst>
+						<del rend="overwritten"><unclear cert="low" reason="incomplete">l</unclear></del>
+						<add place="across">e</add>
+					</subst>n aberma<subst>
+						<del rend="overwritten">h</del>
+						<add place="across">l</add>
+					</subst>s zugleich, und <hi rend="latin"><persName ref="#p0351" type="bi">Krutener</persName></hi> wandte mit Schrecken<lb/>das
+						Antlitz<del rend="strikethrough">es</del> von der Leiche. — er <subst>
+						<del rend="strikethrough">war</del>
+						<add place="above">ist</add>
+					</subst> kein geübter Schütze, aber<lb/>die Hand hat ihm nicht gezittert<subst>
+						<del rend="none">,</del>
+						<add place="across">.</add>
+					</subst>
+					<subst>
+						<del rend="overwritten">a</del>
+						<add place="across">A</add>
+					</subst>lsobald erscholl die Nachricht durch allen<lb/>Strassen, und auch ich erfur sie <seg xml:id="Brief004ChamissoandeLaFoye02"
+						>dann</seg>
+					<seg xml:id="Brief004ChamissoandeLaFoye01">erst</seg><listTranspose>
+						<transpose>
+							<ptr target="#Brief004ChamissoandeLaFoye01"/>
+							<ptr target="#Brief004ChamissoandeLaFoye02"/>
+						</transpose>
+					</listTranspose>. ich wollte da meinen ge<subst>
+						<del rend="overwritten"><unclear cert="medium" reason="incomplete">s</unclear></del>
+						<add place="across">w</add>
+					</subst>esenen<lb/>Freund <del rend="strikethrough">wieder</del>
+					<subst>
+						<del rend="overwritten">um</del>
+						<add place="across">vor</add>
+					</subst> seiner Flucht umarmen, <del rend="strikethrough"><gap extent="1 character" reason="strikethrough"/></del>ich konnte nicht
+					biß zu ihm<lb/>dringen, er ließ mich mit innigkeit danken und nun ist er fern<lb/>und ich erzäle dir dieses weil es <subst>
+						<del rend="overwritten">e</del>
+						<add place="across">E</add>
+					</subst>indruk auf mich gemacht hat.<lb/>Das meine <hi rend="underline"><rs ref="#p0402" type="bi_person">Königin</rs></hi><note
+						resp="janine.katins">Durch die Initiative seines Bruders <persName ref="#p0403" type="bi">Prudent</persName> trat <persName
+							ref="#p0237" type="bi">Chamisso</persName>
+						<date when-iso="1796">1796</date> als Page in die Dienste der Königin <persName ref="#p0402" type="bi">Friederike Luise von
+							Preußen</persName>, der Gemahlin <persName ref="#p0404" type="bi">Friedrich Wilhelms II</persName>, im Schloß <placeName
+							ref="#l0211" type="bi">Monbijou</placeName> ein. Die Königin starb am <date when-iso="1805-02-25">25. Februar
+						1805</date>.</note> Todt ist wirdst du dur<add place="inline">c</add>h öffentlige blätter<lb/>bereits erfahren haben,</p>
+				<pb facs="iiif:10.34847/nkl.9d4e62py/4dac83a4b4fa2912633431dfeee97309b36f6c75" n="4"/>
+				<p>Ich empfehle dir, sobald du es nur wirdst kriegen können<lb/>Die <hi rend="latin">Metris<add place="inline">c</add>he</hi>
+					franzosche Verse, (<hi rend="latin"><foreign xml:lang="fr">Didon poeme en 3 chants<lb/>traduit du 4 livre de
+						leneiïde)</foreign></hi><note resp="#janine.katins">
+						<p xml:lang="de"><persName ref="#p0237" type="bi">Chamisso</persName> verweist hier auf die Didotragödie im vierten Gesang der
+								<title ref="#w00317" type="bi">Aeneis</title>
+							<persName ref="#p0174" type="bi">Vergils</persName>. Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert
+								de Chamisso. Fragments inédits</title> wurden die Klammern an dieser Stelle nicht wiedergebenen, dafür um "dans [...]
+							volumes" gesetzt.</p><p xml:lang="en"><persName ref="#p0237" type="bi">Chamisso</persName> refers here to the Didotragedy
+							in the fourth song of <persName ref="#p0174" type="bi">Virgil</persName>'s <title ref="#w00317" type="bi">Aeneid</title>.
+							In the print of the <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>, the
+							brackets are not shown here, but are set around "dans [...] volumes".</p><p xml:lang="fr"><persName ref="#p0237" type="bi"
+								>Chamisso</persName> fait ici référence à la Didotragédie dans le quatrième chant de l'<title ref="#w00317" type="bi"
+								>Énéide</title> de <persName ref="#p0174" type="bi">Virgile</persName>. Dans l'imprimé de la <title ref="#w00253"
+								type="bi">Correspondance d'Adalbert de Chamisso. Fragments inédits</title>, les parenthèses ne sont pas représentées
+							ici, mais s'articulent autour de "dans [...] volumes".</p></note>
+					<subst>
+						<del rend="overwritten">d</del>
+						<add place="across">v</add>
+					</subst>on <hi rend="latin"><foreign xml:id="fr"><del rend="strikethrough"><gap extent="1 word" reason="strikethrough"/><add
+									place="above"><gap extent="3 words" reason="stain"/></add></del> dans le <title ref="#w00320" type="bi"
+								>Conservateur</title><lb/>espece de journal de <persName ref="#p0366" type="bi"><add place="above">Franois de
+									Neuf</add> Chateau</persName>
+							<del rend="strikesthrough">Neuf</del> dont il n'y a que deux volumes</foreign></hi>,<lb/>zu lesen, und ohne zu lachen zu
+					lesen und studiren, biß du<lb/>sie für rigtige, gute <subst>
+						<del rend="strikethrough">E Meter</del>
+						<add place="above">Hexameter</add>
+					</subst> erklärt hast. so viel sag ich<lb/>dir daß du sie nicht wie deutsche, sondern wie griechische<lb/>oder <del
+						rend="strikethrough">deudsche</del> l<subst>
+						<del rend="overwritten">e</del>
+						<add place="across">a</add>
+					</subst>teinische lesen solst.</p>
+				<p>nun kannst du zu d<del rend="none">i</del>er folgenden Nach<subst>
+						<del rend="overwritten">t</del>
+						<add place="across">r</add>
+					</subst>icht, lachen, die Exerzierheit<lb/>ist im Schonsten Blühendesten flor der <hi rend="latin">Rec<subst>
+							<del rend="overwritten">k</del>
+							<add place="across">r</add>
+						</subst>uten</hi> zeit. —<lb/><subst>
+						<del rend="overwritten">l</del>
+						<add place="across">T</add>
+					</subst>rozt alle dem<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance
+								d'Adalbert de Chamisso. Fragments inédits</title> steht "trotzdem" statt "Trozt alle dem".</p><p xml:lang="en">In the
+							print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> stands "Nevertheless"
+							instead of "In spite of all".</p><p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de
+								Chamisso, Fragments inédits</title> signifie "néanmoins" au lieu de "en dépit de tout".</p>
+					</note> lern ich griechisch. — 11 Gesänge hab ich durch und<lb/>bald den <persName ref="#p0343" type="bi"><hi rend="latin"
+							>Anacreon</hi></persName>. und es fängt an zu gehen. 4 biß 6 Stunden<lb/>a<subst>
+						<del rend="overwritten">b</del>
+						<add place="across">r</add>
+					</subst>beit' ich angestrengt.</p>
+				<p>Der <rs ref="#w00258" type="bi_title"><subst>
+							<del rend="overwritten">d</del>
+							<add place="across">3</add>
+						</subst>te Grüne</rs><note resp="#sabine.seifert"><p xml:lang="de">Aufgrund der grünen Einbandfarbe wurden die <title
+								ref="#w00255" type="bi">Musenalmanache</title> als "Grüne" bezeichnet.</p><p xml:lang="en">Because of the green cover
+							color, the <title ref="#w00255" type="bi">Musenalmanacs</title> were called "green".</p><p xml:lang="fr">En raison de la
+							couleur verte de la couverture, les <title ref="#w00255" type="bi">Musenalmanacs</title> étaient appelés
+						« verts ».</p></note>
+					<hi n="2" rend="underline">muß</hi>, muß müßen erscheinen,<lb/>Herlige Beiträge lassen sich von vielen ecken ersehen.<lb/>und ich
+					werde mit<note resp="#janine.katins"><p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de
+								Chamisso. Fragments inédits</title> wurde das Wort "mit" ausgelassen.</p><p xml:lang="en">In the print of the <title
+								ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title> the word "with" was omitted.</p><p
+							xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+							le mot "avec" a été omis.</p>
+					</note> nächstens dir mehreres <del rend="strikethrough">günstige</del> zu<lb/>seinem Gunsten zu sagen ha<subst>
+						<del rend="overwritten">g</del>
+						<add place="across">b</add>
+					</subst>en. <persName ref="#p0239" type="bi"><hi rend="latin">Eduard</hi></persName> trit auf<lb/>mit einer Samlung Spanischer
+					Romanzen.</p>
+				<p><persName ref="#p0239" type="bi">Eduard</persName> ist sehr glücklig und wohl itzt Hausvater, welches<lb/>er bei seinem letztem
+					trauten lieben Briefen stündlig erwartete.<lb/><persName ref="#p0262" type="bi"><hi rend="latin">Neuman</hi></persName> ist noch
+					Hier, <persName ref="#p0407" type="bi"><subst>
+							<del rend="overwritten">u</del>
+							<add place="across">U</add>
+						</subst>tmann</persName> grüßt dich. <persName ref="#p0345" type="bi">Augusta</persName><lb/>seh' ich nicht und nichts nichts
+					in der welt hat mich<lb/>getrofen daß ich in deine Se<subst>
+						<del rend="overwritten">h</del>
+						<add place="across">l</add>
+					</subst>e ergiesen <del rend="strikethrough"><gap extent="2 characters" reason="strikethrough"/></del> konnte – heute<lb/>bin ich
+					auch dum̄ und abgespannt wie ein Exameter von <pb facs="iiif:10.34847/nkl.9d4e62py/24720c4a88380048af85007ac4e5f92ed0c76bf5" n="5"/>
+					<note hand="#pencil_1" place="top-margin(right)" type="foliation">5</note>
+					<persName ref="#p2066" type="bi">Anterino <choice>
+							<abbr>v.</abbr>
+							<expan>von</expan>
+						</choice>
+						<hi rend="latin">Agaroton</hi></persName>. ich muß nur machen daß<lb/>
+					<persName ref="#p0249" type="bi"><choice>
+							<abbr>K A.</abbr>
+							<expan>Karl Augusts</expan>
+						</choice></persName> Brief zu dir kom̄e.</p>
+				<closer>
+					<signed rend="align(right)"><hi rend="latin"><persName ref="#p0237" type="bi">Adelbert</persName></hi>.<lb/><foreign
+							xml:lang="grc"><hi rend="greek"><choice>
+									<abbr>τ.τ.π.α.</abbr>
+									<expan>τò τоυ πόλου αστρον</expan>
+								</choice><note resp="#sabine.seifert"><p xml:lang="de">Das Kürzel <foreign xml:lang="grc"><hi rend="greek"
+												>τ.τ.π.α.</hi></foreign> steht für <foreign xml:lang="grc"><hi rend="greek">τò τоυ πόλου
+											αστρον</hi></foreign> ("Polarstern") und war das Erkennungszeichen des <orgName ref="#g0031" type="bi"
+											>Nordsternbunds</orgName>, dem <persName ref="#p0237" type="bi">Chamisso</persName> und <persName
+											ref="#p0248" type="bi">de La Foye</persName> seit <date when-iso="1804">1804</date> zusammen mit anderen
+										jungen Dichtern und Gelehrten angehörten.</p><p xml:lang="en">The abbreviation <hi rend="greek"><foreign
+												xml:lang="grc">τ.τ.π.α.</foreign></hi> stands for <hi rend="greek"><foreign xml:lang="grc">τò τоυ
+												πόλου αστρον </foreign></hi>("Pole Star") and was the hallmark of the <orgName ref="#g0031" type="bi"
+											>Northern Star Alliance</orgName>, to which <persName ref="#p0237" type="bi">Chamisso</persName> and
+											<persName ref="#p0248" type="bi">de La Foye</persName> belonged since <date when-iso="1804">1804</date>,
+										along with other young poets and scholars.</p><p xml:lang="fr">L'abréviation <hi rend="greek"><foreign
+												xml:lang="grc">τ.τ.π.α.</foreign></hi> signifie <hi rend="greek"><foreign xml:lang="grc">τò τоυ πόλου
+												αστρον</foreign></hi> ("Pole Star") et était la marque de fabrique de la <orgName ref="#g0031"
+											type="bi">Northern Star Alliance</orgName>, à laquelle <persName ref="#p0237" type="bi"
+											>Chamisso</persName> et <persName ref="#p0248" type="bi">de La Foye</persName> appartenaient depuis <date
+											when-iso="1804">1804</date>, avec d'autres jeunes poètes et érudits.</p>
+								</note></hi></foreign></signed>
+				</closer>
+				<epigraph>
+					<bibl>
+						<title ref="#w03289" type="bi">Die Flüsse</title>
+						<choice>
+							<abbr>v.</abbr>
+							<expan>von</expan>
+						</choice>
+						<author>
+							<persName ref="#p0249" type="bi">
+								<choice>
+									<abbr>K. A. V.</abbr>
+									<expan>Karl August Varnhagen</expan>
+								</choice>
+							</persName>
+						</author>
+					</bibl>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0344" type="bi">Klaproth</persName>.</author>
+					</bibl>
+					<label>6</label>
+					<cit>
+						<quote>Große Wasser rollen daher auf felsigem Grunde<lb/>Aber in Mitte des Laufs winden sie oft sich zurück.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0249" type="bi">Varnhagen</persName>.</author>
+					</bibl>
+					<label>7</label>
+					<cit>
+						<quote>Friedlich ist er, der <subst>
+								<del rend="overwritten"><unclear cert="medium" reason="illegible">Strom</unclear></del>
+								<add place="across">Fluß</add>
+							</subst>, doch hat er seichte und falsche<lb/>Stellen, meidet ihr die, fahrt ihr gemächlich hinab.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0338" type="bi"><choice>
+									<abbr>H.</abbr>
+									<expan>H.</expan>
+								</choice> Efraim</persName>.</author>
+					</bibl>
+					<label>8</label>
+					<cit>
+						<quote><supplied cert="high" reason="damage">N</supplied>icht an der Quelle <subst>
+								<del rend="overwritten"><gap extent="1 character" reason="illegible"/></del>
+								<add place="across">k</add>
+							</subst>ennt man genug ihn, nicht an dem Ausfluß<lb/>hier in der Mitte, da fließt langsam und lieblig er fort.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0332" type="bi">Robert</persName>.</author>
+					</bibl>
+					<label>9</label>
+					<cit>
+						<quote>Unter allen der breitste doch meist in blumigen Ufern,<lb/>Wollt ihr was nützliges draus, freunde so rath ich euch <gap
+								extent="1-2 words" reason="crease"/></quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author>
+							<persName ref="#p0239" type="bi">Eduard</persName>
+						</author>
+					</bibl>
+					<label>10</label>
+					<cit>
+						<quote>Lieblige, klare flut: gesellig und freundlig durchfahren<lb/>Herrtiche<note resp="#sabine.seifert"><p xml:lang="de"
+									>Gemeint ist: herrliche.</p><p xml:lang="en">What is meant is: wonderful.</p><p xml:lang="fr">Ce que l'on veut
+									dire, c'est : merveilleux.</p></note> Schiffe den fluß, fahren um Lust und Gewinn</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0291" type="bi">Koreff</persName>.</author>
+					</bibl>
+					<cit>
+						<quote><supplied cert="medium" reason="damage"><label>1</label> bra</supplied>usend <del rend="strikethrough"><unclear
+									cert="medium" reason="illegible">er</unclear> got</del> und Kühn entstürzt in das Thal von den Höhen<lb/>der W<gap
+								extent="1 word" reason="damage"/><lb/>Tief ist sein Wasser, und ftrömt<note resp="#sabine.seifert"><p xml:lang="de"
+									>Gemeint ist: strömt.</p><p xml:lang="en">What is meant is: flows.</p><p xml:lang="fr">Ce que l'on veut dire,
+									c'est : les flux.</p></note> weit zum unendligen Meer</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author>
+							<persName ref="#p0248" type="bi">Lafoye</persName>
+						</author>
+					</bibl>
+					<label>2</label>
+					<cit>
+						<quote>Lieblig ergötzt dich die frische des munter fliessenden Baches<lb/>Aber dem kundigen nur bringet er Körner von
+								Go<unclear cert="high" reason="illegible">ld</unclear>.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author>
+							<persName ref="#p0237" type="bi">Chamisso</persName>
+						</author>
+					</bibl>
+					<label>3</label>
+					<cit>
+						<quote>felsen stehn ihm entgegen, und <gap extent="1 character" reason="illegible"/>and wie die <unclear cert="medium"
+								reason="illegible">Mark</unclear> ihn nur haben<lb/>mag doch der Schiffer vertraut ruich dem Sicheren fluß.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author><persName ref="#p0300" type="bi">Theremin</persName>.</author>
+					</bibl>
+					<label>4</label>
+					<cit>
+						<quote>Glänzend wallet die flut durch gesegnete Ebnen des Südens<lb/>und gen Osten ergießt sie sich i<subst>
+								<del rend="overwritten">m</del>
+								<add place="across">n</add>
+							</subst> Himmlisches Blau.</quote>
+					</cit>
+				</epigraph>
+				<epigraph>
+					<bibl>
+						<author>
+							<persName ref="#p0262" type="bi">Neumann</persName>
+						</author>
+					</bibl>
+					<label>5</label>
+					<cit>
+						<quote>frisch! die Se<del rend="strikethrough"><gap extent="1-2 characters" reason="illegible"/></del>gel gespannt, und die
+							Ruder mutig geschlagen<lb/>So gelangen wir noch schneller dem Strome zum meer.</quote>
+						<note resp="#janine.katins">
+							<p xml:lang="de">Im Druck der <title ref="#w00253" type="bi">Correspondance d'Adalbert de Chamisso. Fragments
+									inédits</title> fehlt der letzte Satz der zweiten sowie die folgende Umschlagseite.</p>
+							<p xml:lang="en">In the print of the <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments inédits</title>
+								the last sentence of the second and the following cover page are missing.</p>
+							<p xml:lang="fr">Dans l'imprimé de la <title ref="#w00253">Correspondance d'Adalbert de Chamisso, Fragments
+									inédits</title> il manque la dernière phrase de la deuxième page de couverture et la suivante.</p>
+						</note>
+					</cit>
+				</epigraph>
+				<pb facs="iiif:10.34847/nkl.9d4e62py/2275b59d60391374ea254c6c67c6929c5a5c6517" n="6" xml:id="Brief004ChamissoandeLaFoye-Blatt5v"/>
+				<closer rend="vertical">
+					<note hand="#ink_1" place="top-margin(right) inline">54</note>
+					<note hand="pencil_3" place="top-margin(right) inline">
+						<hi rend="underline">
+							<date when-iso="1804">1804</date>
+						</hi>
+					</note>
+					<stamp rend="align(center)">Poststempel: <foreign xml:lang="fr"><hi rend="latin majuscule"><placeName ref="#l0092" type="bi"
+									>PRUSSE</placeName><lb/>PAR <placeName ref="#l0833" type="bi">MAASEYCK</placeName></hi></foreign>
+					</stamp>
+					<foreign xml:lang="fr">
+						<hi rend="latin">
+							<address>
+								<addrLine rend="align(center)">Monsieur <persName ref="#0248" type="bi">L<supplied cert="high" reason="crease"
+											>o</supplied>uis de La Foÿe</persName></addrLine>
+								<addrLine rend="align(center)">au <placeName ref="#l0148" type="bi">Vange<supplied cert="high" reason="crease"
+											>ux</supplied></placeName> à <placeName ref="#l0107" type="bi">Caen</placeName></addrLine>
+								<addrLine rend="align(right)"><choice>
+										<abbr>Dept</abbr>
+										<expan>Département</expan>
+									</choice>: du <placeName ref="#l0108" type="bi">Calvados</placeName></addrLine>
+							</address>
+						</hi>
+					</foreign>
+					<note hand="#ink_2" place="align(center)"><g type="unknown"/> 30</note>
+					<note hand="#ink_3" place="align(center)">10</note>
+					<lb/>
+					<note hand="#ink_1" place="bottom-center inline">
+						<unclear cert="medium" reason="stain">31</unclear>
+						<gap extent="1 character" reason="illegible"/>
+					</note>
+				</closer>
+			</div>
+		</body>
+	</text>
 </TEI>

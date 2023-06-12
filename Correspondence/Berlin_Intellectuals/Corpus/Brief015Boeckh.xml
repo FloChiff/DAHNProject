@@ -1,1335 +1,1401 @@
-<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title xml:lang="en">Annual report of August Boeckh to the Ministry of Culture (Berlin, 12 October 1821)</title>
-                <title xml:lang="fr">Rapport annuel d'August Boeckh au ministère de l'Éducation et des Affaires culturelles (Berlin, 12 octobre
-                    1821)</title>
-                <title xml:lang="de">Jahresbericht von August Boeckh an das Preußische Kultusministerium, Unterrichtsabteilung (Berlin, 12. Oktober
-                    1821)</title>
-                <funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
-                <!-- aktualisieren! -->
-                <principal>
-                    <persName ref="#anne.baillot">
-                        <forename>Anne</forename>
-                        <surname>Baillot</surname>
-                    </persName>
-                    <affiliation>
-                        <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName><!-- aktualisieren! -->
-                        <address>
-                            <street>Unter den Linden 6</street>
-                            <postCode>10099</postCode>
-                            <settlement>Berlin</settlement>
-                            <country key="DE">Deutschland</country>
-                        </address>
-                    </affiliation>
-                </principal>
-                <respStmt>
-                    <resp>Edited by</resp>
-                    <persName ref="#sabine.seifert">
-                        <forename>Sabine</forename>
-                        <surname>Seifert</surname>
-                    </persName>
-                </respStmt>
-                <respStmt>
-                    <resp>Digitization by</resp>
-                    <orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Humboldt-Universität zu Berlin</authority>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
-                </availability>
-                <date when-iso="2020-05"/>
-            </publicationStmt>
-            <seriesStmt>
-                <title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
-                <title type="genre">Records/Reports</title>
-                <title type="genre">Letters</title>
-                <title type="topic">Berlin University</title>
-            </seriesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <location>
-                            <address>
-                                <street>Unter den Linden 8</street>
-                                <postCode>10117</postCode>
-                                <settlement>Berlin</settlement>
-                                <country key="DE">Germany</country>
-                            </address>
-                        </location>
-                        <institution ref="#hu.berlin">Humboldt University of Berlin</institution>
-                        <repository>University archive</repository>
-                        <collection>Philosophic Faculty no. 99</collection>
-                        <idno type="ub.hu.berlin">Folios 130-133</idno>
-                    </msIdentifier>
-                    <msContents>
-                        <msItem>
-                            <docDate when="1821-10-12"/>
-                            <note resp="#sabine.seifert" type="keyword">Philological seminar</note>
-                            <note resp="#sabine.seifert" type="keyword">Corrections</note>
-                            <note resp="#sabine.seifert" type="keyword">Seminar papers</note>
-                            <note resp="#sabine.seifert" type="keyword">Exercises</note>
-                            <note resp="#sabine.seifert" type="keyword">Bonuses</note>
-                            <!-- noch überprüfen: <note type="keyword" resp="#sabine.seifert">Promotionen</note> -->
-                        </msItem>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material>
-                                        <material xml:lang="de">Papier.</material>
-                                        <material xml:lang="en">Paper.</material>
-                                        <material xml:lang="fr">Papier.</material>
-                                    </material>
-                                </support>
-                                <extent>
-                                    <measure type="folio">
-                                        <measure xml:lang="de">4 Blätter</measure>
-                                        <measure xml:lang="en">4 folios</measure>
-                                        <measure xml:lang="fr">4 feuillets</measure>
-                                    </measure>
-                                </extent>
-                                <foliation corresp="#pencil">
-                                    <p xml:lang="de">Foliierung eines Archivars mit Bleistift.</p>
-                                    <p xml:lang="en">Foliation by the archive, in pencil.</p>
-                                    <p xml:lang="fr">Numérotation des pages par les archives, crayon de papier.</p>
-                                </foliation>
-                                <foliation corresp="#blue_pen">
-                                    <p xml:lang="de">Foliierung eines Archivars mit blauem Stift.</p>
-                                    <p xml:lang="en">Foliation with blue pen by the archive.</p>
-                                    <p xml:lang="fr">Numérotation des pages par les archives, au crayon bleu.</p>
-                                </foliation>
-                                <condition>
-                                    <p xml:lang="de">Guter Erhaltungszustand, Faltspuren, Spuren der Aktenbindung.</p>
-                                    <p xml:lang="en">In a good state of preservation, traces of folding and binding.</p>
-                                    <p xml:lang="fr">En bon état. Quelques traces de plis.</p>
-                                </condition>
-                            </supportDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0178" xml:id="major_hand">
-                                <p xml:lang="de">Hand des Verfassers August Boeckh, Brieftext in brauner Tinte, vorwiegend in Kurrentschrift.</p>
-                                <p xml:lang="en">Hand of the sender August Boeckh, text of letter in brown ink, mainly German script.</p>
-                                <p xml:lang="fr">Main de l'expéditeur August Boeckh, corps de la lettre, encre marron, écriture majoritairement
-                                    gothique.</p>
-                            </handNote>
-                            <handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
-                                <p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
-                                <p xml:lang="en">Hand of an archivist, in pencil.</p>
-                                <p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
-                            </handNote>
-                            <handNote medium="blue_pen" scope="minor" scribe="archivist" xml:id="blue_pen">
-                                <p xml:lang="de">Hand eines Archivars, mit blauem Stift.</p>
-                                <p xml:lang="en">Hand of an archivist, with blue pen.</p>
-                                <p xml:lang="fr">Main d'un archiviste, au crayon bleu.</p>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p xml:lang="de">Der Brief wurde am <origDate when-iso="1821-10-12">12. Oktober 1821</origDate> in <origPlace ref="#l1103">Berlin</origPlace> geschrieben. Die Jahresberichte von <persName ref="#p0178">Boeckhs</persName> Hand verblieben
-                                bei seinen Aufzeichnungen und gingen später in das Universitätsarchiv ein. Das <orgName ref="#g0064">Ministerium</orgName> erhielt die Abschrift eines Schreibers.</p>
-                            <p xml:lang="en">The letter was written in <origPlace ref="#l1103">Berlin</origPlace> on <origDate when-iso="1821-10-12">12 October 1821</origDate>. The annual reports written by <persName ref="#p0178">Boeckh</persName> remained with
-                                him and later became part of the university archive. The <orgName ref="#g0064">ministry</orgName> received a copy by a
-                                scribe.</p>
-                            <p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l1103">Berlin</origPlace> le <origDate when-iso="1821-10-12">12
-                                    octobre 1821</origDate>. Les rapports annuels autographes de <persName ref="#p0178">Boeckh</persName> ont d'abord
-                                été conservés avec ses documents personnels, puis transmis aux archives de l'université, tandis que le <orgName ref="#g0064">ministère</orgName> a conservé un duplicat réalisé par un copiste.</p>
-                        </origin>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
-                <p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
-                <p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
-            </projectDesc>
-            <editorialDecl>
-                <correction method="markup">
-                    <p xml:lang="de">Keine Korrekturen.</p>
-                    <p xml:lang="en">No corrections.</p>
-                    <p xml:lang="fr">Aucune correction.</p>
-                </correction>
-                <hyphenation eol="hard" rend="dh">
-                    <p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
-                        enlevées.</p>
-                    <p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
-                </hyphenation>
-                <normalization>
-                    <p xml:lang="fr">Aucune normalisation</p>
-                    <p xml:lang="en">No normalization</p>
-                    <p xml:lang="de">Keine Normalisierung.</p>
-                </normalization>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="de" usage="80"/>
-                <language ident="la" usage="15"/>
-                <language ident="grc" usage="5"/>
-            </langUsage>
-            <correspDesc>
-                <correspAction type="sent">
-                    <persName ref="https://viaf.org/viaf/37048283/">August Boeckh</persName>
-                    <placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
-                    <date when-iso="1821-10-12"/>
-                </correspAction>
-                <correspAction type="received">
-                    <orgName ref="#g0064">Preußisches Kultusministerium, Unterrichtsabteilung</orgName>
-                </correspAction>
-                <correspContext>
-                    <ref target="Brief014Boeckh.xml" type="prev"/>
-                    <ref target="Brief016Boeckh.xml" type="next"/>
-                </correspContext>
-            </correspDesc>
-        </profileDesc>
-        <revisionDesc status="final_publication">
-            <change when-iso="2021-09-17" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
-            <change when-iso="2021-07-28" who="#floriane.chiffoleau">Translated the notes in English and French</change>
-            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Modified the tag milestone to put metamark</change>
-            <change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
-            <change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
-            <change when-iso="2020-08-15" who="#sabine.seifert">Encoding of pages 3 to 7. Publication online. Final corrections.</change>
-            <change when-iso="2020-08-14" who="#sabine.seifert">Encoding of page 1 and 2.</change>
-            <change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
-            <change when-iso="2020-05-14" who="#sabine.seifert">Encoding of metadata.</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div type="transcription">
-                <pb facs="iiif:10.34847/nkl.4d29r0m5/5cb149722cfd4f7213f8ee73a0c3f684f053ee22" n="1"/>
-                <note place="margin(right)" type="foliation">
-                    <subst hand="#blue_pen">
-                        <del rend="overwritten">
-                            <add hand="#pencil">130</add>
-                        </del>
-                        <add place="across">130</add>
-                    </subst>
-                </note>
-                <note place="margin(left)">
-                    <choice>
-                        <abbr>Hrn</abbr>
-                        <expan>Herrn</expan>
-                    </choice> Registrator <persName ref="#p3868" type="bi">Wernike</persName> zum Mundiren;<lb/>das Mundum mir zur Unterschrift vor<lb break="no"/>zulegen, <choice>
-                        <abbr>u</abbr>
-                        <expan>und</expan>
-                    </choice> durch den <choice>
-                        <abbr>Hrn</abbr>
-                        <expan>Herrn</expan>
-                    </choice> Regier<choice>
-                        <abbr>gs</abbr>
-                        <expan>ungs</expan>
-                    </choice>bevoll<lb break="no"/>mächtigten dem vorgesetzten <orgName ref="#g0064" type="bi">Ministerium</orgName>
-                    <lb/>einzusenden.</note>
-                <opener>
-                    <dateline>
-                        <choice>
-                            <abbr>d.</abbr>
-                            <expan>den</expan>
-                        </choice>
-                        <date when-iso="1821-10-21">12. <choice>
-                                <abbr>Oct.</abbr>
-                                <expan>October</expan>
-                            </choice> 21.</date>
-                    </dateline>
-                    <signed rend="align(right)">
-                        <hi rend="latin">
-                            <persName ref="#p0178" type="bi">Böckh.</persName>
-                        </hi>
-                    </signed>
-                </opener>
-                <div>
-                    <p>Einem hohen <orgName ref="#g0064" type="bi">Ministerium der geistlichen, Unter<lb break="no"/>richts<pc>=</pc> und
-                            Medicinalangelegenheiten</orgName>, Unterrichts<lb break="no" type="sh"/>abtheilung, beehrt sich der <rs ref="#p0178" type="bi_person">Unterzeichnete</rs> den<lb/>Jahresbericht über den Zustand des <orgName ref="#g0079" type="bi">philologischen<lb/>Seminars</orgName> der hiesigen <orgName ref="#g0122" type="bi">Universität</orgName> im ver<lb break="no"/>flossenen akademischen Jahre pflichtschuldigst<lb/>zu erstatten.</p>
-                    <div>
-                        <head>
-                            <label>I.</label>
-                            <hi rend="underline">Übersicht der Mitglieder.</hi>
-                        </head>
-                        <p>Von denjenigen Mitgliedern der <rs ref="#g0079" type="bi_org">Anstalt</rs>, welche<lb/>im vorigen <ref target="Brief014Boeckh.xml">Jahresberichte</ref> als solche aufge<lb break="no"/>führt worden sind, welche noch in dem
-                                <date when-iso="1820-03/09">zweiten<lb/>halben Jahre</date> Antheil an den Übungen nahmen,<lb/>gingen nach dem Abgange
-                            der bereits eben da<lb break="no"/>selbst genan̄ten Studirenden und der zum Studium<lb/>der Theologie übergetretenen
-                                <persName ref="#p1949" type="bi">Ernst Glasewald</persName>, <add n="+" place="margin(left)">sowie des <persName ref="#p1494" type="bi">Alexander Schmidt</persName>
-                                <lb/>und <persName ref="#p3740" type="bi">Ernst
-                                    Förster</persName>, welche eben<lb break="no"/>falls andere Studien erwählten,</add>
-                            <lb/>folgende in den nächsten
-                                <date when-iso="1820-10/1821-02">Cursus</date> über:<lb rend="both"/>Als <orgName ref="#g0051" type="bi">ordentliche
-                                Mitglieder</orgName>,<lb rend="both"/>
-                            <list>
-                                <label>1)</label>
-                                <item>
-                                    <persName ref="#p1953" type="bi">Wilhelm Heindorf</persName> von <placeName ref="#l1103" type="bi">Berlin</placeName>,</item>
-                                <lb/>
-                                <label>2)</label>
-                                <item>
-                                    <persName ref="#p1419" type="bi">
-                                        <subst>
-                                            <del rend="overwritten">
-                                                <gap extent="few characters" reason="illegible"/>
-                                            </del>
-                                            <add place="across">Sigis</add>
-                                        </subst>mund <hi rend="latin">Panofka</hi>
-                                    </persName> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
-                                <lb/>
-                                <label>3)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1590" type="bi">
-                                            <choice>
-                                                <abbr>Friedr.</abbr>
-                                                <expan>Friedrich</expan>
-                                            </choice> Kritz</persName>
-                                    </hi> aus dem <rs ref="#l0253" type="bi_place">Erfurtischen</rs>,</item>
-                                <lb/>
-                                <label>4)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1952" type="bi">Carl Haupt</persName>
-                                    </hi> von <placeName ref="#l0781" type="bi">Luckau</placeName>,</item>
-                                <lb/>
-                                <label>5)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1951" type="bi">
-                                            <choice>
-                                                <abbr>Heinr.</abbr>
-                                                <expan>Heinrich</expan>
-                                            </choice> Lindner</persName>
-                                    </hi> von <placeName ref="#l0268" type="bi">Dessau</placeName>,</item>
-                                <lb/>
-                                <label>6)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p0925" type="bi">
-                                            <choice>
-                                                <abbr>Jul.</abbr>
-                                                <expan>Julius</expan>
-                                            </choice> Wernike</persName>
-                                    </hi> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
-                                <lb/>
-                                <label>7)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1956" type="bi">
-                                            <choice>
-                                                <abbr>Friedr.</abbr>
-                                                <expan>Friedrich</expan>
-                                            </choice> Walter</persName>
-                                    </hi> von <placeName ref="#l1103" type="bi">Berlin</placeName>;</item>
-                            </list>
-                            <lb rend="both"/>als <orgName ref="#g0102" type="bi">außerordentliche Mitglieder</orgName>,<lb rend="both"/>
-                            <list>
-                                <label>1)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p3744" type="bi">Carl Schultz</persName>
-                                    </hi> aus <placeName ref="#l0638" type="bi">Mittenwalde</placeName>,</item>
-                                <lb/>
-                                <label>2)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1556" type="bi">Lucian Plehn</persName>
-                                    </hi> aus <rs ref="#l1203" type="bi_place">Preußen</rs>.</item>
-                            </list>
-                        </p>
-                        <p>Neu hinzu kamen als <orgName ref="#g0051" type="bi">ordentliche Mitglieder</orgName>:<lb rend="both"/>
-                            <list>
-                                <label>8)</label>
-                                <item>
-                                    <persName ref="#p1957" type="bi">August Balsam</persName>
-                                    <note resp="#sabine.seifert">
-                                        <p xml:lang="de">Die
-                                            korrekten Vornamen von <persName ref="#p1957" type="bi">Balsam</persName> lauten Christian Adolf. Er
-                                            stammt aus <placeName ref="#l0783" type="bi">Tschenstochau</placeName> in der Nähe von <placeName ref="#l0027" type="bi">Breslau</placeName>.</p>
-                                        <p xml:lang="en">The correct first names for <persName ref="#p1957" type="bi">Balsam</persName> are Christian Adolf. He comes from <placeName ref="#l0783" type="bi">Czestochowa</placeName> near <placeName ref="#l0027" type="bi">Breslau</placeName>.</p>
-                                        <p xml:lang="fr">Les prénoms corrects pour <persName ref="#p1957" type="bi">Balsam</persName> sont Christian
-                                            Adolf. Il vient de <placeName ref="#l0783" type="bi">Czestochowa</placeName> près de <placeName ref="#l0027" type="bi">Breslau</placeName>.</p>
-                                    </note> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
-                                <lb/>
-                                <label>9)</label>
-                                <item>
-                                    <persName ref="#p1559" type="bi">Bernhard Sökeland</persName> aus <placeName ref="#l0293" type="bi">Münster</placeName>,<note resp="#sabine.seifert">
-                                        <p xml:lang="de">
-                                            <persName ref="#p1559" type="bi">Sökeland</persName> stammt aus <placeName ref="#l0634" type="bi">Darfeld</placeName> in der Nähe von
-                                                <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
-                                        <p xml:lang="en">
-                                            <persName ref="#p1559" type="bi">Sökeland</persName> comes from <placeName ref="#l0634" type="bi">Darfeld</placeName> near
-                                                <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
-                                        <p xml:lang="fr">
-                                            <persName ref="#p1559" type="bi">Sökeland</persName> vient de <placeName ref="#l0634" type="bi">Darfeld</placeName> près de
-                                                <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
-                                    </note> welcher<lb/>zwar Anfangs nur als
-                                    außerordentliches<lb/>Mitglied eintrat, nachher aber als ordentliches<lb/>aufgenom̄en und durch eine Prämie auf<lb break="no"/>gemuntert wurde;</item>
-                            </list>
-                            <lb rend="both"/> als <orgName ref="#g0102" type="bi">außerordentliche</orgName> aber:<lb rend="both"/>
-                            <list>
-                                <label>3)</label>
-                                <item>
-                                    <persName ref="#p1954" type="bi">Adolph Almus</persName> von <placeName ref="#l0036" type="bi">Stettin</placeName>,</item>
-                                <lb/>
-                                <label>4)</label>
-                                <item>
-                                    <persName ref="#p1955" type="bi">Joseph Gaßmann</persName> von <placeName ref="#l0782" type="bi">Heiligenstadt</placeName>,</item>
-                                <lb/>
-                                <label>5)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1959" type="bi">Wilhelm Langbein</persName>
-                                    </hi> aus <placeName ref="#l0784" type="bi">Mecklenburg</placeName>,</item>
-                                <lb/>
-                                <label>6)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p3745" type="bi">August Milo</persName>
-                                    </hi> aus der Mittelmark,<note resp="#sabine.seifert">
-                                        <p xml:lang="de">
-                                            <persName ref="#p3745" type="bi">Milo</persName> stammt aus <placeName ref="#l1150" type="bi">Fehrbellin</placeName>.</p>
-                                        <p xml:lang="en">
-                                            <persName ref="#p3745" type="bi">Milo</persName> comes from <placeName ref="#l1150" type="bi">Fehrbellin</placeName>.</p>
-                                        <p xml:lang="fr">
-                                            <persName ref="#p3745" type="bi">Milo</persName> vient de <placeName ref="#l1150" type="bi">Fehrbellin</placeName>.</p>
-                                    </note>
-                                </item>
-                                <lb/>
-                                <label>7)</label>
-                                <item>
-                                    <persName ref="#p1958" type="bi">Adolph Göschen</persName> von <placeName ref="#l1103" type="bi">Berlin</placeName>,</item>
-                                <lb/>
-                                <label>8)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p0719" type="bi">Eduard Bonnell</persName>
-                                    </hi> von <placeName ref="#l1103" type="bi">Berlin</placeName>,</item>
-                                <lb/>
-                                <label>9)</label>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1355" type="bi">
-                                            <choice>
-                                                <abbr>Friedr.</abbr>
-                                                <expan>Friedrich</expan>
-                                            </choice> Paul</persName>
-                                    </hi> von <placeName ref="#l1079" type="bi">Schwedt</placeName>.</item>
-                            </list>
-                        </p>
-                        <p>
-                            <date when-iso="1821-04">Ostern <choice>
-                                    <abbr>d. J.</abbr>
-                                    <expan>des Jahres</expan>
-                                </choice>
-                            </date> verließen von den ordentlichen Mitgliedern<lb/>nur zwei, <hi rend="latin">
-                                <persName ref="#p1590" type="bi">Kritz</persName>
-                            </hi> und <hi rend="latin">
-                                <persName ref="#p1951" type="bi">Lindner</persName>
-                            </hi> das
-                                <orgName ref="#g0079" type="bi">Seminar</orgName> und<lb/>die <orgName ref="#g0122" type="bi">Universität</orgName>,
-                            und es wurden drei der außer<lb break="no"/>ordentlichen, <hi rend="latin">
-                                <persName ref="#p1959" type="bi">Langbein</persName>
-                            </hi>, <hi rend="latin">
-                                <persName ref="#p1958" type="bi">Göschen</persName>
-                            </hi> und <hi rend="latin">
-                                <persName ref="#p0719" type="bi">Bonnell</persName>
-                            </hi>
-                            <lb/>unter die <rs ref="#g0052" type="bi_org">ordentlichen</rs> aufgenom̄en. Außer den<lb/>drei ebengenann̄ten schieden aus der Zahl der<pb facs="iiif:10.34847/nkl.4d29r0m5/bd12b36310fafdf7b8766d1bd992fa274be07075" n="2"/>außerordentlichen Mitglieder aus <hi rend="latin">
-                                <persName ref="#p3744" type="bi">Schultz</persName> von <placeName ref="#l0638" type="bi">Mitten<lb break="no"/>walde</placeName>, <persName ref="#p1954" type="bi">Almus</persName>, <persName ref="#p3745" type="bi">Milo</persName>, <persName ref="#p1355" type="bi">Paul</persName>, <persName ref="#p1556" type="bi">Plehn</persName>, <persName ref="#p1955" type="bi">Gassmann</persName>
-                            </hi>,<lb/>also die gesam̄te Zahl derer,
-                            welche bisher außer<lb break="no"/>ordentlich an dem <orgName ref="#g0079" type="bi">Seminar</orgName> Theil genom̄en
-                            hatten <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <lb/>nicht als ordentliche Mitglieder in der <rs ref="#g0079" type="bi_org">Anstalt</rs> ge<lb break="no"/>blieben sind. Statt dieser nahmen <rs ref="#g0103" type="bi_org">folgende zehn</rs> in dem <date when-iso="1821-03/09">Som̄erhalbejahre</date> außerordentlicher Weise<lb/>an dem <orgName ref="#g0079" type="bi">Seminar</orgName>
-                                Antheil:<lb rend="both"/>
-                            <hi rend="latin">
-                                <list>
-                                    <label>1)</label>
-                                    <item>
-                                        <persName ref="#p3749" type="bi">Joseph Schreiner</persName>
-                                        <note resp="#sabine.seifert">
-                                            <p xml:lang="de">Die korrekten Vornamen von <persName ref="#p3749" type="bi">Schreiner</persName> lauten Johann
-                                                Baptist. Er stammt aus <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in <placeName ref="#l1200" type="bi">Franken</placeName>.</p>
-                                            <p xml:lang="en">The correct first name for
-                                                    <persName ref="#p3749" type="bi">Schreiner</persName> is Johann Baptist. He comes from <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in <placeName ref="#l1200" type="bi">Franconia</placeName>.</p>
-                                            <p xml:lang="fr">Le prénom correct pour <persName ref="#p3749" type="bi">Schreiner</persName> est Johann Baptist. Il vient de <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> en <placeName ref="#l1200" type="bi">Franconie</placeName>.</p>
-                                        </note> aus <placeName ref="#l1200" type="bi">Franken</placeName>,</item>
-                                    <lb/>
-                                    <label>2)</label>
-                                    <item>
-                                        <persName ref="#p3751" type="bi">
-                                            <choice>
-                                                <abbr>C.</abbr>
-                                                <expan>Carl</expan>
-                                            </choice> Wagner</persName> aus <placeName ref="#l0016" type="bi">Pom̄ern</placeName>,</item>
-                                    <lb/>
-                                    <label>3)</label>
-                                    <item>
-                                        <persName ref="#p3750" type="bi">
-                                            <choice>
-                                                <abbr>Fr. Aug.</abbr>
-                                                <expan>Friedrich August</expan>
-                                            </choice> Schulze</persName> aus <placeName ref="#l1203" type="bi">Westpreussen</placeName>,<note resp="#sabine.seifert">
-                                            <p xml:lang="de">
-                                                <persName ref="#p3750" type="bi">Schulze</persName> stammt aus
-                                                    <placeName ref="#l1153" type="bi">Marienburg</placeName>.</p>
-                                            <p xml:lang="en">
-                                                <persName ref="#p3750" type="bi">Schulze</persName> comes from <placeName ref="#l1153" type="bi">Marienburg</placeName>.</p>
-                                            <p xml:lang="fr">
-                                                <persName ref="#p3750" type="bi">Schulze</persName>
-                                                vient de <placeName ref="#l1153" type="bi">Marienburg</placeName>.</p>
-                                        </note>
-                                    </item>
-                                    <lb/>
-                                    <label>4)</label>
-                                    <item>
-                                        <persName ref="#p3747" type="bi">
-                                            <choice>
-                                                <abbr>Fr.</abbr>
-                                                <expan>Friedrich</expan>
-                                            </choice> Knorre</persName> von <placeName ref="#l1151" type="bi">Narwa</placeName>,</item>
-                                    <lb/>
-                                    <label>5)</label>
-                                    <item>
-                                        <persName ref="#p3752" type="bi">Christian Wilbrandt</persName> aus <placeName ref="#l1139" type="bi">Mecklenburg</placeName>,<note resp="#sabine.seifert">
-                                            <p xml:lang="de">
-                                                <persName ref="#p3752" type="bi">Wilbrandt</persName> stammt aus <placeName ref="#l0819" type="bi">Neuenkirchen</placeName>.</p>
-                                            <p xml:lang="en">
-                                                <persName ref="#p3752" type="bi">Wilbrandt</persName> comes from <placeName ref="#l0819" type="bi">Neuenkirchen</placeName>.</p>
-                                            <p xml:lang="fr">
-                                                <persName ref="#p3752" type="bi">Wilbrandt</persName> est originaire de <placeName ref="#l0819" type="bi">Neuenkirchen</placeName>.</p>
-                                        </note>
-                                    </item>
-                                    <lb/>
-                                    <label>6)</label>
-                                    <item>
-                                        <persName ref="#p1603" type="bi">Franz Winiewski</persName> von <placeName ref="#l0648" type="bi">Thorn</placeName>,</item>
-                                    <lb/>
-                                    <label>7)</label>
-                                    <item>
-                                        <persName ref="#p3746" type="bi">
-                                            <choice>
-                                                <abbr>G. G.</abbr>
-                                                <expan>Gottfried Gabriel</expan>
-                                            </choice> Friedenberg</persName> von <placeName ref="#l0076" type="bi">Aschaffenburg</placeName>,</item>
-                                    <lb/>
-                                    <label>8)</label>
-                                    <item>
-                                        <persName ref="#p1963" type="bi">
-                                            <choice>
-                                                <abbr>J. S.</abbr>
-                                                <expan>Jacques Simon</expan>
-                                            </choice> Jacobi</persName> von <placeName ref="#l0091" type="bi">Potsdam</placeName>,</item>
-                                    <lb/>
-                                    <label>9)</label>
-                                    <item>
-                                        <persName ref="#p3748" type="bi">Carl Ritthausen</persName> aus der <placeName ref="#l1152" type="bi">Neumark</placeName>,</item>
-                                    <lb/>
-                                    <label>10)</label>
-                                    <item>
-                                        <persName ref="#p1961" type="bi">Carl Wendt</persName> von <placeName ref="#l0091" type="bi">Potsdam</placeName>.<note resp="#sabine.seifert">
-                                            <p xml:lang="de">
-                                                <persName ref="#p1961" type="bi">Wendt</persName> stammt aus <placeName resp="#l0263" type="bi">Königsberg</placeName>.</p>
-                                            <p xml:lang="en">
-                                                <persName ref="#p1961" type="bi">Wendt</persName> comes from <placeName resp="#l0263" type="bi">Königsberg</placeName>..</p>
-                                            <p xml:lang="fr">
-                                                <persName ref="#p1961" type="bi">Wendt</persName> vient de <placeName resp="#l0263" type="bi">Königsberg</placeName>..</p>
-                                        </note>
-                                    </item>
-                                </list>
-                            </hi>
-                        </p>
-                        <p>Aus diesen Angaben geht hervor, daß im <date when-iso="1820-10/1821-02">ersten<lb/>halben Jahre</date> 9 ordentliche und 9
-                            außerordentliche,<lb/>im <date when-iso="1821-03/09">zweiten</date> 10 ordentliche und ebenfalls 10 außer<lb break="no"/>ordentliche Mitglieder das <orgName ref="#g0079" type="bi">Seminar</orgName> bildeten, nicht<lb/>gerechnet mehrere
-                            andere, welche die Erlaubniß<lb/>den Übungen beizuwohnen, erhielten und benutzten,<lb/>ohne sich als Mitglieder
-                            einschreiben zu lassen:<lb/>von welchen zu reden überflüssig scheint. Was<lb/>die in beiden halben Jahren ausgetretenen
-                            betrifft,<lb/>so haben sie theils die <orgName ref="#g0122" type="bi">Universität</orgName> verlassen,<lb/>und unter
-                            diesen sind <hi rend="latin">
-                                <persName ref="#p1590" type="bi">Kritz</persName>
-                            </hi>, <hi rend="latin">
-                                <persName ref="#p1954" type="bi">Almus</persName>
-                            </hi> und <hi rend="latin">
-                                <persName ref="#p1355" type="bi">Paul</persName>
-                            </hi>
-                            <lb/>in das <orgName ref="#g0082" type="bi">Seminar für gelehrte Schulen</orgName> einge<lb break="no"/>treten, theils sind sie durch andere Studien und<lb/>Beschäftigungen, etliche nahmentlich durch den Mi<lb break="no"/>litärdienst, an der fernern Benutzung der <rs ref="#g0079" type="bi_org">Anstalt</rs>
-                            <lb/>verhindert
-                            worden. </p>
-                    </div>
-                    <div>
-                        <head>
-                            <label>II.</label>
-                            <hi rend="latin">Übungen des Seminars</hi>.</head>
-                        <p>Die Übungen des <orgName ref="#g0079" type="bi">Seminars</orgName> bestanden wie gewöhnlich<lb/>in der Anfertigung und
-                            Beurtheilung der Abhandlungen,<lb/>Stellung und mündlichen Beantwortung philologischer<lb/>Aufgaben kleinerer Art, und
-                            Auslegung der Schrift<lb break="no"/>steller. Die Mitglieder haben es im Ganzen genom̄en<lb/>an Fleiß nicht fehlen lassen;
-                            auch ist darauf geachtet<lb/>worden, daß die für eine jede dieser Übungen besonders<lb/>verabredeten Reihefolge
-                            eingehalten wurde. Über das<lb/>Innere bei Anstellung dieser Übungen läßt sich nicht<lb/>füglich ohne große
-                            Weitläuftigkeit berichten; ich be<lb break="no"/>schränke mich daher darauf, anzugeben, welche Ab<lb/>handlungen
-                            geliefert, welche Aufgaben gestellt und<lb/>welche Schriftsteller erklärt wurden.</p>
-                        <p>
-                            <label>1.</label> Was die <hi rend="underline">Abhandlungen</hi> betrifft, so habe ich iederzeit<lb/>und auch diesesmahl
-                            den Grundsatz befolgt, keinem der Mit<lb break="no"/>glieder ein Thema vorzuschreiben, sondern mit Rücksicht<lb/>der
-                            besondern Richtung und eigenthümlichen Studien ei<lb break="no"/>nes jeden die Wahl des Gegenstandes nur zu
-                            leiten<lb/>oder zu billigen, und für die Abfassung Rath im All<lb break="no"/>gemeinen zu geben. Da die Befolgung des
-                                letztern<pb facs="iiif:10.34847/nkl.4d29r0m5/ded8c9344ab67062b0a8e2a7550e696d2d91ab38" n="3"/>
-                        </p>
-                        <p><!-- Added tag for the good display of the indexes-->
-                            <note place="margin(right)" type="foliation">
-                                <subst hand="#blue_pen">
-                                    <del rend="overwritten">
-                                        <add hand="#pencil">131</add>
-                                    </del>
-                                    <add place="across">131</add>
-                                </subst>
-                            </note> aber von dem Maße der Ken̄tnisse und der Urtheils<lb break="no"/>kraft eines jeden Einzelnen abhängt, dieses
-                            Maß<lb/>jedoch bisweilen noch verhältnismäßig gering ist,<lb/>so kam wol auch der Fall vor, daß Abhandlungen,<lb/>ehe sie
-                            zur Lesung und Beurtheilung in Umlauf<lb/>gesetzt wurden, zu nochmahliger Überarbeitung zu<lb break="no"/>rückgegeben
-                            werden mußten. Die ordentlichen Mitglieder<lb/>haben folgende Abhandlungen geliefert, welche ich, mit<lb/>Übergehung
-                            anderer von außerordentlichen gelieferten<lb/>kurz aufzählen will.<lb rend="both"/>
-                            <hi rend="latin">
-                                <list>
-                                    <label>1)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1590" type="bi">Kritz</persName>
-                                        </hi>
-                                        <title ref="#w05905" type="bi">Animadversionem in Sallustii Catili<lb break="no"/>nam particula
-                                        altera</title>. Eine zwar etwas dürf<lb break="no"/>tige, aber gut und mit Urtheil geschriebene Ab<lb break="no"/>handlung.</item>
-                                    <lb/>
-                                    <label>2)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1951" type="bi">Lindner</persName>
-                                        </hi>
-                                        <title ref="#w05917" type="bi">Annotationes in Aeschÿli Supplicium<lb/>chori canticum primum</title>. Ich habe
-                                        dem Verfasser<lb/>im̄er von so schwierigen Gegenständen, von welchen er<lb/>nicht ablassen wollte, abgerathen:
-                                        den̄och hat er sich<lb/>aber hier an einem Stoff versucht, welchem er<lb/>nicht gewachsen war. Die Abhandlung
-                                        enthält wenig<lb/>Plan, zeugt jedoch von einigem, wen̄ gleich noch nicht durchgedrungenem Studium.</item>
-                                    <lb/>
-                                    <label>3)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1953" type="bi">Heindorf</persName>
-                                        </hi>
-                                        <title ref="#w05879" type="bi">Archÿtae Vita</title>. Fleissig gearbeitet,<lb/>aber nicht ganz planmäßig
-                                        angelegt.</item>
-                                    <lb/>
-                                    <label>4)</label>
-                                    <item>
-                                        <rs ref="#p1953" type="bi_person">derselbe</rs>, <title ref="#w05880" type="bi">Specimen fragmentorum
-                                            Cratini</title>.<lb/>Zweckmäßig und ziemlich gut, auch mit Fleiß<lb/>durchgeführt, doch in der Darstellung
-                                        noch etwas<lb/>unbeholfen.</item>
-                                    <lb/>
-                                    <label>5)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1419" type="bi">Panofka</persName>
-                                        </hi>, <title ref="#w05937" type="bi">Samica, Diss. I</title>.</item>
-                                    <lb/>
-                                    <label>6)</label>
-                                    <item>
-                                        <rs ref="#p1419" type="bi_person">Derselbe</rs>, <title ref="#w05938" type="bi">Samica, Diss.
-                                        II</title>.<lb/>Der <rs ref="#p1419" type="bi_person">Verfasser</rs> beschäftigt sich mit einer
-                                        Monographie<lb/>über <placeName ref="#l0707" type="bi">Samos</placeName>, woraus diese Abhandlungen Bruch<lb break="no"/>stücke sind. Der Stoff ist fleissig gesam̄elt, das<lb/>Urtheil verschiedenartig, die
-                                        Darstellung noch un<lb break="no"/>beholfen. Im Ganzen sind aber diese Schriftchen<lb/>lobenswerth.</item>
-                                    <lb/>
-                                    <label>7)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1952" type="bi">Haupt</persName>
-                                        </hi>, <title ref="#w05875" type="bi">Diplomaticae inquisitionis in<lb/>Herodoti libros institutae Specimen I</title>.<lb/>Der Gegenstand,
-                                        welcher allerdings eine Betrachtung<lb/>verdient, ist nicht von der richtigen Seite aufgefaßt,<lb/>
-                                        <choice>
-                                            <abbr>u</abbr>
-                                            <expan>und</expan>
-                                        </choice> die Abhandlung giebt daher, ungeachtet der Müh<lb break="no"/>samkeit der Vergleichung der
-                                        Lesearten, kein<lb/>bedeutendes Ergebnis.</item>
-                                    <lb/>
-                                    <label>8)</label>
-                                    <item>
-                                        <rs ref="#p1952" type="bi_person">derselbe</rs>, <title ref="#w05876" type="bi">De difficillimis
-                                            Trachinarium<lb/>locis</title>. Fleissig, und nicht ganz unbefriedigend.</item>
-                                    <lb/>
-                                    <label>9)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p0925" type="bi">Wernike</persName>
-                                        </hi>, <title ref="#w05990" type="bi">Observationes in primam ele<lb break="no"/>giam Tibulli</title>.</item>
-                                    <lb/>
-                                    <label>10)</label>
-                                    <item>
-                                        <rs ref="#p0925" type="bi_person">derselbe</rs>, <title ref="#w05991" type="bi">De epigrammatibus, quae
-                                            vulgo<lb/>Platoni philosopho tribuuntur</title>.<lb/>Diese beiden Schriftchen sind mit mühsamem
-                                        Fleiße<lb/>gearbeitet; aber es ist darin eine große Unreife des<lb/>Urtheils und ein widerwärtiger Mangel an
-                                            Fertig<lb break="no"/>keit in den Regeln der Lateinischen Gram̄atik. Da<lb break="no"/>gegen sind wieder
-                                        sehr gute Sachen darin; aber ich<lb/>sehe den gegründeten Verdacht, daß der <rs ref="#p0925" type="bi_person">Verfasser</rs>
-                                        <lb/>hinterlassene Papiere seines verstorbenen <rs ref="#p0654" type="bi_person">Bruders</rs>
-                                        <lb/>benutzte:<note resp="#sabine.seifert">
-                                            <p xml:lang="de">
-                                                <persName ref="#p0925" type="bi">Julius Wernikes</persName> Bruder <persName ref="#p0654" type="bi">Friedrich August
-                                                    Wernicke</persName> war ebenfalls Mitglied in <persName ref="#p0178" type="bi">Boeckhs</persName>
-                                                <orgName ref="#g0079" type="bi">philologischen Seminar</orgName> gewesen.</p>
-                                            <p xml:lang="en">
-                                                <persName ref="#p0925" type="bi">Julius Wernikes</persName>'s brother <persName ref="#p0654" type="bi">Friedrich August Wernicke</persName> had also been a member of Boeckh's <orgName ref="#g0079" type="bi">philological seminar</orgName>.</p>
-                                            <p xml:lang="fr">Le frère de <persName ref="#p0925" type="bi">Julius Wernikes</persName>, <persName ref="#p0654" type="bi">Friedrich
-                                                    August Wernicke</persName>, avait également été membre du <orgName ref="#g0079" type="bi">séminaire philologique</orgName> de Boeckh.</p>
-                                        </note> was ich ihm auch schon einmahl verwie<lb break="no"/>sen habe. Doch halte ich ihn der Nachsicht in dieser<lb/>Beziehung würdig.</item>
-                                    <pb facs="iiif:10.34847/nkl.4d29r0m5/164ee6b46f6c73738e7276323d2f35660ba71d97" n="4"/>
-                                    <label>11)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1956" type="bi">Walter</persName>
-                                        </hi>, <title ref="#w05982" type="bi">Observationum in Taciti Annalium<lb/>lib. III. Specimen</title>.</item>
-                                    <lb/>
-                                    <label>12)</label>
-                                    <item>
-                                        <rs ref="#p1956" type="bi_person">derselbe</rs>, <title ref="#w05983" type="bi">Antonii oratio in Cassii
-                                            Dionis Lib.<lb/>XLIV. notis illustrata</title>.<lb/>Beide nicht ganz schlecht, aber unbedeutend.</item>
-                                    <lb/>
-                                    <label>13)</label>
-                                    <item>
-                                        <subst>
-                                            <del rend="strikethrough">
-                                                <gap extent="one or two words" reason="illegible"/>
-                                            </del>
-                                            <add place="inline">
-                                                <hi rend="underline">
-                                                    <persName ref="#p1957" type="bi">Balsam</persName>
-                                                </hi>
-                                            </add>
-                                        </subst>: <title ref="#w05833" type="bi">Animadversionum in fune<lb break="no"/>brem orationem Thucÿdidis
-                                            fasciculus</title>.</item>
-                                    <lb/>
-                                    <label>14)</label>
-                                    <item>
-                                        <rs ref="#p1957" type="bi_person">derselbe</rs>, <title ref="#w05834" type="bi">Animadversionum in Platonis
-                                                Theae<lb break="no"/>tetum fasciculus</title>.<lb/>Diese Abhandlungen sind ungefähr von derselben
-                                            Be<lb break="no"/>schaffenheit wie die vorigen.</item>
-                                    <lb/>
-                                    <label>15)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1559" type="bi">Sökeland</persName>
-                                        </hi>, <title ref="#w05966" type="bi">Observationes ad Taciti Germa<lb break="no"/>niam</title>.</item>
-                                    <lb/>
-                                    <label>16)</label>
-                                    <item>
-                                        <rs ref="#p1559" type="bi_person">derselbe</rs>, <title ref="#w05967" type="bi">De similitudine Tacitum
-                                            inter et<lb/>Thucÿdidem &amp;c</title>.<lb/>Diese beiden sehr fleissig und mit richtigem
-                                        Urtheil<lb/>verfassten Schriftchen empfehlen den <rs ref="#p1559" type="bi_person">Verfasser</rs> sehr.</item>
-                                    <lb/>
-                                    <label>17)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1959" type="bi">Langbein</persName>
-                                        </hi>, <title ref="#w05909" type="bi">In Taciti vitam Agricolae</title>.<lb/>Großentheils noch schwach und ungelenk.</item>
-                                    <lb/>
-                                    <label>18)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p1958" type="bi">Göschen</persName>
-                                        </hi>, <title ref="#w05867" type="bi">Annotationes ad orationem in<lb/>Thucÿdidis libro primo primam</title>.</item>
-                                    <lb/>
-                                    <label>19)</label>
-                                    <item>
-                                        <hi rend="underline">
-                                            <persName ref="#p0719" type="bi">Bonnell</persName>
-                                        </hi>, <title ref="#w05843" type="bi">De oratione Ciceronis pro lege Ma<lb break="no"/>nilia dissertatio</title>.<lb/>Beide letztern
-                                        Abhandlungen enthalten manches<lb/>Gute.</item>
-                                    <lb/>
-                                </list>
-                            </hi>
-                        </p>
-                        <p>
-                            <hi rend="mark">Indem ich mich beehre einem hohen <orgName ref="#g0064" type="bi">Ministerium</orgName> diese Ab<lb break="no"/>handlungen in der Beilage zu übersenden, bitte ich zu<lb break="no"/>gleich gehorsamst um
-                                hochgefällige Zurücksendung.</hi>
-                        </p>
-                        <p>
-                            <label>2.</label>
-                            <hi rend="underline">Mündlich</hi> wurden folgende <hi rend="underline">Aufgaben</hi> behandelt, welche<lb/>die Mitglieder
-                            selbst zu stellen pflegen:<lb rend="both"/>
-                            <foreign xml:lang="la">
-                                <hi rend="latin">
-                                    <list>
-                                        <label>1)</label>
-                                        <item>Disputetur de loco <persName ref="#p0212" type="bi">Taciti</persName>
-                                            <title ref="#w06026" type="bi">Germ.</title> cap. 2. <quote>Ita nati<lb break="no"/>onis nomen — Germani
-                                                vocarentur</quote>.</item>
-                                        <lb/>
-                                        <label>2)</label>
-                                        <item>Explicetur <persName ref="#p0034" type="bi">Plat.</persName>
-                                            <title ref="#w06066" type="bi">Phaedr.</title> c.62.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            &amp;c.</item>
-                                        <lb/>
-                                        <label>3)</label>
-                                        <item>Proponitur locus <persName ref="#p0024" type="bi">Horatii</persName>
-                                            <title ref="#w05806" type="bi">Serm.</title> II,4,64. 65.<lb/>
-                                            <quote>Simplex e dulci constat olivo</quote>
-                                            &amp;c.</item>
-                                        <lb/>
-                                        <label>4)</label>
-                                        <item>Exponatur locus <persName ref="#p0212" type="bi">Taciti</persName>
-                                            <title ref="#w06026" type="bi">Germ.</title> 2. <quote>Ut omnes<lb/>primum <hi rend="underline">a
-                                                    victore</hi>
-                                            </quote> &amp;c.</item>
-                                        <lb/>
-                                        <label>5)</label>
-                                        <item>Explicetur vel emendetur <persName ref="#p0918" type="bi">Propertius</persName>
-                                            <rs ref="#w06041" type="bi_title">I,17,3</rs>.<lb/>
-                                            <quote>Nec mihi Cassiope <hi rend="underline">solito</hi> visura carinam<lb/>est.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>6)</label>
-                                        <item>Dicatur de verbis <persName ref="#p1138" type="bi">Livii</persName>
-                                            <rs ref="#w00366" type="bi_title">II,10</rs>. <quote>Si transitum<lb/>pontem a tergo
-                                            reliquissent</quote>.</item>
-                                        <lb/>
-                                        <label>7)</label>
-                                        <item>Interrogo, apud <persName ref="#p0882" type="bi">Eurip.</persName>
-                                            <title ref="#w06062" type="bi">Hecub.</title> 112. legendum<lb/>sit
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
-                                        <lb/>
-                                        <label>8)</label>
-                                        <item>Proponitur locus <persName ref="#p0034" type="bi">Platonis</persName>
-                                            <title ref="#w06069" type="bi">Charmid.</title> p.59. ed.<lb/>
-                                            <persName ref="#p0484" type="bi">Heindorf</persName>.<note resp="#sabine.seifert">
-                                                <p xml:lang="de">Vermutlich handelt es sich um die
-                                                    Ausgabe von <rs ref="#w00068" type="bi_title">1802</rs> bzw. die von <rs ref="#w00190" type="bi_title">1805</rs>, die beide Teil von <persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek waren ("Katalog meiner Bücher", <ref target="Boeckh_Buchkatalo.xml">S. 2</ref> und <ref target="Boeckh_Buchkatalo.xml">S.
-                                                    5</ref>).</p>
-                                                <p xml:lang="en">Presumably it is the <rs ref="#w00068" type="bi_title">1802</rs> and
-                                                        <rs ref="#w00190" type="bi_title">1805</rs>, edition, both of which were part of <persName ref="#p0178" type="bi">Boeckh</persName>'s library ("Catalog of my books", pp. 2 and 5).</p>
-                                                <p xml:lang="fr">Vraisemblablement les éditions de <rs ref="#w00068" type="bi_title">1802</rs> et <rs ref="#w00190" type="bi_title">1805</rs>,, qui faisaient toutes deux partie de la bibliothèque
-                                                    de <persName ref="#p0178" type="bi">Boeckh</persName> ("Catalogue de mes livres", <ref target="Boeckh_Buchkatalo.xml">pp. 2</ref> et <ref target="Boeckh_Buchkatalo.xml">5</ref>).</p>
-                                            </note>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
-                                        <lb/>
-                                        <label>9)</label>
-                                        <item>Dicatur de <persName ref="#p0212" type="bi">Taciti</persName> verbis <title ref="#w06026" type="bi">Germ.</title> cap. 44.<lb/>
-                                            <quote>Est apud illos et opibus honos; eoque unus<lb/>imperitat, nullis
-                                                iam exceptionibus, <hi rend="underline">non<lb/>precario iure parendi</hi>.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>10)</label>
-                                        <item>Quaero, an post vs. 49. <persName ref="#p0353" type="bi">Aeschÿl.</persName>
-                                            <title ref="#w05802" type="bi">Eumenid.</title>
-                                            <lb/>versiculus exciderit.</item>
-                                        <lb/>
-                                        <label>11)</label>
-                                        <item>Disputetur de variis lectionibus <persName ref="#p0917" type="bi">Tibulli</persName>
-                                            <lb/>
-                                            <rs ref="#w05816" type="bi_title">I,1,43</rs> sq. <quote>Parva seges satis est</quote> &amp;c.</item>
-                                        <pb facs="iiif:10.34847/nkl.4d29r0m5/a5e87e70302f5c96fac167b50cbd0b2e3c5936fd" n="5"/>
-                                        <note place="margin(right)" type="foliation">
-                                            <subst hand="#blue_pen">
-                                                <del rend="overwritten">
-                                                    <add hand="#pencil">132</add>
-                                                </del>
-                                                <add place="across">132</add>
-                                            </subst>
-                                        </note>
-                                         </list></hi></foreign>
-                                    </p>
-                                    <p><!-- Added tag for the good display of the indexes-->
-                                    <foreign xml:lang="la"><hi rend="latin"><list>
-                                        <label>12)</label>
-                                        <item>Apud <persName ref="#p0003" type="bi">Ciceronem</persName>
-                                            <title ref="#w04335" type="bi">de or.</title> II,9. num legen<lb break="no"/>dum est <hi rend="underline">vita</hi> memoriae an <hi rend="underline">via</hi> memoriae?</item>
-                                        <lb/>
-                                        <label>13)</label>
-                                        <item>Apud <persName ref="#p0192" type="bi">Sophocl.</persName>
-                                            <title ref="#w00387" type="bi">Philoct.</title> 1033.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            &amp;c. quaeritur an opis sit,<lb/>ut reiiciatur lectio vulgata.</item>
-                                        <lb/>
-                                        <label>14)</label>
-                                        <item>Apud <persName ref="#p0212" type="bi">Tacitum</persName>
-                                            <title ref="#w06033" type="bi">Agric.</title> 44. pro <hi rend="underline">quodam augurio</hi>
-                                            <lb/>codd.
-                                            praebent <hi rend="underline">quod</hi> aug. Quaero, utra lectio sit<lb/>praeferenda, et quomodo totum
-                                            locum expli<lb break="no"/>ces.</item>
-                                        <lb/>
-                                        <label>15)</label>
-                                        <item>Annon versus <persName ref="#p0192" type="bi">Sophocl.</persName>
-                                            <title ref="#w00368" type="bi">Antig.</title> 572. vulgo Is<lb break="no"/>menae tributus, Antigonae
-                                            restituendus est?</item>
-                                        <lb/>
-                                        <label>16)</label>
-                                        <item>Apud <persName ref="#p0192" type="bi">Sophocl.</persName>
-                                            <title ref="#w00368" type="bi">Antig.</title> 557. quaero annon<lb/>lectio restituenda sit, quae in
-                                            membranis atque<lb/>Ald. extat:
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            &amp;c.<lb/>ita ut interpretemur: "Secundum haec verba<lb/>tu sapere videbaris, secundum alia ego."</item>
-                                        <lb/>
-                                        <label>17)</label>
-                                        <item>
-                                            <persName ref="#p1021" type="bi">Herodot.</persName>
-                                            <rs ref="#w00442" type="bi_title">VI,72.</rs> utrum legendum est
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>?</item>
-                                        <lb/>
-                                        <label>18)</label>
-                                        <item>
-                                            <persName ref="#p0192" type="bi">Sophocl.</persName>
-                                            <title ref="#w00387" type="bi">Philoct.</title> 552. quaeritum quae sit<lb/>lectio constituenda, et quae
-                                            interpretandi via<lb/>com̄endanda, sum̄a difficultate posita in
-                                                voc.<lb/>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
-                                        <lb/>
-                                        <label>19)</label>
-                                        <item>Loco haud dubie corrupto <persName ref="#p0353" type="bi">Aeschÿl.</persName>
-                                            <title ref="#w01262" type="bi">Pers.</title>
-                                            <lb/>672-675.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            &amp;c.<lb/>quomodo subreniendum sit, propono in<gap extent="few characters" reason="illegible"/>
-                                            <lb/>quandum.</item>
-                                        <lb/>
-                                        <label>20)</label>
-                                        <item>Dicatur de loco <persName ref="#p0003" type="bi">Ciceronis</persName>
-                                            <title ref="#w06038" type="bi">Fin.</title> II,12. <quote>Nam<lb/>quod ait sensibus ipsis iudicari — illud
-                                                est<lb/>iudicatum.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>21)</label>
-                                        <item>Proponitur <persName ref="#p0212" type="bi">Tacit.</persName>
-                                            <title ref="#w06033" type="bi">Agric.</title> c.6. <quote>Ludos et<lb/>inania honoris — ita famae
-                                                propior.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>22)</label>
-                                        <item>Dicatur de loco <persName ref="#p0003" type="bi">Ciceronis</persName>
-                                            <title ref="#w06046" type="bi">Off.</title> I,28. <quote>Ut,<lb/>si Aeacus aut Minos diceret —
-                                                accepimus.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>23)</label>
-                                        <item>Propono <persName ref="#p0034" type="bi">Plat.</persName>
-                                            <title ref="#w06049" type="bi">Gorg.</title> §.104.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
-                                        <lb/>
-                                        <label>24)</label>
-                                        <item>Explicetur <persName ref="#p1056" type="bi">Thucÿd.</persName>
-                                            <rs ref="#w05818" type="bi_title">III,49.</rs>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>,
-                                            ubi verba
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>sum̄am
-                                            praebent difficultatem.</item>
-                                        <lb/>
-                                        <label>25)</label>
-                                        <item>Propono locum <persName ref="#p0192" type="bi">Sophocl.</persName>
-                                            <title ref="#w00443" type="bi">Aiac.</title> 596 sqq.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>&amp;c.
-                                            in quo vox
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            quam maxime<lb/>offendit.</item>
-                                        <lb/>
-                                        <label>26)</label>
-                                        <item>
-                                            <persName ref="#p0882" type="bi">Eurip.</persName>
-                                            <title ref="#w06070" type="bi">Med.</title> 178.179. metri ratio non constat.<lb/>Cui quomodo subreniendum
-                                            sit, inquirendum.</item>
-                                        <lb/>
-                                        <label>27)</label>
-                                        <item>Medela afferatur loco <persName ref="#p0882" type="bi">Eurip.</persName>
-                                            <title ref="#w06070" type="bi">Med.</title>
-                                                495.<lb/>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
-                                        <lb/>
-                                        <label>28)</label>
-                                        <item>Dicatur de <persName ref="#p0882" type="bi">Eurip.</persName>
-                                            <title ref="#w00372" type="bi">Phoen.</title> vs. 384.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>&amp;c.</item>
-                                        <lb/>
-                                        <label>29)</label>
-                                        <item>Explicetur <persName ref="#p0034" type="bi">Plat.</persName>
-                                            <title ref="#w06066" type="bi">Phaedr.</title> §.86.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                        </item>
-                                        <lb/>
-                                        <label>30)</label>
-                                        <item>Proponitur locus <persName ref="#p1138" type="bi">Livii</persName>
-                                            <rs ref="#w00366" type="bi_title">I,18.</rs>
-                                            <quote>Ex quibus<lb/>— pervenisset.</quote>
-                                        </item>
-                                        <lb/>
-                                        <label>31)</label>
-                                        <item>Dicatur de <persName ref="#p0212" type="bi">Tacit.</persName>
-                                            <title ref="#w06033" type="bi">Agric.</title> c.6. <quote>Idque ma<lb break="no"/>trimonium — plus culpae
-                                                est</quote>.</item>
-                                        <lb/>
-                                        <label>32)</label>
-                                        <item>Ap. <persName ref="#p0353" type="bi">Aeschÿl.</persName>
-                                            <title ref="#w00446" type="bi">Agam.</title> vs. 32. 33.
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <pb facs="iiif:10.34847/nkl.4d29r0m5/f4d7010e4a54a09b0cfdb3c2577c4f0577650846" n="6"/>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            &amp;c. quaeritur utrum cum<lb/>
-                                            <persName ref="#p0979" type="bi">Schützio</persName> coniungendum sit
-                                                <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
-                                            <lb/>an
-                                            cum <persName ref="#p1480" type="bi">Blomfieldo</persName>
-                                            <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>,
-                                            ut<lb/>metaphora a talis desumpta sit.</item>
-                                        <lb/>
-                                        <label>33)</label>
-                                        <item>Disputetur de lectione et sententia loci<lb/>
-                                            <persName ref="#p0003" type="bi">Ciceroniani</persName>
-                                            <title ref="#w06038" type="bi">Fin.</title> II,24. <quote>Aut Pÿlades quum sis<lb/>— non
-                                            precarere</quote>, collato lib. V, cap. 22. med.<lb/>
-                                        </item>
-                                    </list>
-                                </hi>
-                            </foreign>
-                        </p>
-                        <p>
-                            <label>3.</label> Die <hi rend="underline">Interpretationsübungen</hi> wurden wie gewöhnlich<lb/>regelmäßig angestellt; und
-                            zwar ließ <choice>
-                                <abbr>Hr Prof.</abbr>
-                                <expan>Herr Professor</expan>
-                            </choice>
-                            <hi rend="underline">
-                                <persName ref="#p0394" type="bi">Buttman̄</persName>
-                            </hi>
-                            <lb/>im <date when-iso="1820-10/1821-02">ersten halben Jahre</date> das dritte Buch der <hi rend="underline">
-                                <persName ref="#p0024" type="bi">Horazischen</persName>
-                                <lb/>
-                                <title ref="#w00009" type="bi">Oden</title>
-                            </hi> und im <date when-iso="1821-03/09">zweiten</date> etliche <title ref="#w05811" type="bi">Satiren</title> des <hi rend="underline">
-                                <persName ref="#p1185" type="bi">Juvenal</persName>
-                            </hi>
-                            <lb/>erklären; der <rs ref="#p0178" type="bi_person">Director</rs> ließ in beiden
-                            Semestern<lb/>den <hi rend="underline">
-                                <persName ref="#p1056" type="bi">Thucÿdides</persName>
-                            </hi> auslegen,<note resp="#sabine.seifert">
-                                <p xml:lang="de">Es handelt sich wahrscheinlich um <persName ref="#p1056" type="bi">Thukydides'</persName>
-                                    <title ref="#w05818" type="bi">Der Peloponnesische Krieg</title>.</p>
-                                <p xml:lang="en">It is probably <persName ref="#p1056" type="bi">Thucydides'</persName>
-                                    <title ref="#w05818" type="bi">The Peloponnesian War</title>.</p>
-                                <p xml:lang="fr">Il s'agit probablement de <title ref="#w05818" type="bi">La guerre du Péloponnèse</title> de <persName ref="#p1056" type="bi">Thucydide</persName>.</p>
-                            </note> wobei die Mitglieder großen<lb/>Eifer zeigten. Auch waren mehrere andere
-                            außer den<lb break="no"/>selben Zuhörer bei diesen Übungen.</p>
-                    </div>
-                    <div>
-                        <head>
-                            <label>III.</label>
-                            <hi rend="underline">Zuerkan̄te Prämien</hi>.</head>
-                        <p>Für das <date when-iso="1820-10/1821-02">Winterhalbejahr</date> ertheilte ein hohes <orgName ref="#g0064" type="bi">Ministerium</orgName>
-                            <lb/>auf den Antrag des <rs ref="#p0178" type="bi_person">Directors</rs> durch das Rescript vom
-                                <date when-iso="1821-04-07">7.<lb/>April</date> folgende Prämien:<lb rend="both"/>
-                            <list>
-                                <item>den Studiosus <hi rend="latin">
-                                        <persName ref="#p1590" type="bi">Kritz</persName>
-                                    </hi> 30 <choice>
-                                        <abbr>rl</abbr>
-                                        <expan>Reichsthaler</expan>
-                                    </choice>
-                                </item>
-                                <lb/>
-                                <item>den Studiosen <hi rend="latin">
-                                        <persName ref="#p0484" type="bi">Heindorf</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1419" type="bi">Panofka</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1952" type="bi">Haupt</persName>
-                                    </hi>, } jedem 25 <choice>
-                                        <abbr>rl</abbr>
-                                        <expan>Reichsthaler</expan>
-                                    </choice>
-                                </item>
-                                <lb/>
-                                <item>den Studiosen <hi rend="latin">
-                                        <persName ref="#p1951" type="bi">Lindner</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1956" type="bi">Walter</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p0925" type="bi">Wernike</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1957" type="bi">Balsam</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1559" type="bi">Sökeland</persName>
-                                    </hi> } jedem 20 <choice>
-                                        <abbr>rl</abbr>
-                                        <expan>Reichsthaler</expan>
-                                    </choice>
-                                </item>
-                            </list>
-                            <lb rend="both"/>für das <date when-iso="1821-03/09">Som̄erhalbejahr</date> aber durch das hochgefällige Re<lb break="no"/>script vom <date when-iso="1821-08-11">11. August</date> folgende:<lb rend="both"/>
-                            <list>
-                                <item>den Studiosen <hi rend="latin">
-                                        <persName ref="#p0484" type="bi">Heindorf</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1419" type="bi">Panofka</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1952" type="bi">Haupt</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1559" type="bi">Sökeland</persName>
-                                    </hi> } jedem 25 <choice>
-                                        <abbr>rl</abbr>
-                                        <expan>Reichsthaler</expan>
-                                    </choice>
-                                </item>
-                                <lb/>
-                                <item>den Studiosen <hi rend="latin">
-                                        <persName ref="#p1956" type="bi">Walter</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p0925" type="bi">Wernike</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1957" type="bi">Balsam</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1959" type="bi">Langbein</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p1958" type="bi">Göschen</persName>
-                                    </hi>
-                                </item>
-                                <lb/>
-                                <item>
-                                    <hi rend="latin">
-                                        <persName ref="#p0719" type="bi">Bonnell</persName>
-                                    </hi> } jedem 20 <choice>
-                                        <abbr>rl</abbr>
-                                        <expan>Reichsthaler</expan>
-                                    </choice>
-                                </item>
-                            </list>
-                        </p>
-                        <p>Gesam̄tsum̄e 425 <choice>
-                                <abbr>rl</abbr>
-                                <expan>Reichsthaler</expan>
-                            </choice>. Da nun die etatsmäßige Sum̄e<lb/>der Prämien nur 400 <choice>
-                                <abbr>rl</abbr>
-                                <expan>Reichsthaler</expan>
-                            </choice> beträgt, so wurden noch 25 <choice>
-                                <abbr>rl</abbr>
-                                <expan>Reichsthaler</expan>
-                            </choice>
-                            <lb/>aus den früheren Ersparnissen zugenom̄en, welche nun<lb/>aber bis auf 5 <choice>
-                                <abbr>rl</abbr>
-                                <expan>Reichsthaler</expan>
-                            </choice> aufgebraucht sind. Der <rs ref="#p0178" type="bi_person">Director</rs> ist<lb/>überzeugt, daß, wen̄ auch
-                            einzelne Mitglieder noch ziemlich<lb/>schwach sind, den̄och die Prämien zur Aufmunterung und<lb/>bei den Bedürftigern zur
-                            Unterstützung wohl angewandt<lb/>werden. Das Maß der Prämien ist auch durchaus im̄er<lb/>nach genauer Berücksichtigung der
-                            Umstände und Würdigkeit<lb/>der Mitglieder bestim̄t, und dabei die möglichste Sparsamkeit<lb/>zur Richtschnur genom̄en
-                            worden; daher ist früher häufig<lb/>die etatsmäßige Sum̄e nicht vollständig verwandt worden.<lb/>Jetzo hat sich dagegen
-                            das Verhältniß umgekehrt, und<lb/>es wäre daher, nachdem die Rückstände fast verbraucht sind,<lb/>sehr wünschenswerth,
-                            wen̄ die für das <orgName ref="#g0079" type="bi">Seminar</orgName> ausgesetzte<lb/>Sum̄e etwas vermehrt werden könnte,
-                            nicht sowohl in der<pb facs="iiif:10.34847/nkl.4d29r0m5/3ac148945448974c9ec56f6c6ddbd08324d8f8c4" n="7"/>
-                            <note place="margin(right)" type="foliation">
-                                <subst hand="#blue_pen">
-                                    <del rend="overwritten">
-                                        <add hand="#pencil">133</add>
-                                    </del>
-                                    <add place="across">133</add>
-                                </subst>
-                            </note> Absicht, alles, was ein hohes <orgName ref="#g0064" type="bi">Ministerium</orgName> etwa noch<lb/>zulegen dürfte,
-                            jedesmahl zu verwenden, sondern um<lb/>für vorkom̄ende Fälle nicht zu beschränkt zu sein,<lb/>und aus den etwanigen
-                            Überschüssen die <ref target="Boeckh_Reglemen.xml">§. 12. des<lb/>Reglements</ref> erwähnte Unterstützung bei
-                            vorkom̄enden<lb/>Promotionen leisten zu können; welches letztere<lb/> unter den gegenwärtigen Umständen ganz un<lb break="no"/>möglich sein würde. </p>
-                    </div>
-                    <div>
-                        <head>
-                            <label>IV.</label>
-                            <hi rend="underline">In̄erer Zustand des Seminars und Charakteristik<lb/>der Mitglieder.</hi>
-                        </head>
-                        <p>Daß die <rs ref="#g0079" type="bi_org">Anstalt</rs> von den Studirenden fleissig benutzt wird,<lb/>und der Nutzen desselben
-                            sich dadurch vermehrt, geht aus<lb/>der Anzahl der Theilnehmenden <ref target="Brief015Boeck.xml">(I.)</ref> hervor; aber
-                            den Erfolg<lb/>in der Ausbildung der Einzelnen haben die Lehrer nicht völlig<lb/>in ihrer Gewalt, da er von vielen
-                            Umständen, vorzüglich<lb/>aber von dem Maße des Talentes und von der auf die<lb/>Universität gebrachten Vorbereitung
-                            abhängt. Im Gan<lb break="no"/>zen genom̄en sind jedoch die jetzigen Mitglieder von der<lb/>Art, daß ich Ursache habe mit
-                            der Mehrheit zufrieden zu<lb/>sein. In der Charakteristik der Einzelnen beschränke ich<lb/>mich auf die ordentlichen
-                            Mitglieder, von welchen zwei,<lb/>
-                            <hi rend="latin">
-                                <persName ref="#p1590" type="bi">Kritz</persName>
-                            </hi>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <hi rend="latin">
-                                <persName ref="#p1951" type="bi">Lindner</persName>
-                            </hi>, ietzt nicht mehr an der <rs ref="#g0079" type="bi_org">Anstalt</rs>
-                            <lb/>theilnehmen, drei, <hi rend="latin">
-                                <persName ref="#p0484" type="bi">Heindorf</persName>
-                            </hi>, <hi rend="latin">
-                                <persName ref="#p1419" type="bi">Panofka</persName>
-                            </hi>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <hi rend="latin">
-                                <persName ref="#p1952" type="bi">Haupt</persName>
-                            </hi>
-                            <lb/>schon länger das <orgName ref="#g0079" type="bi">Seminar</orgName> besuchen, die übrigen<lb/>aber so zu sagen als Nachwuchs zu betrachten sind,<lb/>weshalb
-                            man mit dem größern Theile derselben viele<lb/>Nachsicht haben muß. <hi rend="latin underline">
-                                <persName ref="#p1590" type="bi">Kritz</persName>
-                            </hi>, welcher <date when-iso="1821-04">Ostern</date> abging,<lb/>hatte sich besonders
-                            mit der Römischen Litteratur be<lb break="no"/>schäftigt, und ist ein kenntnißreicher und sehr<lb/>brauchbarer junger Man̄
-                            geworden; ietzo ist er, wie<lb/>oben bemerkt worden, Mitglied des <orgName ref="#g0082" type="bi">Seminars<lb/>für
-                                gelehrte Schulen.</orgName>
-                            <hi rend="latin underline">
-                                <persName ref="#p1951" type="bi">Lindner</persName>
-                            </hi> ist <date when-iso="1821-03">vor einem
-                                halben<lb/>Jahre</date> von hier abgegangen <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> hat sich zur Fortsetzung<lb/>seiner Studien nach <placeName ref="#l0004" type="bi">Leipzig</placeName> begeben;
-                            es fehlte sei<lb break="no"/>nem Studiren an Methode; und er hatte zu viel Flüch<lb break="no"/>tigkeit in der Behandlung
-                            der Gegenstände, wählte<lb/>auch, wie ich oben gesagt habe, gewöhnlich solche,<lb/>die für ihn zu schwierig waren. Er
-                            befindet sich<lb/>gegenwärtig wieder hier <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> wünscht eine Anstellung<lb/>im <rs ref="#l0092" type="bi_place">Preußischen</rs> als Schulman̄, oder zunächst
-                            als<lb/>Mitglied des <orgName ref="#g0082" type="bi">Seminars für gelehrte Schulen</orgName>:<lb/>wobei iedoch wegen
-                            seiner Körpergestalt ein Be<lb break="no"/>denken eintreten könnte. <hi rend="latin underline">
-                                <persName ref="#p0484" type="bi">Heindorf</persName>
-                            </hi>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <hi rend="latin">
-                                <persName ref="#p1419" type="bi">Panofka</persName>
-                            </hi>
-                            <lb/>haben bereits gute Fortschritte gemacht <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> werden<lb/>sich gewiß recht zweckmäßig ausbilden. <hi rend="latin underline">
-                                <persName ref="#p1952" type="bi">Haupt</persName>
-                            </hi>
-                            <lb/>zeichnet sich fortwährend durch große Ordnungsliebe<lb/>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> durch Geläufigkeit im Disputiren, weniger durch<lb/>Urtheilskraft aus. Unter den jüngern Mitgliedern<lb/>ist <hi rend="latin underline">
-                                <persName ref="#p1559" type="bi">Sökeland</persName>
-                            </hi> ohne Zweifel der
-                            vorzüglichste;<lb/>mit regem Fleiß verbindet er eine gewisse Reife<lb/>des Urtheils, und berechtigt zu vorzüglichen Er<lb break="no"/>wartungen. <hi rend="latin underline">
-                                <persName ref="#p1956" type="bi">Walter</persName>
-                            </hi>, <hi rend="latin underline">
-                                <persName ref="#p1957" type="bi">Balsam</persName>
-                            </hi>, <hi rend="latin underline">
-                                <persName ref="#p1958" type="bi">Göschen</persName>
-                            </hi> und<lb/>
-                            <hi rend="latin underline">
-                                <persName ref="#p0719" type="bi">Bonnell</persName>
-                            </hi> verdienen ebenfalls Lob, lassen sich<lb/>aber noch nicht vollkom̄en charakterisiren; am
-                                we<lb break="no"/>nigsten lässt sich ein bestim̄tes Verhältnis ihrer<lb/>Talente <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> Ken̄tnisse in Vergleich des einen gegen<lb/>den andern feststellen. Gegen diese aber sind <hi rend="latin underline">
-                                <persName ref="#p1959" type="bi">Lang<lb break="no"/>bein</persName>
-                            </hi>
-                            <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice>
-                            <hi rend="latin underline">
-                                <persName ref="#p0925" type="bi">Wernike</persName>
-                            </hi> als die schwächsten, noch
-                            weit<lb/>zurück.</p>
-                    </div>
-                    <div>
-                        <p>Der <rs ref="#p0178" type="bi_person">Unterzeichnete</rs> beschließt diesen Bericht mit der ge<lb break="no"/>horsamsten
-                            Bitte um nachsichtige Beurtheilung, <choice>
-                                <abbr>u</abbr>
-                                <expan>und</expan>
-                            </choice> mit der<lb/>Versicherung, daß er nichts versäumt, was er dazu<lb/>beitragen kann, so viel Gutes, als den
-                            Umständen nach<lb/>jedesmahl möglich ist, durch das <orgName ref="#g0079" type="bi">philologische Semi<lb break="no"/>nar</orgName> zu wirken.</p>
-                    </div>
-                    <note hand="#brown_pen" place="margin(left)">
-                        <choice>
-                            <abbr>mund.</abbr>
-                            <expan>mundiert</expan>
-                        </choice>
-                        <persName ref="#p3868" type="bi">
-                            <choice>
-                                <abbr>W.</abbr>
-                                <expan>Wernicke</expan>
-                            </choice>
-                        </persName>
-                    </note>
-                    <closer>
-                        <dateline>
-                            <placeName ref="#l1103" type="bi">Berlin</placeName>
-                            <choice>
-                                <abbr>d.</abbr>
-                                <expan>den</expan>
-                            </choice>
-                            <date when-iso="1821-10-12">12. October 1821.</date>
-                        </dateline>
-                        <metamark function="separation" rend="align(center)" style="vertical-rule"/>
-                        <signed rend="align(right)">der <rs ref="#p0178" type="bi_person">Director</rs> des <orgName ref="#g0079" type="bi">philologi<lb break="no"/>schen
-                                Seminars</orgName>.<lb/>
-                            <hi rend="latin">
-                                <persName ref="#p0178" type="bi">Böckh.</persName>
-                            </hi>
-                        </signed>
-                    </closer>
-                </div>
-            </div>
-        </body>
-    </text>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Guidelines/out/Documentation-Correspondance.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title xml:lang="en">Annual report of August Boeckh to the Ministry of Culture (Berlin, 12 October 1821)</title>
+				<title xml:lang="fr">Rapport annuel d'August Boeckh au ministère de l'Éducation et des Affaires culturelles (Berlin, 12 octobre
+					1821)</title>
+				<title xml:lang="de">Jahresbericht von August Boeckh an das Preußische Kultusministerium, Unterrichtsabteilung (Berlin, 12. Oktober
+					1821)</title>
+				<funder>Deutsche Forschungsgemeinschaft: Emmy Noether-Programm</funder>
+				<!-- aktualisieren! -->
+				<principal>
+					<persName ref="#anne.baillot">
+						<forename>Anne</forename>
+						<surname>Baillot</surname>
+					</persName>
+					<affiliation>
+						<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+						<!-- aktualisieren! -->
+						<address>
+							<street>Unter den Linden 6</street>
+							<postCode>10099</postCode>
+							<settlement>Berlin</settlement>
+							<country key="DE">Deutschland</country>
+						</address>
+					</affiliation>
+				</principal>
+				<respStmt>
+					<resp>Edited by</resp>
+					<persName ref="#sabine.seifert">
+						<forename>Sabine</forename>
+						<surname>Seifert</surname>
+					</persName>
+				</respStmt>
+				<respStmt>
+					<resp>Digitization by</resp>
+					<orgName ref="#hu.berlin">Humboldt-Universität zu Berlin</orgName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Humboldt-Universität zu Berlin</authority>
+				<availability>
+					<licence target="http://creativecommons.org/licenses/by/3.0/de/deed.en">Attribution 3.0 Germany (CC BY 3.0)</licence>
+				</availability>
+				<date when-iso="2020-05"/>
+			</publicationStmt>
+			<seriesStmt>
+				<title type="main">Briefe und Texte aus dem intellektuellen Berlin um 1800</title>
+				<title type="genre">Records/Reports</title>
+				<title type="genre">Letters</title>
+				<title type="topic">Berlin University</title>
+			</seriesStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<location>
+							<address>
+								<street>Unter den Linden 8</street>
+								<postCode>10117</postCode>
+								<settlement>Berlin</settlement>
+								<country key="DE">Germany</country>
+							</address>
+						</location>
+						<institution ref="#hu.berlin">Humboldt University of Berlin</institution>
+						<repository>University archive</repository>
+						<collection>Philosophic Faculty no. 99</collection>
+						<idno type="ub.hu.berlin">Folios 130-133</idno>
+					</msIdentifier>
+					<msContents>
+						<msItem>
+							<docDate when="1821-10-12"/>
+							<note resp="#sabine.seifert" type="keyword">Philological seminar</note>
+							<note resp="#sabine.seifert" type="keyword">Corrections</note>
+							<note resp="#sabine.seifert" type="keyword">Seminar papers</note>
+							<note resp="#sabine.seifert" type="keyword">Exercises</note>
+							<note resp="#sabine.seifert" type="keyword">Bonuses</note>
+							<!-- noch überprüfen: <note type="keyword" resp="#sabine.seifert">Promotionen</note> -->
+						</msItem>
+					</msContents>
+					<physDesc>
+						<objectDesc>
+							<supportDesc>
+								<support>
+									<material>
+										<material xml:lang="de">Papier.</material>
+										<material xml:lang="en">Paper.</material>
+										<material xml:lang="fr">Papier.</material>
+									</material>
+								</support>
+								<extent>
+									<measure type="folio">
+										<measure xml:lang="de">4 Blätter</measure>
+										<measure xml:lang="en">4 folios</measure>
+										<measure xml:lang="fr">4 feuillets</measure>
+									</measure>
+								</extent>
+								<foliation corresp="#pencil">
+									<p xml:lang="de">Foliierung eines Archivars mit Bleistift.</p>
+									<p xml:lang="en">Foliation by the archive, in pencil.</p>
+									<p xml:lang="fr">Numérotation des pages par les archives, crayon de papier.</p>
+								</foliation>
+								<foliation corresp="#blue_pen">
+									<p xml:lang="de">Foliierung eines Archivars mit blauem Stift.</p>
+									<p xml:lang="en">Foliation with blue pen by the archive.</p>
+									<p xml:lang="fr">Numérotation des pages par les archives, au crayon bleu.</p>
+								</foliation>
+								<condition>
+									<p xml:lang="de">Guter Erhaltungszustand, Faltspuren, Spuren der Aktenbindung.</p>
+									<p xml:lang="en">In a good state of preservation, traces of folding and binding.</p>
+									<p xml:lang="fr">En bon état. Quelques traces de plis.</p>
+								</condition>
+							</supportDesc>
+						</objectDesc>
+						<handDesc>
+							<handNote medium="brown_ink" scope="major" scribe="author" scribeRef="#p0178" xml:id="major_hand">
+								<p xml:lang="de">Hand des Verfassers August Boeckh, Brieftext in brauner Tinte, vorwiegend in Kurrentschrift.</p>
+								<p xml:lang="en">Hand of the sender August Boeckh, text of letter in brown ink, mainly German script.</p>
+								<p xml:lang="fr">Main de l'expéditeur August Boeckh, corps de la lettre, encre marron, écriture majoritairement
+									gothique.</p>
+							</handNote>
+							<handNote medium="pencil" scope="minor" scribe="archivist" xml:id="pencil">
+								<p xml:lang="de">Hand eines Archivars, in Bleistift.</p>
+								<p xml:lang="en">Hand of an archivist, in pencil.</p>
+								<p xml:lang="fr">Main d'un archiviste, crayon de papier.</p>
+							</handNote>
+							<handNote medium="blue_pen" scope="minor" scribe="archivist" xml:id="blue_pen">
+								<p xml:lang="de">Hand eines Archivars, mit blauem Stift.</p>
+								<p xml:lang="en">Hand of an archivist, with blue pen.</p>
+								<p xml:lang="fr">Main d'un archiviste, au crayon bleu.</p>
+							</handNote>
+						</handDesc>
+					</physDesc>
+					<history>
+						<origin>
+							<p xml:lang="de">Der Brief wurde am <origDate when-iso="1821-10-12">12. Oktober 1821</origDate> in <origPlace ref="#l1103"
+									>Berlin</origPlace> geschrieben. Die Jahresberichte von <persName ref="#p0178">Boeckhs</persName> Hand verblieben
+								bei seinen Aufzeichnungen und gingen später in das Universitätsarchiv ein. Das <orgName ref="#g0064"
+									>Ministerium</orgName> erhielt die Abschrift eines Schreibers.</p>
+							<p xml:lang="en">The letter was written in <origPlace ref="#l1103">Berlin</origPlace> on <origDate when-iso="1821-10-12"
+									>12 October 1821</origDate>. The annual reports written by <persName ref="#p0178">Boeckh</persName> remained with
+								him and later became part of the university archive. The <orgName ref="#g0064">ministry</orgName> received a copy by a
+								scribe.</p>
+							<p xml:lang="fr">La lettre a été écrite à <origPlace ref="#l1103">Berlin</origPlace> le <origDate when-iso="1821-10-12">12
+									octobre 1821</origDate>. Les rapports annuels autographes de <persName ref="#p0178">Boeckh</persName> ont d'abord
+								été conservés avec ses documents personnels, puis transmis aux archives de l'université, tandis que le <orgName
+									ref="#g0064">ministère</orgName> a conservé un duplicat réalisé par un copiste.</p>
+						</origin>
+					</history>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<projectDesc>
+				<p xml:lang="de">Nachwuchsgruppe Berliner Intellektuelle 1800-1830</p>
+				<p xml:lang="fr">Groupe de recherche junior du Berlin intellectuel des années 1800-1830</p>
+				<p xml:lang="en">Junior research group of Berlin intellectuals 1800-1830</p>
+			</projectDesc>
+			<editorialDecl>
+				<correction method="markup">
+					<p xml:lang="de">Keine Korrekturen.</p>
+					<p xml:lang="en">No corrections.</p>
+					<p xml:lang="fr">Aucune correction.</p>
+				</correction>
+				<hyphenation eol="hard" rend="dh">
+					<p xml:lang="fr">Toutes les coupures de mots pour fin de ligne (indiquées principalement avec un double tiret) ont été
+						enlevées.</p>
+					<p xml:lang="en">All the end-of-line hyphenation (made with a double hyphen) have been removed.</p>
+				</hyphenation>
+				<normalization>
+					<p xml:lang="fr">Aucune normalisation</p>
+					<p xml:lang="en">No normalization</p>
+					<p xml:lang="de">Keine Normalisierung.</p>
+				</normalization>
+			</editorialDecl>
+		</encodingDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="de" usage="80"/>
+				<language ident="la" usage="15"/>
+				<language ident="grc" usage="5"/>
+			</langUsage>
+			<correspDesc>
+				<correspAction type="sent">
+					<persName ref="https://viaf.org/viaf/37048283/">August Boeckh</persName>
+					<placeName ref="https://www.geonames.org/2950159">Berlin</placeName>
+					<date when-iso="1821-10-12"/>
+				</correspAction>
+				<correspAction type="received">
+					<orgName ref="#g0064">Preußisches Kultusministerium, Unterrichtsabteilung</orgName>
+				</correspAction>
+				<correspContext>
+					<ref target="Brief014Boeckh.xml" type="prev"/>
+					<ref target="Brief016Boeckh.xml" type="next"/>
+				</correspContext>
+			</correspDesc>
+		</profileDesc>
+		<revisionDesc status="final_publication">
+			<change when-iso="2021-09-17" who="#floriane.chiffoleau">Changed the content of the @facs to match the IIIF link</change>
+			<change when-iso="2021-07-28" who="#floriane.chiffoleau">Translated the notes in English and French</change>
+			<change when-iso="2021-07-22" who="#floriane.chiffoleau">Modified the tag milestone to put metamark</change>
+			<change when-iso="2021-07-22" who="#floriane.chiffoleau">Upgrading TEI encoding (body)</change>
+			<change when-iso="2021-03-04" who="#floriane.chiffoleau">Upgrading TEI encoding (header)</change>
+			<change when-iso="2020-08-15" who="#sabine.seifert">Encoding of pages 3 to 7. Publication online. Final corrections.</change>
+			<change when-iso="2020-08-14" who="#sabine.seifert">Encoding of page 1 and 2.</change>
+			<change when-iso="2020-07-22" who="#sabine.seifert">Corrected encoding in origin (persName to orgName).</change>
+			<change when-iso="2020-05-14" who="#sabine.seifert">Encoding of metadata.</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="transcription">
+				<pb facs="iiif:10.34847/nkl.4d29r0m5/5cb149722cfd4f7213f8ee73a0c3f684f053ee22" n="1"/>
+				<note place="margin(right)" type="foliation">
+					<subst hand="#blue_pen">
+						<del rend="overwritten">
+							<add hand="#pencil">130</add>
+						</del>
+						<add place="across">130</add>
+					</subst>
+				</note>
+				<note place="margin(left)">
+					<choice>
+						<abbr>Hrn</abbr>
+						<expan>Herrn</expan>
+					</choice> Registrator <persName ref="#p3868" type="bi">Wernike</persName> zum Mundiren;<lb/>das Mundum mir zur Unterschrift vor<lb
+						break="no"/>zulegen, <choice>
+						<abbr>u</abbr>
+						<expan>und</expan>
+					</choice> durch den <choice>
+						<abbr>Hrn</abbr>
+						<expan>Herrn</expan>
+					</choice> Regier<choice>
+						<abbr>gs</abbr>
+						<expan>ungs</expan>
+					</choice>bevoll<lb break="no"/>mächtigten dem vorgesetzten <orgName ref="#g0064" type="bi">Ministerium</orgName>
+					<lb/>einzusenden.</note>
+				<opener>
+					<dateline>
+						<choice>
+							<abbr>d.</abbr>
+							<expan>den</expan>
+						</choice>
+						<date when-iso="1821-10-21">12. <choice>
+								<abbr>Oct.</abbr>
+								<expan>October</expan>
+							</choice> 21.</date>
+					</dateline>
+					<signed rend="align(right)">
+						<hi rend="latin">
+							<persName ref="#p0178" type="bi">Böckh.</persName>
+						</hi>
+					</signed>
+				</opener>
+				<div>
+					<p>Einem hohen <orgName ref="#g0064" type="bi">Ministerium der geistlichen, Unter<lb break="no"/>richts<pc>=</pc> und
+							Medicinalangelegenheiten</orgName>, Unterrichts<lb break="no" type="sh"/>abtheilung, beehrt sich der <rs ref="#p0178"
+							type="bi_person">Unterzeichnete</rs> den<lb/>Jahresbericht über den Zustand des <orgName ref="#g0079" type="bi"
+							>philologischen<lb/>Seminars</orgName> der hiesigen <orgName ref="#g0122" type="bi">Universität</orgName> im ver<lb
+							break="no"/>flossenen akademischen Jahre pflichtschuldigst<lb/>zu erstatten.</p>
+					<div>
+						<head>
+							<label>I.</label>
+							<hi rend="underline">Übersicht der Mitglieder.</hi>
+						</head>
+						<p>Von denjenigen Mitgliedern der <rs ref="#g0079" type="bi_org">Anstalt</rs>, welche<lb/>im vorigen <ref
+								target="Brief014Boeckh.xml">Jahresberichte</ref> als solche aufge<lb break="no"/>führt worden sind, welche noch in dem
+								<date when-iso="1820-03/09">zweiten<lb/>halben Jahre</date> Antheil an den Übungen nahmen,<lb/>gingen nach dem Abgange
+							der bereits eben da<lb break="no"/>selbst genan̄ten Studirenden und der zum Studium<lb/>der Theologie übergetretenen
+								<persName ref="#p1949" type="bi">Ernst Glasewald</persName>, <add n="+" place="margin(left)">sowie des <persName
+									ref="#p1494" type="bi">Alexander Schmidt</persName>
+								<lb/>und <persName ref="#p3740" type="bi">Ernst Förster</persName>, welche eben<lb break="no"/>falls andere Studien
+								erwählten,</add>
+							<lb/>folgende in den nächsten <date when-iso="1820-10/1821-02">Cursus</date> über:<lb rend="both"/>Als <orgName
+								ref="#g0051" type="bi">ordentliche Mitglieder</orgName>,<lb rend="both"/>
+							<list>
+								<label>1)</label>
+								<item>
+									<persName ref="#p1953" type="bi">Wilhelm Heindorf</persName> von <placeName ref="#l1103" type="bi"
+										>Berlin</placeName>,</item>
+								<lb/>
+								<label>2)</label>
+								<item>
+									<persName ref="#p1419" type="bi">
+										<subst>
+											<del rend="overwritten">
+												<gap extent="few characters" reason="illegible"/>
+											</del>
+											<add place="across">Sigis</add>
+										</subst>mund <hi rend="latin">Panofka</hi>
+									</persName> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
+								<lb/>
+								<label>3)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1590" type="bi">
+											<choice>
+												<abbr>Friedr.</abbr>
+												<expan>Friedrich</expan>
+											</choice> Kritz</persName>
+									</hi> aus dem <rs ref="#l0253" type="bi_place">Erfurtischen</rs>,</item>
+								<lb/>
+								<label>4)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1952" type="bi">Carl Haupt</persName>
+									</hi> von <placeName ref="#l0781" type="bi">Luckau</placeName>,</item>
+								<lb/>
+								<label>5)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1951" type="bi">
+											<choice>
+												<abbr>Heinr.</abbr>
+												<expan>Heinrich</expan>
+											</choice> Lindner</persName>
+									</hi> von <placeName ref="#l0268" type="bi">Dessau</placeName>,</item>
+								<lb/>
+								<label>6)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p0925" type="bi">
+											<choice>
+												<abbr>Jul.</abbr>
+												<expan>Julius</expan>
+											</choice> Wernike</persName>
+									</hi> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
+								<lb/>
+								<label>7)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1956" type="bi">
+											<choice>
+												<abbr>Friedr.</abbr>
+												<expan>Friedrich</expan>
+											</choice> Walter</persName>
+									</hi> von <placeName ref="#l1103" type="bi">Berlin</placeName>;</item>
+							</list>
+							<lb rend="both"/>als <orgName ref="#g0102" type="bi">außerordentliche Mitglieder</orgName>,<lb rend="both"/>
+							<list>
+								<label>1)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p3744" type="bi">Carl Schultz</persName>
+									</hi> aus <placeName ref="#l0638" type="bi">Mittenwalde</placeName>,</item>
+								<lb/>
+								<label>2)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1556" type="bi">Lucian Plehn</persName>
+									</hi> aus <rs ref="#l1203" type="bi_place">Preußen</rs>.</item>
+							</list>
+						</p>
+						<p>Neu hinzu kamen als <orgName ref="#g0051" type="bi">ordentliche Mitglieder</orgName>:<lb rend="both"/>
+							<list>
+								<label>8)</label>
+								<item>
+									<persName ref="#p1957" type="bi">August Balsam</persName>
+									<note resp="#sabine.seifert">
+										<p xml:lang="de">Die korrekten Vornamen von <persName ref="#p1957" type="bi">Balsam</persName> lauten
+											Christian Adolf. Er stammt aus <placeName ref="#l0783" type="bi">Tschenstochau</placeName> in der Nähe von
+												<placeName ref="#l0027" type="bi">Breslau</placeName>.</p>
+										<p xml:lang="en">The correct first names for <persName ref="#p1957" type="bi">Balsam</persName> are Christian
+											Adolf. He comes from <placeName ref="#l0783" type="bi">Czestochowa</placeName> near <placeName
+												ref="#l0027" type="bi">Breslau</placeName>.</p>
+										<p xml:lang="fr">Les prénoms corrects pour <persName ref="#p1957" type="bi">Balsam</persName> sont Christian
+											Adolf. Il vient de <placeName ref="#l0783" type="bi">Czestochowa</placeName> près de <placeName
+												ref="#l0027" type="bi">Breslau</placeName>.</p>
+									</note> von <placeName ref="#l0027" type="bi">Breslau</placeName>,</item>
+								<lb/>
+								<label>9)</label>
+								<item>
+									<persName ref="#p1559" type="bi">Bernhard Sökeland</persName> aus <placeName ref="#l0293" type="bi"
+										>Münster</placeName>,<note resp="#sabine.seifert">
+										<p xml:lang="de">
+											<persName ref="#p1559" type="bi">Sökeland</persName> stammt aus <placeName ref="#l0634" type="bi"
+												>Darfeld</placeName> in der Nähe von <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
+										<p xml:lang="en">
+											<persName ref="#p1559" type="bi">Sökeland</persName> comes from <placeName ref="#l0634" type="bi"
+												>Darfeld</placeName> near <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
+										<p xml:lang="fr">
+											<persName ref="#p1559" type="bi">Sökeland</persName> vient de <placeName ref="#l0634" type="bi"
+												>Darfeld</placeName> près de <placeName ref="#l0293" type="bi">Münster</placeName>.</p>
+									</note> welcher<lb/>zwar Anfangs nur als außerordentliches<lb/>Mitglied eintrat, nachher aber als
+									ordentliches<lb/>aufgenom̄en und durch eine Prämie auf<lb break="no"/>gemuntert wurde;</item>
+							</list>
+							<lb rend="both"/> als <orgName ref="#g0102" type="bi">außerordentliche</orgName> aber:<lb rend="both"/>
+							<list>
+								<label>3)</label>
+								<item>
+									<persName ref="#p1954" type="bi">Adolph Almus</persName> von <placeName ref="#l0036" type="bi"
+									>Stettin</placeName>,</item>
+								<lb/>
+								<label>4)</label>
+								<item>
+									<persName ref="#p1955" type="bi">Joseph Gaßmann</persName> von <placeName ref="#l0782" type="bi"
+										>Heiligenstadt</placeName>,</item>
+								<lb/>
+								<label>5)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1959" type="bi">Wilhelm Langbein</persName>
+									</hi> aus <placeName ref="#l0784" type="bi">Mecklenburg</placeName>,</item>
+								<lb/>
+								<label>6)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p3745" type="bi">August Milo</persName>
+									</hi> aus der Mittelmark,<note resp="#sabine.seifert">
+										<p xml:lang="de">
+											<persName ref="#p3745" type="bi">Milo</persName> stammt aus <placeName ref="#l1150" type="bi"
+												>Fehrbellin</placeName>.</p>
+										<p xml:lang="en">
+											<persName ref="#p3745" type="bi">Milo</persName> comes from <placeName ref="#l1150" type="bi"
+												>Fehrbellin</placeName>.</p>
+										<p xml:lang="fr">
+											<persName ref="#p3745" type="bi">Milo</persName> vient de <placeName ref="#l1150" type="bi"
+												>Fehrbellin</placeName>.</p>
+									</note>
+								</item>
+								<lb/>
+								<label>7)</label>
+								<item>
+									<persName ref="#p1958" type="bi">Adolph Göschen</persName> von <placeName ref="#l1103" type="bi"
+										>Berlin</placeName>,</item>
+								<lb/>
+								<label>8)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p0719" type="bi">Eduard Bonnell</persName>
+									</hi> von <placeName ref="#l1103" type="bi">Berlin</placeName>,</item>
+								<lb/>
+								<label>9)</label>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1355" type="bi">
+											<choice>
+												<abbr>Friedr.</abbr>
+												<expan>Friedrich</expan>
+											</choice> Paul</persName>
+									</hi> von <placeName ref="#l1079" type="bi">Schwedt</placeName>.</item>
+							</list>
+						</p>
+						<p>
+							<date when-iso="1821-04">Ostern <choice>
+									<abbr>d. J.</abbr>
+									<expan>des Jahres</expan>
+								</choice>
+							</date> verließen von den ordentlichen Mitgliedern<lb/>nur zwei, <hi rend="latin">
+								<persName ref="#p1590" type="bi">Kritz</persName>
+							</hi> und <hi rend="latin">
+								<persName ref="#p1951" type="bi">Lindner</persName>
+							</hi> das <orgName ref="#g0079" type="bi">Seminar</orgName> und<lb/>die <orgName ref="#g0122" type="bi"
+								>Universität</orgName>, und es wurden drei der außer<lb break="no"/>ordentlichen, <hi rend="latin">
+								<persName ref="#p1959" type="bi">Langbein</persName>
+							</hi>, <hi rend="latin">
+								<persName ref="#p1958" type="bi">Göschen</persName>
+							</hi> und <hi rend="latin">
+								<persName ref="#p0719" type="bi">Bonnell</persName>
+							</hi>
+							<lb/>unter die <rs ref="#g0052" type="bi_org">ordentlichen</rs> aufgenom̄en. Außer den<lb/>drei ebengenann̄ten schieden
+							aus der Zahl der<pb facs="iiif:10.34847/nkl.4d29r0m5/bd12b36310fafdf7b8766d1bd992fa274be07075" n="2"/>außerordentlichen
+							Mitglieder aus <hi rend="latin">
+								<persName ref="#p3744" type="bi">Schultz</persName> von <placeName ref="#l0638" type="bi">Mitten<lb break="no"
+									/>walde</placeName>, <persName ref="#p1954" type="bi">Almus</persName>, <persName ref="#p3745" type="bi"
+									>Milo</persName>, <persName ref="#p1355" type="bi">Paul</persName>, <persName ref="#p1556" type="bi"
+									>Plehn</persName>, <persName ref="#p1955" type="bi">Gassmann</persName>
+							</hi>,<lb/>also die gesam̄te Zahl derer, welche bisher außer<lb break="no"/>ordentlich an dem <orgName ref="#g0079"
+								type="bi">Seminar</orgName> Theil genom̄en hatten <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice>
+							<lb/>nicht als ordentliche Mitglieder in der <rs ref="#g0079" type="bi_org">Anstalt</rs> ge<lb break="no"/>blieben sind.
+							Statt dieser nahmen <rs ref="#g0103" type="bi_org">folgende zehn</rs> in dem <date when-iso="1821-03/09"
+								>Som̄erhalbejahre</date> außerordentlicher Weise<lb/>an dem <orgName ref="#g0079" type="bi">Seminar</orgName>
+								Antheil:<lb rend="both"/>
+							<hi rend="latin">
+								<list>
+									<label>1)</label>
+									<item>
+										<persName ref="#p3749" type="bi">Joseph Schreiner</persName>
+										<note resp="#sabine.seifert">
+											<p xml:lang="de">Die korrekten Vornamen von <persName ref="#p3749" type="bi">Schreiner</persName> lauten
+												Johann Baptist. Er stammt aus <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in
+													<placeName ref="#l1200" type="bi">Franken</placeName>.</p>
+											<p xml:lang="en">The correct first name for <persName ref="#p3749" type="bi">Schreiner</persName> is
+												Johann Baptist. He comes from <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> in
+													<placeName ref="#l1200" type="bi">Franconia</placeName>.</p>
+											<p xml:lang="fr">Le prénom correct pour <persName ref="#p3749" type="bi">Schreiner</persName> est Johann
+												Baptist. Il vient de <placeName ref="#l1161" type="bi">Bad Mergentheim</placeName> en <placeName
+													ref="#l1200" type="bi">Franconie</placeName>.</p>
+										</note> aus <placeName ref="#l1200" type="bi">Franken</placeName>,</item>
+									<lb/>
+									<label>2)</label>
+									<item>
+										<persName ref="#p3751" type="bi">
+											<choice>
+												<abbr>C.</abbr>
+												<expan>Carl</expan>
+											</choice> Wagner</persName> aus <placeName ref="#l0016" type="bi">Pom̄ern</placeName>,</item>
+									<lb/>
+									<label>3)</label>
+									<item>
+										<persName ref="#p3750" type="bi">
+											<choice>
+												<abbr>Fr. Aug.</abbr>
+												<expan>Friedrich August</expan>
+											</choice> Schulze</persName> aus <placeName ref="#l1203" type="bi">Westpreussen</placeName>,<note
+											resp="#sabine.seifert">
+											<p xml:lang="de">
+												<persName ref="#p3750" type="bi">Schulze</persName> stammt aus <placeName ref="#l1153" type="bi"
+													>Marienburg</placeName>.</p>
+											<p xml:lang="en">
+												<persName ref="#p3750" type="bi">Schulze</persName> comes from <placeName ref="#l1153" type="bi"
+													>Marienburg</placeName>.</p>
+											<p xml:lang="fr">
+												<persName ref="#p3750" type="bi">Schulze</persName> vient de <placeName ref="#l1153" type="bi"
+													>Marienburg</placeName>.</p>
+										</note>
+									</item>
+									<lb/>
+									<label>4)</label>
+									<item>
+										<persName ref="#p3747" type="bi">
+											<choice>
+												<abbr>Fr.</abbr>
+												<expan>Friedrich</expan>
+											</choice> Knorre</persName> von <placeName ref="#l1151" type="bi">Narwa</placeName>,</item>
+									<lb/>
+									<label>5)</label>
+									<item>
+										<persName ref="#p3752" type="bi">Christian Wilbrandt</persName> aus <placeName ref="#l1139" type="bi"
+											>Mecklenburg</placeName>,<note resp="#sabine.seifert">
+											<p xml:lang="de">
+												<persName ref="#p3752" type="bi">Wilbrandt</persName> stammt aus <placeName ref="#l0819" type="bi"
+													>Neuenkirchen</placeName>.</p>
+											<p xml:lang="en">
+												<persName ref="#p3752" type="bi">Wilbrandt</persName> comes from <placeName ref="#l0819" type="bi"
+													>Neuenkirchen</placeName>.</p>
+											<p xml:lang="fr">
+												<persName ref="#p3752" type="bi">Wilbrandt</persName> est originaire de <placeName ref="#l0819"
+													type="bi">Neuenkirchen</placeName>.</p>
+										</note>
+									</item>
+									<lb/>
+									<label>6)</label>
+									<item>
+										<persName ref="#p1603" type="bi">Franz Winiewski</persName> von <placeName ref="#l0648" type="bi"
+											>Thorn</placeName>,</item>
+									<lb/>
+									<label>7)</label>
+									<item>
+										<persName ref="#p3746" type="bi">
+											<choice>
+												<abbr>G. G.</abbr>
+												<expan>Gottfried Gabriel</expan>
+											</choice> Friedenberg</persName> von <placeName ref="#l0076" type="bi">Aschaffenburg</placeName>,</item>
+									<lb/>
+									<label>8)</label>
+									<item>
+										<persName ref="#p1963" type="bi">
+											<choice>
+												<abbr>J. S.</abbr>
+												<expan>Jacques Simon</expan>
+											</choice> Jacobi</persName> von <placeName ref="#l0091" type="bi">Potsdam</placeName>,</item>
+									<lb/>
+									<label>9)</label>
+									<item>
+										<persName ref="#p3748" type="bi">Carl Ritthausen</persName> aus der <placeName ref="#l1152" type="bi"
+											>Neumark</placeName>,</item>
+									<lb/>
+									<label>10)</label>
+									<item>
+										<persName ref="#p1961" type="bi">Carl Wendt</persName> von <placeName ref="#l0091" type="bi"
+											>Potsdam</placeName>.<note resp="#sabine.seifert">
+											<p xml:lang="de">
+												<persName ref="#p1961" type="bi">Wendt</persName> stammt aus <placeName resp="#l0263" type="bi"
+													>Königsberg</placeName>.</p>
+											<p xml:lang="en">
+												<persName ref="#p1961" type="bi">Wendt</persName> comes from <placeName resp="#l0263" type="bi"
+													>Königsberg</placeName>..</p>
+											<p xml:lang="fr">
+												<persName ref="#p1961" type="bi">Wendt</persName> vient de <placeName resp="#l0263" type="bi"
+													>Königsberg</placeName>..</p>
+										</note>
+									</item>
+								</list>
+							</hi>
+						</p>
+						<p>Aus diesen Angaben geht hervor, daß im <date when-iso="1820-10/1821-02">ersten<lb/>halben Jahre</date> 9 ordentliche und 9
+							außerordentliche,<lb/>im <date when-iso="1821-03/09">zweiten</date> 10 ordentliche und ebenfalls 10 außer<lb break="no"
+							/>ordentliche Mitglieder das <orgName ref="#g0079" type="bi">Seminar</orgName> bildeten, nicht<lb/>gerechnet mehrere
+							andere, welche die Erlaubniß<lb/>den Übungen beizuwohnen, erhielten und benutzten,<lb/>ohne sich als Mitglieder
+							einschreiben zu lassen:<lb/>von welchen zu reden überflüssig scheint. Was<lb/>die in beiden halben Jahren ausgetretenen
+							betrifft,<lb/>so haben sie theils die <orgName ref="#g0122" type="bi">Universität</orgName> verlassen,<lb/>und unter
+							diesen sind <hi rend="latin">
+								<persName ref="#p1590" type="bi">Kritz</persName>
+							</hi>, <hi rend="latin">
+								<persName ref="#p1954" type="bi">Almus</persName>
+							</hi> und <hi rend="latin">
+								<persName ref="#p1355" type="bi">Paul</persName>
+							</hi>
+							<lb/>in das <orgName ref="#g0082" type="bi">Seminar für gelehrte Schulen</orgName> einge<lb break="no"/>treten, theils
+							sind sie durch andere Studien und<lb/>Beschäftigungen, etliche nahmentlich durch den Mi<lb break="no"/>litärdienst, an der
+							fernern Benutzung der <rs ref="#g0079" type="bi_org">Anstalt</rs>
+							<lb/>verhindert worden. </p>
+					</div>
+					<div>
+						<head>
+							<label>II.</label>
+							<hi rend="latin">Übungen des Seminars</hi>.</head>
+						<p>Die Übungen des <orgName ref="#g0079" type="bi">Seminars</orgName> bestanden wie gewöhnlich<lb/>in der Anfertigung und
+							Beurtheilung der Abhandlungen,<lb/>Stellung und mündlichen Beantwortung philologischer<lb/>Aufgaben kleinerer Art, und
+							Auslegung der Schrift<lb break="no"/>steller. Die Mitglieder haben es im Ganzen genom̄en<lb/>an Fleiß nicht fehlen lassen;
+							auch ist darauf geachtet<lb/>worden, daß die für eine jede dieser Übungen besonders<lb/>verabredeten Reihefolge
+							eingehalten wurde. Über das<lb/>Innere bei Anstellung dieser Übungen läßt sich nicht<lb/>füglich ohne große
+							Weitläuftigkeit berichten; ich be<lb break="no"/>schränke mich daher darauf, anzugeben, welche Ab<lb/>handlungen
+							geliefert, welche Aufgaben gestellt und<lb/>welche Schriftsteller erklärt wurden.</p>
+						<p>
+							<label>1.</label> Was die <hi rend="underline">Abhandlungen</hi> betrifft, so habe ich iederzeit<lb/>und auch diesesmahl
+							den Grundsatz befolgt, keinem der Mit<lb break="no"/>glieder ein Thema vorzuschreiben, sondern mit Rücksicht<lb/>der
+							besondern Richtung und eigenthümlichen Studien ei<lb break="no"/>nes jeden die Wahl des Gegenstandes nur zu
+							leiten<lb/>oder zu billigen, und für die Abfassung Rath im All<lb break="no"/>gemeinen zu geben. Da die Befolgung des
+								letztern<pb facs="iiif:10.34847/nkl.4d29r0m5/ded8c9344ab67062b0a8e2a7550e696d2d91ab38" n="3"/>
+						</p>
+						<p><!-- Added tag for the good display of the indexes-->
+							<note place="margin(right)" type="foliation">
+								<subst hand="#blue_pen">
+									<del rend="overwritten">
+										<add hand="#pencil">131</add>
+									</del>
+									<add place="across">131</add>
+								</subst>
+							</note> aber von dem Maße der Ken̄tnisse und der Urtheils<lb break="no"/>kraft eines jeden Einzelnen abhängt, dieses
+							Maß<lb/>jedoch bisweilen noch verhältnismäßig gering ist,<lb/>so kam wol auch der Fall vor, daß Abhandlungen,<lb/>ehe sie
+							zur Lesung und Beurtheilung in Umlauf<lb/>gesetzt wurden, zu nochmahliger Überarbeitung zu<lb break="no"/>rückgegeben
+							werden mußten. Die ordentlichen Mitglieder<lb/>haben folgende Abhandlungen geliefert, welche ich, mit<lb/>Übergehung
+							anderer von außerordentlichen gelieferten<lb/>kurz aufzählen will.<lb rend="both"/>
+							<hi rend="latin">
+								<list>
+									<label>1)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1590" type="bi">Kritz</persName>
+										</hi>
+										<title ref="#w05905" type="bi">Animadversionem in Sallustii Catili<lb break="no"/>nam particula
+										altera</title>. Eine zwar etwas dürf<lb break="no"/>tige, aber gut und mit Urtheil geschriebene Ab<lb
+											break="no"/>handlung.</item>
+									<lb/>
+									<label>2)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1951" type="bi">Lindner</persName>
+										</hi>
+										<title ref="#w05917" type="bi">Annotationes in Aeschÿli Supplicium<lb/>chori canticum primum</title>. Ich habe
+										dem Verfasser<lb/>im̄er von so schwierigen Gegenständen, von welchen er<lb/>nicht ablassen wollte, abgerathen:
+										den̄och hat er sich<lb/>aber hier an einem Stoff versucht, welchem er<lb/>nicht gewachsen war. Die Abhandlung
+										enthält wenig<lb/>Plan, zeugt jedoch von einigem, wen̄ gleich noch nicht durchgedrungenem Studium.</item>
+									<lb/>
+									<label>3)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1953" type="bi">Heindorf</persName>
+										</hi>
+										<title ref="#w05879" type="bi">Archÿtae Vita</title>. Fleissig gearbeitet,<lb/>aber nicht ganz planmäßig
+										angelegt.</item>
+									<lb/>
+									<label>4)</label>
+									<item>
+										<rs ref="#p1953" type="bi_person">derselbe</rs>, <title ref="#w05880" type="bi">Specimen fragmentorum
+											Cratini</title>.<lb/>Zweckmäßig und ziemlich gut, auch mit Fleiß<lb/>durchgeführt, doch in der Darstellung
+										noch etwas<lb/>unbeholfen.</item>
+									<lb/>
+									<label>5)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1419" type="bi">Panofka</persName>
+										</hi>, <title ref="#w05937" type="bi">Samica, Diss. I</title>.</item>
+									<lb/>
+									<label>6)</label>
+									<item>
+										<rs ref="#p1419" type="bi_person">Derselbe</rs>, <title ref="#w05938" type="bi">Samica, Diss.
+										II</title>.<lb/>Der <rs ref="#p1419" type="bi_person">Verfasser</rs> beschäftigt sich mit einer
+										Monographie<lb/>über <placeName ref="#l0707" type="bi">Samos</placeName>, woraus diese Abhandlungen Bruch<lb
+											break="no"/>stücke sind. Der Stoff ist fleissig gesam̄elt, das<lb/>Urtheil verschiedenartig, die
+										Darstellung noch un<lb break="no"/>beholfen. Im Ganzen sind aber diese Schriftchen<lb/>lobenswerth.</item>
+									<lb/>
+									<label>7)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1952" type="bi">Haupt</persName>
+										</hi>, <title ref="#w05875" type="bi">Diplomaticae inquisitionis in<lb/>Herodoti libros institutae Specimen
+											I</title>.<lb/>Der Gegenstand, welcher allerdings eine Betrachtung<lb/>verdient, ist nicht von der
+										richtigen Seite aufgefaßt,<lb/>
+										<choice>
+											<abbr>u</abbr>
+											<expan>und</expan>
+										</choice> die Abhandlung giebt daher, ungeachtet der Müh<lb break="no"/>samkeit der Vergleichung der
+										Lesearten, kein<lb/>bedeutendes Ergebnis.</item>
+									<lb/>
+									<label>8)</label>
+									<item>
+										<rs ref="#p1952" type="bi_person">derselbe</rs>, <title ref="#w05876" type="bi">De difficillimis
+											Trachinarium<lb/>locis</title>. Fleissig, und nicht ganz unbefriedigend.</item>
+									<lb/>
+									<label>9)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p0925" type="bi">Wernike</persName>
+										</hi>, <title ref="#w05990" type="bi">Observationes in primam ele<lb break="no"/>giam Tibulli</title>.</item>
+									<lb/>
+									<label>10)</label>
+									<item>
+										<rs ref="#p0925" type="bi_person">derselbe</rs>, <title ref="#w05991" type="bi">De epigrammatibus, quae
+											vulgo<lb/>Platoni philosopho tribuuntur</title>.<lb/>Diese beiden Schriftchen sind mit mühsamem
+										Fleiße<lb/>gearbeitet; aber es ist darin eine große Unreife des<lb/>Urtheils und ein widerwärtiger Mangel an
+											Fertig<lb break="no"/>keit in den Regeln der Lateinischen Gram̄atik. Da<lb break="no"/>gegen sind wieder
+										sehr gute Sachen darin; aber ich<lb/>sehe den gegründeten Verdacht, daß der <rs ref="#p0925" type="bi_person"
+											>Verfasser</rs>
+										<lb/>hinterlassene Papiere seines verstorbenen <rs ref="#p0654" type="bi_person">Bruders</rs>
+										<lb/>benutzte:<note resp="#sabine.seifert">
+											<p xml:lang="de">
+												<persName ref="#p0925" type="bi">Julius Wernikes</persName> Bruder <persName ref="#p0654" type="bi"
+													>Friedrich August Wernicke</persName> war ebenfalls Mitglied in <persName ref="#p0178" type="bi"
+													>Boeckhs</persName>
+												<orgName ref="#g0079" type="bi">philologischen Seminar</orgName> gewesen.</p>
+											<p xml:lang="en">
+												<persName ref="#p0925" type="bi">Julius Wernikes</persName>'s brother <persName ref="#p0654" type="bi"
+													>Friedrich August Wernicke</persName> had also been a member of Boeckh's <orgName ref="#g0079"
+													type="bi">philological seminar</orgName>.</p>
+											<p xml:lang="fr">Le frère de <persName ref="#p0925" type="bi">Julius Wernikes</persName>, <persName
+													ref="#p0654" type="bi">Friedrich August Wernicke</persName>, avait également été membre du
+													<orgName ref="#g0079" type="bi">séminaire philologique</orgName> de Boeckh.</p>
+										</note> was ich ihm auch schon einmahl verwie<lb break="no"/>sen habe. Doch halte ich ihn der Nachsicht in
+										dieser<lb/>Beziehung würdig.</item>
+									<pb facs="iiif:10.34847/nkl.4d29r0m5/164ee6b46f6c73738e7276323d2f35660ba71d97" n="4"/>
+									<label>11)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1956" type="bi">Walter</persName>
+										</hi>, <title ref="#w05982" type="bi">Observationum in Taciti Annalium<lb/>lib. III. Specimen</title>.</item>
+									<lb/>
+									<label>12)</label>
+									<item>
+										<rs ref="#p1956" type="bi_person">derselbe</rs>, <title ref="#w05983" type="bi">Antonii oratio in Cassii
+											Dionis Lib.<lb/>XLIV. notis illustrata</title>.<lb/>Beide nicht ganz schlecht, aber unbedeutend.</item>
+									<lb/>
+									<label>13)</label>
+									<item>
+										<subst>
+											<del rend="strikethrough">
+												<gap extent="one or two words" reason="illegible"/>
+											</del>
+											<add place="inline">
+												<hi rend="underline">
+													<persName ref="#p1957" type="bi">Balsam</persName>
+												</hi>
+											</add>
+										</subst>: <title ref="#w05833" type="bi">Animadversionum in fune<lb break="no"/>brem orationem Thucÿdidis
+											fasciculus</title>.</item>
+									<lb/>
+									<label>14)</label>
+									<item>
+										<rs ref="#p1957" type="bi_person">derselbe</rs>, <title ref="#w05834" type="bi">Animadversionum in Platonis
+												Theae<lb break="no"/>tetum fasciculus</title>.<lb/>Diese Abhandlungen sind ungefähr von derselben
+											Be<lb break="no"/>schaffenheit wie die vorigen.</item>
+									<lb/>
+									<label>15)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1559" type="bi">Sökeland</persName>
+										</hi>, <title ref="#w05966" type="bi">Observationes ad Taciti Germa<lb break="no"/>niam</title>.</item>
+									<lb/>
+									<label>16)</label>
+									<item>
+										<rs ref="#p1559" type="bi_person">derselbe</rs>, <title ref="#w05967" type="bi">De similitudine Tacitum inter
+											et<lb/>Thucÿdidem &amp;c</title>.<lb/>Diese beiden sehr fleissig und mit richtigem Urtheil<lb/>verfassten
+										Schriftchen empfehlen den <rs ref="#p1559" type="bi_person">Verfasser</rs> sehr.</item>
+									<lb/>
+									<label>17)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1959" type="bi">Langbein</persName>
+										</hi>, <title ref="#w05909" type="bi">In Taciti vitam Agricolae</title>.<lb/>Großentheils noch schwach und
+										ungelenk.</item>
+									<lb/>
+									<label>18)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p1958" type="bi">Göschen</persName>
+										</hi>, <title ref="#w05867" type="bi">Annotationes ad orationem in<lb/>Thucÿdidis libro primo
+										primam</title>.</item>
+									<lb/>
+									<label>19)</label>
+									<item>
+										<hi rend="underline">
+											<persName ref="#p0719" type="bi">Bonnell</persName>
+										</hi>, <title ref="#w05843" type="bi">De oratione Ciceronis pro lege Ma<lb break="no"/>nilia
+											dissertatio</title>.<lb/>Beide letztern Abhandlungen enthalten manches<lb/>Gute.</item>
+									<lb/>
+								</list>
+							</hi>
+						</p>
+						<p>
+							<hi rend="mark">Indem ich mich beehre einem hohen <orgName ref="#g0064" type="bi">Ministerium</orgName> diese Ab<lb
+									break="no"/>handlungen in der Beilage zu übersenden, bitte ich zu<lb break="no"/>gleich gehorsamst um
+								hochgefällige Zurücksendung.</hi>
+						</p>
+						<p>
+							<label>2.</label>
+							<hi rend="underline">Mündlich</hi> wurden folgende <hi rend="underline">Aufgaben</hi> behandelt, welche<lb/>die Mitglieder
+							selbst zu stellen pflegen:<lb rend="both"/>
+							<foreign xml:lang="la">
+								<hi rend="latin">
+									<list>
+										<label>1)</label>
+										<item>Disputetur de loco <persName ref="#p0212" type="bi">Taciti</persName>
+											<title ref="#w06026" type="bi">Germ.</title> cap. 2. <quote>Ita nati<lb break="no"/>onis nomen — Germani
+												vocarentur</quote>.</item>
+										<lb/>
+										<label>2)</label>
+										<item>Explicetur <persName ref="#p0034" type="bi">Plat.</persName>
+											<title ref="#w06066" type="bi">Phaedr.</title> c.62.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											&amp;c.</item>
+										<lb/>
+										<label>3)</label>
+										<item>Proponitur locus <persName ref="#p0024" type="bi">Horatii</persName>
+											<title ref="#w05806" type="bi">Serm.</title> II,4,64. 65.<lb/>
+											<quote>Simplex e dulci constat olivo</quote> &amp;c.</item>
+										<lb/>
+										<label>4)</label>
+										<item>Exponatur locus <persName ref="#p0212" type="bi">Taciti</persName>
+											<title ref="#w06026" type="bi">Germ.</title> 2. <quote>Ut omnes<lb/>primum <hi rend="underline">a
+													victore</hi>
+											</quote> &amp;c.</item>
+										<lb/>
+										<label>5)</label>
+										<item>Explicetur vel emendetur <persName ref="#p0918" type="bi">Propertius</persName>
+											<rs ref="#w06041" type="bi_title">I,17,3</rs>.<lb/>
+											<quote>Nec mihi Cassiope <hi rend="underline">solito</hi> visura carinam<lb/>est.</quote>
+										</item>
+										<lb/>
+										<label>6)</label>
+										<item>Dicatur de verbis <persName ref="#p1138" type="bi">Livii</persName>
+											<rs ref="#w00366" type="bi_title">II,10</rs>. <quote>Si transitum<lb/>pontem a tergo
+											reliquissent</quote>.</item>
+										<lb/>
+										<label>7)</label>
+										<item>Interrogo, apud <persName ref="#p0882" type="bi">Eurip.</persName>
+											<title ref="#w06062" type="bi">Hecub.</title> 112. legendum<lb/>sit
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+										<lb/>
+										<label>8)</label>
+										<item>Proponitur locus <persName ref="#p0034" type="bi">Platonis</persName>
+											<title ref="#w06069" type="bi">Charmid.</title> p.59. ed.<lb/>
+											<persName ref="#p0484" type="bi">Heindorf</persName>.<note resp="#sabine.seifert">
+												<p xml:lang="de">Vermutlich handelt es sich um die Ausgabe von <rs ref="#w00068" type="bi_title"
+														>1802</rs> bzw. die von <rs ref="#w00190" type="bi_title">1805</rs>, die beide Teil von
+														<persName ref="#p0178" type="bi">Boeckhs</persName> Bibliothek waren ("Katalog meiner Bücher",
+														<ref target="Boeckh_Buchkatalo.xml">S. 2</ref> und <ref target="Boeckh_Buchkatalo.xml">S.
+														5</ref>).</p>
+												<p xml:lang="en">Presumably it is the <rs ref="#w00068" type="bi_title">1802</rs> and <rs
+														ref="#w00190" type="bi_title">1805</rs>, edition, both of which were part of <persName
+														ref="#p0178" type="bi">Boeckh</persName>'s library ("Catalog of my books", pp. 2 and 5).</p>
+												<p xml:lang="fr">Vraisemblablement les éditions de <rs ref="#w00068" type="bi_title">1802</rs> et <rs
+														ref="#w00190" type="bi_title">1805</rs>,, qui faisaient toutes deux partie de la bibliothèque
+													de <persName ref="#p0178" type="bi">Boeckh</persName> ("Catalogue de mes livres", <ref
+														target="Boeckh_Buchkatalo.xml">pp. 2</ref> et <ref target="Boeckh_Buchkatalo.xml"
+													>5</ref>).</p>
+											</note>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+										<lb/>
+										<label>9)</label>
+										<item>Dicatur de <persName ref="#p0212" type="bi">Taciti</persName> verbis <title ref="#w06026" type="bi"
+												>Germ.</title> cap. 44.<lb/>
+											<quote>Est apud illos et opibus honos; eoque unus<lb/>imperitat, nullis iam exceptionibus, <hi
+													rend="underline">non<lb/>precario iure parendi</hi>.</quote>
+										</item>
+										<lb/>
+										<label>10)</label>
+										<item>Quaero, an post vs. 49. <persName ref="#p0353" type="bi">Aeschÿl.</persName>
+											<title ref="#w05802" type="bi">Eumenid.</title>
+											<lb/>versiculus exciderit.</item>
+										<lb/>
+										<label>11)</label>
+										<item>Disputetur de variis lectionibus <persName ref="#p0917" type="bi">Tibulli</persName>
+											<lb/>
+											<rs ref="#w05816" type="bi_title">I,1,43</rs> sq. <quote>Parva seges satis est</quote> &amp;c.</item>
+										<pb facs="iiif:10.34847/nkl.4d29r0m5/a5e87e70302f5c96fac167b50cbd0b2e3c5936fd" n="5"/>
+										<note place="margin(right)" type="foliation">
+											<subst hand="#blue_pen">
+												<del rend="overwritten">
+													<add hand="#pencil">132</add>
+												</del>
+												<add place="across">132</add>
+											</subst>
+										</note>
+									</list></hi></foreign>
+						</p>
+						<p>
+							<!-- Added tag for the good display of the indexes-->
+							<foreign xml:lang="la">
+								<hi rend="latin">
+									<list>
+										<label>12)</label>
+										<item>Apud <persName ref="#p0003" type="bi">Ciceronem</persName>
+											<title ref="#w04335" type="bi">de or.</title> II,9. num legen<lb break="no"/>dum est <hi rend="underline"
+												>vita</hi> memoriae an <hi rend="underline">via</hi> memoriae?</item>
+										<lb/>
+										<label>13)</label>
+										<item>Apud <persName ref="#p0192" type="bi">Sophocl.</persName>
+											<title ref="#w00387" type="bi">Philoct.</title> 1033.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											&amp;c. quaeritur an opis sit,<lb/>ut reiiciatur lectio vulgata.</item>
+										<lb/>
+										<label>14)</label>
+										<item>Apud <persName ref="#p0212" type="bi">Tacitum</persName>
+											<title ref="#w06033" type="bi">Agric.</title> 44. pro <hi rend="underline">quodam augurio</hi>
+											<lb/>codd. praebent <hi rend="underline">quod</hi> aug. Quaero, utra lectio sit<lb/>praeferenda, et
+											quomodo totum locum expli<lb break="no"/>ces.</item>
+										<lb/>
+										<label>15)</label>
+										<item>Annon versus <persName ref="#p0192" type="bi">Sophocl.</persName>
+											<title ref="#w00368" type="bi">Antig.</title> 572. vulgo Is<lb break="no"/>menae tributus, Antigonae
+											restituendus est?</item>
+										<lb/>
+										<label>16)</label>
+										<item>Apud <persName ref="#p0192" type="bi">Sophocl.</persName>
+											<title ref="#w00368" type="bi">Antig.</title> 557. quaero annon<lb/>lectio restituenda sit, quae in
+											membranis atque<lb/>Ald. extat:
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											&amp;c.<lb/>ita ut interpretemur: "Secundum haec verba<lb/>tu sapere videbaris, secundum alia ego."</item>
+										<lb/>
+										<label>17)</label>
+										<item>
+											<persName ref="#p1021" type="bi">Herodot.</persName>
+											<rs ref="#w00442" type="bi_title">VI,72.</rs> utrum legendum est
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>?</item>
+										<lb/>
+										<label>18)</label>
+										<item>
+											<persName ref="#p0192" type="bi">Sophocl.</persName>
+											<title ref="#w00387" type="bi">Philoct.</title> 552. quaeritum quae sit<lb/>lectio constituenda, et quae
+											interpretandi via<lb/>com̄endanda, sum̄a difficultate posita in voc.<lb/>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+										<lb/>
+										<label>19)</label>
+										<item>Loco haud dubie corrupto <persName ref="#p0353" type="bi">Aeschÿl.</persName>
+											<title ref="#w01262" type="bi">Pers.</title>
+											<lb/>672-675.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											&amp;c.<lb/>quomodo subreniendum sit, propono in<gap extent="few characters" reason="illegible"/>
+											<lb/>quandum.</item>
+										<lb/>
+										<label>20)</label>
+										<item>Dicatur de loco <persName ref="#p0003" type="bi">Ciceronis</persName>
+											<title ref="#w06038" type="bi">Fin.</title> II,12. <quote>Nam<lb/>quod ait sensibus ipsis iudicari — illud
+												est<lb/>iudicatum.</quote>
+										</item>
+										<lb/>
+										<label>21)</label>
+										<item>Proponitur <persName ref="#p0212" type="bi">Tacit.</persName>
+											<title ref="#w06033" type="bi">Agric.</title> c.6. <quote>Ludos et<lb/>inania honoris — ita famae
+												propior.</quote>
+										</item>
+										<lb/>
+										<label>22)</label>
+										<item>Dicatur de loco <persName ref="#p0003" type="bi">Ciceronis</persName>
+											<title ref="#w06046" type="bi">Off.</title> I,28. <quote>Ut,<lb/>si Aeacus aut Minos diceret —
+												accepimus.</quote>
+										</item>
+										<lb/>
+										<label>23)</label>
+										<item>Propono <persName ref="#p0034" type="bi">Plat.</persName>
+											<title ref="#w06049" type="bi">Gorg.</title> §.104.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+										<lb/>
+										<label>24)</label>
+										<item>Explicetur <persName ref="#p1056" type="bi">Thucÿd.</persName>
+											<rs ref="#w05818" type="bi_title">III,49.</rs>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>, ubi
+											verba <gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>sum̄am praebent difficultatem.</item>
+										<lb/>
+										<label>25)</label>
+										<item>Propono locum <persName ref="#p0192" type="bi">Sophocl.</persName>
+											<title ref="#w00443" type="bi">Aiac.</title> 596 sqq.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>&amp;c. in quo vox
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											quam maxime<lb/>offendit.</item>
+										<lb/>
+										<label>26)</label>
+										<item>
+											<persName ref="#p0882" type="bi">Eurip.</persName>
+											<title ref="#w06070" type="bi">Med.</title> 178.179. metri ratio non constat.<lb/>Cui quomodo subreniendum
+											sit, inquirendum.</item>
+										<lb/>
+										<label>27)</label>
+										<item>Medela afferatur loco <persName ref="#p0882" type="bi">Eurip.</persName>
+											<title ref="#w06070" type="bi">Med.</title> 495.<lb/>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>.</item>
+										<lb/>
+										<label>28)</label>
+										<item>Dicatur de <persName ref="#p0882" type="bi">Eurip.</persName>
+											<title ref="#w00372" type="bi">Phoen.</title> vs. 384.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>&amp;c.</item>
+										<lb/>
+										<label>29)</label>
+										<item>Explicetur <persName ref="#p0034" type="bi">Plat.</persName>
+											<title ref="#w06066" type="bi">Phaedr.</title> §.86.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+										</item>
+										<lb/>
+										<label>30)</label>
+										<item>Proponitur locus <persName ref="#p1138" type="bi">Livii</persName>
+											<rs ref="#w00366" type="bi_title">I,18.</rs>
+											<quote>Ex quibus<lb/>— pervenisset.</quote>
+										</item>
+										<lb/>
+										<label>31)</label>
+										<item>Dicatur de <persName ref="#p0212" type="bi">Tacit.</persName>
+											<title ref="#w06033" type="bi">Agric.</title> c.6. <quote>Idque ma<lb break="no"/>trimonium — plus culpae
+												est</quote>.</item>
+										<lb/>
+										<label>32)</label>
+										<item>Ap. <persName ref="#p0353" type="bi">Aeschÿl.</persName>
+											<title ref="#w00446" type="bi">Agam.</title> vs. 32. 33.
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<pb facs="iiif:10.34847/nkl.4d29r0m5/f4d7010e4a54a09b0cfdb3c2577c4f0577650846" n="6"/>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											&amp;c. quaeritur utrum cum<lb/>
+											<persName ref="#p0979" type="bi">Schützio</persName> coniungendum sit
+												<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>
+											<lb/>an cum <persName ref="#p1480" type="bi">Blomfieldo</persName>
+											<gap><!-- <quote><hi rend="greek"><foreign xml:lang="grc">[griech.]</foreign></hi></quote>--></gap>,
+											ut<lb/>metaphora a talis desumpta sit.</item>
+										<lb/>
+										<label>33)</label>
+										<item>Disputetur de lectione et sententia loci<lb/>
+											<persName ref="#p0003" type="bi">Ciceroniani</persName>
+											<title ref="#w06038" type="bi">Fin.</title> II,24. <quote>Aut Pÿlades quum sis<lb/>— non
+											precarere</quote>, collato lib. V, cap. 22. med.<lb/>
+										</item>
+									</list>
+								</hi>
+							</foreign>
+						</p>
+						<p>
+							<label>3.</label> Die <hi rend="underline">Interpretationsübungen</hi> wurden wie gewöhnlich<lb/>regelmäßig angestellt;
+							und zwar ließ <choice>
+								<abbr>Hr Prof.</abbr>
+								<expan>Herr Professor</expan>
+							</choice>
+							<hi rend="underline">
+								<persName ref="#p0394" type="bi">Buttman̄</persName>
+							</hi>
+							<lb/>im <date when-iso="1820-10/1821-02">ersten halben Jahre</date> das dritte Buch der <hi rend="underline">
+								<persName ref="#p0024" type="bi">Horazischen</persName>
+								<lb/>
+								<title ref="#w00009" type="bi">Oden</title>
+							</hi> und im <date when-iso="1821-03/09">zweiten</date> etliche <title ref="#w05811" type="bi">Satiren</title> des <hi
+								rend="underline">
+								<persName ref="#p1185" type="bi">Juvenal</persName>
+							</hi>
+							<lb/>erklären; der <rs ref="#p0178" type="bi_person">Director</rs> ließ in beiden Semestern<lb/>den <hi rend="underline">
+								<persName ref="#p1056" type="bi">Thucÿdides</persName>
+							</hi> auslegen,<note resp="#sabine.seifert">
+								<p xml:lang="de">Es handelt sich wahrscheinlich um <persName ref="#p1056" type="bi">Thukydides'</persName>
+									<title ref="#w05818" type="bi">Der Peloponnesische Krieg</title>.</p>
+								<p xml:lang="en">It is probably <persName ref="#p1056" type="bi">Thucydides'</persName>
+									<title ref="#w05818" type="bi">The Peloponnesian War</title>.</p>
+								<p xml:lang="fr">Il s'agit probablement de <title ref="#w05818" type="bi">La guerre du Péloponnèse</title> de
+										<persName ref="#p1056" type="bi">Thucydide</persName>.</p>
+							</note> wobei die Mitglieder großen<lb/>Eifer zeigten. Auch waren mehrere andere außer den<lb break="no"/>selben Zuhörer
+							bei diesen Übungen.</p>
+					</div>
+					<div>
+						<head>
+							<label>III.</label>
+							<hi rend="underline">Zuerkan̄te Prämien</hi>.</head>
+						<p>Für das <date when-iso="1820-10/1821-02">Winterhalbejahr</date> ertheilte ein hohes <orgName ref="#g0064" type="bi"
+								>Ministerium</orgName>
+							<lb/>auf den Antrag des <rs ref="#p0178" type="bi_person">Directors</rs> durch das Rescript vom <date
+								when-iso="1821-04-07">7.<lb/>April</date> folgende Prämien:<lb rend="both"/>
+							<list>
+								<item>den Studiosus <hi rend="latin">
+										<persName ref="#p1590" type="bi">Kritz</persName>
+									</hi> 30 <choice>
+										<abbr>rl</abbr>
+										<expan>Reichsthaler</expan>
+									</choice>
+								</item>
+								<lb/>
+								<item>den Studiosen <hi rend="latin">
+										<persName ref="#p0484" type="bi">Heindorf</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1419" type="bi">Panofka</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1952" type="bi">Haupt</persName>
+									</hi>, } jedem 25 <choice>
+										<abbr>rl</abbr>
+										<expan>Reichsthaler</expan>
+									</choice>
+								</item>
+								<lb/>
+								<item>den Studiosen <hi rend="latin">
+										<persName ref="#p1951" type="bi">Lindner</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1956" type="bi">Walter</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p0925" type="bi">Wernike</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1957" type="bi">Balsam</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1559" type="bi">Sökeland</persName>
+									</hi> } jedem 20 <choice>
+										<abbr>rl</abbr>
+										<expan>Reichsthaler</expan>
+									</choice>
+								</item>
+							</list>
+							<lb rend="both"/>für das <date when-iso="1821-03/09">Som̄erhalbejahr</date> aber durch das hochgefällige Re<lb break="no"
+							/>script vom <date when-iso="1821-08-11">11. August</date> folgende:<lb rend="both"/>
+							<list>
+								<item>den Studiosen <hi rend="latin">
+										<persName ref="#p0484" type="bi">Heindorf</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1419" type="bi">Panofka</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1952" type="bi">Haupt</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1559" type="bi">Sökeland</persName>
+									</hi> } jedem 25 <choice>
+										<abbr>rl</abbr>
+										<expan>Reichsthaler</expan>
+									</choice>
+								</item>
+								<lb/>
+								<item>den Studiosen <hi rend="latin">
+										<persName ref="#p1956" type="bi">Walter</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p0925" type="bi">Wernike</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1957" type="bi">Balsam</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1959" type="bi">Langbein</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p1958" type="bi">Göschen</persName>
+									</hi>
+								</item>
+								<lb/>
+								<item>
+									<hi rend="latin">
+										<persName ref="#p0719" type="bi">Bonnell</persName>
+									</hi> } jedem 20 <choice>
+										<abbr>rl</abbr>
+										<expan>Reichsthaler</expan>
+									</choice>
+								</item>
+							</list>
+						</p>
+						<p>Gesam̄tsum̄e 425 <choice>
+								<abbr>rl</abbr>
+								<expan>Reichsthaler</expan>
+							</choice>. Da nun die etatsmäßige Sum̄e<lb/>der Prämien nur 400 <choice>
+								<abbr>rl</abbr>
+								<expan>Reichsthaler</expan>
+							</choice> beträgt, so wurden noch 25 <choice>
+								<abbr>rl</abbr>
+								<expan>Reichsthaler</expan>
+							</choice>
+							<lb/>aus den früheren Ersparnissen zugenom̄en, welche nun<lb/>aber bis auf 5 <choice>
+								<abbr>rl</abbr>
+								<expan>Reichsthaler</expan>
+							</choice> aufgebraucht sind. Der <rs ref="#p0178" type="bi_person">Director</rs> ist<lb/>überzeugt, daß, wen̄ auch
+							einzelne Mitglieder noch ziemlich<lb/>schwach sind, den̄och die Prämien zur Aufmunterung und<lb/>bei den Bedürftigern zur
+							Unterstützung wohl angewandt<lb/>werden. Das Maß der Prämien ist auch durchaus im̄er<lb/>nach genauer Berücksichtigung der
+							Umstände und Würdigkeit<lb/>der Mitglieder bestim̄t, und dabei die möglichste Sparsamkeit<lb/>zur Richtschnur genom̄en
+							worden; daher ist früher häufig<lb/>die etatsmäßige Sum̄e nicht vollständig verwandt worden.<lb/>Jetzo hat sich dagegen
+							das Verhältniß umgekehrt, und<lb/>es wäre daher, nachdem die Rückstände fast verbraucht sind,<lb/>sehr wünschenswerth,
+							wen̄ die für das <orgName ref="#g0079" type="bi">Seminar</orgName> ausgesetzte<lb/>Sum̄e etwas vermehrt werden könnte,
+							nicht sowohl in der<pb facs="iiif:10.34847/nkl.4d29r0m5/3ac148945448974c9ec56f6c6ddbd08324d8f8c4" n="7"/>
+							<note place="margin(right)" type="foliation">
+								<subst hand="#blue_pen">
+									<del rend="overwritten">
+										<add hand="#pencil">133</add>
+									</del>
+									<add place="across">133</add>
+								</subst>
+							</note> Absicht, alles, was ein hohes <orgName ref="#g0064" type="bi">Ministerium</orgName> etwa noch<lb/>zulegen dürfte,
+							jedesmahl zu verwenden, sondern um<lb/>für vorkom̄ende Fälle nicht zu beschränkt zu sein,<lb/>und aus den etwanigen
+							Überschüssen die <ref target="Boeckh_Reglemen.xml">§. 12. des<lb/>Reglements</ref> erwähnte Unterstützung bei
+							vorkom̄enden<lb/>Promotionen leisten zu können; welches letztere<lb/> unter den gegenwärtigen Umständen ganz un<lb
+								break="no"/>möglich sein würde. </p>
+					</div>
+					<div>
+						<head>
+							<label>IV.</label>
+							<hi rend="underline">In̄erer Zustand des Seminars und Charakteristik<lb/>der Mitglieder.</hi>
+						</head>
+						<p>Daß die <rs ref="#g0079" type="bi_org">Anstalt</rs> von den Studirenden fleissig benutzt wird,<lb/>und der Nutzen desselben
+							sich dadurch vermehrt, geht aus<lb/>der Anzahl der Theilnehmenden <ref target="Brief015Boeck.xml">(I.)</ref> hervor; aber
+							den Erfolg<lb/>in der Ausbildung der Einzelnen haben die Lehrer nicht völlig<lb/>in ihrer Gewalt, da er von vielen
+							Umständen, vorzüglich<lb/>aber von dem Maße des Talentes und von der auf die<lb/>Universität gebrachten Vorbereitung
+							abhängt. Im Gan<lb break="no"/>zen genom̄en sind jedoch die jetzigen Mitglieder von der<lb/>Art, daß ich Ursache habe mit
+							der Mehrheit zufrieden zu<lb/>sein. In der Charakteristik der Einzelnen beschränke ich<lb/>mich auf die ordentlichen
+							Mitglieder, von welchen zwei,<lb/>
+							<hi rend="latin">
+								<persName ref="#p1590" type="bi">Kritz</persName>
+							</hi>
+							<choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice>
+							<hi rend="latin">
+								<persName ref="#p1951" type="bi">Lindner</persName>
+							</hi>, ietzt nicht mehr an der <rs ref="#g0079" type="bi_org">Anstalt</rs>
+							<lb/>theilnehmen, drei, <hi rend="latin">
+								<persName ref="#p0484" type="bi">Heindorf</persName>
+							</hi>, <hi rend="latin">
+								<persName ref="#p1419" type="bi">Panofka</persName>
+							</hi>
+							<choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice>
+							<hi rend="latin">
+								<persName ref="#p1952" type="bi">Haupt</persName>
+							</hi>
+							<lb/>schon länger das <orgName ref="#g0079" type="bi">Seminar</orgName> besuchen, die übrigen<lb/>aber so zu sagen als
+							Nachwuchs zu betrachten sind,<lb/>weshalb man mit dem größern Theile derselben viele<lb/>Nachsicht haben muß. <hi
+								rend="latin underline">
+								<persName ref="#p1590" type="bi">Kritz</persName>
+							</hi>, welcher <date when-iso="1821-04">Ostern</date> abging,<lb/>hatte sich besonders mit der Römischen Litteratur be<lb
+								break="no"/>schäftigt, und ist ein kenntnißreicher und sehr<lb/>brauchbarer junger Man̄ geworden; ietzo ist er,
+							wie<lb/>oben bemerkt worden, Mitglied des <orgName ref="#g0082" type="bi">Seminars<lb/>für gelehrte Schulen.</orgName>
+							<hi rend="latin underline">
+								<persName ref="#p1951" type="bi">Lindner</persName>
+							</hi> ist <date when-iso="1821-03">vor einem halben<lb/>Jahre</date> von hier abgegangen <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> hat sich zur Fortsetzung<lb/>seiner Studien nach <placeName ref="#l0004" type="bi">Leipzig</placeName> begeben;
+							es fehlte sei<lb break="no"/>nem Studiren an Methode; und er hatte zu viel Flüch<lb break="no"/>tigkeit in der Behandlung
+							der Gegenstände, wählte<lb/>auch, wie ich oben gesagt habe, gewöhnlich solche,<lb/>die für ihn zu schwierig waren. Er
+							befindet sich<lb/>gegenwärtig wieder hier <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> wünscht eine Anstellung<lb/>im <rs ref="#l0092" type="bi_place">Preußischen</rs> als Schulman̄, oder zunächst
+							als<lb/>Mitglied des <orgName ref="#g0082" type="bi">Seminars für gelehrte Schulen</orgName>:<lb/>wobei iedoch wegen
+							seiner Körpergestalt ein Be<lb break="no"/>denken eintreten könnte. <hi rend="latin underline">
+								<persName ref="#p0484" type="bi">Heindorf</persName>
+							</hi>
+							<choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice>
+							<hi rend="latin">
+								<persName ref="#p1419" type="bi">Panofka</persName>
+							</hi>
+							<lb/>haben bereits gute Fortschritte gemacht <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> werden<lb/>sich gewiß recht zweckmäßig ausbilden. <hi rend="latin underline">
+								<persName ref="#p1952" type="bi">Haupt</persName>
+							</hi>
+							<lb/>zeichnet sich fortwährend durch große Ordnungsliebe<lb/>
+							<choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> durch Geläufigkeit im Disputiren, weniger durch<lb/>Urtheilskraft aus. Unter den jüngern Mitgliedern<lb/>ist <hi
+								rend="latin underline">
+								<persName ref="#p1559" type="bi">Sökeland</persName>
+							</hi> ohne Zweifel der vorzüglichste;<lb/>mit regem Fleiß verbindet er eine gewisse Reife<lb/>des Urtheils, und berechtigt
+							zu vorzüglichen Er<lb break="no"/>wartungen. <hi rend="latin underline">
+								<persName ref="#p1956" type="bi">Walter</persName>
+							</hi>, <hi rend="latin underline">
+								<persName ref="#p1957" type="bi">Balsam</persName>
+							</hi>, <hi rend="latin underline">
+								<persName ref="#p1958" type="bi">Göschen</persName>
+							</hi> und<lb/>
+							<hi rend="latin underline">
+								<persName ref="#p0719" type="bi">Bonnell</persName>
+							</hi> verdienen ebenfalls Lob, lassen sich<lb/>aber noch nicht vollkom̄en charakterisiren; am we<lb break="no"/>nigsten
+							lässt sich ein bestim̄tes Verhältnis ihrer<lb/>Talente <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> Ken̄tnisse in Vergleich des einen gegen<lb/>den andern feststellen. Gegen diese aber sind <hi
+								rend="latin underline">
+								<persName ref="#p1959" type="bi">Lang<lb break="no"/>bein</persName>
+							</hi>
+							<choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice>
+							<hi rend="latin underline">
+								<persName ref="#p0925" type="bi">Wernike</persName>
+							</hi> als die schwächsten, noch weit<lb/>zurück.</p>
+					</div>
+					<div>
+						<p>Der <rs ref="#p0178" type="bi_person">Unterzeichnete</rs> beschließt diesen Bericht mit der ge<lb break="no"/>horsamsten
+							Bitte um nachsichtige Beurtheilung, <choice>
+								<abbr>u</abbr>
+								<expan>und</expan>
+							</choice> mit der<lb/>Versicherung, daß er nichts versäumt, was er dazu<lb/>beitragen kann, so viel Gutes, als den
+							Umständen nach<lb/>jedesmahl möglich ist, durch das <orgName ref="#g0079" type="bi">philologische Semi<lb break="no"
+								/>nar</orgName> zu wirken.</p>
+					</div>
+					<note hand="#brown_pen" place="margin(left)">
+						<choice>
+							<abbr>mund.</abbr>
+							<expan>mundiert</expan>
+						</choice>
+						<persName ref="#p3868" type="bi">
+							<choice>
+								<abbr>W.</abbr>
+								<expan>Wernicke</expan>
+							</choice>
+						</persName>
+					</note>
+					<closer>
+						<dateline>
+							<placeName ref="#l1103" type="bi">Berlin</placeName>
+							<choice>
+								<abbr>d.</abbr>
+								<expan>den</expan>
+							</choice>
+							<date when-iso="1821-10-12">12. October 1821.</date>
+						</dateline>
+						<metamark function="separation" rend="align(center)" style="vertical-rule"/>
+						<signed rend="align(right)">der <rs ref="#p0178" type="bi_person">Director</rs> des <orgName ref="#g0079" type="bi"
+									>philologi<lb break="no"/>schen Seminars</orgName>.<lb/>
+							<hi rend="latin">
+								<persName ref="#p0178" type="bi">Böckh.</persName>
+							</hi>
+						</signed>
+					</closer>
+				</div>
+			</div>
+		</body>
+	</text>
 </TEI>
